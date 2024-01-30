@@ -1,0 +1,17 @@
+{
+  "name": "grupo_11_zinke",
+  "version": "1.0.0",
+  "description": "Bejarano Alexander\r Cuello Tiago\r Márquez Fernando\r Martínez Franco\r Vera Paola",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
