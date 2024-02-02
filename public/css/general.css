@@ -1,0 +1,32 @@
+:root {
+    /* TIPO DE FUENTES */
+    --fuente-general: sans-serif;
+
+    /* TAMAÑO DE FUENTES */
+
+    --letra-grande: 20px;
+    --letra-mediana: 16px;
+    --letra-pequeña: 15px;
+
+
+    /* COLORES */    
+    --gris-claro: #b8b8b8;
+    --verde-azulado: #419197;
+    --blanco: #ffffff;
+    --turquesa: #32e0c4;
+    --negro: #000000;
+    --blanco-almendra: #ffefd6;
+    --molocoton-oscuro: #f99b7d;
+    --gris-pizarra: #212121;
+    --gris-terciopelo: #676767;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
