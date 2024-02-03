@@ -17,21 +17,18 @@
         <a href="#" class="abrigos">Abrigos/</a>
         <a class="blazer">Blazer oversize negro</a>
       </div>
+
+      <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
       <section class="visualizacion-producto">
         <div class="contenedor-vistas-imagenes">
             <div class="contenedor-blazerOver-principal">
-
-              <div class="lupa">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-              <div class="corazon">
-                  <i class="fa-regular fa-heart"></i>
-              </div>
-              <div class="circulos">
-                  <i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i><i class="fa-regular fa-circle"></i>
-              </div>
+                <i class="fa-regular fa-heart"></i>
               <div class="contenedor-img-principal">
                 <img class="blazer-over-principal" src="/img/blazer-1.png" alt="Blazer overside negro">
+              </div>
+              <div class="circulos">
+                <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle circulo-claro"></i><i class="fa-solid fa-circle circulo-claro"></i><i class="fa-solid fa-circle circulo-claro"></i>
               </div>
             </div>
 
@@ -39,75 +36,77 @@
                 <img class="blazer-over-otra" src="/img/blazer-over-vista-2.png" alt="blazer oversize negro 2">
                 <img class="blazer-over-otra" src="/img/blazer-over-vista3.png" alt="blazer oversize negro 3">
                 <img class="blazer-over-otra" src="/img/blazer-over-vista4.jpg" alt="blazer oversize negro 4">
-              <div>
+              </div>
         </div>
 
-
+        <!---CONTENEDOR DE DATOS PRINCIPALES DEL PRODUCTO NOMBRE-PRECIO-TALLE-->
         <div class="nombre-precio-talle">
-          <h2 class="blazer_over">BLAZER OVERSIZE NEGRO</h2>
-          <P class="precio">$32.660</P>
-          <P class="talle">TALLE: 2</p>
+          <h2 class="blazer-over">BLAZER OVERSIZE NEGRO</h2>
+          <P class="precio">$ 32.000</P>
+          <P class="talle">TALLE: <span>2</span></p>
         </div>
 
         <div class="talles">
-            <div class="1">
-              <button type="button" class="1">1
+            <div class="uno">
+              <button type="button" class="boton-uno">1
               </button>
             </div>
-            <div class="2">
-              <button type="button" class="1">2
+            <div class="dos">
+              <button type="button" class="boton-dos">2
               </button>
             </div>
-            <div class="3">
-              <button type="button" class="3">3
+            <div class="tres">
+              <button type="button" class="boton-tres">3
               </button>
             </div>
-            <div class="4">
-              <button type="button" class="4">4
+            <div class="cuatro">
+              <button type="button" class="boton-cuatro">4
               </button>
             </div>
-            <div class="5">
-              <button type="button" class="5">5
+            <div class="cinco">
+              <button type="button" class="boton-cinco">5
               </button>
             </div>
-            <div class="6">
-              <button type="button" class="6">6
+            <div class="seis">
+              <button type="button" class="boton-seis">6
               </button>
             </div>
             
         </div>
             
         <div class="cantidad-carrito">  
-             <form action="/vistaProduc" method="POST">
-                <label for="cantidad">CANTIDAD</label>
-                <input type="number" name="cantidad" value="" id="cantidad">
+             <form class="form-carrito" action="/vistaProduc" method="POST">
+                <label class="label-carrito" for="cantidad">CANTIDAD</label>
+                <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad">
                 <div class="contenedor-boton-carrito">
                   <button type="submit" class="agregar-carrito">AGREGAR AL CARRITO</button>
                 </div>
             </form>
         </div>
 
+        <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
+
         <div class="envio">
             <form action="/vistaProduc" method="POST" class="form-carrito">
                 <i class="fa-solid fa-truck"></i>
                 <label class="label-carrito" for="medioEnvio">Medios de envío</label>
                 <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio" placeholder="Tu código postal">
-                <div class="contenedor-boton-carrito">
-                  <p class="nose-postal">No sé mi código postal</p>
-                  <button type="submit" class="boton-calcular">CALCULAR</button>
-                </div>
+                <button type="submit" class="boton-calcular">CALCULAR</button>
+                <p class="nose-postal">No sé mi código postal</p>
               </form>
         </div>
 
+        <!---CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA-->
+
         <article class="info-adicional-compra">
-            <div class="talles">
+            <div class="detalle-talles">
                 <i class="fa-solid fa-ruler-combined"></i>
                 <h3 class="talles">Guía de talles</h3>
                 <i class="fa-solid fa-plus"></i>
             </div>
             <div class="cambiosDevo">
                 <i class="fa-solid fa-arrows-rotate"></i>
-                <h3 class="cambios">Cambios y devolución</h3>
+                <h3 class="cambios">Cambios y devoluciones</h3>
                 <i class="fa-solid fa-plus"></i>
             </div>
             <div class="formaPago">
@@ -123,17 +122,20 @@
 
       </section>
 
+      <!-----OTROS PRODUCTOS------->
+
       <section class="otrosFav">
         <h3 class="otrosFav">OTROS FAV</h3>
+        <div class="contenedor-otros-productos">
         <article class="productos-otrosFav dos-continentes">
             <img class="blazer-dos-conti" src="/img/dos-continentes.png" alt="blazer dos continentes">
             <a href="#" class="a-dos-conti"><h4 class="h4-dos-conti" >BLAZER DOS CONTINENTES</h4></a>
-            <p class="p-dos-conti">$30.000</p>
+            <p class="p-dos-conti">$ 30.000</p>
         </article>
         <article class="productos-otrosFav poison-ivy">
             <img class="chaqueta-ivy" src="/img/poison-ivy.png" alt="chaqueta poison ivy">
             <a class="a-chaqueta-ivy" href="#"><h4 class="h4-chaqueta-ivy">CHAQUETA POISON IVY</h4></a>
-            <p class="p-chaqueta-ivy">$50.000</p>
+            <p class="p-chaqueta-ivy">$ 50.000</p>
         </article>
         <article class="productos-otrosFav weird-barbie">
             <img class="chaqueta-weird-barbie" src="/img/weird-barbie.png" alt="chaqueta weird barbie">
@@ -142,9 +144,10 @@
         </article>
         <article class="productos-otrosFav lets-normcore">
             <img class="abrigo-lets-normcore" src="/img/norm-core.png" alt="abrigo normcore">
-            <a href="#" class="a-lets-normcore"><h4 class="h4-lets-normcore">ABRIGO LET´S NORMCORE</h4></a>
+            <a href="#" class="a-lets-normcore"><h4 class="h4-lets-normcore">ABRIGO LETS NORMCORE</h4></a>
             <p class="p-lets-normcore">$85.000</p>
         </article>
+        </div>
       </section>
       
       <div class="imagen-cierre">
