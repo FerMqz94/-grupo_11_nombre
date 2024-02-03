@@ -95,7 +95,7 @@ footer.datos.Preguntas {
   }
 }
 /* vista tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1023px) {
   .footer {
   }
   .footer .footer-movil {
@@ -109,6 +109,7 @@ footer.datos.Preguntas {
     flex-wrap: wrap;
     font-size: 15px;
     padding-bottom: 13%;
+    margin-top: 390px;
   }
   .footer .footer-tablet .columna-1 {
     border: 34px;
@@ -204,6 +205,7 @@ footer.datos.Preguntas {
     flex-wrap: wrap;
     font-size: 15px;
     padding-bottom: 13%;
+    margin-top: 220px;
   }
   .footer .footer-tablet .texto-especial {
     font-size: 25px;
