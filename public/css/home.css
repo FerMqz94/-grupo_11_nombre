@@ -215,6 +215,13 @@ display: none;
 .home .mensaje-de-la-marca-grande {
     display: none;
 }
+
+/* extras */
+.home .logo-whatsapp {
+}
+.home .logo-flecha {
+}
+
 /* ------------------- General -------------------*/
 
 h2 {
