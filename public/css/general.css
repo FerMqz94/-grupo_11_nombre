@@ -7,6 +7,50 @@
     --letra-grande: 20px;
     --letra-mediana: 16px;
     --letra-pequeña: 15px;
+    /* AGREGO OTROs TAMAÑOs*/
+    --letra-mas-pequeña: 11px;
+    --letra-mayor-tamaño: 35px;
+    --letra-titular-mayor: 50px;
+
+
+
+    /* ICONOS TAMAÑO-AGREGUE */
+    --iconos-grandes:25px;
+ 
+
+
+    /* COLORES */    
+    --gris-claro: #b8b8b8;
+    --verde-azulado: #419197;
+    --blanco: #ffffff;
+    --turquesa: #32e0c4;
+    --negro: #000000;
+    --blanco-almendra: #ffefd6;
+    --molocoton-oscuro: #f99b7d;
+    --gris-pizarra: #212121;
+    --gris-terciopelo: #676767;
+    /*AGREGO DOS COLORES*/
+    --gris85:#d9d9d9;
+    --verde-azulado-claro: #3ea1a0;
+    --gris74: #747474;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* TIPO DE FUENTES */
+    --fuente-general: sans-serif;
+
+    /* TAMAÑO DE FUENTES */
+
+    --letra-grande: 20px;
+    --letra-mediana: 16px;
+    --letra-pequeña: 15px;
 
 
     /* COLORES */    

@@ -10,13 +10,13 @@ app.use(express.static('public'));
 //     res.sendFile(path.join(__dirname, './views/home.html'))
 // })
 
+//app.get('/', (req, res) => {
+   // res.sendFile(path.join(__dirname, './views/footer.html'))
+//})
+
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/footer.html'))
-})
-
-
-
-
+    res.sendFile(path.join(__dirname, './views/vistaProduc.html'))
+});
 
 
 
