@@ -457,36 +457,25 @@ main.vista-producto section.visualizacion-producto article.info-adicional-compra
 /*--------DESCRIPCION DESTACADA-------------*/
 
 main.vista-producto article.contenedor-descripcion{
-    
-text-align: center;
-    
-width: 90%;
-    
-margin: 40px 0 70px 30px;
+    text-align: center;
+    width: 90%;
+    margin: 40px 10px 70px 20px;
 }
 
 main.vista-producto  article.contenedor-descripcion p.descripcion{
-    
-font-size: var(--letra-pequeña);
-    
-letter-spacing: 2px;
-    
-margin-bottom: 3px;
-    
-color: var(--gris74);
-    
-line-height: 22px;
+    font-size: var(--letra-mas-pequeña);
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+    color: var(--gris74);
+    line-height: 22px;
 }
 
 main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
-    
-font-size: var(--letra-grande);
-    
-color: var(--molocoton-oscuro);
-    
-letter-spacing: 1.5px;
-    
-margin-top: 20px;
+    font-size: var(--letra-mediana);
+    color: var(
+    --molocoton-oscuro);
+    letter-spacing: 1.5px;
+    margin-top: 20px;
 }
 
 
@@ -502,20 +491,13 @@ margin-bottom: 40px;
 }
 
 main.vista-producto section.otrosFav h3.otrosFav{
-
-margin: 10px 0 30px 0px;
-
-border-bottom: 3px solid var(--verde-azulado-claro);
-
-font-size: 30px;
-
-background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
-
--webkit-background-clip: text;
-
-color: transparent;
-
-width: 105%;
+margin: 10px 0 30px 0px;
+border-bottom: 3px solid var(--verde-azulado-claro);
+font-size: 30px;
+background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+-webkit-background-clip: text;
+color: transparent;
+width: 100%;
 }
 
 main.vista-producto section.otrosFav div.contenedor-otros-productos {
