@@ -7,6 +7,8 @@
     --letra-grande: 20px;
     --letra-mediana: 16px;
     --letra-pequeña: 15px;
+    /* AGREGO OTRO TAMAÑO*/
+    --letra-mas-pequeña: 11px;
 
 
 
@@ -29,7 +31,7 @@
     --gris85:#d9d9d9;
     --verde-azulado-claro: #3ea1a0;
     --gris74: #747474;
-    
+
 
 }
 
