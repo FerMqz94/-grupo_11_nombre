@@ -1,382 +1,414 @@
-main.vista-producto {
 
-font-family: var(--fuente-general);
+/*-------------------MOBILE FIRST------------------------*/
+/*------------------------------------------------------*/
 
-width: 100vw;
-}
 
-main.vista-producto div.contenedor-busqueda {
+
+/*-------MAIN -----VISTA PRODUCTO-----------*/
+        main.vista-producto {
+
+        font-family: var(--fuente-general);
+
+        width: 100vw;
+        }
+
+        main.vista-producto div.contenedor-busqueda {
     
-font-size: var(--letra-mas-pequeña);
+        font-size: var(--letra-mas-pequeña);
     
-margin: 20px 0 20px 30px;
-}
+        margin: 20px 0 20px 30px;
+        }
 
-main.vista-producto div.contenedor-busqueda a{
+        main.vista-producto div.contenedor-busqueda a{
     
-text-decoration: none;
+        text-decoration: none;
     
-color: var(--negro);
+        color: var(--negro);
     
-/* font-size: var(--letra-pequeña); */
-}
 
-main.vista-producto div.contenedor-busqueda a.blazer{
+        }
+
+        main.vista-producto div.contenedor-busqueda a.blazer{
     
-color: var(--verde-azulado);
-}
+        color: var(--verde-azulado);
+        }
 
-main.vista-producto section.visualizacion-producto {
+        main.vista-producto section.visualizacion-producto {
 
-width: 86%;
-}
+        width: 86%;
+        }
 
 /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
     
-/* padding-right: 200px; */
-    
-margin: 0 0 10px 30px;
-}
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
     
-/* border: 1px solid black; */
+        margin: 0 0 10px 30px;
+        }
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
     
-width: 80%;
+        width: 80%;
     
-position: relative;
+        position: relative;
     
-height: 100%;
+        height: 100%;
     
-border-radius: 5%;
+        border-radius: 5%;
     
-background-color: var(--gris-claro);
+        background-color: var(--gris-claro);
     
-display: flex;
+        display: flex;
     
-justify-content: center;
-}
+        justify-content: center;
+        }
 
 
 
 
-/*-ICONO LUPA---*/
+        /*-ICONO LUPA---*/
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
     
-position: absolute;
+        position: absolute;
     
-top: 15px;
+        top: 15px;
     
-left: 20px;
+        left: 20px;
     
-font-size: var(--iconos-grandes);
-}
-
-
-/*----ICONO CORAZÓN----*/
-
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
-    
-position: absolute;
-    
-top: 15px;
-    
-right: 20px;
-    
-font-size: var(--iconos-grandes);
-}
+        font-size: var(--iconos-grandes);
+        }
 
 
-/*---CIRCULOS----*/
+        /*----ICONO CORAZÓN----*/
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
     
-display: flex;
+        position: absolute;
     
-justify-content: space-around;
+        top: 15px;
     
-width: 60%;
+        right: 20px;
+    
+        font-size: var(--iconos-grandes);
+        }
+
+
+        /*---CIRCULOS----*/
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos{
+    
+        display: flex;
+    
+        justify-content: space-around;
+    
+        width: 60%;
     
     
-position: absolute;
+        position: absolute;
     
-bottom: 5%;
-}
+        bottom: 5%;
+        }
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{color: var(--gris-terciopelo);}
-
-
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.circulo-claro{color: var(--gris85);}
-
-
-/*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
-
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{text-align: center;width: 100%;}
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{
+                color: var(--gris-terciopelo);
+        }
 
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.circulo-claro{
+                color: var(--gris85);
+        }
+
+
+        /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
+                text-align: center;width: 100%;
+        }
+
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
     
-width: 70%;
+        width: 70%;
     
-margin-bottom: 15%;
-}
+        margin-bottom: 15%;
+        }
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{display: none;}
+        /*---otras vistas del producto---*/
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
+                display: none;
+        }
 
-}
+     
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno img.blazer-over-otra{
+        /*---------CONTENEDOR GENERAL DE TODA LA INFORMACIÓN DEL PRODUCTO QUE NO SEAN IMÁGENES--------------*/
+
+        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
     
-}
+        width: 90%;
+        }
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos img.blazer-over-otra{
+
+        /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
+        main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
+
+        margin: 25px 0px 20px 30px;
+
+        width: 85%;
+        }
+
+        main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
+
+        font-weight: 500;
+        }
+
+        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
+
+        margin: 5px 0px;
+
+        font-weight: 700;
+
+        font-size: var(--letra-grande);
+        }
+
+        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
+
+        margin: 20px 0 20px 0;
+
+        color: var(--gris-claro);
+
+        font-size: var(--letra-grande);
+        }
+
+        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
+
+        color: var(--negro);
+        }
+
+
+        /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
+
+        main.vista-producto section.visualizacion-producto div.talles {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        margin: 5px 0px 50px 30px;
+
+        width: 80%;
+        }
+
+        main.vista-producto section.visualizacion-producto div.talles div {
+        }
+
+
+        main.vista-producto section.visualizacion-producto div.talles div button{
+        width: 32px;
+        height: 150%;
+        background-color: var(--blanco);
+        font-size: var(--letra-mediana);
+        color: var(--gris-claro);
+        border: 2px solid var(--gris-claro);
+        }
+
+        main.vista-producto section.visualizacion-producto div.talles div button:hover {
+                background-color: var(--molocoton-oscuro);
+                opacity: 0.2;
+        }
+
+        main.vista-producto section.visualizacion-producto div.talles div button:active {
+                border: 2px solid var(--molocoton-oscuro);
+
+        }
+
+
+        main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
+
+        border: 2px solid var(--molocoton-oscuro);
+        }
+
+
+
+        /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
+
+
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito {
+
+        margin: 10px 0px 15px 30px;
+
+        width: 95%;
+
+        position: relative;
+        }
+
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
+        
+        font-size: var(--letra-grande);
+        
+        }
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
+
+        width: 20%;
+
+        height: 35%;
+
+        position: absolute;
+
+        bottom: 75px;
+
+        left: 70%;
+
+        border: 2px solid var(--gris-claro);
+        
+        }
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito::placeholder{
+
+                font-size: var(--letra-grande);
+                color: var(--gris-claro);
+                padding-left: 5px;
+        }      
+        
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito:focus{
+                outline: none;
+                border: 2px solid var(--molocoton-oscuro);
+                box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+        }
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
+
+        margin-left: 0;
+        }
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
+                margin-top: 35px;
+                width: 105%;
+                height: 45px;
+                font-size: var(--letra-grande);
+                background-color: var(--verde-azulado-claro);
+                color: var(--blanco);
+                border: none;margin-left: 0;
+        }
+
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
+        background-color: var(--gris-claro);
+
+        }
+
+
+        /*----CONTENEDOR ENVIO-------*/
+
+        main.vista-producto section.visualizacion-producto div.envio {
+
+        margin: 20px 0 20px 30px;
+
+        width: 100%;
+
+        padding: 0;
+
+        }
+
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
     
-}
-
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres img.blazer-over-otra{
+        font-size: var(--letra-mediana);
     
-}
+        width: 100%;
+        }
 
-/*---------CONTENEDOR GENERAL DE TODA LA INFORMACIÓN DEL PRODUCTO QUE NO SEAN IMÁGENES--------------*/
-
-main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
     
-width: 90%;
-}
-
-
-/*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
-
-margin: 25px 0px 20px 30px;
-
-width: 85%;
-}
-
-main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
-
-font-weight: 500;
-}
-
-main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
-
-margin: 5px 0px;
-
-font-weight: 700;
-
-font-size: var(--letra-grande);
-}
-
-main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
-
-margin: 20px 0 20px 0;
-
-color: var(--gris-claro);
-
-font-size: var(--letra-grande);
-}
-
-main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
-
-color: var(--negro);
-}
-
-
-/*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
-
-main.vista-producto section.visualizacion-producto div.talles {
-
-display: flex;
-
-justify-content: space-between;
-
-margin: 5px 0px 50px 30px;
-
-width: 80%;
-}
-
-main.vista-producto section.visualizacion-producto div.talles div {
-}
-
-
-main.vista-producto section.visualizacion-producto div.talles div button{width: 32px;height: 150%;background-color: var(--blanco);font-size: var(--letra-mediana);color: var(--gris-claro);border: 2px solid var(--gris-claro);}
-
-
-main.vista-producto section.visualizacion-producto div.talles div.uno {
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.uno button.boton-uno{
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
-
-border: 2px solid var(--molocoton-oscuro);
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.tres button.tres{
-
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.cuatro button.cuatro{
-
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.cinco button.cinco{
-
-}
-
-main.vista-producto section.visualizacion-producto div.talles div.seis button.seis{
-
-}
-
-/*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
-
-
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito {
-
-margin: 10px 0px 15px 30px;
-
-width: 95%;
-
-position: relative;
-}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito {
-
-}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{font-size: var(--letra-grande);}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
-
-width: 20%;
-
-height: 35%;
-
-position: absolute;
-
-bottom: 75px;
-
-left: 70%;
-
-border: 2px solid var(--gris-claro);
-}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-
-/* text-align: center; */
-
-margin-left: 0;
-}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {margin-top: 35px;width: 105%;height: 45px;font-size: var(--letra-grande);background-color: var(--verde-azulado-claro);color: var(--blanco);border: none;margin-left: 0;}
-
-main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
-    background-color: var(--gris-claro);
-}
-
-
-
-/*----CONTENEDOR ENVIO-------*/
-
-main.vista-producto section.visualizacion-producto div.envio {
-
-margin: 20px 0 20px 30px;
-
-/* display: flex; */
-
-width: 100%;
-
-padding: 0;
-}
-
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
+        font-size: var(--iconos-grandes);
     
-font-size: var(--letra-mediana);
+        display: inline-block;
     
-width: 100%;
-}
+        color: var(--gris-terciopelo);
+        }
 
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
     
-font-size: var(--iconos-grandes);
+        display: inline-block;
     
-display: inline-block;
+        width: 70%;
     
-color: var(--gris-terciopelo);
-}
+        font-size: var(--letra-pequeña);
+        }
 
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
     
-display: inline-block;
+        width: 55%;
     
-width: 70%;
+        display: inline-block;
     
-font-size: var(--letra-pequeña);
-}
+        margin-right: 0;
+    
+        height: 45px;
+    
+        border: 2px solid var(--gris-claro);
+    
+        padding-left: 3px;
+    
+        padding-top: 2.5px;
 
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-    
-width: 55%;
-    
-display: inline-block;
-    
-margin-right: 0;
-    
-height: 45px;
-    
-border: 2px solid var(--gris-claro);
-    
-padding-left: 3px;
-    
-padding-top: 2.5px;
-} 
-
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
-
-   color: var(--gris-claro);
-    font-size: var(--letra-pequeña);
+        } 
 
 
-}
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito:focus {
+                outline: none;
+                border: 2px solid var(--molocoton-oscuro);
+                box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+        }
 
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
+
+        color: var(--gris-claro);
+        font-size: var(--letra-pequeña);
+
+
+        }
+
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
     
-font-size: var(--letra-mas-pequeña);
-}
+        font-size: var(--letra-mas-pequeña);
 
-main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
+        }
+
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
     
-border: 2px solid var(--gris-claro);
+        border: 2px solid var(--gris-claro);
     
-font-size: var(--letra-mediana);
+        font-size: var(--letra-mediana);
     
-width: 40%;
+        width: 40%;
     
-display: inline-block;
+        display: inline-block;
     
-height: 45px;
+        height: 45px;
     
-background-color: var(--blanco);
-}
+        background-color: var(--blanco);
+        }
 
-/*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular:hover {
+                background-color: var(--gris-claro);
+                color: var(--blanco);
+        }
+
+        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
 
 
-main.vista-producto section.visualizacion-producto article.info-adicional-compra {
+        main.vista-producto section.visualizacion-producto article.info-adicional-compra {
 
-margin: 50px 0px 30px 30px;
+        margin: 50px 0px 30px 30px;
 
-font-size: var(--letra-mediana);
-}
+        font-size: var(--letra-mediana);
+        }
 
-main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
+        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
     
 display: flex;
     
@@ -385,11 +417,11 @@ justify-content: space-between;
 margin-bottom: 40px;
     
 color: var(--verde-azulado-claro);
-}
+        }
 
-main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-ruler-combined{
-    
-}
+        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-ruler-combined{
+   
+        }
 
 main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles h3.talles{
     
@@ -1462,8 +1494,10 @@ text-align: center;
 }
 
 main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-width: 180px;
-/* padding-bottom: 11px; */
+
+width: 180px;
+
+/* padding-bottom: 11px; */
 }
 
 main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{text-decoration: none;}
@@ -1555,10 +1589,14 @@ text-align: center;
 }
 
 main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-width: 100%;
-/* padding: 10px 0; */
-/* margin-bottom: 11%; */
-/* position: relative; */
+
+width: 100%;
+
+/* padding: 10px 0; */
+
+/* margin-bottom: 11%; */
+
+/* position: relative; */
 }
 
 main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
@@ -1924,12 +1962,15 @@ align-items: self-end;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-        width: 30%;
-        height: 300px;
+        
+width: 30%;
+        
+height: 300px;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-        width: 180px;
+        
+width: 180px;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{
@@ -1947,12 +1988,15 @@ align-items: self-end;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-        width: 31%;
-        height: 300px;
+        
+width: 31%;
+        
+height: 300px;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-            width: 145px;
+            
+width: 145px;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy {
@@ -1972,13 +2016,17 @@ align-items: self-end;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-        width: 30%;
-        height: 300px;
+        
+width: 30%;
+        
+height: 300px;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-        width: 172px;
-        margin: 0;
+        
+width: 172px;
+        
+margin: 0;
         }
         
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
@@ -2062,22 +2110,28 @@ display: none;
         }
         
         main.vista-producto div.contenedor-busqueda a{
-            font-size: var(--letra-grande);
+            
+font-size: var(--letra-grande);
         }
         
         main.vista-producto section.visualizacion-producto {
-      margin-left: 40px;
-      }
+      
+margin-left: 40px;
+      
+}
         
         /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
-            margin-top: 20px;
-            width: 42%;
+            
+margin-top: 20px;
+            
+width: 42%;
         }
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-            height: 75%;
+            
+height: 75%;
         }
         
         
@@ -2130,21 +2184,30 @@ display: none;
         }
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
-      justify-content: space-between;
-      margin-top: 20px;
-      }
+      
+justify-content: space-between;
+      
+margin-top: 20px;
+      
+}
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno{
-width: 28%;
-}
+
+width: 28%;
+
+}
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos{
-width: 28%;
-}
+
+width: 28%;
+
+}
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres{
-width: 30%;
-}
+
+width: 30%;
+
+}
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno img.blazer-over-otra{
             
@@ -2177,9 +2240,12 @@ display: none;
         }
 
         main.vista-producto div.contenedor-busqueda {
-    margin-top: 20px;
-    margin-left: 40px;
-    }
+    
+margin-top: 20px;
+    
+margin-left: 40px;
+    
+}
 
         main.vista-producto div.contenedor-busqueda a{
     
@@ -2272,17 +2338,24 @@ display: none;
 
 
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
-font-size: var(--letra-mayor-tamaño);
-}
+
+font-size: var(--letra-mayor-tamaño);
+
+}
 
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
-margin-top: 20px;
-font-size: var(--letra-mayor-tamaño);
-}
+
+margin-top: 20px;
+
+font-size: var(--letra-mayor-tamaño);
+
+}
 
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
-margin-top: 45px;
-}
+
+margin-top: 45px;
+
+}
 
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
 
@@ -2292,8 +2365,10 @@ display: none;
         /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
 
         main.vista-producto section.visualizacion-producto div.talles {
-width: 65%;
-}
+
+width: 65%;
+
+}
 
         main.vista-producto section.visualizacion-producto div.talles div {
                 
@@ -2301,8 +2376,10 @@ display: none;
 
 
         main.vista-producto section.visualizacion-producto div.talles div button{
-                width: 45px;
-                font-size: var(--letra-grande);
+                
+width: 45px;
+                
+font-size: var(--letra-grande);
         }
 
 
@@ -2311,8 +2388,10 @@ display: none;
         }
 
         main.vista-producto section.visualizacion-producto div.talles div.uno button.boton-uno{
-/* font-size: var(--letra-grande); */
-}
+
+/* font-size: var(--letra-grande); */
+
+}
 
         main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
 
@@ -2351,22 +2430,31 @@ display: none;
         }
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
-               /* font-size: var(--letra-grande); */
+               
+/* font-size: var(--letra-grande); */
         }
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
-bottom: 70px;
-width: 150px;
-height: 45px;
-}
+
+bottom: 70px;
+
+width: 150px;
+
+height: 45px;
+
+}
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-margin-top: 40px;
-}
+
+margin-top: 40px;
+
+}
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
-               height: 50px;
-               width: 85%;
+               
+height: 50px;
+               
+width: 85%;
         }
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
@@ -2378,8 +2466,10 @@ display: none;
         /*----CONTENEDOR ENVIO-------*/
 
         main.vista-producto section.visualizacion-producto div.envio {
-margin-top: 30px;
-}
+
+margin-top: 30px;
+
+}
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
     
@@ -2398,8 +2488,10 @@ display: none;
         }
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-    margin-top: 5px;
-    } 
+    
+margin-top: 5px;
+    
+} 
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
 
@@ -2408,20 +2500,27 @@ display: none;
         }
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
-    margin-top: 10px;
-    }
+    
+margin-top: 10px;
+    
+}
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
-    width: 30%;
-    }
+    
+width: 30%;
+    
+}
 
 /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
 
 
         main.vista-producto section.visualizacion-producto article.info-adicional-compra {
-margin-top: 40px;
-width: 80%;
-}
+
+margin-top: 40px;
+
+width: 80%;
+
+}
 
         main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
     
@@ -2477,30 +2576,43 @@ display: none;
         }
 
         main.vista-producto article.contenedor-descripcion {
-   t;
-   margin-left: 60px;
-   width: 85%;
-   }
+   
+t;
+   
+margin-left: 60px;
+   
+width: 85%;
+   
+}
 
         main.vista-producto article.contenedor-descripcion p.descripcion{
-    font-size: var(--letra-mediana);
-    }
+    
+font-size: var(--letra-mediana);
+    
+}
 
         main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
-    font-size: var(--letra-grande);
-    }
+    
+font-size: var(--letra-grande);
+    
+}
 
 
         /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
 
         main.vista-producto section.otrosFav {
-margin-top: 70px;
-}
+
+margin-top: 70px;
+
+}
 
         main.vista-producto section.otrosFav h3.otrosFav{
-font-size: var(--letra-titular-mayor);
-width: 100%;
-}
+
+font-size: var(--letra-titular-mayor);
+
+width: 100%;
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos {
 
@@ -2509,21 +2621,32 @@ display: none;
 
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav{
-height: 400px;
-flex-basis: 30%;
-text-align: center;
-overflow: hidden;
-}
+
+height: 400px;
+
+flex-basis: 30%;
+
+text-align: center;
+
+overflow: hidden;
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-/* width: 30%; */
-/* flex: 0 0 calc(30% - 10px); */
-}
+
+/* width: 30%; */
+
+/* flex: 0 0 calc(30% - 10px); */
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-width: 249px;
-/* object-fit: cover; */
-}
+
+width: 249px;
+
+/* object-fit: cover; */
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{
        
@@ -2540,13 +2663,18 @@ display: none;
         }
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-width: 30%;
-/* flex: 0 0 calc(30% - 10px); */
-}
+
+width: 30%;
+
+/* flex: 0 0 calc(30% - 10px); */
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-             width: 194px;
-             /* object-fit: cover; */
+             
+width: 194px;
+             
+/* object-fit: cover; */
         }
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy {
@@ -2566,14 +2694,20 @@ f
         }
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-/* width: calc(30% - 1%); */
-/* flex: 0 0 calc(30% - 10px); */
-}
+
+/* width: calc(30% - 1%); */
+
+/* flex: 0 0 calc(30% - 10px); */
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-width: 240px;
-/* object-fit: cover; */
-}
+
+width: 240px;
+
+/* object-fit: cover; */
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
 
@@ -2637,8 +2771,10 @@ f
 /*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/
 
         main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
-margin-left: 30px;
-}
+
+margin-left: 30px;
+
+}
 
         /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
