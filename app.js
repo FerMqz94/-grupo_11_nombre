@@ -10,11 +10,11 @@ app.use(express.static('public'));
     // res.sendFile(path.join(__dirname, './views/home.html'))
 // })
 
-app.get('/carrito', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './views/carrito.html'))})
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/header.html'))})
+// app.get('/', (req, res) => {
+    // res.sendFile(path.join(__dirname, './views/header.html'))}) 
 
 
 
