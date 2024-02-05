@@ -74,6 +74,8 @@ a {
     display: flex;
 }
    .logo .img-header {
+  width: 14%;
+  margin-bottom: 21px;
   }
    .logo .zinke {
     font-size: 60px;
@@ -215,7 +217,7 @@ a {
   display: flex;
   /* padding-right: 40px; */
   justify-content: space-between;
-  width: 96%;
+  width: 100%;
   }
    .logo .logo-zinke {}
    .logo .img-header {
