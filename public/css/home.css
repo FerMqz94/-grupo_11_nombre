@@ -191,7 +191,7 @@
   /* extras */
   .home img.logo-whatsapp {
     display: inline;
-    width: 13%;
+    width: 7%;
     position: fixed;
     right: 50px;
     bottom: 31px;
@@ -199,7 +199,7 @@
 
   .home img.logo-flecha {
     display: inline;
-    width: 9%;
+    width: 5%;
     position: fixed;
     left: 50px;
     bottom: 50px;
