@@ -89,7 +89,7 @@
   
 
 /* vista tablet */
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 769px)  {
   .footer {
   }
   .footer .footer-movil {
@@ -116,20 +116,24 @@
   .footer .footer-tablet .texto-especial {
     font-size: 19px;
     margin-top: revert-layer;
+    text-align: start;
   }
   .footer .footer-tablet .columna-1 .texto {
     order: -10;
     margin-left: 22px;
+    text-align: justify;
   }
   .footer .footer-tablet .columna-2 {
     width: 20%;
   }
-  .footer .footer-tablet .columna-2 .texto-2 {
+  .footer .footer-tablet .columna-2 .texto {
+  text-align: justify;
   }
   .footer .footer-tablet .columna-3 {
     width: 23%;
   }
-  .footer .footer-tablet .columna-3 .texto-3 {
+  .footer .footer-tablet .columna-3 .texto {
+  text-align: justify;
   }
   .footer .footer-tablet .columna-4 {
     width: 27%;
@@ -153,9 +157,11 @@
     padding: 5% 0px 5% 0px;
     border-radius: 60px;
   }
-  .footer .footer-tablet .columna-4 .texto-4 {
+  .footer .footer-tablet .columna-4 .texto {
     margin: 0;
+    text-align: justify;
   }
+  .footer .footer-tablet .columna-4 .texto-especial {}
   .footer .footer-tablet .columna-5 {
     width: 50%;
   }
@@ -166,7 +172,7 @@
     width: 98%;
   }
   .footer .footer-tablet .columna-6 {
-    width: 19%;
+    width: 21%;
   }
   .footer .footer-tablet .columna-6 .columna-6-mini {
     display: flex;
@@ -176,9 +182,12 @@
   .footer .footer-tablet .columna-6 .texto-6 {
   }
   .footer .footer-tablet .columna-7 {
-    width: 31%;
+    width: 28%;
     text-align: center;
   }
+  .footer .footer-tablet .columna-7 .texto-especial {
+    text-align: center;
+}
   .footer .footer-tablet .columna-7 .img-tablet-2 {
     width: 80%;
   }
@@ -209,6 +218,7 @@
   .footer .footer-tablet .texto-especial {
     font-size: 25px;
     margin-top: revert;
+    text-align: justify;
   }
   .footer .footer-tablet .columna-1 {
     border: 34px;
@@ -219,6 +229,7 @@
     order: -10;
     margin-left: 22px;
     font-size: 17px;
+    text-align: justify;
   }
   .footer .footer-tablet .columna-1 .texto-especial {
     font-size: 25px;
@@ -228,12 +239,14 @@
   }
   .footer .footer-tablet .columna-2 .texto {
   font-size: 17px;
+  text-align: justify;
   }
   .footer .footer-tablet .columna-3 {
     width: 23%;
   }
   .footer .footer-tablet .columna-3 .texto {
   font-size: 17px;
+  text-align: justify;
   }
   .footer .footer-tablet .columna-4 {
     width: 27%;
@@ -262,6 +275,7 @@
   .footer .footer-tablet .columna-4 .texto {
     margin: 0;
     font-size: 17px;
+    text-align: justify;
   }
   .footer .footer-tablet .columna-5 {
     width: 50%;
@@ -274,7 +288,7 @@
     width: 98%;
   }
   .footer .footer-tablet .columna-6 {
-    width: 19%;
+    width: 21%;
   }
   .footer .footer-tablet .columna-6 .columna-6-mini {
     display: flex;
@@ -295,7 +309,7 @@
   }
   .footer .footer-tablet .columna-7  {
     margin-bottom: 12px;
-    width: 31%;
+    width: 29%;
   }
   
 }
