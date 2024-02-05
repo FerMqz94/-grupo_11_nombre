@@ -5,14 +5,23 @@ const port = 3030;
 
 app.use(express.static('public'));
 
+
+
+
 app.get('/', (req, res) => {
      res.sendFile(path.join(__dirname, './views/home.html'))
 })
 
-app.get('/', (req, res) => {
-     res.sendFile(path.join(__dirname, './views/vistaProducto.html'))
-})
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/carrito.html'))})
 
+
+
+app.get('/producto-detalle', (req, res) => {
+     res.sendFile(path.join(__dirname, './views/productDetail.html'))
+
+})
+     
 app.listen(port, () => console.log(`http://localhost:${port}`));
 
 
