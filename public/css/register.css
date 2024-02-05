@@ -142,7 +142,7 @@ color: var(--gris-terciopelo);
 article.article-redes-sociales-register div.imagenes-redes-sociales {
     /* margin-left: 15px; */
     display: flex;
-    width: 50%;
+    width: 60%;
     /* display: flex; */
     /* width: 95%; */
     justify-content: space-between;
