@@ -44,16 +44,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.main-carrito .productos .info-compra .producto-info .datos-producto {
-}
-.main-carrito .productos .info-compra .fa-trash {
-}
-.main-carrito .precio {
-}
 
-.main-carrito .precio .texto-carrito {
-}
-@media (min-width: 369px) {
+/* vista movil */
   .main-carrito {
   }
   .main-carrito .carrito-vacio {
@@ -166,7 +158,7 @@
   }
   .imgenes-carrito .img-4 {
   }
-}
+
 @media (min-width: 769px) {
   .main-carrito {
   }

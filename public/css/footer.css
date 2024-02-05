@@ -1,16 +1,7 @@
-.footer {
-}
-footer .ENVIO {
-}
-footer .Correo {
-}
-footer.datos.NAVEGACIÓN {
-}
-footer.datos.Preguntas {
-}
+
 /* vista movil */
 
-@media (min-width: 361px) and (max-width: 768px) {
+
   .footer {
     margin: auto;
     text-align: center;
@@ -96,7 +87,7 @@ footer.datos.Preguntas {
     display:none ;
   }
   
-}
+
 /* vista tablet */
 @media (min-width: 769px) and (max-width: 1023px) {
   .footer {

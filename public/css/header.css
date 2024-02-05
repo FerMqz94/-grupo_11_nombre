@@ -13,14 +13,7 @@ a {
   color: white;
   /* margin-top: 0px; */
 }
- .header-vista-movil {
-}
 
- .logo {
-}
-
- .logo .img-header {
-}
 
  .redirecciones {
   display: flex;
@@ -39,14 +32,9 @@ a {
   justify-content: space-around;
 }
 
- .redirecciones .seleccionar-destino .home {
-}
- .redirecciones .seleccionar-destino .productos {
-}
- .redirecciones .seleccionar-destino .carrito {
-}
 
-@media (min-width: 369px) {
+
+
 
    .encabezado {
     margin-bottom: 0;
@@ -114,7 +102,7 @@ a {
   .header-vista-tablet-pc {
     display: none;
   }
-}
+
 
 @media (min-width: 769px) {
   .header {
