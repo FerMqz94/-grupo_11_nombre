@@ -40,7 +40,7 @@
             </div>
 
             <div class="productos">
-              <a href="/"><i class="fa-solid fa-list" style="color: gray;"></i></a>
+              <a href="/productDetail"><i class="fa-solid fa-list" style="color: gray;"></i></a>
               <p>productos</p>
             </div>
 
@@ -61,15 +61,15 @@
           <p class="barrra-busqueda"> &nbsp;¿que estas buscando? &nbsp;&nbsp;&nbsp;&nbsp;
             <i class="fa-solid fa-magnifying-glass"></i>
           </p>
-          <a href="">
+          <a href="/ingreso">
             <p class="texto-header">crear cuenta</p>
           </a>
 
-          <a href="">
+          <a href="/registro">
             <p class="texto-header">iniciar sesión</p>
           </a>
 
-          <a href="">
+          <a href="/carrito">
             <i class="fa-solid fa-cart-shopping" style="color: black;"></i>
           </a>
         </div>
@@ -172,7 +172,7 @@
         </div>
 
         <div class="cantidad-carrito">
-          <form class="form-carrito" action="/vistaProduc" method="POST">
+          <form class="form-carrito" action="/productDetail" method="POST">
             <label class="label-carrito" for="cantidad">CANTIDAD</label>
             <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
             <div class="contenedor-boton-carrito">
@@ -184,7 +184,7 @@
         <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
 
         <div class="envio">
-          <form action="/vistaProduc" method="POST" class="form-carrito">
+          <form action="/productDetail" method="POST" class="form-carrito">
             <i class="fa-solid fa-truck"></i>
             <label class="label-carrito" for="medioEnvio">Medios de envío</label>
             <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio"
