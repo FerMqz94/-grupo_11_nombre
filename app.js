@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
      res.sendFile(path.join(__dirname, './views/home.html'))
 })
 
+app.get('/', (req, res) => {
+     res.sendFile(path.join(__dirname, './views/vistaProducto.html'))
+})
+
 app.listen(port, () => console.log(`http://localhost:${port}`));
 
 
