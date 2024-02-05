@@ -775,8 +775,10 @@ font-weight: 500;
         }
 
         main.vista-producto div.imagen-cierre img.imagen-cierre-mobile{
-width: 90%;
-}
+
+width: 90%;
+
+}
 
 /*------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
@@ -1368,14 +1370,19 @@ height: 300px;
         }      
 
          main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-                width: 172px;
-                margin-top: 10px;
-                margin-bottom: 8px;
+                
+width: 172px;
+                
+margin-top: 10px;
+                
+margin-bottom: 8px;
         }
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-font-size: var(--letra-mediana);
-}
+
+font-size: var(--letra-mediana);
+
+}
 
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie p {
 
@@ -1416,1055 +1423,339 @@ height: 300px;
 }
  
    
-
-
-
 /*------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*----------------------MEDIA QUERY DESKTOP------------------------------*/
 
 @media (min-width: 1024px) {
         
-        main.vista-producto {
-
-        
-        }
+       
         
 
         /*-------CONTENEDOR DE LA BÚSQUEDA INICIAL----------*/
-
+    
         main.vista-producto div.contenedor-busqueda {
-            
-       
+    
+                margin-top: 20px;
+                
+                margin-left: 40px;
+                
         }
+    
         
         main.vista-producto div.contenedor-busqueda a{
             
-font-size: var(--letra-grande);
+        font-size: var(--letra-grande);
+        
         }
         
         main.vista-producto section.visualizacion-producto {
       
-margin-left: 40px;
+        margin-left: 40px;
       
-}
+        }
+    
+    
         
+        /*---CIRCULOS----*/
+    
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{
+              
+                font-size: var(--letra-grande);
+        }
+        
+    
         /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
             
-margin-top: 20px;
+        margin-top: 20px;
             
-width: 42%;
+        width: 42%;
         }
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
             
-height: 75%;
-        }
-        
-        
-        
-        
-        /*-ICONO LUPA---*/
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
-            
-      
-        }
-        
-        
-        /*----ICONO CORAZÓN----*/
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
-            
-      
-        }
-        
-        
-        /*---CIRCULOS----*/
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos{
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{
-      
-
-        }
-        
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.circulo-claro{
-            
-  
+        height: 75%;
         }
         
         
         /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
         
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
-   
-        
-        }
-        
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
-            
       
-        }
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
       
-justify-content: space-between;
+        justify-content: space-between;
       
-margin-top: 20px;
-      
-}
+        margin-top: 20px;
+        
+        }
         
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno{
-
-width: 28%;
-
-}
-
+    
+        width: 28%;
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos{
-
-width: 28%;
-
-}
-
+    
+        width: 28%;
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres{
-
-width: 30%;
-
-}
+    
+        width: 30%;
+    
+        }
+    
+    
         
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno img.blazer-over-otra{
-            
-
+        /*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/
+    
+        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
+    
+        margin-left: 30px;
+    
         }
         
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos img.blazer-over-otra{
-            
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres img.blazer-over-otra{
-            
-
-        }
-
-
-              
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres img.ultima{
-            
-
-         }
-                    
-        
-        
-        
-        main.vista-producto {
-
-
-        }
-
-        main.vista-producto div.contenedor-busqueda {
     
-margin-top: 20px;
-    
-margin-left: 40px;
-    
-}
-
-        main.vista-producto div.contenedor-busqueda a{
-    
-
-        }
-
-        main.vista-producto div.contenedor-busqueda a.blazer{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto {
-
-
-        }
-
-/*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-    
-
-        }
-
-
-
-
-        /*-ICONO LUPA---*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
-    
-
-        }       
-
-
-        /*----ICONO CORAZÓN----*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
-    
-
-        }
-
-
-        /*---CIRCULOS----*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{/* color: var(--gris-terciopelo); */font-size: var(--letra-grande);}
-
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.circulo-claro{
-                
-        }
-
-
-        /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
-                
-        }
-
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
-             
-        }
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos img.blazer-over-otra{
-    
-
-        }
-
-
-
         /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
-
-        }
-
-
-
+    
+    
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
-
-font-size: var(--letra-mayor-tamaño);
-
-}
-
+    
+        font-size: var(--letra-mayor-tamaño);
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
-
-margin-top: 20px;
-
-font-size: var(--letra-mayor-tamaño);
-
-}
-
+    
+        margin-top: 20px;
+    
+        font-size: var(--letra-mayor-tamaño);
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
-
-margin-top: 45px;
-
-}
-
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
-
+    
+        margin-top: 45px;
+    
         }
-
-
+    
+        
+    
         /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
-
+    
         main.vista-producto section.visualizacion-producto div.talles {
-
-width: 65%;
-
-}
-
-        main.vista-producto section.visualizacion-producto div.talles div {
-                
+    
+        width: 65%;
+    
         }
-
-
+    
+    
+    
         main.vista-producto section.visualizacion-producto div.talles div button{
                 
-width: 45px;
-                
-font-size: var(--letra-grande);
+        width: 45px;
+                        
+        font-size: var(--letra-grande);
         }
-
-
-        main.vista-producto section.visualizacion-producto div.talles div.uno {
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.talles div.uno button.boton-uno{
-
-/* font-size: var(--letra-grande); */
-
-}
-
-        main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
-
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.talles div.tres button.tres{
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.talles div.cuatro button.cuatro{
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.talles div.cinco button.cinco{
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.talles div.seis button.seis{
-
-        }
-
-
-
+    
+    
+    
         /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
-
-
-
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito {
-
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito {
-
-        }
-
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
-               
-/* font-size: var(--letra-grande); */
-        }
-
+    
+    
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
-
-bottom: 70px;
-
-width: 150px;
-
-height: 45px;
-
-}
-
+    
+        bottom: 70px;
+    
+        width: 150px;
+    
+        height: 45px;
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-
-margin-top: 40px;
-
-}
-
+    
+        margin-top: 40px;
+    
+        }
+    
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
                
-height: 50px;
-               
-width: 85%;
+        height: 50px;
+                
+        width: 85%;
         }
-
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
- 
-        }
-
-
-
+    
+    
         /*----CONTENEDOR ENVIO-------*/
-
+    
         main.vista-producto section.visualizacion-producto div.envio {
-
-margin-top: 30px;
-
-}
-
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
     
-
-        
-        }
-
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
+        margin-top: 30px;
     
-
         }
-
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
     
-
-        }
-
+     
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
     
-margin-top: 5px;
+        margin-top: 5px;
+        
+        } 
     
-} 
-
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
-
-
-
-        }
-
+     
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
     
-margin-top: 10px;
+        margin-top: 10px;
+        
+        }
     
-}
-
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
     
-width: 30%;
+        width: 30%;
+        
+        }
     
-}
-
-/*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
-
-
+        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+    
+    
         main.vista-producto section.visualizacion-producto article.info-adicional-compra {
-
-margin-top: 40px;
-
-width: 80%;
-
-}
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
     
-
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-ruler-combined{
+        margin-top: 40px;
+    
+        width: 80%;
     
         }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles h3.talles{
     
-        } 
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-plus{
     
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo{
+        /*-----------DESCRIPCION DESTACADA---------------*/
     
-
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo i.fa-arrows-rotate{
-    
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo h3.cambios{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo i.fa-plus{
-    
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago i.fa-id-card{
-    
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago h3.formaPago{
-    
-
-        }
-
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago i.fa-plus{
-    
-        }
-
         main.vista-producto article.contenedor-descripcion {
-   
-t;
-   
-margin-left: 60px;
-   
-width: 85%;
-   
-}
-
+    
+        margin-left: 60px;
+        
+        width: 85%;
+        
+        }
+    
         main.vista-producto article.contenedor-descripcion p.descripcion{
     
-font-size: var(--letra-mediana);
+        font-size: var(--letra-mediana);
+        
+        }
     
-}
-
         main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
     
-font-size: var(--letra-grande);
+        font-size: var(--letra-grande);
+        
+        }
     
-}
-
-
+    
         /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
-
+    
         main.vista-producto section.otrosFav {
-
-margin-top: 70px;
-
-}
-
+    
+        margin-top: 70px;
+    
+        }
+    
         main.vista-producto section.otrosFav h3.otrosFav{
-
-font-size: var(--letra-titular-mayor);
-
-width: 100%;
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos {
-
-
+    
+        font-size: var(--letra-titular-mayor);
+    
+        width: 100%;
+    
         }
-
-
+    
+    
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav{
-
-height: 400px;
-
-flex-basis: 30%;
-
-text-align: center;
-
-overflow: hidden;
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-
-/* width: 30%; */
-
-/* flex: 0 0 calc(30% - 10px); */
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-
-width: 249px;
-
-/* object-fit: cover; */
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{
-       
+    
+        height: 400px;
+    
+        flex-basis: 30%;
+    
+        text-align: center;
+    
+        overflow: hidden;
+    
         }
-
+    
+    
+    
+        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
+    
+        width: 249px;
+    
+    
+        }
+    
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti h4.h4-dos-conti{
-font-size: var(--letra-grande);
-}
-
+    
+        font-size: var(--letra-grande);
+    
+        }
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-dos-conti{
-font-size: var(--letra-grande);
-}
-
+    
+        font-size: var(--letra-grande);
+    
+        }
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-
-width: 30%;
-
-/* flex: 0 0 calc(30% - 10px); */
-
-}
-
+    
+        width: 30%;
+    
+        }
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
              
-width: 194px;
-             
-/* object-fit: cover; */
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy {
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
-f;
-font-size: var(--letra-grande);
-}
-
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-chaqueta-ivy {
-font-size: var(--letra-grande);
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-
-/* width: calc(30% - 1%); */
-
-/* flex: 0 0 calc(30% - 10px); */
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-
-width: 240px;
-
-/* object-fit: cover; */
-
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-font-size: var(--letra-grande);
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-weird-barbie {
-font-size: var(--letra-grande);
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.lets-normcore {
-
-
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.abrigo-lets-normcore {
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore {
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore h4.h4-lets-normcore{
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-lets-normcore {
-
-
-        }
-
-        main.vista-producto div.imagen-cierre {
-
-
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
-
-
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-mobile{
-
-        }
-
-
-/*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
-
-margin-left: 30px;
-
-}
-
-        /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
-        
-     
-        }
-        
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
-        
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
-        
-   
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
-        
-     
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
-        
-        
-
-        }
-        
-        
-        /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
-        
-        main.vista-producto section.visualizacion-producto div.talles {
-        
-      
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div {
-        }
-        
-        
-        main.vista-producto section.visualizacion-producto div.talles div button{
-            
-
-        }
-        
-        
-        main.vista-producto section.visualizacion-producto div.talles div.uno {
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.uno button.boton-uno{
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.tres button.tres{
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.cuatro button.cuatro{
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.cinco button.cinco{
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.talles div.seis button.seis{
-        
-        }
-        
-        /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
-        
-        
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito {
-        
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito {
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
+        width: 194px;
                 
         }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
-       
-
-       
-        }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-        
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
-          
-
-        }
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
-      
-
-        }
-        
-        
-        
-        /*----CONTENEDOR ENVIO-------*/
-        
-        main.vista-producto section.visualizacion-producto div.envio {
-        
-       
-        }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
-            
-     
-        }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
+    
+    
+        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
+    
+        font-size: var(--letra-grande);
     
         }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
-            
-     
-        }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-            
-
-        } 
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
-        
-       
-        
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
-            
-        
-        }
-        
-        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
-        
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra {
-       
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
-            
-       
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-ruler-combined{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles h3.talles{
-            
-
-        } 
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles i.fa-plus{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo{
-            
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo i.fa-arrows-rotate{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo h3.cambios{
-            
-
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo i.fa-plus{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago{
-            
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago i.fa-id-card{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago h3.formaPago{
-            
-
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago i.fa-plus{
-            
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.contenedor-descripcion{
-            
-       
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.contenedor-descripcion p.descripcion{
-            
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.contenedor-descripcion p.descripcion-destacada{
-            
-        
-        }
-        
-        
-        /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
-        
-        main.vista-producto section.otrosFav {
-        
-
-        }
-        
-        main.vista-producto section.otrosFav h3.otrosFav{
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos {
-        
-
-        }
-        
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav{
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-        
-
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{
-            
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti h4.h4-dos-conti{
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-dos-conti{
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-        
-
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-            
-
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy {
-        
-      
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
-        
-      
-        }
-        
-        
+    
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-chaqueta-ivy {
-        
-        
+    
+        font-size: var(--letra-grande);
+    
         }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-        
-
-        }
-        
+    
+    
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-        
-
+    
+        width: 240px;
+    
         }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
-        
-        
-        }
-        
+    
+    
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-        
-        
+    
+        font-size: var(--letra-grande);
+    
         }
-        
+    
         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-weird-barbie {
-        
-        
+    
+        font-size: var(--letra-grande);
+    
         }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.lets-normcore {
-        
-
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.abrigo-lets-normcore {
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore {
-        
-      
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore h4.h4-lets-normcore{
-        
-        
-        }
-        
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-lets-normcore {
-        
-       
-        }
-        
-        main.vista-producto div.imagen-cierre {
-       
-        }
-        
-        main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
-        
-
-        }
-        
-        main.vista-producto div.imagen-cierre img.imagen-cierre-mobile{
-        
-
-        }
+    
+    
+    }
 
 
-}
