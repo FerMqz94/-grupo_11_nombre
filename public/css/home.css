@@ -1,6 +1,5 @@
 /* Home */
-.home {
-}
+
 /* Carrusel */
 .home .carrusel {
   display: none;
@@ -8,13 +7,6 @@
 /* Seccion informacion de envio */
 .home .contenedor-info-envio {
   display: none;
-}
-
-.home .contenedor-info-envio .contenedor-envio-gratis {
-}
-.home .contenedor-info-envio .ccontenedor-sito-seguro {
-}
-.home .contenedor-info-envio .contenedor-zinke-flex {
 }
 
 /* Seccion de imagenes */
@@ -32,29 +24,13 @@
 
   flex-wrap: wrap;
 }
-.home .contenedor-imagenes .img1 {
-}
-.home .contenedor-imagenes .img2 {
-}
-.home .contenedor-imagenes .img3 {
-}
-.home .contenedor-imagenes .img4 {
-}
-.home .contenedor-imagenes .img5 {
-}
-.home .contenedor-imagenes .img6 {
-}
-.home .contenedor-imagenes .img7 {
-}
-.home .contenedor-imagenes .img8 {
-}
+
 /* Seccion de capsulas */
 .home .titulo-capsula {
     display: none;
     
 }
-.home .capsulas {
-}
+
 /* BEIGE CAP*/
 
 .home .foto-capsula-beige {width: calc(50% - 5px);}
@@ -86,12 +62,14 @@
   display: none;
 }
 
-/* extras */
-.home img .whatsapp {
-}
+  /* extras */
+  .home img.logo-whatsapp {
+    display: none;
+  }
 
-.home img .flecha {
-}
+  .home img.logo-flecha {
+    display: none;
+  }
 /* ------------------- General -------------------*/
 .home .foto {
   width: calc(50% - 5px);
@@ -104,8 +82,7 @@
 
 @media (min-width: 769px) {
   /* Home */
-  .home {
-  }
+
   /* Carrusel */
 
   .home .boton-carousel-personalizado {
@@ -140,29 +117,12 @@
     padding: 4% 0%;
   }
 
-  .home .contenedor-info-envio .contenedor-envio-gratis {
-  }
-  .home .contenedor-info-envio .ccontenedor-sito-seguro {
-  }
-  .home .contenedor-info-envio .contenedor-zinke-flex {
-  }
   /* Seccion de imagenes */
   .home .contenedor-subtitulos-imagenes {
     display: none;
   }
   .home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
     display: block;
-  }
-
-  .home .contenedor-imagenes {
-  }
-  .home .contenedor-imagenes .img1 {
-  }
-  .home .contenedor-imagenes .img2 {
-  }
-  .home .contenedor-imagenes .img3 {
-  }
-  .home .contenedor-imagenes .img4 {
   }
   .home .contenedor-imagenes .img5 {
     display: none;
@@ -200,8 +160,6 @@
 
   /* BEIGE CAP*/
 
-  .home .foto-capsula-beige {
-  }
 
   /* AMERICAN DREAM CAP */
 
@@ -232,14 +190,16 @@
 
   /* extras */
   .home img.logo-whatsapp {
-    width: 8%;
+    display: inline;
+    width: 13%;
     position: fixed;
     right: 50px;
     bottom: 31px;
   }
 
   .home img.logo-flecha {
-    width: 5%;
+    display: inline;
+    width: 9%;
     position: fixed;
     left: 50px;
     bottom: 50px;
@@ -266,36 +226,16 @@
 
 @media (min-width: 1024px) {
   /* Home */
-  .home {
-  }
+
   /* Carrusel */
-  .home .carrusel {
-  }
+
   /* Seccion informacion de envio */
-  .home .contenedor-info-envio {
-  }
-  .home .contenedor-info-envio .contenedor-envio-gratis {
-  }
-  .home .contenedor-info-envio .contenedor-sito-seguro {
-  }
-  .home .contenedor-info-envio .contenedor-zinke-flex {
-  }
+
 
   /* Seccion de imagenes */
-  .home .contenedor-subtitulos-imagenes {
-  }
-  .home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
-  }
+
   .home .contenedor-imagenes {
     width: 100%;
-  }
-  .home .contenedor-imagenes .img1 {
-  }
-  .home .contenedor-imagenes .img2 {
-  }
-  .home .contenedor-imagenes .img3 {
-  }
-  .home .contenedor-imagenes .img4 {
   }
   .home .contenedor-imagenes .img5 {
     display: inline;
@@ -337,11 +277,9 @@
     display: inline;
   }
   /* -- */
-  .home .mostrar-mas-productos {
-  }
+
   /* Seccion mensaje de la marca pequeño */
-  .home .mensaje-de-la-marca-pequenio {
-  }
+
   /* Seccion mensaje de la marca grande */
   .home .mensaje-de-la-marca-grande {
     display: block;
@@ -352,11 +290,7 @@
   }
 
   /* extras */
-  .home img .logo-whatsapp {
-  }
 
-  .home img .logo-flecha {
-  }
   /* ------------------- General -------------------*/
 
   .home .foto {

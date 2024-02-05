@@ -85,16 +85,7 @@
     align-items: center;
   }
 
-  .main-carrito
-    .productos
-    .info-compra
-    .info-datos-img
-    .img-carrito
-    .main-carrito
-    .productos
-    .info-compra
-    .info-datos-img
-    .img-carrito {
+  .main-carrito .productos .info-compra .info-datos-img .img-carrito .main-carrito .productos .info-compra .info-datos-img .img-carrito {
     /* padding-top: 1%; */
     padding-bottom: 8%;
     width: 29%;
