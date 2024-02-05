@@ -1,0 +1,525 @@
+main.registro {
+
+font-style: var(--fuente-general);
+}
+
+
+main.registro section.section-inputs-registro {margin: 30px 20px 30px 20px;text-align: center;}
+
+main.registro section.section-inputs-registro h3.titulo-registro-inputs {
+
+font-size: var(--letra-mediana);
+
+margin-bottom: 30px;
+
+color: var(--gris-terciopelo);
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro{
+
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
+
+margin: 20px 0;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister label.nombredeCuenta{
+
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
+
+width: 300px;
+
+height: 30px;
+
+border: 2px solid var(--gris-pizarra);
+}
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
+
+    font-size: var(--letra-mediana);
+    padding-left: 5px;
+
+}
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
+
+margin: 0 0 20px 0;
+}
+
+ 
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro label{
+
+}
+ 
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
+
+width: 300px;
+
+height: 30px;
+
+border: 2px solid var(--gris-pizarra);
+}
+             
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
+
+    font-size: var(--letra-mediana);
+    padding-left: 5px;
+
+}
+
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister {
+
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister label{
+
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
+
+width: 300px;
+
+height: 30px;
+
+border: 2px solid var(--gris-pizarra);
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
+    
+    font-size: var(--letra-mediana);
+    padding-left: 5px;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
+    
+margin-top: 20px;
+    
+padding-bottom: 20px;
+    
+border-bottom: 1.5px dashed var(--gris-claro);
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
+
+/* margin-top: 20px; */
+
+width: 300px;
+
+height: 35px;
+
+border: none;
+
+background-color: var(--verde-azulado-claro);
+
+color: var(--blanco);
+
+border-radius: 5px;
+
+font-size: var(--letra-mediana);
+
+letter-spacing: 1px;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register:hover {
+
+    background-color: var(--gris-claro);
+
+}
+
+
+article.article-redes-sociales-register {
+
+margin: 50px 20px 30px 20px;
+
+text-align: center;
+
+/* margin: 30px 0 30px 30px; */
+}
+
+article.article-redes-sociales-register h3.redes-sociales-register-titulo {
+    
+font-size: var(--letra-mediana);
+    
+margin-bottom: 30px;
+    
+color: var(--gris-terciopelo);
+}
+
+article.article-redes-sociales-register div.imagenes-redes-sociales {
+    
+margin-left: 15px;
+    
+display: flex;
+    
+width: 85%;
+    
+justify-content: space-around;
+    
+/* display: flex; */
+    
+/* width: 95%; */
+}
+   
+
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook {
+
+font-size: 60px;
+}
+    
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-google {
+
+font-size: var(--letra-titular-mayor);
+
+color: var(--blanco);
+
+background-color: #ff566b;
+
+padding: 5px;
+
+border-radius: 50%;
+}
+
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter {
+
+font-size: var(--letra-titular-mayor);
+
+color: var(--blanco);
+
+background-color: #1fcdcd;
+
+padding: 5px;
+
+border-radius: 50%;
+}
+          
+
+@media (min-width: 769px) {
+
+    main.registro {
+
+    }
+        
+        
+    main.registro section.section-inputs-registro {
+           
+        
+    }
+        
+    main.registro section.section-inputs-registro h3.titulo-registro-inputs {
+        
+font-size: var(--letra-grande);
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro{
+        
+    }
+        
+
+   
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
+        
+      
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister label.nombredeCuenta{
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
+        
+width: 600px;
+        
+height: 50px;
+    }
+     
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta:focus{
+
+        outline: none;
+        border: 1.5px solid var(--molocoton-oscuro);
+        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
+        
+        margin-left: 10px;
+    }
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
+        
+        
+    }
+        
+         
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro label{
+        
+    }
+         
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
+        
+width: 600px;
+        
+height: 50px;
+    }
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
+
+        outline: none;
+        border: 1.5px solid var(--molocoton-oscuro);
+        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
+
+    }
+                     
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
+        margin-left: 10px;
+        
+    }
+        
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister {
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister label{
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
+        
+width: 600px;
+        
+height: 50px;
+    }
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus {
+
+        outline: none;
+        border: 1.5px solid var(--molocoton-oscuro);
+        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
+    }
+
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
+
+        margin-left: 10px;
+           
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
+      
+margin-top: 40px;
+      
+padding-bottom: 40px;
+      
+border-bottom: 2px dashed var(--gris-claro);
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
+        
+width: 600px;
+        
+height: 50px;
+        
+font-size: var(--letra-grande);
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register:hover {
+        
+         
+        
+    }
+        
+        
+    article.article-redes-sociales-register {
+        
+margin-top: 70px;
+    }
+        
+    article.article-redes-sociales-register h3.redes-sociales-register-titulo {
+            
+font-size: var(--letra-grande);
+            
+margin-bottom: 50px;
+            
+color: var(--gris-terciopelo);
+    }
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales {
+            
+        
+    }
+           
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook {
+        
+font-size: 90px;
+    }
+            
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-google {
+        
+font-size: 80px;
+    }
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter {
+        
+font-size: 80px;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 1024px) {
+    main.registro {
+
+/* text-align: center; */
+
+}
+        
+        
+    main.registro section.section-inputs-registro {
+           
+        
+    }
+        
+    main.registro section.section-inputs-registro h3.titulo-registro-inputs {
+        
+font-size: var(--letra-favMobile);
+        
+margin-bottom: 50px;
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro{
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
+        
+margin-bottom: 30px;
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister label.nombredeCuenta{
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
+        
+     
+    }
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
+        
+        padding-left: 20px;
+        
+    }
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
+        
+margin-bottom: 30px;
+    }
+        
+         
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro label{
+        
+    }
+         
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
+        
+      
+    }
+                     
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
+        
+        padding-left: 20px;
+    }
+        
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister {
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister label{
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
+        
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
+     
+        padding-left: 20px;
+
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
+      
+padding-bottom: 60px;
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
+        
+        
+    }
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register:hover {
+        
+         padding-left: 20px;
+        
+    }
+        
+        
+    article.article-redes-sociales-register {
+        
+/* text-align: center; */
+    }
+        
+    article.article-redes-sociales-register h3.redes-sociales-register-titulo {
+            
+font-size: var(--letra-favMobile);
+            
+margin-bottom: 80px;
+            
+color: var(--gris-terciopelo);
+    }
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales {
+            
+margin: auto;
+            
+width: 40%;
+    }
+           
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook {
+        
+       
+    }
+            
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-google {
+        
+     
+    }
+        
+    article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter {
+        
+       
+
+
+
+}
