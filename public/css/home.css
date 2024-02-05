@@ -49,7 +49,23 @@
 .home .contenedor-imagenes .img8 {
 }
 /* Seccion de capsulas */
+.home .titulo-capsula {
+    display: none;
+    
+}
+.home .capsulas {
+}
+/* BEIGE CAP*/
 
+.home .foto-capsula-beige {width: calc(50% - 5px);}
+
+/* AMERICAN DREAM CAP */
+
+.home .foto-capsula-american-dream {width: calc(50% - 5px);display: inline;}
+
+/* 3024 */
+
+.home .foto-capsula-3024 {display: none;}
 /* -- */
 .home .mostrar-mas-productos {
   font-size: 115%;
@@ -165,6 +181,10 @@
 
   .home .titulo-capsula {
     display: block;
+  }
+
+  .home .titulo-capsula {
+    display: block;
 
     text-align: center;
 
@@ -175,56 +195,25 @@
   }
 
   .home .capsulas {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: stretch;
+    margin: 10px 0px;
   }
 
   /* BEIGE CAP*/
-  .home .capsula-beige {
-    position: relative;
-    width: calc(50% - 5px);
-  }
 
   .home .foto-capsula-beige {
-    width: 100%;
-    position: absolute;
-  }
-
-  .home img.cap-beige-title {
-    position: absolute;
   }
 
   /* AMERICAN DREAM CAP */
-  .home .capsula-americanDream {
-    width: calc(50% - 5px);
-    position: relative;
-  }
-  .home img.foto-capsula-american-dream {
-    position: absolute;
-    width: 100%;
-  }
 
-  .home img.cap-americanDream-title {
-    position: absolute;
+  .home .foto-capsula-american-dream {
+  object-fit: contain;
   }
 
   /* 3024 */
-  .home .capsula-3024 {
-    width: calc(70% - 5px);
-    margin: auto;
-    position: relative;
-  }
 
-  .home img.foto-capsula-3024 {
-    width: 100%;
-    position: absolute;
-  }
-
-  .home img.cap-3024-title {
-    position: absolute;
+  .home .foto-capsula-3024 {
+  display: inline;
+  width: 80%;
   }
 
   /* -- */
@@ -327,14 +316,25 @@
   }
   .home .capsulas {
     margin-top: 10%;
+    width: 100%;
   }
-  .home .foto-capsula-beige {
+  /* BEIGE CAP*/
+
+  .foto-capsula-beige {
+    width: calc(30%);
   }
 
-  .home .foto-capsula-american-dream {
+  /* AMERICAN DREAM CAP */
+
+  .foto-capsula-american-dream {
+    width: calc(30%);
   }
 
-  .home .foto-capsula-3024 {
+  /* 3024 */
+
+  .foto-capsula-3024 {
+    width: calc(30%);
+    display: inline;
   }
   /* -- */
   .home .mostrar-mas-productos {
