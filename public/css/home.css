@@ -1,0 +1,365 @@
+/* Home */
+.home {
+}
+/* Carrusel */
+.home .carrusel {
+  display: none;
+}
+/* Seccion informacion de envio */
+.home .contenedor-info-envio {
+  display: none;
+}
+
+.home .contenedor-info-envio .contenedor-envio-gratis {
+}
+.home .contenedor-info-envio .ccontenedor-sito-seguro {
+}
+.home .contenedor-info-envio .contenedor-zinke-flex {
+}
+
+/* Seccion de imagenes */
+.home .contenedor-subtitulos-imagenes {
+  display: flex;
+}
+.home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
+  display: none;
+}
+
+.home .contenedor-imagenes {
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+}
+.home .contenedor-imagenes .img1 {
+}
+.home .contenedor-imagenes .img2 {
+}
+.home .contenedor-imagenes .img3 {
+}
+.home .contenedor-imagenes .img4 {
+}
+.home .contenedor-imagenes .img5 {
+}
+.home .contenedor-imagenes .img6 {
+}
+.home .contenedor-imagenes .img7 {
+}
+.home .contenedor-imagenes .img8 {
+}
+/* Seccion de capsulas */
+.home .titulo-capsula {
+    display: none;
+    
+}
+.home .capsulas {
+}
+/* BEIGE CAP*/
+
+.home .foto-capsula-beige {width: calc(50% - 5px);}
+
+/* AMERICAN DREAM CAP */
+
+.home .foto-capsula-american-dream {width: calc(50% - 5px);display: inline;}
+
+/* 3024 */
+
+.home .foto-capsula-3024 {display: none;}
+/* -- */
+.home .mostrar-mas-productos {
+  font-size: 115%;
+  padding: 6%;
+  color: var(--blanco);
+  background: var(--verde-azulado);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 0px 10px var(--gris-terciopelo);
+  margin: 15% 3%;
+}
+/* Seccion mensaje de la marca pequeño */
+.home .mensaje-de-la-marca-pequenio {
+  width: 100%;
+}
+/* Seccion mensaje de la marca grande */
+.home .mensaje-de-la-marca-grande {
+  display: none;
+}
+
+/* extras */
+.home img .whatsapp {
+}
+
+.home img .flecha {
+}
+/* ------------------- General -------------------*/
+.home .foto {
+  width: calc(50% - 5px);
+  object-fit: cover;
+}
+
+/* -----------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------ MEDIA DE TABLET ------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 769px) {
+  /* Home */
+  .home {
+  }
+  /* Carrusel */
+
+  .home .boton-carousel-personalizado {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--negro);
+  }
+  .home .flecha-carousel {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+    background-color: var(--negro);
+  }
+
+  .home .carrusel {
+    display: inline;
+  }
+  /* Seccion informacion de envio */
+  .home .contenedor-info-envio {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 10% 0%;
+
+    border-top: 2px solid var(--molocoton-oscuro);
+
+    border-bottom: 2px solid var(--molocoton-oscuro);
+
+    padding: 4% 0%;
+  }
+
+  .home .contenedor-info-envio .contenedor-envio-gratis {
+  }
+  .home .contenedor-info-envio .ccontenedor-sito-seguro {
+  }
+  .home .contenedor-info-envio .contenedor-zinke-flex {
+  }
+  /* Seccion de imagenes */
+  .home .contenedor-subtitulos-imagenes {
+    display: none;
+  }
+  .home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
+    display: block;
+  }
+
+  .home .contenedor-imagenes {
+  }
+  .home .contenedor-imagenes .img1 {
+  }
+  .home .contenedor-imagenes .img2 {
+  }
+  .home .contenedor-imagenes .img3 {
+  }
+  .home .contenedor-imagenes .img4 {
+  }
+  .home .contenedor-imagenes .img5 {
+    display: none;
+  }
+  .home .contenedor-imagenes .img6 {
+    display: none;
+  }
+  .home .contenedor-imagenes .img7 {
+    display: none;
+  }
+  .home .contenedor-imagenes .img8 {
+    display: none;
+  }
+
+  /* Seccion de capsulas */
+
+  .home .titulo-capsula {
+    display: block;
+  }
+
+  .home .titulo-capsula {
+    display: block;
+
+    text-align: center;
+
+    margin: 10% auto;
+  }
+  .home .titulo-capsula {
+    display: none;
+  }
+
+  .home .capsulas {
+    margin: 10px 0px;
+  }
+
+  /* BEIGE CAP*/
+
+  .home .foto-capsula-beige {
+  }
+
+  /* AMERICAN DREAM CAP */
+
+  .home .foto-capsula-american-dream {
+  object-fit: contain;
+  }
+
+  /* 3024 */
+
+  .home .foto-capsula-3024 {
+  display: inline;
+  width: 80%;
+  }
+
+  /* -- */
+  .home .mostrar-mas-productos {
+    display: none;
+  }
+
+  /* Seccion mensaje de la marca pequeño */
+  .home .mensaje-de-la-marca-pequenio {
+    display: none;
+  }
+  /* Seccion mensaje de la marca grande */
+  .home .mensaje-de-la-marca-grande {
+    display: none;
+  }
+
+  /* extras */
+  .home img.logo-whatsapp {
+    width: 8%;
+    position: fixed;
+    right: 50px;
+    bottom: 31px;
+  }
+
+  .home img.logo-flecha {
+    width: 5%;
+    position: fixed;
+    left: 50px;
+    bottom: 50px;
+  }
+
+  /* ------------------- General -------------------*/
+
+  h2 {
+    font-size: var(--letra-mediana);
+  }
+
+  p {
+    font-size: var(--letra-pequeña);
+  }
+
+  .home .foto {
+    border-radius: 5px;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------ MEDIA DE ESCRITORIO ------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+  /* Home */
+  .home {
+  }
+  /* Carrusel */
+  .home .carrusel {
+  }
+  /* Seccion informacion de envio */
+  .home .contenedor-info-envio {
+  }
+  .home .contenedor-info-envio .contenedor-envio-gratis {
+  }
+  .home .contenedor-info-envio .contenedor-sito-seguro {
+  }
+  .home .contenedor-info-envio .contenedor-zinke-flex {
+  }
+
+  /* Seccion de imagenes */
+  .home .contenedor-subtitulos-imagenes {
+  }
+  .home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
+  }
+  .home .contenedor-imagenes {
+    width: 100%;
+  }
+  .home .contenedor-imagenes .img1 {
+  }
+  .home .contenedor-imagenes .img2 {
+  }
+  .home .contenedor-imagenes .img3 {
+  }
+  .home .contenedor-imagenes .img4 {
+  }
+  .home .contenedor-imagenes .img5 {
+    display: inline;
+  }
+  .home .contenedor-imagenes .img6 {
+    display: inline;
+  }
+  .home .contenedor-imagenes .img7 {
+    display: inline;
+  }
+  .home .contenedor-imagenes .img8 {
+    display: inline;
+  }
+
+  /* Seccion de capsulas */
+  .home .titulo-capsula {
+    display: none;
+  }
+  .home .capsulas {
+    margin-top: 10%;
+    width: 100%;
+  }
+  /* BEIGE CAP*/
+
+  .foto-capsula-beige {
+    width: calc(30%);
+  }
+
+  /* AMERICAN DREAM CAP */
+
+  .foto-capsula-american-dream {
+    width: calc(30%);
+  }
+
+  /* 3024 */
+
+  .foto-capsula-3024 {
+    width: calc(30%);
+    display: inline;
+  }
+  /* -- */
+  .home .mostrar-mas-productos {
+  }
+  /* Seccion mensaje de la marca pequeño */
+  .home .mensaje-de-la-marca-pequenio {
+  }
+  /* Seccion mensaje de la marca grande */
+  .home .mensaje-de-la-marca-grande {
+    display: block;
+
+    width: 100%;
+
+    margin: 10% 0%;
+  }
+
+  /* extras */
+  .home img .logo-whatsapp {
+  }
+
+  .home img .logo-flecha {
+  }
+  /* ------------------- General -------------------*/
+
+  .home .foto {
+    width: calc(25% - 8px);
+  }
+}
