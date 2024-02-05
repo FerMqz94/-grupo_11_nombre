@@ -68,8 +68,8 @@ header {
     color: white;
     text-align: center;
     padding-bottom: 20px;
-    background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
-    color: transparent;
+    /* background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro)); */
+    /* color: transparent; */
   }
    .logo .logo-zinke {
     display: flex;
@@ -190,6 +190,10 @@ header {
     font-size: 16px;
     margin-top: 5px;
     margin-bottom: 6px;
+  }
+  .flecha {
+    transform: rotate(340deg);
+    /* transform: scaleX(-1.7); */
   }
 }
 
