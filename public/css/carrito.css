@@ -1,0 +1,398 @@
+.main-carrito {
+  /* border: solid #28b49e 2px; */
+}
+.main-carrito .carrito-vacio {
+  text-align: center;
+  display: none;
+}
+.main-carrito .carrito-vacio .fa-bag-shopping {
+  font-size: 400%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.main-carrito .carrito-vacio .texto-1 {
+}
+.main-carrito .carrito-vacio .texto-2 {
+}
+.main-carrito .carrito-vacio .explorar-carrito {
+}
+.main-carrito .productos {
+  display: flex;
+  flex-direction: column;
+  border: solid #65cbbb 1px;
+  margin-top: 0%;
+}
+.main-carrito .productos .info-compra {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.main-carrito .productos .info-compra .info-datos-img {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+.main-carrito .productos .info-compra .info-datos-img .img-carrito {
+  width: 25%;
+  /* padding-top: 3%; */
+  /* padding-bottom: 6%; */
+  margin-left: 1%;
+}
+.main-carrito .productos .info-compra .producto-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-carrito .productos .info-compra .producto-info .datos-producto {
+}
+.main-carrito .productos .info-compra .fa-trash {
+}
+.main-carrito .precio {
+}
+
+.main-carrito .precio .texto-carrito {
+}
+@media (min-width: 369px) {
+  .main-carrito {
+  }
+  .main-carrito .carrito-vacio {
+    text-align: center;
+    margin-top: 27px;
+  }
+  .main-carrito .carrito-vacio .fa-bag-shopping {
+    font-size: 400%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .main-carrito .carrito-vacio .texto-1 {
+    margin: 0;
+    font-size: 150%;
+  }
+  .main-carrito .carrito-vacio .texto-2 {
+    margin: 0;
+    font-size: 150%;
+  }
+  .main-carrito .carrito-vacio .explorar-carrito {
+    font-size: 170%;
+    color: #27b29c;
+    margin: revert;
+  }
+  .vista-carrito-con-productos {
+    /* display: none; */
+  }
+  .main-carrito .productos {
+  }
+  .main-carrito .productos .info-compra {
+  }
+  .main-carrito .productos .info-compra .info-datos-img {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+  }
+
+  .main-carrito
+    .productos
+    .info-compra
+    .info-datos-img
+    .img-carrito
+    .main-carrito
+    .productos
+    .info-compra
+    .info-datos-img
+    .img-carrito {
+    /* padding-top: 1%; */
+    padding-bottom: 8%;
+    width: 29%;
+    margin-left: 1%;
+  }
+  .main-carrito .productos .info-compra .producto-info {
+    /* padding-top: 5%; */
+    /* font-size: 108%; */
+    width: 86%;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main-carrito .productos .info-compra .producto-info .datos-producto {
+    margin: 3%;
+  }
+  .main-carrito .productos .info-compra .fa-trash {
+    margin-right: 2%;
+    margin-top: 3%;
+  }
+  .main-carrito .precio {
+    border-top: solid 1px #65cbbb;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .main-carrito .precio .texto-carrito {
+    margin: revert;
+  }
+  .vista-carrito-con-productos .comprar {
+    text-align: center;
+    font-size: 160%;
+    border: solid 1px #32e0c4;
+    background-color: #32e0c4;
+    width: 38%;
+    margin: auto;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 50px;
+  }
+
+  /* le falta el caminito */
+
+  .interesar {
+    margin-top: 70px;
+    font-size: 20px;
+  }
+  .imgenes-carrito {
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-carrito-celular {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .imgenes-carrito .img-3 {
+    width: 48%;
+  }
+  .imgenes-carrito-tablet {
+    display: none;
+  }
+  .imgenes-carrito .img-4 {
+  }
+}
+@media (min-width: 769px) {
+  .main-carrito {
+  }
+  .main-carrito .carrito-vacio {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .main-carrito .carrito-vacio .fa-bag-shopping {
+    font-size: 700%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .main-carrito .carrito-vacio .texto-1 {
+    margin: 0;
+    font-size: 210%;
+    margin-top: revert;
+  }
+  .main-carrito .carrito-vacio .texto-2 {
+    margin: 0;
+    font-size: 210%;
+  }
+  .main-carrito .carrito-vacio .explorar-carrito {
+    font-size: 350%;
+    color: #27b29c;
+  }
+  .vista-carrito-con-productos {
+  }
+  .main-carrito .productos {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 40px;
+  }
+  .main-carrito .productos .info-compra {
+  }
+  .main-carrito .productos .info-compra .info-datos-img {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+  }
+  .main-carrito .productos .info-compra .info-datos-img .img-carrito {
+    width: 21%;
+  }
+
+  .main-carrito .productos .info-compra .img-carrito {
+    margin-left: 1.4%;
+  }
+  .main-carrito .productos .info-compra .producto-info {
+    padding-top: 1%;
+    /* font-size: 108%; */
+    width: 48%;
+    /* margin-bottom: -2%; */
+    padding-right: 20px;
+  }
+  .main-carrito .productos .info-compra .producto-info .datos-producto {
+    margin: 3%;
+    font-size: 30px;
+    width: 137%;
+  }
+  .main-carrito .productos .info-compra .fa-trash {
+    margin-right: 2%;
+    margin-top: 3%;
+    font-size: 20px;
+  }
+  .main-carrito .precio {
+    /* border-top: solid 1px #65cbbb; */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+  }
+  .main-carrito .precio .texto-carrito {
+    /* padding-top: 4%; */
+  }
+  .vista-carrito-con-productos .comprar {
+    text-align: center;
+    font-size: 230%;
+    border: solid 1px #32e0c4;
+    background-color: #32e0c4;
+    width: 26%;
+    margin: auto;
+    margin-top: 80px;
+    padding: 15px;
+    border-radius: 500px;
+  }
+
+  /* le falta el caminito */
+
+  .interesar {
+    margin-top: 70px;
+    font-size: 40px;
+  }
+  .imgenes-carrito {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .img-carrito-celular {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+  }
+  .imgenes-carrito .img-3 {
+    /* width: 37%; */
+  }
+
+  .imgenes-carrito-tablet {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .imgenes-carrito .img-4 {
+    width: 48%;
+  }
+  .imgenes-carrito .img-5 {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-carrito {
+  }
+  .main-carrito .carrito-vacio {
+    text-align: center;
+  }
+  .main-carrito .carrito-vacio .fa-bag-shopping {
+    font-size: 1000%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .main-carrito .carrito-vacio .texto-1 {
+    margin: 0;
+    font-size: 260%;
+  }
+  .main-carrito .carrito-vacio .texto-2 {
+    margin: 0;
+    font-size: 260%;
+  }
+  .main-carrito .carrito-vacio .explorar-carrito {
+    font-size: 400%;
+    color: #27b29c;
+  }
+  .vista-carrito-con-productos {
+  }
+  .main-carrito .productos {
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .main-carrito .productos .info-compra {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .main-carrito .productos .info-compra .info-datos-img {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+  }
+  .main-carrito .productos .info-compra .info-datos-img .img-carrito {
+    width: 15%;
+    padding-bottom: 0;
+  }
+  .main-carrito .productos .info-compra .img-carrito {
+    margin-left: 1.4%;
+  }
+  .main-carrito .productos .info-compra .producto-info {
+    padding-top: 1%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main-carrito .productos .info-compra .producto-info .datos-producto {
+    margin: 2.6%;
+    margin-left: 6%;
+  }
+  .main-carrito .productos .info-compra .fa-trash {
+    margin-right: 2%;
+    margin-top: 3%;
+  }
+  .main-carrito .precio {
+    border-top: solid 1px #65cbbb; /* text-align: center; */
+    margin-top: 45px;
+    font-size: 40px;
+  }
+  .main-carrito .precio .texto-carrito {
+  }
+  .vista-carrito-con-productos .comprar {
+    text-align: center;
+    font-size: 300%;
+    border: solid 1px #32e0c4;
+    background-color: #32e0c4;
+    width: 38%;
+    margin: auto;
+    margin-top: 130px;
+    padding: 30px;
+    border-radius: 500px;
+  }
+
+  /* le falta el caminito */
+
+  .interesar {
+    margin-top: 170px;
+    font-size: 50px;
+    margin-left: 1%;
+  }
+  .imgenes-carrito {
+    display: flex;
+    justify-content: space-around;
+  }
+  .imgenes-carrito .img-carrito-celular {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imgenes-carrito .img-carrito-celular .img-3 {
+    width: 48%;
+    justify-content: space-between;
+  }
+  .imgenes-carrito-tablet {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .imgenes-carrito-tablet .img-4 {
+    width: 48%;
+  }
+  .imgenes-carrito .img-5 {
+    width: 48%;
+  }
+}
