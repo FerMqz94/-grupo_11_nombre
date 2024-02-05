@@ -5,14 +5,17 @@
 
 .login {
     text-align: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login .contenedor-main {
     display: flex;
     width: 100%;
-    justify-content: center;
     flex-direction: column;
+    width: 50%;
+    align-items: center;
 }
 
 .login .titulo {
@@ -27,6 +30,7 @@
 .login .subtitulo {
     font-size: var(--letra-grande);
     color: var(--verde-azulado);
+    /* margin: revert; */
 }
 
 .login .contenedor-redes {
