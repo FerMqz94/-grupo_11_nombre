@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
      res.sendFile(path.join(__dirname, './views/home.html'))
 })
 
-app.get('/', (req, res) => {
+app.get('/vistaProducto', (req, res) => {
      res.sendFile(path.join(__dirname, './views/vistaProduc.html'))
 
 })
