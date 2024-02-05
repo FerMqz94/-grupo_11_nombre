@@ -243,6 +243,6 @@ a {
   }
   .header-vista-tablet-pc .texto-header {
   margin: revert;
-  font-size: 21px;
+  font-size: var(--letra-grande);
   }
 }
