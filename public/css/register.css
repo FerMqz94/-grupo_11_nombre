@@ -33,8 +33,20 @@ width: 300px;
 
 height: 30px;
 
-border: 2px solid var(--gris-pizarra);
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
 }
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta:focus{
+
+    outline:none;
+    border: 2px solid var(--molocoton-oscuro);
+    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+}
+}    
+
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
@@ -57,9 +69,18 @@ width: 300px;
 
 height: 30px;
 
-border: 2px solid var(--gris-pizarra);
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
 }
-             
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
+
+    outline:none;
+    border: 2px solid var(--molocoton-oscuro);
+    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+}
+
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
 
     font-size: var(--letra-mediana);
@@ -75,7 +96,16 @@ width: 300px;
 
 height: 30px;
 
-border: 2px solid var(--gris-pizarra);
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus{
+
+    outline:none;
+    border: 2px solid var(--molocoton-oscuro);
+    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
@@ -122,12 +152,18 @@ main.registro section.section-inputs-registro form.form-inputs-registro button.b
 
 
 article.article-redes-sociales-register {
-margin: 50px 20px 30px 20px;
-text-align: center;
-/* margin: 30px 0 30px 30px; */
-display: flex;
-flex-direction: column;
-align-items: center;
+
+margin: 50px 20px 30px 20px;
+
+text-align: center;
+
+/* margin: 30px 0 30px 30px; */
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
 }
 
 article.article-redes-sociales-register h3.redes-sociales-register-titulo {
@@ -140,12 +176,18 @@ color: var(--gris-terciopelo);
 }
 
 article.article-redes-sociales-register div.imagenes-redes-sociales {
-    /* margin-left: 15px; */
-    display: flex;
-    width: 60%;
-    /* display: flex; */
-    /* width: 95%; */
-    justify-content: space-between;
+    
+/* margin-left: 15px; */
+    
+display: flex;
+    
+width: 60%;
+    
+/* display: flex; */
+    
+/* width: 95%; */
+    
+justify-content: space-between;
 }
    
 
