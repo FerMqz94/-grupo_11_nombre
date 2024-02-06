@@ -54,6 +54,12 @@
     padding: 1px;
 }
 
+.login .recuerdame {
+    font-size: var(--letra-pequeña);
+    margin: 10px 0px;
+    color: var(--gris-pizarra)
+}
+
 .login .contenedor-redes {
     display: flex;
     align-content: center;
