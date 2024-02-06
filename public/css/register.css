@@ -5,9 +5,10 @@ font-style: var(--fuente-general);
 
 
 main.registro section.section-inputs-registro {
-    margin: 30px 20px 30px 20px;
     text-align: center;
+    margin: 30px 20px 30px 20px;
     width: 90%;
+    /* display: flex; */
 }
 
 main.registro section.section-inputs-registro h3.titulo-registro-inputs {
@@ -22,10 +23,20 @@ color: var(--gris-terciopelo);
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
 
+display: flex;
+
 margin: 20px 0;
+
+flex-flow: column;
+
+align-items: center;
 }
 
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister span.text-danger {
 
+    font-size: var(--letra-pequeña);
+
+}
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
 
@@ -36,7 +47,10 @@ height: 30px;
 border: 1.8px solid var(--gris-claro);
 
 border-radius: 5px;
+
+display: block;
 }
+
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta:focus{
@@ -59,10 +73,23 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.nomb
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
 
-margin: 0 0 20px 0;
+/* margin: 0 0 20px 0; */
+
+display: flex;
+
+margin: 20px 0;
+
+flex-flow: column;
+
+align-items: center;
 }
 
- 
+main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro span.text-danger {
+    
+    font-size: var(--letra-pequeña);
+}
+
+
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
 
 width: 300px;
@@ -72,6 +99,8 @@ height: 30px;
 border: 1.8px solid var(--gris-claro);
 
 border-radius: 5px;
+
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
@@ -89,6 +118,23 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.emai
 }
 
 
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister {
+    
+/* margin: 0 0 20px 0; */
+    
+display: flex;
+    
+/* margin: 20px 0; */
+    
+flex-flow: column;
+    
+align-items: center;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister span.text-danger{
+    font-size: var(--letra-pequeña);
+}
+
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
 
@@ -99,6 +145,8 @@ height: 30px;
 border: 1.8px solid var(--gris-claro);
 
 border-radius: 5px;
+
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus{
@@ -115,6 +163,16 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
+    
+/* margin: 0 0 20px 0; */
+    
+display: flex;
+    
+/* margin: 20px 0; */
+    
+flex-flow: column;
+    
+align-items: center;
     
 margin-top: 20px;
     
