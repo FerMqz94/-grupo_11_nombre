@@ -70,3 +70,9 @@ Fue elegida por la ropa vanguardista a la moda.
 Los puntos fuertes que destacamos son: apropiado para la función header que se despliega al hacer hoover mientras la imagen del carrusel se vuelve difusa, la cápsula o capsulas se nombran con una tipografía acorde a la estética de la misma, tiene una paleta acotada con un solo color con acento mientras el resto son acromáticos (blanco, negro, gris), su footer está bien estructurado.
 
 Link de la página: https://www.cyamoda.com/
+
+
+
+## JIRA 
+
+https://paolamarianvera.atlassian.net/jira/software/projects/EC/boards/3
