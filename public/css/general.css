@@ -10,6 +10,7 @@
     --letra-mas-pequeña: 11px;
     --letra-favMobile: 30px;
     --letra-mayor-tamaño: 35px;
+    --letra-titular-menor: 40px;
     --letra-titular-mayor: 50px;
 
 
@@ -32,6 +33,10 @@
     --gris85:#d9d9d9;
     --verde-azulado-claro: #3ea1a0;
     --gris74: #747474;
+    --color-facebook: #3b5998;
+    --color-google: #ff566b;
+    --color-twitter: #1fcdcd;
+    
 
 
 }
