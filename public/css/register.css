@@ -55,11 +55,16 @@ bottom: 0;
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido {
-width: 280px;
-height: 35px;
-border: 1.8px solid var(--gris-claro);
-border-radius: 5px;
-display: block;
+
+width: 280px;
+
+height: 35px;
+
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
+
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido::placeholder {
@@ -101,11 +106,16 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.nomb
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
-width: 280px;
-height: 35px;
-border: 1.8px solid var(--gris-claro);
-border-radius: 5px;
-display: block;
+
+width: 280px;
+
+height: 35px;
+
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
+
+display: block;
 }
 
 
@@ -151,11 +161,16 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.emai
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
-width: 280px;
-height: 35px;
-border: 1.8px solid var(--gris-claro);
-border-radius: 5px;
-display: block;
+
+width: 280px;
+
+height: 35px;
+
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
+
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
@@ -196,11 +211,16 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
-width: 280px;
-height: 35px;
-border: 1.8px solid var(--gris-claro);
-border-radius: 5px;
-display: block;
+
+width: 280px;
+
+height: 35px;
+
+border: 1.8px solid var(--gris-claro);
+
+border-radius: 5px;
+
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus{
@@ -242,11 +262,16 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
     
     
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir{
-    width: 280px;
-    height: 35px;
-    border: 1.8px solid var(--gris-claro);
-    border-radius: 5px;
-    display: block;
+    
+width: 280px;
+    
+height: 35px;
+    
+border: 1.8px solid var(--gris-claro);
+    
+border-radius: 5px;
+    
+display: block;
     }
     
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir:focus{
@@ -271,27 +296,45 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
-    /* margin: 0 0 20px 0; */
-    display: flex;
-    margin: 40px 0 0 0;
-    flex-flow: column;
-    align-items: center;
-    /*margin-top: 20px;*/
-    padding-bottom: 20px;
-    /* border-bottom: 1.5px dashed var(--gris-claro); */
+    
+/* margin: 0 0 20px 0; */
+    
+display: flex;
+    
+margin: 40px 0 0 0;
+    
+flex-flow: column;
+    
+align-items: center;
+    
+/*margin-top: 20px;*/
+    
+padding-bottom: 20px;
+    
+/* border-bottom: 1.5px dashed var(--gris-claro); */
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
-/* margin-top: 20px; */
-width: 280px;
-height: 35px;
-border: none;
-background-color: var(--verde-azulado-claro);
-color: var(--blanco);
-border-radius: 5px;
-font-size: var(--letra-mediana);
-letter-spacing: 1px;
-transition: all 1s;
+
+/* margin-top: 20px; */
+
+width: 280px;
+
+height: 35px;
+
+border: none;
+
+background-color: var(--verde-azulado-claro);
+
+color: var(--blanco);
+
+border-radius: 5px;
+
+font-size: var(--letra-mediana);
+
+letter-spacing: 1px;
+
+transition: all 1s;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register:hover {
@@ -349,7 +392,7 @@ justify-content: space-between;
 article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook {
 
 font-size: 60px;
-color: #3b5998;
+color: var(--color-facebook);
 transition: color 1s, transform 2s;
 
 }
@@ -369,7 +412,7 @@ font-size: var(--letra-titular-mayor);
 
 color: var(--blanco);
 
-background-color: #ff566b;
+background-color: var(--color-google);
 
 padding: 5px;
 
@@ -394,7 +437,7 @@ font-size: var(--letra-titular-mayor);
 
 color: var(--blanco);
 
-background-color: #1fcdcd;
+background-color: var(--color-twitter);
 
 padding: 5px;
 
@@ -427,8 +470,10 @@ article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter
 
 
     main.registro section.section-inputs-registro h3.titulo-registro-inputs {
-        font-size: var(--letra-favMobile);
-        margin: 60px 0 60px 0;
+        
+font-size: var(--letra-favMobile);
+        
+margin: 60px 0 60px 0;
     } 
 
  
@@ -588,9 +633,12 @@ margin: 40px 0;
 
 
     main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
-      margin-top: 60px;
-      padding-bottom: 40px;
-      /* border-bottom: 2px dashed var(--gris-claro); */
+      
+margin-top: 60px;
+      
+padding-bottom: 40px;
+      
+/* border-bottom: 2px dashed var(--gris-claro); */
     }
         
     main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
@@ -652,9 +700,12 @@ font-size: 80px;
 @media (min-width: 1024px) {
     
     main.registro section.section-inputs-registro {
-width: 80%;
-border-radius: 10px;
-}    
+
+width: 80%;
+
+border-radius: 10px;
+
+}    
         
         
     main.registro section.section-inputs-registro h3.titulo-registro-inputs {
