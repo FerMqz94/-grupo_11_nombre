@@ -5,20 +5,81 @@ font-style: var(--fuente-general);
 
 
 main.registro section.section-inputs-registro {
+    padding: 20px 20px;
     text-align: center;
-    margin: 30px 20px 30px 20px;
+    margin: 30px auto;
     width: 90%;
+    border-radius: 5px;
+    /* border: 1px solid var(--gris-claro); */
+    box-shadow: 0 3px 10px var(--gris-claro);
     /* display: flex; */
+    /* FLEX-DIRECTION: column; */
 }
 
 main.registro section.section-inputs-registro h3.titulo-registro-inputs {
 
-font-size: var(--letra-mediana);
+font-size: var(--letra-grande);
 
-margin-bottom: 30px;
+margin: 30px 0 40px 0;
 
 color: var(--gris-terciopelo);
 }
+
+
+
+
+/*------------------NOMBRE Y APELLIDO----------------------------*/
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister{
+
+display: flex;
+
+margin: 20px 0;
+
+flex-flow: column;
+
+align-items: center;
+
+
+}
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister span.text-danger {
+
+font-size: var(--letra-mas-pequeña);
+
+left: 10%;
+
+bottom: 0;
+}
+
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido {
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido::placeholder {
+
+    font-size: var(--letra-mediana);
+    padding-left: 5px;
+}
+
+main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido:focus {
+
+    outline:none;
+    border: 2px solid var(--molocoton-oscuro);
+    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+
+}
+
+
+
+
+/*--------------------NOMBRE DE USUARIO---------------------------*/
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
@@ -30,25 +91,21 @@ margin: 20px 0;
 flex-flow: column;
 
 align-items: center;
+
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister span.text-danger {
 
-    font-size: var(--letra-pequeña);
+    font-size: var(--letra-mas-pequeña);
 
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
-
-width: 300px;
-
-height: 30px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
 }
 
 
@@ -71,6 +128,9 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.nomb
 }
 
 
+
+/*----------------EMAIL---------------------*/
+
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
 
 /* margin: 0 0 20px 0; */
@@ -86,21 +146,16 @@ align-items: center;
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro span.text-danger {
     
-    font-size: var(--letra-pequeña);
+    font-size: var(--letra-mas-pequeña);
 }
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
-
-width: 300px;
-
-height: 30px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
@@ -118,6 +173,9 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.emai
 }
 
 
+/*--------------CONTRASEÑA---------------------*/
+
+
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister {
     
 /* margin: 0 0 20px 0; */
@@ -129,24 +187,20 @@ display: flex;
 flex-flow: column;
     
 align-items: center;
+
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister span.text-danger{
-    font-size: var(--letra-pequeña);
+    font-size: var(--letra-mas-pequeña);
 }
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
-
-width: 300px;
-
-height: 30px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus{
@@ -162,56 +216,98 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
     padding-left: 5px;
 }
 
+
+
+
+/*---------------------------CONFIRMACIÓN DE CONTRASEÑA-------------------------------------*/
+
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister {
+    
+    /* margin: 0 0 20px 0; */
+        
+    display: flex;
+        
+    margin: 20px 0; 
+        
+    flex-flow: column;
+        
+    align-items: center;
+    
+    }
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister span.text-danger{
+        font-size: var(--letra-mas-pequeña);
+    }
+    
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir{
+    width: 280px;
+    height: 35px;
+    border: 1.8px solid var(--gris-claro);
+    border-radius: 5px;
+    display: block;
+    }
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir:focus{
+    
+        outline:none;
+        border: 2px solid var(--molocoton-oscuro);
+        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+    }
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir::placeholder {
+        
+        font-size: var(--letra-mediana);
+        padding-left: 5px;
+    }
+    
+
+
+
+
+
+/*----------------BOTÓN ENVIAR-----------------------*/
+
+
 main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
-    
-/* margin: 0 0 20px 0; */
-    
-display: flex;
-    
-/* margin: 20px 0; */
-    
-flex-flow: column;
-    
-align-items: center;
-    
-margin-top: 20px;
-    
-padding-bottom: 20px;
-    
-border-bottom: 1.5px dashed var(--gris-claro);
+    /* margin: 0 0 20px 0; */
+    display: flex;
+    margin: 40px 0 0 0;
+    flex-flow: column;
+    align-items: center;
+    /*margin-top: 20px;*/
+    padding-bottom: 20px;
+    /* border-bottom: 1.5px dashed var(--gris-claro); */
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
-
-/* margin-top: 20px; */
-
-width: 300px;
-
-height: 35px;
-
-border: none;
-
-background-color: var(--verde-azulado-claro);
-
-color: var(--blanco);
-
-border-radius: 5px;
-
-font-size: var(--letra-mediana);
-
-letter-spacing: 1px;
+/* margin-top: 20px; */
+width: 280px;
+height: 35px;
+border: none;
+background-color: var(--verde-azulado-claro);
+color: var(--blanco);
+border-radius: 5px;
+font-size: var(--letra-mediana);
+letter-spacing: 1px;
+transition: all 1s;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register:hover {
 
     background-color: var(--gris-claro);
+    color: var(--gris-terciopelo);
 
 }
 
 
+/*-----------------REDES SOCIALES------------------------*/
+
+
 article.article-redes-sociales-register {
 
-margin: 50px 20px 30px 20px;
+margin: 50px 20px 70px 20px;
 
 text-align: center;
 
@@ -223,6 +319,7 @@ flex-direction: column;
 
 align-items: center;
 }
+
 
 article.article-redes-sociales-register h3.redes-sociales-register-titulo {
     
@@ -252,7 +349,19 @@ justify-content: space-between;
 article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook {
 
 font-size: 60px;
+color: #3b5998;
+transition: color 1s, transform 2s;
+
 }
+
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-facebook:hover{
+
+   color: var(--gris-claro);
+   transform:  perspective(40cm) rotateX(-20deg) rotateY(40deg);
+
+
+}
+
     
 article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-google {
 
@@ -265,7 +374,19 @@ background-color: #ff566b;
 padding: 5px;
 
 border-radius: 50%;
+
+transition: color 1s, transform 2s;
+
 }
+
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-google:hover {
+
+    background-color: var(--gris-claro);
+    transform:  perspective(40cm) rotateX(20deg) rotateY(40deg);
+
+}
+
+
 
 article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter {
 
@@ -278,56 +399,127 @@ background-color: #1fcdcd;
 padding: 5px;
 
 border-radius: 50%;
-}
-          
 
-@media (min-width: 769px) {
+transition: color 1s, transform 2.5s;
+
+}
+
+
+article.article-redes-sociales-register div.imagenes-redes-sociales i.fa-twitter:hover {
+
+    background-color: var(--gris-claro);
+    transform: rotate(180deg);
+}
+
+
+
+
+
+/*---------------------MEDIA QUERY TABLET----------------------------------*/
+
+/*------------------------------------------------------------------------*/
+
+
+
+@media (min-width: 768px) {
 
  
+
+
     main.registro section.section-inputs-registro h3.titulo-registro-inputs {
+        font-size: var(--letra-favMobile);
+        margin: 60px 0 60px 0;
+    } 
+
+ 
+
+    /*---------------------NOMBRE Y APELLIDO------------------------------*/
+  
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister {
         
-font-size: var(--letra-grande);
+margin: 40px 0;
     }
         
-  
-
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister span.text-danger {
         
+        font-size: var(--letra-pequeña);
+        
+ 
+    }
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido {
+        
+        width: 600px;
+                
+        height: 50px;
+        
+    }
+        
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido::placeholder {
+        
+        margin-left: 10px;
+    }
+        
+       
+     /*---------NOMBRE DE USUARIO----------------*/
+
+
+     main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
+        
+margin: 40px 0;
+     }
+     
+     main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister span.text-danger { 
+
+        font-size: var(--letra-pequeña);
+
+
+    }
+
+
+
     main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
+            
+        width: 600px;
+                
+        height: 50px;
+        
+    }
+        
+        
+        
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
+            
+            margin-left: 10px;
+    }
+
+
+            
+        /*----------------------EMAIL--------------------------*/
+
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
+        
+margin: 40px 0;
+    }
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro span.text-danger { 
+
+            font-size: var(--letra-pequeña);
+    
+    
+    }    
+
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
         
     width: 600px;
             
     height: 50px;
     }
-     
-    
-    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta:focus{
 
-        outline: none;
-        border: 1.5px solid var(--molocoton-oscuro);
-        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
-    }
-        
-    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
-        
-        margin-left: 10px;
-    }
-        
- 
-         
-    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
-        
-width: 600px;
-        
-height: 50px;
-    }
-
-    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
-
-        outline: none;
-        border: 1.5px solid var(--molocoton-oscuro);
-        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
-
-    }
                      
     main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
         margin-left: 10px;
@@ -335,21 +527,24 @@ height: 50px;
     }
         
         
-        
+    /*----------------CONTRASEÑA-------------------------*/      
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister span.text-danger { 
+
+        font-size: var(--letra-pequeña);
+
+
+    }    
+
         
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
         
-width: 600px;
-        
-height: 50px;
+    width: 600px;
+            
+    height: 50px;
+
     }
 
-    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus {
-
-        outline: none;
-        border: 1.5px solid var(--molocoton-oscuro);
-        box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro); 
-    }
 
         
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
@@ -357,27 +552,60 @@ height: 50px;
         margin-left: 10px;
            
     }
+
+
+
+    /*-----------------------CONFIRMAR CONTRASEÑA--------------------------------------*/
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister {
         
+        margin: 40px 0;
+    }
+    
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister span.text-danger{
+        font-size: var(--letra-pequeña);
+    }
+    
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir{
+    
+        width: 600px;
+            
+        height: 50px;
+
+    }
+    
+    
+    
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir::placeholder {
+       
+        margin-left: 10px;
+    }
+
+
+    /*-----------------------BOTÓN ENVIAR-------------------------*/
+
+
     main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
-      
-margin-top: 40px;
-      
-padding-bottom: 40px;
-      
-border-bottom: 2px dashed var(--gris-claro);
+      margin-top: 60px;
+      padding-bottom: 40px;
+      /* border-bottom: 2px dashed var(--gris-claro); */
     }
         
     main.registro section.section-inputs-registro form.form-inputs-registro button.boton-register {
         
-width: 600px;
-        
-height: 50px;
-        
-font-size: var(--letra-grande);
+        width: 600px;
+                
+        height: 50px;
+                
+        font-size: var(--letra-grande);
     }
         
   
-        
+    
+    /*--------------REGISTRARSE CON REDES SOCIALES------------------*/
+
         
     article.article-redes-sociales-register {
         
@@ -415,27 +643,38 @@ font-size: 80px;
 }
 
 
+/*----------------------------MEDIA QUERY DESKTOP--------------------------------------*/
+
+
+
+
+
 @media (min-width: 1024px) {
     
-        
+    main.registro section.section-inputs-registro {
+width: 80%;
+border-radius: 10px;
+}    
         
         
     main.registro section.section-inputs-registro h3.titulo-registro-inputs {
         
-font-size: var(--letra-favMobile);
-        
-margin-bottom: 50px;
+    font-size: var(--letra-mayor-tamaño);
+            
+    margin: 100x 0 80px 0;
+
     }
         
   
         
-    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister{
+ 
         
-margin-bottom: 30px;
+   
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreApellido::placeholder{
+
+        padding-left: 20px;
+
     }
-        
-   
-   
         
         
     main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta::placeholder {
@@ -444,14 +683,7 @@ margin-bottom: 30px;
         
     }
         
-        
-    main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro {
-        
-margin-bottom: 30px;
-    }
-        
- 
- 
+    
                      
     main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email::placeholder {
         
@@ -460,17 +692,26 @@ margin-bottom: 30px;
         
         
         
-  
-        
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia::placeholder {
      
         padding-left: 20px;
 
     }
+
+
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contraseniaConfir::placeholder {
+     
+        padding-left: 20px;
+
+    }
         
+
+
+/*------------------------------BOTÓN ENVIAR--------------------------------------*/
+
     main.registro section.section-inputs-registro form.form-inputs-registro div.contenedor-boton-register {
       
-padding-bottom: 60px;
+    padding-bottom: 60px;
     }
         
   
@@ -482,21 +723,22 @@ padding-bottom: 60px;
     }
         
     
+    /*---------------REDES SOCIALES----------------------------*/
         
     article.article-redes-sociales-register h3.redes-sociales-register-titulo {
             
-font-size: var(--letra-favMobile);
-            
-margin-bottom: 80px;
-            
-color: var(--gris-terciopelo);
+    font-size: var(--letra-favMobile);
+                
+    margin-bottom: 80px;
+                
+    color: var(--gris-terciopelo);
     }
         
     article.article-redes-sociales-register div.imagenes-redes-sociales {
-            
-margin: auto;
-            
-width: 40%;
+                
+    margin: auto;
+                
+    width: 40%;
     }
            
   

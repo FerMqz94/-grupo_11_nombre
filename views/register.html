@@ -108,21 +108,50 @@
         <section class="section-inputs-registro">
             <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
             <form class="form-inputs-registro" action="/register" method="POST">
+
+                <!--------NOMBRE Y APELLIDO----------->
+
+                <div class="nombreApellidoRegister">
+                    <label for="nombreApellido"></label>
+                    <input type="text" id="nombreApellido" class="nombreApellido" value="" placeholder="Nombre y apellido">
+                    <span class="text-danger">Este campo es obligatorio</span>
+                </div>
+
+                <!--------NOMBRE DE USUARIO----------->
+
                 <div class="nombreDelaCuentaRegister">
                 <label for="nombreDeCuenta"></label>
-                <input type="text" id="nombreDeCuenta" class="nombreDeCuenta" value="" placeholder="Nombre de la cuenta...">
+                <input type="text" id="nombreDeCuenta" class="nombreDeCuenta" value="" placeholder="Nombre de usuari@...">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
+
+                <!-------EMAIL DE REGISTRO------->
+
                 <div class="emailregistro">
                 <label for="email"></label>
                 <input type="email" id="email" value="" class="email" placeholder="Dirección de correo electrónico">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
+
+                <!---CONTRASEÑA-->
+
                 <div class="contraseniaRegister">
-                <label for=""></label>
+                <label for="contrasenia"></label>
                 <input type="password" id="contrasenia" class="contrasenia" placeholder="Contraseña">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
+
+                <!---CONFIRMACIÓN CONTRASEÑA-->
+
+                <div class="contraseniaConfirRegister">
+                    <label for="contraseniaConfir"></label>
+                    <input type="password" id="contraseniaConfir" class="contraseniaConfir" placeholder="Confirmar contraseña">
+                    <span class="text-danger">Este campo es obligatorio</span>
+                </div>
+
+
+
+                <!---BOTÓN ENVIAR-->
                 <div class="contenedor-boton-register">
                     <button type="submit" class="boton-register">ENVIAR</button>
                 </div>
@@ -134,7 +163,7 @@
         <article class="article-redes-sociales-register">
             <h3 class="redes-sociales-register-titulo">Registrate con...</h3>
             <div class="imagenes-redes-sociales">
-                <i class="fa-brands fa-facebook" style="color: #3b5998;"></i>
+                <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-google"></i>
             </div>
