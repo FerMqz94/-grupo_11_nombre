@@ -151,15 +151,12 @@ width: calc(50% - 3px);
 
   .home .contenedor-cap-sector-1{
   }
+  
   .home .contenedor-cap-sector-2{
 
--:
+  display: flex;
 
-center;
-
-display: flex;
-
-justify-content: center;
+  justify-content: center;
 
 }
 
