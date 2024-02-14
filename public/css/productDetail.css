@@ -35,9 +35,9 @@
 
         main.vista-producto section.visualizacion-producto {
 
-width: 90%;
+        width: 90%;
 
-}
+        }
 
 /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
 
@@ -50,11 +50,13 @@ width: 90%;
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
     
-        width: 80%;
+        width: 95%;
     
         position: relative;
+
+        height: 450px;
     
-        height: 100%;
+       /* height: 100%;*/
     
         border-radius: 5%;
     
@@ -63,6 +65,11 @@ width: 90%;
         display: flex;
     
         justify-content: center;
+
+        align-items: center;
+
+        overflow: hidden;
+
         }
 
 
@@ -79,6 +86,17 @@ width: 90%;
         left: 20px;
     
         font-size: var(--iconos-grandes);
+
+        transition: all 1s;
+        }
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass:hover {
+        
+                color: var(--gris-claro);
+                background-color: var(--gris-terciopelo);
+                padding: 2px;
+                border-radius: 50%;
+
         }
 
 
@@ -93,54 +111,69 @@ width: 90%;
         right: 20px;
     
         font-size: var(--iconos-grandes);
+
+        transition: all 1s;
+
         }
 
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart:hover {
 
-        /*---CIRCULOS----*/
+                color: var(--molocoton-oscuro);
+                font-size: var(--letra-favMobile);
+                background-color: rgba(255, 255, 255, 0.5);
+                padding: 2px;
+                border-radius: 50%;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos{
-    
-        display: flex;
-    
-        justify-content: space-around;
-    
-        width: 60%;
-    
-    
-        position: absolute;
-    
-        bottom: 5%;
         }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{
-                color: var(--gris-terciopelo);
-        }
-
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.circulo-claro{
-                color: var(--gris85);
-        }
-
-
+       
         /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
-                text-align: center;width: 100%;
+                text-align: center;
+                width: 100%;
         }
 
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
     
         width: 70%;
+
+        height: 350px;
+
+        object-fit: contain;
+        
+        /* margin-bottom: 15%; */
     
-        margin-bottom: 15%;
         }
 
-        /*---otras vistas del producto---*/
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
-                display: none;
-        }
+main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+
+        width: 100%;
+
+        height: 450px;
+        
+        object-fit: cover;
+
+        position: relative;
+
+        right: -32%;
+
+}        
+
+
+main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
+
+        width: 100%;
+
+        height: 400px;
+        
+        object-fit: cover;
+
+
+} 
+
 
      
 
@@ -210,11 +243,14 @@ width: 90%;
         font-size: var(--letra-mediana);
         color: var(--gris-claro);
         border: 2px solid var(--gris-claro);
+        transition: all 1s;
+
         }
 
         main.vista-producto section.visualizacion-producto div.talles div button:hover {
                 background-color: var(--molocoton-oscuro);
                 opacity: 0.2;
+                color: var(--gris-pizarra);
         }
 
         main.vista-producto section.visualizacion-producto div.talles div button:active {
@@ -288,14 +324,32 @@ width: 90%;
                 margin-top: 35px;
                 width: 105%;
                 height: 45px;
-                font-size: var(--letra-grande);
+                /*font-size: var(--letra-grande);*/
                 background-color: var(--verde-azulado-claro);
+               /* color: var(--blanco);*/
+                border: none;
+                margin-left: 0;
+                transition: all 1s;
+
+        }
+
+        
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito a {
+                text-decoration: none;
                 color: var(--blanco);
-                border: none;margin-left: 0;
+                font-size: var(--letra-grande);
+                transition: all 1s;
+                
+        }     
+        
+        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito a:hover {
+
+                color: var(--gris-terciopelo);
+                
         }
 
         main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
-        background-color: var(--gris-claro);
+                background-color: var(--gris-claro);
 
         }
 
@@ -389,11 +443,17 @@ width: 90%;
         height: 45px;
     
         background-color: var(--blanco);
+
+        transition: all 1s;
+
         }
 
         main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular:hover {
+               
                 background-color: var(--gris-claro);
-                color: var(--blanco);
+
+                color: var(--gris-terciopelo);
+
         }
 
         /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
@@ -751,6 +811,67 @@ width: 90%;
         letter-spacing: 1px;
         }
 
+
+        /*---------------------IMAGEN DE WHATSAPP---------------------------*/
+
+        main.vista-producto div.boton-whatsapp {
+
+                position: fixed;
+                right: 50px;
+                bottom: 70px;
+                animation: emerge 1s 1;
+                animation-timing-function: ease-out;
+
+        }
+
+        main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
+
+                width: 50px;
+                transition: all 1s;
+
+        }
+
+
+        main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
+
+                transform: rotate(90deg);
+                width: 65px;
+        }
+
+        @keyframes emerge {
+                
+                0% { 
+                        opacity: 0;
+                        bottom: 0px;
+                }
+
+                25% {
+                        opacity: 0.25;
+                        bottom: 15px;
+                }
+
+                50% {
+
+                        opacity: 0.5;
+                        bottom: 35px;
+
+                }
+
+                75%{
+                        opacity: 0.75;
+                        bottom: 50px;
+                }
+
+                100% {
+                        opacity: 1;
+                        bottom: 70px;
+                }
+
+        }
+
+
+
+
         /*----------CONTENEDOR DE LAS IMÁGENES DE CIERRE DE LA VISTA-------------*/
 
         main.vista-producto div.imagen-cierre {
@@ -811,7 +932,9 @@ width: 90%;
     
         position: relative;
     
-        height: 70%;
+        height: 500px;
+
+        margin-top: 10%;
     
         border-radius: 5%;
     
@@ -860,89 +983,30 @@ width: 90%;
 
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
     
+                width: 80%;
+                    
+                margin-bottom: 12%;
+        }
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+
+                
                 width: 70%;
                     
-                margin-bottom: 15%;
-        }
-
-        /*----VISTAS DE OTROS PRODUCTOS-----*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno{
-
-        border-radius: 5%;
-
-        width: 30%;
-
-        border: none;
-
-        background-color: var(--gris-claro);
-        }
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos{
-
-        width: 30%;
-
-        border-radius: 5%;
-
-        border: none;
-
-        background-color: var(--gris-claro);
+                margin-bottom: 12%;
 
         }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres{
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
 
-        width: 32%;
+                height: 500px;
 
-        border-radius: 5%;
-
-        flex-grow: grow;
-
-        border: none;
-
-        background-color: var(--gris-claro);
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno img.blazer-over-otra{
-            
-        width: 100%;
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos img.blazer-over-otra{
-            
-        width: 100%;
-            
-        border-radius: 5%;
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres img.blazer-over-otra{
-            
-        width: 100%;
         }
 
-
-              
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres img.ultima{
-            
-        width: 100%;           
-        border-radius: 5%;
-         }
-                    
-         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
-                display: block;
-                margin-top: 10px;
-                width: 100%;display: flex;
-                justify-content: space-between;
-                align-items: center;
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes .glider-prev, .glider-next {
+                top:calc(50% - 20px);
         }
-        
-                main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos img.blazer-over-otra{
-            
-                width: 30%;
-        }
-        
-
-
+     
 
         /*---CONTENEDOR GLOBAL DE LA INFORMACIÓN QUE NO SEAN LAS IMÁGENES--*/
         main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
@@ -1358,6 +1422,66 @@ width: 90%;
         }
                                                         
 
+        /*---------------------BOTON WHATSAPP------------------------------------*/
+
+
+        main.vista-producto div.boton-whatsapp {
+
+                position: fixed;
+                right: 50px;
+                bottom: 130px;
+                animation: emerge 0.8s 1;
+                animation-timing-function: ease-out;
+
+        }
+
+        main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
+
+                width: 90px;
+
+        }
+
+        
+        main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
+
+                transform: rotate(90deg);
+                width: 110px;
+        }
+
+        @keyframes emerge {
+                
+                0% { 
+                        opacity: 0.1;
+                        bottom: 0px;
+                }
+
+                25% {
+                        opacity: 0.25;
+                        bottom: 32px;
+                }
+
+                50% {
+
+                        opacity: 0.5;
+                        bottom: 65px;
+
+                }
+
+                75%{
+                        opacity: 0.75;
+                        bottom: 100px;
+     
+                }
+
+                100% {
+                        opacity: 1;
+                        bottom: 130px;
+                        
+                }
+
+        }
+
+
 
 
         /*--IMAGEN DE CIERRE DE TABLET----*/
@@ -1413,64 +1537,79 @@ width: 90%;
         main.vista-producto section.visualizacion-producto {
       
         margin-left: 40px;
+
       
         }
     
     
-        
-        /*---CIRCULOS----*/
-    
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.circulos i.fa-circle{
-              
-                font-size: var(--letra-grande);
-        }
-        
-    
-        /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
-        
+        /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/
+
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
             
-        margin-top: 20px;
-            
-        width: 42%;
+                margin-top: 20px;
+                    
+                width: 42%;
+
         }
-        
+
+
         main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-            
-        height: 75%;
-        }
+      
+                height: 700px;
         
+                margin-top: 0;            
+            
+        }
+
+        
+
+        /*CORAZÓN*/
+    
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart:hover {
+
+             
+                font-size: var(--letra-titular-menor);
+                right: 30px;
+                top: 25px;
+                
+
+        }
+
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass:hover {
+        
+                font-size: var(--letra-titular-menor);
+                left: 30px;
+                top: 25px;
+
+        }
+
+
+
+
         
         /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
         
-      
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos{
-      
-        justify-content: space-between;
-      
-        margin-top: 20px;
-        
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal {
+
+                height: 600px;
+                margin-bottom: 0;
+
         }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-uno{
-    
-        width: 28%;
-    
+
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+
+                height: 700px;
         }
-    
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-dos{
-    
-        width: 28%;
-    
+
+
+        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
+
+                height: 700px;
         }
-    
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.otras-vistas-productos div.blazer-otra-vista-tres{
-    
-        width: 30%;
-    
-        }
-    
+
+
     
         
         /*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/

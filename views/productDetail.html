@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/css/library/glider.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -60,11 +61,11 @@
         <p class="barrra-busqueda"> &nbsp;¿que estas buscando? &nbsp;&nbsp;&nbsp;&nbsp;
           <i class="fa-solid fa-magnifying-glass"></i>
         </p>
-        <a href="/ingreso">
+        <a href="/registro">
           <p class="texto-header">crear cuenta</p>
         </a>
 
-        <a href="/registro">
+        <a href="/ingreso">
           <p class="texto-header">iniciar sesión</p>
         </a>
 
@@ -105,33 +106,83 @@
     </div>
 
     <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
-    <section class="visualizacion-producto">
-      <div class="contenedor-vistas-imagenes">
-        <div class="contenedor-blazerOver-principal">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-regular fa-heart"></i>
-          <div class="contenedor-img-principal">
-            <img class="blazer-over-principal" src="/images/blazer-1.png" alt="Blazer overside negro">
-          </div>
-          <div class="circulos">
-            <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle circulo-claro"></i><i
-              class="fa-solid fa-circle circulo-claro"></i><i class="fa-solid fa-circle circulo-claro"></i>
-          </div>
+    
+
+
+
+   <section class="visualizacion-producto">
+
+    <div class="contenedor-vistas-imagenes">
+
+    <div class="glider-contain">
+      <div class="glider">
+      <!--img 1-->
+        <div>
+          
+          <div class="contenedor-blazerOver-principal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <div class="contenedor-img-principal">
+                <img class="blazer-over-principal" src="/images/blazer-1.png" alt="Blazer overside negro">
+            </div>
+         </div>
+
+
         </div>
 
-        <div class="otras-vistas-productos">
-          <div class="blazer-otra-vista-uno">
-            <img class="blazer-over-otra" src="/images/blazer-over-vista-2.png" alt="blazer oversize negro 2">
-          </div>
-          <div class="blazer-otra-vista-dos">
-            <img class="blazer-over-otra" src="/images/blazer-over-vista3.png" alt="blazer oversize negro 3">
-          </div>
-          <div class="blazer-otra-vista-tres">
-            <img class="blazer-over-otra ultima" src="/images/blazer-over-vista4.jpg" alt="blazer oversize negro 4">
-          </div>
+        <!--img 2-->
+
+        <div>
+
+          <div class="contenedor-blazerOver-principal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <div class="contenedor-img-principal">
+                <img class="blazer-over-principal" src="/images/blazer-over-vista-2.png" alt="Blazer overside negro">
+            </div>
+         </div>
+          
         </div>
+
+        <!--img 3-->
+        <div>
+          <div class="contenedor-blazerOver-principal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <div class="contenedor-img-3">
+              <img class="blazer-over-principal" src="/images/blazer-over-vista3.png" alt="Blazer overside negro">
+            </div>
+          </div>
+
+        </div>
+
+        <!--img 4-->
+
+        <div>
+        
+          <div class="contenedor-blazerOver-principal">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-heart"></i>
+            <div class="contenedor-img-4">
+              <img class="blazer-over-principal" src="/images/blazer-over-vista4.jpg" alt="Blazer overside negro">
+            </div>
+          </div>
+          
+        </div>
+       
+        
       </div>
+    
+      <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
+      <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
+      <div role="tablist" class="dots"></div>
+    </div>
 
+    </div>
+
+
+
+    
 
       <!--CONTENEDOR GLOBAL DE TODA LA DATA DEL PRODUCTO QUE NO SEAN FOTOS-->
       <div class="contenedor-global-info-producto">
@@ -177,7 +228,7 @@
             <label class="label-carrito" for="cantidad">CANTIDAD</label>
             <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
             <div class="contenedor-boton-carrito">
-              <button type="submit" class="agregar-carrito">AGREGAR AL CARRITO</button>
+              <button type="submit" class="agregar-carrito"><a href="/carrito">AGREGAR AL CARRITO</button>
             </div>
           </form>
         </div>
@@ -264,6 +315,11 @@
         </article>
       </div>
     </section>
+
+    <div class="boton-whatsapp">
+      <img src="/images/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo"/>
+    </div>
+
 
     <!--------IMAGEN DE CIERRE CON MENSAJE DE LA MARCA------------->
 
@@ -379,6 +435,15 @@
     </div>
 
   </footer>
+
+  
+<!--SCRIPT DE GLIDER-->
+<script src="/js/library/glider.min.js"></script>
+
+<!--SCRIPT DE CONFIGS GLIDER-->
+<script src="/js/configs/glider.js"></script>
+
+
 </body>
 
 </html>

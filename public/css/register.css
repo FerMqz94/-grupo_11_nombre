@@ -718,10 +718,10 @@ border-radius: 10px;
         
   
         
- 
-        
+
+
    
-    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreApellido::placeholder{
+    main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido::placeholder{
 
         padding-left: 20px;
 
@@ -750,7 +750,7 @@ border-radius: 10px;
     }
 
 
-    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contraseniaConfir::placeholder {
+    main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir::placeholder {
      
         padding-left: 20px;
 
