@@ -19,17 +19,26 @@
 
 .home .contenedor-imagenes {
   display: flex;
-
   gap: 10px;
-
   flex-wrap: wrap;
 }
 
-/* Seccion de capsulas */
-.home .titulo-capsula {
+
+
+  /* CAPSULAS*/
+  .home .titulo-capsula {
     display: none;
+  }
+  .home .capsulas {
+    display: none;
+  }
+  .home .contenedor-cap {
+
+  }
+  .home .foto-capsula {
     
-}
+width: calc(50% - 3px);
+  }
 
 /* BEIGE CAP*/
 
@@ -41,7 +50,7 @@
 
 /* 3024 */
 
-.home .foto-capsula-3024 {display: none;}
+.home .foto-capsula-3024 {display: inline;width: 60%;}
 /* -- */
 .home .mostrar-mas-productos {
   font-size: 115%;
@@ -71,10 +80,7 @@
     display: none;
   }
 /* ------------------- General -------------------*/
-.home .foto {
-  width: calc(50% - 5px);
-  object-fit: cover;
-}
+.home .foto {width: calc(50% - 3px);}
 
 /* -----------------------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------ MEDIA DE TABLET ------------------------------------------------*/
@@ -124,55 +130,40 @@
   .home .contenedor-subtitulos-imagenes .subitutlos-de-imagenes {
     display: block;
   }
-  .home .contenedor-imagenes .img5 {
-    display: none;
+  .home .contenedor-imagenes-sector-2{
+    display: none;  
   }
-  .home .contenedor-imagenes .img6 {
-    display: none;
-  }
-  .home .contenedor-imagenes .img7 {
-    display: none;
-  }
-  .home .contenedor-imagenes .img8 {
+  .home .contenedor-imagenes-sector-3{
     display: none;
   }
 
-  /* Seccion de capsulas */
-
+  /* CAPSULAS*/
   .home .titulo-capsula {
-    display: block;
+    display: flex;
+    margin: 50px auto;
   }
-
-  .home .titulo-capsula {
-    display: block;
-
-    text-align: center;
-
-    margin: 10% auto;
-  }
-  .home .titulo-capsula {
-    display: none;
-  }
-
   .home .capsulas {
-    margin: 10px 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  /* BEIGE CAP*/
-
-
-  /* AMERICAN DREAM CAP */
-
-  .home .foto-capsula-american-dream {
-  object-fit: contain;
+  .home .contenedor-cap-sector-1{
   }
+  .home .contenedor-cap-sector-2{
 
-  /* 3024 */
+-:
 
-  .home .foto-capsula-3024 {
-  display: inline;
-  width: 80%;
-  }
+center;
+
+display: flex;
+
+justify-content: center;
+
+}
+
+
 
   /* -- */
   .home .mostrar-mas-productos {
@@ -237,45 +228,32 @@
   .home .contenedor-imagenes {
     width: 100%;
   }
-  .home .contenedor-imagenes .img5 {
-    display: inline;
-  }
-  .home .contenedor-imagenes .img6 {
-    display: inline;
-  }
-  .home .contenedor-imagenes .img7 {
-    display: inline;
-  }
-  .home .contenedor-imagenes .img8 {
-    display: inline;
+  .home .contenedor-imagenes-sector-2{
+    display: block;  
   }
 
-  /* Seccion de capsulas */
-  .home .titulo-capsula {
-    display: none;
-  }
+  /* CAPSULAS*/
+
   .home .capsulas {
-    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .home .foto-capsula-3024 {
+    display: inline;
     width: 100%;
   }
-  /* BEIGE CAP*/
 
-  .foto-capsula-beige {
-    width: calc(30%);
-  }
+  .home .contenedor-cap-sector-1{
 
-  /* AMERICAN DREAM CAP */
+width: calc(66% - 1px);
 
-  .foto-capsula-american-dream {
-    width: calc(30%);
-  }
+display: inline;
 
-  /* 3024 */
+}
+  .home .contenedor-cap-sector-2{display: inline;width: calc(33%);}
 
-  .foto-capsula-3024 {
-    width: calc(30%);
-    display: inline;
-  }
+
   /* -- */
 
   /* Seccion mensaje de la marca pequeño */
@@ -294,6 +272,6 @@
   /* ------------------- General -------------------*/
 
   .home .foto {
-    width: calc(25% - 8px);
+  width: calc(25% - 4px);
   }
 }
