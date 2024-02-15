@@ -21,6 +21,8 @@
   flex-direction: column;
   border: solid #65cbbb 1px;
   margin-top: 0%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .main-carrito .productos .info-compra {
   display: flex;
@@ -116,7 +118,7 @@
   }
   .vista-carrito-con-productos .comprar {
     text-align: center;
-    font-size: 160%;
+    font-size: 130%;
     border: solid 1px #32e0c4;
     background-color: #32e0c4;
     width: 38%;
@@ -138,11 +140,11 @@
   }
   .img-carrito-celular {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
   }
   .imgenes-carrito .img-3 {
-    width: 48%;
+    width: 45%;
   }
   .imgenes-carrito-tablet {
     display: none;
@@ -222,6 +224,7 @@
   }
   .main-carrito .precio .texto-carrito {
     /* padding-top: 4%; */
+    font-size: 25px;
   }
   .vista-carrito-con-productos .comprar {
     text-align: center;
@@ -252,7 +255,7 @@
     justify-content: space-around;
   }
   .imgenes-carrito .img-3 {
-    /* width: 37%; */
+    width: 50%;
   }
 
   .imgenes-carrito-tablet {
@@ -261,7 +264,7 @@
     width: 50%;
   }
   .imgenes-carrito .img-4 {
-    width: 48%;
+    width: 50%;
   }
   .imgenes-carrito .img-5 {
     width: 48%;
@@ -294,8 +297,8 @@
   .vista-carrito-con-productos {
   }
   .main-carrito .productos {
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 60px;
+    margin-left: 61px;
   }
   .main-carrito .productos .info-compra {
     margin-left: 20px;
@@ -334,6 +337,7 @@
     font-size: 40px;
   }
   .main-carrito .precio .texto-carrito {
+  font-size: 20px;
   }
   .vista-carrito-con-productos .comprar {
     text-align: center;
@@ -362,6 +366,7 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
+    /* padding-top: 40px; */
   }
   .imgenes-carrito .img-carrito-celular .img-3 {
     width: 48%;
@@ -371,9 +376,10 @@
     width: 50%;
     display: flex;
     justify-content: space-around;
+    /* padding-top: 40px; */
   }
   .imgenes-carrito-tablet .img-4 {
-    width: 48%;
+    width: 50%;
   }
   .imgenes-carrito .img-5 {
     width: 48%;
