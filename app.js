@@ -13,29 +13,20 @@ app.set("views" ,path.join(__dirname,"./views"))
 
 app.use(express.static('public'));
 
-// RUTAS 
-
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname,'./views/home.html'))
-// });
-// app.get('/carrito', (req, res) => {
-//     res.sendFile(path.join(__dirname,'./views/carrito.html'))
-// });
-// app.get('/producto-detalle', (req, res) => {
-//     res.sendFile(path.join(__dirname,'./views/productDetail.html'))
-// });
-// app.get('/registro', (req, res) => {
-//     res.sendFile(path.join(__dirname, './views/register.html'))
-// });
-// app.get('/ingreso', (req, res) => {
-//     res.sendFile(path.join(__dirname, './views/login.html'))
-// });
 
 // ROTERS
 const otherRoutes = require("./routes/other.routes")
+const carritoRoutes = require("./routes/carrito.routes")
+const loginRoutes = require("./routes/login.routes")
+const productDetailRoutes = require("./routes/productDetail.routes")
+const registerRoutes = require("./routes/register.routes")
 
-// ROUTES 
+// ROUTES
 app.use("/", otherRoutes)
+app.use("/", carritoRoutes)
+app.use("/", loginRoutes)
+app.use("/", productDetailRoutes)
+app.use("/", registerRoutes)
 
 //  SERVER
 app.listen(port, () => console.log(`http://localhost:${port}`));
