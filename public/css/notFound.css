@@ -1,0 +1,6 @@
+.notFound .title {
+    font-size: 100px;
+    color: var(--gris-pizarra);
+    text-align: center;
+    margin: 300px 0px
+}

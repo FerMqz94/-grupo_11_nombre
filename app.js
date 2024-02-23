@@ -27,6 +27,10 @@ app.use("/carrito", carritoRoutes)
 app.use("/ingreso", loginRoutes)
 app.use("/producto-detalle", productDetailRoutes)
 app.use("/registro", registerRoutes)
+// error 404
+app.use((req,res,next) => {
+    res.status(404).render('notFound')
+})
 
 //  SERVER
 app.listen(port, () => console.log(`http://localhost:${port}`));
