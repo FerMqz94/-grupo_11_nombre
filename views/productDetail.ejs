@@ -4,88 +4,9 @@
 <%- include("./partials/head", {view : "productDetail"}) %>
 
 <body class="vista-producto">
-  <header>
 
-    <div class="encabezado">
-      <p class="descuento">15% off por transferecia - 3 cuotas sin interés</p>
-      <p class="envio">-envío gratis a partir de los $30.000</p>
-    </div>
-    <div class="header-vista-movil">
-      <div class="logo">
+  <%- include("./partials/header", { productos: "black"}) %>
 
-        <img src="/images/imagen-header.png" alt="img-logo" class="img-header">
-        <i class="zinke">zinke</i>
-        <p class="lema">inspirate en tus instintos</p>
-      </div>
-
-      <div class="redirecciones">
-        <div class="barra-productos">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-
-        <div class="seleccionar-destino">
-
-          <div class="home">
-            <a href="/"><i class="fa-solid fa-house" style="color: gray;"></i></a>
-            <p>inicio</p>
-          </div>
-
-          <div class="productos">
-            <a href="/producto-detalle"><i class="fa-solid fa-list" style="color: gray;"></i></a>
-            <p>productos</p>
-          </div>
-
-          <div class="carrito">
-            <a href="/carrito"><i class="fa-solid fa-cart-shopping" style="color: gray;"></i></a>
-            <p>carrito</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="header-vista-tablet-pc">
-      <div class="logo">
-        <div class="logo-zinke">
-          <img src="/images/imagen-header.png" alt="img-logo" class="img-header">
-          <p class="Zinke">zinke</p>
-        </div>
-        <p class="barrra-busqueda"> &nbsp;¿que estas buscando? &nbsp;&nbsp;&nbsp;&nbsp;
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </p>
-        <a href="/registro">
-          <p class="texto-header">crear cuenta</p>
-        </a>
-
-        <a href="/ingreso">
-          <p class="texto-header">iniciar sesión</p>
-        </a>
-
-        <a href="/carrito">
-          <i class="fa-solid fa-cart-shopping" style="color: black;"></i>
-        </a>
-      </div>
-      <div class="redirecciones">
-        <p class="texto-header">INICIO
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-        <p class="texto-header">PRODUCTOS
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-        <p class="texto-header">CONTACTO
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-        <p class="texto-header">QUIENES SOMOS
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-        <p class="texto-header">LO MAS NUEVO!
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-        <p class="texto-header">OUTLET
-          <i class="fa-solid fa-chevron-down"></i>
-        </p>
-      </div>
-    </div>
-  </header>
 
 
   <main class="vista-producto">

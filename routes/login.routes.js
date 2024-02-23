@@ -3,6 +3,6 @@ const router = express.Router();
 
 const otherController = require("../controllers/other");
 
-router.get("/login", otherController.login);
+router.get("/", otherController.login);
 
 module.exports = router;

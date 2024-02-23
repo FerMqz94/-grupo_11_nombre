@@ -14,7 +14,7 @@ app.set("views" ,path.join(__dirname,"./views"))
 app.use(express.static('public'));
 
 
-// ROTERS
+// ROUTERS 
 const otherRoutes = require("./routes/other.routes")
 const carritoRoutes = require("./routes/carrito.routes")
 const loginRoutes = require("./routes/login.routes")
@@ -23,10 +23,10 @@ const registerRoutes = require("./routes/register.routes")
 
 // ROUTES
 app.use("/", otherRoutes)
-app.use("/", carritoRoutes)
-app.use("/", loginRoutes)
-app.use("/", productDetailRoutes)
-app.use("/", registerRoutes)
+app.use("/carrito", carritoRoutes)
+app.use("/ingreso", loginRoutes)
+app.use("/producto-detalle", productDetailRoutes)
+app.use("/registro", registerRoutes)
 
 //  SERVER
 app.listen(port, () => console.log(`http://localhost:${port}`));
