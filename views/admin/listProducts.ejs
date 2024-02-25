@@ -49,7 +49,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <ul>
   
 <li>                                   
-<a href="">
+<a href="/views/home.ejs">
 <i class="fa fa-home fa-lg"></i>
 <span class="nav-text">Home</span>
 </a>
@@ -153,39 +153,51 @@ margin-left: 56px;top:3px;">
   
 <!-- Table -->
         <div class="dashboard-admin-content">
-          <h1 class="text-center my-4">Lista de Productos</h1>
+          <h1 class="titulo text-center my-4">LISTA DE PRODUCTOS</h1>
 
-        <a href="" class="btn btn-primary">Crear Producto</a>
+        <a href="" class="btn btn-primary crear-producto-btn">Crear Producto</a>
 
         <table class="table table-list-products">
           <thead>
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Imagen</th>
-              <th scope="col">Titulo</th>
-              <th scope="col">Precio</th>
+              <th scope="col">Nombre</th>
               <th scope="col">Descripción</th>
-              <th scope="col">Acciones</th>
+              <th scope="col">Descripción Destacada</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Colores</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Talle</th>
+              <th scope="col">Nuevo</th>
             </tr>
           </thead>
           <tbody>
+
+            <!-- <div class="dflex flex-column"> -->
             <tr>
               <th scope="row">1</th>
               <td><img class="img-product" src="/images/poison-ivy.png" alt=""></td>
               <td>Poison Ivy</td>
-              <td>80000</td>
-              <td>Chaqueta Roja,Negra y Beige</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores sequi esse amet consectetur, optio numquam in a sunt facere nulla quis consequuntur architecto fugiat debitis, dignissimos aliquam laborum tempore beatae?</td>
+              <td>Chaqueta de cuero Roja,Negra y Beige</td>
+              <td>Avrigo</td>
+              <td>Negro-Rojo-Crema</td>          
+              <td>80000</td>   
+              <td>M</td>  
+              <td>SI</td> 
 
-              <td>
 
+                <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
-                  <a href="" class="btn btn-info d-inline-block">Info</a>
-                  <a href="" class="btn btn-warning d-inline-block">Editar</a>
-                  <a href="" class="btn btn-danger d-inline-block">Eliminar</a>
+                  <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
+                  <a href="" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
+                  <a href="" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
                 </div>
-
               </td>
             </tr>            
+
+
           </tbody>
         </table>
         </div>

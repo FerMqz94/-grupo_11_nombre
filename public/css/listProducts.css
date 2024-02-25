@@ -1,10 +1,110 @@
+/* titulo h1 */
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.body-admin-list-products .titulo {
+  background: linear-gradient(-45deg, #419197, #32e0c4, #ffefd6, #f99b7d);
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.5rem; 
+  text-align: center;
+  margin: 20px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* boton crear producto */
+.body-admin-list-products .crear-producto-btn {
+  background-color: var(--verde-azulado);
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 12px 24px;
+  color: white;
+  font-size: var(--letra-mediana);
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+/* animación */
+.body-admin-list-products .crear-producto-btn:hover {
+  background-color: #3a8889;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  border: 1px solid #ffffff66;
+}
+
+
+/* imagen */
 .body-admin-list-products .img-product {
     width: 100px;
     height: 100px;
     object-fit: contain;
 }
 
-
-.table-list-products {
-  max-width: 1200px;  
+/* tabla */
+.body-admin-list-products .table-list-products {
+  max-width: 80%;
+  border: solid 1px var(--blanco-almendra);
+  border-radius: 2px;
+  box-shadow: 0 0 8px 2px rgba(249, 155, 128, 0.4);
 }
+
+/* botones acciones */
+.body-admin-list-products .btn-group{
+  margin-left: 50px;
+}
+.body-admin-list-products .acc-btn {
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+.body-admin-list-products .info {
+  background-color: #007BFF;
+  box-shadow: 0 4px 8px 0 rgba(0, 123, 255, 0.2);
+}
+.body-admin-list-products .editar {
+  background-color: #28A745;
+  box-shadow: 0 4px 8px 0 rgba(40, 167, 69, 0.2);
+}
+.body-admin-list-products .eliminar{
+  background-color: #DC3545;
+  box-shadow: 0 4px 8px 0 rgba(220, 53, 69, 0.2);
+}
+/*  botones acciones:hover */
+.body-admin-list-products .acc-btn:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.body-admin-list-products .info:hover {
+  background-color: #0056b3; 
+  box-shadow: 0 6px 12px 0 rgba(0, 123, 255, 0.4);
+}
+.body-admin-list-products .editar:hover {
+  background-color: #218838; 
+  box-shadow: 0 6px 12px 0 rgba(40, 167, 69, 0.4);
+}
+.body-admin-list-products .eliminar:hover {
+  background-color: #c82333; 
+  box-shadow: 0 6px 12px 0 rgba(220, 53, 69, 0.4);
+}
+
+
+
