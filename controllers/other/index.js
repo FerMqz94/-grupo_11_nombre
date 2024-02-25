@@ -1,7 +1,7 @@
 module.exports = {
     home: require("./home.controller"),
     login: require("./login.controller"),
-    carrito: require("./carrito.controller"),
+    cart: require("./cart.controller"),
     register: require("./register.controller"),
     productDetail: require("./productDetail.controller"),
   }

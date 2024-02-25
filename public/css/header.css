@@ -5,17 +5,14 @@ a {
   text-decoration: none;
 }
 
-
-
- .encabezado {
+.encabezado {
   text-align: center;
   background-color: black;
   color: white;
   /* margin-top: 0px; */
 }
 
-
- .redirecciones {
+.redirecciones {
   display: flex;
   flex-direction: column;
   background-color: #ffefd6;
@@ -23,107 +20,102 @@ a {
   /* border-bottom: solid; */
 }
 
- .redirecciones .barra-productos {
+.redirecciones .barra-productos {
 }
 
- .redirecciones .seleccionar-destino {
+.redirecciones .seleccionar-destino {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
 
-
-
-
-
-   .encabezado {
-    margin-bottom: 0;
-    font-size: 14px;
-    padding: 4px;
-  }
-   .descuento {
-    margin-bottom: 0;
-  }
-   .encabezado .envio {
-    display: none;
-  }
-   .header-vista-movil {
-  }
-   .logo {
-    background-color: #00bca3;
-    margin-bottom: 0;
-    color: white;
-    text-align: center;
-    padding-bottom: 20px;
-    /* background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro)); */
-    /* color: transparent; */
-  }
-   .logo .logo-zinke {
-    display: flex;
+.encabezado {
+  margin-bottom: 0;
+  font-size: 14px;
+  padding: 4px;
 }
-   .logo .img-header {
+.descuento {
+  margin-bottom: 0;
+}
+.encabezado .envio {
+  display: none;
+}
+.header-vista-movil {
+}
+.logo {
+  background-color: #00bca3;
+  margin-bottom: 0;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+  /* background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro)); */
+  /* color: transparent; */
+}
+.logo .logo-zinke {
+  display: flex;
+}
+.logo .img-header {
   width: 14%;
   margin-bottom: 21px;
-  }
-   .logo .zinke {
-    font-size: 60px;
-  }
-   .logo .lema {
-    margin-bottom: 0;
-  }
+}
+.logo .zinke {
+  font-size: 60px;
+}
+.logo .lema {
+  margin-bottom: 0;
+}
 
-   .redirecciones {
-    border-top: solid #f99b7d 2px;
-    border-bottom: solid #f99b7d 2px;
-    margin-top: 0;
-  }
+.redirecciones {
+  border-top: solid #f99b7d 2px;
+  border-bottom: solid #f99b7d 2px;
+  margin-top: 0;
+}
 
-   .redirecciones .barra-productos {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 2%;
-    font-size: 25px;
-  }
+.redirecciones .barra-productos {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 2%;
+  font-size: 25px;
+}
 
-   .redirecciones .seleccionar-destino {
-    text-align: center;
-    margin-top: 5px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 21px;
-  }
+.redirecciones .seleccionar-destino {
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 21px;
+}
 
-   .redirecciones .seleccionar-destino .home {
-  }
-   .redirecciones .seleccionar-destino .productos {
-  }
-   .redirecciones .seleccionar-destino .carrito {
-  }
-  .header-vista-tablet-pc {
-    display: none;
-  }
-
+.redirecciones .seleccionar-destino .home {
+}
+.redirecciones .seleccionar-destino .productos {
+}
+.redirecciones .seleccionar-destino .carrito {
+}
+.header-vista-tablet-pc {
+  display: none;
+}
 
 @media (min-width: 769px) {
   .header {
     margin-bottom: 0;
   }
 
-   .encabezado {
+  .encabezado {
     display: flex;
     margin: 0;
     justify-content: center;
   }
-   .descuento {
+  .descuento {
   }
-   .encabezado .envio {
+  .encabezado .envio {
     display: inline-block;
     margin: 0;
   }
-   .header-vista-movil {
+  .header-vista-movil {
     display: none;
   }
-   .logo {
+  .logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,32 +123,32 @@ a {
     padding-bottom: 0;
     padding: 25px;
   }
-   .logo .img-header {
-  width: 61px;
+  .logo .img-header {
+    width: 61px;
   }
-   .logo .zinke {
+  .logo .zinke {
   }
-   .logo .lema {
+  .logo .lema {
   }
 
-   .redirecciones {
+  .redirecciones {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     border-bottom: revert;
   }
 
-   .redirecciones .barra-productos {
+  .redirecciones .barra-productos {
   }
 
-   .redirecciones .seleccionar-destino {
+  .redirecciones .seleccionar-destino {
   }
 
-   .redirecciones .seleccionar-destino .home {
+  .redirecciones .seleccionar-destino .home {
   }
-   .redirecciones .seleccionar-destino .productos {
+  .redirecciones .seleccionar-destino .productos {
   }
-   .redirecciones .seleccionar-destino .carrito {
+  .redirecciones .seleccionar-destino .carrito {
   }
   .header-vista-tablet-pc {
     display: contents;
@@ -165,13 +157,28 @@ a {
     margin: 0;
     font-size: 50px;
   }
-  .header-vista-tablet-pc .barrra-busqueda {
+  .header-vista-tablet-pc .barra-busqueda {
     margin: 0;
     background-color: white;
     color: #b2b2b2;
-    padding: 4px 10px 4px 7px;
+
+    border-radius: 33px;
+
+    display: flex;
+    align-items: center;
+  }
+  .header-vista-tablet-pc .barra-busqueda-icon {
+    margin-left: -31px;
+  }
+  .header-vista-tablet-pc .barra-busqueda-interior {
+    margin: 0;
+    background-color: white;
+    color: #b2b2b2;
+    padding: 5px 5px 5px 8px;
     border-radius: 33px;
     border: solid 1px black;
+    display: flex;
+    align-items: center;
   }
   .header-vista-tablet-pc .texto-header {
     color: black;
@@ -187,62 +194,60 @@ a {
 }
 
 @media (min-width: 1024px) {
-
-
-   .encabezado {
+  .encabezado {
   }
-   .descuento {
-  font-size: 20px;
+  .descuento {
+    font-size: 20px;
   }
-   .encabezado .envio {
-  font-size: 20px;
+  .encabezado .envio {
+    font-size: 20px;
   }
-   .header-vista-movil {
+  .header-vista-movil {
   }
-   .logo {
-  /* padding: revert; */
-  border-top: solid 22px #d6f9f3;
-  display: flex;
-  /* padding-right: 40px; */
-  justify-content: space-between;
-  width: 100%;
+  .logo {
+    /* padding: revert; */
+    border-top: solid 22px #d6f9f3;
+    display: flex;
+    /* padding-right: 40px; */
+    justify-content: space-between;
+    width: 100%;
   }
-   .logo .logo-zinke {}
-   .logo .img-header {
-  padding-left: 5%;
-  width: 104px;
+  .logo .logo-zinke {
   }
-   .logo .zinke {
+  .logo .img-header {
+    padding-left: 5%;
+    width: 104px;
   }
-   .logo .lema {
+  .logo .zinke {
   }
-
-   .redirecciones {
+  .logo .lema {
   }
 
-   .redirecciones .barra-productos {
+  .redirecciones {
   }
 
-   .redirecciones .seleccionar-destino {
+  .redirecciones .barra-productos {
   }
 
-   .redirecciones .seleccionar-destino .home {
+  .redirecciones .seleccionar-destino {
   }
-   .redirecciones .seleccionar-destino .productos {
+
+  .redirecciones .seleccionar-destino .home {
   }
-   .redirecciones .seleccionar-destino .carrito {
+  .redirecciones .seleccionar-destino .productos {
+  }
+  .redirecciones .seleccionar-destino .carrito {
   }
   .header-vista-tablet-pc {
   }
   .header-vista-tablet-pc .Zinke {
-  font-size: 80px;
+    font-size: 80px;
   }
-  .header-vista-tablet-pc .barrra-busqueda {
-  padding: 10px 10px 10px 7px;
-  font-size: 20px;
+  .header-vista-tablet-pc .barra-busqueda {
+    font-size: 20px;
   }
   .header-vista-tablet-pc .texto-header {
-  margin: revert;
-  font-size: var(--letra-grande);
+    margin: revert;
+    font-size: var(--letra-grande);
   }
 }

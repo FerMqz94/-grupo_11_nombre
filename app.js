@@ -16,7 +16,7 @@ app.use(express.static('public'));
 
 // ROUTERS 
 const otherRoutes = require("./routes/other.routes")
-const carritoRoutes = require("./routes/carrito.routes")
+const cartRoutes = require("./routes/cart.routes")
 const loginRoutes = require("./routes/login.routes")
 const productDetailRoutes = require("./routes/productDetail.routes")
 const registerRoutes = require("./routes/register.routes")
@@ -24,7 +24,7 @@ const adminRoutes = require("./routes/admin.routes")
 
 // ROUTES
 app.use("/", otherRoutes)
-app.use("/carrito", carritoRoutes)
+app.use("/carrito", cartRoutes)
 app.use("/ingreso", loginRoutes)
 app.use("/producto-detalle", productDetailRoutes)
 app.use("/registro", registerRoutes)

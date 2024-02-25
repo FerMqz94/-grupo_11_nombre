@@ -1,6 +1,7 @@
 .main-carrito {
   /* border: solid #28b49e 2px; */
 }
+/* carrito sin contenido */
 .main-carrito .carrito-vacio {
   text-align: center;
   display: none;
@@ -445,6 +446,7 @@
 @media (min-width: 769px) {
   .main-carrito {
   }
+  /* carrito sin contenido */
   .main-carrito .carrito-vacio {
     text-align: center;
     margin-top: 60px;
@@ -467,6 +469,7 @@
     font-size: 350%;
     color: #27b29c;
   }
+  /* carrito con contenido */
   .vista-carrito-con-productos {
   }
   .main-carrito .productos {
@@ -551,17 +554,11 @@
     div.contenedor-otros-productos
     article.dos-continentes {
     padding: 10px 20px 10px 20px;
-
     border: 1px solid var(--gris-claro);
-
     border-radius: 5%;
-
     width: 30%;
-
     text-align: center;
-
     height: 300px;
-
     margin-right: revert;
   }
 
@@ -571,7 +568,6 @@
     article.productos-otrosFav
     img.blazer-dos-conti {
     width: 180px;
-
     margin: 0;
   }
 
@@ -589,11 +585,8 @@
     div.contenedor-otros-productos
     article.poison-ivy {
     width: 31%;
-
     height: 300px;
-
     padding: 0 20px 10px 20px;
-
     margin-left: revert;
   }
 
@@ -619,9 +612,7 @@
     div.contenedor-otros-productos
     article.weird-barbie {
     width: 30%;
-
     height: 300px;
-
     margin-right: revert;
   }
 
@@ -631,9 +622,7 @@
     article.productos-otrosFav
     img.chaqueta-weird-barbie {
     width: 172px;
-
     margin-top: 10px;
-
     margin-bottom: 8px;
   }
 
@@ -652,13 +641,12 @@
     article.lets-normcore {
     display: none;
   }
-
- 
 }
 
 @media (min-width: 1024px) {
   .main-carrito {
   }
+  /* carrito sin contenido */
   .main-carrito .carrito-vacio {
     text-align: center;
   }
@@ -679,6 +667,7 @@
     font-size: 400%;
     color: #27b29c;
   }
+  /* carrito con contenido */
   .vista-carrito-con-productos {
   }
   .main-carrito .productos {
@@ -724,6 +713,7 @@
   .main-carrito .precio .texto-carrito {
     font-size: 20px;
   }
+  /* carrito con contenido */
   .vista-carrito-con-productos .comprar {
     text-align: center;
     font-size: 300%;
