@@ -4,5 +4,6 @@ const adminController = require("../controllers/admin");
 
 // "/admin"
 router.get("/productos", adminController.listProducts); 
+router.get('/crear-productos', adminController.createProduct);
 
 module.exports = router;

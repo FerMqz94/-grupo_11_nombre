@@ -1,3 +1,4 @@
 module.exports = {
-    listProducts: require("./listProducts.controller") 
+    listProducts: require("./listProducts.controller"),
+    createProduct: require('./createProduct.controller') 
   }
