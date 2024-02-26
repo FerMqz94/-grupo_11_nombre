@@ -1,0 +1,303 @@
+main.editar-producto {
+    font-family: var(--fuente-general);
+}
+
+main.editar-producto div.vista-editar-producto div.contenedor-titulo-boton-editar{
+    width: 100%;
+}
+
+main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto{
+    font-size: var(--letra-mediana);
+    background-color: var(--verde-azulado-claro);
+    color: var(--blanco);
+    border: none;
+    width: 150px;
+    height: 35px;
+    transition: all 1s ease-in-out;
+}
+
+main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto:hover{
+   background-color: var(--gris85);
+   color: var(--verde-azulado-claro)
+}
+
+main.editar-producto div.vista-editar-producto .form-floating{
+    margin-top: 20px;
+}
+main.editar-producto div.vista-editar-producto .form-control {
+    background-color: var(--gris-claro);
+    color: var(--gris-pizarra);
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    line-height: 1.4;
+}
+main.editar-producto div.vista-editar-producto .form-control:hover{
+    cursor: pointer;
+}
+
+main.editar-producto div.vista-editar-producto .form-control:focus{
+    cursor: text;
+    color: var(--gris-pizarra);
+    background-color: var(--blanco);
+    border-color:var(--gris-pizarra);
+}
+main.editar-producto div.vista-editar-producto .form-select {
+    background-color: var(--gris-claro);
+    color: var(--gris-pizarra);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+main.editar-producto div.vista-editar-producto .form-select:hover{
+    cursor: pointer;
+}
+
+main.editar-producto div.vista-editar-producto .form-select:focus{
+    cursor: text;
+    color: var(--gris-pizarra);
+    background-color: var(--blanco);
+    border-color:var(--gris-pizarra);
+}
+main.editar-producto div.vista-editar-producto textarea{
+    background-color: var(--gris-claro);
+    color: var(--gris-pizarra);
+    padding: 1em;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    line-height: 1.4;
+    transition: all 0.2s;
+}
+
+main.editar-producto div.vista-editar-producto textarea:hover{
+    cursor: pointer;
+}
+
+main.editar-producto div.vista-editar-producto textarea:focus{
+    cursor: text;
+    color: var(--gris-pizarra);
+    background-color: var(--blanco);
+    border-color:var(--gris-pizarra);
+}
+
+main.editar-producto div.vista-editar-producto .form-check-input-talle {
+    margin-right: 6px;
+}
+
+main.editar-producto div.vista-editar-producto .form-check-label-talle {
+    color:var(--negro);
+    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+}
+
+main.editar-producto div.vista-editar-producto .form-check-input-talle:checked {
+    accent-color: var(--turquesa);
+}
+
+main.editar-producto div.vista-editar-producto .form-check-input-talle:checked ~ label{
+    color: var(--turquesa);
+}
+main.editar-producto div.vista-editar-producto .colors-check {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-black input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-beige input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-blue input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-white input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-red input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-green input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-violet input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-orange input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-gray input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-lila input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-rose input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-plated input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-petroleo input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-gold input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-span-color {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--gris-claro);
+    padding: 15px 20px;
+    color: var(--negro);
+    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-black:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: var(--negro);
+    color: var(--blanco);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-beige:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: beige;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-blue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: blue;
+    color: var(--turquesa);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-white:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: var(--blanco);
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-red:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: red;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-green:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: green;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-violet:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: violet;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-orange:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: orange;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: lightblue;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-gray:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: var(--gris-claro);
+    color: var(--negro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-lila:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: #d29bfd;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-rose:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: #ff0080;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-plated:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: #8a9597;
+    color: var(--negro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-petroleo:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: #084d6e;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-color-gold:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+    background: gold;
+    color: var(--gris-claro);
+    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+}
+main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-new-offer {
+    position: relative;
+    color: #4189e0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition:0.5s;
+    gap: 1em;
+    border: 3px solid #4189e0;
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-new-offer:before {
+    content: "";
+    height: 0.5em;
+    width: 0.5em;
+    border: 3px solid #4189e0;
+    border-radius: 50%;
+}
+main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"]:checked + .form-check-label-new-offer:before {
+    height: 0.5em;
+    width: 0.5em;
+    border: 0.3em solid var(--blanco);
+    background-color: #4189e0;
+}
+main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"]:checked + .form-check-label-new-offer {
+    background-color: #4189e0;
+    color: var(--blanco);
+}
+main.editar-producto div.vista-editar-producto .form-check-label-disponible {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: #aaa;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+main.editar-producto div.vista-editar-producto .form-check-label-disponible:after {
+    position: absolute;
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: #fff;
+    border-radius: 100px;
+    top: 4px;
+    left: 5px;
+    transition: 0.3s
+}
+main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"] {
+    display: none;
+}
+main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"]:checked ~ .form-check-label-disponible {
+    background: #61a0ff;
+}
+main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"]:checked ~ .form-check-label-disponible:after {
+    left: 23px;
+}
