@@ -13,36 +13,38 @@
 }
 
 .body-admin-list-products .titulo {
-  background: linear-gradient(-45deg, #419197, #32e0c4, #ffefd6, #f99b7d);
-  font-weight: bold;
-  -webkit-background-clip: text;
+  background: linear-gradient(to right, var(--turquesa), var(--verde-azulado-claro));
+  background-size: 200% 200%;
   background-clip: text;
   color: transparent;
-  font-size: 2.5rem; 
   text-align: center;
-  margin: 20px 0;
   user-select: none;
-  -webkit-user-select: none;
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  padding: 0 10px;
+  animation: gradient-shift 3s ease infinite;
+  margin: 30px 0px 0px 0px;
 }
+
 
 /* boton crear producto */
 .body-admin-list-products .crear-producto-btn {
   background-color: var(--verde-azulado);
   border: none;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  padding: 12px 24px;
+  margin: 37px 0px;
+  border-radius: 5px;
+  padding: 4px 7px;
   color: white;
-  font-size: var(--letra-mediana);
+  font-size: var(--letra-pequeña);
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
+
 /* animación */
 .body-admin-list-products .crear-producto-btn:hover {
   background-color: #3a8889;
@@ -59,12 +61,19 @@
     object-fit: contain;
 }
 
+
+/* contenedor tabla */
+.body-admin-list-products .contenedor-tabla {
+  
+width: 100%;
+  
+overflow: scroll;
+  
+box-shadow: 2px 2px 8px 2px rgba(249, 155, 128, 0.4);
+}
 /* tabla */
 .body-admin-list-products .table-list-products {
-  max-width: 80%;
-  border: solid 1px var(--blanco-almendra);
-  border-radius: 2px;
-  box-shadow: 0 0 8px 2px rgba(249, 155, 128, 0.4);
+  max-width: 100%;
 }
 
 /* botones acciones */
@@ -107,4 +116,34 @@
 }
 
 
+/* -----------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------ MEDIA DE TABLET ------------------------------------------------*/
+/* -----------------------------------------------------------------------------------------------------------------*/
 
+@media (min-width: 768px) {
+
+.body-admin-list-products .dashboard-admin-content {
+  margin: 0px 80px;
+}
+
+.body-admin-list-products .contenedor-tabla {
+  margin:auto;
+  max-width: 75%;
+}
+
+/* contenedor tabla */
+.body-admin-list-products .contenedor-tabla {
+}
+}
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------*/
+/* ------------------------------------------------ MEDIA DE ESCRITORIO ------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+
+}
