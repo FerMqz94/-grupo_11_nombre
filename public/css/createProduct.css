@@ -534,6 +534,43 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
     color: var(--molocoton-oscuro);
   }
 
+ 
+  main.crear-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 0.5rem;
+    width: 200px;
+    height: 45px;
+    line-height: 36px;
+    transition: all 0.5s ease-in-out;
+    background:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+  }
+
+  main.crear-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar:hover {
+    background: rgba(249, 155, 128, 0.4);
+
+  }
+
+
+  main.crear-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto {
+    font-weight: 600;
+    font-size: var(--letra-mediana);
+    text-decoration: none;
+    color: var(--blanco);
+   
+  }
+
+
+  main.crear-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto:hover {
+    color: var(--gris-pizarra);
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
+  }
+  
+
 
 /*--------------------------------------------------------------------------*/
 /*------------------------MEDUA QUERY TABLER-------------------------------*/
