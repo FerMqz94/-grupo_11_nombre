@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="carrito">
-                    <a href="/carrito"><i class="fa-solid fa-cart-shopping" style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i></a>
+                    <a href="/cart"><i class="fa-solid fa-cart-shopping" style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i></a>
                     <p>carrito</p>
                 </div>
             </div>
@@ -48,15 +48,18 @@
                 <i class="fa-solid fa-magnifying-glass barra-busqueda-icon"></i>
             </p>
         </form>
+        <% if (!registro) { %>
             <a href="/registro">
                 <p class="texto-header">crear cuenta</p>
             </a>
-
+            <% } %>
+            <% if (!ingreso) { %>
             <a href="/ingreso">
                 <p class="texto-header">iniciar sesión</p>
             </a>
+            <% } %>
 
-            <a href="/carrito">
+            <a href="/cart">
                 <i class="fa-solid fa-cart-shopping" style="color: black;"></i>
             </a>
         </div>

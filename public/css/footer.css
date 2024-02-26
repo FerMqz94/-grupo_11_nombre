@@ -89,7 +89,7 @@
   
 
 /* vista tablet */
-@media (min-width: 769px)  {
+@media (min-width: 768px)  {
   .footer {
   }
   .footer .footer-movil {

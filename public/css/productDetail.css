@@ -1,1797 +1,1970 @@
-
 /*-------------------MOBILE FIRST------------------------*/
 /*------------------------------------------------------*/
 
-
-
 /*-------MAIN -----VISTA PRODUCTO-----------*/
-        main.vista-producto {
-font-family: var(--fuente-general);
-width: 100vw;
-}
+main.vista-producto {
+  font-family: var(--fuente-general);
 
-        main.vista-producto div.contenedor-busqueda {
-    font-size: var(--letra-mas-pequeña);
-    margin: 20px 0 20px 30px;
-    }
+  width: 100vw;
+}
 
-        main.vista-producto div.contenedor-busqueda a{
-    
-        text-decoration: none;
-    
-        color: var(--negro);
-    
+main.vista-producto div.contenedor-busqueda {
+  font-size: var(--letra-mas-pequeña);
 
-        }
+  margin: 20px 0 20px 30px;
+}
 
-        main.vista-producto div.contenedor-busqueda a.blazer{
-    
-        color: var(--verde-azulado);
-        }
+main.vista-producto div.contenedor-busqueda a {
+  text-decoration: none;
 
-        main.vista-producto section.visualizacion-producto {
+  color: var(--negro);
+}
 
-        width: 90%;
+main.vista-producto div.contenedor-busqueda a.blazer {
+  color: var(--verde-azulado);
+}
 
-        }
+main.vista-producto section.visualizacion-producto {
+  width: 90%;
+}
 
 /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
-    
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes {
+  margin: 0 0 10px 30px;
+}
 
-    
-        margin: 0 0 10px 30px;
-        }
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal {
+  width: 100%;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-    width: 100%;
-    position: relative;
-    height: 450px;
-    /* height: 100%;*/
-    border-radius: 5%;
-    background-color: var(--gris-claro);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    }
+  position: relative;
 
+  height: 450px;
 
+  /* height: 100%;*/
 
+  border-radius: 5%;
 
-        /*-ICONO LUPA---*/
+  background-color: var(--gris-claro);
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
-    
-        position: absolute;
-    
-        top: 15px;
-    
-        left: 20px;
-    
-        font-size: var(--iconos-grandes);
+  display: flex;
 
-        transition: all 1s;
-        }
+  justify-content: center;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass:hover {
-        
-                color: var(--gris-claro);
-                background-color: var(--gris-terciopelo);
-                padding: 2px;
-                border-radius: 50%;
+  align-items: center;
 
-        }
+  overflow: hidden;
+}
 
+/*-ICONO LUPA---*/
 
-        /*----ICONO CORAZÓN----*/
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  i.fa-magnifying-glass {
+  position: absolute;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
-    
-        position: absolute;
-    
-        top: 15px;
-    
-        right: 20px;
-    
-        font-size: var(--iconos-grandes);
+  top: 15px;
 
-        transition: all 1s;
+  left: 20px;
 
-        }
+  font-size: var(--iconos-grandes);
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart:hover {
+  transition: all 1s;
+}
 
-                color: var(--molocoton-oscuro);
-                font-size: var(--letra-favMobile);
-                background-color: rgba(255, 255, 255, 0.5);
-                padding: 2px;
-                border-radius: 50%;
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  i.fa-magnifying-glass:hover {
+  color: var(--gris-claro);
+  background-color: var(--gris-terciopelo);
+  padding: 2px;
+  border-radius: 50%;
+}
 
-        }
+/*----ICONO CORAZÓN----*/
 
-       
-        /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  i.fa-heart {
+  position: absolute;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
-                text-align: center;
-                width: 100%;
-        }
+  top: 15px;
 
+  right: 20px;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
-    
-        width: 70%;
+  font-size: var(--iconos-grandes);
 
-        height: 350px;
+  transition: all 1s;
+}
 
-        object-fit: contain;
-        
-        /* margin-bottom: 15%; */
-    
-        }
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  i.fa-heart:hover {
+  color: var(--molocoton-oscuro);
+  font-size: var(--letra-favMobile);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2px;
+  border-radius: 50%;
+}
 
+/*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  div.contenedor-img-principal {
+  text-align: center;
+  width: 100%;
+}
 
-        width: 100%;
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  div.contenedor-img-principal
+  img.blazer-over-principal {
+  width: 70%;
 
-        height: 450px;
-        
-        object-fit: cover;
+  height: 350px;
 
-        position: relative;
+  object-fit: contain;
 
-        right: -32%;
+  /* margin-bottom: 15%; */
+}
 
-}        
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  div.contenedor-img-3
+  img.blazer-over-principal {
+  width: 100%;
 
+  height: 450px;
+
+  object-fit: cover;
 
-main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
+  position: relative;
+
+  right: -32%;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes
+  div.contenedor-blazerOver-principal
+  div.contenedor-img-4
+  img.blazer-over-principal {
+  width: 100%;
+
+  height: 400px;
+
+  object-fit: cover;
+}
+
+/*---------CONTENEDOR GENERAL DE TODA LA INFORMACIÓN DEL PRODUCTO QUE NO SEAN IMÁGENES--------------*/
+
+main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-global-info-producto {
+  width: 90%;
+}
+
+/*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
+main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
+  margin: 25px 0px 20px 30px;
+
+  width: 85%;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.nombre-precio-talle
+  h2.blazer-over {
+  font-weight: 500;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.nombre-precio-talle
+  p.precio {
+  margin: 5px 0px;
+
+  font-weight: 700;
 
-        width: 100%;
+  font-size: var(--letra-grande);
+}
 
-        height: 400px;
-        
-        object-fit: cover;
+main.vista-producto
+  section.visualizacion-producto
+  div.nombre-precio-talle
+  p.talle {
+  margin: 20px 0 20px 0;
+
+  color: var(--gris-claro);
+
+  font-size: var(--letra-grande);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.nombre-precio-talle
+  p.talle
+  span {
+  color: var(--negro);
+}
+
+/*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
+
+main.vista-producto section.visualizacion-producto div.talles {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin: 5px 0px 50px 30px;
+
+  width: 80%;
+}
+
+main.vista-producto section.visualizacion-producto div.talles div button {
+  width: 32px;
+  height: 150%;
+  background-color: var(--blanco);
+  font-size: var(--letra-mediana);
+  color: var(--gris-claro);
+  border: 2px solid var(--gris-claro);
+  transition: all 1s;
+}
+
+main.vista-producto section.visualizacion-producto div.talles div button:hover {
+  background-color: var(--molocoton-oscuro);
+  opacity: 0.2;
+  color: var(--gris-pizarra);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.talles
+  div
+  button:active {
+  border: 2px solid var(--molocoton-oscuro);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.talles
+  div.dos
+  button.boton-dos {
+  border: 2px solid var(--molocoton-oscuro);
+}
+
+/*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
+
+main.vista-producto section.visualizacion-producto div.cantidad-carrito {
+  margin: 10px 0px 15px 30px;
+
+  width: 95%;
+
+  position: relative;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  label.label-carrito {
+  font-size: var(--letra-grande);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  input.input-carrito {
+  width: 20%;
+
+  height: 35%;
+
+  position: absolute;
+
+  bottom: 75px;
+
+  left: 70%;
+
+  border: 2px solid var(--gris-claro);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  input.input-carrito::placeholder {
+  font-size: var(--letra-grande);
+  color: var(--gris-claro);
+  padding-left: 5px;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  input.input-carrito:focus {
+  outline: none;
+  border: 2px solid var(--molocoton-oscuro);
+  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  div.contenedor-boton-carrito {
+  margin-left: 0;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  div.contenedor-boton-carrito
+  button.agregar-carrito {
+  margin-top: 35px;
+  width: 105%;
+  height: 45px;
+  /*font-size: var(--letra-grande);*/
+  background-color: var(--verde-azulado-claro);
+  /* color: var(--blanco);*/
+  border: none;
+  margin-left: 0;
+  transition: all 1s;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  div.contenedor-boton-carrito
+  button.agregar-carrito
+  a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: var(--letra-grande);
+  transition: all 1s;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  div.contenedor-boton-carrito
+  button.agregar-carrito
+  a:hover {
+  color: var(--gris-terciopelo);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.cantidad-carrito
+  form.form-carrito
+  div.contenedor-boton-carrito
+  button.agregar-carrito:hover {
+  background-color: var(--gris-claro);
+}
+
+/*----CONTENEDOR ENVIO-------*/
+
+main.vista-producto section.visualizacion-producto div.envio {
+  margin: 20px 0 20px 30px;
+
+  width: 100%;
+
+  padding: 0;
+}
+
+main.vista-producto section.visualizacion-producto div.envio form.form-carrito {
+  font-size: var(--letra-mediana);
+
+  width: 100%;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  i.fa-truck {
+  font-size: var(--iconos-grandes);
+
+  display: inline-block;
+
+  color: var(--gris-terciopelo);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  label.label-carrito {
+  display: inline-block;
+
+  width: 70%;
+
+  font-size: var(--letra-pequeña);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  input.input-carrito {
+  width: 55%;
+
+  display: inline-block;
+
+  margin-right: 0;
+
+  height: 45px;
+
+  border: 2px solid var(--gris-claro);
+
+  padding-left: 3px;
+
+  padding-top: 2.5px;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  input.input-carrito:focus {
+  outline: none;
+  border: 2px solid var(--molocoton-oscuro);
+  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  input.input-carrito::placeholder {
+  color: var(--gris-claro);
+  font-size: var(--letra-pequeña);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  p.nose-postal {
+  font-size: var(--letra-mas-pequeña);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  button.boton-calcular {
+  border: 2px solid var(--gris-claro);
+
+  font-size: var(--letra-mediana);
+
+  width: 40%;
+
+  display: inline-block;
+
+  height: 45px;
+
+  background-color: var(--blanco);
+
+  transition: all 1s;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  div.envio
+  form.form-carrito
+  button.boton-calcular:hover {
+  background-color: var(--gris-claro);
+
+  color: var(--gris-terciopelo);
+}
+
+/*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra {
+  margin: 50px 0px 30px 30px;
+
+  font-size: var(--letra-mediana);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.detalle-talles {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+
+  color: var(--verde-azulado-claro);
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.detalle-talles
+  h3.talles {
+  width: 80%;
+
+  letter-spacing: 2px;
+}
+
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.cambiosDevo {
+  display: flex;
+
+  justify-content: space-between;
 
+  margin: 0px 0 40px 0px;
 
-} 
+  color: var(--verde-azulado-claro);
+}
 
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.cambiosDevo
+  h3.cambios {
+  width: 80%;
 
-     
+  letter-spacing: 2px;
+}
 
-        /*---------CONTENEDOR GENERAL DE TODA LA INFORMACIÓN DEL PRODUCTO QUE NO SEAN IMÁGENES--------------*/
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.formaPago {
+  display: flex;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
-    
-        width: 90%;
-        }
+  justify-content: space-between;
 
+  margin-bottom: 40px;
 
-        /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
+  color: var(--verde-azulado-claro);
+}
 
-        margin: 25px 0px 20px 30px;
+main.vista-producto
+  section.visualizacion-producto
+  article.info-adicional-compra
+  div.formaPago
+  h3.formaPago {
+  width: 80%;
 
-        width: 85%;
-        }
+  letter-spacing: 2px;
+}
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
+/*--------DESCRIPCION DESTACADA-------------*/
 
-        font-weight: 500;
-        }
+main.vista-producto article.contenedor-descripcion {
+  text-align: center;
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
+  width: 90%;
 
-        margin: 5px 0px;
+  margin: 40px 10px 70px 20px;
+}
 
-        font-weight: 700;
+/*--------------DESCRIPCION DESTACADA DEL PRODUCTO----------------------*/
 
-        font-size: var(--letra-grande);
-        }
+main.vista-producto article.contenedor-descripcion p.descripcion {
+  font-size: var(--letra-mas-pequeña);
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
+  letter-spacing: 2px;
 
-        margin: 20px 0 20px 0;
+  margin-bottom: 3px;
 
-        color: var(--gris-claro);
+  color: var(--gris74);
 
-        font-size: var(--letra-grande);
-        }
+  line-height: 22px;
+}
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
+main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {
+  font-size: var(--letra-mediana);
 
-        color: var(--negro);
-        }
+  color: var(--molocoton-oscuro);
 
+  letter-spacing: 1.5px;
 
-        /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
+  margin-top: 20px;
+}
 
-        main.vista-producto section.visualizacion-producto div.talles {
+/*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
 
-        display: flex;
+main.vista-producto section.otrosFav {
+  width: 86%;
 
-        justify-content: space-between;
+  margin-left: 30px;
 
-        margin: 5px 0px 50px 30px;
+  margin-bottom: 40px;
+}
 
-        width: 80%;
-        }
+main.vista-producto section.otrosFav h3.otrosFav {
+  margin: 10px 0 30px 0px;
 
-       
-        main.vista-producto section.visualizacion-producto div.talles div button{
-        width: 32px;
-        height: 150%;
-        background-color: var(--blanco);
-        font-size: var(--letra-mediana);
-        color: var(--gris-claro);
-        border: 2px solid var(--gris-claro);
-        transition: all 1s;
+  border-bottom: 3px solid var(--verde-azulado-claro);
 
-        }
+  font-size: var(--letra-favMobile);
 
-        main.vista-producto section.visualizacion-producto div.talles div button:hover {
-                background-color: var(--molocoton-oscuro);
-                opacity: 0.2;
-                color: var(--gris-pizarra);
-        }
+  background: linear-gradient(
+    var(--verde-azulado-claro),
+    var(--molocoton-oscuro)
+  );
 
-        main.vista-producto section.visualizacion-producto div.talles div button:active {
-                border: 2px solid var(--molocoton-oscuro);
+  -webkit-background-clip: text;
 
-        }
+  background-clip: text;
 
+  color: transparent;
 
-        main.vista-producto section.visualizacion-producto div.talles div.dos button.boton-dos{
+  width: 100%;
+}
 
-        border: 2px solid var(--molocoton-oscuro);
-        }
+main.vista-producto section.otrosFav div.contenedor-otros-productos {
+  display: flex;
 
+  width: 100%;
 
+  flex-wrap: wrap;
 
-        /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
+  justify-content: center;
+}
 
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.dos-continentes {
+  width: 45%;
 
+  height: 200px;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito {
+  /* padding: 10px 20px 10px 20px; */
 
-        margin: 10px 0px 15px 30px;
+  border: 1px solid var(--gris-claro);
 
-        width: 95%;
+  border-radius: 5%;
 
-        position: relative;
-        }
+  text-align: center;
 
+  margin-right: 10px;
+}
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
-        
-        font-size: var(--letra-grande);
-        
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  img.blazer-dos-conti {
+  width: 100px;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
+  margin: 10px;
+}
 
-        width: 20%;
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-dos-conti {
+  text-decoration: none;
+}
 
-        height: 35%;
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-dos-conti
+  h4.h4-dos-conti {
+  margin-top: 13%;
 
-        position: absolute;
+  font-size: var(--letra-mas-pequeña);
 
-        bottom: 75px;
+  color: var(--gris-claro);
 
-        left: 70%;
+  font-weight: 500;
+}
 
-        border: 2px solid var(--gris-claro);
-        
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  p.p-dos-conti {
+  margin-top: 2px;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito::placeholder{
+  color: var(--gris-claro);
 
-                font-size: var(--letra-grande);
-                color: var(--gris-claro);
-                padding-left: 5px;
-        }      
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito:focus{
-                outline: none;
-                border: 2px solid var(--molocoton-oscuro);
-                box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-        }
+  font-size: var(--letra-mediana);
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
+  letter-spacing: 1px;
+}
 
-        margin-left: 0;
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.poison-ivy {
+  width: 45%;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
-                margin-top: 35px;
-                width: 105%;
-                height: 45px;
-                /*font-size: var(--letra-grande);*/
-                background-color: var(--verde-azulado-claro);
-               /* color: var(--blanco);*/
-                border: none;
-                margin-left: 0;
-                transition: all 1s;
+  height: 200px;
 
-        }
+  border: 1px solid var(--gris-claro);
 
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito a {
-                text-decoration: none;
-                color: var(--blanco);
-                font-size: var(--letra-grande);
-                transition: all 1s;
-                
-        }     
-        
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito a:hover {
+  border-radius: 5%;
 
-                color: var(--gris-terciopelo);
-                
-        }
+  text-align: center;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
-                background-color: var(--gris-claro);
+  margin-left: 10px;
+}
 
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  img.chaqueta-ivy {
+  width: 90px;
 
+  top: -10px;
+}
 
-        /*----CONTENEDOR ENVIO-------*/
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-chaqueta-ivy {
+  text-decoration: none;
+}
 
-        main.vista-producto section.visualizacion-producto div.envio {
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-chaqueta-ivy
+  h4.h4-chaqueta-ivy {
+  font-weight: 500;
 
-        margin: 20px 0 20px 30px;
+  font-size: var(--letra-mas-pequeña);
 
-        width: 100%;
+  color: var(--gris-claro);
+}
 
-        padding: 0;
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  p.p-chaqueta-ivy {
+  margin-top: 2px;
 
-        }
+  color: var(--gris-claro);
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
-    
-        font-size: var(--letra-mediana);
-    
-        width: 100%;
-        }
+  font-size: var(--letra-mediana);
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
-    
-        font-size: var(--iconos-grandes);
-    
-        display: inline-block;
-    
-        color: var(--gris-terciopelo);
-        }
+  letter-spacing: 1px;
+}
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
-    
-        display: inline-block;
-    
-        width: 70%;
-    
-        font-size: var(--letra-pequeña);
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.weird-barbie {
+  width: 45%;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-    
-        width: 55%;
-    
-        display: inline-block;
-    
-        margin-right: 0;
-    
-        height: 45px;
-    
-        border: 2px solid var(--gris-claro);
-    
-        padding-left: 3px;
-    
-        padding-top: 2.5px;
+  margin-top: 20px;
 
-        } 
+  border: 1px solid var(--gris-claro);
 
+  border-radius: 5%;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito:focus {
-                outline: none;
-                border: 2px solid var(--molocoton-oscuro);
-                box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-        }
+  text-align: center;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
+  height: 200px;
 
-        color: var(--gris-claro);
-        font-size: var(--letra-pequeña);
+  margin-right: 10px;
+}
 
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  img.chaqueta-weird-barbie {
+  width: 100px;
 
-        }
+  margin-bottom: 11%;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
-    
-        font-size: var(--letra-mas-pequeña);
+  position: relative;
+}
 
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-weird-barbie {
+  text-decoration: none;
+}
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
-    
-        border: 2px solid var(--gris-claro);
-    
-        font-size: var(--letra-mediana);
-    
-        width: 40%;
-    
-        display: inline-block;
-    
-        height: 45px;
-    
-        background-color: var(--blanco);
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-weird-barbie
+  h4.h4-weird-barbie {
+  font-size: var(--letra-mas-pequeña);
 
-        transition: all 1s;
+  color: var(--gris-claro);
 
-        }
+  font-weight: 500;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular:hover {
-               
-                background-color: var(--gris-claro);
+  width: 100%;
 
-                color: var(--gris-terciopelo);
+  margin-top: 0;
+}
 
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  p.p-weird-barbie {
+  margin-top: 2px;
 
-        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+  color: var(--gris-claro);
 
+  font-size: var(--letra-mediana);
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra {
+  letter-spacing: 1px;
+}
 
-        margin: 50px 0px 30px 30px;
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.lets-normcore {
+  width: 45%;
 
-        font-size: var(--letra-mediana);
-        }
+  padding: 0 20px 10px 20px;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
-    
-        display: flex;
-    
-        justify-content: space-between;
-    
-        margin-bottom: 40px;
-    
-        color: var(--verde-azulado-claro);
-        
-        }
+  border: 1px solid var(--gris-claro);
 
-      
+  border-radius: 5%;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles h3.talles{
-    
-        width: 80%;
-    
-        letter-spacing: 2px;
-        } 
+  margin-top: 20px;
 
+  text-align: center;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo{
-    
-        display: flex;
-    
-        justify-content: space-between;
-    
-        margin: 0px 0 40px 0px;
-    
-        color: var(--verde-azulado-claro);
-        }
+  height: 200px;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo h3.cambios{
-    
-        width: 80%;
-    
-        letter-spacing: 2px;
-        }
+  margin-left: 10px;
+}
 
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  img.abrigo-lets-normcore {
+  width: 90px;
+}
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago{
-    
-        display: flex;
-    
-        justify-content: space-between;
-    
-        margin-bottom: 40px;
-    
-        color: var(--verde-azulado-claro);
-        }
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-lets-normcore {
+  text-decoration: none;
+}
 
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  a.a-lets-normcore
+  h4.h4-lets-normcore {
+  font-size: var(--letra-mas-pequeña);
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago h3.formaPago{
-    
-        width: 80%;
-    
-        letter-spacing: 2px;
-        }
+  color: var(--gris-claro);
 
+  font-weight: 500;
+}
 
+main.vista-producto
+  section.otrosFav
+  div.contenedor-otros-productos
+  article.productos-otrosFav
+  p.p-lets-normcore {
+  margin-top: 2px;
 
-        /*--------DESCRIPCION DESTACADA-------------*/
+  color: var(--gris-claro);
 
-        main.vista-producto article.contenedor-descripcion{
-    
-        text-align: center;
-    
-        width: 90%;
-    
-        margin: 40px 10px 70px 20px;
-        }
+  font-size: var(--letra-mediana);
 
-        /*--------------DESCRIPCION DESTACADA DEL PRODUCTO----------------------*/
+  letter-spacing: 1px;
+}
 
-        main.vista-producto  article.contenedor-descripcion p.descripcion{
-    
-        font-size: var(--letra-mas-pequeña);
-    
-        letter-spacing: 2px;
-    
-        margin-bottom: 3px;
-    
-        color: var(--gris74);
-    
-        line-height: 22px;
-        }
+/*---------------------IMAGEN DE WHATSAPP---------------------------*/
 
-        main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
-    
-        font-size: var(--letra-mediana);
-    
-        color: var(--molocoton-oscuro);
-    
-        letter-spacing: 1.5px;
-    
-        margin-top: 20px;
-        }
+main.vista-producto div.boton-whatsapp {
+  position: fixed;
+  right: 50px;
+  bottom: 70px;
+  animation: emerge 1s 1;
+  animation-timing-function: ease-out;
+}
 
+main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
+  width: 50px;
+  transition: all 1s;
+}
 
-        /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
+main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
+  transform: rotate(90deg);
+  width: 65px;
+}
 
-        main.vista-producto section.otrosFav {
+@keyframes emerge {
+  0% {
+    opacity: 0;
+    bottom: 0px;
+  }
 
-        width: 86%;
+  25% {
+    opacity: 0.25;
+    bottom: 15px;
+  }
 
-        margin-left: 30px;
+  50% {
+    opacity: 0.5;
+    bottom: 35px;
+  }
 
-        margin-bottom: 40px;
-        }
+  75% {
+    opacity: 0.75;
+    bottom: 50px;
+  }
 
-        main.vista-producto section.otrosFav h3.otrosFav{
+  100% {
+    opacity: 1;
+    bottom: 70px;
+  }
+}
 
-        margin: 10px 0 30px 0px;
+/*----------CONTENEDOR DE LAS IMÁGENES DE CIERRE DE LA VISTA-------------*/
 
-        border-bottom: 3px solid var(--verde-azulado-claro);
+main.vista-producto div.imagen-cierre {
+  width: 95%;
 
-        font-size: var(--letra-favMobile);
+  margin: 20px 0 0 30px;
+}
 
-        background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
+  display: none;
+}
 
-        -webkit-background-clip: text;
-
-        background-clip: text;
-
-        color: transparent;
-
-        width: 100%;
-
-        }       
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos {
-display: flex;
-width: 100%;
-flex-wrap: wrap;
-justify-content: center;
-}
-
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-width: 45%;
-height: 200px;
-/* padding: 10px 20px 10px 20px; */
-border: 1px solid var(--gris-claro);
-border-radius: 5%;
-text-align: center;
-margin-right: 10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-width: 100px;
-margin: 10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti{
-                text-decoration: none;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti h4.h4-dos-conti{
-
-        margin-top: 13%;
-
-        font-size: var(--letra-mas-pequeña);
-
-        color: var(--gris-claro);
-
-        font-weight: 500;
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-dos-conti{
-
-        margin-top: 2px;
-
-        color: var(--gris-claro);
-
-        font-size: var(--letra-mediana);
-
-        letter-spacing: 1px;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-width: 45%;
-height: 200px;
-border: 1px solid var(--gris-claro);
-border-radius: 5%;
-text-align: center;
-margin-left: 10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-width: 90px;
-top: -10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy {
-
-        text-decoration: none;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
-
-        font-weight: 500;
-
-        font-size: var(--letra-mas-pequeña);
-
-        color: var(--gris-claro);
-
-        }
-
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-chaqueta-ivy {
-
-        margin-top: 2px;
-
-        color: var(--gris-claro);
-
-        font-size: var(--letra-mediana);
-
-        letter-spacing: 1px;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-width: 45%;
-margin-top: 20px;
-border: 1px solid var(--gris-claro);
-border-radius: 5%;
-text-align: center;
-height: 200px;
-margin-right: 10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-width: 100px;
-margin-bottom: 11%;
-position: relative;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie {
-
-        text-decoration: none;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-
-        font-size: var(--letra-mas-pequeña);
-
-        color: var(--gris-claro);
-
-        font-weight: 500;
-
-        width: 100%;
-
-        margin-top: 0;
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-weird-barbie {
-
-        margin-top: 2px;
-
-        color: var(--gris-claro);
-
-        font-size: var(--letra-mediana);
-
-        letter-spacing: 1px;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.lets-normcore {
-width: 45%;
-padding: 0 20px 10px 20px;
-border: 1px solid var(--gris-claro);
-border-radius: 5%;
-margin-top: 20px;
-text-align: center;
-height: 200px;
-margin-left: 10px;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.abrigo-lets-normcore {
-
-        width: 90px;
-
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore {
-
-        text-decoration: none;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-lets-normcore h4.h4-lets-normcore{
-
-        font-size: var(--letra-mas-pequeña);
-
-        color: var(--gris-claro);
-
-        font-weight: 500;
-
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-lets-normcore {
-
-        margin-top: 2px;
-
-        color: var(--gris-claro);
-
-        font-size: var(--letra-mediana);
-
-        letter-spacing: 1px;
-        }
-
-
-        /*---------------------IMAGEN DE WHATSAPP---------------------------*/
-
-        main.vista-producto div.boton-whatsapp {
-
-                position: fixed;
-                right: 50px;
-                bottom: 70px;
-                animation: emerge 1s 1;
-                animation-timing-function: ease-out;
-
-        }
-
-        main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
-
-                width: 50px;
-                transition: all 1s;
-
-        }
-
-
-        main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
-
-                transform: rotate(90deg);
-                width: 65px;
-        }
-
-        @keyframes emerge {
-                
-                0% { 
-                        opacity: 0;
-                        bottom: 0px;
-                }
-
-                25% {
-                        opacity: 0.25;
-                        bottom: 15px;
-                }
-
-                50% {
-
-                        opacity: 0.5;
-                        bottom: 35px;
-
-                }
-
-                75%{
-                        opacity: 0.75;
-                        bottom: 50px;
-                }
-
-                100% {
-                        opacity: 1;
-                        bottom: 70px;
-                }
-
-        }
-
-
-
-
-        /*----------CONTENEDOR DE LAS IMÁGENES DE CIERRE DE LA VISTA-------------*/
-
-        main.vista-producto div.imagen-cierre {
-
-        width: 95%;
-
-        margin: 20px 0 0 30px;
-
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
-
-        display: none;
-
-
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-mobile{
-
-        width: 90%;
-
-        }
+main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
+  width: 90%;
+}
 
 /*------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 /*---------------------------------MEDIA QUERY TABLET------------------------------------------*/
 
-
-
-
-
 @media (min-width: 768px) {
-    
-                
-        /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
-        main.vista-producto section.visualizacion-producto {
-
-                width: 100%;
-        
-                display: flex;
-        }
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
-    
-                display: inline-block;
-                    
-                width: 45%;
-                    
-                    
-                margin: 0px 0 10px 30px;
-        }
-
-      
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-    
-        width: 100%;
-    
-        position: relative;
-    
-        height: 500px;
-
-        margin-top: 10%;
-    
-        border-radius: 5%;
-    
-        background-color: var(--gris-claro);
-    
-        display: flex;
-    
-        justify-content: center;
-    
-        }
-                
-        /*-ICONO LUPA---*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass{
-    
-        position: absolute;
-            
-        top: 15px;
-            
-        left: 20px;
-            
-        font-size: var(--iconos-grandes);
-        }
-           
-        /*----ICONO CORAZÓN----*/
-
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart{
-    
-        position: absolute;
-            
-        top: 15px;
-            
-        right: 20px;
-            
-        font-size: var(--iconos-grandes);
-        }
-        
-
-        
-        /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal{
-                text-align: center;
-                width: 100%;
-        }
+  /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
+  main.vista-producto section.visualizacion-producto {
+    width: 100%;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal{
-    
-                width: 80%;
-                    
-                margin-bottom: 12%;
-        }
+    display: flex;
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes {
+    display: inline-block;
 
-                
-                width: 70%;
-                    
-                margin-bottom: 12%;
+    width: 45%;
 
-        }
+    margin: 0px 0 10px 30px;
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal {
+    width: 100%;
 
-                height: 500px;
+    position: relative;
 
-        }
+    height: 500px;
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes .glider-prev, .glider-next {
-                top:calc(50% - 20px);
-        }
-     
+    margin-top: 10%;
 
-        /*---CONTENEDOR GLOBAL DE LA INFORMACIÓN QUE NO SEAN LAS IMÁGENES--*/
-        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
+    border-radius: 5%;
 
-                width: 45%;
-                
-                display: inline-block;
-        }
+    background-color: var(--gris-claro);
 
+    display: flex;
 
-        /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
+    justify-content: center;
+  }
 
-        margin: 25px 0px 20px 30px;
+  /*-ICONO LUPA---*/
 
-        width: 75%;
-        }
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    i.fa-magnifying-glass {
+    position: absolute;
+
+    top: 15px;
+
+    left: 20px;
+
+    font-size: var(--iconos-grandes);
+  }
+
+  /*----ICONO CORAZÓN----*/
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    i.fa-heart {
+    position: absolute;
 
-        font-weight: 500;
-        }
+    top: 15px;
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
+    right: 20px;
 
-        margin: 5px 0px;
+    font-size: var(--iconos-grandes);
+  }
+
+  /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-principal {
+    text-align: center;
+    width: 100%;
+  }
 
-        font-weight: 700;
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-principal
+    img.blazer-over-principal {
+    width: 80%;
 
-        font-size: var(--letra-grande);
-        }
+    margin-bottom: 12%;
+  }
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-3
+    img.blazer-over-principal {
+    width: 70%;
 
-        margin: 20px 0 20px 0;
+    margin-bottom: 12%;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-4
+    img.blazer-over-principal {
+    height: 500px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    .glider-prev,
+  .glider-next {
+    top: calc(50% - 20px);
+  }
+
+  /*---CONTENEDOR GLOBAL DE LA INFORMACIÓN QUE NO SEAN LAS IMÁGENES--*/
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-global-info-producto {
+    width: 45%;
+
+    display: inline-block;
+  }
 
-        color: var(--gris-claro);
+  /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
+  main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
+    margin: 25px 0px 20px 30px;
+
+    width: 75%;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    h2.blazer-over {
+    font-weight: 500;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    p.precio {
+    margin: 5px 0px;
+
+    font-weight: 700;
+
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    p.talle {
+    margin: 20px 0 20px 0;
+
+    color: var(--gris-claro);
+
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    p.talle
+    span {
+    color: var(--negro);
+  }
+
+  /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
+
+  main.vista-producto section.visualizacion-producto div.talles {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 5px 0px 50px 30px;
+
+    width: 70%;
+  }
+
+  main.vista-producto section.visualizacion-producto div.talles div button {
+    width: 35px;
+    height: 150%;
+  }
+
+  /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
+
+  main.vista-producto section.visualizacion-producto div.cantidad-carrito {
+    margin: 10px 0px 15px 30px;
+
+    width: 100%;
+
+    position: relative;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    label.label-carrito {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    input.input-carrito {
+    width: 170px;
+
+    height: 40px;
+
+    position: absolute;
+
+    bottom: 75px;
+
+    left: 1px;
+
+    border: 2px solid var(--gris-claro);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    div.contenedor-boton-carrito {
+    margin-left: 0;
+    margin-top: 35px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    div.contenedor-boton-carrito
+    button.agregar-carrito {
+    margin-top: 35px;
+    width: 95%;
+    height: 45px;
+    font-size: var(--letra-grande);
+    background-color: var(--verde-azulado-claro);
+    color: var(--blanco);
+    border: none;
+    margin-left: 0;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    div.contenedor-boton-carrito
+    button.agregar-carrito:hover {
+    background-color: var(--gris-claro);
+  }
+
+  /*----CONTENEDOR ENVIO-------*/
+
+  main.vista-producto section.visualizacion-producto div.envio {
+    margin: 20px 0 20px 30px;
+
+    /* display: flex; */
+
+    width: 100%;
+
+    padding: 0;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito {
+    font-size: var(--letra-mediana);
+
+    width: 100%;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    i.fa-truck {
+    font-size: var(--iconos-grandes);
+
+    display: inline-block;
+
+    color: var(--gris-terciopelo);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    label.label-carrito {
+    display: inline-block;
+
+    width: 70%;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    input.input-carrito {
+    width: 55%;
+
+    display: inline-block;
+
+    margin-right: 0;
+
+    height: 45px;
+
+    border: 2px solid var(--gris-claro);
+
+    padding-left: 3px;
+
+    padding-top: 2.5px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    input.input-carrito::placeholder {
+    color: var(--gris-claro);
+    font-size: var(--letra-pequeña);
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    button.boton-calcular {
+    border: 2px solid var(--gris-claro);
+
+    font-size: var(--letra-grande);
 
-        font-size: var(--letra-grande);
-        }
+    width: 40%;
 
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle span{
+    display: inline-block;
 
-        color: var(--negro);
-        }
+    height: 45px;
 
+    background-color: var(--blanco);
+  }
 
-        /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
+  /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
 
-        main.vista-producto section.visualizacion-producto div.talles {
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra {
+    width: 85%;
 
-        display: flex;
+    margin: 30px 0px 30px 50px;
+  }
 
-        justify-content: space-between;
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.detalle-talles {
+    display: flex;
 
-        margin: 5px 0px 50px 30px;
+    justify-content: space-between;
 
-        width: 70%;
-        }
+    margin-bottom: 40px;
 
- 
-        main.vista-producto section.visualizacion-producto div.talles div button{
-        width: 35px;
-        height: 150%;
-        
-        }
+    color: var(--verde-azulado-claro);
+  }
 
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.detalle-talles
+    h3.talles {
+    font-size: var(--letra-mediana);
+    width: 80%;
 
-        /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
+    letter-spacing: 2px;
+  }
 
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.cambiosDevo {
+    display: flex;
 
+    justify-content: space-between;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito {
+    margin: 0px 0 40px 0px;
 
-        margin: 10px 0px 15px 30px;
+    color: var(--verde-azulado-claro);
+  }
 
-        width: 100%;
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.cambiosDevo
+    h3.cambios {
+    font-size: var(--letra-mediana);
+    width: 80%;
+    letter-spacing: 2px;
+  }
 
-        position: relative;
-        }       
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.formaPago {
+    display: flex;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito label.label-carrito{
-        font-size: var(--letra-grande);
-        }
+    justify-content: space-between;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
+    margin-bottom: 40px;
 
-        width: 170px;
+    color: var(--verde-azulado-claro);
+  }
 
-        height: 40px;
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra
+    div.formaPago
+    h3.formaPago {
+    font-size: var(--letra-mediana);
 
-        position: absolute;
+    width: 80%;
 
-        bottom: 75px;
+    letter-spacing: 2px;
+  }
 
-        left: 1px;
+  /*--------DESCRIPCION DESTACADA-----------*/
 
-        border: 2px solid var(--gris-claro);
-        }
+  main.vista-producto article.contenedor-descripcion {
+    text-align: center;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-        margin-left: 0;
-        margin-top: 35px;
-        }
+    width: 90%;
 
+    margin-bottom: 35px;
+  }
 
+  main.vista-producto article.contenedor-descripcion p.descripcion {
+    font-size: var(--letra-pequeña);
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {margin-top: 35px;
-        width: 95%;
-        height: 45px;
-        font-size: var(--letra-grande);
-        background-color: var(--verde-azulado-claro);
-        color: var(--blanco);
-        border: none;
-        margin-left: 0;
-        }
+    letter-spacing: 2px;
 
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito:hover {
-        background-color: var(--gris-claro);
-        }
+    margin-bottom: 3px;
 
+    color: var(--gris74);
+  }
 
+  main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {
+    font-size: var(--letra-mediana);
 
-        /*----CONTENEDOR ENVIO-------*/
+    color: var(--molocoton-oscuro);
 
-        main.vista-producto section.visualizacion-producto div.envio {
+    letter-spacing: 1.5px;
+  }
 
-        margin: 20px 0 20px 30px;
+  /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
 
-        /* display: flex; */
+  main.vista-producto section.otrosFav {
+    width: 90%;
+  }
 
-        width: 100%;
+  main.vista-producto section.otrosFav div.contenedor-otros-productos {
+    display: flex;
 
-        padding: 0;
-        }
+    width: 98%;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito{
-        
-        font-size: var(--letra-mediana);
-        
-        width: 100%;
-        }
+    flex-wrap: wrap;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito i.fa-truck{
-        
-        font-size: var(--iconos-grandes);
-        
-        display: inline-block;
-        
-        color: var(--gris-terciopelo);
-        }
+    align-items: self-end;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito label.label-carrito{
-        
-        display: inline-block;
-        
-        width: 70%;
-        }
+    justify-content: space-between;
+  }
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-        
-        width: 55%;
-        
-        display: inline-block;
-        
-        margin-right: 0;
-        
-        height: 45px;
-        
-        border: 2px solid var(--gris-claro);
-        
-        padding-left: 3px;
-        
-        padding-top: 2.5px;
-        } 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.dos-continentes {
+    padding: 10px 20px 10px 20px;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito::placeholder{
+    border: 1px solid var(--gris-claro);
 
-        color: var(--gris-claro);
-        font-size: var(--letra-pequeña);
+    border-radius: 5%;
 
-        }
+    width: 30%;
 
+    text-align: center;
 
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
-        
-        border: 2px solid var(--gris-claro);
-        
-        font-size: var(--letra-grande);
-        
-        width: 40%;
-        
-        display: inline-block;
-        
-        height: 45px;
-        
-        background-color: var(--blanco);
-        }
+    height: 300px;
 
-        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+    margin-right: revert;
+  }
 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.blazer-dos-conti {
+    width: 180px;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra {
+    margin: 0;
+  }
 
-        width: 85%;
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-dos-conti
+    h4.h4-dos-conti {
+    font-size: var(--letra-mediana);
+  }
 
-        margin: 30px 0px 30px 50px;
-        }
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.poison-ivy {
+    width: 31%;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles{
-        
-        display: flex;
-        
-        justify-content: space-between;
-        
-        margin-bottom: 40px;
-        
-        color: var(--verde-azulado-claro);
-        }
+    height: 300px;
 
+    padding: 0 20px 10px 20px;
 
+    margin-left: revert;
+  }
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.detalle-talles h3.talles{
-        
-        font-size: var(--letra-mediana);        
-        width: 80%;
-        
-        letter-spacing: 2px;
-        } 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.chaqueta-ivy {
+    width: 145px;
+  }
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo{
-        
-        display: flex;
-        
-        justify-content: space-between;
-        
-        margin: 0px 0 40px 0px;
-        
-        color: var(--verde-azulado-claro);
-        }
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-chaqueta-ivy
+    h4.h4-chaqueta-ivy {
+    font-size: var(--letra-mediana);
+  }
 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.weird-barbie {
+    width: 30%;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.cambiosDevo h3.cambios{
-        
-        font-size: var(--letra-mediana);        
-        width: 80%;  
-        letter-spacing: 2px;
-        }
+    height: 300px;
 
+    margin-right: revert;
+  }
 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.chaqueta-weird-barbie {
+    width: 172px;
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago{
-        
-        display: flex;
-        
-        justify-content: space-between;
-        
-        margin-bottom: 40px;
-        
-        color: var(--verde-azulado-claro);
-        }
+    margin-top: 10px;
 
+    margin-bottom: 8px;
+  }
 
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-weird-barbie
+    h4.h4-weird-barbie {
+    font-size: var(--letra-mediana);
+  }
 
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra div.formaPago h3.formaPago{
-        
-        font-size: var(--letra-mediana);
-                
-        width: 80%;
-        
-        letter-spacing: 2px;
-        }
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.lets-normcore {
+    display: none;
+  }
 
+  /*---------------------BOTON WHATSAPP------------------------------------*/
 
+  main.vista-producto div.boton-whatsapp {
+    position: fixed;
+    right: 50px;
+    bottom: 130px;
+    animation: emerge 0.8s 1;
+    animation-timing-function: ease-out;
+  }
 
-        /*--------DESCRIPCION DESTACADA-----------*/
+  main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
+    width: 90px;
+  }
 
-        main.vista-producto article.contenedor-descripcion {
-        
-        text-align: center;
-        
-        width: 90%;
-        
-        margin-bottom: 35px;
-        }
+  main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
+    transform: rotate(90deg);
+    width: 110px;
+  }
 
-        main.vista-producto article.contenedor-descripcion p.descripcion{
-        
-        font-size: var(--letra-pequeña);
-        
-        letter-spacing: 2px;
-        
-        margin-bottom: 3px;
-        
-        color: var(--gris74);
-        }
+  @keyframes emerge {
+    0% {
+      opacity: 0.1;
+      bottom: 0px;
+    }
 
-        main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
-        
-        font-size: var(--letra-mediana);
-        
-        color: var(--molocoton-oscuro);
-        
-        letter-spacing: 1.5px;
-        }
+    25% {
+      opacity: 0.25;
+      bottom: 32px;
+    }
 
+    50% {
+      opacity: 0.5;
+      bottom: 65px;
+    }
 
-/*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
+    75% {
+      opacity: 0.75;
+      bottom: 100px;
+    }
 
-        main.vista-producto section.otrosFav {
-                
-        width: 90%;
-        }
+    100% {
+      opacity: 1;
+      bottom: 130px;
+    }
+  }
 
+  /*--IMAGEN DE CIERRE DE TABLET----*/
 
-        main.vista-producto section.otrosFav div.contenedor-otros-productos {
-display: flex;
-width: 98%;
-flex-wrap: wrap;
-align-items: self-end;
-justify-content: space-between;
-}
+  main.vista-producto div.imagen-cierre {
+    margin: 20px 0 0 30px;
+    width: 100%;
+  }
 
+  main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
+    display: block;
 
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.dos-continentes{
-padding: 10px 20px 10px 20px;
-border: 1px solid var(--gris-claro);
-border-radius: 5%;
-width: 30%;
-text-align: center;
-height: 300px;
-margin-right: revert;
-}
+    width: 90%;
+  }
 
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-        
-        width: 180px;
-                
-        margin: 0;
-                
-        
-        }
-
-
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti h4.h4-dos-conti{
-
-        font-size: var(--letra-mediana);
-
-        }
-
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-width: 31%;
-height: 300px;
-padding: 0 20px 10px 20px;
-margin-left: revert;
-}
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-                
-        width: 145px;
-        }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
-                
-        font-size: var(--letra-mediana);
-        }
- 
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.weird-barbie {
-        width: 30%;
-        height: 300px;
-        margin-right: revert;
-        }      
-
-         main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-                
-        width: 172px;
-                        
-        margin-top: 10px;
-                        
-        margin-bottom: 8px;
-                }
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-
-        font-size: var(--letra-mediana);
-
-        }
- 
-
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.lets-normcore {
-        
-        display: none;
-        
-        }
-                                                        
-
-        /*---------------------BOTON WHATSAPP------------------------------------*/
-
-
-        main.vista-producto div.boton-whatsapp {
-
-                position: fixed;
-                right: 50px;
-                bottom: 130px;
-                animation: emerge 0.8s 1;
-                animation-timing-function: ease-out;
-
-        }
-
-        main.vista-producto div.boton-whatsapp img.whatsapp-simbol {
-
-                width: 90px;
-
-        }
-
-        
-        main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
-
-                transform: rotate(90deg);
-                width: 110px;
-        }
-
-        @keyframes emerge {
-                
-                0% { 
-                        opacity: 0.1;
-                        bottom: 0px;
-                }
-
-                25% {
-                        opacity: 0.25;
-                        bottom: 32px;
-                }
-
-                50% {
-
-                        opacity: 0.5;
-                        bottom: 65px;
-
-                }
-
-                75%{
-                        opacity: 0.75;
-                        bottom: 100px;
-     
-                }
-
-                100% {
-                        opacity: 1;
-                        bottom: 130px;
-                        
-                }
-
-        }
-
-
-
-
-        /*--IMAGEN DE CIERRE DE TABLET----*/
-
-        main.vista-producto div.imagen-cierre {
-
-        margin: 20px 0 0 30px;
-        width: 100%;
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
-        
-                display: block;
-                        
-                width: 90%;
-                
-        }
-
-        main.vista-producto div.imagen-cierre img.imagen-cierre-mobile{
-        
-        display: none;
-        }
-
+  main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
+    display: none;
+  }
 }
- 
-   
+
 /*------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------*/
 /*----------------------MEDIA QUERY DESKTOP------------------------------*/
 
 @media (min-width: 1024px) {
-        
-       
-        
+  /*-------CONTENEDOR DE LA BÚSQUEDA INICIAL----------*/
 
-        /*-------CONTENEDOR DE LA BÚSQUEDA INICIAL----------*/
-    
-        main.vista-producto div.contenedor-busqueda {
-    
-                margin-top: 20px;
-                
-                margin-left: 40px;
-                
-        }
-    
-        
-        main.vista-producto div.contenedor-busqueda a{
-            
-        font-size: var(--letra-grande);
-        
-        }
-        
-        main.vista-producto section.visualizacion-producto {
-      
-        margin-left: 40px;
+  main.vista-producto div.contenedor-busqueda {
+    margin-top: 20px;
 
-      
-        }
-    
-    
-        /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/
+    margin-left: 40px;
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes{
-            
-                margin-top: 20px;
-                    
-                width: 42%;
+  main.vista-producto div.contenedor-busqueda a {
+    font-size: var(--letra-grande);
+  }
 
-        }
+  main.vista-producto section.visualizacion-producto {
+    margin-left: 40px;
+  }
 
+  /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal{
-      
-                height: 700px;
-        
-                margin-top: 0;            
-            
-        }
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes {
+    margin-top: 20px;
 
-        
+    width: 42%;
+  }
 
-        /*CORAZÓN*/
-    
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-heart:hover {
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal {
+    height: 700px;
 
-             
-                font-size: var(--letra-titular-menor);
-                right: 30px;
-                top: 25px;
-                
+    margin-top: 0;
+  }
 
-        }
+  /*CORAZÓN*/
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    i.fa-heart:hover {
+    font-size: var(--letra-titular-menor);
+    right: 30px;
+    top: 25px;
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal i.fa-magnifying-glass:hover {
-        
-                font-size: var(--letra-titular-menor);
-                left: 30px;
-                top: 25px;
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    i.fa-magnifying-glass:hover {
+    font-size: var(--letra-titular-menor);
+    left: 30px;
+    top: 25px;
+  }
 
-        }
+  /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-principal
+    img.blazer-over-principal {
+    height: 600px;
+    margin-bottom: 0;
+  }
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-3
+    img.blazer-over-principal {
+    height: 700px;
+  }
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-vistas-imagenes
+    div.contenedor-blazerOver-principal
+    div.contenedor-img-4
+    img.blazer-over-principal {
+    height: 700px;
+  }
 
-        
-        /*---IMAGEN PRINCIPAL DEL PRODUCTO---*/
-        
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-principal img.blazer-over-principal {
+  /*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/
 
-                height: 600px;
-                margin-bottom: 0;
+  main.vista-producto
+    section.visualizacion-producto
+    div.contenedor-global-info-producto {
+    margin-left: 30px;
+  }
 
-        }
+  /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    h2.blazer-over {
+    font-size: var(--letra-mayor-tamaño);
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-3 img.blazer-over-principal{
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    p.precio {
+    margin-top: 20px;
 
-                height: 700px;
-        }
+    font-size: var(--letra-mayor-tamaño);
+  }
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.nombre-precio-talle
+    p.talle {
+    margin-top: 45px;
+  }
 
-        main.vista-producto section.visualizacion-producto div.contenedor-vistas-imagenes div.contenedor-blazerOver-principal div.contenedor-img-4 img.blazer-over-principal{
+  /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
 
-                height: 700px;
-        }
+  main.vista-producto section.visualizacion-producto div.talles {
+    width: 65%;
+  }
 
+  main.vista-producto section.visualizacion-producto div.talles div button {
+    width: 45px;
 
-    
-        
-        /*-------CONTENEDOR QUE ENGLOBA A TODA LA INFORMACIÓN DEL PRODUCTO MENOS LAS FOTOS--------*/
-    
-        main.vista-producto section.visualizacion-producto div.contenedor-global-info-producto {
-    
-        margin-left: 30px;
-    
-        }
-        
-    
-        /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
-    
-    
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle h2.blazer-over{
-    
-        font-size: var(--letra-mayor-tamaño);
-    
-        }
-    
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.precio {
-    
-        margin-top: 20px;
-    
-        font-size: var(--letra-mayor-tamaño);
-    
-        }
-    
-        main.vista-producto section.visualizacion-producto div.nombre-precio-talle p.talle{
-    
-        margin-top: 45px;
-    
-        }
-    
-        
-    
-        /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
-    
-        main.vista-producto section.visualizacion-producto div.talles {
-    
-        width: 65%;
-    
-        }
-    
-    
-    
-        main.vista-producto section.visualizacion-producto div.talles div button{
-                
-        width: 45px;
-                        
-        font-size: var(--letra-grande);
-        }
-    
-    
-    
-        /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
-    
-    
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito input.input-carrito{
-    
-        bottom: 70px;
-    
-        width: 150px;
-    
-        height: 45px;
-    
-        }
-    
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito {
-    
-        margin-top: 40px;
-    
-        }
-    
-        main.vista-producto section.visualizacion-producto div.cantidad-carrito form.form-carrito div.contenedor-boton-carrito button.agregar-carrito {
-               
-        height: 50px;
-                
-        width: 85%;
-        }
-    
-    
-        /*----CONTENEDOR ENVIO-------*/
-    
-        main.vista-producto section.visualizacion-producto div.envio {
-    
-        margin-top: 30px;
-    
-        }
-    
-     
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito input.input-carrito{
-    
-        margin-top: 5px;
-        
-        } 
-    
-     
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito  p.nose-postal{
-    
-        margin-top: 10px;
-        
-        }
-    
-        main.vista-producto section.visualizacion-producto div.envio form.form-carrito button.boton-calcular{
-    
-        width: 30%;
-        
-        }
-    
-        /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
-    
-    
-        main.vista-producto section.visualizacion-producto article.info-adicional-compra {
-    
-        margin-top: 40px;
-    
-        width: 80%;
-    
-        }
-    
-    
-        /*-----------DESCRIPCION DESTACADA---------------*/
-    
-        main.vista-producto article.contenedor-descripcion {
-    
-        margin-left: 60px;
-        
-        width: 85%;
-        
-        }
-    
-        main.vista-producto article.contenedor-descripcion p.descripcion{
-    
-        font-size: var(--letra-mediana);
-        
-        }
-    
-        main.vista-producto article.contenedor-descripcion h5.descripcion-destacada{
-    
-        font-size: var(--letra-grande);
-        
-        }
-    
-    
-        /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
-    
-        main.vista-producto section.otrosFav {
-    
-        margin-top: 70px;
-    
-        }
-    
-        main.vista-producto section.otrosFav h3.otrosFav{
-    
-        font-size: var(--letra-titular-mayor);
-    
-        width: 100%;
-    
-        }
-    
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav{
-    
-        height: 400px;
-    
-        flex-basis: 30%;
-    
-        text-align: center;
-    
-        overflow: hidden;
-    
-        }
-    
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.blazer-dos-conti{
-    
-        width: 249px;
-    
-    
-        }
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-dos-conti h4.h4-dos-conti{
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-dos-conti{
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.poison-ivy {
-    
-        width: 30%;
-    
-        }
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-ivy {
-             
-        width: 194px;
-                
-        }
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-chaqueta-ivy h4.h4-chaqueta-ivy{
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-chaqueta-ivy {
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav img.chaqueta-weird-barbie {
-    
-        width: 240px;
-    
-        }
-    
-    
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav a.a-weird-barbie h4.h4-weird-barbie {
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-        main.vista-producto section.otrosFav div.contenedor-otros-productos article.productos-otrosFav p.p-weird-barbie {
-    
-        font-size: var(--letra-grande);
-    
-        }
-    
-    
-    }
+    font-size: var(--letra-grande);
+  }
 
+  /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
 
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    input.input-carrito {
+    bottom: 70px;
+
+    width: 150px;
+
+    height: 45px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    div.contenedor-boton-carrito {
+    margin-top: 40px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.cantidad-carrito
+    form.form-carrito
+    div.contenedor-boton-carrito
+    button.agregar-carrito {
+    height: 50px;
+
+    width: 85%;
+  }
+
+  /*----CONTENEDOR ENVIO-------*/
+
+  main.vista-producto section.visualizacion-producto div.envio {
+    margin-top: 30px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    input.input-carrito {
+    margin-top: 5px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    p.nose-postal {
+    margin-top: 10px;
+  }
+
+  main.vista-producto
+    section.visualizacion-producto
+    div.envio
+    form.form-carrito
+    button.boton-calcular {
+    width: 30%;
+  }
+
+  /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/
+
+  main.vista-producto
+    section.visualizacion-producto
+    article.info-adicional-compra {
+    margin-top: 40px;
+
+    width: 80%;
+  }
+
+  /*-----------DESCRIPCION DESTACADA---------------*/
+
+  main.vista-producto article.contenedor-descripcion {
+    margin-left: 60px;
+
+    width: 85%;
+  }
+
+  main.vista-producto article.contenedor-descripcion p.descripcion {
+    font-size: var(--letra-mediana);
+  }
+
+  main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {
+    font-size: var(--letra-grande);
+  }
+
+  /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
+
+  main.vista-producto section.otrosFav {
+    margin-top: 70px;
+  }
+
+  main.vista-producto section.otrosFav h3.otrosFav {
+    font-size: var(--letra-titular-mayor);
+
+    width: 100%;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav {
+    height: 400px;
+
+    flex-basis: 30%;
+
+    text-align: center;
+
+    overflow: hidden;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.blazer-dos-conti {
+    width: 249px;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-dos-conti
+    h4.h4-dos-conti {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    p.p-dos-conti {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.poison-ivy {
+    width: 30%;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.chaqueta-ivy {
+    width: 194px;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-chaqueta-ivy
+    h4.h4-chaqueta-ivy {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    p.p-chaqueta-ivy {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    img.chaqueta-weird-barbie {
+    width: 240px;
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    a.a-weird-barbie
+    h4.h4-weird-barbie {
+    font-size: var(--letra-grande);
+  }
+
+  main.vista-producto
+    section.otrosFav
+    div.contenedor-otros-productos
+    article.productos-otrosFav
+    p.p-weird-barbie {
+    font-size: var(--letra-grande);
+  }
+}

@@ -96,7 +96,7 @@ a {
   display: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header {
     margin-bottom: 0;
   }

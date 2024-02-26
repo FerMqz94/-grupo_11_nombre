@@ -86,7 +86,7 @@ width: calc(50% - 3px);
 /* ------------------------------------------------ MEDIA DE TABLET ------------------------------------------------*/
 /* -----------------------------------------------------------------------------------------------------------------*/
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   /* Home */
 
   /* Carrusel */
@@ -153,8 +153,10 @@ width: calc(50% - 3px);
   }
   
   .home .contenedor-cap-sector-2{
-display: flex;
-justify-content: center;
+
+display: flex;
+
+justify-content: center;
 }
 
 
