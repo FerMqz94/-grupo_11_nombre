@@ -301,3 +301,85 @@ main.editar-producto div.vista-editar-producto .form-switch-disponible input[typ
 main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"]:checked ~ .form-check-label-disponible:after {
     left: 23px;
 }
+
+main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 0.5rem;
+    width: 200px;
+    height: 45px;
+    line-height: 36px;
+    transition: all 0.5s ease-in-out;
+    background:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+  }
+
+  main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar:hover {
+    background: rgba(249, 155, 128, 0.4);
+
+  }
+
+
+  main.editar-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto {
+    font-weight: 600;
+    font-size: var(--letra-mediana);
+    text-decoration: none;
+    color: var(--blanco);
+   
+  }
+
+
+  main.editar-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto:hover {
+    color: var(--gris-pizarra);
+    font-weight: 300;
+    transition: all 0.5s ease-in-out;
+  }
+
+
+  /*NUEVO OFERTA*/
+
+  main.editar-producto div.nuevo-oferta div.nuevo input{
+    display: none;
+  } 
+  
+  main.editar-producto div.nuevo-oferta div.oferta input{
+    display: none;
+  } 
+  
+  main.editar-producto div.nuevo-oferta div.nuevo div.nuevo-oferta-contenedor {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gris-claro);
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 50%;
+  }
+  
+  main.editar-producto div.nuevo-oferta div.nuevo input:checked + div.nuevo-oferta-contenedor{
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+    color: var(--blanco);
+  
+  }
+  
+  main.editar-producto div.nuevo-oferta div.oferta div.nuevo-oferta-contenedor {
+    width: 80px;
+    height: 80px;
+    background-color: var(--gris-claro);
+    transition: all 0.5s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 50%;
+  }
+  
+  
+  main.editar-producto div.nuevo-oferta div.oferta input:checked + div.nuevo-oferta-contenedor{
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+    color: var(--blanco);
+  
+  }
+  

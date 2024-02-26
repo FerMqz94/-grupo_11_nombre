@@ -534,6 +534,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
     color: var(--molocoton-oscuro);
   }
 
+ /*BOTÓN DE ENVIAR FORMULARIO*/
  
   main.crear-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
     display: inline-block;

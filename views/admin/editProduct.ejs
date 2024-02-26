@@ -171,23 +171,35 @@
                 </div>
                 <!-- Nuevo - Oferta -->
                 <h3 class="titulo-nuevo-oferta col-12 my-3">Producto Nuevo o En Oferta</h3>
-                <div class="form-check-radio mx">
-                    <input class="form-check-input-new-offer" type="radio" name="radioNuevoOferta" id="radioNuevoOferta">
-                    <label class="form-check-label-new-offer" for="radioNuevoOferta">Nuevo</label>
-                    <input class="form-check-input-new-offer" type="radio" name="radioNuevoOferta" id="radioNuevoOferta">
-                    <label class="form-check-label-new-offer" for="radioNuevoOferta">Oferta</label>
-                </div>
-                <!-- Disponibilidad -->
-                <h3 class="titulo-nuevo-oferta col-12 my-3">Disponibilidad</h3>
-                <div class="form-switch-disponible">
-                    <input class="form-check-input-disponible" type="checkbox" id="switchDisponible">
-                    <label class="form-check-label-disponible mx-auto" for="switchDisponible"></label>
-                    <span class="form-check-span-disponible">Disponible</span>
+                <div class="nuevo-oferta d-flex my-3 col-10 my-md-5">
+                   
+                    <div class="nuevo col-6 col-md-4 col-lg-2">
+                        <label class="" for="option1">
+                            <input type="radio" class="" name="options" id="option1" autocomplete="off">
+                            <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                            <span>Nuevo</span>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="oferta col-6 col-md-4 col-lg-2">
+                        <label class="" for="option2">
+                            <input type="radio" class="" name="options" id="option2" autocomplete="off" checked>
+                            <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                                <span>Oferta</span>
+                            </div>
+                        </label>
+                    </div>    
                 </div>
                 <!-- Subir imagen -->
                 <div>
                     <input class="form-control form-control-lg" id="formFileLg" type="file">
                 </div>
+
+                <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
+                    <button type="submit" class="button-submit-crear-editar my-3"><a href="/admin/productos" class="btn btn-custom-crear-edit-producto">Enviar cambios</a></button>
+                </div>
+
             </div>
         </div>
         </div>
