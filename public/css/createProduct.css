@@ -42,9 +42,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card {
 }
 
 /*CONTENEDOR DEL INPUT NOMBRE PRODUCTO*/
-main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.nombre-producto-crear-edit {
 
-}
 
 /*LABEL NOMBRE PRODUCTO*/
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.nombre-producto-crear-edit label.nombre-producto{
@@ -69,9 +67,6 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.cont
 }
 
 /*CONTENEDPOR PRECIO PRODUCTO*/
-main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.precio-producto-crear-edit{
-
-}
 
 /*LABEL PRECIO PRODUCTO*/
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.precio-producto-crear-edit label.precio-producto{
@@ -146,9 +141,6 @@ main.crear-producto div.seleccionar-categoria div.contenedor-seleccionar-categor
 /*--------DESCRIPCIÓN DEL PRODUCTO----------*/
 
 /*DESCRIPCIÓN MAYOR O MÁS LARGA*/
-main.crear-producto div.descripcion-producto-crear-editar div.texarea-descripcion-mayor{
-
-}
 
 main.crear-producto div.descripcion-producto-crear-editar div.texarea-descripcion-mayor textarea{
   border-radius: 10px;
@@ -169,9 +161,6 @@ main.crear-producto div.descripcion-producto-crear-editar div.texarea-descripcio
 
 /*DESCRIPCIÓN DESTACADA DEL PRODUCTO*/
 
-main.crear-producto div.descripcion-producto-crear-editar div.textarea-descripcion-destacada{
-
-}
 
 main.crear-producto div.descripcion-producto-crear-editar div.textarea-descripcion-destacada textarea{
   border-radius: 10px;
@@ -237,9 +226,7 @@ main.crear-producto div.talles-producto-crear-edit input.custom-checkbox:checked
 }
 
 /*COLORES*/
-main.crear-producto div.colores-producto-editar-crear{
 
-}
 
 main.crear-producto div.colores-producto-editar-crear h3.titulo-colores{
   font-size: var(--letra-grande);
@@ -248,9 +235,6 @@ main.crear-producto div.colores-producto-editar-crear h3.titulo-colores{
   margin-bottom: 0;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color{
-  
-}
 
 /*SETEOS GRALES*/
 main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.input-color{
@@ -333,18 +317,6 @@ main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.d
 }
 
 /*NUEVO - OFERTA */
-
-main.crear-producto div.nuevo-oferta {
-
-}
-
-main.crear-producto div.nuevo-oferta div.nuevo{
-
-}
-
-main.crear-producto div.nuevo-oferta div.oferta{
-
-}
 
 main.crear-producto div.nuevo-oferta div.nuevo input{
   display: none;
@@ -535,7 +507,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
   }
 
  /*BOTÓN DE ENVIAR FORMULARIO*/
- 
+
   main.crear-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
     display: inline-block;
     text-align: center;
@@ -620,9 +592,6 @@ width: 70%;
         font-size: var(--letra-titular-menor);
     }
         
-    main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen h3 {
-    
-    }
     
     main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto {
         width: 50%;
