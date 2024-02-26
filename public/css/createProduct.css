@@ -134,7 +134,7 @@ main.crear-producto div.seleccionar-categoria select.categoria-producto:focus{
 }
 
 /*-----ICONO DEL SELECT----------*/
-main.crear-producto div.seleccionar-categoria i.fa-caret-down{
+main.crear-producto div.seleccionar-categoria div.contenedor-seleccionar-categoria i.fa-caret-down{
   color: var(--molocoton-oscuro);
   font-size: 1.2rem;
 	position: absolute;
@@ -461,6 +461,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div {
     margin: 0 0 0.5rem 0;
     color: var(--gris-claro);
+    /* text-align: center; */
 }
 
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto input.input-imagen-crear-edit-producto {
@@ -543,7 +544,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
       
 width: 65%;
       
-margin-left: 250px;
+margin-left: 255px;
     }
 
     main.crear-producto div.vista-producto-crear-editar-contenedor div.contenedor-titulo-boton-crear-editar{
@@ -589,6 +590,66 @@ width: 70%;
         width: 50%;
         max-width: 400px;
     }
-    
+
+    /*CONTENEDOR DE SELECCIONAR CATEGORIA Y SUS ELEMENTOS*/
+
+    main.crear-producto div.seleccionar-categoria div.contenedor-seleccionar-categoria{
+      position: relative;
+    }
+
+    main.crear-producto div.seleccionar-categoria select.categoria-producto {
+      width:96%;
+      height: 50px;
+    }
+
+
+    /*INPUTS NOMBRE Y PRECIO + LABEL*/
+    main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.nombre-producto-crear-edit input.nombre-producto {
+      height: 50px;
+
+    } 
+
+    main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.nombre-producto-crear-edit label.nombre-producto {
+      font-size: var(--letra-grande);
+    }
+
+    main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.precio-producto-crear-edit input.precio-producto {
+      height: 50px;
+    }
+
+    main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.container div div.precio-producto-crear-edit label.precio-producto {
+      font-size: var(--letra-grande);
+    }
+
+    /*DESCRIPCIÓN PRODUCTO*/
+    main.crear-producto div.descripcion-producto-crear-editar div.texarea-descripcion-mayor textarea::placeholder{
+      font-size: var(--letra-grande);
+    }    
+
+
+    /*DESCRIPCIÓN DESTACADA*/
+
+    main.crear-producto div.descripcion-producto-crear-editar div.textarea-descripcion-destacada textarea{
+      height: 100px;
+    }
+
+    main.crear-producto div.descripcion-producto-crear-editar div.textarea-descripcion-destacada textarea::placeholder{
+      font-size: var(--letra-mediana);
+    }
+
+    /*TALLES*/
+  main.crear-producto div.talles-producto-crear-edit h3.titulo-talles{
+    font-size: var(--letra-mas-grande);
+  }
+
+  /*COLORES*/
+  main.crear-producto div.colores-producto-editar-crear h3.titulo-colores{
+    font-size: var(--letra-mas-grande);
+  }
+
+  /*TITULO DE IMAGEN*/
+  main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen h3 {
+    font-size: var(--letra-mas-grande);
+  }
 } 
 

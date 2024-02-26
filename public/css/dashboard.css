@@ -76,11 +76,12 @@ background-color: #BFBFBF;
 
 
 
-.fa-lg {
+.body-admin-list-products .fa-lg {
 font-size: 1em;
   
 }
-.fa {
+
+.body-admin-list-products .fa {
 position: relative;
 display: table-cell;
 width: 55px;
