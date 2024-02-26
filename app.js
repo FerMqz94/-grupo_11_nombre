@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const partials = require('express-partials')
 
 const port = 3030;
 
@@ -12,6 +13,7 @@ app.set("views" ,path.join(__dirname,"./views"))
 // MEDIA
 
 app.use(express.static('public'));
+app.use(partials());
 
 
 // ROUTERS 
