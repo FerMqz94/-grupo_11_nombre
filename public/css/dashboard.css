@@ -1,4 +1,4 @@
-.body
+.dashboard .main-menu .body
 {
 
 }
@@ -8,11 +8,11 @@
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
-.logo{
+.dashboard .main-menu .logo{
   
 }
 
-.settings {
+.dashboard .main-menu .settings {
   
   height:73px; 
   float:left;
@@ -32,7 +32,7 @@ font-family: 'Strait', sans-serif;
 
 
 /* ScrolBar  */
-.scrollbar
+.dashboard .main-menu .scrollbar
 {
 
 height: 90%;
@@ -41,7 +41,7 @@ overflow-y: hidden;
 overflow-x: hidden;
 }
 
-.scrollbar:hover
+.dashboard .main-menu .scrollbar:hover
 {
 
 height: 90%;
@@ -54,18 +54,18 @@ overflow-x: hidden;
 
 
 
-#style-1::-webkit-scrollbar-track
+.dashboard .main-menu #style-1::-webkit-scrollbar-track
 {
 border-radius: 2px;
 }
 
-#style-1::-webkit-scrollbar
+.dashboard .main-menu #style-1::-webkit-scrollbar
 {
 width: 5px;
 background-color: #F7F7F7;
 }
 
-#style-1::-webkit-scrollbar-thumb
+.dashboard .main-menu #style-1::-webkit-scrollbar-thumb
 {
 border-radius: 10px;
 -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
@@ -76,12 +76,12 @@ background-color: #BFBFBF;
 
 
 
-.body-admin-list-products .fa-lg {
+.dashboard .main-menu .fa-lg {
 font-size: 1em;
   
 }
 
-.body-admin-list-products .fa {
+ .fa {
 position: relative;
 display: table-cell;
 width: 55px;
@@ -94,14 +94,14 @@ font-size:20px;
 
 
 
-.main-menu:hover, nav.main-menu.expanded {
+.dashboard .main-menu:hover, nav.main-menu.expanded {
 width:250px;
 overflow:hidden;
 opacity:1;
 
 }
 
-.main-menu {
+.dashboard .main-menu {
 background:#F7F7F7;
 position:absolute;
 top:0;
@@ -117,12 +117,12 @@ box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity:1;
 }
 
-.main-menu>ul {
+.dashboard .main-menu>ul {
 margin:7px 0;
 
 }
 
-.main-menu li {
+.dashboard .main-menu li {
 position:relative;
 display:block;
 width:250px;
@@ -131,7 +131,7 @@ width:250px;
 
 }
 
-.main-menu li>a {
+.dashboard .main-menu li>a {
 position:relative;
 width:255px;
 display:table;
@@ -151,7 +151,7 @@ text-shadow: 1px 1px 1px  #fff;
 
 
 
-.main-menu .nav-icon {
+.dashboard .main-menu .nav-icon {
   
 position:relative;
 display:table-cell;
@@ -163,7 +163,7 @@ font-size:18px;
 
 }
 
-.main-menu .nav-text  {
+.dashboard .main-menu .nav-text  {
    
 position:relative;
 display:table-cell;
@@ -172,31 +172,31 @@ width:190px;
 font-family: 'Titillium Web', sans-serif;
 }
 
-.main-menu .share {
+.dashboard .main-menu .share {
 }
 
 
 
-.main-menu .fb-like {
+.dashboard .main-menu .fb-like {
 
 left: 180px;
 position:absolute;
 top: 15px;
 }
 
-.main-menu>ul.logout {
+.dashboard .main-menu>ul.logout {
 position:absolute;
 left:0;
 bottom:0;
   
 }
 
-.no-touch .scrollable.hover {
+.dashboard .main-menu .no-touch .scrollable.hover {
 overflow-y:hidden;
 
 }
 
-.no-touch .scrollable.hover:hover {
+.dashboard .main-menu .no-touch .scrollable.hover:hover {
 overflow-y:auto;
 overflow:visible;
   
@@ -206,7 +206,7 @@ overflow:visible;
 /* Logo Hover Property */
 
 
-.settings:hover, settings:focus {   
+.dashboard .main-menu .settings:hover, settings:focus {   
   background:url( https://s17.postimg.org/74cl7s05b/logo_hover.jpg);
   -webkit-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
 -moz-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
@@ -214,7 +214,7 @@ overflow:visible;
 transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0; 
 }
 
-.settings:active, settings:focus {   
+.dashboard .main-menu .settings:active, settings:focus {   
   background:url( https://s3.postimg.org/bqfooag4z/startific.jpg);
   -webkit-transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
 -moz-transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
@@ -223,7 +223,7 @@ transition: all 0.1s ease-in-out, width 0, height 0, top 0, left 0;
 }
 
 
-a:hover,a:focus {
+.dashboard .main-menu a:hover,a:focus {
 text-decoration:none;
 border-left:0px solid #F7F7F7;
 
@@ -231,7 +231,7 @@ border-left:0px solid #F7F7F7;
 
 }
 
-nav {
+.dashboard .main-menu nav {
 -webkit-user-select:none;
 -moz-user-select:none;
 -ms-user-select:none;
@@ -240,7 +240,7 @@ user-select:none;
   
 }
 
-nav ul,nav li {
+.dashboard nav ul,nav li {
 outline:0;
 margin:0;
 padding:0;
@@ -253,13 +253,13 @@ text-transform: uppercase;
 /* Darker element side menu Start*/
 
 
-.darkerli
+.dashboard .main-menu .darkerli
 {
 background-color:#ededed;
 text-transform:capitalize;  
 }
 
-.darkerlishadow
+.dashboard .main-menu .darkerlishadow
 {
 background-color:#ededed;
 text-transform:capitalize;  
@@ -269,7 +269,7 @@ box-shadow:         inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
 }
 
 
-.darkerlishadowdown
+.dashboard .main-menu .darkerlishadowdown
 {
 background-color:#ededed;
 text-transform:capitalize;  
@@ -283,12 +283,12 @@ box-shadow:         inset 0px -4px 5px -4px rgba(50, 50, 50, 0.55);
 
 
 
-.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+.dashboard .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
 color:#fff;
 background-color:#00bbbb;
 text-shadow: 0px 0px 0px; 
 }
-.area {
+.dashboard .main-menu .area {
 float: left;
 background: #e2e2e2;
 width: 100%;
