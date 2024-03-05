@@ -17,19 +17,18 @@ app.use(partials());
 
 
 // ROUTERS 
-const otherRoutes = require("./routes/other.routes")
-const cartRoutes = require("./routes/cart.routes")
-const loginRoutes = require("./routes/login.routes")
-const productDetailRoutes = require("./routes/productDetail.routes")
-const registerRoutes = require("./routes/register.routes")
-const adminRoutes = require("./routes/admin.routes")
+const otherRoutes = require("./src/routes/other.routes")
+const cartRoutes = require("./src/routes/cart.routes")
+const productDetailRoutes = require("./src/routes/productDetail.routes")
+const authRoutes = require("./src/routes/register.routes")
+const adminRoutes = require("./src/routes/admin.routes")
 
 // ROUTES
 app.use("/", otherRoutes)
 app.use("/carrito", cartRoutes)
-app.use("/ingreso", loginRoutes)
+// login register
+app.use("/", authRoutes)
 app.use("/producto-detalle", productDetailRoutes)
-app.use("/registro", registerRoutes)
 app.use("/admin", adminRoutes)
 // error 404
 app.use((req,res,next) => {
