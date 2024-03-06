@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("./partials/head", {view : "carrito"}) %>
+<%- include("../partials/head", {view : "carrito"}) %>
 
 <body>
-    <%- include("./partials/header", {carrito : "black", registro: true,ingreso: true}) %>
+    <%- include("../partials/header", {carrito : "black", registro: true,ingreso: true}) %>
     <main class="main-carrito">
         <!-- por si no hay nada en este -->
         <div class="carrito-vacio">
@@ -18,7 +18,7 @@
             <div class="productos">
                 <div class="info-compra">
                     <div class="info-datos-img">
-                        <img src="/images/norm-core.png" alt="imagen-de-carrito"
+                        <img src="/images/products/norm-core.png" alt="imagen-de-carrito"
                             class="img-carrito">
                         <div class="producto-info">
                             <p class="datos-producto">nombre del producto</p>
@@ -30,7 +30,7 @@
                 </div>
                 <div class="info-compra">
                     <div class="info-datos-img">
-                        <img src="/images/poison-ivy.png" alt="imagen-de-carrito"
+                        <img src="/images/products/poison-ivy.png" alt="imagen-de-carrito"
                             class="img-carrito">
                         <div class="producto-info">
                             <p class="datos-producto">nombre del producto</p>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="info-compra">
                     <div class="info-datos-img">
-                        <img src="/images/dos-continentes.png" alt="imagen-de-carrito"
+                        <img src="/images/products/dos-continentes.png" alt="imagen-de-carrito"
                             class="img-carrito">
                         <div class="producto-info">
                             <p class="datos-producto">nombre del producto</p>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="info-compra">
                     <div class="info-datos-img">
-                        <img src="/images/blazer-over-vista-2.png" alt="imagen-de-carrito"
+                        <img src="/images/products/blazer-over-vista-2.png" alt="imagen-de-carrito"
                             class="img-carrito">
                         <div class="producto-info">
                             <p class="datos-producto">nombre del producto</p>
@@ -76,28 +76,28 @@
             <h3 class="otrosFav">OTROS FAV</h3>
             <div class="contenedor-otros-productos">
               <article class="productos-otrosFav dos-continentes">
-                <img class="blazer-dos-conti" src="/images/dos-continentes.png" alt="blazer dos continentes">
+                <img class="blazer-dos-conti" src="/images/products/dos-continentes.png" alt="blazer dos continentes">
                 <a href="#" class="a-dos-conti">
                   <h4 class="h4-dos-conti">BLAZER DOS CONTINENTES</h4>
                 </a>
                 <p class="p-dos-conti">$ 30.000</p>
               </article>
               <article class="productos-otrosFav poison-ivy">
-                <img class="chaqueta-ivy" src="/images/poison-ivy.png" alt="chaqueta poison ivy">
+                <img class="chaqueta-ivy" src="/images/products/poison-ivy.png" alt="chaqueta poison ivy">
                 <a class="a-chaqueta-ivy" href="#">
                   <h4 class="h4-chaqueta-ivy">CHAQUETA POISON IVY</h4>
                 </a>
                 <p class="p-chaqueta-ivy">$ 50.000</p>
               </article>
               <article class="productos-otrosFav weird-barbie">
-                <img class="chaqueta-weird-barbie" src="/images/weird-barbie.png" alt="chaqueta weird barbie">
+                <img class="chaqueta-weird-barbie" src="/images/products/weird-barbie.png" alt="chaqueta weird barbie">
                 <a class="a-weird-barbie" href="#">
                   <h4 class="h4-weird-barbie">CHAQUETA WEIRD BARBIE NEGRO</h4>
                 </a>
                 <p class="p-weird-barbie">$65.000</p>
               </article>
               <article class="productos-otrosFav lets-normcore">
-                <img class="abrigo-lets-normcore" src="/images/norm-core.png" alt="abrigo normcore">
+                <img class="abrigo-lets-normcore" src="/images/products/norm-core.png" alt="abrigo normcore">
                 <a href="#" class="a-lets-normcore">
                   <h4 class="h4-lets-normcore">ABRIGO LETS NORMCORE</h4>
                 </a>
@@ -107,7 +107,7 @@
           </section>  
     </main>
 
- <%- include("./partials/footer")  %>
+ <%- include("../partials/footer")  %>
 
 
 </body>

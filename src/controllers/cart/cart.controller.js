@@ -1,4 +1,4 @@
 module.exports = (req,res) => {
-    res.render("cart")
+    res.render("./cart/cart")
   }
 
