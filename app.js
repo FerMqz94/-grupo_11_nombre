@@ -25,7 +25,7 @@ const adminRoutes = require("./src/routes/admin.routes")
 app.use("/", otherRoutes)
 app.use("/carrito", cartRoutes)
 // login register
-app.use("/autenticacion", authRoutes)
+app.use('/autenticacion', authRoutes)
 app.use("/producto-detalle", productDetailRoutes)
 app.use("/admin", adminRoutes)
 // error 404
