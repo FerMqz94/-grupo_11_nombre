@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "image": "poison-ivy.png",
+        "name": "poison ivy",
+        "description": "description description description",
+        "featured-description": "description",
+        "category": "avrigo",
+        "colors": ["red", "black", "cream"],
+        "price": 80000,
+        "size": "m",
+        "new": true,
+        "offer": false
+    },
+    
+    {
+        "id": 2,
+        "image": "blazer-1.png",
+        "name": "blazer-1",
+        "descritpion": "descritpion descritpion descritpion",
+        "featured-description": "descritpion",
+        "category": "avrigo",
+        "colors": "black",
+        "price": 9000,
+        "size": "s",
+        "new": true,
+        "offer": false
+    },
+    
+    {
+        "id": 3,
+        "image": "blazer-over-vista4.jpg",
+        "name": "blazer-over",
+        "descritpion": "descritpion descritpion descritpion",
+        "featured-description": "descritpion",
+        "category": "avrigo",
+        "colors": "green",
+        "price": 5000,
+        "size": "l",
+        "new": true,
+        "offer": false
+    }
+]
+
+
