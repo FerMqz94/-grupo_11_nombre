@@ -9,10 +9,12 @@ const port = 3030;
 app.set("view engine" , "ejs")
 app.set("views" ,path.join(__dirname,"./src/views"))
 
-// MEDIA
+// MiDDLEWARES
 
 app.use(express.static('public'));
 app.use(partials());
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 // ROUTERS 
 const otherRoutes = require("./src/routes/other.routes")
