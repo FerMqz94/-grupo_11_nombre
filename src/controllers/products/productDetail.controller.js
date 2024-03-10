@@ -1,4 +1,4 @@
-const { loadData } = require("../a/src/database");
+const { loadData } = require("../database");
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
