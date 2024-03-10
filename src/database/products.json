@@ -15,7 +15,7 @@
     
     {
         "id": 2,
-        "image": "blazer-1.png",
+        "image": ["blazer-1.png"],
         "name": "blazer-1",
         "descritpion": "descritpion descritpion descritpion",
         "featured-description": "descritpion",
@@ -29,7 +29,7 @@
     
     {
         "id": 3,
-        "image": "blazer-over-vista4.jpg",
+        "image": ["blazer-over-vista4.jpg"],
         "name": "blazer-over",
         "descritpion": "descritpion descritpion descritpion",
         "featured-description": "descritpion",
