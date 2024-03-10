@@ -34,7 +34,7 @@ app.use("/producto-detalle", productDetailRoutes)
 app.use("/admin", adminRoutes)
 // error 404
 app.use((req,res,next) => {
-    res.status(404).render('notFound')
+    res.status(404).render('src/notFound')
 })
 
 //  SERVER

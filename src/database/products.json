@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": ["poison-ivy.png"],
+        "image": "poison-ivy.png",
         "name": "poison ivy",
         "description": "description description description",
         "featured-description": "description",
