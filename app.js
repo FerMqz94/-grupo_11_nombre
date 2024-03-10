@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const partials = require('express-partials')
+const partials = require('express-partials');
 const port = 3030;
+const methodOverride = require('method-override');
 
 // CONFIGURACIONES
 
@@ -15,6 +16,7 @@ app.use(express.static('public'));
 app.use(partials());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(methodOverride('_method'));
 
 // ROUTERS 
 const otherRoutes = require("./src/routes/other.routes")
