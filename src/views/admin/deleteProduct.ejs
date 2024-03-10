@@ -1,0 +1,18 @@
+<!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+
+  <!-- Then put toasts within -->
+  <div class="card p-5">
+    <div class="card-title">
+      <!-- <img src="..." class="rounded me-2" alt="..."> -->
+      <strong class="me-auto">Eliminación de producto</strong>      
+    </div>
+    <div class="card-body">
+      Estas seguro de eliminar el producto: <%= title %>
+    </div>
+    <form action="/admin/eliminar-producto/<%= id %>?_method=DELETE" method="post">
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+      <a href="/admin/productos" class="btn btn-dark">Cancelar</a>
+    </form>
+  </div>
+</div>
