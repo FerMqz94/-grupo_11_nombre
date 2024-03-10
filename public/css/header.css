@@ -168,7 +168,10 @@ a {
     align-items: center;
   }
   .header-vista-tablet-pc .barra-busqueda-icon {
-    margin-left: -31px;
+    margin-left: -33px;
+    border: 0;
+    color: gray;
+    background-color: #ffffff00;
   }
   .header-vista-tablet-pc .barra-busqueda-interior {
     margin: 0;
@@ -177,7 +180,7 @@ a {
     padding: 5px 5px 5px 8px;
     border-radius: 33px;
     border: solid 1px black;
-    display: flex;
+    /* display: flex; */
     align-items: center;
   }
   .header-vista-tablet-pc .texto-header {
@@ -244,8 +247,13 @@ a {
     font-size: 80px;
   }
   .header-vista-tablet-pc .barra-busqueda {
-    font-size: 20px;
+    /* font-size: 20px; */
+    /* padding: 6px 21px 6px 22px; */
+    /* padding: 5px 1px 5px 1px; */
   }
+  .header-vista-tablet-pc .barra-busqueda-interior {
+    padding: 10px 39px 10px 18px;
+}
   .header-vista-tablet-pc .texto-header {
     margin: revert;
     font-size: var(--letra-grande);
