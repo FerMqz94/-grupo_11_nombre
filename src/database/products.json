@@ -8,7 +8,7 @@
         "category": "Abrigos",
         "colors": ["red", "black", "cream"],
         "price": 80000,
-        "size": ["m"],
+        "size": [1, 2, 3, 4, 5],
         "new": true,
         "sale": false, 
         "available": true
@@ -23,7 +23,7 @@
         "category": "Abrigos",
         "colors": "black",
         "price": 9000,
-        "size": ["s"],
+        "size": [1, 2, 3, 4, 5],
         "new": true,
         "sale": false,
         "available": true
@@ -33,12 +33,12 @@
         "id": 3,
         "image": ["blazer-over-vista4.jpg"],
         "name": "blazer-over",
-        "descritpion": "descritpion descritpion descritpion",
+        "description": "descritpion descritpion descritpion",
         "featured-description": "descritpion",
         "category": "Abrigos",
         "colors": "green",
         "price": 5000,
-        "size": ["l"],
+        "size": [1, 2, 3, 4, 5],
         "new": true,
         "sale": false,
         "available": false
