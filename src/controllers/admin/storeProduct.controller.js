@@ -5,21 +5,23 @@ module.exports = (req, res) => {
     const { name, description, featuredDescription, category, colors, price, size, neworsale, available } = req.body;
     const newID = products[products.length -1].id + 1;
 
-    const newProduct = {
-        id: newID,
-        name: name.trim(),
-        description: description.trim(),
+    res.send(req.body)
+
+   // const newProduct = {
+      //  id: newID,
+     //   name: name.trim(),
+    //    description: description.trim(),
         featuredDescription: featuredDescription.trim(),
-        category:,
-        colors:,
-        price: +price,
-        size:,
-        new:
-        sale:,
-        available:,
+      //  category:,
+        //colors:,
+        //price: +price,
+      //  size:,
+        //new: neworsale === "new",
+       // sale: neworsale === "sale"
+        //available:,
 
         
-    }
+    //}
 
 
 
