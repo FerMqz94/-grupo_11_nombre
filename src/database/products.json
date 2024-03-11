@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "poison-ivy.png",
+        "image": ["poison-ivy.png"],
         "name": "poison ivy",
         "description": "description description description",
         "featuredDescription": "Perfecto para verte urbanx, clasicx y edgy",
@@ -18,7 +18,7 @@
         "id": 2,
         "image": ["blazer-1.png"],
         "name": "blazer-1",
-        "descritpion": "descritpion descritpion descritpion",
+        "description": "descritpion descritpion descritpion",
         "featuredDescription": "descritpion",
         "category": "Abrigos",
         "colors": "black",

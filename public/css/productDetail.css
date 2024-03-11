@@ -969,7 +969,6 @@ main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
 
 main.vista-producto div.imagen-cierre {
   width: 95%;
-
   margin: 20px 0 0 30px;
 }
 
@@ -989,7 +988,6 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
   main.vista-producto section.visualizacion-producto {
     width: 100%;
-
     display: flex;
   }
 
