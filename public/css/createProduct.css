@@ -433,7 +433,7 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div {
     margin: 0 0 0.5rem 0;
     color: var(--gris-claro);
-    /* text-align: center; */
+    text-align: center;
 }
 
 main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto input.input-imagen-crear-edit-producto {
@@ -481,14 +481,17 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
   }
 
 
-  main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div.icono-archivo-imagen-crear-editar i.fa {
+  main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div.icono-archivo-imagen-crear-editar i.fa-download {
+    display: block;
+    width: 100%;
     font-size: 50px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
     transition: all 0.2s ease-in-out;
   }
 
 
-  main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div.icono-archivo-imagen-crear-editar i.fa:hover {
+  main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-crear-producto div.icono-archivo-imagen-crear-editar i.fa-download:hover {
     transform: scale(0.8);
     opacity: 0.3;
   }
