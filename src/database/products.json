@@ -5,12 +5,13 @@
         "name": "poison ivy",
         "description": "description description description",
         "featured-description": "description",
-        "category": "avrigo",
+        "category": "Abrigos",
         "colors": ["red", "black", "cream"],
         "price": 80000,
         "size": ["m"],
         "new": true,
-        "sale": false
+        "sale": false, 
+        "available": true
     },
     
     {
@@ -19,12 +20,13 @@
         "name": "blazer-1",
         "descritpion": "descritpion descritpion descritpion",
         "featured-description": "descritpion",
-        "category": "avrigo",
+        "category": "Abrigos",
         "colors": "black",
         "price": 9000,
         "size": ["s"],
         "new": true,
-        "sale": false
+        "sale": false,
+        "available": true
     },
     
     {
@@ -33,12 +35,13 @@
         "name": "blazer-over",
         "descritpion": "descritpion descritpion descritpion",
         "featured-description": "descritpion",
-        "category": "avrigo",
+        "category": "Abrigos",
         "colors": "green",
         "price": 5000,
         "size": ["l"],
         "new": true,
-        "sale": false
+        "sale": false,
+        "available": false
     }
 ]
 
