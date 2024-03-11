@@ -8,9 +8,9 @@
         "category": "avrigo",
         "colors": ["red", "black", "cream"],
         "price": 80000,
-        "size": "m",
+        "size": ["m"],
         "new": true,
-        "offer": false
+        "sale": false
     },
     
     {
@@ -22,9 +22,9 @@
         "category": "avrigo",
         "colors": "black",
         "price": 9000,
-        "size": "s",
+        "size": ["s"],
         "new": true,
-        "offer": false
+        "sale": false
     },
     
     {
@@ -36,9 +36,9 @@
         "category": "avrigo",
         "colors": "green",
         "price": 5000,
-        "size": "l",
+        "size": ["l"],
         "new": true,
-        "offer": false
+        "sale": false
     }
 ]
 
