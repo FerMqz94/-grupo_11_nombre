@@ -1,48 +1,98 @@
 [
-    {
-        "id": 1,
-        "image": ["poison-ivy.png"],
-        "name": "poison ivy",
-        "description": "description description description",
-        "featuredDescription": "Perfecto para verte urbanx, clasicx y edgy",
-        "category": "Abrigos",
-        "colors": ["red", "black", "cream"],
-        "price": 80000,
-        "size": [1, 2, 3, 4, 5],
-        "new": true,
-        "sale": false, 
-        "available": true
-    },
-    
-    {
-        "id": 2,
-        "image": ["blazer-1.png"],
-        "name": "blazer-1",
-        "descritpion": "descritpion descritpion descritpion",
-        "featuredDescription": "descritpion",
-        "category": "Abrigos",
-        "colors": "black",
-        "price": 9000,
-        "size": [1, 2, 3, 4, 5],
-        "new": true,
-        "sale": false,
-        "available": true
-    },
-    
-    {
-        "id": 3,
-        "image": ["blazer-over-vista4.jpg"],
-        "name": "blazer-over",
-        "description": "descritpion descritpion descritpion",
-        "featuredDescription": "descritpion",
-        "category": "Abrigos",
-        "colors": "green",
-        "price": 5000,
-        "size": [1, 2, 3, 4, 5],
-        "new": true,
-        "sale": false,
-        "available": false
-    }
+   {
+      "id": 1,
+      "image": [
+         "poison-ivy.png"
+      ],
+      "name": "poison ivy",
+      "description": "description description description",
+      "featuredDescription": "Perfecto para verte urbanx, clasicx y edgy",
+      "category": "Abrigos",
+      "talle": [],
+      "colors": [],
+      "price": 80000,
+      "new": true,
+      "sale": false,
+      "available": true
+   },
+   {
+      "id": 2,
+      "image": [
+         "blazer-1.png"
+      ],
+      "name": "blazer-1",
+      "descritpion": "descritpion descritpion descritpion",
+      "featuredDescription": "descritpion",
+      "category": "Abrigos",
+      "talle": [],
+      "colors": [],
+      "price": 9000,
+      "new": true,
+      "sale": false,
+      "available": true
+   },
+   {
+      "id": 3,
+      "image": [
+         "blazer-over-vista4.jpg"
+      ],
+      "name": "blazer-over",
+      "description": "descritpion descritpion descritpion",
+      "featuredDescription": "descritpion",
+      "category": "Abrigos",
+      "talle": [],
+      "colors": [],
+      "price": 5000,
+      "new": true,
+      "sale": false,
+      "available": false
+   },
+   {
+      "id": 4,
+      "name": "Buzo todoterreno",
+      "description": "Es un buzo",
+      "featuredDescription": "qué más querés",
+      "category": "Buzos y sweaters",
+      "talles": [
+         true,
+         true,
+         false,
+         false,
+         true
+      ],
+      "colors": [
+         "black",
+         "beige",
+         "blue",
+         "white",
+         "red",
+         "gray"
+      ],
+      "price": 30000,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 5,
+      "name": "Paola",
+      "description": "asdasdasdasd",
+      "featuredDescription": "asdasdasdasd",
+      "category": "Cápsula American",
+      "talles": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "blue"
+      ],
+      "price": 1,
+      "new": false,
+      "sale": true,
+      "available": false
+   }
 ]
-
-

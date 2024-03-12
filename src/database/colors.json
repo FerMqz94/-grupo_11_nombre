@@ -1,0 +1,77 @@
+[
+    {
+       "id": 1,
+       "name": "black",
+       "code": "#000000"
+    },
+    {
+       "id": 2,
+       "name": "beige",
+       "code": "#f5f5dc"
+    },
+    {
+       "id": 3,
+       "name": "blue",
+       "code": "#0000ff"
+    },
+    {
+        "id": 4,
+        "name": "white",
+        "code": "#ffffff"
+    },
+    {
+        "id": 5,
+        "name": "red",
+        "code": "#ff0000"
+    },
+    {
+        "id": 6,
+        "name": "green",
+        "code": "#008000"
+    },
+    {
+        "id": 7,
+        "name": "purple",
+        "code": "#800080"
+    },
+    {
+        "id": 8,
+        "name": "orange",
+        "code": "#ffa500"
+    },
+    {
+        "id": 9,
+        "name": "lightblue",
+        "code": "#add8e6"
+    },
+    {
+        "id": 10,
+        "name": "gray",
+        "code": "#808080"
+    },
+    {
+        "id": 11,
+        "name": "lavender",
+        "code": "#e6e6fa"
+    },
+    {
+        "id": 12,
+        "name": "pink",
+        "code": "#ffc0cb"
+    },
+    {
+        "id": 13,
+        "name": "silver",
+        "code": "#c0c0c0"
+    },
+    {
+        "id": 14,
+        "name": "bluishGreen",
+        "code": "#419197"
+    },
+    {
+        "id": 15,
+        "name": "gold",
+        "code": "#ffd700"
+    }
+]    
