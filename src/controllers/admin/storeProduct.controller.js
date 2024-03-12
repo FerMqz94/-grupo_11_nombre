@@ -29,7 +29,7 @@ module.exports = (req, res) => {
 
     //GENERAR ARRAY DE BOOLEANOS CON LA iNFORMACIÓN QUE VIENE DESDE EL BODY SI ES "ON" VA A SER TRUE SI ES UNDEFINED FALSE
     const booleanColors = (color, colorArrayBoolean) => {
-        colorBoolean = color === "on"? true : false;
+        colorBoolean = !!color;
         return colorArrayBoolean.push(colorBoolean);
     }
 
@@ -54,7 +54,7 @@ module.exports = (req, res) => {
     const storeColors = (colorArrayBoolean, colors) => {
 
        for( let i = 0; i < colors.length; i++){
-        if(colorArrayBoolean[i] === true){
+        if(colorArrayBoolean[i]){
             colorsName = colors[i].name;
             sendColor.push(colorsName);     
         } 
@@ -68,7 +68,7 @@ module.exports = (req, res) => {
     ///// FUNCIÓN PARA TALLES////
 
     const storeTalles = (talle, tallesSend) => {
-        talleBooleano = talle === "on"? true : false;
+        talleBooleano = !!talle;
         return tallesSend.push(talleBooleano);
     }
 
@@ -91,7 +91,7 @@ module.exports = (req, res) => {
        price: +price,
        new: neworsale === "new",
        sale: neworsale === "sale",
-       available: available === "on"? true: false
+       available: !!available
  
     }
 

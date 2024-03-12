@@ -94,5 +94,116 @@
       "new": false,
       "sale": true,
       "available": false
+   },
+   {
+      "id": 6,
+      "name": "popiyo",
+      "description": "asdasdasdasdasdasda",
+      "featuredDescription": "asdasdasdasdasd",
+      "category": "Tops",
+      "talles": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "beige"
+      ],
+      "price": 22222,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 7,
+      "name": "pipi",
+      "description": "asdasdasda",
+      "featuredDescription": "asdasdasdasd",
+      "category": "Remeras",
+      "talles": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "red"
+      ],
+      "price": 222,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 8,
+      "name": "",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "talles": [
+         false,
+         false,
+         true,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "red"
+      ],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 9,
+      "name": "",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "talles": [
+         false,
+         false,
+         true,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "red"
+      ],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 10,
+      "name": "",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "talles": [
+         false,
+         false,
+         true,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "green",
+         "lightblue"
+      ],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
    }
 ]
