@@ -4,8 +4,7 @@
 /*-------MAIN -----VISTA PRODUCTO-----------*/
 main.vista-producto {
   font-family: var(--fuente-general);
-
-  width: 100vw;
+  width: 100;
 }
 
 main.vista-producto div.contenedor-busqueda {
@@ -25,7 +24,7 @@ main.vista-producto div.contenedor-busqueda a.blazer {
 }
 
 main.vista-producto section.visualizacion-producto {
-  width: 90%;
+  /* width: 90%; */
 }
 
 /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
@@ -618,11 +617,11 @@ main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {
 /*----SECCIÓN DE OTROS ARTÍCULOS FAVORITOS-----*/
 
 main.vista-producto section.otrosFav {
+  display: flex;
   width: 86%;
-
   margin-left: 30px;
-
   margin-bottom: 40px;
+  flex-direction: column;
 }
 
 main.vista-producto section.otrosFav h3.otrosFav {
@@ -969,7 +968,7 @@ main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
 
 main.vista-producto div.imagen-cierre {
   width: 95%;
-  margin: 20px 0 0 30px;
+  /* margin: 20px 0 0 30px; */
 }
 
 main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
@@ -987,8 +986,9 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 @media (min-width: 768px) {
   /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
   main.vista-producto section.visualizacion-producto {
-    width: 100%;
     display: flex;
+    width: 100%;
+    justify-content: center;
   }
 
   main.vista-producto
@@ -1226,7 +1226,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-boton-carrito
     button.agregar-carrito {
     margin-top: 35px;
-    width: 95%;
+    width: 91%;
     height: 45px;
     font-size: var(--letra-grande);
     background-color: var(--verde-azulado-claro);
@@ -1322,15 +1322,10 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     form.form-carrito
     button.boton-calcular {
     border: 2px solid var(--gris-claro);
-
     font-size: var(--letra-grande);
-
-    width: 40%;
-
+    width: 35%;
     display: inline-block;
-
     height: 45px;
-
     background-color: var(--blanco);
   }
 
@@ -1452,14 +1447,10 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.otrosFav div.contenedor-otros-productos {
     display: flex;
-
     width: 98%;
-
     flex-wrap: wrap;
-
-    align-items: self-end;
-
     justify-content: space-between;
+    align-items: center;
   }
 
   main.vista-producto
@@ -1535,10 +1526,9 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-otros-productos
     article.weird-barbie {
     width: 30%;
-
     height: 300px;
-
     margin-right: revert;
+    margin-top: revert;
   }
 
   main.vista-producto
@@ -1618,14 +1608,16 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   /*--IMAGEN DE CIERRE DE TABLET----*/
 
   main.vista-producto div.imagen-cierre {
-    margin: 20px 0 0 30px;
-    width: 100%;
+    /* margin: 20px 0 0 30px; */
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
     display: block;
-
-    width: 90%;
+    width: 89%;
   }
 
   main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
@@ -1651,7 +1643,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   }
 
   main.vista-producto section.visualizacion-producto {
-    margin-left: 40px;
+    /* margin-left: 0px; */
   }
 
   /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/

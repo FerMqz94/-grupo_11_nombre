@@ -67,7 +67,7 @@
           <div class="contenedor-blazerOver-principal">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-3">
+            <div class="contenedor-img-principal">
               <img class="blazer-over-principal" src="/images/products/<%= product.image[2]%>" alt="<%= product.name %>">
             </div>
           </div>
@@ -85,11 +85,11 @@
           <div class="contenedor-blazerOver-principal">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-4">
-              <img class="blazer-over-principal" src="/images/products/<%= product.image[3]%>" alt="<%= product.name %>">
+            <div class="contenedor-img-principal">
+              <img class="blazer-over-principal" src="/images/products/<%= product.image[1]%>" alt="<%= product.name %>">
             </div>
           </div>
-          
+          <!-- contenedor-img-4 -->
         </div>
         <% } else {  %>
 
@@ -97,9 +97,11 @@
        
         
       </div>
-    
+      <% if (product.image[1]) { %>
       <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
       <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
+      <% } else {%>
+        <% } %>
       <div role="tablist" class="dots"></div>
     </div>
 
@@ -250,7 +252,16 @@
       <img src="/images/banner/mensaje-de-la-marca-desktop-tablet.png" alt="banner_inferior" class="imagen-cierre-desk-tablet">
       <img src="/images/banner/mensaje-de-la-marca-phone.png" alt="mensaje marca mobile" class="imagen-cierre-mobile">
     </div>
+    <!-- <% if (product.colors.includes("red")) { %>
+      <p>tenemos red</p>
+      
+      <% } else  { %>
+        <p>jajajaj no hay red</p>
+        <% } %>
+        -->
 
+        <!-- este codigo es para indentificar una palabra dentro de un array -->
+        
   </main>
   <%- include("../partials/footer")  %>
 

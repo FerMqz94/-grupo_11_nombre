@@ -50,6 +50,9 @@
    {
       "id": 4,
       "name": "Sweater murga",
+      "image": [
+        "blazer-over-vista4.jpg"
+     ],
       "description": "Un sweater",
       "featuredDescription": "Color chillón",
       "category": "Buzos y sweaters",
