@@ -22,5 +22,29 @@
       "new": true,
       "sale": false,
       "available": true
+   },
+   {
+      "id": 2,
+      "name": "Sweatercito hermoso",
+      "description": "Es un sweater de cashmere, el mejor material para sweaters",
+      "featuredDescription": "Qué otra cosa querés",
+      "category": "Buzos y sweaters",
+      "sizes": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "beige",
+         "green",
+         "gray"
+      ],
+      "price": 10000,
+      "new": false,
+      "sale": true,
+      "available": true
    }
 ]

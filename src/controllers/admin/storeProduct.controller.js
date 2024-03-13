@@ -86,7 +86,7 @@ module.exports = (req, res) => {
        description: description.trim(),
        featuredDescription: featuredDescription.trim(),
        category: category?.trim(),
-       talles: tallesSend,
+       sizes: tallesSend,
        colors: sendColor,
        price: +price,
        new: neworsale === "new",
