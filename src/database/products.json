@@ -8,65 +8,19 @@
       "description": "description description description",
       "featuredDescription": "Perfecto para verte urbanx, clasicx y edgy",
       "category": "Abrigos",
-      "colors": [],
+      "colors": [
+         "gold"
+      ],
       "price": 80000,
-      "talles": [],
-      "new": true,
-      "sale": false,
-      "available": true
-   },
-   {
-      "id": 2,
-      "image": [
-         "blazer-1.png"
-      ],
-      "name": "blazer-1",
-      "description": "descritpion descritpion descritpion",
-      "featuredDescription": "descritpion",
-      "category": "Abrigos",
-      "colors": [],
-      "price": 9000,
-      "talles": [],
-      "new": true,
-      "sale": false,
-      "available": true
-   },
-   {
-      "id": 3,
-      "image": [
-         "blazer-over-vista4.jpg"
-      ],
-      "name": "blazer-over",
-      "description": "descritpion descritpion descritpion",
-      "featuredDescription": "descritpion",
-      "category": "Abrigos",
-      "colors": [],
-      "price": 5000,
-      "talles": [],
-      "new": true,
-      "sale": false,
-      "available": false
-   },
-   {
-      "id": 4,
-      "name": "Sweater murga",
-      "description": "Un sweater",
-      "featuredDescription": "Color chillón",
-      "category": "Buzos y sweaters",
-      "talles": [
+      "sizes": [
          true,
          false,
          false,
          false,
          true
       ],
-      "colors": [
-         "blue",
-         "gold"
-      ],
-      "price": 5000,
-      "new": false,
-      "sale": true,
-      "available": false
+      "new": true,
+      "sale": false,
+      "available": true
    }
 ]

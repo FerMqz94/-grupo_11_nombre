@@ -44,9 +44,9 @@
               <td class=""><%= p.description %></td>
               <td class=""><%= p.featuredDescription %></td>
               <td class=""><%= p.category %></td>
-              <td class=""><%= p.colors %></td>
+              <td class=""><%= p.colors[0]%></td>
               <td class=""><%= p.price %></td>
-              <td class=""><%= p.size %></td>
+              <td class=""><%= p.sizes[0]%></td>
               <td class=""><%= p.new %></td>
               <td class=""><%= p.sale %></td>
               <td class=""><%= p.available %></td>
@@ -59,7 +59,10 @@
                   <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
                 </div>
               </td>
-            </tr>            
+            </tr>
+
+
+            
 
             <% }) %>
           </tbody>
