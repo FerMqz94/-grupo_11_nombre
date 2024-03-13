@@ -25,6 +25,7 @@
    },
    {
       "id": 2,
+      "image": [],
       "name": "Sweatercito hermoso",
       "description": "Es un sweater de cashmere, el mejor material para sweaters",
       "featuredDescription": "Qué otra cosa querés",
@@ -43,6 +44,30 @@
          "gray"
       ],
       "price": 10000,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 3,
+      "image":[],
+      "name": "nube de algodón",
+      "description": "una remera de algodón todo terreno y suave",
+      "featuredDescription": "",
+      "category": "Remeras",
+      "sizes": [
+         true,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "black",
+         "white",
+         "red"
+      ],
+      "price": 22222,
       "new": false,
       "sale": true,
       "available": true

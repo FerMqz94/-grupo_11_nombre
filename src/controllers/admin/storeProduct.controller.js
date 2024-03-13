@@ -1,21 +1,11 @@
 const { loadData, saveData } = require('../../database');
-const path = require('path');
-const fs = require('fs');
-const colorsFile = require('../../database');
 
-//TRAIGO Y LEO LA INFORMACIÓN DE COLORS.JSON
-const loadDataColors = (filename = "colors") => {
-const pathJSONColors = path.join(__dirname, `../../database/${filename}.json`);
-const dataJSONColors = fs.readFileSync(pathJSONColors, 'utf-8');
-const dataJSColors = JSON.parse(dataJSONColors); 
-return dataJSColors   
-}
 
 module.exports = (req, res) => {
 
     //VARIABLES Y CONSTANTES PARA OPERAR CON LOS DATOS
     let products = loadData();
-    let colors = loadDataColors();
+    let colors = loadData('colors');
     const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
     const newID = products[products.length -1].id + 1;
     let talleBooleano;
