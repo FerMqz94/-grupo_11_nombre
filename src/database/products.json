@@ -46,5 +46,27 @@
       "new": false,
       "sale": true,
       "available": true
+   },
+   {
+      "id": 4,
+      "image": [],
+      "name": "nunu",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [
+         "bluishGreen"
+      ],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": true
    }
 ]
