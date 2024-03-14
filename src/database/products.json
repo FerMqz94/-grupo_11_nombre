@@ -2,7 +2,7 @@
    {
       "id": 1,
       "image": [
-         "poison-ivy.png"
+         "blazer-1.png"
       ],
       "name": "poison ivy",
       "description": "description description description",
@@ -24,33 +24,8 @@
       "available": true
    },
    {
-      "id": 2,
-      "image": [],
-      "name": "Sweatercito hermoso",
-      "description": "Es un sweater de cashmere, el mejor material para sweaters",
-      "featuredDescription": "Qué otra cosa querés",
-      "category": "Buzos y sweaters",
-      "sizes": [
-         true,
-         true,
-         false,
-         false,
-         false
-      ],
-      "colors": [
-         "black",
-         "beige",
-         "green",
-         "gray"
-      ],
-      "price": 10000,
-      "new": false,
-      "sale": true,
-      "available": true
-   },
-   {
       "id": 3,
-      "image":[],
+      "image": [],
       "name": "nube de algodón",
       "description": "una remera de algodón todo terreno y suave",
       "featuredDescription": "",
