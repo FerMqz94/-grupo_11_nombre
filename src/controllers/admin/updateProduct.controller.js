@@ -70,15 +70,15 @@ module.exports = (req, res) => {
                 new: neworsale === "new",
                 sale: neworsale === "sale",
                 available: !!available,
-                // image: image ? image.filename : p.image
+                image: image ? image.filename : p.image
             };
-            // if(image?.filename) {
-            //     const pathBeforeFile = path.join(__dirname, "../../../public/images/products/" + p.image);
-            //     const existFile = fs.existsSync(pathBeforeFile);
-            //     if(existFile) {
-            //         fs.unlinkSync(pathBeforeFile);
-            //     }
-            // }
+            if(image?.filename) {
+                const pathBeforeFile = path.join(__dirname, "../../../public/images/products/" + p.image);
+                const existFile = fs.existsSync(pathBeforeFile);
+                if(existFile) {
+                    fs.unlinkSync(pathBeforeFile);
+                }
+            }
             return productUpdate
         }
         return p

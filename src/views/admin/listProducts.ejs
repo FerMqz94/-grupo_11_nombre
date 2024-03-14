@@ -44,7 +44,7 @@
               <td class=""><%= p.description %></td>
               <td class=""><%= p.featuredDescription %></td>
               <td class=""><%= p.category %></td>
-              <td class=""><%= p.colors[0]%></td>
+              <td class=""><%= p.colors%></td>
               <td class=""><%= p.price %></td>
               <td class=""><%= p.sizes[0]%></td>
               <td class=""><%= p.new %></td>
@@ -55,7 +55,7 @@
               <td>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
-                  <a href="/admin/editar-productos" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
+                  <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
                   <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
                 </div>
               </td>
