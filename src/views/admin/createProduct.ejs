@@ -21,7 +21,7 @@
 
        <div class="card">
                     
-        <form action="/admin/crear-productos" method="POST" class="my-5"> 
+        <form action="/admin/crear-productos" method="POST" class="my-5" enctype="multipart/form-data"> 
 
         <div class="container">
             <div class="d-flex row p-0 justify-content-center">
@@ -219,8 +219,8 @@
                     <h3 class="my-4 text-center col-12">Imagen producto</h3>
                     
                     <div class="contenedor-input-label-crear-producto">
-                        <input id="image" class="input-imagen-crear-edit-producto" type="file" name="image" accept="image/*" value="" multiple />
-                        <label class="editar-crear-producto" for="subirImagen" for="image">
+                        <input id="image" class="input-imagen-crear-edit-producto" type="file" name="image" accept="image/*" value="" multiple  />
+                        <label class="editar-crear-producto" for="image">
                         <div class="icono-archivo-imagen-crear-editar">
                             <i class="fa fa-download"></i>
                             <div>Seleccioná un archivo o arrastralo acá</div>

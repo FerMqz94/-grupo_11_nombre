@@ -14,11 +14,12 @@ module.exports = (req, res) => {
     let sendColor = []
     let colorArrayBoolean = [];
     let colorBoolean;
+    let newImages = [];
 
     //////FUNCIONES PARA COLORES//////
 
     //GENERAR ARRAY DE BOOLEANOS CON LA iNFORMACIÓN QUE VIENE DESDE EL BODY SI ES "ON" VA A SER TRUE SI ES UNDEFINED FALSE
-    const booleanColors = (color, colorArrayBoolean) => {
+   const booleanColors = (color, colorArrayBoolean) => {
         colorBoolean = !!color;
         return colorArrayBoolean.push(colorBoolean);
     }
@@ -69,10 +70,15 @@ module.exports = (req, res) => {
     storeTalles(talle4, tallesSend);
     storeTalles(talle5, tallesSend);
 
+    //MAPEO DEL REQ.FILES PARA OBTENER EL ARRAY DE FILENAME DE LAS IMÁGENES
+   if(req.files.length){
+        newImages = req.files.map(img => img.filename);
+    }
+
 
     const newProduct = {
        id: newID,
-       image: [],
+       image: newImages.length? newImages : [],
        name: name.trim(),
        description: description.trim(),
        featuredDescription: featuredDescription.trim(),

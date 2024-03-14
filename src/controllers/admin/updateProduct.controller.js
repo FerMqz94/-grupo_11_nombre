@@ -86,4 +86,3 @@ module.exports = (req, res) => {
     saveData(productMapped);
     res.redirect("/admin/productos");
 }
-    

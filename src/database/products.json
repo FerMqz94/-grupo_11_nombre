@@ -2,7 +2,7 @@
    {
       "id": 1,
       "image": [
-         "blazer-1.png"
+         "poison-ivy.png"
       ],
       "name": "poison ivy",
       "description": "description description description",
@@ -68,5 +68,140 @@
       "new": false,
       "sale": true,
       "available": true
+   },
+   {
+      "id": 5,
+      "image": [],
+      "name": "",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "sizes": [
+         true,
+         true,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 6,
+      "image": [],
+      "name": "pepito",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 7,
+      "image": [
+         "undefined-1710390529511.jpg"
+      ],
+      "name": "",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 8,
+      "image": [
+         "undefined-1710390625753.jpg",
+         "undefined-1710390625753.jpg",
+         "undefined-1710390625756.jpg"
+      ],
+      "name": "pepito sadwichito",
+      "description": "ropa que se ve como sandwich",
+      "featuredDescription": "y que huele como sandwich",
+      "category": "Cápsula American",
+      "sizes": [
+         true,
+         true,
+         true,
+         true,
+         true
+      ],
+      "colors": [
+         "white",
+         "red",
+         "green",
+         "orange"
+      ],
+      "price": 12345,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 9,
+      "image": [
+         "undefined-1710390934776.jpg"
+      ],
+      "name": "pepito sadwichito",
+      "description": "ropa que se ve como sandwich",
+      "featuredDescription": "y que huele como sandwich",
+      "category": "Cápsula American",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 12345,
+      "new": false,
+      "sale": true,
+      "available": false
+   },
+   {
+      "id": 10,
+      "image": [
+         "image-1710391313347.jpg"
+      ],
+      "name": "pruebita200mil",
+      "description": "",
+      "featuredDescription": "",
+      "category": "Categorías de producto",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 0,
+      "new": false,
+      "sale": true,
+      "available": false
    }
 ]
