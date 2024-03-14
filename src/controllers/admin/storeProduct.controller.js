@@ -72,6 +72,7 @@ module.exports = (req, res) => {
 
     const newProduct = {
        id: newID,
+       image: [],
        name: name.trim(),
        description: description.trim(),
        featuredDescription: featuredDescription.trim(),
