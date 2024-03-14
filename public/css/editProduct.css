@@ -240,68 +240,53 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-gold:nth-
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"] {
-    display: none;
-}
-main.editar-producto div.vista-editar-producto .form-check-label-new-offer {
-    position: relative;
-    color: #4189e0;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    transition:0.5s;
-    gap: 1em;
-    border: 3px solid #4189e0;
-    padding: 0.5em 1em;
-    border-radius: 0.25em;
-}
-main.editar-producto div.vista-editar-producto .form-check-label-new-offer:before {
-    content: "";
-    height: 0.5em;
-    width: 0.5em;
-    border: 3px solid #4189e0;
-    border-radius: 50%;
-}
-main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"]:checked + .form-check-label-new-offer:before {
-    height: 0.5em;
-    width: 0.5em;
-    border: 0.3em solid var(--blanco);
-    background-color: #4189e0;
-}
-main.editar-producto div.vista-editar-producto .form-check-radio input[type="radio"]:checked + .form-check-label-new-offer {
-    background-color: #4189e0;
-    color: var(--blanco);
-}
-main.editar-producto div.vista-editar-producto .form-check-label-disponible {
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-    background: #aaa;
-    border-radius: 100px;
-    position: relative;
-    cursor: pointer;
-}
-main.editar-producto div.vista-editar-producto .form-check-label-disponible:after {
-    position: absolute;
-    content: "";
-    width: 13px;
-    height: 13px;
-    background: #fff;
-    border-radius: 100px;
-    top: 4px;
-    left: 5px;
-    transition: 0.3s
-}
-main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"] {
-    display: none;
-}
-main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"]:checked ~ .form-check-label-disponible {
-    background: #61a0ff;
-}
-main.editar-producto div.vista-editar-producto .form-switch-disponible input[type= "checkbox"]:checked ~ .form-check-label-disponible:after {
-    left: 23px;
-}
 
+main.editar-producto .contenedor-switch input.input-switch-disponible {
+    display: none;
+  }
+  main.editar-producto .contenedor-switch.contenedor-switch label {
+    color: var(--verde-azulado-claro);
+    position: relative;
+  }
+  main.editar-producto .contenedor-switch input.input-switch-disponible + label::before {
+    content: " ";
+    display: block;
+    height: 18px;
+    width: 45px;
+    border: 1px solid var(--gris-claro);
+    border-radius: 9px;
+    position: absolute;
+    top: 0px;
+    left: -65px;
+    background: var(--gris-claro);
+  }
+  
+  main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::before{
+    background-color: var(--verde-azulado-claro);
+    border: 1px solid var(--verde-azulado-claro);
+  }
+  
+  main.editar-producto .contenedor-switch input.input-switch-disponible + label::after {
+    content: " ";
+    display: block;
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--gris85);
+    border-radius: 50%;
+    position: absolute;
+    top: -6px;
+    left: -75px;
+    background: var(--gris85);
+    transition: all 0.3s ease-in;
+  }
+  
+  
+  main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::after {
+    left: -40px;
+    transition: all 0.3s ease-in;
+    background: var(--molocoton-oscuro);
+    border: 1px solid var(--molocoton-oscuro);
+}
 main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
     display: inline-block;
     text-align: center;
@@ -382,4 +367,3 @@ main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-cre
     color: var(--blanco);
   
   }
-  
