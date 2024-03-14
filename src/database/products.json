@@ -24,124 +24,16 @@
       "available": true
    },
    {
-      "id": 3,
-      "image": [],
-      "name": "nube de algodón",
-      "description": "una remera de algodón todo terreno y suave",
-      "featuredDescription": "",
+      "id": 2,
+      "image": [
+         "image-1710443878037.png",
+         "image-1710443878038.png",
+         "image-1710443878040.png"
+      ],
+      "name": "Remera todoterreno",
+      "description": "Remera de algodón básica, usable en cualquier situación",
+      "featuredDescription": "Una remera que se va a convertir en tu aliada día a día",
       "category": "Remeras",
-      "sizes": [
-         true,
-         false,
-         false,
-         false,
-         false
-      ],
-      "colors": [
-         "black",
-         "white",
-         "red"
-      ],
-      "price": 22222,
-      "new": false,
-      "sale": true,
-      "available": true
-   },
-   {
-      "id": 4,
-      "image": [],
-      "name": "nunu",
-      "description": "",
-      "featuredDescription": "",
-      "category": "Categorías de producto",
-      "sizes": [
-         false,
-         false,
-         false,
-         false,
-         false
-      ],
-      "colors": [
-         "bluishGreen"
-      ],
-      "price": 0,
-      "new": false,
-      "sale": true,
-      "available": true
-   },
-   {
-      "id": 5,
-      "image": [],
-      "name": "",
-      "description": "",
-      "featuredDescription": "",
-      "category": "Categorías de producto",
-      "sizes": [
-         true,
-         true,
-         false,
-         false,
-         false
-      ],
-      "colors": [],
-      "price": 0,
-      "new": false,
-      "sale": true,
-      "available": false
-   },
-   {
-      "id": 6,
-      "image": [],
-      "name": "pepito",
-      "description": "",
-      "featuredDescription": "",
-      "category": "Categorías de producto",
-      "sizes": [
-         false,
-         false,
-         false,
-         false,
-         false
-      ],
-      "colors": [],
-      "price": 0,
-      "new": false,
-      "sale": true,
-      "available": false
-   },
-   {
-      "id": 7,
-      "image": [
-         "undefined-1710390529511.jpg"
-      ],
-      "name": "",
-      "description": "",
-      "featuredDescription": "",
-      "category": "Categorías de producto",
-      "sizes": [
-         false,
-         false,
-         false,
-         false,
-         false
-      ],
-      "colors": [],
-      "price": 0,
-      "new": false,
-      "sale": true,
-      "available": false
-   },
-   {
-      "id": 8,
-      "image": [
-         "undefined-1710390625753.jpg",
-         "undefined-1710390625753.jpg",
-         "undefined-1710390625756.jpg"
-      ],
-      "name": "pepito sadwichito",
-      "description": "ropa que se ve como sandwich",
-      "featuredDescription": "y que huele como sandwich",
-      "category": "Cápsula American",
       "sizes": [
          true,
          true,
@@ -150,58 +42,232 @@
          true
       ],
       "colors": [
-         "white",
-         "red",
-         "green",
-         "orange"
+         "beige",
+         "green"
       ],
-      "price": 12345,
+      "price": 8000,
       "new": false,
       "sale": true,
-      "available": false
+      "available": true
+   },
+   {
+      "id": 3,
+      "image": [
+         "image-1710444100211.jpg",
+         "image-1710444100213.png",
+         "image-1710444100214.png"
+      ],
+      "name": "Campera de Jean",
+      "description": "Campera de Jean no binarie, holgada y con mucho estilo",
+      "featuredDescription": "Una prenda para ponerle onda a tu rutina de todos los días",
+      "category": "Abrigos",
+      "sizes": [
+         false,
+         true,
+         true,
+         true,
+         false
+      ],
+      "colors": [
+         "blue",
+         "lightblue",
+         "pink"
+      ],
+      "price": 42000,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 4,
+      "image": [
+         "image-1710444275288.jpg",
+         "image-1710444275289.png",
+         "image-1710444275291.png"
+      ],
+      "name": "Joggin cargo",
+      "description": "Joggin super comodo, para que te sientas libre y comodx siempre",
+      "featuredDescription": "¡Sentite comodx y urbanx!",
+      "category": "Pantalones y shorts",
+      "sizes": [
+         true,
+         true,
+         true,
+         true,
+         true
+      ],
+      "colors": [
+         "beige",
+         "blue",
+         "pink"
+      ],
+      "price": 18000,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 5,
+      "image": [
+         "image-1710444393328.jpg",
+         "image-1710444393329.png",
+         "image-1710444393769.png"
+      ],
+      "name": "Remera overzise",
+      "description": "Remera oversize super olgada",
+      "featuredDescription": "Te sentirás libre con esta prenda super comoda",
+      "category": "Remeras",
+      "sizes": [
+         true,
+         true,
+         true,
+         true,
+         true
+      ],
+      "colors": [
+         "black",
+         "beige",
+         "white"
+      ],
+      "price": 17000,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 6,
+      "image": [
+         "image-1710444541165.jpg",
+         "image-1710444541166.png",
+         "image-1710444541633.png"
+      ],
+      "name": "Pantalon a cuadros",
+      "description": "Pantalón a cuadros edgy y con mucho estilo",
+      "featuredDescription": "Descubrirás un estilo único e innovador con esta prenda zinke",
+      "category": "Pantalones y shorts",
+      "sizes": [
+         false,
+         true,
+         true,
+         true,
+         false
+      ],
+      "colors": [
+         "beige"
+      ],
+      "price": 13500,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 7,
+      "image": [
+         "image-1710444623614.jpg",
+         "image-1710444623615.png",
+         "image-1710444624060.png"
+      ],
+      "name": "Chaleco de jean",
+      "description": "Chaleco de jean rockero y con estilo",
+      "featuredDescription": "Sin mangas y con mucha onda, este chaleco te dará el estilo que siempre buscaste",
+      "category": "Abrigos",
+      "sizes": [
+         false,
+         true,
+         true,
+         false,
+         true
+      ],
+      "colors": [
+         "black",
+         "blue",
+         "lightblue"
+      ],
+      "price": 12500,
+      "new": false,
+      "sale": true,
+      "available": true
+   },
+   {
+      "id": 8,
+      "image": [
+         "image-1710444797275.jpg",
+         "image-1710444797277.png",
+         "image-1710444797278.png"
+      ],
+      "name": "Short jogging",
+      "description": "Jogging de algodón que te permitirá realizar mas comodx todas tus actividades",
+      "featuredDescription": "Jogging super comodo para tu rutina",
+      "category": "Pantalones y shorts",
+      "sizes": [
+         true,
+         true,
+         true,
+         true,
+         true
+      ],
+      "colors": [
+         "black",
+         "beige",
+         "white"
+      ],
+      "price": 11500,
+      "new": false,
+      "sale": true,
+      "available": true
    },
    {
       "id": 9,
       "image": [
-         "undefined-1710390934776.jpg"
+         "image-1710444931685.jpg",
+         "image-1710444931686.png",
+         "image-1710444932167.png"
       ],
-      "name": "pepito sadwichito",
-      "description": "ropa que se ve como sandwich",
-      "featuredDescription": "y que huele como sandwich",
-      "category": "Cápsula American",
+      "name": "Vestido slim fit",
+      "description": "Vestido pegado al cuerpo de algodon y spandex super comodo",
+      "featuredDescription": "En este verano sentite linx, comodx y libre con tu cuerpo",
+      "category": "Categorías de producto",
       "sizes": [
-         false,
-         false,
-         false,
-         false,
-         false
+         true,
+         true,
+         true,
+         true,
+         true
       ],
-      "colors": [],
-      "price": 12345,
+      "colors": [
+         "black",
+         "lavender",
+         "pink"
+      ],
+      "price": 22000,
       "new": false,
       "sale": true,
-      "available": false
+      "available": true
    },
    {
       "id": 10,
       "image": [
-         "image-1710391313347.jpg"
+         "image-1710445129750.png",
+         "image-1710445129751.png",
+         "image-1710445130260.jpg"
       ],
-      "name": "pruebita200mil",
-      "description": "",
-      "featuredDescription": "",
-      "category": "Categorías de producto",
+      "name": "Blazer oversize",
+      "description": "Blazer oversize tela sastrera con botones en la manga",
+      "featuredDescription": "Blazer oversize con mas estilo del que esperabas",
+      "category": "Abrigos",
       "sizes": [
-         false,
-         false,
-         false,
+         true,
+         true,
+         true,
          false,
          false
       ],
-      "colors": [],
-      "price": 0,
+      "colors": [
+         "black"
+      ],
+      "price": 29000,
       "new": false,
       "sale": true,
-      "available": false
+      "available": true
    }
 ]
