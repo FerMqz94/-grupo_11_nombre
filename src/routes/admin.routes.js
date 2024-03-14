@@ -1,13 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const { createProduct, storeProduct, editProduct, updateProduct, listProducts, deleteProduct, destroyProduct } = require("../controllers/admin");
+const { uploadProducts } = require("../middlewares/uploads");
 
 // "/admin"
 router.get("/productos", listProducts); 
 router.get('/crear-productos', createProduct);
-router.post('/crear-productos', storeProduct)
-router.get('/editar-productos', editProduct);
-router.post('/editar-productos', updateProduct);
+router.post('/crear-productos', uploadProducts.array('image'), storeProduct)
+router.get('/editar-productos/:id', editProduct);
+router.post('/editar-productos/:id', updateProduct);
 
 // eliminacion de producto
 router.get('/eliminar-producto/:id', deleteProduct);
