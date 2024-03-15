@@ -1,4 +1,7 @@
+const { loadData } = require("../../database");
+
 module.exports = (req,res) => {
-    res.render("./cart/cart")
+  const products = loadData()
+    res.render("./cart/cart", {products})
   }
 

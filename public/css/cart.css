@@ -184,18 +184,13 @@
   div.contenedor-otros-productos
   article.dos-continentes {
   width: 45%;
-
-  height: 200px;
-
+  height: 223px;
   /* padding: 10px 20px 10px 20px; */
-
   border: 1px solid var(--gris-claro);
-
   border-radius: 5%;
-
   text-align: center;
-
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 .main-carrito
@@ -539,14 +534,10 @@
 
   .main-carrito section.otrosFav div.contenedor-otros-productos {
     display: flex;
-
-    width: 98%;
-
-    flex-wrap: wrap;
-
-    align-items: self-end;
-
-    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 
   .main-carrito
@@ -556,10 +547,10 @@
     padding: 10px 20px 10px 20px;
     border: 1px solid var(--gris-claro);
     border-radius: 5%;
-    width: 30%;
-    text-align: center;
-    height: 300px;
-    margin-right: revert;
+    width: 25%;
+    /* text-align: center; */
+    height: 283px;
+    /* margin-right: revert; */
   }
 
   .main-carrito
@@ -567,7 +558,7 @@
     div.contenedor-otros-productos
     article.productos-otrosFav
     img.blazer-dos-conti {
-    width: 180px;
+    width: 143px;
     margin: 0;
   }
 
@@ -731,6 +722,9 @@
   .main-carrito section.otrosFav {
     margin-top: 70px;
   }
+  .main-carrito section.otrosFav div.contenedor-otros-productos {
+    width: 103%;
+}
 
   .main-carrito section.otrosFav h3.otrosFav {
     font-size: var(--letra-titular-mayor);
@@ -742,13 +736,11 @@
     section.otrosFav
     div.contenedor-otros-productos
     article.productos-otrosFav {
-    height: 400px;
-
+    height: 444px;
     flex-basis: 30%;
-
     text-align: center;
-
     overflow: hidden;
+    width: 35%;
   }
 
   .main-carrito
@@ -756,7 +748,7 @@
     div.contenedor-otros-productos
     article.productos-otrosFav
     img.blazer-dos-conti {
-    width: 249px;
+    width: 241px;
   }
 
   .main-carrito

@@ -8,7 +8,7 @@ module.exports = (req, res) => {
     const productsFind = products.find(p => p.id === +id) 
     if (productsFind) {
       
-    res.render("products/productDetail", {product: productsFind, toThousand  })
+    res.render("products/productDetail", {product: productsFind, toThousand, products  } )
     } else {
       const image = req.file
         res.render("products/productDetail", { image:image })

@@ -660,18 +660,13 @@ main.vista-producto
   div.contenedor-otros-productos
   article.dos-continentes {
   width: 45%;
-
-  height: 200px;
-
+  height: 230px;
   /* padding: 10px 20px 10px 20px; */
-
   border: 1px solid var(--gris-claro);
-
   border-radius: 5%;
-
   text-align: center;
-
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 main.vista-producto
@@ -679,8 +674,7 @@ main.vista-producto
   div.contenedor-otros-productos
   article.productos-otrosFav
   img.blazer-dos-conti {
-  width: 100px;
-
+  width: 98px;
   margin: 10px;
 }
 
@@ -698,12 +692,9 @@ main.vista-producto
   article.productos-otrosFav
   a.a-dos-conti
   h4.h4-dos-conti {
-  margin-top: 13%;
-
+  margin-top: 6%;
   font-size: var(--letra-mas-pequeña);
-
   color: var(--gris-claro);
-
   font-weight: 500;
 }
 
@@ -1447,29 +1438,24 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.otrosFav div.contenedor-otros-productos {
     display: flex;
-    width: 98%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 101%;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
   }
 
   main.vista-producto
     section.otrosFav
     div.contenedor-otros-productos
     article.dos-continentes {
-    padding: 10px 20px 10px 20px;
-
+    padding: 10px;
     border: 1px solid var(--gris-claro);
-
     border-radius: 5%;
-
-    width: 30%;
-
+    width: 38%;
     text-align: center;
-
-    height: 300px;
-
-    margin-right: revert;
+    height: 271px;
+    /* margin-right: revert; */
   }
 
   main.vista-producto
@@ -1477,8 +1463,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-otros-productos
     article.productos-otrosFav
     img.blazer-dos-conti {
-    width: 180px;
-
+    width: 137px;
     margin: 0;
   }
 
@@ -1867,12 +1852,9 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     section.otrosFav
     div.contenedor-otros-productos
     article.productos-otrosFav {
-    height: 400px;
-
+    height: 397px;
     flex-basis: 30%;
-
     text-align: center;
-
     overflow: hidden;
   }
 
@@ -1881,7 +1863,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-otros-productos
     article.productos-otrosFav
     img.blazer-dos-conti {
-    width: 249px;
+    width: 211px;
   }
 
   main.vista-producto
