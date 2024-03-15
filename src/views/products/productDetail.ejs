@@ -208,7 +208,7 @@
 
     <section class="otrosFav">
       <h3 class="otrosFav">OTROS FAV</h3>
-      <div class="contenedor-otros-productos">
+      <!-- <div class="contenedor-otros-productos">
         <article class="productos-otrosFav dos-continentes">
           <img class="blazer-dos-conti" src="/images/products/dos-continentes.png" alt="blazer dos continentes">
           <a href="#" class="a-dos-conti">
@@ -237,7 +237,16 @@
           </a>
           <p class="p-lets-normcore">$85.000</p>
         </article>
+      </div> -->
+      <% products.forEach(p => { %>
+      <div class="card" style="width: 18rem;">
+        <img src="/images/products/<%= p.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" style="color:black"><%= p.name %></h5>
+          <p class="card-text" style="color:black"><%= p.description %></p>
+        </div>
       </div>
+      <% }) %>
     </section>
 
     <div class="boton-whatsapp">
