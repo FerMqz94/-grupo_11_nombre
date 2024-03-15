@@ -988,7 +988,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   main.vista-producto section.visualizacion-producto {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 
   main.vista-producto
@@ -1108,8 +1109,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   main.vista-producto
     section.visualizacion-producto
     div.contenedor-global-info-producto {
-    width: 45%;
-
+    width: 34%;
     display: inline-block;
   }
 
@@ -1652,7 +1652,6 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     section.visualizacion-producto
     div.contenedor-vistas-imagenes {
     margin-top: 20px;
-
     width: 42%;
   }
 
@@ -1723,6 +1722,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     section.visualizacion-producto
     div.contenedor-global-info-producto {
     margin-left: 30px;
+    height: 0px;
   }
 
   /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
@@ -1839,12 +1839,12 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto article.contenedor-descripcion {
     margin-left: 60px;
-
-    width: 85%;
+    width: 48%;
   }
 
   main.vista-producto article.contenedor-descripcion p.descripcion {
     font-size: var(--letra-mediana);
+    width: 100%;
   }
 
   main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {

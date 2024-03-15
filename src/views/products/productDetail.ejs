@@ -1,287 +1,384 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {view : "producto" + product.name}) %>
+<%- include("../partials/head", {view : "producto-" + product.name}) %>
 
-<body class="vista-producto">
+  <body class="vista-producto">
 
-  <%- include("../partials/header", {productos: "black" , registro: true,ingreso: true}) %>
-
-
-
-  <main class="vista-producto">
-    <div class="contenedor-busqueda">
-      <a href="/" class="inicio">Inicio/</a>
-      <a href="/productDetail" class="productos">Productos/</a>
-      <a href="#" class="abrigos"><%= product.category %>s/</a>
-      <a class="blazer"><%= product.name %></a>
-    </div>
-    
-
-    <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
-    
+    <%- include("../partials/header", {productos: "black" , registro: true,ingreso: true}) %>
 
 
 
-   <section class="visualizacion-producto">
-
-    <div class="contenedor-vistas-imagenes">
-
-    <div class="glider-contain">
-      <div class="glider">
-      <!--img 1-->
-      <% if (product.image) { %>
-        <div>
-          <div class="contenedor-blazerOver-principal">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-principal">
-                <img class="blazer-over-principal" src="/images/products/<%= product.image[0]  %>" alt="<%= product.name %>">
-            </div>
-         </div>
-        </div>
-        <% } else {%>
-          <% } %>
-
-        <!--img 2-->
-        <% if (product.image[1]) { %>
-
-        <div>
-
-          <div class="contenedor-blazerOver-principal">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-principal">
-                <img class="blazer-over-principal" src="/images/products/<%= product.image[1]  %>" alt="<%= product.name  %>">
-            </div>
-         </div>
-          
-        </div>
-        <% } else {  %>
-
-        <% } %>
-
-        <!--img 3-->
-        <% if (product.image[2]) { %>
-        <div>
-          <div class="contenedor-blazerOver-principal">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-principal">
-              <img class="blazer-over-principal" src="/images/products/<%= product.image[2]%>" alt="<%= product.name %>">
-            </div>
-          </div>
-
-        </div>
-        <% } else {  %>
-
-        <% } %>
-
-        <!--img 4-->
-        <% if (product.image[3]) { %>
-
-        <div>
-        
-          <div class="contenedor-blazerOver-principal">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-regular fa-heart"></i>
-            <div class="contenedor-img-principal">
-              <img class="blazer-over-principal" src="/images/products/<%= product.image[1]%>" alt="<%= product.name %>">
-            </div>
-          </div>
-          <!-- contenedor-img-4 -->
-        </div>
-        <% } else {  %>
-
-        <% } %>
-       
-        
-      </div>
-      <% if (product.image[1]) { %>
-      <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
-      <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
-      <% } else {%>
-        <% } %>
-      <div role="tablist" class="dots"></div>
-    </div>
-
-    </div>
-
-
-
-    
-
-      <!--CONTENEDOR GLOBAL DE TODA LA DATA DEL PRODUCTO QUE NO SEAN FOTOS-->
-      <div class="contenedor-global-info-producto">
-
-
-        <!---CONTENEDOR DE DATOS PRINCIPALES DEL PRODUCTO NOMBRE-PRECIO-TALLE-->
-        <div class="nombre-precio-talle">
-          <h2 class="blazer-over"><%= product.name%></h2>
-          <P class="precio">$<%= toThousand (product.price) %></P>
-          <P class="talle">TALLE: <span>2</span></p>
-        </div>
-
-        <div class="talles">
-          <div class="uno">
-            <button type="button" class="boton-uno">1
-            </button>
-          </div>
-          <div class="dos">
-            <button type="button" class="boton-dos">2
-            </button>
-          </div>
-          <div class="tres">
-            <button type="button" class="boton-tres">3
-            </button>
-          </div>
-          <div class="cuatro">
-            <button type="button" class="boton-cuatro">4
-            </button>
-          </div>
-          <div class="cinco">
-            <button type="button" class="boton-cinco">5
-            </button>
-          </div>
-          <div class="seis">
-            <button type="button" class="boton-seis">6
-            </button>
-          </div>
-
-        </div>
-
-        <div class="cantidad-carrito">
-          <form class="form-carrito" action="/productDetail" method="POST">
-            <label class="label-carrito" for="cantidad">CANTIDAD</label>
-            <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
-            <div class="contenedor-boton-carrito">
-              <button type="submit" class="agregar-carrito"><a href="/carrito">AGREGAR AL CARRITO</button>
-            </div>
-          </form>
-        </div>
-
-        <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
-
-        <div class="envio">
-          <form action="/productDetail" method="POST" class="form-carrito">
-            <i class="fa-solid fa-truck"></i>
-            <label class="label-carrito" for="medioEnvio">Medios de envío</label>
-            <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio"
-              placeholder="Tu código postal">
-            <button type="submit" class="boton-calcular">CALCULAR</button>
-            <p class="nose-postal">No sé mi código postal</p>
-          </form>
-        </div>
-
-        <!---CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA-->
-
-        <article class="info-adicional-compra">
-          <div class="detalle-talles">
-            <i class="fa-solid fa-ruler-combined"></i>
-            <h3 class="talles">Guía de talles</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <div class="cambiosDevo">
-            <i class="fa-solid fa-arrows-rotate"></i>
-            <h3 class="cambios">Cambios y devoluciones</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-          <div class="formaPago">
-            <i class="fa-solid fa-id-card"></i>
-            <h3 class="formaPago">Forma de pago</h3>
-            <i class="fa-solid fa-plus"></i>
-          </div>
-        </article>
-
-      </div>
-
-    </section>
-
-      <!---------------DESCRIPCIÓN DESTACADA DEL PRODUCTO MÁS EXTENSA------->
-
-    <article class="contenedor-descripcion">
-      <p class="descripcion"><%= product.description%></p>
-      <h5 class="descripcion-destacada"><%= product.featuredDescription %></p>
-    </article>
-
-    <!-----OTROS PRODUCTOS------->
-
-    <section class="otrosFav">
-      <h3 class="otrosFav">OTROS FAV</h3>
-      <!-- <div class="contenedor-otros-productos">
-        <article class="productos-otrosFav dos-continentes">
-          <img class="blazer-dos-conti" src="/images/products/dos-continentes.png" alt="blazer dos continentes">
-          <a href="#" class="a-dos-conti">
-            <h4 class="h4-dos-conti">BLAZER DOS CONTINENTES</h4>
+      <main class="vista-producto">
+        <div class="contenedor-busqueda">
+          <a href="/" class="inicio">Inicio/</a>
+          <a href="/productDetail" class="productos">Productos/</a>
+          <a href="#" class="abrigos">
+            <%= product.category %>s/
           </a>
-          <p class="p-dos-conti">$ 30.000</p>
-        </article>
-        <article class="productos-otrosFav poison-ivy">
-          <img class="chaqueta-ivy" src="/images/products/poison-ivy.png" alt="chaqueta poison ivy">
-          <a class="a-chaqueta-ivy" href="#">
-            <h4 class="h4-chaqueta-ivy">CHAQUETA POISON IVY</h4>
+          <a class="blazer">
+            <%= product.name %>
           </a>
-          <p class="p-chaqueta-ivy">$ 50.000</p>
-        </article>
-        <article class="productos-otrosFav weird-barbie">
-          <img class="chaqueta-weird-barbie" src="/images/products/weird-barbie.png" alt="chaqueta weird barbie">
-          <a class="a-weird-barbie" href="#">
-            <h4 class="h4-weird-barbie">CHAQUETA WEIRD BARBIE NEGRO</h4>
-          </a>
-          <p class="p-weird-barbie">$65.000</p>
-        </article>
-        <article class="productos-otrosFav lets-normcore">
-          <img class="abrigo-lets-normcore" src="/images/products/norm-core.png" alt="abrigo normcore">
-          <a href="#" class="a-lets-normcore">
-            <h4 class="h4-lets-normcore">ABRIGO LETS NORMCORE</h4>
-          </a>
-          <p class="p-lets-normcore">$85.000</p>
-        </article>
-      </div> -->
-      <% products.forEach(p => { %>
-      <div class="card" style="width: 18rem;">
-        <img src="/images/products/<%= p.image %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title" style="color:black"><%= p.name %></h5>
-          <p class="card-text" style="color:black"><%= p.description %></p>
         </div>
-      </div>
-      <% }) %>
-    </section>
-
-    <div class="boton-whatsapp">
-      <img src="/images/other/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo"/>
-    </div>
 
 
-    <!--------IMAGEN DE CIERRE CON MENSAJE DE LA MARCA------------->
+        <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
 
-    <div class="imagen-cierre">
 
-      <img src="/images/banner/mensaje-de-la-marca-desktop-tablet.png" alt="banner_inferior" class="imagen-cierre-desk-tablet">
-      <img src="/images/banner/mensaje-de-la-marca-phone.png" alt="mensaje marca mobile" class="imagen-cierre-mobile">
-    </div>
-    <!-- <% if (product.colors.includes("red")) { %>
-      <p>tenemos red</p>
-      
-      <% } else  { %>
-        <p>jajajaj no hay red</p>
-        <% } %>
-        -->
+
+
+        <section class="visualizacion-producto">
+
+          <div class="contenedor-vistas-imagenes">
+
+            <div class="glider-contain">
+              <div class="glider">
+                <!--img 1-->
+                <% if (product.image) { %>
+                  <div>
+                    <div class="contenedor-blazerOver-principal">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <i class="fa-regular fa-heart"></i>
+                      <div class="contenedor-img-principal">
+                        <img class="blazer-over-principal" src="/images/products/<%= product.image[0]  %>"
+                          alt="<%= product.name %>">
+                      </div>
+                    </div>
+                  </div>
+                  <% } else {%>
+                    <% } %>
+
+                      <!--img 2-->
+                      <% if (product.image[1]) { %>
+
+                        <div>
+
+                          <div class="contenedor-blazerOver-principal">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <div class="contenedor-img-principal">
+                              <img class="blazer-over-principal" src="/images/products/<%= product.image[1]  %>"
+                                alt="<%= product.name  %>">
+                            </div>
+                          </div>
+
+                        </div>
+                        <% } else { %>
+
+                          <% } %>
+
+                            <!--img 3-->
+                            <% if (product.image[2]) { %>
+                              <div>
+                                <div class="contenedor-blazerOver-principal">
+                                  <i class="fa-solid fa-magnifying-glass"></i>
+                                  <i class="fa-regular fa-heart"></i>
+                                  <div class="contenedor-img-principal">
+                                    <img class="blazer-over-principal" src="/images/products/<%= product.image[2]%>"
+                                      alt="<%= product.name %>">
+                                  </div>
+                                </div>
+
+                              </div>
+                              <% } else { %>
+
+                                <% } %>
+
+                                  <!--img 4-->
+                                  <% if (product.image[3]) { %>
+
+                                    <div>
+
+                                      <div class="contenedor-blazerOver-principal">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <i class="fa-regular fa-heart"></i>
+                                        <div class="contenedor-img-principal">
+                                          <img class="blazer-over-principal"
+                                            src="/images/products/<%= product.image[1]%>" alt="<%= product.name %>">
+                                        </div>
+                                      </div>
+                                      <!-- contenedor-img-4 -->
+                                    </div>
+                                    <% } else { %>
+
+                                      <% } %>
+
+
+              </div>
+              <% if (product.image[1]) { %>
+                <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
+                <% } else {%>
+                  <% } %>
+                    <div role="tablist" class="dots"></div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <!--CONTENEDOR GLOBAL DE TODA LA DATA DEL PRODUCTO QUE NO SEAN FOTOS-->
+          <div class="contenedor-global-info-producto">
+
+
+            <!---CONTENEDOR DE DATOS PRINCIPALES DEL PRODUCTO NOMBRE-PRECIO-TALLE-->
+            <div class="nombre-precio-talle">
+              <h2 class="blazer-over">
+                <%= product.name%>
+              </h2>
+              <P class="precio">$<%= toThousand (product.price) %>
+              </P>
+              <P class="talle">TALLE: <span>2</span></p>
+
+              <p>colores</p>
+
+              <div>
+
+                <% if (product.colors.includes("black")) { %>
+                  <button class="colores"
+                    style="background-color: #000000; border-radius: 100px; height: 25px; width: 25px;"></button>
+                  <% } else { %>
+                    <% } %>
+                      <% if (product.colors.includes("beige")) { %>
+                        <button class="colores"
+                          style="background-color: #f5f5dc; border-radius: 100px; height: 25px; width: 25px;"></button>
+                        <% } else { %>
+                          <% } %>
+                            <% if (product.colors.includes("blue")) { %>
+                              <button class="colores"
+                                style="background-color: #0000ff; border-radius: 100px; height: 25px; width: 25px;"></button>
+                              <% } else { %>
+                                <% } %>
+                                  <% if (product.colors.includes("white")) { %>
+                                    <button class="colores"
+                                      style="background-color: #ffffff; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                    <% } else { %>
+                                      <% } %>
+                                        <% if (product.colors.includes("red")) { %>
+                                          <button class="colores"
+                                            style="background-color: #ff0000; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                          <% } else { %>
+                                            <% } %>
+                                              <% if (product.colors.includes("green")) { %>
+                                                <button class="colores"
+                                                  style="background-color: #008000; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                <% } else { %>
+                                                  <% } %>
+                                                    <% if (product.colors.includes("purple")) { %>
+                                                      <button class="colores"
+                                                        style="background-color: #800080; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                      <% } else { %>
+                                                        <% } %>
+                                                          <% if (product.colors.includes("orange")) { %>
+                                                            <button class="colores"
+                                                              style="background-color: #ffa500; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                            <% } else { %>
+                                                              <% } %>
+                                                                <% if (product.colors.includes("lightblue")) { %>
+                                                                  <button class="colores" style="background-color: #add8e6; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                  <% } else { %>
+                                                                    <% } %>
+                                                                      <% if (product.colors.includes("gray")) { %>
+                                                                        <button class="colores" style="background-color: #808080; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                        <% } else { %>
+                                                                          <% } %>
+                                                                            <% if (product.colors.includes("lavender")) { %>                                                                              
+                                                                              <button class="colores" style="background-color: #e6e6fa; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                              <% } else { %>
+                                                                                <% } %>
+                                                                                  <% if(product.colors.includes("pink")) {%>
+                                                                                    <button class="colores" style="background-color: #ffc0cb; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                                    <% } else { %>
+                                                                                      <% } %>
+                                                                                        <% if (product.colors.includes("silver")) { %>
+                                                                                          <button class="colores"
+                                                                                            style="background-color: #c0c0c0; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                                          <% } else { %>
+                                                                                            <% } %>
+                                                                                              <% if (product.colors.includes("bluishGreen")) { %>
+                                                                                                <button class="colores"style="background-color: #419197; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                                                  
+                                                                                                <% } else { %>
+                                                                                                  <% } %>
+                                                                                                    <% if (product.colors.includes("gold")) { %>
+                                                                                                      <button
+                                                                                                        class="colores"
+                                                                                                        style="background-color: #ffd700; border-radius: 100px; height: 25px; width: 25px;"></button>
+                                                                                                      <% } else { %>
+                                                                                                        <% } %>
+              </div>
+            </div>
+            <div class="talles">
+              <% if (product.sizes[0] === true ) { %>
+                <div class="uno">
+                <button type="button" class="boton-uno">1
+                </button>
+              </div>
+                <% } else { %>
+                  <% } %>
+                  <% if (product.sizes[1] === true ) { %>
+              <div class="dos">
+                <button type="button" class="boton-dos">2
+                </button>
+              </div>
+              <% } else { %>
+                <% } %>
+                <% if (product.sizes[2] === true ) { %>
+              <div class="tres">
+                <button type="button" class="boton-tres">3
+                </button>
+              </div>
+              <% } else { %>
+                <% } %>
+                <% if (product.sizes[3] === true ) { %>
+              <div class="cuatro">
+                <button type="button" class="boton-cuatro">4
+                </button>
+              </div>
+              <% } else { %>
+                <% } %>
+                <% if (product.sizes[4] === true ) { %>
+              <div class="cinco">
+                <button type="button" class="boton-cinco">5
+                </button>
+              </div>
+              <% } else { %>
+                <% } %>
+                <% if (product.sizes[5] === true ) { %>
+              <div class="seis">
+                <button type="button" class="boton-seis">6
+                </button>
+              </div>
+              <% } else { %>
+                <% } %>
+
+            </div>
+
+            <div class="cantidad-carrito">
+              <form class="form-carrito" action="/productDetail" method="POST">
+                <label class="label-carrito" for="cantidad">CANTIDAD</label>
+                <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
+                <div class="contenedor-boton-carrito">
+                  <button type="submit" class="agregar-carrito"><a href="/carrito">AGREGAR AL CARRITO</button>
+                </div>
+              </form>
+            </div>
+
+            <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
+
+            <div class="envio">
+              <form action="/productDetail" method="POST" class="form-carrito">
+                <i class="fa-solid fa-truck"></i>
+                <label class="label-carrito" for="medioEnvio">Medios de envío</label>
+                <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio"
+                  placeholder="Tu código postal">
+                <button type="submit" class="boton-calcular">CALCULAR</button>
+                <p class="nose-postal">No sé mi código postal</p>
+              </form>
+            </div>
+
+            <!---CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA-->
+
+            <article class="info-adicional-compra">
+              <div class="detalle-talles">
+                <i class="fa-solid fa-ruler-combined"></i>
+                <h3 class="talles">Guía de talles</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div class="cambiosDevo">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <h3 class="cambios">Cambios y devoluciones</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div class="formaPago">
+                <i class="fa-solid fa-id-card"></i>
+                <h3 class="formaPago">Forma de pago</h3>
+                <i class="fa-solid fa-plus"></i>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+        <!---------------DESCRIPCIÓN DESTACADA DEL PRODUCTO MÁS EXTENSA------->
+
+        <article class="contenedor-descripcion">
+          <p class="descripcion">
+            <%= product.description%>
+          </p>
+          <h5 class="descripcion-destacada">
+            <%= product.featuredDescription %>
+              </p>
+        </article>
+
+        <!-----OTROS PRODUCTOS------->
+
+        <section class="otrosFav">
+          <h3 class="otrosFav">OTROS FAV</h3>
+          <div class="contenedor-otros-productos">
+            <article class="productos-otrosFav dos-continentes">
+              <img class="blazer-dos-conti" src="/images/products/dos-continentes.png" alt="blazer dos continentes">
+              <a href="#" class="a-dos-conti">
+                <h4 class="h4-dos-conti">BLAZER DOS CONTINENTES</h4>
+              </a>
+              <p class="p-dos-conti">$ 30.000</p>
+            </article>
+            <article class="productos-otrosFav poison-ivy">
+              <img class="chaqueta-ivy" src="/images/products/poison-ivy.png" alt="chaqueta poison ivy">
+              <a class="a-chaqueta-ivy" href="#">
+                <h4 class="h4-chaqueta-ivy">CHAQUETA POISON IVY</h4>
+              </a>
+              <p class="p-chaqueta-ivy">$ 50.000</p>
+            </article>
+            <article class="productos-otrosFav weird-barbie">
+              <img class="chaqueta-weird-barbie" src="/images/products/weird-barbie.png" alt="chaqueta weird barbie">
+              <a class="a-weird-barbie" href="#">
+                <h4 class="h4-weird-barbie">CHAQUETA WEIRD BARBIE NEGRO</h4>
+              </a>
+              <p class="p-weird-barbie">$65.000</p>
+            </article>
+            <article class="productos-otrosFav lets-normcore">
+              <img class="abrigo-lets-normcore" src="/images/products/norm-core.png" alt="abrigo normcore">
+              <a href="#" class="a-lets-normcore">
+                <h4 class="h4-lets-normcore">ABRIGO LETS NORMCORE</h4>
+              </a>
+              <p class="p-lets-normcore">$85.000</p>
+            </article>
+          </div>
+        </section>
+
+        <div class="boton-whatsapp">
+          <img src="/images/other/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo" />
+        </div>
+
+
+        <!--------IMAGEN DE CIERRE CON MENSAJE DE LA MARCA------------->
+
+        <div class="imagen-cierre">
+
+          <img src="/images/banner/mensaje-de-la-marca-desktop-tablet.png" alt="banner_inferior"
+            class="imagen-cierre-desk-tablet">
+          <img src="/images/banner/mensaje-de-la-marca-phone.png" alt="mensaje marca mobile"
+            class="imagen-cierre-mobile">
+        </div>
+
 
         <!-- este codigo es para indentificar una palabra dentro de un array -->
-        
-  </main>
-  <%- include("../partials/footer")  %>
 
-  
-<!--SCRIPT DE GLIDER-->
-<script src="/js/library/glider.min.js"></script>
-
-<!--SCRIPT DE CONFIGS GLIDER-->
-<script src="/js/configs/glider.js"></script>
+      </main>
+      <%- include("../partials/footer") %>
 
 
-</body>
+        <!--SCRIPT DE GLIDER-->
+        <script src="/js/library/glider.min.js"></script>
+
+        <!--SCRIPT DE CONFIGS GLIDER-->
+        <script src="/js/configs/glider.js"></script>
+
+
+  </body>
 
 </html>
