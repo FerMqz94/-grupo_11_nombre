@@ -1,5 +1,43 @@
 ### --------------------------------------------------- ###
 
+# SPRINT TRES 
+
+### --------------------------------------------------- ###
+
+# RETROSPECTIVA_GRUPO_11_ZINKE 
+(◕‿◕)(◕‿◕)
+🧔👨‍🦰🧑👩‍🦳
+
+# METODOLOGÍA ESTRELLA DE MAR ⭐
+
+
+## Comenzar a hacer:
+
+Nos proponemos concretar ciertos avances hacia la primera semana del sprint; de esta forma, podremos tener la oportunidad de presentarlos para una posible correción o despejar dudas que pudieran surgir, durante de la clase de apoyo de todos viernes.
+
+## Hacer más:
+
+Al igual que en el sprint anterior y de manera periódica compartiremos el progreso que cada integrante del equipo realice en relación a las tareas que le fueron asignadas. Incluso si no hay progreso alguno se deberá informar y compartir, tanto esto como posibles avances con una periodicidad no mayor a tres días o idealemente durante las dailys. Por otro lado, a través de whatsapp continuaremos coordinando las mencionadas dailys, tratando de que esta coordinación se realice con mayor anticipación. 
+
+## Continuar haciendo:
+
+Una de las metodologías de trabajo que nos resultaron más fructíferas fue el hacerlo de manera colaborativa. De esta manera, a través de esta modalidad, pudimos establecer un espacio que nos permitió compartir problemáticas y hallazgos enriquenciendo tanto el proyecto como nuestras propias trayectorias de aprendizaje. Por este motivo, buscamos sostener esos espacios, acordando los encuentros a través de whatsapp o informando a los compañeros cuando estemos por conectarnos a Discord y de esa manera aumentar las chances de posibles reuniones espontáneas. Por otro lado, otra de las estrategias de trabajo que continuaremos realizando es la de implementar una comunicación fluída entre los/as miembros del grupo.
+
+# Hacer menos:
+
+En relación a este punto, entre los integrantes del grupo, nos propusimos ser más puntuales en cuanto al cumplimiento de los horarios acordados para las dailys, así como para otro tipo de reuniones tales como los encuentros de trabajo colaborativo.  
+
+# Dejar de hacer:
+
+Trataremos de que si algún/a integrante del grupo está atrasado/a, este o esta se sienta lo suficientemente cómodo/a como para poder avisar con tiempo al resto de los/as compañeros/as y de esta manera poder ayudarlo/a o asumir parte del trabajo que le corresponda en caso de ser necesario.
+
+
+
+
+
+
+### --------------------------------------------------- ###
+
 # SPRINT DOS 
 
 ### --------------------------------------------------- ###
