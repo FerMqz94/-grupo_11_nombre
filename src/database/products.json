@@ -1,5 +1,4 @@
 [
-
    {
       "id": 2,
       "image": [
@@ -34,25 +33,21 @@
          "image-1710444100213.png",
          "image-1710444100214.png"
       ],
-      "name": "Campera de Jean",
+      "name": "Campera/camisa ondera",
       "description": "Campera de Jean no binarie, holgada y con mucho estilo",
       "featuredDescription": "Una prenda para ponerle onda a tu rutina de todos los días",
       "category": "Abrigos",
       "sizes": [
          false,
-         true,
-         true,
-         true,
+         false,
+         false,
+         false,
          false
       ],
-      "colors": [
-         "blue",
-         "lightblue",
-         "pink"
-      ],
+      "colors": [],
       "price": 42000,
       "new": false,
-      "sale": true,
+      "sale": false,
       "available": true
    },
    {

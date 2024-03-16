@@ -3,7 +3,7 @@ const { loadData, saveData } = require("../../database");
 module.exports = (req, res) => {
     const { id } = req.params;
     const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
-    // const image = req.file;
+    const image = req.file;
     const products = loadData()
     const colorsData = loadData('colors')
     const productMapped = products.map(p => {
