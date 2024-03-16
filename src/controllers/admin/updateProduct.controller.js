@@ -14,6 +14,11 @@ module.exports = (req, res) => {
             let colorsEditedBoolean = [];
             let colorsName;
             let colorsEdited = []
+            let newImages = [];
+
+            if(req.files.length){
+                newImages = req.files.map(img => img.filename);
+            }
 
             const editSizes = (size, sizesEdited) => {
                 sizeBoolean = !!size;
@@ -70,7 +75,7 @@ module.exports = (req, res) => {
                 new: neworsale === "new",
                 sale: neworsale === "sale",
                 available: !!available,
-                image: image ? image.filename : p.image
+                image: newImages.length ? newImages : p.image
             };
             if(image?.filename) {
                 const pathBeforeFile = path.join(__dirname, "../../../public/images/products/" + p.image);
