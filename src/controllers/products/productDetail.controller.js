@@ -11,6 +11,6 @@ module.exports = (req, res) => {
     res.render("products/productDetail", {product: productsFind, toThousand, products  } )
     } else {
       const image = req.file
-        res.render("products/productDetail", { image:image })
+        res.redirect("products/vista-no-encontrada")
     }
 }

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {view : "producto-" + product.name}) %>
+<%- include("../partials/head",{view :  product.name} ) %>
+
 
   <body class="vista-producto">
 
@@ -14,7 +15,7 @@
           <a href="/" class="inicio">Inicio/</a>
           <a href="/productDetail" class="productos">Productos/</a>
           <a href="#" class="abrigos">
-            <%= product.category %>s/
+            <%= product.category %>/
           </a>
           <a class="blazer">
             <%= product.name %>
