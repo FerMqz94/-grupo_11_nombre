@@ -79,122 +79,61 @@
                         <!-- Colores -->
                         <div class="colors-check">
                             <h3 class="titulo-colores col-12 my-3">Colores</h3>
-                            <% product.colors.forEach(color => { %>
+                        
+                            <% const colors = ["black", "beige", "blue", "white", "red", "green", "purple", "orange", "lightblue", "gray", "lavender", "pink", "silver", "bluishGreen", "gold"]; %>
+                        
+                            <% colors.forEach(color => { %>
+                                <% const isChecked = product.colors.includes(color); %>
                                 <div class="form-check-color">
-                                    <label class="form-check-label-color-black">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="black" name="black" <%= color === "black" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="black">Negro</span>
+                                    <label class="form-check-label-color-<%= color %>">
+                                        <input class="form-check-input-color" type="checkbox" value="" id="<%= color %>" name="<%= color %>" <%= isChecked ? 'checked' : '' %>>
+                                        <span class="form-check-span-color" for="<%= color %>">
+                                            <%= color === "black" ? "Negro" :
+                                                color === "beige" ? "Beige" :
+                                                color === "blue" ? "Azul" :
+                                                color === "white" ? "Blanco" :
+                                                color === "red" ? "Rojo" :
+                                                color === "green" ? "Verde" :
+                                                color === "purple" ? "Violeta" :
+                                                color === "orange" ? "Naranja" :
+                                                color === "lightblue" ? "Celeste" :
+                                                color === "gray" ? "Gris" :
+                                                color === "lavender" ? "Lila" :
+                                                color === "pink" ? "Rosa" :
+                                                color === "silver" ? "Plateado" :
+                                                color === "bluishGreen" ? "Petróleo" :
+                                                color === "gold" ? "Oro" : "" %>
+                                        </span>
                                     </label>
                                 </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-beige">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="beige" name="beige" <%= color === "beige" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="beige">Beige</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-blue">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="blue" name="blue" <%= color === "blue" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="blue">Azul</span>    
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-white">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="white" name="white" <%= color === "white" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="white">Blanco</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-red">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="red" name="red" <%= color === "red" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="red">Rojo</span>     
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-green">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="green" name="green" <%= color === "green" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="green">Verde</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-violet">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="purple" name="purple" <%= color === "purple" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="purple">Violeta</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-orange">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="orange" name="orange" <%= color === "orange" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="orange">Naranja</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-lightblue">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="lightblue" name="lightblue" <%= color === "lightblue" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="lightblue">Celeste</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-gray">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="gray" name="gray" <%= color === "gray" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="gray">Gris</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-lila">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="lavender" name="lavender" <%= color === "lavender" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="lavender">Lila</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-rose">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="pink" name="pink"<%= color === "pink" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="pink">Rosa</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-plated">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="silver" name="silver" <%= color === "silver" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="silver">Plateado</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-petroleo">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="bluishGreen" name="bluishGreen" <%= color === "bluishGreen" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="bluishGreen">Petróleo</span>
-                                    </label>
-                                </div>
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-gold">
-                                        <input class="form-check-input-color" type="checkbox" value="" id="gold" name="gold" <%= color === "gold" ? "checked" : "" %>>
-                                        <span class="form-check-span-color" for="gold">Oro</span>
-                                    </label>
-                                </div>
-                            <% }); %>
+                            <% }) %>
                         </div>
                         <!-- Nuevo - Oferta -->
                         <h3 class="titulo-nuevo-oferta col-12 my-3">Producto Nuevo o En Oferta</h3>
-                        <div class="nuevo-oferta d-flex my-3 col-10 my-md-5">
-                            <div class="nuevo col-6 col-md-4 col-lg-2">
-                                <label class="" for="option1">
-                                    <input type="radio" class="" name="neworsale" id="option1" autocomplete="off" <%= product.new ? "checked" : "" %>>
-                                    <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
-                                        <span>Nuevo</span>
-                                    </div>
-                                </label>
+                        <div class="nuevo-oferta-contenedor d-flex flex-wrap-wrap">
+                            <div class="nuevo-oferta d-flex my-3 col-6 my-md-5">
+                                <div class="nuevo col-6 col-md-4 col-lg-2">
+                                    <label class="" for="option1">
+                                        <input type="radio" class="" name="neworsale" id="option1" autocomplete="off" <%= product.new ? "checked" : "" %>>
+                                        <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                                            <span>Nuevo</span>
+                                        </div>
+                                    </label>
+                                </div>
                             </div>
+                            <div class="nuevo-oferta d-flex my-3 col-6 my-md-5">
+                                <div class="oferta col-6 col-md-4 col-lg-2">
+                                    <label class="" for="option2">
+                                        <input type="radio" class="" name="neworsale" id="option2" autocomplete="off" <%= product.sale ? "checked" : "" %>>
+                                        <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                                            <span>Oferta</span>
+                                        </div>
+                                    </label>
+                                </div>    
+                            </div>        
                         </div>
-                        <div class="nuevo-oferta d-flex my-3 col-10 my-md-5">
-                            <div class="oferta col-6 col-md-4 col-lg-2">
-                                <label class="" for="option2">
-                                    <input type="radio" class="" name="neworsale" id="option2" autocomplete="off" <%= product.sale ? "checked" : "" %>>
-                                    <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
-                                        <span>Oferta</span>
-                                    </div>
-                                </label>
-                            </div>    
-                        </div>        
                         <!-- Disponible -->
+                        <h3 class="titulo-nuevo-oferta col-12 my-3">Estado</h3>
                         <div class="form-check form-switch d-flex my-3 col-10 mx-auto my-md-3">
                             <div class="contenedor-switch col-10">
                                 <input type="checkbox" class="input-switch-disponible" id="available" name="available" <%= product.available ? "checked" : "" %>>
@@ -208,7 +147,7 @@
     
                         <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
                             <button type="submit" class="button-submit-crear-editar my-3">Enviar cambios</button>
-                            <button class="button-submit-crear-editar my-3"><a href="/admin/productos">Cancelar</a></button>
+                            <button class="button-submit-crear-editar my-3 mx-5"><a href="/admin/productos">Cancelar</a></button>
                         </div>
                     </form>
                 </div>    

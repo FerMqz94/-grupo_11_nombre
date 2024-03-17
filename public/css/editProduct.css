@@ -1,5 +1,6 @@
 main.editar-producto {
     font-family: var(--fuente-general);
+    margin-left: 20px;
 }
 
 main.editar-producto div.vista-editar-producto div.contenedor-titulo-boton-editar{
@@ -103,7 +104,7 @@ main.editar-producto div.vista-editar-producto .form-check-input-talle:checked ~
 main.editar-producto div.vista-editar-producto .colors-check {
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 15px;
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-black input[type= "checkbox"] {
     display: none;
@@ -123,7 +124,7 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-red input
 main.editar-producto div.vista-editar-producto .form-check-label-color-green input[type= "checkbox"] {
     display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-violet input[type= "checkbox"] {
+main.editar-producto div.vista-editar-producto .form-check-label-color-purple input[type= "checkbox"] {
     display: none;
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-orange input[type= "checkbox"] {
@@ -135,16 +136,16 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue
 main.editar-producto div.vista-editar-producto .form-check-label-color-gray input[type= "checkbox"] {
     display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lila input[type= "checkbox"] {
+main.editar-producto div.vista-editar-producto .form-check-label-color-lavender input[type= "checkbox"] {
     display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-rose input[type= "checkbox"] {
+main.editar-producto div.vista-editar-producto .form-check-label-color-pink input[type= "checkbox"] {
     display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-plated input[type= "checkbox"] {
+main.editar-producto div.vista-editar-producto .form-check-label-color-silver input[type= "checkbox"] {
     display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-petroleo input[type= "checkbox"] {
+main.editar-producto div.vista-editar-producto .form-check-label-color-bluishGreen input[type= "checkbox"] {
     display: none;
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-gold input[type= "checkbox"] {
@@ -172,7 +173,7 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-black:nth
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-beige:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: beige;
-    color: var(--gris-claro);
+    color: var(--negro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-blue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
@@ -182,7 +183,7 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-blue:nth-
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-white:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: var(--blanco);
-    color: var(--gris-claro);
+    color: var(--negro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-red:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
@@ -195,7 +196,7 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-green:nth
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-violet:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+main.editar-producto div.vista-editar-producto .form-check-label-color-purple:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: violet;
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
@@ -215,22 +216,22 @@ main.editar-producto div.vista-editar-producto .form-check-label-color-gray:nth-
     color: var(--negro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lila:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+main.editar-producto div.vista-editar-producto .form-check-label-color-lavender:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #d29bfd;
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-rose:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+main.editar-producto div.vista-editar-producto .form-check-label-color-pink:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #ff0080;
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-plated:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+main.editar-producto div.vista-editar-producto .form-check-label-color-silver:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #8a9597;
     color: var(--negro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-petroleo:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
+main.editar-producto div.vista-editar-producto .form-check-label-color-bluishGreen:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #084d6e;
     color: var(--gris-claro);
     box-shadow: 0px 2px 20px var(--verde-azulado-claro);
@@ -367,3 +368,28 @@ main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-cre
     color: var(--blanco);
   
   }
+
+@media (min-width: 768px) {
+    main.editar-producto {
+        margin-left: 20px;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    main.editar-producto {
+        margin-left: 20px;
+        
+    }
+    main.editar-producto div.card {
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+    }
+    main.editar-producto div.vista-editar-producto .colors-check {
+        display:flex;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    
+}
