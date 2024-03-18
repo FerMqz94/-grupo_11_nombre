@@ -1,0 +1,85 @@
+04/03/2024
+
+Paola Vera (18:43)
+
+Qué hice: Nada.
+Qué voy a hacer hoy: Redactar bien la retro.
+Impedimentos: Necesito repasar algunos contenidos y hacer el TP ML7-8.
+Tiago Cuello (18:44)
+
+Qué hice: Nada.
+Qué voy a hacer hoy: Empezar con mi parte del trabajo.
+Impedimentos: Me distraigo con facilidad siendo muy perfeccionista.
+Alexander S. Bejarano (18:45)
+
+Qué hice: Completando partes que faltaban a mi vista y mirando la clase grabada de Multer.
+Qué voy a hacer: Terminar de ver las clases grabadas para aplicar Multer en los proyectos.
+Impedimentos: Repasar contenido, fiebre, desgano, distracciones y procrastinación.
+Fer Márquez (18:49)
+
+(No hay entrada específica para este día).
+07/03/2024
+
+Alexander S. Bejarano (18:28)
+
+Qué hice: Realicé los campos de usuario y cree su respectivo JSON.
+Qué voy a hacer: Completar ML7 y terminar de hacer el PUT para el editProduct.
+Impedimentos: Procrastinación, actividades hogareñas, distracciones y cansancio visual.
+Tiago Cuello (18:28)
+
+Qué hice: Nada.
+Qué voy a hacer: Nada relacionado al sprint hoy, pero mañana planeo empezar y hacer mucho progreso.
+Impedimentos: El trabajo en Mercado Liebre-7 me frustra mucho.
+Paola Vera (18:47)
+
+Qué hice: Terminé la retro.
+Qué voy a hacer: Nada hasta el finde.
+Impedimento: Mercado Liebre 7.
+Fer Márquez (18:48)
+
+Qué hice: Cree el archivo products.json y lo puse en la vista develop.
+Qué voy a hacer: Ver 2 clases esta noche para realizar el archivo destroy.
+Impedimentos: Falta de tiempo por dedicarme al CRUD 1 y 2.
+11/03/2024
+
+Alexander S. Bejarano (18:36)
+
+Qué hice: Nada xd.
+Qué voy a hacer: Añadirle funcionalidad al código de editProduct, incluir Multer.
+Impedimentos: Actividades hogareñas.
+Tiago Cuello (19:03)
+
+Qué hice: Hice una de mis tareas.
+Qué voy a hacer: Trabajar en el sprint para no dejarlo a último momento.
+Impedimentos: Yo mismo.
+Paola Vera (19:04)
+
+Qué hice: Modificaciones en el develop para poder hacer mi tarea, empecé con StoreController.
+Qué voy a hacer: Seguir con StoreController.
+Impedimentos: Tiempo.
+Fer Márquez (19:07)
+
+Qué hice: Hice la lógica de destroy product.
+Qué voy a hacer: Crear la lógica para eliminar la imagen del producto eliminado.
+Impedimentos: Ninguno.
+12/03/2024
+
+Fer Márquez (20:07)
+Qué hice: Terminé toda la lógica y los archivos para destruir el producto.
+Qué voy a hacer: Poner todos los archivos en la rama develop.
+Impedimentos: Ninguno.
+
+
+Alexander S. Bejarano (15:35)
+
+Qué hice: Transcribí la lógica de ML7 al proyecto.
+Qué voy a hacer: Adaptar lo antes mencionado.
+Impedimentos: Estuve ayudando a hacer humitas en casa, nos llevó 5 horas.
+
+14/03/2024
+
+Alexander S. Bejarano (15:42)
+
+Qué hice: Completé la lógica de updateProduct (pero no funciona XD).
+Qué voy a hacer: Hacer que funcione, corregir errores y añadir el multer.
+Impedimentos: Ninguno.
