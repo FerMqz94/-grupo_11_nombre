@@ -13,7 +13,7 @@
 
     <main class="login">
 
-        <form class="contenedor-main">
+        <form action="/autenticacion/iniciar" method="POST" class="contenedor-main">
 
             <h2 class="titulo">Inicia sesión</h2>
             <div>
@@ -22,14 +22,14 @@
             <span class="text-danger">Este campo es obligatorio</span>
 
             <div>
-                <input class="white-bar" type="password" name="usuario" value="" placeholder="Contraseña">
+                <input class="white-bar" type="password" name="password" value="" placeholder="Contraseña">
             </div>
             <span class="text-danger">Este campo es obligatorio</span>
 
             <div class="contenedor-opciones">
 
                 <h3 class="subtitulo">¿Olvidaste tu contraseña?</h3>
-                <h3 class="subtitulo">¿No tenés cuenta? <b><a href="/registro" class="registrateLogin">Regístrate</a></b></h3>
+                <h3 class="subtitulo">¿No tenés cuenta? <b><a href="/autenticacion/registrar" class="registrateLogin">Regístrate</a></b></h3>
             </div>
 
 

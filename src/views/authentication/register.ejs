@@ -14,13 +14,13 @@
 
         <section class="section-inputs-registro">
             <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
-            <form class="form-inputs-registro" action="/register" method="POST">
+            <form class="form-inputs-registro" action="autenticacion/registro" method="POST">
 
                 <!--------NOMBRE Y APELLIDO----------->
 
                 <div class="nombreApellidoRegister">
                     <label for="nombreApellido"></label>
-                    <input type="text" id="nombreApellido" class="nombreApellido" value="" placeholder="Nombre y apellido">
+                    <input type="text" id="nombreApellido" name="name" class="nombreApellido" value="" placeholder="Nombre y apellido">
                     <span class="text-danger">Este campo es obligatorio</span>
                 </div>
 
@@ -28,7 +28,7 @@
 
                 <div class="nombreDelaCuentaRegister">
                 <label for="nombreDeCuenta"></label>
-                <input type="text" id="nombreDeCuenta" class="nombreDeCuenta" value="" placeholder="Nombre de usuari@...">
+                <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value="" placeholder="Nombre de usuari@...">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
 
@@ -36,7 +36,7 @@
 
                 <div class="emailregistro">
                 <label for="email"></label>
-                <input type="email" id="email" value="" class="email" placeholder="Dirección de correo electrónico">
+                <input type="email" id="email" value="" name="email" class="email" placeholder="Dirección de correo electrónico">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
 
@@ -44,7 +44,7 @@
 
                 <div class="contraseniaRegister">
                 <label for="contrasenia"></label>
-                <input type="password" id="contrasenia" class="contrasenia" placeholder="Contraseña">
+                <input type="password" id="contrasenia" name="password" class="contrasenia" placeholder="Contraseña">
                 <span class="text-danger">Este campo es obligatorio</span>
                 </div>
 
@@ -52,7 +52,7 @@
 
                 <div class="contraseniaConfirRegister">
                     <label for="contraseniaConfir"></label>
-                    <input type="password" id="contraseniaConfir" class="contraseniaConfir" placeholder="Confirmar contraseña">
+                    <input type="password" id="contraseniaConfir" name="password" class="contraseniaConfir" placeholder="Confirmar contraseña">
                     <span class="text-danger">Este campo es obligatorio</span>
                 </div>
 
