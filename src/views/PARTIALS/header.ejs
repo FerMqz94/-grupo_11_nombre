@@ -51,7 +51,8 @@
                     class="barra-busqueda barra-busqueda-interior" required>
                 <button class="barra-busqueda-icon"><i class="fa-solid fa-magnifying-glass "></i></button>
                 </p>
-            </form>
+            </form> 
+            <% if (!locals.userLogin) { %>
             <% if (registro===false) { %>
                 <% } else { %>
                     <a href="/autenticacion/registrar">
@@ -64,6 +65,8 @@
                                 <a href="/autenticacion/iniciar">
                                     <p class="texto-header">iniciar sesión</p>
                                 </a>
+                                <% } %>
+                                <% } else { %>
                                 <% } %>
 
                                     <a href="/carrito">

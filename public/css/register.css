@@ -55,16 +55,12 @@ bottom: 0;
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido {
-
-width: 280px;
-
-height: 35px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
+padding: 10px;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido::placeholder {
@@ -106,16 +102,12 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.nomb
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.nombreDelaCuentaRegister input.nombreDeCuenta{
-
-width: 280px;
-
-height: 35px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
+padding: 10px;
 }
 
 
@@ -161,16 +153,12 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.emai
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email{
-
-width: 280px;
-
-height: 35px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
+padding: 10px;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.emailregistro input.email:focus{
@@ -211,16 +199,12 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
 
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia{
-
-width: 280px;
-
-height: 35px;
-
-border: 1.8px solid var(--gris-claro);
-
-border-radius: 5px;
-
-display: block;
+width: 280px;
+height: 35px;
+border: 1.8px solid var(--gris-claro);
+border-radius: 5px;
+display: block;
+padding: 10px;
 }
 
 main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaRegister input.contrasenia:focus{
@@ -262,16 +246,12 @@ main.registro section.section-inputs-registro form.form-inputs-registro div.cont
     
     
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir{
-    
-width: 280px;
-    
-height: 35px;
-    
-border: 1.8px solid var(--gris-claro);
-    
-border-radius: 5px;
-    
-display: block;
+    padding: 1;
+    width: 280px;
+    height: 35px;
+    border: 1.8px solid var(--gris-claro);
+    border-radius: 5px;
+    padding: 10px;
     }
     
     main.registro section.section-inputs-registro form.form-inputs-registro div.contraseniaConfirRegister input.contraseniaConfir:focus{
@@ -494,11 +474,8 @@ margin: 40px 0;
         
         
     main.registro section.section-inputs-registro form.form-inputs-registro div.nombreApellidoRegister input.nombreApellido {
-        
-        width: 600px;
-                
-        height: 50px;
-        
+        width: 600px;
+        height: 50px;
     }
         
     

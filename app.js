@@ -5,6 +5,10 @@ const partials = require('express-partials');
 const port = 3030;
 const methodOverride = require('method-override');
 const session = require("express-session")
+let cookieParser = require('cookie-parser');
+
+const checkSession = require("./src/middlewares/checkSession")
+const checkCookie = require('./src/middlewares/checkCookie');
 
 // CONFIGURACIONES
 
@@ -17,8 +21,12 @@ app.use(express.static('public'));
 app.use(partials());
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(session({ secret: "palabra secreta" }))
+
+app.use(checkCookie)
+app.use(checkSession)
 
 // ROUTERS 
 const otherRoutes = require("./src/routes/other.routes")
