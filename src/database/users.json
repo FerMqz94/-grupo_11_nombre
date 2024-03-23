@@ -1,35 +1,10 @@
 [
-    {
-        "id": 1,
-        "name": "Tiago Cuello",
-        "username": "YerbaMala11",
-        "email": "tiagocuello11@gmail.com",
-        "password": "12312fadds",
-        "category": "user"
-    },
-    {
-        "id": 2,
-        "name": "Fernando Márquez",
-        "username": "EditorElCoso24",
-        "email": "fernandomarquez24@gmail.com",
-        "password": "15223irnm",
-        "category": "admin"
-    },
-    {
-        "id": 3,
-        "name": "Paola Vera",
-        "username": "EsclavaDeTiago43",
-        "email": "paolavera43@gmail.com",
-        "password": "34634adsa",
-        "category": "admin"
-    },
-    {
-        "id": 4,
-        "name": "Alexander Bejarano",
-        "username": "ElAtrasado213",
-        "email": "alexanderbejarano213@gmail.com",
-        "password": "32123asj1s",
-        "category": "user"
-    }
-
+   {
+      "id": 1,
+      "name": "Fernando Márquez",
+      "username": "FerMarquez",
+      "email": "fer_marquez94@gmail.com",
+      "password": "$2a$10$6TQUu2svGFFtZ3FlxQMYneRwOiJ2NjekrPUEbHcTSh6ensSjBxzDm",
+      "category": "user"
+   }
 ]

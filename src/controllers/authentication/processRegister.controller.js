@@ -9,7 +9,7 @@ module.exports = (req, res) => {
     name: name?.trim(),
     username: username?.trim(),
     email: email?.trim(),
-    password: bcrypt.hashSync(password?.trim(), 10), 
+    password: bcrypt.hashSync(password?.trim(), 10),    
     category: "user"
   };
 
