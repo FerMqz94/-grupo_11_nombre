@@ -37,7 +37,13 @@
                 <div class="emailregistro">
                 <label for="email"></label>
                 <input type="email" id="email" value="" name="email" class="email" placeholder="Dirección de correo electrónico">
-                <span class="text-danger">Este campo es obligatorio</span>
+                
+                <% if (!locals.errors) { %>
+					<span class="text-danger">Este campo es obligatorio</span>
+				<% } else { %>
+					<div class="form-text fs-5 text-danger"><%= errors?.email?.msg %></div>
+				<% }  %>
+			</div>
                 </div>
 
                 <!---CONTRASEÑA-->
