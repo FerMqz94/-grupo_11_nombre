@@ -7,15 +7,15 @@ module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-    const { email, password } = req.body;
+    const { email, password, name, username } = req.body;
     const users = loadData("users");
 
     const newUser = {
       id: !users.length ? 1 : users[users.length - 1].id + 1,
-      name: "",
-      surname: "",
+      name: name?.trim(),
+      username: username?.trim(),
       email: email?.trim().toLowerCase(),
-      password: hashSync(password?.trim(), 12),
+      password: bcrypt.hashSync(password?.trim(), 12),
       role: "REGULAR",
       avatar: "default-avatar.jpg",
     };

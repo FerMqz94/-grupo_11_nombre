@@ -5,6 +5,16 @@
       "username": "FerMarquez",
       "email": "fer_marquez94@gmail.com",
       "password": "$2a$10$6TQUu2svGFFtZ3FlxQMYneRwOiJ2NjekrPUEbHcTSh6ensSjBxzDm",
-      "category": "user"
+      "role": "ADMIN",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 2,
+      "name": "Paola Vera",
+      "username": "pmnvera",
+      "email": "pmnvera@gmail.com",
+      "password": "$2a$12$qg0qnZbDoZpa52oS479UnuUtRRXysVjKlQeqvZAu1.KNzKtnSTGm6",
+      "role": "REGULAR",
+      "avatar": "default-avatar.jpg"
    }
 ]
