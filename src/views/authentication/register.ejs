@@ -1,92 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {view : "register"}) %>
+<%- include("../partials/head", {view : "register" }) %>
 
-<body>
-    <%- include("../partials/header", {registro: false,ingreso: true}) %>
-    
-
-    <main class="registro">
+    <body>
+        <%- include("../partials/header", {registro: false,ingreso: true}) %>
 
 
-        <!---------------REGISTRO MEDIANTE FORMULARIOS--------------------->
-
-        <section class="section-inputs-registro">
-            <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
-            <form class="form-inputs-registro" action="registrar" method="POST">
-
-                <!--------NOMBRE Y APELLIDO----------->
-
-                <div class="nombreApellidoRegister">
-                    <label for="nombreApellido"></label>
-                    <input type="text" id="nombreApellido" name="name" class="nombreApellido" value="" placeholder="Nombre y apellido">
-                    <span class="text-danger">Este campo es obligatorio</span>
-                </div>
-
-                <!--------NOMBRE DE USUARIO----------->
-
-                <div class="nombreDelaCuentaRegister">
-                <label for="nombreDeCuenta"></label>
-                <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value="" placeholder="Nombre de usuari@...">
-                <span class="text-danger">Este campo es obligatorio</span>
-                </div>
-
-                <!-------EMAIL DE REGISTRO------->
-
-                <div class="emailregistro">
-                <label for="email"></label>
-                <input type="email" id="email" value="" name="email" class="email" placeholder="Dirección de correo electrónico">
-                
-                <% if (!locals.errors) { %>
-					<span class="text-danger">Este campo es obligatorio</span>
-				<% } else { %>
-					<div class="form-text fs-5 text-danger"><%= errors?.email?.msg %></div>
-				<% }  %>
-			</div>
-                </div>
-
-                <!---CONTRASEÑA-->
-
-                <div class="contraseniaRegister">
-                <label for="contrasenia"></label>
-                <input type="password" id="contrasenia" name="password" class="contrasenia" placeholder="Contraseña">
-                <span class="text-danger">Este campo es obligatorio</span>
-                </div>
-
-                <!---CONFIRMACIÓN CONTRASEÑA-->
-
-                <div class="contraseniaConfirRegister">
-                    <label for="contraseniaConfir"></label>
-                    <input type="password" id="contraseniaConfir" name="passwordConfirm" class="contraseniaConfir" placeholder="Confirmar contraseña">
-                    <span class="text-danger">Este campo es obligatorio</span>
-                </div>
+            <main class="registro">
 
 
+                <!---------------REGISTRO MEDIANTE FORMULARIOS--------------------->
 
-                <!---BOTÓN ENVIAR-->
-                <div class="contenedor-boton-register">
-                    <button type="submit" class="boton-register">ENVIAR</button>
-                </div>
-            </form>
-        </section>
+                <section class="section-inputs-registro">
+                    <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
+                    <form class="form-inputs-registro" action="registrar" method="POST">
+
+                        <!--------NOMBRE Y APELLIDO----------->
+
+                        <div class="nombreApellidoRegister">
+                            <label for="nombreApellido"></label>
+                            <input type="text" id="nombreApellido" name="name" class="nombreApellido" value=""
+                                placeholder="Nombre y apellido">
+                            <% if (locals.errors) { %>
+                                <div class="form-text fs-5 text-danger">
+                                    <%= errors?.name?.msg %>
+                                </div>
+                                <% } else if (!locals.errors) { %>
+                                    <span class="text-danger">&nbsp;</span>
+
+                                    <!-- <span class="text-danger">Este campo es obligatorio</span> -->
+
+                                    <% } %>
+                                       
+
+                        </div>
+
+                        <!--------NOMBRE DE USUARIO----------->
+
+                        <div class="nombreDelaCuentaRegister">
+                            <label for="nombreDeCuenta"></label>
+                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value=""
+                                placeholder="Nombre de usuari@...">
+                            <% if (!locals.errors) { %>
+                                <!-- <span class="text-danger">Este campo es obligatorio</span> -->
+                                <span class="text-danger">&nbsp;</span>
+                                <% } else { %>
+                                    <div class="form-text fs-5 text-danger">
+                                        <%= errors?.username?.msg %>
+                                    </div>
+                                    <% } %>
+                        </div>
+
+                        <!-------EMAIL DE REGISTRO------->
+
+                        <div class="emailregistro">
+                            <label for="email"></label>
+                            <input type="email" id="email" value="" name="email" class="email"
+                                placeholder="Dirección de correo electrónico">
+
+                            <% if (!locals.errors) { %>
+                                
+                                <span class="text-danger">&nbsp;</span>
+                                <!-- <span class="text-danger">Este campo es obligatorio</span> -->
+                                <% } else { %>
+                                    <div class="form-text fs-5 text-danger">
+                                        <%= errors?.email?.msg %>
+                                    </div>
+                                    <% } %>
+                        </div>
+                        </div>
+
+                        <!---CONTRASEÑA-->
+
+                        <div class="contraseniaRegister">
+                            <label for="contrasenia"></label>
+                            <input type="password" id="contrasenia" name="password" class="contrasenia"
+                                placeholder="Contraseña">
+                                <% if (!locals.errors) { %>
+                                    <span class="text-danger">&nbsp;</span>
+                                    <!-- <span class="text-danger">Este campo es obligatorio</span> -->
+                                    <% } else { %>
+                                        <div class="form-text fs-5 text-danger">
+                                            <%= errors?.password?.msg %>
+                                        </div>
+                                        <% } %>
+                        </div>
+
+                        <!---CONFIRMACIÓN CONTRASEÑA-->
+
+                        <div class="contraseniaConfirRegister">
+                            <label for="contraseniaConfir"></label>
+                            <input type="password" id="contraseniaConfir" name="passwordConfirm"
+                                class="contraseniaConfir" placeholder="Confirmar contraseña">
+                                <% if (!locals.errors) { %>
+                                    <span class="text-danger">&nbsp;</span>
+                            <!-- <span class="text-danger">Este campo es obligatorio</span> -->
+                            <% } else { %>
+                                <div class="form-text fs-5 text-danger">
+                                    <%= errors?.passwordConfirm?.msg %>
+                                </div>
+                                <% } %>
+                              
+                        </div>
 
 
-        <!-----------REGISTRO CON REDES SOCIALES--------------->
-        <article class="article-redes-sociales-register">
-            <h3 class="redes-sociales-register-titulo">Registrate con...</h3>
-            <div class="imagenes-redes-sociales">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-google"></i>
-            </div>
-        </article>
 
-    </main>
-
-    <%- include("../partials/footer")  %>
+                        <!---BOTÓN ENVIAR-->
+                        <div class="contenedor-boton-register">
+                            <button type="submit" class="boton-register">ENVIAR</button>
+                        </div>
+                    </form>
+                </section>
 
 
-</body>
+                <!-----------REGISTRO CON REDES SOCIALES--------------->
+                <article class="article-redes-sociales-register">
+                    <h3 class="redes-sociales-register-titulo">Registrate con...</h3>
+                    <div class="imagenes-redes-sociales">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-google"></i>
+                    </div>
+                </article>
+
+            </main>
+
+            <%- include("../partials/footer") %>
+
+
+    </body>
 
 </html>

@@ -1,28 +1,28 @@
 const { body } = require("express-validator");
 const { loadData } = require("../../database");
-const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+// const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
 
 
 const fieldNameDefault = body("name")
     .notEmpty()
-    .withMessage("Campo requerido")
+    .withMessage("nombre requerido")
     .bail()
-    // .isName()
-    // .withMessage("nombre invalido")
-    // .bail();
+
 
 const fieldUsernameDefault = body("username")
     .notEmpty()
-    .withMessage("Campo requerido")
+    .withMessage("nombre de usuario requerido")
     .bail()
-    // .isName()
-    // .withMessage("nombre de usuario invalido")
-    // .bail();
+    .isLength({ min: 4 })
+    .withMessage("debe al menos contener 4 letras")
+    .isLength({ max: 20 })
+    .withMessage("no puede superar las 20 letras")
+
 
 const fieldEmailDefault = body("email")
     .notEmpty()
-    .withMessage("Campo requerido")
+    .withMessage("Email requerido")
     .bail()
     .isEmail()
     .withMessage("Formato invalido")
@@ -37,12 +37,7 @@ const fielPpasswordConfirmDefault = body("passwordConfirm")
     .notEmpty()
     .withMessage("Campo requerido")
     .bail();
-    // custom((value, { req }) => {
-    //     if (value !== req.body.password) {
-    //         throw new Error('Las contraseñas no coinciden');
-    //     }
-    //     return true;
-    // }) 
+
 
 const fieldEmailRegister = fieldEmailDefault.custom((value, { req }) => {
     const users = loadData("users");
@@ -56,16 +51,43 @@ const fieldEmailRegister = fieldEmailDefault.custom((value, { req }) => {
 });
 
 const fieldPasswordRegister = fieldPasswordDefault
-    .isLength({ min: 8, max: 16 })
-    .withMessage("Longitud invalida")
+    .isLength({ min: 8 })
+    .withMessage("la contraseña al menos debe tener 8 letras")
+    .isLength({ max: 16 })
+    .withMessage("la contraseña al menos debe tener menos de 16 letras")
     .bail()
-    .matches(regExPass)
-    .withMessage("La contraseña es invalida");
+// .matches(regExPass)
+// .withMessage("La contraseña es invalida");
+const fieldPasswordConfirmRegister = fielPpasswordConfirmDefault
 
-const fieldEmailLogin = fieldEmailDefault.custom((value, { req }) => { });
+    .isLength({ min: 8 })
+    .withMessage("la contraseña al menos debe tener 8 letras")
+    .isLength({ max: 16 })
+    .withMessage("la contraseña al menos debe tener menos de 16 letras")
+    .bail();
 
-const fieldPasswordLogin = fieldPasswordDefault.custom((value, { req }) => { });
+const PasswordConfirm = fielPpasswordConfirmDefault.custom((value, { req }) => {
+
+    const originalPassword = req.body.password
+    const confirmPassword = req.body.passwordConfirm
+
+    if (confirmPassword !== originalPassword) {
+        throw new Error("las contraseñas no coiciden");
+    }
+
+    return true;
+});
+
+
+
 
 module.exports = {
-    registerValidation: [fieldNameDefault,fieldUsernameDefault, fieldEmailRegister, fieldPasswordRegister, fielPpasswordConfirmDefault],
+    registerValidation:
+    [fieldNameDefault,
+    fieldUsernameDefault,
+    fieldEmailRegister,
+    fieldPasswordRegister,
+    fielPpasswordConfirmDefault,
+    fieldPasswordConfirmRegister,
+    PasswordConfirm],
 };
