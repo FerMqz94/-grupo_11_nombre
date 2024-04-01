@@ -34,6 +34,7 @@ const cartRoutes = require("./src/routes/cart.routes")
 const productDetailRoutes = require("./src/routes/productDetail.routes")
 const authRoutes = require("./src/routes/authentication.routes")
 const adminRoutes = require("./src/routes/admin.routes")
+const usersRoutes = require("./src/routes/users.routes")
 
 // ROUTES
 app.use("/", otherRoutes)
@@ -41,7 +42,8 @@ app.use("/carrito", cartRoutes)
 // login register
 app.use('/autenticacion', authRoutes)
 app.use("/producto-detalle", productDetailRoutes)
-app.use("/admin", adminRoutes)
+app.use("/admin", adminRoutes);
+app.use("/users", usersRoutes)
 // error 404
 app.use((req,res,next) => {
     res.status(404).render('other/notFound')

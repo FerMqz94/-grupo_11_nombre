@@ -67,6 +67,10 @@
                                 </a>
                                 <% } %>
                                 <% } else { %>
+                                
+                                    <a><p class="mensaje-userLogin" style=" color: var(--blanco);font-size: var(--letra-grande); ">¡Hola! <%= userLogin.name%> <i class="fa-solid fa-star"></i></p></a>
+                                    <a href="/users/perfil-usuario"><p class="perfil-usuario" style="color: var(--blanco); font-size: var(--letra-grande)">Ver mi perfil</p></a>
+
                                 <% } %>
 
                                     <a href="/carrito">

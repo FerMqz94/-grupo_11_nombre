@@ -16,7 +16,8 @@ module.exports = (req, res) => {
   req.session.userLogin = {
     name: userFind.name,
     username: userFind.username,
-    category: userFind.category,    
+    role: userFind.role,    
+    avatar: userFind.avatar
   };
 
   if(recordame ) res.cookie("userLogin", req.session.userLogin, {maxAge: 6000 * 30 * 100})
