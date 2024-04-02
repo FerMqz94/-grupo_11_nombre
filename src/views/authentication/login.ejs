@@ -17,14 +17,14 @@
 
             <h2 class="titulo">Inicia sesión</h2>
             <div>
-                <input class="white-bar" type="email" name="email" value="<%= locals.old?.email %>" placeholder="Correo electrónico">
+                <input class="<%= locals?.errors?.email ? "input-invalid" : "white-bar" %>" type="email" name="email" value="<%= locals.old?.email %>" placeholder="Correo electrónico">
             </div>
-            <span class="text-danger"><%= locals?.errors?.email?.msg%></span>
+            <span class="text-danger" style="font-size: var(--letra-bastante-pequeña);"><%= locals?.errors?.email?.msg%></span>
 
             <div>
-                <input class="white-bar" type="password" name="password" value="" placeholder="Contraseña">
+                <input class="<%= locals?.errors?.password ? "input-invalid" : "white-bar" %>" type="password" name="password" value="" placeholder="Contraseña">
             </div>
-            <span class="text-danger"><%= locals?.errors?.password?.msg%></span>
+            <span class="text-danger" style="font-size: var(--letra-bastante-pequeña);"><%= locals?.errors?.password?.msg%></span>
 
             <div class="contenedor-opciones">
 

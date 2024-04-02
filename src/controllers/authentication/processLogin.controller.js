@@ -9,12 +9,6 @@ module.exports = (req, res) => {
 
   const userFind = users.find((u) => u.email === email);
 
-  /*if (!userFind) res.render("./authentication/login");
-
-  const isPasswordValid = bcrypt.compareSync(password, userFind.password);
-
-  if (!isPasswordValid) res.render("./authentication/login");*/
-
   if(errors.isEmpty()){
 
       req.session.userLogin = {

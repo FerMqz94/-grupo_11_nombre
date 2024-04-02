@@ -1,7 +1,7 @@
 const { body } = require("express-validator");
 const { loadData } = require("../../database");
 const bcrypt = require('bcryptjs');
-//const { password } = req.body
+
 
 const fieldDefaultEmail = body("email")
     .notEmpty()

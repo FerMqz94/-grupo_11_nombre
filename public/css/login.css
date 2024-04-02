@@ -29,11 +29,20 @@
     font-weight: bold;
 }
 
+/* imput con errores*/
+.login .input-invalid {
+    border: 1px solid var(--molocoton-oscuro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: var(--letra-mediana);
+}
 
 /* mensajes de error */
 
 .text-danger {
     color: red;
+  
 }
 .login .white-bar {
     font-size: var(--letra-mediana);
