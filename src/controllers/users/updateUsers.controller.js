@@ -1,57 +1,49 @@
-const { validationResult } = require("express-validator");
+/*const { validationResult } = require("express-validator");
 const { saveData, loadData } = require("../../database");
+const bcrypt = require('bcryptjs')
 
 module.exports = (req, res) => {
-  /*const errors = validationResult(req);
+  const errors = validationResult(req);
   const { id } = req.params;
   const users = loadData("users");
 
   if (errors.isEmpty()) {
-    const { name, username, email, password } = req.body;
+    const { name, username, email, password, passwordConfirm } = req.body;
 
-    let newImages = [];
-    if (req.files.imagesSecondary?.length) {
-      newImages = req.files.imagesSecondary?.map((img) => img.filename);
-    }
+    const userFind = users.find(u => u.id === +id);
 
-    const productsMap = products.map((p) => {
-      if (p.id === +id) {
-        const productEdit = {
-          ...p,
-          title: title.trim(),
-          price: +price,
-          description: description.trim(),
-          chef: chef.trim(),
-          imagePrincipal: req.files.imagePrincipal?.length
-            ? req.files.imagePrincipal[0]?.filename
-            : p.imagePrincipal,
-          imagesSecondary: newImages.length ? newImages : p.imagesSecondary,
-          sale: section === "sale",
-          newest: section === "newest",
-          free: section === "free",
-          available: !!available,
-          image: req.file ? req.file.filename : p.image,
-        };
+    const usersMap = users.map((u) => {
+      if (u.id === +id) {
+        const userEdit = {
+          ...u,
+          name: name.trim(),
+          username: username.trim(),
+          email: email.trim(),
+          password: password? bcrypt.hashSync(password, 10) : userFind.password,
+          role: "REGULAR",
+          avatar:  "default-avatar.jpg"
+         
+       };
 
-        return productEdit;
+        return userEdit;
       }
 
-      return p;
+      return u;
     });
 
-    saveData(productsMap);
-    res.redirect("/admin/productos");
-  } else {
-    const chefs = loadData("chefs");
-    const product = products.find((p) => p.id === +id);
+    
+    saveData(usersMap, "users");
+    res.redirect("/");*/
+ /* }  hasta acá la primera parte de la lógica*/
+ /* else { NO DESCOMENTAR ESTO, PORQUE SÓLO FUNCIONARÁ CUANDO ESTÉ LA
+   /* const users = loadData("users");
+    const user = users.find((u) => u.id === +id);
     const errorsMapped = errors.mapped();
     res.render(
-      "admin/updateProduct",
-      { product, chefs, errors: errorsMapped, old: req.body },
-      (err, contentView) => {
-        err && res.send(err.message);
-        res.render("partials/dashboard", { contentView });
-      }
-    );
-  }*/
-};
+      "users/perfil-usuario",
+      { user, errors: errorsMapped, old: req.body },
+   
+  );
+  } hasta acá tiene que quedar comentado hasta que esté la validación*/
+/*};*/
+
