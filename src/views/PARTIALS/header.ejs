@@ -67,11 +67,19 @@
                                 </a>
                                 <% } %>
                                 <% } else { %>
-                                
+                                    <% if(locals.userLogin?.role === "REGULAR") {%>
                                     <a href="/users/perfil-usuario/:id"><p class="perfil-usuario" style="color: var(--blanco); font-size: var(--letra-grande)">Ver mi perfil</p></a>
 
                                     
                                     <a><p class="mensaje-userLogin" style=" color: var(--blanco);font-size: var(--letra-grande); ">¡Hola! <%= userLogin.name%>, a brillar 🌈💫<i class="fa-solid fa-star"></i></p></a>
+
+                                    <% } else { %>
+
+                                        <a href="/users/perfil-usuario/:id"><p class="perfil-usuario" style="color: var(--blanco); font-size: var(--letra-mediana)">Ver mi perfil</p></a>
+
+                                        <a href="/admin/productos"><p class="mensaje-userLogin" style=" color: var(--blanco);font-size: var(--letra-mediana); ">¡Hola! <%= userLogin.name%> 🟠 Administración</p></a>
+
+                                    <% } %>   
 
                                 <% } %>
 
