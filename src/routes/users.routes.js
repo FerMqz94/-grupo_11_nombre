@@ -4,6 +4,7 @@ const { perfilUsuario } = require("../controllers/users");
 
 
 
+
 //  /users/perfil-usuario
 router.get("/perfil-usuario/:id", perfilUsuario);
 

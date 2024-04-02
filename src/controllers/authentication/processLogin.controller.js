@@ -12,6 +12,7 @@ module.exports = (req, res) => {
   if(errors.isEmpty()){
 
       req.session.userLogin = {
+      id: userFind.id, 
       name: userFind.name,
       username: userFind.username,
       role: userFind.role,    

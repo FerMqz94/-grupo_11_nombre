@@ -1,3 +1,9 @@
+const { loadData } = require('../../database')
 module.exports = (req,res) => {
-    res.render("./users/perfilUsuario")
+    
+    const id  =req.session.userLogin.id
+    const users = loadData("users")
+    const userFind = users.find(u => u.id === +id);
+    res.render("./users/perfilUsuario", { user: userFind })
   }
+
