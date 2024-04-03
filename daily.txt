@@ -83,3 +83,45 @@ Alexander S. Bejarano (15:42)
 Qué hice: Completé la lógica de updateProduct (pero no funciona XD).
 Qué voy a hacer: Hacer que funcione, corregir errores y añadir el multer.
 Impedimentos: Ninguno.
+
+Tiago Cuello
+Daily #1: 25/03/2023
+
+¿Qué hice?
+implemente el botón recodarme
+
+¿Qué tengo planeado hacer?
+hacer la otra incidencia
+
+¿Qué impedimentos y/o obstáculos tuve o tengo al realizar las actividades?
+soy tan distraído que estaba a punto de hacer una tarea que no es mía XD
+
+Fer Márquez
+Daily #1: 25/03/2023
+
+¿Qué hice?
+termine con mis tareas e incidencias de Jira
+
+¿Qué tengo planeado hacer?
+-
+
+¿Qué impedimentos y/o obstáculos tuve o tengo al realizar las actividades?
+- 
+
+Alexander Bejarano
+Daily #1: 25/03/2023
+
+¿Qué hice?
+Adelantando las clases para implementar en el Sprint y por el momento no avancé, tomé un descanso visual en el fin de semana.
+
+¿Qué tengo planeado hacer?
+Implementar lo que adelanté y terminar mi parte, si no llego en la próxima daily quisiera mostrar mis avances.
+
+¿Qué impedimentos y/o obstáculos tuve o tengo al realizar las actividades?
+Problemas visuales por demasiada exposición a la luz pero nada que un descanso de ojos no arregle.
+
+Paola Vera
+Daily #1: 25/03/2024
+Qué hice: estuvo viendo las clases para implementarlo en el sprint
+Qué tengo planeado hacer: la validación del login
+Qué impedimentos tuve: Tiempo, muy poco tiempo
