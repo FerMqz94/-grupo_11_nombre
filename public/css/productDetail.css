@@ -39,24 +39,15 @@ main.vista-producto
   section.visualizacion-producto
   div.contenedor-vistas-imagenes
   div.contenedor-blazerOver-principal {
-  width: 100%;
-
+  width: 90%;
   position: relative;
-
   height: 450px;
-
-  /* height: 100%;*/
-
+  /* height: 100%; */
   border-radius: 5%;
-
   background-color: var(--gris-claro);
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
-
   overflow: hidden;
 }
 

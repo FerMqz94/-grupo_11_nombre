@@ -16,5 +16,14 @@
       "password": "$2a$12$qg0qnZbDoZpa52oS479UnuUtRRXysVjKlQeqvZAu1.KNzKtnSTGm6",
       "role": "REGULAR",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 3,
+      "name": "tiago",
+      "username": "tiago",
+      "email": "tiagocuello11@gmail.com",
+      "password": "$2a$12$h9tEHBZkNcYw3dFJ23ZJ5.gUA6ZuAkOT/TVuD5tcwHZKhgDRn9BDO",
+      "role": "ADMIN",
+      "avatar": "default-avatar.jpg"
    }
 ]

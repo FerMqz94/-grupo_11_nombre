@@ -6,24 +6,21 @@
          "image-1710443878038.png",
          "image-1710443878040.png"
       ],
-      "name": "Remera todoterreno",
+      "name": "Remera",
       "description": "Remera de algodón básica, usable en cualquier situación",
       "featuredDescription": "Una remera que se va a convertir en tu aliada día a día",
       "category": "Remeras",
       "sizes": [
-         true,
-         true,
-         true,
-         true,
-         true
+         false,
+         false,
+         false,
+         false,
+         false
       ],
-      "colors": [
-         "beige",
-         "green"
-      ],
+      "colors": [],
       "price": 8000,
       "new": false,
-      "sale": true,
+      "sale": false,
       "available": true
    },
    {
@@ -114,22 +111,20 @@
          "image-1710444541633.png"
       ],
       "name": "Pantalon a cuadros",
-      "description": "Pantalón a cuadros edgy y con mucho estilo",
+      "description": "Pantalón a cuadros edgy y con mucho estil",
       "featuredDescription": "Descubrirás un estilo único e innovador con esta prenda zinke",
       "category": "Pantalones y shorts",
       "sizes": [
          false,
-         true,
-         true,
-         true,
+         false,
+         false,
+         false,
          false
       ],
-      "colors": [
-         "beige"
-      ],
+      "colors": [],
       "price": 13500,
       "new": false,
-      "sale": true,
+      "sale": false,
       "available": true
    },
    {
@@ -198,22 +193,18 @@
       "name": "Vestido slim fit",
       "description": "Vestido pegado al cuerpo de algodon y spandex super comodo",
       "featuredDescription": "En este verano sentite linx, comodx y libre con tu cuerpo",
-      "category": "Categorías de producto",
+      "category": "Categorías de Producto",
       "sizes": [
-         true,
-         true,
-         true,
-         true,
-         true
+         false,
+         false,
+         false,
+         false,
+         false
       ],
-      "colors": [
-         "black",
-         "lavender",
-         "pink"
-      ],
+      "colors": [],
       "price": 22000,
       "new": false,
-      "sale": true,
+      "sale": false,
       "available": true
    },
    {
