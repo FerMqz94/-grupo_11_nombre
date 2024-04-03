@@ -16,5 +16,14 @@
       "password": "$2a$12$qg0qnZbDoZpa52oS479UnuUtRRXysVjKlQeqvZAu1.KNzKtnSTGm6",
       "role": "REGULAR",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Alexander Chambi",
+      "username": "Alex036@1",
+      "email": "alexanderbejarano036@gmail.com",
+      "password": "$2a$10$e1s81MNP9MypYyDFz.IK0.UIcjlv63MkPN2ym0tV6FhlGSQyk9KOe",
+      "role": "ADMIN",
+      "avatar": "default-avatar.jpg"
    }
 ]

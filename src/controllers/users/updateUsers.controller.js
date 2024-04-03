@@ -1,4 +1,4 @@
-/*const { validationResult } = require("express-validator");
+const { validationResult } = require("express-validator");
 const { saveData, loadData } = require("../../database");
 const bcrypt = require('bcryptjs')
 
@@ -33,8 +33,9 @@ module.exports = (req, res) => {
 
     
     saveData(usersMap, "users");
-    res.redirect("/");*/
- /* }  hasta acá la primera parte de la lógica*/
+    res.redirect("/");
+  }
+}  // hasta acá la primera parte de la lógica//
  /* else { NO DESCOMENTAR ESTO, PORQUE SÓLO FUNCIONARÁ CUANDO ESTÉ LA
    /* const users = loadData("users");
     const user = users.find((u) => u.id === +id);

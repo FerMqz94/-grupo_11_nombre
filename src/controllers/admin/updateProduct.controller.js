@@ -65,6 +65,7 @@ module.exports = (req, res) => {
 
             const productUpdate = {
                 ...p,
+                image: newImages.length ? newImages : p.image,
                 name: name.trim(),
                 description: description.trim(),
                 featuredDescription: featuredDescription.trim(),
@@ -74,8 +75,7 @@ module.exports = (req, res) => {
                 price: +price,
                 new: neworsale === "new",
                 sale: neworsale === "sale",
-                available: !!available,
-                image: newImages.length ? newImages : p.image
+                available: !!available
             };
             if(image?.filename) {
                 const pathBeforeFile = path.join(__dirname, "../../../public/images/products/" + p.image);

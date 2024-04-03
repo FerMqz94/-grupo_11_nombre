@@ -1,13 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { perfilUsuario } = require("../controllers/users");
-const { updateUsers } = require('../controllers/users/updateUsers.controller')
+const { perfilUsuario, updateUsers } = require("../controllers/users");
+
 
 
 
 //  /users/perfil-usuario
 router.get("/perfil-usuario/:id", perfilUsuario);
-/*router.put("/perfil-usuario/:id", updateUsers);*/
+router.put("/perfil-usuario/:id", updateUsers);
 
 
 module.exports = router;
