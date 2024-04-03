@@ -26,25 +26,15 @@ module.exports = (req, res) => {
        };
 
         return userEdit;
-      }
+      } 
 
       return u;
     });
-
-    
     saveData(usersMap, "users");
     res.redirect("/");
+  } else {
+    const errorsArray = errors.array();
+    res.status(422).json({ errors: errorsArray });
   }
-}  // hasta acá la primera parte de la lógica//
- /* else { NO DESCOMENTAR ESTO, PORQUE SÓLO FUNCIONARÁ CUANDO ESTÉ LA
-   /* const users = loadData("users");
-    const user = users.find((u) => u.id === +id);
-    const errorsMapped = errors.mapped();
-    res.render(
-      "users/perfil-usuario",
-      { user, errors: errorsMapped, old: req.body },
-   
-  );
-  } hasta acá tiene que quedar comentado hasta que esté la validación*/
-/*};*/
+};
 
