@@ -1,5 +1,42 @@
 ### --------------------------------------------------- ###
 
+# SPRINT CUATRO 
+
+### --------------------------------------------------- ###
+
+# RETROSPECTIVA_GRUPO_11_ZINKE 
+(◕‿◕)(◕‿◕)
+🧔👨‍🦰🧑👩‍🦳
+
+# METODOLOGÍA ESTRELLA DE MAR ⭐
+
+
+## Comenzar a hacer:
+
+La propuesta para esta sección es de aprovechar las clases de apoyo que nos brinda nuestra profesora para aclarar algunas dudas que podríamos tener, evitar estancamientos y estrés y solucionar problemas de manera más efectiva ahorrando tiempo y esfuerzo. Planteado a partir de la idea de que, con la ayuda de un profesional, se avanza en poco tiempo y se potencia el aprendizaje.
+
+## Hacer más:
+
+Decidimos organizar más reuniones colaborativas de las que ya teníamos para mantener la comunicación, avanzar de manera más rápida y fomentar la organización de los tiempos de cada uno de los integrantxs.
+
+## Continuar haciendo:
+
+Como estuvimos haciendo en el sprint anterior, mantenemos la decisión de mostrar nuestro progreso, así sea nulo, en un tramo mínimo de 3 días para mantener al tanto a lxs compañerxs, apoyar si están enfrentando problemas y trabajar de manera más colaborativa.
+
+## Hacer menos:
+
+Una problemática muy frecuente fue el atrasar las actividades para los últimos días antes de la entrega del sprint, y para enfrentarla decidimos la iniciativa de no confiarnos por más sencilla que se vea la actividad sino realizarla lo antes posible, adquieriendo así, más tiempo de revisión de errores o para añadir mejoras/cosas extra al proyecto.
+
+## Dejar de hacer:
+
+Otro problema presente en la realización de los sprints fue realizar progresos distanciados de los profesorxs sin pedirles ayuda, por lo que planteamos superar esa vergüenza que pueda existir o alguna especie de orgullo personal y comunicarles a lxs profesorxs cuando estemos en apuros, estancadxs, estresadxs o simplemente necesitemos una mano por algún inconveniente en las actividades.
+
+
+
+
+
+### --------------------------------------------------- ###
+
 # SPRINT TRES 
 
 ### --------------------------------------------------- ###
