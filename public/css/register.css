@@ -32,11 +32,8 @@ main.registro
   form.form-inputs-registro
   div.nombreApellidoRegister {
   display: flex;
-
-  margin: 20px 0;
-
+  margin: 20px;
   flex-flow: column;
-
   align-items: center;
 }
 
@@ -57,17 +54,11 @@ main.registro
   form.form-inputs-registro
   div.nombreApellidoRegister
   input.nombreApellido {
-  width: 280px;
-
-  height: 35px;
-
-  border: 1.8px solid var(--gris-claro);
-
-  border-radius: 5px;
-
-  display: block;
-
-  padding: 10px;
+    font-size: var(--letra-mediana);
+    border: 1px solid var(--verde-azulado-claro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 main.registro
@@ -117,12 +108,11 @@ main.registro
   form.form-inputs-registro
   div.nombreDelaCuentaRegister
   input.nombreDeCuenta {
-  width: 280px;
-  height: 35px;
-  border: 1.8px solid var(--gris-claro);
-  border-radius: 5px;
-  display: block;
-  padding: 10px;
+    font-size: var(--letra-mediana);
+    border: 1px solid var(--verde-azulado-claro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 main.registro
@@ -174,12 +164,11 @@ main.registro
   form.form-inputs-registro
   div.emailregistro
   input.email {
-  width: 280px;
-  height: 35px;
-  border: 1.8px solid var(--gris-claro);
-  border-radius: 5px;
-  display: block;
-  padding: 10px;
+    font-size: var(--letra-mediana);
+    border: 1px solid var(--verde-azulado-claro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 main.registro
@@ -231,13 +220,11 @@ main.registro
   form.form-inputs-registro
   div.contraseniaRegister
   input.contrasenia {
-  width: 280px;
-  height: 35px;
-  border: 1.8px solid var(--gris-claro);
-  border-radius: 5px;
-  /* display: block; */
-  padding: 10px;
-  /* px;  */
+    font-size: var(--letra-mediana);
+    border: 1px solid var(--verde-azulado-claro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 main.registro
@@ -289,17 +276,11 @@ main.registro
   form.form-inputs-registro
   div.contraseniaConfirRegister
   input.contraseniaConfir {
-  padding: 1;
-
-  width: 280px;
-
-  height: 35px;
-
-  border: 1.8px solid var(--gris-claro);
-
-  border-radius: 5px;
-
-  padding: 10px;
+    font-size: var(--letra-mediana);
+    border: 1px solid var(--verde-azulado-claro);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 main.registro
@@ -348,25 +329,15 @@ main.registro
   section.section-inputs-registro
   form.form-inputs-registro
   button.boton-register {
-  /* margin-top: 20px; */
-
-  width: 280px;
-
-  height: 35px;
-
-  border: none;
-
-  background-color: var(--verde-azulado-claro);
-
-  color: var(--blanco);
-
-  border-radius: 5px;
-
-  /* font-size: var(--letra-mediana); */
-
-  letter-spacing: 1px;
-
-  transition: all 1s;
+    width: 200px;
+    height: 35px;
+    border: none;
+    background-color: var(--verde-azulado-claro);
+    color: var(--blanco);
+    border-radius: 5px;
+    font-size: var(--letra-mediana);
+    letter-spacing: 1px;
+    margin: 30px 0px;
 }
 
 main.registro
@@ -508,8 +479,8 @@ article.article-redes-sociales-register
     form.form-inputs-registro
     div.nombreApellidoRegister
     input.nombreApellido {
-    width: 600px;
-    height: 50px;
+    /* width: 600px;
+    height: 50px; */
   }
 
   main.registro
@@ -542,8 +513,8 @@ article.article-redes-sociales-register
     form.form-inputs-registro
     div.nombreDelaCuentaRegister
     input.nombreDeCuenta {
-    width: 600px;
-    height: 50px;
+    /* width: 600px;
+    height: 50px; */
   }
 
   main.registro
@@ -576,9 +547,9 @@ article.article-redes-sociales-register
     form.form-inputs-registro
     div.emailregistro
     input.email {
-    width: 600px;
+    /* width: 600px;
 
-    height: 50px;
+    height: 50px; */
   }
 
   main.registro
@@ -604,8 +575,8 @@ article.article-redes-sociales-register
     form.form-inputs-registro
     div.contraseniaRegister
     input.contrasenia {
-    width: 600px;
-    height: 50px;
+    /* width: 600px; */
+    /* height: 50px; */
   }
 
   main.registro
@@ -638,8 +609,8 @@ article.article-redes-sociales-register
     form.form-inputs-registro
     div.contraseniaConfirRegister
     input.contraseniaConfir {
-    width: 600px;
-    height: 50px;
+    /* width: 600px; */
+    /* height: 50px; */
   }
 
   main.registro
@@ -667,11 +638,9 @@ article.article-redes-sociales-register
     section.section-inputs-registro
     form.form-inputs-registro
     button.boton-register {
-    width: 600px;
-
-    height: 50px;
-
-    font-size: var(--letra-grande);
+    /* width: 600px; */
+    /* height: 50px; */
+    /* font-size: var(--letra-grande); */
   }
 
   /*--------------REGISTRARSE CON REDES SOCIALES------------------*/
