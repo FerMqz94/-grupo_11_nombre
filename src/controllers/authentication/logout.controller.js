@@ -3,4 +3,4 @@ module.exports = (req, res) => {
     res.cookie("userLogin", "", { maxAge: -1 });
   
     res.redirect("/")
-  };
+};
