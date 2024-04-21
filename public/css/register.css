@@ -56,9 +56,10 @@ main.registro
   input.nombreApellido {
     font-size: var(--letra-mediana);
     border: 1px solid var(--verde-azulado-claro);
-    padding: 5px;
+    padding: 6px;
     margin: 10px;
     border-radius: 5px;
+    width: 65%;
 }
 
 main.registro
@@ -113,6 +114,7 @@ main.registro
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
+    width: 65%;
 }
 
 main.registro
@@ -169,6 +171,7 @@ main.registro
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
+    width: 65%;
 }
 
 main.registro
@@ -225,6 +228,7 @@ main.registro
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
+    width: 65%;
 }
 
 main.registro
@@ -281,6 +285,7 @@ main.registro
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
+    width: 65%;
 }
 
 main.registro

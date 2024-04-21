@@ -25,5 +25,14 @@
       "password": "$2a$10$e1s81MNP9MypYyDFz.IK0.UIcjlv63MkPN2ym0tV6FhlGSQyk9KOe",
       "role": "ADMIN",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Gaston castillo",
+      "username": "valegas",
+      "email": "gastoncastillo1920@gmail.com",
+      "password": "$2a$12$a9/Rb/jPNcJ8TgvqEu1xRexvAaYcTlhGWLfLqoVx5wg9ImK5NMctm",
+      "role": "ADMIN",
+      "avatar": "default-avatar.jpg"
    }
 ]

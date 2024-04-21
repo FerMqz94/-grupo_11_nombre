@@ -143,6 +143,9 @@
                         <!-- Subir imagen -->
                         <div>
                             <input class="form-control form-control-lg" id="formFileLg" type="file" name="image" accept="image/*" value="" multiple>
+                            <p class="text-danger col-12">
+                                <%= locals.errors?.image?.msg %>
+                              </p>
                         </div>
     
                         <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">

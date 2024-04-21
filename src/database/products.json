@@ -232,5 +232,25 @@
       "new": false,
       "sale": true,
       "available": true
+   },
+   {
+      "id": 14,
+      "image": [],
+      "name": "pantalon",
+      "description": "ssdsdsdsdsdsdsddffdgfdgdfgdfgdfgfdgdfgdfgdgfdgfdgfdgdfgfdgdfgdfgdfgdfgdfg",
+      "featuredDescription": "fdgdfgfdgdfgdfgfdgdfgdfgfdgfdgfgfgfdgfd",
+      "category": "Vestidos y polleras",
+      "sizes": [
+         false,
+         false,
+         false,
+         false,
+         false
+      ],
+      "colors": [],
+      "price": 222222444444,
+      "new": false,
+      "sale": false,
+      "available": true
    }
 ]
