@@ -106,9 +106,11 @@
             <p class="texto-header">OUTLET
                 <i class=""></i>
             </p>
-            <li class="texto-header">
+            <% if (locals.userLogin) { %>
+            <p class="texto-header">
                 <a href="/autenticacion/cerrar-sesion">CERRAR SESIÓN</a>
-            </li>
+            </p>
+            <% } %>
         </div>
     </div>
 </header>
