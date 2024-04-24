@@ -14,6 +14,7 @@
 
 .login .contenedor-main {
     display: flex;
+    margin: 30px auto;
     padding: 5%;
     justify-content: center;
     flex-direction: column;
