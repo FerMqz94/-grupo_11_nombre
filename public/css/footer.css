@@ -7,6 +7,7 @@
     text-align: center;
     box-sizing: content-box;
     width: 100%;
+    /* background: linear-gradient(var(--molocoton-oscuro), var(--verde-azulado-claro)); */
   }
   .footer .fa-truck {
     transform: scaleX(-0.7);
@@ -99,11 +100,12 @@
   .footer .footer-tablet {
     display: flex;
     background-color: #ffefd6;
-    border: #f99b7d solid;
+    /* border: #f99b7d solid; */
     flex-wrap: wrap;
     font-size: 15px;
     padding-bottom: 13%;
     margin-top: 90px;
+    background: linear-gradient(var(--molocoton-oscuro), var(--verde-azulado-claro));
   }
   .footer .footer-tablet .columna-4 .texto {
     margin-bottom: 0;
@@ -255,8 +257,8 @@
     text-align: center;
     border: solid #f99b7d 1px;
     background-color: white;
-    border-radius: 60px;
-    width: 95%;
+    border-radius: 50px;
+    width: 47%;
     padding: 5% 0px 5% 0px;
     color: #b6b6b6;
     font-size: 110%;
@@ -264,13 +266,14 @@
   }
   .footer .footer-tablet .columna-4 .registrate {
     text-align: center;
-    width: 95%;
+    width: 44%;
     border: black solid 1px;
     background-color: black;
     color: #ffefd6;
-    padding: 5% 0px 5% 0px;
-    border-radius: 60px;
-    font-size: 110%;
+    /* padding: 5% 0px 5% 0px; */
+    border-radius: 50px;
+    font-size: 94%;
+    margin-bottom: 22%;
   }
   .footer .footer-tablet .columna-4 .texto {
     margin: 0;
@@ -311,5 +314,12 @@
     margin-bottom: 12px;
     width: 29%;
   }
-  
+  .card-footer{
+    width: 17%;
+    font-size: 32px;
+    margin-left: 2%;
+  }
+  .register-footer{
+   
+}
 }
