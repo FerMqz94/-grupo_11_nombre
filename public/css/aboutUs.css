@@ -1,0 +1,90 @@
+.about-us {
+    font-family: "Montserrat", sans-serif; 
+    color: var(--gris-terciopelo);
+    background-color: var(--blanco);
+    padding: 40px;
+    line-height: 1.8;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; 
+}
+
+.about-us a {
+    color: var(--turquesa);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-us a:hover {
+    color: var(--azul-celeste);
+}
+
+.about-us h1, .about-us h2 {
+    font-family: "Playfair Display", serif;
+}
+
+.about-us .brand-info h1 {
+    background-image: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    opacity: 0.9;
+    transition: transform 0.5s ease;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about-us .brand-info p {
+    font-size: 1.3em;
+    margin-top: 0.8em;
+    color: var(--gris-pizarra);
+}
+
+.about-us section {
+    border-bottom: 2px solid var(--gris-claro); 
+    padding: 40px 0;
+}
+
+.about-us section h2 {
+    color: var(--negro);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-us section p {
+    font-size: 1.2em;
+}
+
+.about-us .founders, .about-us .vision-mission, .about-us .achievements, .about-us .future-goals {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+  
