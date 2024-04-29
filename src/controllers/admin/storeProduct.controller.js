@@ -78,7 +78,7 @@ module.exports = (req, res) => {
 
     const newProduct = {
        id: newID,
-       image: newImages.length? newImages : [],
+       image: newImages.length? newImages : ["defaul.png"],
        name: name.trim(),
        description: description.trim(),
        featuredDescription: featuredDescription.trim(),
