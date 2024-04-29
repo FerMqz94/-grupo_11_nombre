@@ -31,7 +31,7 @@ app.use(checkSession)
 // ROUTERS 
 const otherRoutes = require("./src/routes/other.routes")
 const cartRoutes = require("./src/routes/cart.routes")
-const productDetailRoutes = require("./src/routes/productDetail.routes")
+const productRoutes = require("./src/routes/producto.routes")
 const authRoutes = require("./src/routes/authentication.routes")
 const adminRoutes = require("./src/routes/admin.routes")
 const usersRoutes = require("./src/routes/users.routes")
@@ -39,7 +39,7 @@ const usersRoutes = require("./src/routes/users.routes")
 // API
 const apiOtherRoutes = require ("./src/routes/api/other.api")
 const apiCartRoutes = require ("./src/routes/api/cart.api")
-const apiProductDetailRoutes = require ("./src/routes/api/productDetail.api")
+const apiProductoRoutes = require ("./src/routes/api/productDetail.api")
 const apiAuthRoutes = require ("./src/routes/api/authentication.api")
 const apiAdminRoutes = require ("./src/routes/api/admin.api")
 const apiUsersRoutes = require ("./src/routes/api/users.api")
@@ -51,19 +51,19 @@ app.use("/", otherRoutes)
 app.use("/carrito", cartRoutes)
 // login register
 app.use('/autenticacion', authRoutes)
-app.use("/producto-detalle", productDetailRoutes)
+app.use("/productos", productRoutes)
 app.use("/admin", adminRoutes);
 app.use("/users", usersRoutes);
 
 
 // API
-app.use("/api", apiOtherRoutes)
-app.use("/api/carrito", apiCartRoutes)
-// login register
-app.use('/api/autenticacion', apiAuthRoutes)
-app.use("/api/producto-detalle", apiProductDetailRoutes)
-app.use("/api/admin", apiAdminRoutes);
-app.use("/api/users", apiUsersRoutes);
+// app.use("/api", apiOtherRoutes)
+// app.use("/api/carrito", apiCartRoutes)
+// // login register
+// app.use('/api/autenticacion', apiAuthRoutes)
+// app.use("/api/producto-detalle", apiProductRoutes)
+// app.use("/api/admin", apiAdminRoutes);
+// app.use("/api/users", apiUsersRoutes);
 
 
 // error 404
