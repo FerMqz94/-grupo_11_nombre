@@ -11,169 +11,21 @@
   <main class="vista-producto">
    
        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
+          <h3 class="otrosFav">Productos</h3>
           <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
+      <%  products.forEach((p) => { %>
           
-          <%  if(index <= 3) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
+        <article class="productos-otrosFav dos-continentes">
+          <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
+          <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
+            <h4 class="h4-dos-conti"><%= p.name%></h4>
+          </a>
+          <p class="p-dos-conti"><%= p.price%></p>
+        </article>
+                         
           <% })  %>  
       </div>
         </section> 
-       <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index >= 5) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                  
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index >= 5) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                  
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 3) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 3) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 3) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 6) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-        <section class="otrosFav">
-          <h3 class="otrosFav">lista</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 6) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-
-
-
-
-
-
-
-
-
-
   </main>
 
 
