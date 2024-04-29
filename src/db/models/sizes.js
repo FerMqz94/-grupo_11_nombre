@@ -10,7 +10,21 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+
+
+      // Tiene muchas = HasMany = N:1
+      Sizes.hasMany(models.Products_Sizes,{
+        foreignKey: "id_size",
+        as: "Products_Sizes",
+      })
+      
+      // Pertenece a muchos = belongsToMany = N:M
+      Sizes.belongsToMany(models.Product, {
+        through: models.Products_Sizes,
+        foreignKey: 'id_size',
+        otherKey: 'id_product',
+        as: 'Products'
+      });
     }
   }
   Sizes.init({
@@ -18,6 +32,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Sizes',
+    tableName: 'sizes'
   });
   return Sizes;
 };

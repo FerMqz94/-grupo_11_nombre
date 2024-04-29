@@ -11,6 +11,42 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+
+      // Tiene muchas = HasMany = N:1
+      Product.hasMany(models.Images,{
+        foreignKey: "id_product",
+        as: "Images",
+      })
+      Product.hasMany(models.Products_Sizes,{
+        foreignKey: "id_product",
+        as: "Products_Sizes",
+      })
+      Product.hasMany(models.Products_Colors,{
+        foreignKey: "id_product",
+        as: "Products_Colors",
+      })
+
+      // Pertenece a = belongsTo = 1:N
+      Product.belongsTo(models.Categories, {
+        foreignKey: "id_category",
+        as: "Categories"
+      })
+
+      // Pertenece a muchos = belongsToMany = N:M
+      Product.belongsToMany(models.Color, {
+        through: models.Products_Colors,
+        foreignKey: 'id_product',
+        otherKey: 'id_color',
+        as: 'Colors'
+      });
+
+      Product.belongsToMany(models.Size, {
+        through: models.Products_Sizes,
+        foreignKey: 'id_product',
+        otherKey: 'id_size',
+        as: 'Sizes'
+      });
+
     }
   }
   Product.init({
@@ -25,6 +61,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Product',
+    tableName: 'products'
   });
   return Product;
 };
