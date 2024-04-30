@@ -23,17 +23,13 @@ const productsDBMapped = productsJSON.map((p) => {
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-     await queryInterface.bulkInsert('Products', [
-      {
-
-      }
-     ], {});
+     await queryInterface.bulkInsert('Products',productsDBMapped, {});
     
   },
 
   async down (queryInterface, Sequelize) {
 
-    await queryInterface.bulkDelete('People', [], {});
+    await queryInterface.bulkDelete('Products', null, {});
     
   }
 };
