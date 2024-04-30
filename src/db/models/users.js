@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       // Tiene muchas = HasMany = N:1
-      Users.Product.hasMany(models.Favorites, {
+      Users.hasMany(models.Favorites, {
         foreignKey: "id_user",
         as: "Favorites",
       })
 
-      Users.Product.hasMany(models.Orders, {
+      Users.hasMany(models.Orders, {
         foreignKey: "id_user",
         as: "Orders",
       })

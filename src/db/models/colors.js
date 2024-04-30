@@ -18,13 +18,6 @@ module.exports = (sequelize, DataTypes) => {
         as: "Products_Colors",
       })
 
-      // Pertenece a = belongsTo = 1:N
-      Colors.belongsToMany(models.Product, {
-        through: models.Products_Colors,
-        foreignKey: 'id_color',
-        otherKey: 'id_product',
-        as: 'Products'
-      });
 
       // Pertenece a muchos = belongsToMany = N:M
       Colors.belongsToMany(models.Product, {
