@@ -26,6 +26,16 @@ module.exports = (sequelize, DataTypes) => {
         as: "Products_Colors",
       })
 
+      Product.hasMany(models.Favorites,{
+        foreignKey: "id_product",
+        as: "Favorites",
+      })
+
+      Product.hasMany(models.Orders_Products,{
+        foreignKey: "id_product",
+        as: "Orders_Products",
+      })
+
       // Pertenece a = belongsTo = 1:N
       Product.belongsTo(models.Categories, {
         foreignKey: "id_category",
