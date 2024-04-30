@@ -16,6 +16,7 @@ module.exports = {
             tableName : "users"
           },
           key: "id"
+        },
       },
       id_product: {
         type: Sequelize.INTEGER,
@@ -39,7 +40,7 @@ module.exports = {
       deletedAt:{
         type: Sequelize.DATE
       },
-    });
+    })
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Favorites');
