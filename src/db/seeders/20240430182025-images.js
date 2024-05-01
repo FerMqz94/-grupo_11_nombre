@@ -12,9 +12,6 @@ const images = p.image.map(img => {
   return images;  
 }).flat(1)
 
-
-
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {

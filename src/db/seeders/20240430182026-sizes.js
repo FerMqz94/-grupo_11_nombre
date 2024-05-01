@@ -2,20 +2,20 @@
 
 const productsJSON = require("../../database/products.json")
 
-const DBMapped = JSON.map((p) => {
-
-
-  return {
-
-  }
-})
-
+const sizesDBMapped = productsJSON.map((p) => {
+  const sizes = p.sizes.map(siz => {
+      return {
+        value: siz
+      }
+    })   
+    return sizes;  
+  }).flat(1)
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-   await queryInterface.bulkInsert('Sizes', [], {});
+   await queryInterface.bulkInsert('Sizes', sizesDBMapped, {});
   
   },
 

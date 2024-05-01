@@ -3,8 +3,6 @@
 const JSON = require("../../database")
 
 const DBMapped = JSON.map((p) => {
-
-
   return {
 
   }

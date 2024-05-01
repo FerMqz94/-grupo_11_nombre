@@ -1,12 +1,14 @@
 'use strict';
 
-const JSON = require("../../database")
+const ordersJSON = require("../../database/orders.json")
+const usersJSON = require("../../database/users.json") 
 
-const DBMapped = JSON.map((p) => {
-
-
+const ordersDBMapped = ordersJSON.map(o => {
+  const user = usersJSON.find(u => u.email === o.user)
   return {
-
+    id_user: user ? user.id : null,
+    total: o.total,    
+    status: o.status,
   }
 })
 
@@ -15,7 +17,7 @@ const DBMapped = JSON.map((p) => {
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-   await queryInterface.bulkInsert('Orders', [], {});
+   await queryInterface.bulkInsert('Orders', ordersDBMapped, {});
   
   },
 

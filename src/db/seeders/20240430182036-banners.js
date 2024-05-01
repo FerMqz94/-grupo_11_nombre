@@ -1,12 +1,11 @@
 'use strict';
 
-const JSON = require("../../database")
+const bannersJSON = require("../../database/banners.json")
 
-const DBMapped = JSON.map((p) => {
-
+const bannersJSONDBMapped = bannersJSON.map((b) => {
 
   return {
-
+    name: b.name
   }
 })
 
@@ -15,7 +14,7 @@ const DBMapped = JSON.map((p) => {
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-   await queryInterface.bulkInsert('Banners', [], {});
+   await queryInterface.bulkInsert('Banners', bannersJSONDBMapped , {});
   
   },
 
