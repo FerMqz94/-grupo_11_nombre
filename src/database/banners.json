@@ -1,0 +1,25 @@
+[
+    {
+        "id":1,
+        "name":"imagen-carrusel-1.jpg"
+    },
+    {
+        "id":2,
+        "name":"imagen-carrusel-2.jpg"
+    },
+    {
+        "id":3,
+        "name":"imagen-carrusel-3.jpg"
+    },
+    {
+        "id":4,
+        "name":"mensaje-de-la-marca-desktop-tablet.png"
+    },
+    {
+        "id":5,
+        "name":"mensaje-de-la-marca-phone.png"
+    }
+]
+
+
+
