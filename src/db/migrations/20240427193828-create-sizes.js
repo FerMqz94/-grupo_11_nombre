@@ -9,7 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      value: {
+      size: {
         type: Sequelize.INTEGER
       },
       createdAt: {
