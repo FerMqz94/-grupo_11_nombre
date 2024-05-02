@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "state": "pending",
+      "status": "pending",
       "total": 40500,
       "user": "pmnvera@gmail.com",
       "products": [
