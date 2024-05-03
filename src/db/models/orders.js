@@ -15,25 +15,40 @@ module.exports = (sequelize, DataTypes) => {
       // Pertenece a = belongsTo = 1:N
       Orders.belongsTo(models.Users, {
         foreignKey: "id_user",
-        as: "Users"
+        as: "user"
       })
 
-      // Tiene muchas = HasMany = N:1
-      Orders.hasMany(models.Orders_Products, {
+      // Muchos a muchos = belongsToMany = N:M
+      Orders.belongsToMany(models.Products, {
+        through: "orders_products",
         foreignKey: "id_order",
-        as: "Orders_Products",
+        otherKey: "id_product",
+        as: "products",
       })
 
     }
   }
-  Orders.init({
-    total: DataTypes.DECIMAL,
-    status: DataTypes.STRING,
+  Orders.init({      
+    total: {
+      type: DataTypes.DECIMAL,
+      defaultValue: 0,
+    },    
+    status: {
+      type: DataTypes.STRING,
+      validate: {
+        isIn: {
+          args: [["completed", "pending", "canceled"]],
+          msg: "Los valores validos de estado son 'completed', 'pending' o 'canceled'",
+        },
+      },
+      defaultValue: "pending"
+    },
     id_user: DataTypes.INTEGER
+
   }, {
     sequelize,
     modelName: 'Orders',
-    tableName: 'orders'
+    paranoid: true,
   });
   return Orders;
 };

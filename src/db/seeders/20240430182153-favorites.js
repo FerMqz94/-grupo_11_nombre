@@ -1,19 +1,19 @@
 'use strict';
 
-const JSON = require("../../database")
+const favoritesJSON = require("../../database/favorites.json");
 
-const DBMapped = JSON.map((p) => {
+const favoritesDBMapped = favoritesJSON.map((f) => {
   return {
-
+    id_user: f.id_user,
+    id_product: f.id_product
   }
-})
-
+}) 
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-   await queryInterface.bulkInsert('Favorites', [], {});
+   await queryInterface.bulkInsert('Favorites', favoritesDBMapped , {});
   
   },
 

@@ -12,25 +12,33 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      // Tiene muchas = HasMany = N:1
-      Users.hasMany(models.Favorites, {
+
+      Users.belongsTo(models.Rols, {
+        foreignKey: "id_rol",
+        as: "rol"
+      })
+
+      // Pertenece a muchos = belongsToMany = N:M
+      Users.belongToMany(models.Favorites, {
+        through: "Favorites",
         foreignKey: "id_user",
-        as: "Favorites",
+        otherKey: "id_product",
+        as: "favorites",
       })
 
       Users.hasMany(models.Orders, {
         foreignKey: "id_user",
-        as: "Orders",
+        as: "orders",
       })
 
     }
   }
   Users.init({
     name: DataTypes.STRING,
-    surname: DataTypes.STRING,
+    username: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    id_role: DataTypes.STRING,
+    id_rol: DataTypes.STRING,
     avatar: DataTypes.STRING
   }, {
     sequelize,

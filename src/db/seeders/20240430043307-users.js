@@ -4,12 +4,17 @@ const usersJSON = require("../../database/users.json")
 
 const usersJSONDBMapped = usersJSON.map((u) => {
 
+const rols = {
+  "REGULAR" : 1,
+  "ADMIN" : 2,  
+}
+
   return {
     name: u.name,
-    surname: u.surname,
+    username: u.username,
     email: u.email,
     password: u.password,
-    role: u.role,
+    id_rol: rols[u.rol],
     avatar: u.avatar
   }
 })

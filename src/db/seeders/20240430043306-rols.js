@@ -1,8 +1,8 @@
 'use strict';
 
-const rolesJSON = require("../../database/roles.json");
+const rolsJSON = require("../../database/rols.json");
 
-const rolesDBMapped = rolesJSON.map((r) => {
+const rolsDBMapped = rolsJSON.map((r) => {
   return { name: r.name };
 });
 
@@ -12,13 +12,13 @@ const rolesDBMapped = rolesJSON.map((r) => {
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-     await queryInterface.bulkInsert('Roles', rolesDBMapped, {});
+     await queryInterface.bulkInsert('Rols', rolsDBMapped, {});
     
   },
 
   async down (queryInterface, Sequelize) {
 
-     await queryInterface.bulkDelete('Roles', null, {});
+     await queryInterface.bulkDelete('Rols', null, {});
      
   }
 };

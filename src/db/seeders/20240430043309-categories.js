@@ -1,10 +1,10 @@
 'use strict';
 
-const productsJSON = require("../../database/products.json")
+const categoriesJSON = require("../../database/categories.json")
 
-const categoryDBMapped = productsJSON.map((p) => {
+const categoryDBMapped = categoriesJSON.map((c) => {
   return {
-    name: p.category
+    name: c.name
   }; 
 })
 
