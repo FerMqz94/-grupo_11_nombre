@@ -15,7 +15,7 @@ module.exports = (req, res) => {
       id: userFind.id, 
       name: userFind.name,
       username: userFind.username,
-      role: userFind.role,    
+      rol: userFind.rol,    
       avatar: userFind.avatar
   
       };

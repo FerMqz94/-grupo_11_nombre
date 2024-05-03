@@ -1,5 +1,6 @@
 'use strict';
 
+const sizesJSON = require("../../database/sizes.json")
 const productsJSON = require("../../database/products.json")
 
 const sizesDBMapped = productsJSON.map((p) => {
@@ -8,8 +9,10 @@ const sizes = p.sizes.map(siz => {
       
     }
   })   
-  return images;  
+  return sizes;  
 }).flat(1)
+
+
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
       // Tiene muchas = HasMany = N:1
       Categories.hasMany(models.Product,{
         foreignKey: "id_category",
-        as: "Product",
+        as: "products",
       })
       
     }

@@ -1,16 +1,13 @@
 'use strict';
 
-const productsJSON = require("../../database/products.json")
+const colorsJSON = require("../../database/colors.json")
 
-const colorsDBMapped = productsJSON.map((p) => {
-  const colors = p.colors.map(col => {
+const colorsDBMapped = colorsJSON.map((c) => {
       return {
-        name: col
+        name: c.name,
+        hexadecimal: c.code
       }
-    })   
-    return colors;  
-  }).flat(1)
-
+    })
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {

@@ -19,11 +19,11 @@ module.exports = (req, res) => {
           name: name.trim(),
           username: username.trim(),
           email: email.trim(),
-          password: password ? bcrypt.hashSync(password, 10) : userFind.password,
-          role: "REGULAR",
-          avatar: "default-avatar.jpg"
-
-        };
+          password: password? bcrypt.hashSync(password, 10) : userFind.password,
+          rol: "REGULAR",
+          avatar:  "default-avatar.jpg"
+         
+       };
 
         return userEdit;
       }

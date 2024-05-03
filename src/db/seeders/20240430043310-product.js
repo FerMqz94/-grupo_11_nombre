@@ -4,6 +4,21 @@ const productsJSON = require("../../database/products.json")
 
 const productsDBMapped = productsJSON.map((p) => {
 
+const categoryIDS = {
+  'Abrigos': 1,
+  'Jeans': 2,
+  'Buzos y sweaters': 3,
+  'Remeras': 4,
+  'Camisas y blusas': 5,
+  'Tops': 6,
+  'Pantalones y shorts': 7,
+  'Vestidos y polleras': 8,
+  'Cápsula Beige': 9,
+  'Cápsula American': 10,
+  'Cápsula 3024': 11,
+  'Sin categoría': 12
+}
+
 
   return {
     name: p.name,
@@ -13,7 +28,7 @@ const productsDBMapped = productsJSON.map((p) => {
     new: p.new,
     sale: p.sale,
     available: p.available,
-    id_category: p.id_category,
+    id_category: categoryIDS[p.category ? p.category : 'Sin categoría'],
   }
 })
 

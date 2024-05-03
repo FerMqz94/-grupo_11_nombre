@@ -13,10 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       // Tiene muchas = HasMany = N:1
+      // 🌝
       Product.hasMany(models.Images,{
         foreignKey: "id_product",
-        as: "Images",
+        as: "images",
       })
+
       Product.hasMany(models.Products_Sizes,{
         foreignKey: "id_product",
         as: "Products_Sizes",
@@ -31,31 +33,45 @@ module.exports = (sequelize, DataTypes) => {
         as: "Favorites",
       })
 
-      Product.hasMany(models.Orders_Products,{
-        foreignKey: "id_product",
-        as: "Orders_Products",
-      })
-
       // Pertenece a = belongsTo = 1:N
       Product.belongsTo(models.Categories, {
         foreignKey: "id_category",
-        as: "Categories"
+        as: "category"
       })
 
       // Pertenece a muchos = belongsToMany = N:M
+       // 🌝
       Product.belongsToMany(models.Color, {
-        through: models.Products_Colors,
+        through: "Products_Colors",
         foreignKey: 'id_product',
         otherKey: 'id_color',
-        as: 'Colors'
+        as: 'colors'
       });
 
+      // 🌝
       Product.belongsToMany(models.Size, {
-        through: models.Products_Sizes,
+        through: "Products_Sizes",
         foreignKey: 'id_product',
         otherKey: 'id_size',
-        as: 'Sizes'
+        as: 'sizes'
       });
+
+      // 🌝
+      Product.belongsToMany(models.Orders,{
+        through: "Orders_Products",
+        foreignKey: "id_product",
+        otherKey: "id_order",
+        as: "orders",
+      })
+      // 🌝
+      
+      Product.belongToMany(models.Favorites, {
+        through: "Favorites",
+        foreignKey: "id_user",
+        otherKey: "id_user",
+        as: "favorites",
+      })
+
 
     }
   }
