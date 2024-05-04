@@ -13,20 +13,20 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
 
-      Users.belongsTo(models.Rols, {
+      Users.belongsTo(models.Rol, {
         foreignKey: "id_rol",
         as: "rol"
       })
 
       // Pertenece a muchos = belongsToMany = N:M
-      Users.belongToMany(models.Favorites, {
+      Users.belongToMany(models.Favorite, {
         through: "Favorites",
         foreignKey: "id_user",
         otherKey: "id_product",
         as: "favorites",
       })
 
-      Users.hasMany(models.Orders, {
+      Users.hasMany(models.Order, {
         foreignKey: "id_user",
         as: "orders",
       })

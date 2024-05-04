@@ -14,27 +14,27 @@ module.exports = (sequelize, DataTypes) => {
 
       // Tiene muchas = HasMany = N:1
       // 🌝
-      Product.hasMany(models.Images,{
+      Product.hasMany(models.Image,{
         foreignKey: "id_product",
         as: "images",
       })
 
-      Product.hasMany(models.Products_Sizes,{
+      Product.hasMany(models.Products_Size,{
         foreignKey: "id_product",
         as: "Products_Sizes",
       })
-      Product.hasMany(models.Products_Colors,{
+      Product.hasMany(models.Products_Color,{
         foreignKey: "id_product",
         as: "Products_Colors",
       })
 
-      Product.hasMany(models.Favorites,{
+      Product.hasMany(models.Favorite,{
         foreignKey: "id_product",
         as: "Favorites",
       })
 
       // Pertenece a = belongsTo = 1:N
-      Product.belongsTo(models.Categories, {
+      Product.belongsTo(models.Categorie, {
         foreignKey: "id_category",
         as: "category"
       })
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       // 🌝
-      Product.belongsToMany(models.Orders,{
+      Product.belongsToMany(models.Order,{
         through: "Orders_Products",
         foreignKey: "id_product",
         otherKey: "id_order",
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       })
       // 🌝
       
-      Product.belongToMany(models.Favorites, {
+      Product.belongToMany(models.Favorite, {
         through: "Favorites",
         foreignKey: "id_user",
         otherKey: "id_user",
