@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       // Pertenece a = belongsTo = 1:N
-      Orders.belongsTo(models.Users, {
+      Orders.belongsTo(models.User, {
         foreignKey: "id_user",
         as: "user"
       })
 
       // Muchos a muchos = belongsToMany = N:M
-      Orders.belongsToMany(models.Products, {
+      Orders.belongsToMany(models.Product, {
         through: "orders_products",
         foreignKey: "id_order",
         otherKey: "id_product",
