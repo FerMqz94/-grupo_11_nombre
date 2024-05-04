@@ -18,10 +18,6 @@ const ordersProductsDBMapped = ordersJSON
     return productMapped;
   }).flat(1);
 
-  console.log();
-
-  
-
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
