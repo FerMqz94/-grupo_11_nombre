@@ -1,26 +1,26 @@
 'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class Products_Sizes extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
 
-const sizesJSON = require("../../database/sizes.json");
-const productsJSON = require("../../database/products.json");
-
-
-const sizesDBMapped = productsJSON.flatMap((product) => {
-  return product.sizes.map((sizeId) => {
-    return {
-      id_product: product.id,
-      id_size: sizeId
-    };
-  });
-});
-
-/** @type {import('sequelize-cli').Migration} */
-module.exports = {
-  async up (queryInterface, Sequelize) {
-    
-    await queryInterface.bulkInsert('products_sizes', sizesDBMapped, {});
-  },
-  async down (queryInterface, Sequelize) {
-    
-    await queryInterface.bulkDelete('products_sizes', null, {});
+    }
   }
+  Products_Sizes.init({
+    id_product: DataTypes.INTEGER,
+    id_size: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Products_Sizes',
+    tableName: 'products_sizes'
+  });
+  return Products_Sizes;
 };
