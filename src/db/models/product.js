@@ -36,20 +36,20 @@ module.exports = (sequelize, DataTypes) => {
       // Pertenece a = belongsTo = 1:N
       Product.belongsTo(models.Categories, {
         foreignKey: "id_category",
-        as: "category"
+        as: "categories"
       })
 
       // Pertenece a muchos = belongsToMany = N:M
        // 🌝
-      Product.belongsToMany(models.Colors, {
-        through: "Products_Colors",
-        foreignKey: 'id_product',
-        otherKey: 'id_color',
-        as: 'colors'
-      });
+      // Product.belongsToMany(models.Colors, {
+      //   through: "Products_Colors",
+      //   foreignKey: 'id_product',
+      //   otherKey: 'id_color',
+      //   as: 'colors'
+      // });
 
       // 🌝
-      Product.belongsToMany(models.Size, {
+      Product.belongsToMany(models.Sizes, {
         through: "Products_Sizes",
         foreignKey: 'id_product',
         otherKey: 'id_size',
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       // 🌝
-      Product.belongsToMany(models.Order,{
+      Product.belongsToMany(models.Orders,{
         through: "Orders_Products",
         foreignKey: "id_product",
         otherKey: "id_order",

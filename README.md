@@ -5,7 +5,7 @@
 Bejarano Alexander
 Cuello Tiago
 Márquez Fernando
-Martínez Franco
+Gaston Castillo
 Vera Paola
 
 ## ¿Qué productos brindará el sitio web?
