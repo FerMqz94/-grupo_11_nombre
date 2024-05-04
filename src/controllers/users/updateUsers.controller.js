@@ -50,16 +50,13 @@ module.exports = (req, res) => {
     const { name, surname, email, password, passwordConfirm } = req.body;
     const userFind = Users.find(u => u.id === +id);
 
-    // const usersMap = Users.map((u) => {
-      // if (u.id === +id) {
-        // const userEdit = (req,res) => {
 
         db.Users.update({
           name: name.trim(),
           surname: surname.trim(),
           email: email.trim(),
           password: password ? bcrypt.hashSync(password, 10) : userFind.password,
-          id_role: "REGULAR",
+          id_role: 1,
           avatar: "default-avatar.jpg"
         }, {
           where: {
@@ -67,24 +64,7 @@ module.exports = (req, res) => {
           }
         })
         
-      // }
-        //  return userEdit
-        // .then((userEdit) =>{userEdit})
 
-
-       
-
-          // .then(user => {
-          //   res.redirect('/', { user });
-          // })
-          // .catch((err) => {
-          //   res.send(err.message)
-          // })
-      //     return u 
-      // }
-
-    // }
-    //) saveData(usersMap, "users");
     
 
     res.redirect("/")
@@ -94,9 +74,18 @@ module.exports = (req, res) => {
     })
     
   } else {
-    const errorsArray = errors.array();
-    res.status(422).json({ errors: errorsArray })
+    const { id }  = req.params
 
+
+    db.Users.findByPk(req.params.id)
+    .then((userFind, errors) => {
+      res.render("users/perfilUsuario", {
+      // old: req.body,
+      errors: errors.mapped(),
+      user : userFind
+    })
+    })
+    
     .catch((err) => {
       res.send(err.message)
     })

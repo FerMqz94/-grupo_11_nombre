@@ -26,5 +26,5 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Rols',
     timestamps: false
   });
-  return Rol;
+  return Rols;
 };
