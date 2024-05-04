@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
       Users.belongsTo(models.Rol, {
         foreignKey: "id_rol",
-        as: "rol"
+        as: "rols"
       })
 
       // Pertenece a muchos = belongsToMany = N:M

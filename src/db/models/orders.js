@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
       // Pertenece a = belongsTo = 1:N
       Orders.belongsTo(models.User, {
         foreignKey: "id_user",
-        as: "user"
+        as: "users"
       })
 
       // Muchos a muchos = belongsToMany = N:M
