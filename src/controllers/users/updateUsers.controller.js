@@ -56,7 +56,7 @@ module.exports = (req, res) => {
           surname: surname.trim(),
           email: email.trim(),
           password: password ? bcrypt.hashSync(password, 10) : userFind.password,
-          id_role: 1,
+          id_rol: 1,
           avatar: "default-avatar.jpg"
         }, {
           where: {
@@ -64,9 +64,6 @@ module.exports = (req, res) => {
           }
         })
         
-
-    
-
     res.redirect("/")
   
     .catch((err) => {

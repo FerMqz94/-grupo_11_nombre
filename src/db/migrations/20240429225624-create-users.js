@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       id_rol: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER
       },
       avatar: {
         type: Sequelize.STRING

@@ -7,7 +7,6 @@ module.exports = (req, res) => {
             id: id_user ? id_user : req.session?.userLogin?.id
         }
     })
-    
          .then(() => {
              res.redirect("/")
          })
