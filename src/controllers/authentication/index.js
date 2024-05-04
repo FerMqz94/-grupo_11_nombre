@@ -3,5 +3,6 @@ module.exports = {
     login: require("../authentication/login.controller"),
     processLogin: require("./processLogin.controller"),
     processRegister: require("./processRegister.controller"),
-    logout: require("./logout.controller")   
+    logout: require("./logout.controller"),
+    userDelete: require('./userDelete.controller'),
 }

@@ -1,4 +1,4 @@
-const db = require('../db/models');
+const db = require('../../db/models');
 
 module.exports = (req, res) => {
 
@@ -8,9 +8,9 @@ module.exports = (req, res) => {
         }
     })
     
-        // .then(() => {
-        //     res.redirect("/")
-        // })
+         .then(() => {
+             res.redirect("/")
+         })
         .catch((err) => {
             res.send(err.message)
         })

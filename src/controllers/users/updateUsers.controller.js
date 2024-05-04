@@ -40,7 +40,6 @@ module.exports = (req, res) => {
 */
 
 const db = require('../../db/models');
-const { where } = require("sequelize");
 const bcrypt = require('bcryptjs')
 const { validationResult } = require("express-validator");
 
@@ -49,16 +48,16 @@ module.exports = (req, res) => {
 
   if (errors.isEmpty()) {
     const { name, surname, email, password, passwordConfirm } = req.body;
-    const userFind = users.find(u => u.id === +id);
+    const userFind = Users.find(u => u.id === +id);
 
-    const usersMap = users.map((u) => {
-      if (u.id === +id) {
-        const userEdit = (req,res) => {
+    // const usersMap = Users.map((u) => {
+      // if (u.id === +id) {
+        // const userEdit = (req,res) => {
 
         db.Users.update({
-          name: name,
-          surname: surname,
-          email: email,
+          name: name.trim(),
+          surname: surname.trim(),
+          email: email.trim(),
           password: password ? bcrypt.hashSync(password, 10) : userFind.password,
           id_role: "REGULAR",
           avatar: "default-avatar.jpg"
@@ -67,12 +66,13 @@ module.exports = (req, res) => {
             id: req.body.id
           }
         })
-      }
-         return userEdit
+        
+      // }
+        //  return userEdit
+        // .then((userEdit) =>{userEdit})
 
-         .catch((err) => {
-          res.send(err.message)
-        })
+
+       
 
           // .then(user => {
           //   res.redirect('/', { user });
@@ -80,10 +80,13 @@ module.exports = (req, res) => {
           // .catch((err) => {
           //   res.send(err.message)
           // })
-      }
+      //     return u 
+      // }
 
-    })
-    saveData(usersMap, "users");
+    // }
+    //) saveData(usersMap, "users");
+    
+
     res.redirect("/")
   
     .catch((err) => {
