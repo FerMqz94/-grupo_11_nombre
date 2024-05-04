@@ -3,6 +3,7 @@
 const sizesJSON = require("../../database/sizes.json")
 const productsJSON = require("../../database/products.json")
 
+
 const sizesDBMapped = productsJSON.map((p) => {
 const sizes = p.sizes.map(siz => {
     return {
