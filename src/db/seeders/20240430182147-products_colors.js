@@ -5,7 +5,7 @@ const productsJSON = require("../../database/products.json");
 const productsColorsDBMapped = productsJSON.map(product => product.colors.map(colorId => ({
     id_product: product.id,
     id_color: colorId,
-}))).flat(); 
+}))).flat();
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
