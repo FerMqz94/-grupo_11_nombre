@@ -20,7 +20,7 @@ module.exports = (req, res) => {
           username: username.trim(),
           email: email.trim(),
           password: password? bcrypt.hashSync(password, 10) : userFind.password,
-          role: "REGULAR",
+          rol: "REGULAR",
           avatar:  "default-avatar.jpg"
          
        };

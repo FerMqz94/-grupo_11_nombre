@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Abrigos"
+    },
+    {
+        "id": 2,
+        "name": "Jeans"
+    },
+    {
+        "id": 3,
+        "name": "Buzos y sweaters"
+    },
+    {
+        "id": 4,
+        "name": "Remeras"
+    },
+    {
+        "id": 5,
+        "name": "Camisas y blusas"
+    },
+    {
+        "id": 6,
+        "name": "Tops"
+    },
+    {
+        "id": 7,
+        "name": "Pantalones y shorts"
+    },
+    {
+        "id": 8,
+        "name": "Vestidos y polleras"
+    },
+    {
+        "id": 9,
+        "name": "Cápsula Beige"
+    },
+    {
+        "id": 10,
+        "name": "Cápsula American"
+    },
+    {
+        "id": 11,
+        "name": "Cápsula 3024"
+    },
+    {
+        "id": 12,
+        "name": "Sin categoría"
+    }  
+]

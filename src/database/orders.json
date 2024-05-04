@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "status": "pending",
+      "status": "completed",
       "total": 40500,
       "user": "pmnvera@gmail.com",
       "products": [
@@ -17,13 +17,13 @@
     },
     {
       "id": 2,
-      "state": "completed",
-      "total": 21060,
-      "user": "gastoncastillo1920@gmail.com",
+      "status": "completed",
+      "total": 80500,
+      "user": "fer_marquez94@gmail.com",
       "products": [
         {
           "name": "Joggin cargo",
-          "quantity": 1
+          "quantity": 2
         },
         {
           "name": "Remera overzise",

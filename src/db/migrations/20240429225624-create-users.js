@@ -12,7 +12,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      surname: {
+      username: {
         type: Sequelize.STRING
       },
       email: {
@@ -21,7 +21,7 @@ module.exports = {
       password: {
         type: Sequelize.STRING
       },
-      role: {
+      id_rol: {
         type: Sequelize.STRING
       },
       avatar: {
