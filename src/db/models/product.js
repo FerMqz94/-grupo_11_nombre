@@ -14,39 +14,39 @@ module.exports = (sequelize, DataTypes) => {
 
       // Tiene muchas = HasMany = N:1
       // 🌝
-      Product.hasMany(models.Image,{
+      Product.hasMany(models.Images,{
         foreignKey: "id_product",
         as: "images",
       })
 
-      Product.hasMany(models.Products_Size,{
+      Product.hasMany(models.Products_Sizes,{
         foreignKey: "id_product",
         as: "Products_Sizes",
       })
-      Product.hasMany(models.Products_Color,{
+      Product.hasMany(models.Products_Colors,{
         foreignKey: "id_product",
         as: "Products_Colors",
       })
 
-      Product.hasMany(models.Favorite,{
+      Product.hasMany(models.Favorites,{
         foreignKey: "id_product",
         as: "Favorites",
       })
 
       // Pertenece a = belongsTo = 1:N
-      Product.belongsTo(models.Categorie, {
+      Product.belongsTo(models.Categories, {
         foreignKey: "id_category",
-        as: "category"
+        as: "categories"
       })
 
       // Pertenece a muchos = belongsToMany = N:M
        // 🌝
-      Product.belongsToMany(models.Colors, {
-        through: "Products_Colors",
-        foreignKey: 'id_product',
-        otherKey: 'id_color',
-        as: 'colors'
-      });
+      // Product.belongsToMany(models.Colors, {
+      //   through: "Products_Colors",
+      //   foreignKey: 'id_product',
+      //   otherKey: 'id_color',
+      //   as: 'colors'
+      // });
 
       // 🌝
       Product.belongsToMany(models.Sizes, {
@@ -57,7 +57,7 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       // 🌝
-      Product.belongsToMany(models.Order,{
+      Product.belongsToMany(models.Orders,{
         through: "Orders_Products",
         foreignKey: "id_product",
         otherKey: "id_order",
