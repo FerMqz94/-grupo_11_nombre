@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       // Tiene muchas = HasMany = N:1
-      Categories.hasMany(models.Product,{
+      Categories.hasMany(models.Products,{
         foreignKey: "id_category",
         as: "products",
       })

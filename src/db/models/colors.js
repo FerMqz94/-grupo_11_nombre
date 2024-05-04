@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       // Pertenece a muchos = belongsToMany = N:M
-      Colors.belongsToMany(models.Product, {
+      Colors.belongsToMany(models.Products, {
         through: "Products_Colors",
         foreignKey: 'id_color',
         otherKey: 'id_product',

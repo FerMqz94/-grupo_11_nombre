@@ -40,13 +40,13 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       // Pertenece a muchos = belongsToMany = N:M
-       // 🌝
-      // Product.belongsToMany(models.Colors, {
-      //   through: "Products_Colors",
-      //   foreignKey: 'id_product',
-      //   otherKey: 'id_color',
-      //   as: 'colors'
-      // });
+       
+      Product.belongsToMany(models.Colors, {
+        through: "Products_Colors",
+        foreignKey: 'id_product',
+        otherKey: 'id_color',
+        as: 'colors'
+      });
 
       // 🌝
       Product.belongsToMany(models.Sizes, {
@@ -65,7 +65,7 @@ module.exports = (sequelize, DataTypes) => {
       })
       // 🌝
       
-      Product.belongToMany(models.Favorite, {
+      Product.belongToMany(models.Favorites, {
         through: "Favorites",
         foreignKey: "id_user",
         otherKey: "id_user",
