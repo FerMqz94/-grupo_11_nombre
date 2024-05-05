@@ -20,6 +20,9 @@ const db = require("../../db/models");
 module.exports = (req, res)=>{
   const { id } = req.params;
   db.Product.findByPk(id, {
+    include: [Images],
+  }).then((Product)=>{
+  db.Product.findByPk(id, {
     include: [images],
   }).then((products)=>{
   const productsFind = products.find(p => p.id === +id) 

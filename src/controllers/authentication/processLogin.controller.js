@@ -44,19 +44,14 @@ module.exports = (req, res) => {
 
   // const userFind = users.find((u) => u.email === email);
   const errors = validationResult(req);
+  if(errors.isEmpty()){
   db.Users.findOne({
     where: {
       email,
     },
+    
     include:["rols"]
   }).then((user) => {
-  
-    if (!user) res.send("El usuario no existe");
-
-    const isPasswordValid = bcrypt.compareSync(password, user?.password);
-
-    if (!isPasswordValid) res.send("El password es incorrecto");
-
     req.session.userLogin = {
       id: user.id,
       name: user.name,
@@ -64,16 +59,25 @@ module.exports = (req, res) => {
       avatar: user.avatar,
       id_rol: user.id_rol.name,
     };
+  
+    // if(recordam}e ){
+    //   res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 });
 
-    if (remember)
-      res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 });
+    res.redirect("/");
 
-    // res.redirect("/");
-    //    } else {
+  } 
+  )
+  .catch((err) => {
+    res.send(err.message)
+})
+      }else{
 
-   res.render("./authentication/login", {
-     old: req.body,
-    errors: errors.mapped(),
-  });
-  });
+          res.render("./authentication/login", {
+            old: req.body,
+           errors: errors.mapped(),
+        })
+        .catch((err) => {
+          res.send(err.message)
+      })
+      }
 };
