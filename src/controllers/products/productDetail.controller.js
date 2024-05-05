@@ -36,5 +36,4 @@ module.exports = (req, res)=>{
     res.render("/id",{
       product
     });
-  });
-};
+  };
