@@ -22,7 +22,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       id_rol: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "rols"
+          },
+          key: "id"
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"      
       },
       avatar: {
         type: Sequelize.STRING
