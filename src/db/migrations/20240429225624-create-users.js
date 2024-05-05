@@ -31,7 +31,7 @@ module.exports = {
         },
         onDelete: 'CASCADE',
         onUpdate: 'CASCADE'
-      },
+      }, 
       avatar: {
         type: Sequelize.STRING
       },
