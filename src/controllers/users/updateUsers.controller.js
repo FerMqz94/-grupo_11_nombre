@@ -1,7 +1,7 @@
-const { validationResult } = require("express-validator");
-const { saveData, loadData } = require("../../database");
-const bcrypt = require('bcryptjs')
-
+// const { validationResult } = require("express-validator");
+// const { saveData, loadData } = require("../../database");
+// const bcrypt = require('bcryptjs')
+/*
 module.exports = (req, res) => {
   const errors = validationResult(req);
   const { id } = req.params;
@@ -20,13 +20,13 @@ module.exports = (req, res) => {
           username: username.trim(),
           email: email.trim(),
           password: password? bcrypt.hashSync(password, 10) : userFind.password,
-          role: "REGULAR",
+          rol: "REGULAR",
           avatar:  "default-avatar.jpg"
          
        };
 
         return userEdit;
-      } 
+      }
 
       return u;
     });
@@ -36,5 +36,55 @@ module.exports = (req, res) => {
     const errorsArray = errors.array();
     res.status(422).json({ errors: errorsArray });
   }
-};
+}; 
+*/
 
+const db = require('../../db/models');
+const bcrypt = require('bcryptjs')
+const { validationResult } = require("express-validator");
+
+module.exports = (req, res) => {
+  const errors = validationResult(req);
+
+  if (errors.isEmpty()) {
+    const { name, surname, email, password, passwordConfirm } = req.body;
+    const userFind = Users.find(u => u.id === +id);
+
+
+        db.Users.update({
+          name: name.trim(),
+          surname: surname.trim(),
+          email: email.trim(),
+          password: password ? bcrypt.hashSync(password, 10) : userFind.password,
+          id_rol: 1,
+          avatar: "default-avatar.jpg"
+        }, {
+          where: {
+            id: req.body.id
+          }
+        })
+        
+    res.redirect("/")
+  
+    .catch((err) => {
+      res.send(err.message)
+    })
+    
+  } else {
+    const { id }  = req.params
+
+
+    db.Users.findByPk(req.params.id)
+    .then((userFind, errors) => {
+      res.render("users/perfilUsuario", {
+      // old: req.body,
+      errors: errors.mapped(),
+      user : userFind
+    })
+    })
+    
+    .catch((err) => {
+      res.send(err.message)
+    })
+  }
+}

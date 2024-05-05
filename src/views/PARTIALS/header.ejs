@@ -66,7 +66,7 @@
                                 </a>
                                 <% } %>
                                 <% } else { %>
-                                    <% if(locals.userLogin?.role === "REGULAR") {%>
+                                    <% if(locals.userLogin?.rol === "REGULAR") {%>
                                     <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>"><p class="texto-header" style="color: var(--blanco); font-size: var(--letra-grande)">Ver mi perfil</p></a>
 
                                     
@@ -94,7 +94,7 @@
             <p class="texto-header">CONTACTO
                 <i class=""></i>
             </p>
-            <p class="texto-header">QUIENES SOMOS
+            <p class="texto-header"><a href="/sobre-nosotros" style="color:black">QUIENES SOMOS</a>
                 <i class=""></i>
             </p>
             <!-- <p class="texto-header">LO MAS NUEVO!
