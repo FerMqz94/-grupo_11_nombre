@@ -18,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Banners',
-    tableName: "banners"
+    tableName: "banners",
+    underscored: true,
+    paranoid: true
   });
   return Banners;
 };
