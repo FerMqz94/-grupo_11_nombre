@@ -43,5 +43,14 @@
       "password": "$2a$12$X.myQUrhjmXxe6erugXoIugjslOaHuCNisnDG5zgVXp6BqzpFVf6u",
       "role": "ADMIN",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 6,
+      "name": "fer",
+      "username": "coso",
+      "email": "fer@gmail.com",
+      "password": "$2a$12$5LYuu/zN2ntGMUSH1AKRceB/tqGw90z8hfMtETIhohfGf4MR1C5xC",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
    }
 ]

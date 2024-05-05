@@ -42,13 +42,13 @@ module.exports = (req, res) => {
   const { email, password, remember } = req.body;
   // const users = loadData("users");
 
-  const userFind = users.find((u) => u.email === email);
+  // const userFind = users.find((u) => u.email === email);
   const errors = validationResult(req);
-  db.User.findOne({
+  db.Users.findOne({
     where: {
       email,
     },
-    include:["role"]
+    include:["rols"]
   }).then((user) => {
   
     if (!user) res.send("El usuario no existe");
@@ -62,7 +62,7 @@ module.exports = (req, res) => {
       name: user.name,
       surname: user.surname,
       avatar: user.avatar,
-      role: user.role.name,
+      id_rol: user.id_rol.name,
     };
 
     if (remember)
