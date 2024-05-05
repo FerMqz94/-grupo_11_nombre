@@ -19,16 +19,16 @@ module.exports = {
         type: Sequelize.TEXT
       },
       price: {
-        type: Sequelize.DECIMAL(10, 2)
+        type: Sequelize.DECIMAL
       },
       new: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.INTEGER
       },
       sale: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.INTEGER
       },
       available: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.INTEGER
       },
       id_category: {
         type: Sequelize.INTEGER,

@@ -38,14 +38,12 @@ module.exports = (sequelize, DataTypes) => {
     username: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    id_rol: DataTypes.INTEGER,
+    id_rol: DataTypes.STRING,
     avatar: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Users',
-    tableName : "users",
-    paranoid: true,
-    // underscored: true
+    tableName : "users"
   });
   return Users;
 };
