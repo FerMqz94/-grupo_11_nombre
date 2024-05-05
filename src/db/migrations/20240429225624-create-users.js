@@ -29,8 +29,10 @@ module.exports = {
           },
           key: "id"
         },
+        defaultValue: 1,
         onDelete: "CASCADE",
-        onUpdate: "CASCADE"      
+        onUpdate: "CASCADE",
+        
       },
       avatar: {
         type: Sequelize.STRING
