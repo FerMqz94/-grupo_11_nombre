@@ -19,12 +19,12 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       // Pertenece a muchos = belongsToMany = N:M
-      Users.belongToMany(models.Favorites, {
+      Users.belongsToMany(models.Products, {
         through: "Favorites",
         foreignKey: "id_user",
         otherKey: "id_product",
         as: "favorites",
-      })
+      });
 
       Users.hasMany(models.Orders, {
         foreignKey: "id_user",

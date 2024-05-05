@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
@@ -12,32 +13,32 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      // Tiene muchas = HasMany = N:1
-      // 🌝
-      Product.hasMany(models.Images,{
+      // Tiene muchas relaciones "hasMany"
+      Product.hasMany(models.Images, {
         foreignKey: "id_product",
         as: "images",
-      })
+      });
 
-      Product.hasMany(models.Products_Sizes,{
+      Product.hasMany(models.Products_Sizes, {
         foreignKey: "id_product",
-        as: "Products_Sizes",
-      })
-      Product.hasMany(models.Products_Colors,{
-        foreignKey: "id_product",
-        as: "Products_Colors",
-      })
+        as: "productSizes",
+      });
 
-      Product.hasMany(models.Favorites,{
+      Product.hasMany(models.Products_Colors, {
         foreignKey: "id_product",
-        as: "Favorites",
-      })
+        as: "productColors",
+      });
 
-      // Pertenece a = belongsTo = 1:N
+      Product.hasMany(models.Favorites, {
+        foreignKey: "id_product",
+        as: "favorites",
+      });
+
+      // Pertenece a una categoría "belongsTo"
       Product.belongsTo(models.Categories, {
         foreignKey: "id_category",
-        as: "categories"
-      })
+        as: "category"
+      });
 
       // Pertenece a muchos = belongsToMany = N:M
        
@@ -48,7 +49,7 @@ module.exports = (sequelize, DataTypes) => {
         as: 'colors'
       });
 
-      
+      // 🌝
       Product.belongsToMany(models.Sizes, {
         through: "Products_Sizes",
         foreignKey: 'id_product',
@@ -56,16 +57,16 @@ module.exports = (sequelize, DataTypes) => {
         as: 'sizes'
       });
 
-      // 🌝
-      Product.belongsToMany(models.Orders,{
-        through: "Orders_Products",
+      // Pertenece a muchos "belongsToMany" para ordenes
+      Product.belongsToMany(models.Orders, {
+        through: "Order_Product",
         foreignKey: "id_product",
         otherKey: "id_order",
         as: "orders",
       })
       // 🌝
       
-      Product.belongToMany(models.Favorites, {
+      Product.belongToMany(models.Favorite, {
         through: "Favorites",
         foreignKey: "id_user",
         otherKey: "id_user",
@@ -75,19 +76,21 @@ module.exports = (sequelize, DataTypes) => {
 
     }
   }
+  
   Product.init({
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     featuredDescription: DataTypes.TEXT,
-    price: DataTypes.DECIMAL(6, 2),
-    new: DataTypes.INTEGER,
-    sale: DataTypes.INTEGER,
-    available: DataTypes.INTEGER,
+    price: DataTypes.DECIMAL(10, 2), // Ajustar precisión según necesidad
+    new: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
+    sale: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
+    available: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
     id_category: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Product',
     tableName: 'products'
   });
+
   return Product;
 };
