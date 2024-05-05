@@ -57,12 +57,11 @@ module.exports = (sequelize, DataTypes) => {
 
       // Pertenece a muchos "belongsToMany" para ordenes
       Product.belongsToMany(models.Orders, {
-        through: "Orders_Products",
+        through: "Order_Product",
         foreignKey: "id_product",
         otherKey: "id_order",
         as: "orders",
       });
-      
     }
   }
   
@@ -70,17 +69,15 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     featuredDescription: DataTypes.TEXT,
-    price: DataTypes.DECIMAL(10, 2), 
-    new: DataTypes.BOOLEAN, 
-    sale: DataTypes.BOOLEAN, 
-    available: DataTypes.BOOLEAN, 
+    price: DataTypes.DECIMAL(10, 2), // Ajustar precisión según necesidad
+    new: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
+    sale: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
+    available: DataTypes.BOOLEAN, // Cambiar a BOOLEAN si solo será 0 o 1
     id_category: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Product',
-    tableName: 'products',
-    paranoid: true,
-    underscored: true
+    tableName: 'products'
   });
 
   return Product;

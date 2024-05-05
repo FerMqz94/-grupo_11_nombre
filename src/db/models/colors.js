@@ -23,13 +23,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Colors.init({
     name: DataTypes.STRING,
-    allowNull: false,
     hexadecimal: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Colors',
-    tableName: 'colors',
-    underscored: true
+    tableName: 'colors'
   });
   return Colors;
 };

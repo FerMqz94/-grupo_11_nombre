@@ -19,9 +19,9 @@ const sizesDBMapped = productsJSON.flatMap((product) => {
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Products_Sizes', sizesDBMapped, {});
+    await queryInterface.bulkInsert('products_sizes', sizesDBMapped, {});
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Products_Sizes', null, {});
+    await queryInterface.bulkDelete('products_sizes', null, {});
   }
 };
