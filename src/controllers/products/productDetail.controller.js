@@ -19,9 +19,9 @@ const db = require("../../db/models");
 
 module.exports = (req, res)=>{
   const { id } = req.params;
-  db.product.findByPk(id, {
+  db.Product.findByPk(id, {
     include: [images],
-  }).then((product)=>{
+  }).then((products)=>{
   const productsFind = products.find(p => p.id === +id) 
   if (productsFind) {
     

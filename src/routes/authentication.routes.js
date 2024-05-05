@@ -15,7 +15,7 @@ router.post("/registrar", registerValidation, processRegister);
 
 router.get("/cerrar-sesion", logout)
 
-router.get("/eliminar" , userDelete)
+// router.get("/eliminar" , userDelete)
 
 
 module.exports = router;
