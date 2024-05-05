@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Colors.init({
     name: DataTypes.STRING,
+    allowNull: false,
     hexadecimal: DataTypes.STRING
   }, {
     sequelize,
