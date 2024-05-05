@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       // Muchos a muchos = belongsToMany = N:M
-      Orders.belongsToMany(models.Product, {
+      Orders.belongsToMany(models.Products, {
         through: "orders_products",
         foreignKey: "id_order",
         otherKey: "id_product",

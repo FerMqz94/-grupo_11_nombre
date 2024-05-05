@@ -13,37 +13,37 @@
 // })};
 
 
-// const db = require("../../db/models");
+const db = require("../../db/models");
 
-// module.exports = (req, res) => {
+module.exports = (req, res) => {
 
-//   db.products.findAll({
-//     include:[
-//     {
-//         association:"images",
-//         attributes:['file'],
-//         },
-//     {
-//         association:"colors" ,
-//         attributes:['id_color']
-//     },
-//     {
-//         association:"sizes",
-//         attributes:['id_sizes']
-//     }
-//     ],
-// })
-// .then((products)=>{
-//         res.render("admin/listProducts", { 
-//             products
-//            }, 
-//            (err, content) => {
+  db.product.findAll({
+    include:[
+    {
+        association:"images",
+        attributes:['file'],
+        },
+    {
+        association:"colors" ,
+        attributes:['id_color']
+    },
+    {
+        association:"sizes",
+        attributes:['id_sizes']
+    }
+    ],
+})
+.then((products)=>{
+        res.render("admin/listProducts", { 
+            products
+           }, 
+           (err, content) => {
     
-//                 err && res.send(err.message)
-//                 res.render("partials/dashboard", {
-//                   contentView: content
-//                  })
-// })
+                err && res.send(err.message)
+                res.render("partials/dashboard", {
+                  contentView: content
+                 })
+})
 
     
-//     })};
+    })};
