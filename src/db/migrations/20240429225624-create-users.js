@@ -28,9 +28,11 @@ module.exports = {
             tableName: 'Rols'
           },
           key: 'id'
+
         },
         onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
+        onUpdate: 'CASCADE',
+        defaultValue: 1
       }, 
       avatar: {
         type: Sequelize.STRING
