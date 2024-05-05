@@ -253,7 +253,7 @@ main.crear-producto div.colores-producto-editar-crear div.checkbox-color label.l
 }
 
 /*COLOR POR COLOR EN EL CHECKED*/
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.negro:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.black:checked{
   background-color: black;
 }
 
@@ -262,57 +262,57 @@ main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.b
   border: 0.5px solid var(--gris85);
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.azul:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.blue:checked{
   background-color: blue;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.blanco:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.white:checked{
   background-color: white;
   border: 0.5px solid var(--gris85);
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.rojo:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.red:checked{
   background-color: red;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.verde:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.green:checked{
   background-color: green;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.violeta:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.purple:checked{
   background-color: purple;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.naranja:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.orange:checked{
   background-color: orange;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.celeste:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.lightblue:checked{
   background-color: lightblue;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.gris:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.gray:checked{
   background-color: gray;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.lila:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.lavender:checked{
   background-color: lavender;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.rosa:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.pink:checked{
   background-color: pink;
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.plata:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.silver:checked{
   background-color: silver;
   border: 0.5px solid var(--gris85);
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.petroleo:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.bluishGreen:checked{
   background-color: var(--verde-azulado);
 }
 
-main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.dorado:checked{
+main.crear-producto div.colores-producto-editar-crear div.checkbox-color input.gold:checked{
   background-color: gold;
 }
 

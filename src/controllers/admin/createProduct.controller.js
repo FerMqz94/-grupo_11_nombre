@@ -1,4 +1,4 @@
-const db = require('../../db/models')
+/*const db = require('../../db/models')
 
 module.exports = (req, res) => {
 
@@ -13,6 +13,25 @@ module.exports = (req, res) => {
       })
     })
   })
+}*/
+
+
+const {loadData} = require('../../database');
+
+module.exports = (req, res) => {
+const categories = loadData('categories');
+const colors = loadData('colors');
+const sizes = loadData('sizes');
+
+res.render("./admin/createProduct", {
+  categories, colors, sizes
+}, (err,content) => {
+  err && res.send(err.mesage)
+  res.render('partials/dashboard', {
+    contentView:content
+  })
+})
+
 }
 
 
