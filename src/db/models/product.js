@@ -57,11 +57,12 @@ module.exports = (sequelize, DataTypes) => {
 
       // Pertenece a muchos "belongsToMany" para ordenes
       Product.belongsToMany(models.Orders, {
-        through: "Order_Product",
+        through: "Orders_Products",
         foreignKey: "id_product",
         otherKey: "id_order",
         as: "orders",
       });
+      
     }
   }
   
