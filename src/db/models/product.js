@@ -62,7 +62,6 @@ module.exports = (sequelize, DataTypes) => {
         otherKey: "id_order",
         as: "orders",
       });
-      
     }
   }
   
@@ -79,8 +78,8 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Product',
     tableName: 'products',
-    paranoid: true,
-    underscored: true
+    // underscored: true,
+    paranoid: true
   });
 
   return Product;

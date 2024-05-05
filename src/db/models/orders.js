@@ -48,9 +48,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Orders',
-    paranoid: true,
-    underscored: true
-    
+    // underscored: true,
+    paranoid: true
   });
   return Orders;
 };

@@ -25,8 +25,9 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'Rols'
+            tableName: "rols"
           },
+<<<<<<< HEAD
           key: 'id'
 
         },
@@ -34,6 +35,15 @@ module.exports = {
         onUpdate: 'CASCADE',
         defaultValue: 1
       }, 
+=======
+          key: "id"
+        },
+        defaultValue: 1,
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
+        
+      },
+>>>>>>> 50003ddfd2f4a450e3d183a3025a118b0761d2d0
       avatar: {
         type: Sequelize.STRING
       },
