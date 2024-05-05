@@ -17,6 +17,8 @@ module.exports = {
           },
           key: "id"
         },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
       },
       id_product: {
         type: Sequelize.INTEGER,
@@ -25,7 +27,9 @@ module.exports = {
             tableName : "Products"
           },
           key: "id"
-        }
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
       },
       createdAt: {
         allowNull: false,
