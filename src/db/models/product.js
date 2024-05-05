@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Product',
     tableName: 'products',
     paranoid: true,
+    underscored: true
   });
 
   return Product;

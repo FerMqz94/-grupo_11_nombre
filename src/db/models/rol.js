@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
 
       Rols.hasMany(models.Users,{
-        foreignKey: "id_user",
+        foreignKey: "id_rol",
         as: "users",
       })
       
@@ -24,7 +24,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Rols',
-    timestamps: false
+    timestamps: false,
+    underscored: true
   });
   return Rols;
 };

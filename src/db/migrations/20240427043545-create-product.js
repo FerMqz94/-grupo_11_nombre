@@ -22,13 +22,13 @@ module.exports = {
         type: Sequelize.DECIMAL
       },
       new: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       sale: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       available: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       id_category: {
         type: Sequelize.INTEGER,

@@ -21,6 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Favorites',
     tableName: 'favorites',
+    underscored: true
   });
   return Favorites;
 };
