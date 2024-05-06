@@ -32,39 +32,41 @@
               <th scope="col">Precio</th>
               <th scope="col">Talle</th>
               <th scope="col">Nuevo</th>
+              <th scope="col">Oferta</th>
+              <th scope="col">Disponible</th>
             </tr>
           </thead>
           <tbody>
+            <% const colors = ["Negro", "Beige", "Azul", "Blanco", "Rojo", "Verde", "Violeta", "Naranja", "Celeste", "Gris", "Lila", "Rosa", "Plata", "Petróleo", "Oro"] %>
             <% products.forEach(p => { %>
-            <!-- <div class="dflex flex-column"> -->
-            <tr>
-              <th scope="row"><%= p.id %></th>
-              <td><img class="img-product" src="/images/products/<%= p.image[0] %>" alt=""></td>
-              <td class=""><%= p.name %></td>
-              <td class=""><%= p.description %></td>
-              <td class=""><%= p.featuredDescription %></td>
-              <td class=""><%= p.category %></td>
-              <td class=""><%= p.colors%></td>
-              <td class=""><%= p.price %></td>
-              <td class=""><%= p.sizes[0]%></td>
-              <td class=""><%= p.new %></td>
-              <td class=""><%= p.sale %></td>
-              <td class=""><%= p.available %></td>
-
-
-              <td>
-                <div class="btn-group" rol="group" aria-label="Basic example">
-                  <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
-                  <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
-                  <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
-                </div>
-              </td>
-            </tr>
-
-
-            
-
+              <tr>
+                <th scope="row"><%= p.id %></th>
+                <td><img class="img-product" src="/images/products/<%= p.image[0] %>" alt=""></td>
+                <td class=""><%= p.name %></td>
+                <td class=""><%= p.description %></td>
+                <td class=""><%= p.featuredDescription %></td>
+                <td class=""><%= p.category %></td>
+                <td class="">
+                  <% p.colors.forEach(colorId => { %>
+                    <%= colors[colorId - 1] %>
+                  <% }) %>
+                </td>
+                </td>
+                <td class=""><%= p.price %></td>
+                <td class=""><%= p.sizes %></td>
+                <td class=""><%= p.new ? "✔️" : "❌" %></td>
+                <td class=""><%= p.sale ? "✔️" : "❌" %></td>
+                <td class=""><%= p.available ? "✔️" : "❌" %></td>
+                <td>
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
+                    <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
+                    <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
+                  </div>
+                </td>  
+              </tr>
             <% }) %>
+              
           </tbody>
         </table>
       </div>

@@ -84,7 +84,7 @@ module.exports = (req, res) => {
         .then(() => {
 
             let newSizesinPivot = [];
-            if(sizesArray.length){
+            if(sizesArrayStore.length){
                 newSizesinPivot = sizesArrayStore.map(size => {
                     return {
                         id_product: product.id,
