@@ -1,4 +1,42 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // ACÁ NUEVO CÓDIGO JSON PARA QUE GUARDE IDS
 
 // const { loadData, saveData } = require('../../database');
@@ -134,10 +172,10 @@
 
 
 // storeProducts:
-const { loadData, saveData } = require('../../database');
+/*const { loadData, saveData } = require('../../database');*/
 
 
-module.exports = (req, res) => {
+/*module.exports = (req, res) => {
 
     //VARIABLES Y CONSTANTES PARA OPERAR CON LOS DATOS
     let products = loadData();
