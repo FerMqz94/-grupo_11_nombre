@@ -17,7 +17,7 @@ const db = require("../../db/models");
 
 module.exports = (req, res) => {
 
-  db.products.findAll({
+db.products.findAll({
     include:[
     {
         association:"images",

@@ -20,7 +20,7 @@
 
                         <div class="nombreApellidoRegister">
                             <label for="nombreApellido"></label>
-                            <input type="text" id="nombreApellido" name="name" class="nombreApellido" value=""
+                            <input type="text" id="nombreApellido" name="name" class="nombreApellido" value="<%= locals.old && old.name ? old.name: null %>"
                                 placeholder="Nombre y apellido">
                             <% if (locals.errors) { %>
                                 <div class="form-text fs-5 text-danger">
@@ -40,7 +40,7 @@
 
                         <div class="nombreDelaCuentaRegister">
                             <label for="nombreDeCuenta"></label>
-                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value=""
+                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value="<%= locals.old && old.username ? old.username: null %>"
                                 placeholder="Nombre de usuari@...">
                             <% if (!locals.errors) { %>
                                 <!-- <span class="text-danger">Este campo es obligatorio</span> -->
@@ -56,7 +56,7 @@
 
                         <div class="emailregistro">
                             <label for="email"></label>
-                            <input type="email" id="email" value="" name="email" class="email"
+                            <input type="email" id="email"  name="email" class="email" value="<%= locals.old && old.email ? old.email: null %>"
                                 placeholder="Dirección de correo electrónico">
 
                             <% if (!locals.errors) { %>
@@ -70,12 +70,21 @@
                                     <% } %>
                         </div>
                         </div>
-
+                        <% if (locals.usuario && usuario.rolId=='2' ) {%>
+                            <div>
+                                <label for="rol">Rol</label>
+                                <select name="id_rol">
+                                    <option value="1" > User</option>
+                                    <option value="2" > Admin</option>
+                                </select>
+                
+                            </div>
+                   <%}%>
                         <!---CONTRASEÑA-->
 
                         <div class="contraseniaRegister">
                             <label for="contrasenia"></label>
-                            <input type="password" id="contrasenia" name="password" class="contrasenia"
+                            <input type="password" id="contrasenia" name="password" class="contrasenia" value="<%= locals.old && old.password ? old.password: null %>"
                                 placeholder="Contraseña">
                                 <% if (!locals.errors) { %>
                                     <span class="text-danger">&nbsp;</span>
@@ -91,7 +100,7 @@
 
                         <div class="contraseniaConfirRegister">
                             <label for="contraseniaConfir"></label>
-                            <input type="password" id="contraseniaConfir" name="passwordConfirm"
+                            <input type="password" id="contraseniaConfir" name="passwordConfirm" value="<%= locals.old && old.passwordConfirm ? old.passwordConfirm: null %>"
                                 class="contraseniaConfir" placeholder="Confirmar contraseña">
                                 <% if (!locals.errors) { %>
                                     <span class="text-danger">&nbsp;</span>

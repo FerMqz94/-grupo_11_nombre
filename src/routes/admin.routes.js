@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { createProduct, storeProduct, editProduct, updateProduct, listProducts, deleteProduct, destroyProduct } = require("../controllers/admin");
 const { uploadProducts } = require("../middlewares/uploads");
-
+const adminValidation =require("../middlewares/adnimValidation"); 
 // "/admin"
 // router.get("/productos", listProducts); 
 router.get('/crear-productos', createProduct);

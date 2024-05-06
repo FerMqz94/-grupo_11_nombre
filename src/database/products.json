@@ -73,28 +73,23 @@
       "available": true
    },
    {
-      "id": 5,
-      "image": [
-         "image-1710444393328.jpg",
-         "image-1710444393329.png",
-         "image-1710444393769.png"
-      ],
+      "id": 15,
+      "image": [],
       "name": "Remera overzise",
       "description": "Remera oversize super olgada",
       "featuredDescription": "Te sentirás libre con esta prenda super comoda",
       "category": "Remeras",
       "sizes": [
-         5,
-         4
+         false,
+         false,
+         false,
+         false,
+         false
       ],
-      "colors": [
-         4,
-         5,
-         2
-      ],
+      "colors": [],
       "price": 17000,
       "new": false,
-      "sale": true,
+      "sale": false,
       "available": true
    },
    {

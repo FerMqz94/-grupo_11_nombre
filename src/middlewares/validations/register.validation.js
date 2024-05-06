@@ -95,7 +95,7 @@
 
 const { body } = require("express-validator");
 const db = require("../../db/models");
-// const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
 
 
@@ -109,66 +109,57 @@ const fieldUsernameDefault = body("username")
     .notEmpty()
     .withMessage("nombre de usuario requerido")
     .bail()
-    .isLength({ min: 4 })
-    .withMessage("debe al menos contener 4 letras")
-    .isLength({ max: 20 })
-    .withMessage("no puede superar las 20 letras")
+    .isLength({ min: 4 ,max: 20 })
+    .withMessage("debe al menos contener 4 letras y no puede superar las 20 letras ").bail()
 
-
-const fieldEmailDefault = body("email")
+    const fieldEmailDefault = body("email")
     .notEmpty()
     .withMessage("Email requerido")
     .bail()
     .isEmail()
     .withMessage("Formato invalido")
     .bail();
+const fieldEmailRegister = fieldEmailDefault.custom((value) => {
+    return  db.Users.findOne({
+        where:{
+        email: value,
+        }})
+.then(user=>{
+
+    if (user) {
+        return Promise.reject("ingrse un usuario valido")
+       
+      }
+}) 
+
+.catch((err) => {
+    res.send(err.message)
+})
+})
+
+
+    
 
 const fieldPasswordDefault = body("password")
     .notEmpty()
     .withMessage("Campo requerido")
     .bail();
 
-const fielPpasswordConfirmDefault = body("passwordConfirm")
+const fielPpasswordConfirmDefault = body("password Confirm")
     .notEmpty()
     .withMessage("Campo requerido")
     .bail();
-
-
-const fieldEmailRegister = fieldEmailDefault.custom((value, { req }) => {
-    return  db.Users.findAll({
-        where:{
-          email: value,
-        }})
-.then(user=>{
-
-    if (!user.length) {
-        throw new Error("Revise que el usuario esté bien escrito");
-      }
-}) 
-
-.catch((error) => {
-throw error 
-})
-
-}
     
-);
-
 const fieldPasswordRegister = fieldPasswordDefault
-    .isLength({ min: 8 })
-    .withMessage("la contraseña al menos debe tener 8 letras")
-    .isLength({ max: 16 })
-    .withMessage("la contraseña al menos debe tener menos de 16 letras")
-    .bail()
-// .matches(regExPass)
-// .withMessage("La contraseña es invalida");
+    .isLength({ min: 8 ,max: 16 })
+    .withMessage("la contraseña al menos debe tener 8 letras a 16 letras").bail()
+.matches(regExPass)
+.withMessage("La contraseña es invalida");
+
 const fieldPasswordConfirmRegister = fielPpasswordConfirmDefault
 
-    .isLength({ min: 8 })
-    .withMessage("la contraseña al menos debe tener 8 letras")
-    .isLength({ max: 16 })
-    .withMessage("la contraseña al menos debe tener menos de 16 letras")
-    .bail();
+    .isLength({ min: 8 , max: 16 })
+    .withMessage("la contraseña al menos debe tener 8 letras a 16 letras").bail();
 
 const PasswordConfirm = fielPpasswordConfirmDefault.custom((value, { req }) => {
 
