@@ -56,6 +56,7 @@ module.exports = (req, res) => {
       email: email?.trim().toLowerCase(),
       password: bcrypt.hashSync(password?.trim(), 12),
       avatar: "default-avatar.jpg",
+      rol: "REGULAR"
     })
    
   
