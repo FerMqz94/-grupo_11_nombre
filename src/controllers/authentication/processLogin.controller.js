@@ -39,7 +39,7 @@ const { validationResult } = require("express-validator");
 const db = require("../../db/models");
 
 module.exports = (req, res) => {
-  const { email, password, remember } = req.body;
+  const { email, password, recordame } = req.body;
   // const users = loadData("users");
 
   // const userFind = users.find((u) => u.email === email);
@@ -60,12 +60,13 @@ module.exports = (req, res) => {
       id_rol: user.id_rol.name,
     };
   
-    // if(recordam}e ){
-    //   res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 });
-
+    if(recordame ){
+      res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 });
+    } 
     res.redirect("/");
 
-  } 
+  }
+
   )
   .catch((err) => {
     res.send(err.message)

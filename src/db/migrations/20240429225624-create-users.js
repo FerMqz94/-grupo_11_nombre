@@ -25,12 +25,14 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: "rols"
+            tableName: "Rols"
           },
           key: "id"
         },
+        defaultValue: 1,
         onDelete: "CASCADE",
-        onUpdate: "CASCADE"      
+        onUpdate: "CASCADE",
+        
       },
       avatar: {
         type: Sequelize.STRING
