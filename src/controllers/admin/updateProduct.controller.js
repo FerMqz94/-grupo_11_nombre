@@ -1,214 +1,101 @@
-const { loadData, saveData } = require('../../database');
+const db = require('../../db/models');
+const fs = require('fs');
 
 module.exports = (req, res) => {
-    let products = loadData();
-    const colors = loadData('colors');
     const { id } = req.params;
-    const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
-    const newID = products[products.length - 1].id + 1;
-    let tallesSend = [];
-    let sendColor = [];
-    let newImages = [];
 
-    // Función para procesar los colores
-    const processColors = () => {
-        const colorArray = [black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold];
-        colorArray.forEach((color, index) => {
-            if (color) {
-                sendColor.push(colors[index].name);
+    // Verificar si el producto existe en la base de datos
+    db.Product.findByPk(id, { include: [db.Images, db.Products_Sizes, db.Products_Colors] })
+        .then(product => {
+            if (!product) {
+                console.error('El producto no se encontró');
+                return res.status(404).send('El producto no se encontró');
             }
+
+            // Obtener datos del formulario
+            const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
+
+            // Actualizar el producto en la base de datos
+            db.Product.update({
+                name: name.trim(),
+                description: description.trim(),
+                featuredDescription: featuredDescription.trim(),
+                category: +category,
+                price: +price,
+                new: neworsale === "new",
+                sale: neworsale === "sale",
+                available: !!available
+            }, {
+                where: { id: +id }
+            })
+                .then(() => {
+                    // Actualizar las asociaciones de tallas
+                    const sizesArray = [talle1, talle2, talle3, talle4, talle5].filter(size => !!size);
+                    if (sizesArray.length) {
+                        const existingSizes = product.Products_Sizes.map(ps => ps.id_size);
+                        const sizesToUpdate = sizesArray.filter(size => !existingSizes.includes(+size));
+                        if (sizesToUpdate.length) {
+                            db.Products_Sizes.bulkCreate(sizesToUpdate.map(size => ({
+                                id_product: +id,
+                                id_size: +size
+                            })));
+                        }
+                    }
+
+                    // Actualizar las asociaciones de colores
+                    const colorsArray = [black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold].filter(color => !!color);
+                    if (colorsArray.length) {
+                        const existingColors = product.Products_Colors.map(pc => pc.id_color);
+                        const colorsToUpdate = colorsArray.filter(color => !existingColors.includes(+color));
+                        if (colorsToUpdate.length) {
+                            db.Products_Colors.bulkCreate(colorsToUpdate.map(color => ({
+                                id_product: +id,
+                                id_color: +color
+                            })));
+                        }
+                    }
+
+                    // Manejar las imágenes
+                    let newImages = [];
+                    if (req.files.length) {
+                        // Si hay nuevas imágenes, mapear el req.files para obtener los nombres de archivo y asignarlos a newImages
+                        newImages = req.files.map(img => img.filename);
+
+                        // Eliminar imágenes anteriores que ya no están presentes en las nuevas imágenes
+                        const oldImages = product.Images.map(image => image.name);
+                        oldImages.forEach(async oldImage => {
+                            // Verificar si las imágenes antiguas no están presentes en las nuevas imágenes
+                            if (!newImages.includes(oldImage)) {
+                                const path = `./public/images/products/${oldImage}`;
+                                // Eliminar imágenes del sistema de archivos
+                                fs.unlinkSync(path); // Eliminar la imagen del directorio de uploads
+                                // Eliminar la imagen de la base de datos
+                                db.Image.destroy({ where: { name: oldImage } });
+                            }
+                        });
+                    } else {
+                        // Si no se cargan nuevas imágenes, conservar las imágenes existentes del producto
+                        newImages = product.Images.map(image => image.name);
+                    }
+
+                    // Crear nuevas asociaciones de imágenes en la base de datos
+                    if (newImages.length) {
+                        db.Image.bulkCreate(newImages.map(name => ({
+                            name,
+                            id_product: +id
+                        })));
+                    }
+
+                    // Redirigir a la lista de productos
+                    res.redirect("/admin/productos");
+                })
+                .catch(error => {
+                    console.error('Error al actualizar el producto:', error);
+                    res.status(500).send('Error interno del servidor');
+                });
+        })
+        .catch(error => {
+            console.error('Error al buscar el producto:', error);
+            res.status(500).send('Error interno del servidor');
         });
-    };
-
-    // Función para procesar los talles
-    const processTalles = () => {
-        const talleArray = [talle1, talle2, talle3, talle4, talle5];
-        tallesSend = talleArray.map(talle => !!talle);
-    };
-
-    // Procesar colores y talles
-    processColors();
-    processTalles();
-
-    // Mapear nuevas imágenes
-    if (req.files && req.files.length) {
-        newImages = req.files.map(img => img.filename);
-    }
-
-    // Crear el nuevo producto
-    const newProduct = {
-        id: newID,
-        image: newImages.length ? newImages : [],
-        name: name.trim(),
-        description: description.trim(),
-        featuredDescription: featuredDescription.trim(),
-        category: category?.trim(),
-        sizes: tallesSend,
-        colors: sendColor,
-        price: +price,
-        new: neworsale === "new",
-        sale: neworsale === "sale",
-        available: !!available
-    };
-
-    // Reemplazar el producto antiguo con el nuevo
-    products = products.map(product => {
-        if (product.id === +id) {
-            return newProduct;
-        }
-        return product;
-    });
-
-    // Guardar los datos actualizados
-    saveData(products);
-
-    // Redirigir a la lista de productos
-    res.redirect("/admin/productos");
 };
-
-
-// updateProduct:
-// const { loadData, saveData } = require('../../database');
-// const fs = require('fs');
-
-// module.exports = (req, res) => {
-//     // Obtener los datos del producto a editar
-//     let products = loadData();
-//     let colors = loadData('colors');
-//     let sizes = loadData('sizes');
-//     const { id } = req.params;
-
-//     // Verificar si el producto existe antes de realizar cualquier operación
-//     const productIndex = products.findIndex(product => product.id === +id);
-//     if (productIndex === -1) {
-//         // Si el producto no se encuentra, enviar un mensaje de error y terminar la ejecución
-//         console.error('El producto no se encontró');
-//         return res.status(404).send('El producto no se encontró');
-//     }
-
-//     const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
-//     let talleBooleano;
-//     let tallesArray = [];
-//     let sendTalle = [];
-//     let sizesId;
-//     let colorsId;
-//     let sendColor = [];
-//     let colorArrayBoolean = [];
-//     let colorBoolean;
-//     let newImages = [];
-
-//     //////FUNCIONES PARA COLORES//////
-
-//     //GENERAR ARRAY DE BOOLEANOS CON LA INFORMACIÓN QUE VIENE DESDE EL BODY SI ES "ON" VA A SER TRUE SI ES UNDEFINED FALSE
-//     const booleanColors = (color, colorArrayBoolean) => {
-//         colorBoolean = !!color;
-//         return colorArrayBoolean.push(colorBoolean);
-//     }
-
-//     // EJECUCIÓN
-//     booleanColors(black, colorArrayBoolean);
-//     booleanColors(beige, colorArrayBoolean);
-//     booleanColors(blue,  colorArrayBoolean);
-//     booleanColors(white, colorArrayBoolean);
-//     booleanColors(red, colorArrayBoolean);
-//     booleanColors(green, colorArrayBoolean);
-//     booleanColors(purple, colorArrayBoolean);
-//     booleanColors(orange, colorArrayBoolean);
-//     booleanColors(lightblue, colorArrayBoolean);
-//     booleanColors(gray, colorArrayBoolean);
-//     booleanColors(lavender, colorArrayBoolean);
-//     booleanColors(pink, colorArrayBoolean);
-//     booleanColors(silver, colorArrayBoolean);
-//     booleanColors(bluishGreen, colorArrayBoolean);
-//     booleanColors(gold, colorArrayBoolean);
-
-//     // FUNCIÓN PARA GENERAR UN ARRAY CON LOS ID QUE VIENEN COMO TRUE, LOS DEMÁS SON DESCARTADOS - SE EJECUTA GRACIAS A LA INFORMACIÓN QUE SE OBTIENE DESDE EL COLORS.JSON 
-//     const storeColors = (colorArrayBoolean, colors) => {
-//         for (let i = 0; i < colors.length; i++) {
-//             if (colorArrayBoolean[i]) {
-//                 colorsId = colors[i].id;
-//                 sendColor.push(colorsId);     
-//             } 
-//         }
-//         return sendColor;
-//     }
-
-//     //EJECUCIÓN DE LA FUNCIÓN 
-//     storeColors(colorArrayBoolean, colors);
-    
-//     ///// FUNCIÓN PARA TALLES////
-
-//     const storeTalles = (talle, tallesArray) => {
-//         talleBooleano = !!talle;
-//         return tallesArray.push(talleBooleano);
-//     }
-
-//     // EJECUCIÓN
-//     storeTalles(talle1, tallesArray);
-//     storeTalles(talle2, tallesArray);
-//     storeTalles(talle3, tallesArray);
-//     storeTalles(talle4, tallesArray);
-//     storeTalles(talle5, tallesArray);
-
-//     const storeSizes = (tallesArray, sizes) => {
-//         for (let i = 0; i < sizes.length; i++) {
-//             if (tallesArray[i]) {
-//                 sizesId = sizes[i].id;
-//                 sendTalle.push(sizesId);     
-//             } 
-//         }
-//         return sendTalle;
-//     }
-
-//     storeSizes(tallesArray, sizes);
-
-//     //MAPEO DEL REQ.FILES PARA OBTENER EL ARRAY DE FILENAME DE LAS IMÁGENES
-//     // Verificar si se han subido nuevas imágenes
-//     if (req.files.length) {
-//         // Si hay nuevas imágenes, mapear el req.files para obtener los nombres de archivo y asignarlos a newImages
-//         newImages = req.files.map(img => img.filename);
-    
-//         // Eliminar imágenes anteriores que ya no están presentes en las nuevas imágenes
-//         const oldImages = products[productIndex].image;
-//         oldImages.forEach(oldImage => {
-//             // Verificar si las imágenes antiguas no están presentes en las nuevas imágenes
-//             if (!newImages.includes(oldImage)) {
-//                 const path = ./public/images/products/${oldImage};
-//                 // Eliminar imágenes del sistema de archivos
-//                 fs.unlinkSync(path); // Eliminar la imagen del directorio de uploads
-//             }
-//         });
-//     } else {
-//         // Si no se han subido nuevas imágenes, mantener las imágenes existentes del producto
-//         newImages = products[productIndex].image;
-//     }
-    
-//     const newProduct = {
-//         id: +id,
-//         image: newImages.length ? newImages : [],
-//         name: name.trim(),
-//         description: description.trim(),
-//         featuredDescription: featuredDescription.trim(),
-//         category: category?.trim(),
-//         sizes: sendTalle,
-//         colors: sendColor,
-//         price: +price,
-//         new: neworsale === "new",
-//         sale: neworsale === "sale",
-//         available: !!available
-//     }
-
-//     // Reemplazar el producto antiguo con el nuevo
-//     products = products.map(product => {
-//         if (product.id === +id) {
-//             return newProduct;
-//         }
-//         return product;
-//     });
-
-//     // Guardar los datos actualizados
-//     saveData(products);
-
-//     // Redirigir a la lista de productos
-//     res.redirect("/admin/productos");
-// };

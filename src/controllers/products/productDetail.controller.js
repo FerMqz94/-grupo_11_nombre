@@ -1,6 +1,6 @@
 // const { loadData } = require("../../database");
 
-// const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
 
 // module.exports = (req, res) => {
 //   const { id } = req.params;
@@ -16,6 +16,7 @@
 // }
 
 const db = require("../../db/models");
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = (req, res)=>{
   const { id } = req.params;
@@ -36,4 +37,6 @@ module.exports = (req, res)=>{
     res.render("/id",{
       product
     });
-  };
+  
+  }
+  

@@ -45,22 +45,23 @@ const { validationResult } = require("express-validator");
 
 module.exports = (req, res) => {
   const errors = validationResult(req);
-
+  
   if (errors.isEmpty()) {
-    const { name, surname, email, password, passwordConfirm } = req.body;
+    const { name, username, email, password, passwordConfirm } = req.body;
     // const userFind = Users.find(u => u.id === +id);
-
+    // const Password = password ? bcrypt.hashSync(password, 12) : password;
+    const Id = req.params.id;
 
         db.Users.update({
           name: name.trim(),
-          surname: surname.trim(),
+          username: username.trim(),
           email: email.trim(),
           password: password ? bcrypt.hashSync(password, 10) : password,
-          id_rol: id_rol === 1 ? 1 : 2,
-          avatar: "default-avatar.jpg"
+          // id_rol: id_rol === 1 ? 1 : 2,
+          // avatar: "default-avatar.jpg"
         }, {
           where: {
-            id: req.body.id
+            id: Id
           }
         })
         

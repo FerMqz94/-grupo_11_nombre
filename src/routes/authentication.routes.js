@@ -11,11 +11,11 @@ router.post("/iniciar", loginValidation, processLogin);
 
 //  /autenticacion/registrar
 router.get("/registrar", register);
-router.post("/registrar", registerValidation, processRegister);
+router.post("/registrar",registerValidation,  processRegister); //
 
 router.get("/cerrar-sesion", logout)
 
-router.get("/eliminar" , userDelete)
+// router.get("/eliminar" , userDelete)
 
 
 module.exports = router;

@@ -14,7 +14,7 @@
 
                 <section class="section-inputs-registro">
                     <h3 class="titulo-registro-inputs">Perfil de <%= user?.name%></h3>
-                    <form class="form-inputs-registro" action="/users/perfil-usuario/<%= user.id %>?_method=PUT" method="POST">
+                    <form class="form-inputs-registro" action="/users/perfil-usuario/<%= user.id %>?_method=PUT" method="post">
 
                         <!--------NOMBRE Y APELLIDO----------->
 
@@ -37,7 +37,7 @@
 
                         <div class="nombreDelaCuentaRegister">
                             <label for="nombreDeCuenta"></label>
-                            <input type="text" id="nombreDeCuenta" name="surname" class="nombreDeCuenta" value="<%= user?.surname %>"
+                            <input type="text" id="nombreDeCuenta" value="<%= user?.username %>" name="username" class="nombreDeCuenta" 
                                 placeholder="Nombre de usuari@...">
                          <% if (!locals.errors) { %>
                              
@@ -106,7 +106,7 @@
                             <button type="submit" class="boton-register"><a href="/">CANCELAR</a></button>
                         </div>
                     </form>
-                    <form action="/usuarios/eliminar?_method=DELETE" method="post" class="modal-footer">
+                    <form action="/users/eliminar-usuario/<%= user.id %>" method="post" class="modal-footer">
                             <button type="submit" class="btn btn-danger btn-danger-custom">Confirmar</button>
                         </form>
                 </section>
