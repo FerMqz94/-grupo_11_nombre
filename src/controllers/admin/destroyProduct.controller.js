@@ -3,7 +3,7 @@ const path = require("path")
 const fs = require("fs")
 module.exports = (req,res) => {
   const {id} = req.params
-  const products = loadData()
+  const products = loadData('products')
 
   const productsLessOne = products.filter(p => p.id !== +id)
   const productDestroy = products.find(p => p.id === +id)
