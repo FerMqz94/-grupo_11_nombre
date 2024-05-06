@@ -10,7 +10,7 @@ Promise.all([categoriesPromise, colorsPromise, sizesPromise])
 .then(([categories, colors, sizes]) => {
 
   res.render("./admin/createProduct", {
-    categories
+    categories, colors, sizes
   }, (err,content) => {
     err && res.send(err.mesage)
     res.render('partials/dashboard', {
