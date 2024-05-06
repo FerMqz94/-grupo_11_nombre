@@ -27,15 +27,6 @@ module.exports = {
           model: {
             tableName: "Rols"
           },
-<<<<<<< HEAD
-          key: 'id'
-
-        },
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE',
-        defaultValue: 1
-      }, 
-=======
           key: "id"
         },
         defaultValue: 1,
@@ -43,7 +34,6 @@ module.exports = {
         onUpdate: "CASCADE",
         
       },
->>>>>>> 50003ddfd2f4a450e3d183a3025a118b0761d2d0
       avatar: {
         type: Sequelize.STRING
       },
