@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { login, register, processRegister, processLogin, logout, userDelete } = require("../controllers/authentication");
+const { login, register, processRegister, processLogin, logout } = require("../controllers/authentication");
 const {registerValidation} = require("../middlewares/validations/register.validation");
 const { loginValidation } = require("../middlewares/validations/login.validation");
 
@@ -15,7 +15,7 @@ router.post("/registrar",registerValidation,  processRegister); //
 
 router.get("/cerrar-sesion", logout)
 
-// router.get("/eliminar" , userDelete)
+
 
 
 module.exports = router;

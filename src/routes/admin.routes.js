@@ -4,9 +4,9 @@ const { createProduct, storeProduct, editProduct, updateProduct, listProducts, d
 const { uploadProducts } = require("../middlewares/uploads");
 const adminValidation =require("../middlewares/adnimValidation"); 
 // "/admin"
-// router.get("/productos", listProducts); 
+router.get("/productos", listProducts); 
 router.get('/crear-productos', createProduct);
-// router.post('/crear-productos', uploadProducts.array('image'), storeProduct)
+router.post('/crear-productos', uploadProducts.array('image'), storeProduct)
 router.get('/editar-productos/:id', editProduct);
 router.put('/editar-productos/:id', uploadProducts.array('image'), updateProduct);
 
