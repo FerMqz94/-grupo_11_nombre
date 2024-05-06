@@ -77,7 +77,7 @@
                             <% colors.forEach(color => { %>    
                                 <div class="form-check-color">
                                     <label class="form-check-label-color-<%= color.name %>">
-                                        <input class="form-check-input-color" type="checkbox" value="<%= color.id %>" id="<%= color.id %>" name="<%= color.name %>" <% if (pivotColors.find(pc => pc.Color.id === color.id)) { %> checked <% } %>>
+                                        <input class="form-check-input-color" type="checkbox" value="<%= color.id %>" id="<%= color.name %>" name="<%= color.name %>" <% if (pivotColors.find(pc => pc.Color.id === color.id)) { %> checked <% } %>>
                                         <span class="form-check-span-color" for="<%= color.name %>"><%= colorsSpanish[color.name] %></span>
                                     </label>
                                 </div>
