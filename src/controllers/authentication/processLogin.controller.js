@@ -77,8 +77,6 @@ module.exports = (req, res) => {
             old: req.body,
            errors: errors.mapped(),
         })
-        .catch((err) => {
-          res.send(err.message)
-      })
+    
       }
 };
