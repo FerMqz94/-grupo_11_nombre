@@ -8,7 +8,7 @@ module.exports = (req,res) => {
     const colorsPromise = db.Colors.findAll()
     const pivotSizesPromise = db.Products_Sizes.findAll({ where: { id_product: id }, include: [db.Sizes] })
     const pivotColorsPromise = db.Products_Colors.findAll({ where: { id_product: id }, include: [db.Colors] })
-    const imagesPromise = db.Images.findAll({ where: { id_product: id }})
+    const imagesPromise = db.Images.findAll({ where: { id_product: id }, include: [{ model: db.Product, as: 'products' }] });
 
     Promise.all([categoriesPromise, colorsPromise, sizesPromise, pivotSizesPromise, pivotColorsPromise, imagesPromise, productPromise])
     .then(([categories, sizes, colors, pivotSizes, pivotColors, images, product]) => {

@@ -12,23 +12,32 @@
 //      })
 // })};
 
+// const productPromise = db.Product.findAll()
+//     const categoriesPromise = db.Categories.findAll()
+//     const sizesPromise = db.Sizes.findAll()
+//     const colorsPromise = db.Colors.findAll()
+//     const pivotSizesPromise = db.Products_Sizes.findAll()
+//     const pivotColorsPromise = db.Products_Colors.findAll()
+//     const imagesPromise = db.Images.findAll();
+//     Promise.all([categoriesPromise, colorsPromise, sizesPromise, pivotSizesPromise, pivotColorsPromise, imagesPromise, productPromise])
+
 
 const db = require("../../db/models");
 
 module.exports = (req, res) => {
 
-db.products.findAll({
+db.Products.findAll({
     include:[
     {
         association:"images",
         attributes:['file'],
         },
     {
-        association:"colors" ,
+        association:"product_colors" ,
         attributes:['name']
     },
     {
-        association:"sizes",
+        association:"product_sizes",
         attributes:['sizes']
     }
     ],

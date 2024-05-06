@@ -95,12 +95,13 @@
 
 const { body } = require("express-validator");
 const db = require("../../db/models");
-const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
+// const regExPass = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
 
 
 const fieldNameDefault = body("name")
     .notEmpty()
+    .isLength({ min: 3}).bail()
     .withMessage("nombre requerido")
     .bail()
 
@@ -120,7 +121,7 @@ const fieldUsernameDefault = body("username")
     .withMessage("Formato invalido")
     .bail();
 const fieldEmailRegister = fieldEmailDefault.custom((value) => {
-    return  db.Users.findOne({
+    return  db.Users.findAll({
         where:{
         email: value,
         }})
@@ -145,16 +146,16 @@ const fieldPasswordDefault = body("password")
     .withMessage("Campo requerido")
     .bail();
 
-const fielPpasswordConfirmDefault = body("password Confirm")
+const fielPpasswordConfirmDefault = body("passwordConfirm")
     .notEmpty()
     .withMessage("Campo requerido")
     .bail();
-    
+
 const fieldPasswordRegister = fieldPasswordDefault
     .isLength({ min: 8 ,max: 16 })
     .withMessage("la contraseña al menos debe tener 8 letras a 16 letras").bail()
-.matches(regExPass)
-.withMessage("La contraseña es invalida");
+// .matches(regExPass)
+// .withMessage("La contraseña es invalida");
 
 const fieldPasswordConfirmRegister = fielPpasswordConfirmDefault
 
