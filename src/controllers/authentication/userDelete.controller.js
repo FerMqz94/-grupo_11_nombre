@@ -1,16 +1,18 @@
 const db = require('../../db/models');
 
 module.exports = (req, res) => {
+    const {id_user} = req.query
 
     db.Users.destroy({
         where: {     
-            // id: req.session.userLogin 
-            id_user: id_user ? id_user : req.session?.userLogin?.id
+            // id_user: req.session.userLogin 
+            id: id_user ? id_user : req.session?.userLogin?.id
+
         }
     })
-         .then(() => {
+        //  .then(() => {
              res.redirect("/")
-         })
+        //  })
         .catch((err) => {
             res.send(err.message)
         })

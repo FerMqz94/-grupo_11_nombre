@@ -49,7 +49,8 @@ module.exports = (req, res) => {
   if (errors.isEmpty()) {
     const { name, username, email, password, passwordConfirm } = req.body;
     // const userFind = Users.find(u => u.id === +id);
-
+    // const Password = password ? bcrypt.hashSync(password, 12) : password;
+    const Id = req.params.id;
 
         db.Users.update({
           name: name.trim(),
@@ -57,10 +58,10 @@ module.exports = (req, res) => {
           email: email.trim(),
           password: password ? bcrypt.hashSync(password, 10) : password,
           // id_rol: id_rol === 1 ? 1 : 2,
-          avatar: "default-avatar.jpg"
+          // avatar: "default-avatar.jpg"
         }, {
           where: {
-            id: req.body.id
+            id: Id
           }
         })
         
