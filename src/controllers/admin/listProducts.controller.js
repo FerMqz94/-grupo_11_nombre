@@ -25,11 +25,11 @@ module.exports = (req, res) => {
         },
     {
         association:"colors" ,
-        attributes:['id_color']
+        attributes:['name']
     },
     {
         association:"sizes",
-        attributes:['id_sizes']
+        attributes:['sizes']
     }
     ],
 })

@@ -11,9 +11,9 @@ module.exports = (req,res) => {
     const imagesPromise = db.Images.findAll({ where: { id_product: id }})
 
     Promise.all([categoriesPromise, colorsPromise, sizesPromise, pivotSizesPromise, pivotColorsPromise, imagesPromise, productPromise])
-    .then(([categories, sizes, colors, pivotSizes, pivotColors, product]) => {
+    .then(([categories, sizes, colors, pivotSizes, pivotColors, images, product]) => {
       res.render("./admin/editProduct", {
-        categories, sizes, colors, pivotSizes, pivotColors, product
+        categories, sizes, colors, pivotSizes, pivotColors, images, product
       }, (err,content) => {
         if (err) {
           // Manejar el error fuera del callback
