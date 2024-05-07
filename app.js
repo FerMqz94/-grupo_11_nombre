@@ -63,7 +63,7 @@ app.use("/api/carrito", apiCartRoutes)
 app.use('/api/autenticacion', apiAuthRoutes)
 app.use("/api/producto-detalle", apiProductDetailRoutes)
 app.use("/api/admin", apiAdminRoutes);
-app.use("/api/users", apiUsersRoutes);
+// app.use("/api/users", apiUsersRoutes);
 
 
 // error 404
