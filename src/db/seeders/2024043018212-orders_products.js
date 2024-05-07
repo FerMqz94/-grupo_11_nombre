@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const ordersJSON = require("../../database/orders.json");
 const productsJSON = require("../../database/products.json");
@@ -16,7 +16,9 @@ const ordersProductsDBMapped = ordersJSON
       };
     });
     return productMapped;
-  }).flat(1);
+  })
+  .flat(1);
+
 
 
 /** @type {import('sequelize-cli').Migration} */
