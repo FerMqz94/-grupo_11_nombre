@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "status": "completed",
+      "state": "completed",
       "total": 40500,
       "user": "pmnvera@gmail.com",
       "products": [
@@ -17,7 +17,7 @@
     },
     {
       "id": 2,
-      "status": "completed",
+      "state": "completed",
       "total": 80500,
       "user": "fer_marquez94@gmail.com",
       "products": [

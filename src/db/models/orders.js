@@ -12,12 +12,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
 
-      // Pertenece a = belongsTo = 1:N
-      Orders.belongsTo(models.Users, {
-        foreignKey: "id_user",
-        as: "users"
-      })
-
+      
+      
       // Muchos a muchos = belongsToMany = N:M
       Orders.belongsToMany(models.Product, {
         through: "Orders_Products",
@@ -25,7 +21,11 @@ module.exports = (sequelize, DataTypes) => {
         otherKey: "id_product",
         as: "products",
       })
-
+      // Pertenece a = belongsTo = 1:N
+      Orders.belongsTo(models.Users, {
+        foreignKey: "id_user",
+        as: "users"
+      })
     }
   }
   Orders.init({      
@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.DECIMAL,
       defaultValue: 0,
     },    
-    status: {
+    state: {
       type: DataTypes.STRING,
       validate: {
         isIn: {

@@ -1,34 +1,43 @@
-const { op, where } = require('sequelize')
+const { Op, where } = require('sequelize')
 const db = require('../../../db/models')
 
 module.exports = async (req, res) => {
     try {
-        const { order, isCreate } = await db.Orders.findOrdCreate({
+        const {id: id_product} = req.params
+
+        const [ orders, isCreate ] = await db.Orders.findOrCreate({
             where: {
-                [op.and]: [
+                [Op.and]: [
                     {
-                        id_user: 1 //req.session?userLogin?.id,
+                        id_user: 1 //req.session?.userLogin?.id,
                     },
                     {
                         state: "pending",
                     }
                 ]
             },
-            default : {
-                id_user: 1 // req.session?userLogin?.id
-            }
+            defaults : {
+                id_user: 1 // req.session?.userLogin?.id
+            },
+            include: ["products"]
         });
 
-        const statusCode = isCreate ? 2001 : 200; 
-        res.tatus(statusCode).json({
+        await db.Orders_Products.create({
+            id_order: orders.id,
+            id_product
+        })
+
+
+        res.status(201).json({
             ok: true,
-            data: order
+            msg: "producto agregado como se deberia" 
         })
     }
     catch (err) {
         res.status(500).json({
             ok: false,
-            msg: err.sensage,
+            msg: err.message,
         })
     }
+    //res.status(500).json({ok: false,msg: "ok"})
 }

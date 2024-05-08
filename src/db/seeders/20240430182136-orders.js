@@ -8,7 +8,7 @@ const ordersDBMapped = ordersJSON.map(o => {
   return {
     id_user: user ? user.id : null,
     total: o.total,    
-    status: o.status,
+    state: o.state,
   }
 })
 

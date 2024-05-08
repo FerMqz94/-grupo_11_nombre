@@ -4,11 +4,11 @@ const { getOrder, addProductToOrder, removeProductToOrder, moreQuantity, cancele
 
 
 router.get("/", getOrder);
-/*
+
 router.patch("/add/:id", addProductToOrder);
 
 router.patch("/remove/:id", removeProductToOrder);
-
+/*
 router.patch("/more/:id", moreQuantity);
 
 router.patch("/less/:id", lessQuantity)
