@@ -2,29 +2,20 @@ const { Op, where } = require('sequelize')
 const db = require('../../../db/models')
 const { getOrder } = require('../../utils')
 
-
-
 module.exports = async (req, res) => {
     try {
-        
-       const {id: id_product} = req.params
+        const [orders, isCreate] = await getOrder(req)
 
-       if(!id_product) throw new Error("el id no fue recivido")
-        
-       const [orders, isCreate] = await getOrder(req)
-
-        await db.Orders_Products.destroy({
-            where:{
-            id_order: orders.id,
-            id_product
+        if(!isCreate) {
+            orders.state = "completed";
+            await orders.save();
         }
-        })
-
-
         res.status(200).json({
             ok: true,
-            msg: "producto eliminado como se deberia" 
+            msg: "orden completeada como se deberia"
         })
+
+      
     }
     catch (err) {
         res.status(500).json({
