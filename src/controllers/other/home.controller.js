@@ -6,7 +6,7 @@ module.exports = (req,res) => {
 //  return res.send(products)
 
   
+res.render("./other/home",{products})
 })
- res.render("./other/home",)
   }
 

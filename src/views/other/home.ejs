@@ -84,19 +84,19 @@
         <div class="contenedor-imagenes-sector-1">
       </a>
 
-      <%  Product.forEach((p, index) => { %>
-      <%  if(index <= 3) { %>
-      <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.image[0]%>" alt="<%= p.image%>" /></a>
-      <%  }  %>         
-      <% })  %>      
+      <%  products.forEach(p => { %>
+        <%  images.forEach(img => { %>
+      <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= img[0]%>" alt="<%= img%>" /></a>
+      <%}) %>
+      <%}) %>      
     </div>
 
     <div class="contenedor-imagenes-sector-2">
-        <% products.forEach((p, index) => { %>
-        <%  if(index <= 7 && index > 3) { %>
-        <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.image[0]%>" alt="<%= p.image[0]%>" /></a>
-        <%  }  %>
-        <% })  %>   
+        <%# products.forEach((p, index) => { %>
+        <%#  if(index <= 7 && index > 3) { %>
+        <!-- <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.imagenes[0]%>" alt="<%= p.image[0]%>" /></a> -->
+        <%#  }  %>
+        <%# })  %>   
     </div>
 
     <div class="contenedor-imagenes-sector-3">
