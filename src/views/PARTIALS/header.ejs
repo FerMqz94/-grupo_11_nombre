@@ -35,7 +35,6 @@
                     <p>carrito</p>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="header-vista-tablet-pc">
@@ -47,18 +46,18 @@
             <!-- barra de busqueda -->
             <form action="/resultados" method="get" class="barra-busqueda">
                 <input type="text" name="keywords" placeholder="¿que estas buscando?"
-                    class="barra-busqueda barra-busqueda-interior" required>
+                class="barra-busqueda barra-busqueda-interior" required>
                 <button class="barra-busqueda-icon"><i class="fa-solid fa-magnifying-glass "></i></button>
-                </p>
-            </form> 
-            <% if (!locals.userLogin) { %>
+            </p>
+        </form> 
+        <% if (!locals.userLogin) { %>
             <% if (registro===false) { %>
                 <% } else { %>
                     <a href="/autenticacion/registrar">
                         <p class="texto-header color-blanco">Registrarse</p>
                     </a>
                     <% } %>
-
+                    
                         <% if (ingreso===false) { %>
                             <% } else { %>
                                 <a href="/autenticacion/iniciar">
@@ -66,7 +65,7 @@
                                 </a>
                                 <% } %>
                                 <% } else { %>
-                                    <% if(locals.userLogin?.rol === "REGULAR") {%>
+                                    <% if(locals.userLogin?.id_rol === 1) {%>
                                     <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>"><p class="texto-header" style="color: var(--blanco); font-size: var(--letra-grande)">Ver mi perfil</p></a>
 
                                     

@@ -65,50 +65,49 @@ const fieldDefaultPassword = body("password")
     .withMessage("El campo es requerido")
     .bail()
 
-const fieldEmailLogin = fieldDefaultEmail.custom((value) => {
-  return  db.Users.findAll({
-        where:{
-          email: value,
-        }})
-.then(user=>{
-
-    if (!user.length) {
-        throw new Error("Revise que el usuario esté bien escrito");
-      }
-}) 
-
-.catch((error) => {
-throw error 
-})
-}
-    
-);
-
-
-const fieldPasswordLogin = fieldDefaultPassword.custom((value,{ req }) => {
-  return  db.Users.findOne({
-        where: {
-          email: req.body.email,
-        }})
-       .then(user=>{
-
-           const isPasswordValid = bcrypt.compareSync(value,user.password );
-           if (!isPasswordValid) { 
-            throw new Error('Contraseña inválida')
-               
-           }
-           return true;
-       })
-       .catch((error) => {
-        throw error 
-        })
-
+const fieldEmailLogin = fieldDefaultEmail.custom(async (value) => {
+    try {
+        const user = await db.Users.findAll({
+            where:{
+                email: value,
+            }
+        });
+        
+        if (!user.length) {
+            throw new Error("Revise que el usuario esté bien escrito");
+        }
+    } catch (error) {
+        throw error;
+    }
 });
 
+const fieldPasswordLogin = fieldDefaultPassword.custom(async (value, { req }) => {
+    try {
+        const user = await db.Users.findOne({
+            where: {
+                email: req.body.email,
+            }
+        });
+
+        if (!user) {
+            throw new Error('Usuario no encontrado');
+        }
+
+        const isPasswordValid = bcrypt.compareSync(value, user.password);
+        if (!isPasswordValid) {
+            throw new Error('Contraseña inválida');
+        }
+
+        return true;
+    } catch (error) {
+        throw error;
+    }
+});
 
 module.exports = {
-    loginValidation: [ fieldEmailLogin, fieldPasswordLogin ]
-}
+    loginValidation: [fieldEmailLogin, fieldPasswordLogin]
+};
+
 
 
 // const { body } = require('express-validator');

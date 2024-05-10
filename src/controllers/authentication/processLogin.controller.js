@@ -65,8 +65,8 @@ module.exports = (req, res) => {
     } 
     res.redirect("/");
 
+    console.log(user);
   }
-
   )
   .catch((err) => {
     res.send(err.message)

@@ -21,7 +21,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 module.exports = (req, res)=>{
   const { id } = req.params;
   
-  db.Products.findByPk(id, {
+  db.Product.findByPk(id, {
     include: [images],
   
   }).then((products)=>{
@@ -32,6 +32,7 @@ module.exports = (req, res)=>{
   res.render("products/productDetail", {product: productsFind, toThousand, products  } )
   } else {
 
+    console.log(product);
       res.redirect("products/vista-no-encontrada")
   }
 })
@@ -40,6 +41,5 @@ module.exports = (req, res)=>{
     res.render("/id",{
       product
     });
-  
   }
   

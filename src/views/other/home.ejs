@@ -84,7 +84,7 @@
         <div class="contenedor-imagenes-sector-1">
       </a>
 
-      <%  products.forEach((p, index) => { %>
+      <%  Product.forEach((p, index) => { %>
       <%  if(index <= 3) { %>
       <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.image[0]%>" alt="<%= p.image%>" /></a>
       <%  }  %>         
