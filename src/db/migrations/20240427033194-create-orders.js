@@ -12,7 +12,7 @@ module.exports = {
       total: {
         type: Sequelize.DECIMAL
       },
-      status: {
+      state: {
         type: Sequelize.STRING
       },
       id_user: {
