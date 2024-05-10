@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="menu">
-<html>
+
 
   <%- include("../partials/head", {view : "Listado productos"}) %>
 
@@ -37,23 +37,15 @@
             </tr>
           </thead>
           <tbody>
-            <% const colors = ["Negro", "Beige", "Azul", "Blanco", "Rojo", "Verde", "Violeta", "Naranja", "Celeste", "Gris", "Lila", "Rosa", "Plata", "Petróleo", "Oro"] %>
-            <% products.forEach(p => { %>
+            <% Product.forEach(p => { %>
               <tr>
                 <th scope="row"><%= p.id %></th>
-                <td><img class="img-product" src="/images/products/<%= p.image[0] %>" alt=""></td>
+                <!-- <td><img class="img-product" src="/images/products/<%#= p.image[0] %>" alt=""></td> -->
                 <td class=""><%= p.name %></td>
                 <td class=""><%= p.description %></td>
                 <td class=""><%= p.featuredDescription %></td>
-                <td class=""><%= p.category %></td>
-                <td class="">
-                  <% p.colors.forEach(colorId => { %>
-                    <%= colors[colorId - 1] %>
-                  <% }) %>
-                </td>
-                </td>
-                <td class=""><%= p.price %></td>
-                <td class=""><%= p.sizes %></td>
+                <td>
+            
                 <td class=""><%= p.new ? "✔️" : "❌" %></td>
                 <td class=""><%= p.sale ? "✔️" : "❌" %></td>
                 <td class=""><%= p.available ? "✔️" : "❌" %></td>
@@ -63,10 +55,11 @@
                     <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
                     <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
                   </div>
-                </td>  
+                </td>
               </tr>
-            <% }) %>
+              <% }) %>
               
+          
           </tbody>
         </table>
       </div>

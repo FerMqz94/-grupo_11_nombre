@@ -81,7 +81,7 @@
                                 </div>
 
                               </div>
-                              <% } else { %>
+                              <% } else {%>
 
                                 <% } %>
 
@@ -316,59 +316,45 @@
         </article>
 
         <!-----OTROS PRODUCTOS------->
-        <section class="otrosFav">
-          <h3 class="otrosFav">OTROS FAV</h3>
-          <div class="contenedor-otros-productos">
-      <%  products.forEach((p, index) => { %>
-          
-          <%  if(index <= 3) { %>
-              
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti"><%= p.name%></h4>
-                    </a>
-                    <p class="p-dos-conti"><%= p.price%></p>
-                  </article>
-                  
-          <%  }  %>         
-          <% })  %>  
-      </div>
-        </section> 
-
         <!-- <section class="otrosFav">
           <h3 class="otrosFav">OTROS FAV</h3>
           <div class="contenedor-otros-productos">
-            <article class="productos-otrosFav dos-continentes">
-              <img class="blazer-dos-conti" src="/images/products/dos-continentes.png" alt="blazer dos continentes">
-              <a href="#" class="a-dos-conti">
-                <h4 class="h4-dos-conti">BLAZER DOS CONTINENTES</h4>
-              </a>
-              <p class="p-dos-conti">$ 30.000</p>
-            </article>
-            <article class="productos-otrosFav poison-ivy">
-              <img class="chaqueta-ivy" src="/images/products/poison-ivy.png" alt="chaqueta poison ivy">
-              <a class="a-chaqueta-ivy" href="#">
-                <h4 class="h4-chaqueta-ivy">CHAQUETA POISON IVY</h4>
-              </a>
-              <p class="p-chaqueta-ivy">$ 50.000</p>
-            </article>
-            <article class="productos-otrosFav weird-barbie">
-              <img class="chaqueta-weird-barbie" src="/images/products/weird-barbie.png" alt="chaqueta weird barbie">
-              <a class="a-weird-barbie" href="#">
-                <h4 class="h4-weird-barbie">CHAQUETA WEIRD BARBIE NEGRO</h4>
-              </a>
-              <p class="p-weird-barbie">$65.000</p>
-            </article>
-            <article class="productos-otrosFav lets-normcore">
-              <img class="abrigo-lets-normcore" src="/images/products/norm-core.png" alt="abrigo normcore">
-              <a href="#" class="a-lets-normcore">
-                <h4 class="h4-lets-normcore">ABRIGO LETS NORMCORE</h4>
-              </a>
-              <p class="p-lets-normcore">$85.000</p>
-            </article>
+      <%#  products.forEach((p, index) => { %>
+          
+          <%#  if(index <= 3) { %>
+              
+                  <article class="productos-otrosFav dos-continentes">
+                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
+                    <a href="/producto-detalle/<%#= p.id%>" class="a-dos-conti">
+                      <h4 class="h4-dos-conti"><%#= p.name%></h4>
+                    </a>
+                    <p class="p-dos-conti"><%#= p.price%></p>
+                  </article>
+                  
+          <%# }  %>         
+          <%# })  %>  
+      </div>
+        </section>  -->
+        <section class="otrosFav">
+          <h3 class="otrosFav">OTROS FAV</h3>
+          <div class="contenedor-otros-productos">
+            <%  products.forEach((p, index) => { %>
+              
+              <% if(index <= 3) { %>
+                <article class="productos-otrosFav dos-continentes">
+                  <img class="blazer-dos-conti" src="/images/products/<%= p.image[0] %>" alt="<%= p.name %>">
+                  <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
+                    <h4 class="h4-dos-conti"><%= p.name %></h4>
+                  </a>
+                  <p class="p-dos-conti"><%= p.price %></p>
+                </article>
+              <% } %>
+              
+            <% }) %>
           </div>
-        </section> -->
+        </section>
+        
+      
 
         <div class="boton-whatsapp">
           <img src="/images/other/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo" />
