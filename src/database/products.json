@@ -1,11 +1,7 @@
 [
    {
       "id": 1,
-      "image": [
-         "image-1710443878037.png",
-         "image-1710443878038.png",
-         "image-1710443878040.png"
-      ],
+      "imagePrincipal": "image-1710443878037.png",
       "name": "Remera",
       "description": "Remera de algodón básica, usable en cualquier situación",
       "featuredDescription": "Una remera que se va a convertir en tu aliada día a día",
@@ -25,11 +21,7 @@
    },
    {
       "id": 2,
-      "image": [
-         "image-1710444100211.jpg",
-         "image-1710444100213.png",
-         "image-1710444100214.png"
-      ],
+      "imagePrincipal": "image-1710444100211.jpg",
       "name": "Campera/camisa ondera",
       "description": "Campera de Jean no binarie, holgada y con mucho estilo",
       "featuredDescription": "Una prenda para ponerle onda a tu rutina de todos los días",
@@ -49,11 +41,7 @@
    },
    {
       "id": 3,
-      "image": [
-         "image-1710444275288.jpg",
-         "image-1710444275289.png",
-         "image-1710444275291.png"
-      ],
+      "imagePrincipal": "image-1710444275288.jpg",
       "name": "Joggin cargo",
       "description": "Joggin super comodo, para que te sientas libre y comodx siempre",
       "featuredDescription": "¡Sentite comodx y urbanx!",
@@ -74,7 +62,7 @@
    },
    {
       "id": 4,
-      "image": [],
+      "imagePrincipal": "image-1710444346065.jpg",
       "name": "Remera overzise",
       "description": "Remera oversize super olgada",
       "featuredDescription": "Te sentirás libre con esta prenda super comoda",
@@ -91,11 +79,7 @@
    },
    {
       "id": 5,
-      "image": [
-         "image-1710444541165.jpg",
-         "image-1710444541166.png",
-         "image-1710444541633.png"
-      ],
+      "imagePrincipal": "image-1710444541633.png",
       "name": "Pantalon a cuadros",
       "description": "Pantalón a cuadros edgy y con mucho estil",
       "featuredDescription": "Descubrirás un estilo único e innovador con esta prenda zinke",
@@ -113,11 +97,7 @@
    },
    {
       "id": 6,
-      "image": [
-         "image-1710444623614.jpg",
-         "image-1710444623615.png",
-         "image-1710444624060.png"
-      ],
+      "imagePrincipal": "image-1710444624060.png",
       "name": "Chaleco de jean",
       "description": "Chaleco de jean rockero y con estilo",
       "featuredDescription": "Sin mangas y con mucha onda, este chaleco te dará el estilo que siempre buscaste",
@@ -139,11 +119,7 @@
    },
    {
       "id": 7,
-      "image": [
-         "image-1710444797275.jpg",
-         "image-1710444797277.png",
-         "image-1710444797278.png"
-      ],
+      "imagePrincipal": "image-1710444797278.png",
       "name": "Short jogging",
       "description": "Jogging de algodón que te permitirá realizar mas comodx todas tus actividades",
       "featuredDescription": "Jogging super comodo para tu rutina",
@@ -165,11 +141,7 @@
    },
    {
       "id": 8,
-      "image": [
-         "image-1710444931685.jpg",
-         "image-1710444931686.png",
-         "image-1710444932167.png"
-      ],
+      "imagePrincipal": "image-1710444931686.png",
       "name": "Vestido slim fit",
       "description": "Vestido pegado al cuerpo de algodon y spandex super comodo",
       "featuredDescription": "En este verano sentite linx, comodx y libre con tu cuerpo",
@@ -187,11 +159,7 @@
    },
    {
       "id": 9,
-      "image": [
-         "image-1710445129750.png",
-         "image-1710445129751.png",
-         "image-1710445130260.jpg"
-      ],
+      "imagePrincipal": "image-1710445129750.png",
       "name": "Blazer oversize",
       "description": "Blazer oversize tela sastrera con botones en la manga",
       "featuredDescription": "Blazer oversize con mas estilo del que esperabas",
@@ -211,7 +179,7 @@
    },
    {
       "id": 10,
-      "image": [],
+      "imagePrincipal": "image-1710445129750.png",
       "name": "pantalon",
       "description": "ssds",
       "featuredDescription": "fdgd",
