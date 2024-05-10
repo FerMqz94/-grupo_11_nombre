@@ -21,7 +21,7 @@ const categoryIDS = {
 
 
   return {
-    images: p.images,
+    imagePrincipal: p.imagePrincipal,
     name: p.name,
     description: p.description,
     featuredDescription: p.featuredDescription,
