@@ -14,19 +14,115 @@ a {
 
 .redirecciones {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #ffefd6;
   /* border-top: solid red; */
   /* border-bottom: solid; */
+  align-content: center;
+  align-items: center;
 }
+
+
+.input-menu {
+  display: none;
+} 
+.menu i{
+  text-align: center;
+  margin-top: 8px;
+  display: flex;
+  font-size: 21px;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-left: 5px;
+  margin-bottom: 8px;
+  /* display: none; */
+}
+
+ .ul-menu{
+  display: none;
+}
+
+.input-menu:checked  ~ .ul-menu{
+  display:block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  background-color: #ffefd6;
+  border-bottom: #f99b7d solid;
+}
+
+.input-menu:checked  ~
+ .menu i {
+  font-size: 10000px;
+}
+
+
+
+.input-menu {
+  display: none;
+ }
+
+/* li {
+  display: block;
+  background: lightgrey;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid grey;
+} */
+
 
 .redirecciones .barra-productos {
 }
+.form-busqueda-movil {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* display: none; */
+}
+/*  */
+.form-busqueda-movil {
+  /* display: none */
+}
+/* input:checked + .form-busqueda-movil {
+  display: none ;
+} */
 
-.redirecciones .seleccionar-destino {
+/* .input-menu:checked ~  *{
+ color: rgb(19, 18, 18);
+} */
+
+/* .redirecciones */
+ .seleccionar-destino {
   display: flex;
   width: 100%;
   justify-content: space-around;
+}
+/* .redirecciones */
+ .seleccionar-destino .barra-busqueda-movil{
+    width: 1240%;
+    border-radius: 30px;
+    padding: 0px 10px 0 10px;
+    font-size: 100%;
+    border-color: #c7bfb3;
+}
+
+/* .redirecciones */
+ .seleccionar-destino .boton-buscar-movil{
+    width: 20%;
+    border: #ffffff00;
+    margin-left: -30px;
+}
+
+.ul-menu div{
+  padding: 3px;
+  /* border-top: solid 1px; */
+  width: 100%;
+  /* border-bottom: solid 1px; */
+  border-color: #f99b7d;
 }
 
 .encabezado {
@@ -69,22 +165,18 @@ a {
   border-top: solid #f99b7d 2px;
   border-bottom: solid #f99b7d 2px;
   margin-top: 0;
+  padding: 5px;
 }
 
 .redirecciones .barra-productos {
   margin-bottom: 10px;
   margin-top: 10px;
-  margin-left: 2%;
+  margin-left: 5%;
   font-size: 25px;
+  width: 13%;
 }
 
-.redirecciones .seleccionar-destino {
-  text-align: center;
-  margin-top: 5px;
-  display: flex;
-  justify-content: space-around;
-  font-size: 21px;
-}
+
 
 .redirecciones .seleccionar-destino .home {
 }
@@ -129,7 +221,15 @@ a {
   }
   .logo .lema {
   }
-
+.form-busqueda-movil {
+    display: none;
+  }
+  .redirecciones .seleccionar-destino {
+display: none;
+  }
+  .redirecciones .seleccionar-destino .barra-busqueda-movil{
+      width: 30%;
+  }
   .redirecciones {
     display: flex;
     flex-direction: row;

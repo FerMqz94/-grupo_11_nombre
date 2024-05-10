@@ -1,25 +1,30 @@
 <header>
     <div class="encabezado">
-       <marquee> <p class="descuento">15% off por transferecia - 3 cuotas sin interés  envío gratis a partir de los $30.000</p></marquee>
+        <marquee>
+            <p class="descuento">15% off por transferecia - 3 cuotas sin interés envío gratis a partir de los $30.000
+            </p>
+        </marquee>
     </div>
     <div class="header-vista-movil">
         <div class="logo">
 
-            <img  src= "/images/icon/imagen-header.png" alt="img-logo" class="img-header">
+            <img src="/images/icon/imagen-header.png" alt="img-logo" class="img-header">
             <i class="zinke">zinke</i>
             <p class="lema">inspirate en tus instintos</p>
         </div>
 
         <div class="redirecciones">
-            <div class="barra-productos">
-                <i class="fa-solid fa-bars"></i>
-            </div>
 
-            <div class="seleccionar-destino">
-
-                <div class="home">
-                    <a href="/"><i class="fa-solid fa-house"
-                            style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i></a>
+            <!-- <nav>
+                <ul>
+                    <div class="barra-productos">
+                        <input type="checkbox" id="menu" class="input-menu">
+                        <label for="menu"><i class="fa-solid fa-bars"></i></label>
+                    </div>
+                    <ul class="ul-menu">
+                     <div class="home">
+                    <li><a href="/"><i class="fa-solid fa-house"
+                            style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i></a></li>
                     <p>inicio</p>
                 </div>
 
@@ -32,12 +37,130 @@
                 <div class="carrito">
                     <a href="/carrito"><i class="fa-solid fa-cart-shopping"
                             style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i></a>
-                    <p>carrito</p>
+                    <p>carrito</p> 
                 </div>
+                </ul>
+            </nav> -->
+
+
+            <!-- <input type="checkbox" id="menu" class="input-menu"> -->
+            <label for="menu" class="menu"> <i class="fa-solid fa-bars hambuerguesa"></i></label>
+
+
+            <!-- <div class="ul-menu">
+
+
+                <div class="home"><a href="/"><i class="fa-solid fa-house"
+                            style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>inicio</a></div>
+
+                <div class="productos">
+                    <a href="/producto-detalle"><i class="fa-solid fa-list"
+                            style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>productos</a>
+                </div>
+                <div class="carrito">
+                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"
+                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>carrito</a>
+                </div>
+                <div class="carrito">
+                    <a href="/sobre-nosotros"><i class="fa-solid fa-cart-shopping"
+                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>sobre
+                        nosotros</a>
+                </div>
+                
+
+
+
+            </div> -->
+
+            <!-- <div class="algo">jandisfjdafis</div> -->
+            <!-- <input type="checkbox" id="menu" class="input-menu"> -->
+            <div class="seleccionar-destino">
+                <!-- <label for="menu" class="menu"> <i class="fa-solid fa-bars"></i> </label> -->
+                <form action="/resultados" method="get" class="form-busqueda-movil">
+                    <input type="text" name="keywords" placeholder="¿que estas buscando?" class="barra-busqueda-movil"
+                        required>
+                    <button class="boton-buscar-movil"><i class="fa-solid fa-magnifying-glass "></i></button>
+                    </p>
+                </form>
+
+
+
             </div>
 
         </div>
+        <input type="checkbox" id="menu" class="input-menu">
+        <div class="ul-menu">
+
+
+            <div class="home"><a href="/"><i class="fa-solid fa-house"
+                        style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;inicio</a></div>
+
+            <div class="productos">
+                <a href="/producto-detalle"><i class="fa-solid fa-list"
+                        style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;productos</a>
+            </div>
+
+            <div class="carrito">
+                <a href="/carrito"><i class="fa-solid fa-cart-shopping"
+                        style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;carrito</a>
+            </div>
+
+            <% if (!locals.userLogin) { %>
+                <% if (registro===false) { %>
+                    <% } else { %>
+                        <div class="registro">
+                            <a href="/autenticacion/registrar"><i class="fa-solid fa-users"
+                                    style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;Registrarse</a>
+                        </div>
+                        <% } %>
+
+                            <% if (ingreso===false) { %>
+                                <% } else { %>
+                                    <div class="iniciar-session">
+                                        <a href="/autenticacion/iniciar"><i class="fa-solid fa-key"
+                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;iniciar
+                                            sesión</a>
+                                    </div>
+                                    <% } %>
+                                        <% } else { %>
+                                            <% if(locals.userLogin?.rol==="REGULAR" ) {%>
+                                                <div class="perfil">
+                                                    <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>"><i class="fa-solid fa-user"
+                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                        mi perfil</a>
+                                                </div>
+                                                <div class="cerrar-sesion">
+                                                    <a href="/autenticacion/cerrar-sesion"><i class="fa-solid fa-user-minus"
+                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;cerrar sesion</a>
+                                                </div>
+                                                <% } else { %>
+                                                    <div class="perfil">
+                                                        <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>"><i class="fa-solid fa-user"
+                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                            mi perfil</a>
+                                                    </div>
+
+                                                    <div class="vista-admin">
+                                                        <a href="/admin/productos"><i class="fa-solid fa-user"
+                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver productos desde vista admin</a>
+                                                    </div>
+                                                    <div class="cerrar-sesion">
+                                                        <a href="/autenticacion/cerrar-sesion"><i class="fa-solid fa-user-minus"
+                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;cerrar sesion</a>
+                                                    </div>
+
+                                                    <% } %>
+
+                                                        <% } %>
+                                                            <div class="carrito" style="padding-left: 10px;">
+                                                                <a href="/sobre-nosotros"><i class="fa-solid fa-info"
+                                                                        style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;sobre
+                                                                    nosotros</a>
+                                                            </div>
+                                                            <!-- <i class="fa-solid fa-user-minus"></i> -->
+        </div>
     </div>
+
     <div class="header-vista-tablet-pc">
         <div class="logo">
             <div class="logo-zinke">
@@ -50,41 +173,58 @@
                     class="barra-busqueda barra-busqueda-interior" required>
                 <button class="barra-busqueda-icon"><i class="fa-solid fa-magnifying-glass "></i></button>
                 </p>
-            </form> 
+            </form>
             <% if (!locals.userLogin) { %>
-            <% if (registro===false) { %>
-                <% } else { %>
-                    <a href="/autenticacion/registrar">
-                        <p class="texto-header color-blanco">Registrarse</p>
-                    </a>
-                    <% } %>
+                <% if (registro===false) { %>
+                    <% } else { %>
+                        <a href="/autenticacion/registrar">
+                            <p class="texto-header color-blanco">Registrarse</p>
+                        </a>
+                        <% } %>
 
-                        <% if (ingreso===false) { %>
-                            <% } else { %>
-                                <a href="/autenticacion/iniciar">
-                                    <p class="texto-header color-blanco">Iniciar sesión</p>
-                                </a>
-                                <% } %>
+                            <% if (ingreso===false) { %>
                                 <% } else { %>
-                                    <% if(locals.userLogin?.rol === "REGULAR") {%>
-                                    <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>"><p class="texto-header" style="color: var(--blanco); font-size: var(--letra-grande)">Ver mi perfil</p></a>
-
-                                    
-                                    <a><p class="mensaje-userLogin" style=" color: var(--blanco);font-size: var(--letra-grande); ">¡Hola, <%= userLogin.name%>! ¡Vamos a brillar! 🌈💫<i class="fa-solid fa-star"></i></p></a>
-
-                                    <% } else { %>
-
-                                        <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>"><p class="texto-header" style="color: var(--blanco); font-size: var(--letra-mediana); margin: 0px;">Ver mi perfil</p></a>
-
-                                        <a href="/admin/productos"><p class="texto-header" style=" color: var(--blanco);font-size: var(--letra-mediana); ">¡Hola, <%= userLogin.name%>! 🟠 Administrar productos</p></a>
-
-                                    <% } %>   
-
-                                <% } %>
-
-                                    <a href="/carrito">
-                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    <a href="/autenticacion/iniciar">
+                                        <p class="texto-header color-blanco">Iniciar sesión</p>
                                     </a>
+                                    <% } %>
+                                        <% } else { %>
+                                            <% if(locals.userLogin?.rol==="REGULAR" ) {%>
+                                                <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>">
+                                                    <p class="texto-header"
+                                                        style="color: var(--blanco); font-size: var(--letra-grande)">Ver
+                                                        mi perfil</p>
+                                                </a>
+
+
+                                                <a>
+                                                    <p class="mensaje-userLogin"
+                                                        style=" color: var(--blanco);font-size: var(--letra-grande); ">
+                                                        ¡Hola, <%= userLogin.name%>! ¡Vamos a brillar! 🌈💫<i
+                                                                class="fa-solid fa-star"></i></p>
+                                                </a>
+
+                                                <% } else { %>
+
+                                                    <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>">
+                                                        <p class="texto-header"
+                                                            style="color: var(--blanco); font-size: var(--letra-mediana); margin: 0px;">
+                                                            Ver mi perfil</p>
+                                                    </a>
+
+                                                    <a href="/admin/productos">
+                                                        <p class="texto-header"
+                                                            style=" color: var(--blanco);font-size: var(--letra-mediana); ">
+                                                            ¡Hola, <%= userLogin.name%>! 🟠 Administrar productos</p>
+                                                    </a>
+
+                                                    <% } %>
+
+                                                        <% } %>
+
+                                                            <a href="/carrito">
+                                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                            </a>
         </div>
         <div class="redirecciones">
             <p class="texto-header">INICIO
@@ -106,11 +246,11 @@
                 <i class=""></i>
             </p> -->
             <% if (locals.userLogin) { %>
-            <p class="texto-header">
-                <a href="/autenticacion/cerrar-sesion">CERRAR SESIÓN</a>
-            </p>
-            <% } %>
+                <p class="texto-header">
+                    <a href="/autenticacion/cerrar-sesion">CERRAR SESIÓN</a>
+                </p>
+                <% } %>
         </div>
     </div>
+
 </header>
-<ul>asa <%= locals.userLogin.rols %></ul>
