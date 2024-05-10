@@ -1,7 +1,7 @@
 const db = require('../../db/models')
 
 module.exports = (req,res) => {
-  const { id } = req.params;
+    const { id } = req.params;
     const productPromise = db.Product.findByPk(id)
     const categoriesPromise = db.Categories.findAll()
     const sizesPromise = db.Sizes.findAll()

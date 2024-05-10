@@ -1,6 +1,6 @@
 [
    {
-      "id": 2,
+      "id": 1,
       "image": [
          "image-1710443878037.png",
          "image-1710443878038.png",
@@ -24,7 +24,7 @@
       "available": true
    },
    {
-      "id": 3,
+      "id": 2,
       "image": [
          "image-1710444100211.jpg",
          "image-1710444100213.png",
@@ -48,7 +48,7 @@
       "available": true
    },
    {
-      "id": 4,
+      "id": 3,
       "image": [
          "image-1710444275288.jpg",
          "image-1710444275289.png",
@@ -73,18 +73,15 @@
       "available": true
    },
    {
-      "id": 15,
+      "id": 4,
       "image": [],
       "name": "Remera overzise",
       "description": "Remera oversize super olgada",
       "featuredDescription": "Te sentirás libre con esta prenda super comoda",
       "category": "Remeras",
       "sizes": [
-         false,
-         false,
-         false,
-         false,
-         false
+         5,
+         3
       ],
       "colors": [],
       "price": 17000,
@@ -93,7 +90,7 @@
       "available": true
    },
    {
-      "id": 6,
+      "id": 5,
       "image": [
          "image-1710444541165.jpg",
          "image-1710444541166.png",
@@ -115,7 +112,7 @@
       "available": true
    },
    {
-      "id": 7,
+      "id": 6,
       "image": [
          "image-1710444623614.jpg",
          "image-1710444623615.png",
@@ -141,7 +138,7 @@
       "available": true
    },
    {
-      "id": 8,
+      "id": 7,
       "image": [
          "image-1710444797275.jpg",
          "image-1710444797277.png",
@@ -167,7 +164,7 @@
       "available": true
    },
    {
-      "id": 9,
+      "id": 8,
       "image": [
          "image-1710444931685.jpg",
          "image-1710444931686.png",
@@ -189,7 +186,7 @@
       "available": true
    },
    {
-      "id": 10,
+      "id": 9,
       "image": [
          "image-1710445129750.png",
          "image-1710445129751.png",
@@ -213,7 +210,7 @@
       "available": true
    },
    {
-      "id": 14,
+      "id": 10,
       "image": [],
       "name": "pantalon",
       "description": "ssds",
