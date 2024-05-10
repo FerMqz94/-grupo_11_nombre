@@ -118,11 +118,13 @@ a {
 }
 
 .ul-menu div{
-  padding: 3px;
+  display: flex;
+  padding: 4px;
   /* border-top: solid 1px; */
   width: 100%;
   /* border-bottom: solid 1px; */
   border-color: #f99b7d;
+  flex-direction: column;
 }
 
 .encabezado {
@@ -175,7 +177,37 @@ a {
   font-size: 25px;
   width: 13%;
 }
+.cerrar-session-opciones {
 
+position:absolute;
+
+background-color: white;
+
+right: 25px;
+
+/* border-color: #ffefd6; */
+
+/* display: none; */
+
+bottom: 40px;
+
+/* border-color: black; */
+
+margin: 0;
+
+width: 90%;
+}
+
+/* .cerrar-session-movil :checked  ~  .cerrar-session-opciones {
+  
+}
+.opciones-cerrar-session{
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    bottom: 10px;
+} */
 
 
 .redirecciones .seleccionar-destino .home {

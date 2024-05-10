@@ -15,65 +15,11 @@
 
         <div class="redirecciones">
 
-            <!-- <nav>
-                <ul>
-                    <div class="barra-productos">
-                        <input type="checkbox" id="menu" class="input-menu">
-                        <label for="menu"><i class="fa-solid fa-bars"></i></label>
-                    </div>
-                    <ul class="ul-menu">
-                     <div class="home">
-                    <li><a href="/"><i class="fa-solid fa-house"
-                            style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i></a></li>
-                    <p>inicio</p>
-                </div>
-
-                <div class="productos">
-                    <a href="/producto-detalle"><i class="fa-solid fa-list"
-                            style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i></a>
-                    <p>productos</p>
-                </div>
-
-                <div class="carrito">
-                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"
-                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i></a>
-                    <p>carrito</p> 
-                </div>
-                </ul>
-            </nav> -->
-
-
             <!-- <input type="checkbox" id="menu" class="input-menu"> -->
             <label for="menu" class="menu"> <i class="fa-solid fa-bars hambuerguesa"></i></label>
 
 
-            <!-- <div class="ul-menu">
-
-
-                <div class="home"><a href="/"><i class="fa-solid fa-house"
-                            style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>inicio</a></div>
-
-                <div class="productos">
-                    <a href="/producto-detalle"><i class="fa-solid fa-list"
-                            style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>productos</a>
-                </div>
-                <div class="carrito">
-                    <a href="/carrito"><i class="fa-solid fa-cart-shopping"
-                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>carrito</a>
-                </div>
-                <div class="carrito">
-                    <a href="/sobre-nosotros"><i class="fa-solid fa-cart-shopping"
-                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>sobre
-                        nosotros</a>
-                </div>
-                
-
-
-
-            </div> -->
-
-            <!-- <div class="algo">jandisfjdafis</div> -->
-            <!-- <input type="checkbox" id="menu" class="input-menu"> -->
+       
             <div class="seleccionar-destino">
                 <!-- <label for="menu" class="menu"> <i class="fa-solid fa-bars"></i> </label> -->
                 <form action="/resultados" method="get" class="form-busqueda-movil">
@@ -96,7 +42,7 @@
                         style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;inicio</a></div>
 
             <div class="productos">
-                <a href="<%= locals.carrito ? '#'  : " /producto-detalle" %>"><i class="fa-solid fa-list"
+                <a href="<%= locals.productos ? '#'  : " /producto-detalle" %>"><i class="fa-solid fa-list"
                         style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;productos</a>
             </div>
 
@@ -139,9 +85,9 @@
                                                 <% } else { %>
                                                     <div class="perfil">
                                                         <a
-                                                            href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
+                                                            href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin.id %>"><i
                                                                 class="fa-solid fa-user"
-                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                                style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
                                                             mi perfil</a>
                                                     </div>
 
@@ -151,9 +97,23 @@
                                                             productos desde vista admin</a>
                                                     </div>
                                                     <div class="cerrar-sesion">
-                                                        <a href="/autenticacion/cerrar-sesion"><i
-                                                                class="fa-solid fa-user-minus"
-                                                                style='color: red;'></i>&nbsp;cerrar sesion</a>
+                                                        <a href="/autenticacion/cerrar-sesion">
+                                                            <i class="fa-solid fa-user-minus"
+                                                                style='color: red;'></i>&nbsp;cerrar sesion
+                                                            </a>
+                                                        
+                                                        <!-- <a href="/autenticacion/cerrar-sesion"> -->
+                                                            <!-- <input type="checkbox" id="cerrar-session-movil" class="cerrar-session-pc-tablet">
+                                                            <label for="cerrar-session-movil">
+                                                            <i class="fa-solid fa-user-minus"
+                                                                style='color: red;'></i>&nbsp;cerrar sesion
+                                                            </label>
+                                                            <nav class="cerrar-session-opciones">
+                                                                <p class="texto-header-movil">¿estas seguro de cerrar session?</p>
+                                                                <p
+                                                                class="opciones-cerrar-session"><a href="#">si</a> &nbsp;&nbsp; <a href="#">no</a></p>
+                                                            </nav> -->
+                                                            <!-- </a> -->
                                                     </div>
 
                                                     <% } %>
@@ -165,7 +125,7 @@
                                                                         style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;sobre
                                                                     nosotros</a>
                                                             </div>
-                                                            <!-- <i class="fa-solid fa-user-minus"></i> -->
+                                                            
         </div>
     </div>
 
@@ -175,7 +135,8 @@
                 <img src="/images/icon/imagen-header.png" alt="img-logo" class="img-header">
                 <p class="Zinke">zinke</p>
             </div>
-            <!-- barra de busqueda -->
+            
+
             <form action="/resultados" method="get" class="barra-busqueda">
                 <input type="text" name="keywords" placeholder="¿que estas buscando?"
                     class="barra-busqueda barra-busqueda-interior" required>
@@ -235,17 +196,33 @@
                                                             </a>
         </div>
         <div class="redirecciones">
-            <p class="texto-header">INICIO
-                <i class=""></i>
+            
+            
+            <p class="texto-header"><a href="<%= locals.home ? '#'  : '/' %>" style="color: black">
+                <% if (locals.home)  {%>✨ INICIO</a>
+                <% } else  {%>
+                    INICIO </a>
+                    <% } %>
             </p>
-            <p class="texto-header">PRODUCTOS
-                <i class=""></i>
+            <p class="texto-header">
+                    <a href="<%= locals.productos ? '#'  : '/' %>" style="color: black">
+                        <% if (locals.productos)  {%>✨ PRODUCTOS</a>
+                        <% } else  {%>
+                            PRODUCTOS </a>
+                            <% } %>
             </p>
-            <p class="texto-header">CONTACTO
-                <i class=""></i>
+            <p class="texto-header">     
+                    <a href="<%= locals.contacto ? '#'  : '/' %>" style="color: black">
+                        <% if (locals.contacto)  {%>✨ CONTACTO</a>
+                        <% } else  {%>
+                            CONTACTO </a>
+                            <% } %>
             </p>
-            <p class="texto-header"><a href="/sobre-nosotros" style="color:black">QUIENES SOMOS</a>
-                <i class=""></i>
+            <p class="texto-header"><a href="/sobre-nosotros" style="color:black">
+                <% if (locals.aboutUs)  {%>✨ QUIENES SOMOS</a>
+                <i class=""></i><% } else  {%>
+                    QUIENES SOMOS </a>
+                    <% } %>
             </p>
             <!-- <p class="texto-header">LO MAS NUEVO!
                 <i class=""></i>
@@ -255,7 +232,12 @@
             </p> -->
             <% if (locals.userLogin) { %>
                 <p class="texto-header">
-                    <a href="/autenticacion/cerrar-sesion">CERRAR SESIÓN</a>
+                    <!-- <input type="checkbox" id="cerrar-session-pc-tablet" class="cerrar-session-pc-tablet"> -->
+                    <!-- <label for="cerrar-session-pc-tablet"> -->
+                        <a href="/autenticacion/cerrar-sesion">
+                        CERRAR SESIÓN
+                    </a>
+                    <!-- </label> -->
                 </p>
                 <% } %>
         </div>
