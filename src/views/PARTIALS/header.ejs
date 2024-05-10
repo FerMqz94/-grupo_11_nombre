@@ -92,16 +92,16 @@
         <div class="ul-menu">
 
 
-            <div class="home"><a href="/"><i class="fa-solid fa-house"
+            <div class="home"><a href="<%= locals.home ? '#'  : '/' %>"><i class="fa-solid fa-house"
                         style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;inicio</a></div>
 
             <div class="productos">
-                <a href="/producto-detalle"><i class="fa-solid fa-list"
+                <a href="<%= locals.carrito ? '#'  : " /producto-detalle" %>"><i class="fa-solid fa-list"
                         style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;productos</a>
             </div>
 
             <div class="carrito">
-                <a href="/carrito"><i class="fa-solid fa-cart-shopping"
+                <a href="<%= locals.carrito ? '#'  : " /carrito" %>"><i class="fa-solid fa-cart-shopping"
                         style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;carrito</a>
             </div>
 
@@ -110,7 +110,7 @@
                     <% } else { %>
                         <div class="registro">
                             <a href="/autenticacion/registrar"><i class="fa-solid fa-users"
-                                    style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;Registrarse</a>
+                                    style='color: gray;'></i>&nbsp;Registrarse</a>
                         </div>
                         <% } %>
 
@@ -118,43 +118,51 @@
                                 <% } else { %>
                                     <div class="iniciar-session">
                                         <a href="/autenticacion/iniciar"><i class="fa-solid fa-key"
-                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;iniciar
+                                                style='color: gray;'></i>&nbsp;iniciar
                                             sesión</a>
                                     </div>
                                     <% } %>
                                         <% } else { %>
                                             <% if(locals.userLogin?.rol==="REGULAR" ) {%>
                                                 <div class="perfil">
-                                                    <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>"><i class="fa-solid fa-user"
-                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                    <a
+                                                        href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
+                                                            class="fa-solid fa-user"
+                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
                                                         mi perfil</a>
                                                 </div>
                                                 <div class="cerrar-sesion">
-                                                    <a href="/autenticacion/cerrar-sesion"><i class="fa-solid fa-user-minus"
-                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;cerrar sesion</a>
+                                                    <a href="/autenticacion/cerrar-sesion"><i
+                                                            class="fa-solid fa-user-minus"
+                                                            style='color: red;'></i>&nbsp;cerrar sesion</a>
                                                 </div>
                                                 <% } else { %>
                                                     <div class="perfil">
-                                                        <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>"><i class="fa-solid fa-user"
+                                                        <a
+                                                            href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
+                                                                class="fa-solid fa-user"
                                                                 style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
                                                             mi perfil</a>
                                                     </div>
 
                                                     <div class="vista-admin">
                                                         <a href="/admin/productos"><i class="fa-solid fa-user"
-                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver productos desde vista admin</a>
+                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                            productos desde vista admin</a>
                                                     </div>
                                                     <div class="cerrar-sesion">
-                                                        <a href="/autenticacion/cerrar-sesion"><i class="fa-solid fa-user-minus"
-                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;cerrar sesion</a>
+                                                        <a href="/autenticacion/cerrar-sesion"><i
+                                                                class="fa-solid fa-user-minus"
+                                                                style='color: red;'></i>&nbsp;cerrar sesion</a>
                                                     </div>
 
                                                     <% } %>
 
                                                         <% } %>
                                                             <div class="carrito" style="padding-left: 10px;">
-                                                                <a href="/sobre-nosotros"><i class="fa-solid fa-info"
-                                                                        style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;sobre
+                                                                <a href="<%= locals.aboutUs ? '#'  : " /sobre-nosotros"
+                                                                    %>"><i class="fa-solid fa-info"
+                                                                        style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;sobre
                                                                     nosotros</a>
                                                             </div>
                                                             <!-- <i class="fa-solid fa-user-minus"></i> -->
