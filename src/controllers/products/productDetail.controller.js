@@ -15,30 +15,41 @@
 //     }
 // }
 
+const products = require(".");
 const db = require("../../db/models");
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 module.exports = (req, res)=>{
   const { id } = req.params;
+  const colorsPromise = db.Colors.findAll()
+  const sizesPromise = db.Sizes.findAll()
+  const pivotSizesPromise= db.Products_Sizes.findAll()
+  const pivotColorsPromise= db.Products_Colors.findAll()
   
-  db.Product.findByPk(id, {
-    
-  
-  }).then((products)=>{
-  
-  const productsFind = products
-  
-  if (productsFind) {
-   
-  res.render("products/productDetail", {product: productsFind, toThousand, products  } )
-  } else {
+  const productPromise = db.Product.findByPk(id,{
+    // include:[
+    //   "images"
+    // ]
+  })
+ 
+  res.send(products)
+  Promise.all([colorsPromise,sizesPromise,pivotSizesPromise,pivotColorsPromise,productPromise])
 
-    console.log(products);
-      res.redirect("products/vista-no-encontrada")
-  }
-})
+  .then(([colors, sizes, pivotSizes, pivotColors, product] ) => {
+  
+    res.render("products/productDetail", { colors, sizes, pivotSizes, pivotColors, product } )
+ 
+  })
+  
+  .catch((err) => {
+    res.send(err.message);
+});
+
 
 }
+
+
+
   
 
   
