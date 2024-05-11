@@ -1,6 +1,7 @@
+const db = require('../../../db/models');
 module.exports = (req,res) => {
 
-const {userDetail}=require("./userDetail.controller.api")
+// const {userDetail}=require("./userDetail.controller.api")
 
 userDetail: async(req,res)=>{
     try {
@@ -12,7 +13,7 @@ const userDetail = await db.Users.findByPk(id,{
     
 });
 
-return res.status(200).json({userDetail,imageURL:` http://localhost:3030/users/avatar/${id}`})
+return res.status(200).json({userDetail})
 
 } 
 
