@@ -40,7 +40,7 @@
             <% Product.forEach(p => { %>
               <tr>
                 <th scope="row"><%= p.id %></th>
-                <!-- <td><img class="img-product" src="/images/products/<%#= p.image[0] %>" alt=""></td> -->
+                <td><img class="img-product" src="/images/products/<%= p.imagePrincipal %>" alt=""></td>
                 <td class=""><%= p.name %></td>
                 <td class=""><%= p.description %></td>
                 <td class=""><%= p.featuredDescription %></td>

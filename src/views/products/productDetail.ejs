@@ -35,13 +35,13 @@
             <div class="glider-contain">
               <div class="glider">
                 <!--img 1-->
-                <% if (product.image) { %>
+                <% if (product.imagePrincipal) { %>
                   <div>
                     <div class="contenedor-blazerOver-principal">
                       <i class="fa-solid fa-magnifying-glass"></i>
                       <i class="fa-regular fa-heart"></i>
                       <div class="contenedor-img-principal">
-                        <img class="blazer-over-principal" src="/images/products/<%= product.image[0]  %>"
+                        <img class="blazer-over-principal" src="/images/products/<%= product.imagePrincipal %>"
                           alt="<%= product.name %>">
                       </div>
                     </div>
@@ -50,7 +50,7 @@
                     <% } %>
 
                       <!--img 2-->
-                      <% if (product.image[1]) { %>
+                      <% if (product.imagePrincipal) { %>
 
                         <div>
 
@@ -58,7 +58,7 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-regular fa-heart"></i>
                             <div class="contenedor-img-principal">
-                              <img class="blazer-over-principal" src="/images/products/<%= product.image[1]  %>"
+                              <img class="blazer-over-principal" src="/images/products/<%= product.imagePrincipal %>"
                                 alt="<%= product.name  %>">
                             </div>
                           </div>
@@ -69,13 +69,13 @@
                           <% } %>
 
                             <!--img 3-->
-                            <% if (product.image[2]) { %>
+                            <% if (product.imagePrincipal) { %>
                               <div>
                                 <div class="contenedor-blazerOver-principal">
                                   <i class="fa-solid fa-magnifying-glass"></i>
                                   <i class="fa-regular fa-heart"></i>
                                   <div class="contenedor-img-principal">
-                                    <img class="blazer-over-principal" src="/images/products/<%= product.image[2]%>"
+                                    <img class="blazer-over-principal" src="/images/products/<%= product.imagePrincipal%>"
                                       alt="<%= product.name %>">
                                   </div>
                                 </div>
@@ -86,7 +86,7 @@
                                 <% } %>
 
                                   <!--img 4-->
-                                  <% if (product.image[3]) { %>
+                                  <% if (product.imagePrincipal) { %>
 
                                     <div>
 
@@ -95,7 +95,7 @@
                                         <i class="fa-regular fa-heart"></i>
                                         <div class="contenedor-img-principal">
                                           <img class="blazer-over-principal"
-                                            src="/images/products/<%= product.image[1]%>" alt="<%= product.name %>">
+                                            src="/images/products/<%= product.imagePrincipal%>" alt="<%= product.name %>">
                                         </div>
                                       </div>
                                       <!-- contenedor-img-4 -->
@@ -106,7 +106,7 @@
 
 
               </div>
-              <% if (product.image[1]) { %>
+              <% if (product.imagePrincipal) { %>
                 <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
                 <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
                 <% } else {%>
@@ -137,80 +137,26 @@
 
               <div>
 
-                <% if (product.colors.includes("black")) { %>
-                  <button class="colores"
+                <% colors.forEach(color => { %>
+
+
+ 
+
+                  <% if (color.id ,color.name ) { %>
+                    <button class="colores"
                     style="background-color: #000000; border-radius: 100px; height: 25px; width: 25px;"></button>
-                  <% } else { %>
-                    <% } %>
-                      <% if (product.colors.includes("beige")) { %>
-                        <button class="colores"
-                          style="background-color: #f5f5dc; border-radius: 100px; height: 25px; width: 25px;"></button>
-                        <% } else { %>
-                          <% } %>
-                            <% if (product.colors.includes("blue")) { %>
-                              <button class="colores"
-                                style="background-color: #0000ff; border-radius: 100px; height: 25px; width: 25px;"></button>
-                              <% } else { %>
-                                <% } %>
-                                  <% if (product.colors.includes("white")) { %>
-                                    <button class="colores"
-                                      style="background-color: #ffffff; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                    <% } else { %>
-                                      <% } %>
-                                        <% if (product.colors.includes("red")) { %>
-                                          <button class="colores"
-                                            style="background-color: #ff0000; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                          <% } else { %>
-                                            <% } %>
-                                              <% if (product.colors.includes("green")) { %>
-                                                <button class="colores"
-                                                  style="background-color: #008000; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                <% } else { %>
-                                                  <% } %>
-                                                    <% if (product.colors.includes("purple")) { %>
-                                                      <button class="colores"
-                                                        style="background-color: #800080; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                      <% } else { %>
-                                                        <% } %>
-                                                          <% if (product.colors.includes("orange")) { %>
-                                                            <button class="colores"
-                                                              style="background-color: #ffa500; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                            <% } else { %>
-                                                              <% } %>
-                                                                <% if (product.colors.includes("lightblue")) { %>
-                                                                  <button class="colores" style="background-color: #add8e6; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                  <% } else { %>
-                                                                    <% } %>
-                                                                      <% if (product.colors.includes("gray")) { %>
-                                                                        <button class="colores" style="background-color: #808080; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                        <% } else { %>
-                                                                          <% } %>
-                                                                            <% if (product.colors.includes("lavender")) { %>                                                                              
-                                                                              <button class="colores" style="background-color: #e6e6fa; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                              <% } else { %>
-                                                                                <% } %>
-                                                                                  <% if(product.colors.includes("pink")) {%>
-                                                                                    <button class="colores" style="background-color: #ffc0cb; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                                    <% } else { %>
-                                                                                      <% } %>
-                                                                                        <% if (product.colors.includes("silver")) { %>
-                                                                                          <button class="colores"
-                                                                                            style="background-color: #c0c0c0; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                                          <% } else { %>
-                                                                                            <% } %>
-                                                                                              <% if (product.colors.includes("bluishGreen")) { %>
-                                                                                                <button class="colores"style="background-color: #419197; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                                                  
-                                                                                                <% } else { %>
-                                                                                                  <% } %>
-                                                                                                    <% if (product.colors.includes("gold")) { %>
-                                                                                                      <button
-                                                                                                        class="colores"
-                                                                                                        style="background-color: #ffd700; border-radius: 100px; height: 25px; width: 25px;"></button>
-                                                                                                      <% } else { %>
-                                                                                                        <% } %>
-              </div>
-            </div>
+                    <% } else { %>
+                      <% } %>
+                      <% }) %>
+                     
+                     
+                                                                                                        
+                                                                                                      
+                                                                                                      </div>
+                                                                                                      
+                                                                                                      
+                                                                                                    </div>
+                                                                                                    
             <div class="talles">
               <% if (product.sizes[0] === true ) { %>
                 <div class="uno">
@@ -324,7 +270,7 @@
           <%#  if(index <= 3) { %>
               
                   <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
+                    <img class="blazer-dos-conti" src="/images/products/<%#= p.image[0]%>" alt="<%#= p.name%>">
                     <a href="/producto-detalle/<%#= p.id%>" class="a-dos-conti">
                       <h4 class="h4-dos-conti"><%#= p.name%></h4>
                     </a>
@@ -342,7 +288,7 @@
               
               <% if(index <= 3) { %>
                 <article class="productos-otrosFav dos-continentes">
-                  <img class="blazer-dos-conti" src="/images/products/<%= p.image[0] %>" alt="<%= p.name %>">
+                  <img class="blazer-dos-conti" src="/images/products/<%= p.imagePrincipal %>" alt="<%= p.name %>">
                   <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
                     <h4 class="h4-dos-conti"><%= p.name %></h4>
                   </a>

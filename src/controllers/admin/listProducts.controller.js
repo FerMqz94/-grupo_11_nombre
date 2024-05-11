@@ -39,28 +39,26 @@ const db = require("../../db/models");
 module.exports = (req, res) => {
     db.Product.findAll({
         include: [
-            {
-                model: db.image,
-                association:"images",
-        attributes:['id_product'],
-            },
-            {
-                model: db.ProductColor,
-                association:"productColors" ,
-                        attributes:['id_color'],
-                as: 'productColors'
-            },
-            {
-                model: db.ProductSize,
-                association:"productSizes",
-                attributes:['id_size'],
-                as: 'productSizes'
-            }
+        "productColors","productSizes","category"
+            // {
+            //     association:"productColors" ,
+            //     attributes:['id_color']
+            // },
+            // {
+            //     association:"productSizes",
+            //     attributes:['id_size']
+            // },
+            // {
+            //     association:"category",
+            //     attributes:['id_category']
+                
+                
+            // }
+         
         ]
-    })
-    .then((products) => {
+    }).then((products) => {
         res.render("admin/listProducts", { 
-            products
+            Product:products
         }, (err, content) => {
             if (err) {
                 res.send(err.message);

@@ -22,24 +22,23 @@ module.exports = (req, res)=>{
   const { id } = req.params;
   
   db.Product.findByPk(id, {
-    include: [images],
+    
   
   }).then((products)=>{
   
-  const productsFind = products.find(p => p.id === +id) 
+  const productsFind = products
+  
   if (productsFind) {
-    
+   
   res.render("products/productDetail", {product: productsFind, toThousand, products  } )
   } else {
 
-    console.log(product);
+    console.log(products);
       res.redirect("products/vista-no-encontrada")
   }
 })
 
+}
+  
 
-    res.render("/id",{
-      product
-    });
-  }
   

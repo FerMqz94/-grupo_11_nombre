@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   
   Product.init({
-    images: DataTypes.STRING,
+    imagePrincipal: DataTypes.STRING,
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     featuredDescription: DataTypes.TEXT,
