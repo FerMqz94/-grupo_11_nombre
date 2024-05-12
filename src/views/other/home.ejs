@@ -84,9 +84,14 @@
         <div class="contenedor-imagenes-sector-1">
       </a>
 
-      <%  Product.forEach((p, index) => { %>
+      <%  products.forEach((p, index) => { %>
       <%  if(index <= 3) { %>
-      <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.image[0]%>" alt="<%= p.image%>" /></a>
+        <%  p.images.forEach((img, inde) => { %>
+          <%  if(inde <= 0) { %>
+          <a href="/producto-detalle/<%= p.id %>">
+          <img class="foto img-home" src="/images/products/<%= img.name%>" alt="<%= img.name%>%>" /></a>
+          <%  }  %> 
+          <% })  %> 
       <%  }  %>         
       <% })  %>      
     </div>
@@ -94,7 +99,14 @@
     <div class="contenedor-imagenes-sector-2">
         <% products.forEach((p, index) => { %>
         <%  if(index <= 7 && index > 3) { %>
-        <a href="/producto-detalle/<%= p.id %>"><img class="foto img-home" src="/images/products/<%= p.image[0]%>" alt="<%= p.image[0]%>" /></a>
+
+        
+          <%  p.images.forEach((img , inde) => { %>
+            <%  if(inde <= 0) { %>
+            <a href="/producto-detalle/<%= p.id %>">
+          <img class="foto img-home" src="/images/products/<%= img.name%>" alt="<%= img.name%>" /></a>
+          <%  }  %> 
+          <% })  %> 
         <%  }  %>
         <% })  %>   
     </div>
