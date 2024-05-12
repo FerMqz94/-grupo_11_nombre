@@ -27,9 +27,9 @@ module.exports = (req, res)=>{
   const pivotColorsPromise= db.Products_Colors.findAll()
   
   const productPromise = db.Product.findByPk(id,{
-    // include:[
-    //   "images"
-    // ]
+    include:[
+      "images"
+    ]
   })
  
   res.send(products)
