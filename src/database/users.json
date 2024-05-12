@@ -1,0 +1,56 @@
+[
+   {
+      "id": 1,
+      "name": "Fernando Márquez",
+      "username": "FerMarquez",
+      "email": "fer_marquez94@gmail.com",
+      "password": "$2a$10$6TQUu2svGFFtZ3FlxQMYneRwOiJ2NjekrPUEbHcTSh6ensSjBxzDm",
+      "rol": "ADMIN",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 2,
+      "name": "Paola Vera",
+      "username": "pmnvera",
+      "email": "pmnvera@gmail.com",
+      "password": "$2a$12$qg0qnZbDoZpa52oS479UnuUtRRXysVjKlQeqvZAu1.KNzKtnSTGm6",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 3,
+      "name": "Alexander Chambi",
+      "username": "Alex036@1",
+      "email": "alexanderbejarano036@gmail.com",
+      "password": "$2a$10$e1s81MNP9MypYyDFz.IK0.UIcjlv63MkPN2ym0tV6FhlGSQyk9KOe",
+      "rol": "ADMIN",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 4,
+      "name": "Gaston castillo",
+      "username": "valegas",
+      "email": "gastoncastillo1920@gmail.com",
+      "password": "$2a$12$xQfuA.KwnNLhrjw1N39uYO64DKgZ2MtPCS3LGacAMJYxIKkzLSG5K",
+      "rol": "ADMIN",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 5,
+      "name": "queso",
+      "username": "soy_alguien",
+      "email": "tiagocuello@gmail.com",
+      "password": "$2a$12$X.myQUrhjmXxe6erugXoIugjslOaHuCNisnDG5zgVXp6BqzpFVf6u",
+      "role": "ADMIN",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 6,
+      "name": "fer",
+      "username": "coso",
+      "email": "fer@gmail.com",
+      "password": "$2a$12$5LYuu/zN2ntGMUSH1AKRceB/tqGw90z8hfMtETIhohfGf4MR1C5xC",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
+   }
+]
