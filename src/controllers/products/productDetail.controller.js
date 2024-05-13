@@ -42,31 +42,39 @@
 //       product
 //     });
 //   }
+const products = require(".");
 const db = require("../../db/models");
 module.exports = (req, res) => {
   const { id } = req.params;
+  const colorsPromise = db.Colors.findAll()
+  const sizesPromise = db.Sizes.findAll()
+  const pivotSizesPromise= db.Products_Sizes.findAll()
+  const pivotColorsPromise= db.Products_Colors.findAll()
+  
+  const productPromise = db.Product.findByPk(id,{
+    include:[
+      "images"
+    ]
+  })
+ 
+  res.send(products)
+  Promise.all([colorsPromise,sizesPromise,pivotSizesPromise,pivotColorsPromise,productPromise])
 
-  db.Product.findByPk(id, {
-      include: ["images", "category", "colors", "sizes"]
+  .then(([colors, sizes, pivotSizes, pivotColors, product] ) => {
+  
+    res.render("products/productDetail", { colors, sizes, pivotSizes, pivotColors, product } )
+ 
   })
-  .then(product => {
-      if (product) {
-          db.Product.findAll({
-              include: ["images"]
-          })
-          .then(products => {
-              res.render("products/productDetail", { product, products });
-          })
-          .catch(error => {
-              console.error("Error", error)
-              res.redirect("/products/vista-no-encontrada");
-          });
-      } else {
-          res.redirect("/products/vista-no-encontrada");
-      }
-  })
-  .catch(error => {
-      console.error("Error al buscar el producto:", error);
-      res.redirect("/products/vista-no-encontrada");
-  });
-};
+  
+  .catch((err) => {
+    res.send(err.message);
+});
+
+
+}
+
+
+
+  
+
+  
