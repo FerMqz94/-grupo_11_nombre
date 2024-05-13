@@ -1,3 +1,35 @@
+
+### ---------------------------------------------------
+# SPRINT CINCO
+### ---------------------------------------------------
+# RETROSPECTIVA_GRUPO_11_ZINKE
+(◕‿◕)(◕‿◕)
+🧔👨🦰🧑👩🦳
+
+🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟
+
+# METODOLOGÍA ESTRELLA DE MAR ⭐
+🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟
+
+## 🌟 Comenzar a hacer:
+Es fundamental aprovechar las clases de apoyo que nos ofrece Nath para resolver dudas sobre el código y obtener la asistencia necesaria. En caso de no poder asistir en ese horario, es importante escribir a los profesores en otro momento para recibir la ayuda requerida. Esto nos permitirá evitar estancamientos y resolver problemas de manera más eficiente, ahorrando tiempo y esfuerzo. Reconocemos que el apoyo de un profesional puede acelerar nuestro progreso y potenciar nuestro aprendizaje.
+
+## 🌟 Hacer más:
+Decidimos organizar más reuniones colaborativas para mejorar la comunicación, avanzar más rápido y gestionar mejor nuestros tiempos, en caso de quedarnos estancados hablar por el grupo de WhatsApp comunicando la situación. Mantenernos en constante contacto nos ayudará a enfrentar desafíos de manera conjunta y a mantenernos enfocados en nuestros objetivos.
+
+## 🌟 Continuar haciendo:
+Continuaremos con la práctica de realizar un mínimo de tres daily por semana. Estas reuniones nos permiten compartir nuestro progreso, recibir feedback de los compañeros y brindar apoyo en caso de enfrentar dificultades. Seguir manteniendo esta comunicación nos ayudará a trabajar de manera más colaborativa y eficiente.
+
+## 🌟 Hacer menos:
+Nos comprometemos a reducir el uso del grupo de WhatsApp donde no están presentes los profesores. En su lugar, nos enfocaremos en utilizar más el grupo donde sí están presentes los profesores. Esta medida nos permitirá obtener respuestas más precisas y rápidas a nuestras consultas, así como también asegurarnos de mantener una comunicación más alineada con los objetivos del proyecto y las expectativas de los profesores.
+
+## 🌟 Dejar de hacer:
+Nos comprometemos a superar cualquier sentimiento de vergüenza o orgullo personal que nos impida pedir ayuda a los profesores cuando la necesitemos. Reconocemos la importancia de comunicar cualquier dificultad o problema que enfrentemos durante el desarrollo de las actividades. Pedir ayuda cuando la necesitemos nos permitirá superar obstáculos de manera más efectiva y avanzar de manera más fluida en nuestros proyectos.
+
+
+
+
+
 ### --------------------------------------------------- ###
 
 # SPRINT CINCO 
