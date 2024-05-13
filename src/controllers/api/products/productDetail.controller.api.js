@@ -1,4 +1,4 @@
-const db = require("../../db/models");
+const db = require("../../../db/models");
 // 200 éxito, 404 error de busqueda, 500 error interno del servidor
 module.exports = (req, res) => {
     const { id } = req.params;
