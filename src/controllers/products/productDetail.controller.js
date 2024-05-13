@@ -15,7 +15,7 @@
 //     }
 // }
 
-// const db = require("../../db/models");
+
 // const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 // module.exports = (req, res)=>{
@@ -42,7 +42,7 @@
 //       product
 //     });
 //   }
-
+const db = require("../../db/models");
 module.exports = (req, res) => {
   const { id } = req.params;
 
@@ -58,6 +58,7 @@ module.exports = (req, res) => {
               res.render("products/productDetail", { product, products });
           })
           .catch(error => {
+              console.error("Error", error)
               res.redirect("/products/vista-no-encontrada");
           });
       } else {
