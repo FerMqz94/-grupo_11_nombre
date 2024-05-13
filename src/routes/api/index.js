@@ -1,5 +1,5 @@
 const router = require("express").Router()
 
-// const userDetail=require("../../controllers/api/users/userDetail.controller.api")
-
+userDetail=require("../../controllers/api/users/userDetail.controller.api"),
+renderImg = require('../../controllers/api/users/renderImg.controller.api'),
 module.exports = router;

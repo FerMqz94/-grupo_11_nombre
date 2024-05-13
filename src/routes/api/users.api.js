@@ -1,8 +1,8 @@
 const router = require("express").Router()
 const {} = require("../../controllers/api/users")
-const {userDetail} = require("../../controllers/api/users/index")
+const {userDetail,renderImg} = require("../../controllers/api/users")
 
-//   /user   detalle api 
+//  api /user   detalle api 
 router.get("/detail/:id",userDetail)
-
+router.get("/:image",renderImg)
 module.exports = router;

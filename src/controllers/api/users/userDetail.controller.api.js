@@ -1,4 +1,5 @@
 const db = require('../../../db/models');
+const {literal} =require("sequelize")
 module.exports  =  async (req,res) => {
 
 
@@ -6,11 +7,14 @@ module.exports  =  async (req,res) => {
 const {id} = req.params;
 const userDetail = await db.Users.findByPk(id,{
     attributes:{
-        exclude:['password','rol_id','avatar',]
+        exclude:['password','rol_id'],
+       
+            include:[[literal("CONCAT('http://localhost:3030/api/users/',avatar)"),"avatar"]]
+        
     }
     
 });
-
+console.log();
 return res.status(200).json({userDetail})
 
 } 
