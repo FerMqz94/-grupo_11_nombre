@@ -47,7 +47,7 @@ module.exports = (req, res) => {
   const { id } = req.params;
 
   db.Product.findByPk(id, {
-      include: ["images", "category", "color", "sizes"]
+      include: ["images", "category", "colors", "sizes"]
   })
   .then(product => {
       if (product) {
