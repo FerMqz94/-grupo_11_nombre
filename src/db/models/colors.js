@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         through: "Products_Colors",
         foreignKey: 'id_color',
         otherKey: 'id_product',
-        as: 'products'
+        as: 'productsC'
       });
     }
   }

@@ -1,12 +1,8 @@
-
-
-
 const db = require('../../db/models')
-module.exports = (req, res) => {
 
+module.exports = (req, res) => {
     const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
     
-
     //////FUNCIONES PARA COLORES//////
 
     let colorsArrayStore = [];
@@ -55,7 +51,6 @@ module.exports = (req, res) => {
 
 
     db.Product.create ({
-       // image: newImages.length? newImages : [],
         name: name.trim(),
         description: description.trim(),
         featuredDescription: featuredDescription.trim(),
@@ -69,7 +64,6 @@ module.exports = (req, res) => {
     .then((product) => {
 
           //MAPEO DEL REQ.FILES PARA OBTENER EL ARRAY DE FILENAME DE LAS IMÁGENES
-          
         let newImages = [];
         if(req.files.length){
             newImages = req.files.map(img => {
