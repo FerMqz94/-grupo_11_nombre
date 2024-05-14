@@ -1,7 +1,5 @@
+module.exports = {
+    getOrder: require("./getOrder"),
+    getUrlOrigin: require("./getUrlOrigin")
 
-
-module.exports =  {
-    getTotalOrder: require("./getTotalOrder"),
-getOrder: require("./getOrder"),
-    
 }

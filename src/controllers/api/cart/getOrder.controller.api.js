@@ -1,5 +1,5 @@
 const { getOrder } = require('../../utils');
-
+const getUrlOrigin  = require('../../utils/getUrlOrigin');
 module.exports = async (req, res) => {
     try {
         const [orders, isCreate] = await getOrder(req)
@@ -12,12 +12,30 @@ module.exports = async (req, res) => {
                 include: [
                     {
                         association: "products",
-                        througth: {
-                            attrubutes: ["quantity"]
-                        }
+                       
+                            include: [{
+                                
+                                association: "productSizes",
+                                attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
+
+                            }],    
+                            // include: [{
+                            //     association: "productColors",
+                            //     attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
+                            // }],
+                        // include: [{
+                        //     association: "images",
+                        //     attributes:{ 
+                        //     include: [[literal(`CONCAT('${getUrlOrigin(req)}/api/products/', file )`), "file",]]
+                        //     }
+                        // }],
+                        through: {
+                            attributes: ["quantity"]
+                        },
+                        attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
                     }]
             })
-            
+
         })
     }
     catch (err) {
