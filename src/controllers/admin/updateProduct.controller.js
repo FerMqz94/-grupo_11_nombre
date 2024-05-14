@@ -4,7 +4,6 @@ const fs = require('fs');
 module.exports = (req, res) => {
     const { id } = req.params;
     const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
-    let newImages = [];
     // Actualizar el producto en la base de datos
     db.Product.findByPk(id, { include: ['images', 'sizes', 'colors'] })
         .then(product => {
