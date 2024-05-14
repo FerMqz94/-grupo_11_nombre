@@ -18,7 +18,7 @@ module.exports = (req,res) => {
                name: name.trim(),
                description: description.trim(),
                featuredDescription: featuredDescription.trim(),
-               category: +category,
+               id_category: +category,
                price: +price,
                new: neworsale === "new",
                sale: neworsale === "sale",
