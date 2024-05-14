@@ -1,5 +1,6 @@
 const router = require("express").Router()
-const {} = require("../../controllers/api/admin")
+const {listApi} = require("../../controllers/api/admin")
 
+router.get("/productos", listApi);
 
 module.exports = router;
