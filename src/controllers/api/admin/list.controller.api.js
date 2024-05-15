@@ -144,7 +144,7 @@ module.exports = (req, res) => {
     ]
     });
 
-    const promiseProducts = db.Product.paginate({
+    const promiseProducts = db.Product.findAll({
       /*  page: +page,
         paginate: 10,*/
         attributes: {
