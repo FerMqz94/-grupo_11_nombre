@@ -1,5 +1,5 @@
 const db = require("../../../db/models");
-
+// 200 éxito, 404 error de búsqueda, 500 error del servidor
 module.exports = (req, res) => {
   const { id } = req.params;
 
