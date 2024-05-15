@@ -19,6 +19,6 @@ router.patch("/completed", completedOrder)
 
 // router.patch("/color/:id", colorProductOrder);
 
-router.patch("/product/:id_pproduct/size/:id", ziseProductOrder)
+router.patch("/numero_orden_product/:id/size/:idSize", ziseProductOrder)
 
 module.exports = router;

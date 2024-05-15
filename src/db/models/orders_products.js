@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.INTEGER,
       defaultValue: 1
     },
-    id_color: DataTypes.INTEGER,
-    id_size: DataTypes.INTEGER,
+    // id_color: DataTypes.INTEGER,
+    // id_size: DataTypes.INTEGER,
     
   }, {
     sequelize,

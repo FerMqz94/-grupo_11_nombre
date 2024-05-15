@@ -13,12 +13,7 @@ module.exports = async (req, res) => {
                     {
                         // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id' , 'products' ] }, //linea de prueba
                         association: "products",
-                       
-                            // include: [{
-                                
-                            //     association: "productSizes",
-                            //     attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
-                            // }],  
+                         
                             // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product',"name"] },  
                             // include: [{
                             //     association: "productColors",
