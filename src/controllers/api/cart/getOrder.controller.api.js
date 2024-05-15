@@ -11,14 +11,15 @@ module.exports = async (req, res) => {
             data: await orders.reload({
                 include: [
                     {
+                        // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id' , 'products' ] }, //linea de prueba
                         association: "products",
                        
-                            include: [{
+                            // include: [{
                                 
-                                association: "productSizes",
-                                attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
-
-                            }],    
+                            //     association: "productSizes",
+                            //     attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
+                            // }],  
+                            // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product',"name"] },  
                             // include: [{
                             //     association: "productColors",
                             //     attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
@@ -30,12 +31,11 @@ module.exports = async (req, res) => {
                         //     }
                         // }],
                         through: {
-                            attributes: ["quantity"]
+                            attributes: ["quantity", "id_color", "id_size"]
                         },
-                        attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
+                        // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
                     }]
             })
-
         })
     }
     catch (err) {

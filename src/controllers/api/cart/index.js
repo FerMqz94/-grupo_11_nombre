@@ -6,6 +6,8 @@ module.exports = {
     lessQuantity: require("./lessQuantity.controller.api"),
     canceledOrder: require("./canceledOrder.controller.api"),
     completedOrder: require("./completedOrder.controller.api"),
+    colorProductOrder: require("./colorProductOrder.controller"),
+    ziseProductOrder: require("./sizeProductOrder.controller"),
 
 
 }

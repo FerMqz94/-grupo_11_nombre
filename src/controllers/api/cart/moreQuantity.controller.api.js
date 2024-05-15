@@ -24,7 +24,18 @@ module.exports = async (req, res) => {
         recond.quantity++
         await recond.save();
 
-
+        // orders = await orders.reload({
+        //     include: [
+        //         {
+        //             association: "products",
+        //             througth: {
+        //                 attrubutes: ["quantity"]
+        //             }
+        //         }]
+        // });
+        // const total = getOrder(orders.products);
+        // orders.total = total;
+        // await orders.save();
 
         res.status(200).json({
             ok: true,
