@@ -21,10 +21,10 @@ module.exports = (req, res) => {
       images: product.images.map(image => image.name) 
     };
 
-    res.status(200).json(productData);
+    res.status(200).json({ok: true, data: productData});
   })
   .catch(error => {
     console.error("Error al buscar el producto:", error);
-    res.status(500).json({ error: "Error interno del servidor" });
+    res.status(500).json({ ok: false, error: "Error interno del servidor" });
   });
 };
