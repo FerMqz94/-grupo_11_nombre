@@ -5,9 +5,12 @@ module.exports = async (req, res) => {
     try {
 
         const { idColor } = req.params
-        if (!idColor || idColor <= 0) throw new Error("el id no fue recivido")
+        let { id: id_product } = req.params;
+
+        if (!idColor || idColor <= 0 || !id_product || id_product <= 0) throw new Error("el id no fue recivido")
         let [orders, isCreate] = await getOrder(req);
 
+        // no eliminar!!!!
         const sizes_product_select = await orders.reload({
             include: [
                 {
@@ -22,7 +25,7 @@ module.exports = async (req, res) => {
                     attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
                 }]
         })
-        let { id: id_product } = req.params;
+        
 
 
         const product = orders.products.find(product => product.id === parseInt(id_product));
@@ -57,15 +60,6 @@ module.exports = async (req, res) => {
 
         // console.log(casa)
 
-        // const id_size_cliente = {
-        //     id_size: idSize ? idSize : null
-        // }
-
-        if (parseIdColor === Numcolor1) {
-            console.log("si funciona")
-        } else {
-            console.log("no funciona")
-        }
         if (parseIdColor === Numcolor1 || parseIdColor === Numcolor2 || parseIdColor === Numcolor3 || parseIdColor === Numcolor4 || parseIdColor === Numcolor5) { //throw new Error("el producto no tiene ese talle disponible")
 
             // return res.json(idSizeConparation)
@@ -86,7 +80,7 @@ module.exports = async (req, res) => {
             // return res.json(recond)
 
 
-            recond.id_color = idColor
+            recond.id_color = parseIdColor
             await recond.save();
 
             res.status(200).json({

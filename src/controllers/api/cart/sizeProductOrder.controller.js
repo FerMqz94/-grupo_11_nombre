@@ -26,10 +26,12 @@ module.exports = async (req, res) => {
         let { id: id_product } = req.params;
 
 
+        // este codigo filtra en el array el numero del talle que posee dicho producto y devuelve un array con los talles que tiene el producto
 
         const product = orders.products.find(product => product.id === parseInt(id_product));
         const productSizes = product ? product.productSizes.map(size => ({ id_size: size.id_size })) : [];
 
+        // lo de aca abajo hace que pueda filtrar individualmente el id de los sizes disponibles
         const size1 = productSizes.length > 0 ? productSizes[0] : -1;
         const size2 = productSizes.length > 1 ? productSizes[1] : -1;
         const size3 = productSizes.length > 2 ? productSizes[2] : -1;
@@ -42,37 +44,21 @@ module.exports = async (req, res) => {
         // console.log(size4)
         // console.log(size5)
 
+        // esto haria que te devuelva el numero del talle
         let idSize1 = parseInt(size1["id_size"])
         let idSize2 = parseInt(size2["id_size"])
         let idSize3 = parseInt(size3["id_size"])
         let idSize4 = parseInt(size4["id_size"])
         let idSize5 = parseInt(size5["id_size"])
 
+        // tranforma el numero del usuario asi se puede comparar si el producto lo tiene
         let parseIdSize = parseInt(idSize)
 
-
-        // if (algo === idSize5) {
-        //     return res.json("toma")
-        // } else {
-        //     return res.json("no sirvio")
-        // }
-        // return res.json(idSize3)
-        
-
-
-        // console.log(idSize3)
-        // console.log("dato " )
-
-        // return res.json(idSize2C)
-        // console.log(casa)
-
-        // const id_size_cliente = {
-        //     id_size: idSize ? idSize : null
-        // }
 
 
         // return res.json(idSize1)
 
+        // este if seria el encargado de compara el talle enviado por el usuario y el talle que posee el producto para saber si coinciden
         if (parseIdSize === idSize1 || parseIdSize === idSize2 || parseIdSize === idSize3 || parseIdSize === idSize4 || parseIdSize === idSize5) { //throw new Error("el producto no tiene ese talle disponible")
 
             // return res.json(idSizeConparation)
@@ -93,7 +79,7 @@ module.exports = async (req, res) => {
             // return res.json(recond)
 
 
-            recond.id_size++
+            recond.id_size = parseIdSize
             await recond.save();
 
             res.status(200).json({

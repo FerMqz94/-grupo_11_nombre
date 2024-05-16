@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.INTEGER,
       defaultValue: 1
     },
-    // id_color: DataTypes.INTEGER,
+    // id_color: DataTypes.INTEGER, coso si lees esto te advierto que te tengo bronca por clavarme el vsito cuando te pregunte si estabas y no te costaba nada decir que no podias cordobez hdp
     id_size: DataTypes.INTEGER,
     
   }, {
