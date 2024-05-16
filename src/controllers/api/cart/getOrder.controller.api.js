@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
                         through: {
                             attributes: ["quantity", "id_color", "id_size"]
                         },
-                        // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
+                        attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
                     }]
             })
         })

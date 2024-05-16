@@ -17,7 +17,7 @@ router.patch("/canceled", canceledOrder)
 
 router.patch("/completed", completedOrder)
 
-// router.patch("/color/:id", colorProductOrder);
+router.patch("/numero_orden_product/:id/color/:idColor", colorProductOrder);
 
 router.patch("/numero_orden_product/:id/size/:idSize", ziseProductOrder)
 

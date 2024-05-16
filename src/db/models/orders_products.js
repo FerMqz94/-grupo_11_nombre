@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: 1
     },
     // id_color: DataTypes.INTEGER,
-    // id_size: DataTypes.INTEGER,
+    id_size: DataTypes.INTEGER,
     
   }, {
     sequelize,

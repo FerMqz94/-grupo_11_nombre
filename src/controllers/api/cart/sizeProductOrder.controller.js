@@ -5,9 +5,10 @@ module.exports = async (req, res) => {
     try {
 
         const { idSize } = req.params
-        if (!idSize) throw new Error("el id no fue recivido")
+        if (!idSize || idSize <= 0) throw new Error("el id no fue recivido")
         let [orders, isCreate] = await getOrder(req);
 
+        // este codigo de abajo sirve aun que no lo paresca y si lo borras te aniquilo
         const sizes_product_select = await orders.reload({
             include: [
                 {
@@ -24,32 +25,7 @@ module.exports = async (req, res) => {
         })
         let { id: id_product } = req.params;
 
-        // if (!id_product) throw new Error("El id no fue recibido");
 
-        // let [orders, isCreate] = await getOrder(req);
-
-        // await db.Orders_Products.create({
-        //     id_order: orders.id,
-        //     id_product
-        // });
-
-        // orders = await orders.reload({
-        //     include: [
-        //         {
-        //             association: "products",
-        //             where: { id: id_product },
-        //             include: [
-        //                 {
-        //                     association: "productSizes",
-        //                     attributes: ['id_size']
-        //                 }
-        //             ],
-        //             through: {
-        //                 attributes: []
-        //             }
-        //         }
-        //     ]
-        // });
 
         const product = orders.products.find(product => product.id === parseInt(id_product));
         const productSizes = product ? product.productSizes.map(size => ({ id_size: size.id_size })) : [];
@@ -72,29 +48,32 @@ module.exports = async (req, res) => {
         let idSize4 = parseInt(size4["id_size"])
         let idSize5 = parseInt(size5["id_size"])
 
+        let parseIdSize = parseInt(idSize)
+
+
+        // if (algo === idSize5) {
+        //     return res.json("toma")
+        // } else {
+        //     return res.json("no sirvio")
+        // }
+        // return res.json(idSize3)
+        
+
+
         // console.log(idSize3)
         // console.log("dato " )
 
-        const idSizeConparation = `\x1b[33m${idSize}\x1b[0m`
-
-        const idSize1C = `\x1b[33m${idSize1}\x1b[0m`
-        const idSize2C = `\x1b[33m${idSize2}\x1b[0m`
-        const idSize3C = `\x1b[33m${idSize3}\x1b[0m`
-        const idSize4C = `\x1b[33m${idSize4}\x1b[0m`
-        const idSize5C = `\x1b[33m${idSize5}\x1b[0m`
-
+        // return res.json(idSize2C)
         // console.log(casa)
 
         // const id_size_cliente = {
         //     id_size: idSize ? idSize : null
         // }
 
-        if (idSizeConparation === idSize1C) {
-            console.log("si funciona")
-        } else {
-            console.log("no funciona")
-        }
-        if (idSizeConparation === idSize1C || idSizeConparation === idSize2C || idSizeConparation === idSize3C || idSizeConparation === idSize4C || idSizeConparation === idSize5C) { //throw new Error("el producto no tiene ese talle disponible")
+
+        // return res.json(idSize1)
+
+        if (parseIdSize === idSize1 || parseIdSize === idSize2 || parseIdSize === idSize3 || parseIdSize === idSize4 || parseIdSize === idSize5) { //throw new Error("el producto no tiene ese talle disponible")
 
             // return res.json(idSizeConparation)
             const { id } = req.params
@@ -114,7 +93,7 @@ module.exports = async (req, res) => {
             // return res.json(recond)
 
 
-            recond.id_size = idSize
+            recond.id_size++
             await recond.save();
 
             res.status(200).json({
