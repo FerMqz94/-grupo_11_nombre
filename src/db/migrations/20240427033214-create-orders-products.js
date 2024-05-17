@@ -34,6 +34,28 @@ module.exports = {
         onDelete: "CASCADE",
         onUpdate: "CASCADE"
       },
+      id_color: {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName : "Colors"
+          },
+          key: "id"
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
+      },
+      id_size: {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName : "Sizes"
+          },
+          key: "id"
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE"
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

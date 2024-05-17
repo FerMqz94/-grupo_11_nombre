@@ -20,9 +20,14 @@ module.exports = async (req, res) => {
             include: [
                 {
                     association: "products",
-                    througth: {
-                        attrubutes: ["quantity"]
-                    }
+                    include: [{
+                                
+                        association: "productSizes",
+                        attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt', 'id_product'] }
+                    }],  
+                    through: {
+                        attributes: ["quantity", "id_color", "id_size"]
+                    },
                 }]
         })
 
@@ -35,6 +40,7 @@ module.exports = async (req, res) => {
         //      }, }) => {
         //     total += price * quantity;
         // })
+        // return res.json(orders)
 
         const total = getTotalOrder(orders.products);
         orders.total = total;

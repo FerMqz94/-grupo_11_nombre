@@ -2,18 +2,16 @@ const db = require('../../db/models')
 
 module.exports = (req,res) => {
     const { id } = req.params;
-    const productPromise = db.Product.findByPk(id)
+    const productPromise = db.Product.findByPk( id, {
+      include: ["images", "colors", "sizes"]
+    })
     const categoriesPromise = db.Categories.findAll()
     const sizesPromise = db.Sizes.findAll()
     const colorsPromise = db.Colors.findAll()
-    const pivotSizesPromise = db.Products_Sizes.findAll({ where: { id_product: id }, include: [db.Sizes] })
-    const pivotColorsPromise = db.Products_Colors.findAll({ where: { id_product: id }, include: [db.Colors] })
-    const imagesPromise = db.Images.findAll({ where: { id_product: id }, include: [{ model: db.Product, as: 'products' }] });
-
-    Promise.all([categoriesPromise, colorsPromise, sizesPromise, pivotSizesPromise, pivotColorsPromise, imagesPromise, productPromise])
-    .then(([categories, sizes, colors, pivotSizes, pivotColors, images, product]) => {
+    Promise.all([categoriesPromise, sizesPromise, colorsPromise, productPromise])
+    .then(([categories, sizes, colors, product]) => {
       res.render("./admin/editProduct", {
-        categories, sizes, colors, pivotSizes, pivotColors, images, product
+        categories, sizes, colors, product
       }, (err,content) => {
         if (err) {
           // Manejar el error fuera del callback

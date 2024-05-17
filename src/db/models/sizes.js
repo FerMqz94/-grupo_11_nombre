@@ -18,6 +18,12 @@ module.exports = (sequelize, DataTypes) => {
         otherKey: 'id_product',
         as: 'products'
       });
+      Sizes.belongsToMany(models.Orders, {
+        through: "Orders_Products",
+        foreignKey: "id_size",
+        otherKey: "id_order",
+        as: "orders",
+      });
     }
   }
   Sizes.init({

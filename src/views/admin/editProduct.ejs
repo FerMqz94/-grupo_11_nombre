@@ -46,18 +46,19 @@
                         <!-- Talles -->
                         <div class="talles-check">
                             <h3 class="titulo-talles col-12 my-3">Talles</h3>
+                            <% const sizeIds = product.sizes.map(size => size.id) %>
                             <% sizes.forEach(size => { %>
                                 <div class="form-check-talles">
-                                    <input class="form-check-input-talle" type="checkbox" value="<%= size.id %>" id="<%= size.size %>" name="talle<%= size.size %>" <% if (pivotSizes.find(ps => ps.Size.id === size.id)) { %> checked <% } %>>
+                                    <input class="form-check-input-talle" type="checkbox" value="<%= size.id %>" id="<%= size.size %>" name="talle<%= size.size %>" <% if (sizeIds.includes(size.id)) { %> checked <% } %>>
                                     <label class="form-check-label-talle" for="talle<%= size.size %>">Talle <%= size.size %></label>
                                 </div>
-                            <% }) %>
+                            <% }) %>                            
                         </div>
                         <!-- Colores -->
                         <div class="colors-check">
                             <h3 class="titulo-colores col-12 my-3">Colores</h3>
 
-                            <% const colorsSpanish = { %>
+                            <% const colorsSpanish = { 
                                 "black": "Negro",
                                 "beige": "Beige",
                                 "blue": "Azul",
@@ -73,14 +74,15 @@
                                 "silver": "Plata",
                                 "bluishGreen": "Petróleo",
                                 "gold": "Oro"
-                            <% }; %>
-                            <% colors.forEach(color => { %>    
-                                <div class="form-check-color">
-                                    <label class="form-check-label-color-<%= color.name %>">
-                                        <input class="form-check-input-color" type="checkbox" value="<%= color.id %>" id="<%= color.name %>" name="<%= color.name %>" <% if (pivotColors.find(pc => pc.Color.id === color.id)) { %> checked <% } %>>
-                                        <span class="form-check-span-color" for="<%= color.name %>"><%= colorsSpanish[color.name] %></span>
-                                    </label>
-                                </div>
+                            }; %>
+                            <% const colorsIds = product.colors.map(color => color.id) %>
+                            <% colors.forEach(color => { %>
+                                    <div class="form-check-color">
+                                        <label class="form-check-label-color-<%= color.name %>">
+                                            <input class="form-check-input-color" type="checkbox" value="<%= color.id %>" id="<%= color.name %>" name="<%= color.name %>" <% if (colorsIds.includes(color.id)) { %> checked <% } %>>
+                                            <span class="form-check-span-color" for="<%= color.name %>"><%= colorsSpanish[color.name] %></span>
+                                        </label>
+                                    </div>   
                             <% }) %>
                         </div>
                         <!-- Nuevo - Oferta -->
@@ -119,7 +121,7 @@
                         <div>
                             <input class="form-control form-control-lg" id="formFileLg" type="file" name="image" accept="image/*" multiple>
                             <ul>
-                                <% images.forEach(image => { %>
+                                <% product.images.forEach(image => { %>
                                     <li><%= image.name %></li>
                                 <% }) %>
                             </ul>

@@ -7,11 +7,15 @@
       "products": [
         {
           "name": "Remera",
-          "quantity": 2
+          "quantity": 2,
+          "id_color": 2,
+          "id_size": 3
         },
         {
           "name": "Pantalon a cuadros",
-          "quantity": 1
+          "quantity": 1,
+          "id_color": 1,
+          "id_size": 4
         }
       ]
     },
@@ -23,11 +27,15 @@
       "products": [
         {
           "name": "Campera/camisa ondera",
-          "quantity": 2
+          "quantity": 2,
+          "id_color": 4,
+          "id_size": 3
         },
         {
           "name": "Remera overzise",
-          "quantity": 1
+          "quantity": 1,
+          "id_color": 1,
+          "id_size": 3
         }
       ]
     }

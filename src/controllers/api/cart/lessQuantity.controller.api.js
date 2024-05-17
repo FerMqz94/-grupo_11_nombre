@@ -16,12 +16,14 @@ module.exports = async (req, res) => {
                         id_product: id,
                     }
                 ]
-            }
+                
+            },
+            // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
         })
 
 
 
-        //return res.json(recond)
+        // return res.json(recond)
 
         if (recond.quantity > 1) {
             recond.quantity--

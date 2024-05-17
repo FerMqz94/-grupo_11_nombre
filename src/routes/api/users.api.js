@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const { listUsersApi,userDetail,renderImg } = require("../../controllers/api/users")
+const { listUsersApi, userDetail, renderImg } = require("../../controllers/api/users")
 
 // /api/users
 router.get("/detail/:id",userDetail)

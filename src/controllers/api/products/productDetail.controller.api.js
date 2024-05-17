@@ -1,32 +1,30 @@
 const db = require("../../../db/models");
-// 200 éxito, 404 error de busqueda, 500 error interno del servidor
+// 200 éxito, 404 error de búsqueda, 500 error del servidor
 module.exports = (req, res) => {
-    const { id } = req.params;
+  const { id } = req.params;
 
-    db.Product.findByPk(id, {
-        include: ["images", "category", "colors", "sizes"]
-    })
-    .then(product => {
-        if (product) {
-            db.Product.findAll({
-                include: ["images"]
-            })
-            .then(products => {
-                res.status(200).json({
-                    ok: true,
-                    data: { product, relatedProducts: products }
-                });
-            })
-            .catch(error => {
-                console.error("Error al buscar productos relacionados:", error);
-                res.status(500).json({ ok: false, msg: "Error al buscar productos relacionados" });
-            });
-        } else {
-            res.status(404).json({ ok: false, msg: "Producto no encontrado" });
-        }
-    })
-    .catch(error => {
-        console.error("Error al buscar el producto:", error);
-        res.status(500).json({ ok: false, msg: "Error al buscar el producto" });
-    });
+  db.Product.findByPk(id, {
+    include: ["images", "category", "sizes", "colors"]
+  })
+  .then(product => {
+    if (!product) {
+      return res.status(404).json({ error: "Producto no encontrado" });
+    }
+    const productData = {
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      price: product.price,
+      category: product.category ? product.category.name : null,
+      sizes: product.sizes.map(size => size.size),
+      colors: product.colors.map(color => color.name),
+      images: product.images.map(image => image.name) 
+    };
+
+    res.status(200).json({ok: true, data: productData});
+  })
+  .catch(error => {
+    console.error("Error al buscar el producto:", error);
+    res.status(500).json({ ok: false, error: "Error interno del servidor" });
+  });
 };

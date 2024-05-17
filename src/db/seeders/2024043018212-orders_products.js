@@ -13,6 +13,9 @@ const ordersProductsDBMapped = ordersJSON
         id_order: ord.id,
         id_product: productFind ? productFind.id : null,
         quantity: productOrd.quantity,
+        id_color: productOrd.id_color,
+        id_size: productOrd.id_size    
+        
       };
     });
     return productMapped;
