@@ -83,7 +83,7 @@
                 <% const colorNames = product.colors.map(color => color.name) %>
                 <% colors.forEach(c => { %>
                   <% if (colorNames.includes(c.name)) { %>
-                    <button class="colores" style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width: 25px;">
+                    <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %> style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width: 25px;">
                     </button>
                   <% } %>
                 <% }) %>
