@@ -67,7 +67,11 @@ module.exports = async (req, res) => {
             // return res.json(idSizeConparation)
             const { id } = req.params
 
-            const recond = await db.Orders_Products.findOne({
+            const recond = await db.Orders_Products.update(
+                {
+                    id_color: parseIdColor
+                },
+                {
                 where: {
                     [Op.and]: [
                         {
@@ -86,10 +90,10 @@ module.exports = async (req, res) => {
 
             console.log(orders.id)
 
-            recond.id_color = 1
+            // recond.id_color = parseIdColor
 
        console.log(recond.id_color)     
-            await recond.save();
+            // await recond.save();
 
 
 
