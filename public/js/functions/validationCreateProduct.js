@@ -10,9 +10,6 @@ const inputFeaturedDescription = document.querySelector("[name='featuredDescript
 // COLORES
 // const inputColors = document.querySelector("[]");
 
-// NUEVO OFERTA
-// const inputINDEFINIDO = document.querySelector("[]");
-
 const inputAveriable = document.querySelector("[name='available']");
 const inputImage = document.querySelector("[name='image']");
 const exRegAlfanumeric = /^[a-zA-Z0-9\s]*$/;
@@ -43,7 +40,7 @@ window.addEventListener('load', function(){
 
         switch (true) {
             case !value.length:
-                statusInvalid(errName, "El nombre es obligatorio", this);
+                statusInvalid(errName, "El nombre es requerido", this);
                 break;  
             case !exRegAlfanumeric.test(value):
                 statusInvalid(errName, "El nombre debe ser alfanumérico", this);
