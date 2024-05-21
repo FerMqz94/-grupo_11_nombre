@@ -208,23 +208,5 @@
       "new": false,
       "sale": true,
       "available": true
-   },
-   {
-      "id": 10,
-      "image": [],
-      "name": "pantalon",
-      "description": "ssds",
-      "featuredDescription": "fdgd",
-      "category": "",
-      "sizes": [
-         5,
-         4,
-         2
-      ],
-      "colors": [],
-      "price": 2224,
-      "new": false,
-      "sale": false,
-      "available": true
    }
 ]

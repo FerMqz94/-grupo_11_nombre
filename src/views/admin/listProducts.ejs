@@ -72,7 +72,17 @@
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
                     <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
-                    <a href="/admin/eliminar-producto?id=<%= p.id %>&name=<%= p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a>
+                   <!-- <button class="button"><a href="/admin/eliminar-producto?id=<%#= p.id %>&<%#=p.name = p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a></button> -->
+                   <form action="/admin/eliminar-producto/<%= p.id %>&<%=p.name = p.name %>?_method=DELETE" method="post"
+                    enctype="multipart/form-data">
+                     <button type="submit" class="">Eliminar</button> 
+                    <!-- <button type="button" class="btn btn-danger" onclick="confirmarEliminacionBootstrap(productoId)">Eliminar</button> -->
+
+                <!-- </form> 
+                <!- <form action="/admin/eliminar-producto/<%#=p.id %>?_method=DELETE" method="post" class="d-flex justify-content-around">
+                  <button type="submit" class="btn btn-delete">Eliminar</button>
+                  <a href="/admin/productos" class="btn btn-cancel">Cancelar</a>
+                </form> -->
                   </div>
                 </td>  
               </tr>
@@ -89,6 +99,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
