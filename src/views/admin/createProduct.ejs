@@ -27,14 +27,22 @@
             <div class="d-flex row p-0 justify-content-center">
                 <!--NOMBRE DEL PRODUCTO-->
                 <div class="nombre-producto-crear-edit d-flex flex-column col-10 my-3 col-lg-5">
-                    <label for="name" class="nombre-producto">Nombre del producto</label>
+                    <label for="name" class="nombre-producto">Nombre del producto</label>                    
                     <input class="nombre-producto" type="text" name="name" id="name" value="">
+                    <p class="text-danger error-name">
+
+
+                    </p>
                 </div>
 
                 <!---PRECIO DEL PRODUCTO-->
                 <div class="precio-producto-crear-edit d-flex flex-column col-10 my-3 col-lg-5">
                     <label for="price" class="precio-producto">Precio</label>
                     <input class="precio-producto" type="number" name="price" id="price" value="">
+                    <p class="text-danger error-price">
+
+
+                    </p>
                 </div>
 
                 <!--SELECCIÓN DE CATEGORÍA-->
@@ -48,16 +56,28 @@
                       
                     </select>
                       <i class="fa-solid fa-caret-down"></i>
+                      <p class="text-danger error-category">
+
+
+                      </p>
                     </div>
                 </div>
-
+                <!--SELECCIÓN DE DESCRIPCIÓN-->
                <div class="col-10 my-3 descripcion-producto-crear-editar">
                 <div class="texarea-descripcion-mayor">
                     <textarea class="form-control my-1" placeholder="Descripción del producto" id="description" name="description" style="height: 200px"></textarea>
-                </div>    
+                </div>   
+                <p class="text-danger error-description">
+
+                        
+                </p> 
                 <div class="textarea-descripcion-destacada">
                     <textarea class="form-control my-1" placeholder="Descripción destacada del producto" id="featuredDescription" name="featuredDescription"></textarea>
                 </div>
+                <p class="text-danger error-featuredDescription">
+
+                        
+                </p> 
                 </div>
 
                 <!--TALLES PRODUCTO-->
@@ -260,6 +280,6 @@
 
 
      
-  
+    <script src="/js/functions/validationCreateProduct.js"></script>
 </body>
 </html>
