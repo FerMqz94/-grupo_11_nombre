@@ -36,6 +36,7 @@
     margin: 10px;
     border-radius: 5px;
     font-size: var(--letra-mediana);
+    width: 50%;
 }
 
 /* mensajes de error */
