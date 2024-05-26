@@ -47,7 +47,7 @@
 }
 .login .white-bar {
     font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
+    border: 1px solid var(--verde-azulado-claro); 
     padding: 5px;
     margin: 40px 0px;
     border-radius: 5px;
