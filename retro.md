@@ -1,3 +1,37 @@
+### ---------------------------------------------------
+
+# SPRINT SIETE 
+![zinke](./public/images/icon/imagen-header.png)
+
+### ------------zinke-------------
+# RETROSPECTIVA_GRUPO_11_ZINKE
+
+
+ #### ***Comenzar a hacer*** : 
+ _Ir como grupo a la clase de apoyo para pedirle ayuda a Nath sobre el código que necesitamos solucionar (o en caso de no poder en ese horario escribirle a los profes en otro horario)_
+
+
+***Hacer más***: _más reuniones colaborativas organizando nuestros tiempos, si nos sentimos estancados avisarle al grupo_
+
+#### ***Continuar haciendo***: 
+ _hacer más dailys (mínimo 3 por semana)_ 
+
+#### ***Hacer menos***: 
+ _Usar menos el grupo de whatsap donde NO están los profesores, y usar mas el que están los profes y  no Faltar a las dailys_
+
+#### ***Dejar de hacer***:
+  _Dejar la vergüenza y el orgullo y pedirle ayuda a los profesores en caso de sentirnos abrumados o estancarse_
+🌟 
+
+#### 🌟 ***Continuar haciendo***: 
+_Dailys diarias obligatorias (en caso de que alguno no pueda en el horario de las 18:30, avisar con tiempo y cambiar el horario de la daily a uno que podamos los 5) y Seguir bien comunicados por Whatsapp_
+
+#### ***Hacer más***:
+  _Comunicarnos con nuestros compañeros que tengan tareas similares para compartir ideas y/o códigos, ayudar mas a nuestros compañeros_
+#### ***Dejar de hacer***:
+ _Procrastinar_ 
+_Al que cree una nueva tabla, tendra tabla_
+
 
 ### ---------------------------------------------------
 # SPRINT SEIS
