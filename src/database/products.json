@@ -17,7 +17,10 @@
          1,
          5
       ],
-      "colors": [],
+      "colors": [
+         1,
+         2
+      ],
       "price": 8000,
       "new": false,
       "sale": false,
@@ -41,7 +44,10 @@
          1,
          5
       ],
-      "colors": [],
+      "colors": [
+         1,
+         2
+      ],
       "price": 42000,
       "new": false,
       "sale": false,
@@ -74,7 +80,11 @@
    },
    {
       "id": 4,
-      "image": [],
+      "image": [
+         "image-1710444393328.jpg",
+         "image-1710444393329.png",
+         "image-1710444393769.png"
+      ],
       "name": "Remera overzise",
       "description": "Remera oversize super olgada",
       "featuredDescription": "Te sentirás libre con esta prenda super comoda",
@@ -83,7 +93,10 @@
          5,
          3
       ],
-      "colors": [],
+      "colors": [
+         1,
+         2
+      ],
       "price": 17000,
       "new": false,
       "sale": false,
@@ -105,7 +118,9 @@
          2,
          1
       ],
-      "colors": [],
+      "colors": [
+         1
+      ],
       "price": 13500,
       "new": false,
       "sale": false,
@@ -179,7 +194,9 @@
          2,
          1
       ],
-      "colors": [],
+      "colors": [
+         1
+      ],
       "price": 22000,
       "new": false,
       "sale": false,

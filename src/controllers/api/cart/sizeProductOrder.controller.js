@@ -64,7 +64,11 @@ module.exports = async (req, res) => {
             // return res.json(idSizeConparation)
             const { id } = req.params
 
-            const recond = await db.Orders_Products.findOne({
+            const recond = await db.Orders_Products.update(
+                {
+                    id_size: parseIdSize
+                },
+                {
                 where: {
                     [Op.and]: [
                         {
@@ -79,8 +83,8 @@ module.exports = async (req, res) => {
             // return res.json(recond)
 
 
-            recond.id_size = parseIdSize
-            await recond.save();
+            // recond.id_size = parseIdSize
+            // await recond.save();
 
             res.status(200).json({
                 ok: true,

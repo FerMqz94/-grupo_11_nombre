@@ -10,6 +10,7 @@ module.exports = async (req, res) => {
         if (!idColor || idColor <= 0 || !id_product || id_product <= 0) throw new Error("el id no fue recivido")
         let [orders, isCreate] = await getOrder(req);
 
+        // return res.json(orders)
         // no eliminar!!!!
         const sizes_product_select = await orders.reload({
             include: [
@@ -31,7 +32,8 @@ module.exports = async (req, res) => {
         const product = orders.products.find(product => product.id === parseInt(id_product));
         const productColors = product ? product.productColors.map(color => ({ id_color: color.id_color })) : [];
 
-        // return res.json(productColors)
+        // return res.json(product)
+        // console.log
         
 
         const color1 = productColors.length > 0 ? productColors[0] : -1;
@@ -41,7 +43,7 @@ module.exports = async (req, res) => {
         const color5 = productColors.length > 4 ? productColors[4] : -1;
 
 
-        // return res.json(color1)
+        // return res.json(idColor)
 
 
 
@@ -65,7 +67,11 @@ module.exports = async (req, res) => {
             // return res.json(idSizeConparation)
             const { id } = req.params
 
-            const recond = await db.Orders_Products.findOne({
+            const recond = await db.Orders_Products.update(
+                {
+                    id_color: parseIdColor
+                },
+                {
                 where: {
                     [Op.and]: [
                         {
@@ -79,13 +85,21 @@ module.exports = async (req, res) => {
             })
             // return res.json(recond)
 
+            console.log()
+            console.log(id)
 
-            recond.id_color = parseIdColor
-            await recond.save();
+            console.log(orders.id)
+
+            // recond.id_color = parseIdColor
+
+       console.log(recond.id_color)     
+            // await recond.save();
+
+
 
             res.status(200).json({
                 ok: true,
-                msg: "color seleccionado con existo"
+                msg: "color seleccionado con exito"
             })
         } else {
             return res.json("el producto no tiene esa color")

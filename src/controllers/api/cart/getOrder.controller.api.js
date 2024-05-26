@@ -14,13 +14,13 @@ module.exports = async (req, res) => {
                     {
                         association: "products",
                  
-                        include: [{
-                            association: "images",
-                            attributes: {
-                                include:
-                                    [[literal(`CONCAT('${getUrlOrigin(req)}/api/producto-detalle/', file)`), "file",]],
-                            },
-                        }],
+                        // include: [{
+                        //     association: "images",
+                        //     attributes: {
+                        //         include:
+                        //             [[literal(`CONCAT('${getUrlOrigin(req)}/api/producto-detalle/', +)`), "+",]],
+                        //     },
+                        // }],
                         through: {
                             attributes: ["quantity", "id_color", "id_size"]
                         },
