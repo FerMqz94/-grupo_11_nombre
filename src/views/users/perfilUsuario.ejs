@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {view : "register" }) %>
+<%- include("../partials/head", {view : "perfil-usuario" }) %>
 
     <body>
         <%- include("../partials/header", {perfil: "black" ,registro: false,ingreso: false}) %>
@@ -13,23 +13,25 @@
                 <!---------------REGISTRO MEDIANTE FORMULARIOS--------------------->
 
                 <section class="section-inputs-registro">
-                    <h3 class="titulo-registro-inputs">Perfil de <%= user?.name%></h3>
-                    <form class="form-inputs-registro" action="/users/perfil-usuario/<%= user.id %>?_method=PUT" method="post">
+                    <h3 class="titulo-registro-inputs">Perfil de <%= user?.name%>
+                    </h3>
+                    <form class="form-inputs-registro" action="/users/perfil-usuario/<%= user.id %>?_method=PUT"
+                        method="post" id="user-form">
 
                         <!--------NOMBRE Y APELLIDO----------->
 
                         <div class="nombreApellidoRegister">
                             <label for="nombreApellido"></label>
-                            <input type="text" id="nombreApellido" name="name" class="nombreApellido" value="<%= user?.name%>"
-                                placeholder="Nombre y apellido">
-                           <% if (locals.errors) { %>
-                                <div class="form-text fs-5 text-danger">
-                                    <%= errors?.name?.msg %>
-                                </div>
+                            <input type="text" id="nombreApellido" name="name" class="nombreApellido"
+                                value="<%= user?.name%>" placeholder="Nombre y apellido">
+                            <% if (locals.errors) { %>
                                 <% } else if (!locals.errors) { %>
-                                    
                                     <% } %>
-                                       
+                                        <div class="form-text fs-5 text-danger error-name">
+                                            <%= errors?.name?.msg %>
+                                        </div>
+                                        <!-- <p class="error-name"></p> -->
+
 
                         </div>
 
@@ -37,33 +39,33 @@
 
                         <div class="nombreDelaCuentaRegister">
                             <label for="nombreDeCuenta"></label>
-                            <input type="text" id="nombreDeCuenta" value="<%= user?.username %>" name="username" class="nombreDeCuenta" 
-                                placeholder="Nombre de usuari@...">
-                         <% if (!locals.errors) { %>
-                             
-                                <% } else { %> 
-                                    <div class="form-text fs-5 text-danger">
+                            <input type="text" id="nombreDeCuenta" value="<%= user?.username %>" name="username"
+                                class="nombreDeCuenta" placeholder="Nombre de usuari@...">
+                            <% if (!locals.errors) { %>
+                                <% } else { %>
+                                    <% } %>
+                                        <div class="form-text fs-5 text-danger error-username"">
                                         <%= errors?.surname?.msg %>
                                     </div>
-                                    <% } %>
-                        </div>
+                                    <!-- <p class=" error-username">
+                                            </p> -->
+                                        </div>
 
-                        <!-------EMAIL DE REGISTRO------->
+                                        <!-------EMAIL DE REGISTRO------->
 
-                        <div class="emailregistro">
-                            <label for="email"></label>
-                            <input type="email" id="email" value="<%= user?.email%>" name="email" class="email"
-                                placeholder="Dirección de correo electrónico">
+                                        <div class="emailregistro">
+                                            <label for="email"></label>
+                                            <input type="email" id="email" value="<%= user?.email%>" name="email"
+                                                class="email" placeholder="Dirección de correo electrónico">
 
-                           <% if (!locals.errors) { %>
-                                
-                                
-                                <% } else { %>  
-                                    <div class="form-text fs-5 text-danger">
-                                        <%= errors?.email?.msg %>
-                                    </div>
-                                    <% } %>
-                        </div>
+                                            <% if (!locals.errors) { %>
+                                                <% } else { %>
+                                                    <% } %>
+                                                        <div class="form-text fs-5 text-danger error-email">
+                                                            <%= errors?.email?.msg %>
+                                                        </div>
+                                                        <!-- <p class="error-email"></p> -->
+                                        </div>
                         </div>
 
                         <!---CONTRASEÑA-->
@@ -72,13 +74,14 @@
                             <label for="contrasenia"></label>
                             <input type="password" id="contrasenia" name="password" class="contrasenia"
                                 placeholder="Nueva contraseña">
-                                <% if (!locals.errors) { %>
-                                    
-                                    <% } else { %>
-                                        <div class="form-text fs-5 text-danger">
+                            <% if (!locals.errors) { %>
+
+                                <% } else { %>
+                                    <% } %>
+                                        <div class="form-text fs-5 text-danger error-password">
                                             <%= errors?.password?.msg %>
                                         </div>
-                                        <% } %>
+                                        <!-- <p class="error-password"></p> -->
                         </div>
 
                         <!---CONFIRMACIÓN CONTRASEÑA-->
@@ -87,17 +90,18 @@
                             <label for="contraseniaConfir"></label>
                             <input type="password" id="contraseniaConfir" name="passwordConfirm"
                                 class="contraseniaConfir" placeholder="Confirmar nueva contraseña">
-                                <% if (!locals.errors) { %>
-                                    
-                            <% } else { %>
-                                <div class="form-text fs-5 text-danger">
-                                    <%= errors?.passwordConfirm?.msg %>
-                                </div>
-                                <% } %>
-                              
+                            <% if (!locals.errors) { %>
+                                <% } else { %>
+                                    <% } %>
+                                        <div class="form-text fs-5 text-danger error-passwordConfirm">
+                                            <%= errors?.passwordConfirm?.msg %>
+                                        </div>
+                                        <!-- <p class="error-passwordConfirm"></p> -->
+
+
                         </div>
 
-                        
+
 
 
                         <!---BOTÓN ENVIAR-->
@@ -107,8 +111,8 @@
                         </div>
                     </form>
                     <form action="/users/eliminar-usuario/<%= user.id %>" method="post" class="modal-footer">
-                            <button type="submit" class="btn btn-danger btn-danger-custom">Confirmar</button>
-                        </form>
+                        <button type="submit" class="btn btn-danger btn-danger-custom">Confirmar</button>
+                    </form>
                 </section>
 
 
@@ -128,5 +132,6 @@
 
 
     </body>
+    <script src="/js/functions/validationUpdateUser.js"></script>
 
 </html>

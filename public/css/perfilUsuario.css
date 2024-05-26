@@ -58,15 +58,11 @@ main.perfil-usuario {
     div.nombreApellidoRegister
     input.nombreApellido {
     width: 280px;
-  
     height: 35px;
-  
     border: 1.8px solid var(--gris-claro);
-  
     border-radius: 5px;
-  
+    px; */
     display: block;
-  
     padding: 10px;
   }
   
@@ -176,7 +172,7 @@ main.perfil-usuario {
     input.email {
     width: 280px;
     height: 35px;
-    border: 1.8px solid var(--gris-claro);
+    border: 1.8px solid #b9b9b9;
     border-radius: 5px;
     display: block;
     padding: 10px;
@@ -233,7 +229,7 @@ main.perfil-usuario {
     input.contrasenia {
     width: 280px;
     height: 35px;
-    border: 1.8px solid var(--gris-claro);
+    border: 1.8px solid #b8b8b8;
     border-radius: 5px;
     /* display: block; */
     padding: 10px;
