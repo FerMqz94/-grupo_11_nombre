@@ -96,4 +96,5 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector(".err-form-general").innerHTML = "Debes solucionar los errores marcados";
         }
     });
+    // No toma la validación, error a corregir
 });
