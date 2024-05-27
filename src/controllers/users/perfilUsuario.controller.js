@@ -12,10 +12,11 @@ const db = require('../../db/models');
 
 module.exports = (req, res) => {
   const { id } = req.params
+  let errors = null
 
   db.Users.findByPk(req.params.id)
     .then(user => {
-      res.render("./users/perfilUsuario", { user })
+      res.render("./users/perfilUsuario", { user, errors })
     })
 
 }

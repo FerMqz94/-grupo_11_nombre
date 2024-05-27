@@ -19,10 +19,12 @@
                         <div class="mb-3">
                             <label for="nombreProducto" class="form-label">Nombre:</label>
                             <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del producto" name="name" value="<%= product.name %>">
+                            <p class="error-name text-danger"></p>
                         </div>
                         <div class="mb-3">
                             <label for="precioProducto" class="form-label">Precio:</label>
                             <input type="text" class="form-control" id="precio-producto" placeholder="Precio del producto" name="price" value="<%= product.price %>">
+                            <p class="error-price text-danger"></p>
                         </div>
                         <!-- Categorías -->
                         <div class="form-floating">
@@ -38,10 +40,12 @@
                         <label for="descripcionProducto">Descripción:</label>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Describe el producto" id="descripcion-producto" style="height: 100px" name="description"><%= product.description %></textarea>
+                            <p class="error-description text-danger"></p>
                         </div>
                         <label for="descripcionProducto">Descripción destacada:</label>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Describe el producto" id="desc-destacada" name="featuredDescription"><%= product.featuredDescription %></textarea>
+                            <p class="error-featuredDescription text-danger"></p>
                         </div>
                         <!-- Talles -->
                         <div class="talles-check">
@@ -125,18 +129,21 @@
                                     <li><%= image.name %></li>
                                 <% }) %>
                             </ul>
-                            <p class="text-danger col-12">
-                                <%= locals.errors?.image?.msg %>
-                            </p>
+                            <p class="error-imgs text-danger"></p>
+                            <!-- <p class="text-danger col-12">
+                                <%= /* locals.errors?.image?.msg */%>
+                            </p> -->
                         </div>
 
                         <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
                             <button type="submit" class="button-submit-crear-editar my-3">Enviar cambios</button>
                             <button class="button-submit-crear-editar my-3 mx-5"><a href="/admin/productos">Cancelar</a></button>
+                            <div class="err-form-general"></div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
+    <script src="../../../public/js/functions/validationEditProduct.js"></script>
 </body>

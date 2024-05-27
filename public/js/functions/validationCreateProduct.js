@@ -5,7 +5,7 @@ const inputDescription = document.querySelector("[name='description']");
 const inputFeaturedDescription = document.querySelector("[name='featuredDescription']");
 
 // TALLES
-// const inputSize = document.querySelector("[name='talle']");
+const inputSize = document.querySelector("[name='talle']");
 
 // COLORES
 // const inputColors = document.querySelector("[]");
@@ -13,8 +13,6 @@ const inputFeaturedDescription = document.querySelector("[name='featuredDescript
 const inputAveriable = document.querySelector("[name='available']");
 const inputImage = document.querySelector("[name='image']");
 const exRegAlfanumeric = /^[a-zA-Z0-9\s]*$/;
-
-
 
 window.addEventListener('load', function(){
     let existError = true;
@@ -32,27 +30,25 @@ window.addEventListener('load', function(){
         existError = false;
       };
 
-
+///////////////////////////////////////////////////////////////
       /* VALIDATION INPUT NAME */
-      const errName = document.querySelector(".error-name");
-      inputName.addEventListener("blur", function () {
-        const value = this.value.trim();
-
-        switch (true) {
-            case !value.length:
-                statusInvalid(errName, "El nombre es requerido", this);
-                break;  
-            case !exRegAlfanumeric.test(value):
-                statusInvalid(errName, "El nombre debe ser alfanumérico", this);
-                break;
-            case value.length < 5 || value.length > 100:
-                statusInvalid(errTitle,"El nombre debe tener un mínimo de 5 caracteres", this);
-                break;
-
-            default:
-                statusValid(errName, this);
-                break;
-        }
+  const errName = document.querySelector(".error-name");
+  inputName.addEventListener("blur", function () {
+    const value = this.value.trim();
+    switch (true) {
+        case !value.length:
+            statusInvalid(errName, "El nombre es requerido", this);
+            break;  
+        case !exRegAlfanumeric.test(value):
+            statusInvalid(errName, "El nombre debe ser alfanumérico", this);
+            break;
+        case value.length < 5 || value.length > 100:
+            statusInvalid(errTitle,"El nombre debe tener un mínimo de 5 caracteres", this);
+            break;
+        default:
+            statusValid(errName, this);
+            break;
+    }
     });
 
     inputName.addEventListener("focus", function () {
@@ -62,7 +58,7 @@ window.addEventListener('load', function(){
     });
     /* END VALIDATION INPUT NAME */
 
-
+///////////////////////////////////////////////////////////////
     /* VALIDATION INPUT PRICE */
 
     const errPrice = document.querySelector(".error-price");
@@ -103,7 +99,7 @@ window.addEventListener('load', function(){
     /* END VALIDATION INPUT PRICE */
 
 
-
+///////////////////////////////////////////////////////////////
     /* VALIDATION INPUT CATEGORY */
     inputCategory.addEventListener("blur", function () {
     const errCategory = document.querySelector(".error-category");
@@ -123,7 +119,7 @@ window.addEventListener('load', function(){
 
 
 
-
+///////////////////////////////////////////////////////////////
      /* VALIDATION INPUT DESCRIPTION */
     const errDescription = document.querySelector(".error-description");
     inputDescription.addEventListener("blur", function () {
@@ -168,7 +164,7 @@ window.addEventListener('load', function(){
 
 
         
-
+///////////////////////////////////////////////////////////////
        /* VALIDATION INPUT DESCRIPTION DESTACADA */
        const errFeaturedDescription = document.querySelector(".error-featuredDescription");
        inputFeaturedDescription.addEventListener("blur", function () {
@@ -187,9 +183,9 @@ window.addEventListener('load', function(){
            existError = true;
            break;
    
-         case value.length < 5 || value.length > 500:
+         case value.length < 5 || value.length > 100:
            errFeaturedDescription.innerHTML =
-             "La descripción destacada debe tener un mínimo de 5 y un máximo de 500 caracteres";
+             "La descripción destacada debe tener un mínimo de 5 y un máximo de 100 caracteres";
            this.classList.add("is-invalid");
            existError = true;
            break;
@@ -211,48 +207,140 @@ window.addEventListener('load', function(){
      /* END VALIDATION INPUT DESCRIPTION DESTACADA */
 
 
+///////////////////////////////////////////////////////////////
+/* VALIDATION INPUT SIZES */
+const inputSizes = document.querySelectorAll("[name^='talle']");
+
+inputSizes.forEach(inputSize => {
+    inputSize.addEventListener('change', function() {
+        const checkedSizes = Array.from(inputSizes).filter(size => size.checked);
+        const errSize = document.querySelector('.error-sizes');
+
+        if (checkedSizes.length === 0) {
+            statusInvalid(errSize, 'Debe seleccionar al menos un talle', this);
+        } else {
+            statusValid(errSize, this);
+        }
+    });
+});
+
+// /* END VALIDATION INPUT SIZES */
+
+///////////////////////////////////////////////////////////////
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+/* VALIDATION INPUT COLORS */
+
+/* END VALIDATION INPUT COLORS */
+
+
+
+///////////////////////////////////////////////////////////////
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+/* VALIDATION INPUT AVAILABLE */
+
+/* END VALIDATION INPUT AVAILABLE */
+
+
+///////////////////////////////////////////////////////////////
+/* VALIDATION INPUT IMAGES */
+const errImgs = document.querySelector('.error-imgs');
+inputImage.addEventListener("change", function () {
+    const regExpFiles = /\.(png|jpg|jpeg|webp|gif)$/i;
+    const files = Array.from(this.files);
+
+    switch (true) {
+        case !files.length:
+            statusInvalid(errImgs, "Debe subir al menos una imagen", this);
+            break;
+        case files.length > 3:
+            statusInvalid(errImgs, "No puedes ingresar más de 3 archivos", this);
+            break;
+        case files.some(file => !regExpFiles.test(file.name)):
+            statusInvalid(errImgs, "Formato de archivo no válido. Solo se permiten: .png, .jpg, .jpeg, .webp, .gif", this);
+            break;
+        default:
+            statusValid(errImgs, this);
+            break;
+    }
+});
+/* END VALIDATION INPUT IMAGES */
+
+
+ /* FORMULARIO */
+ const formCreate = document.querySelector("#form-create-product");
+ const errFormGeneral = document.querySelector(".err-form-general");
+ const fieldsRequired = document.querySelectorAll(".field-required");
+ formCreate.addEventListener("submit", function (event) {
+   const isName = inputName.value?.trim();
+   const isPrice = inputPrice.value?.trim();
+   const isCategory = inputCategory.options[inputCategory.selectedIndex].value?.trim();
+   const isDescription = inputDescription.value?.trim();
+   const isFeaturedDescription = inputFeaturedDescription.value?.trim();
+  //  const isSize = inputSize
+  //  const isColors = inputColors
+   const isImage = inputImage.files.length;
+   event.preventDefault();
+
+   switch (true) {
+     case !isName:
+     case !isPrice:
+     case !isCategory:
+     case !isDescription:
+     case !isFeaturedDescription:
+    //  case !isSize:
+    //  case !isColors:
+     case !isImage:
+       existError = true;
+       errFormGeneral.innerHTML = "Todos los campos son requeridos";
+       errFormGeneral.classList.add("alert", "alert-danger");
+       fieldsRequired.forEach((field) => (field.innerHTML = "*"));
+       break;
+   }
+
+   if (!existError) {
+     this.submit();
+   }
+ });
+});
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
 

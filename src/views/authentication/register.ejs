@@ -14,14 +14,15 @@
 
                 <section class="section-inputs-registro">
                     <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
-                    <form class="form-inputs-registro" action="/autenticacion/registrar" method="POST">
+                    <form class="form-inputs-registro validation-form-register" action="/autenticacion/registrar" method="POST">
 
                         <!--------NOMBRE Y APELLIDO----------->
 
                         <div class="nombreApellidoRegister">
-                            <label for="nombreApellido"></label>
-                            <input type="text" id="nombreApellido" name="name" class="nombreApellido" value="<%= locals.old && old.name ? old.name: null %>"
-                                placeholder="Nombre y apellido">
+                            <label for="nombreApellido" class=""></label>
+                            <span class="error-name"></span>
+                            <input type="text" id="nombreApellido" name="name" class="nombreApellido input-invalid field-required" value="<%= locals.old && old.name ? old.name: null %>"
+                                placeholder="Nombre y apellido"><i class="fa-solid fa-plant-wilt" id="icon-name-error"></i><i class="fa-solid fa-seedling" id="icon-name-valid"></i>
                             <% if (locals.errors) { %>
                                 <div class="form-text fs-5 text-danger">
                                     <%= errors?.name?.msg %>
@@ -31,8 +32,7 @@
 
                                     <!-- <span class="text-danger">Este campo es obligatorio</span> -->
 
-                                    <% } %>
-                                       
+                                    <% } %>      
 
                         </div>
 
@@ -40,8 +40,9 @@
 
                         <div class="nombreDelaCuentaRegister">
                             <label for="nombreDeCuenta"></label>
-                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta" value="<%= locals.old && old.username ? old.username: null %>"
-                                placeholder="Nombre de usuari@...">
+                            <span class="error-username"></span>
+                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta field-required" value="<%= locals.old && old.username ? old.username: null %>"
+                                placeholder="Nombre de usuari@..."><i class="fa-solid fa-plant-wilt" id="icon-username-error"></i><i class="fa-solid fa-seedling" id="icon-username-valid"></i>
                             <% if (!locals.errors) { %>
                                 <!-- <span class="text-danger">Este campo es obligatorio</span> -->
                                 <span class="text-danger">&nbsp;</span>
@@ -56,8 +57,9 @@
 
                         <div class="emailregistro">
                             <label for="email"></label>
-                            <input type="email" id="email"  name="email" class="email" value="<%= locals.old && old.email ? old.email: null %>"
-                                placeholder="Dirección de correo electrónico">
+                            <span class="error-email"></span>
+                            <input type="email" id="email"  name="email" class="email field-required" value="<%= locals.old && old.email ? old.email: null %>"
+                                placeholder="Dirección de correo electrónico"><i class="fa-solid fa-plant-wilt" id="icon-email-error"></i><i class="fa-solid fa-seedling" id="icon-email-valid"></i>
 
                             <% if (!locals.errors) { %>
                                 
@@ -83,8 +85,9 @@
 
                         <div class="contraseniaRegister">
                             <label for="contrasenia"></label>
-                            <input type="password" id="contrasenia" name="password" class="contrasenia" value="<%= locals.old && old.password ? old.password: null %>"
-                                placeholder="Contraseña">
+                            <span class="error-password"></span>
+                            <input type="password" id="contrasenia" name="password" class="contrasenia field-required" value="<%= locals.old && old.password ? old.password: null %>"
+                                placeholder="Contraseña"><i class="fa-solid fa-plant-wilt" id="icon-password-error"></i><i class="fa-solid fa-seedling" id="icon-password-valid"></i>
                                 <% if (!locals.errors) { %>
                                     <span class="text-danger">&nbsp;</span>
                                     <!-- <span class="text-danger">Este campo es obligatorio</span> -->
@@ -99,8 +102,9 @@
 
                         <div class="contraseniaConfirRegister">
                             <label for="contraseniaConfir"></label>
+                            <span class="error-passwordConfirm"></span>
                             <input type="password" id="contraseniaConfir" name="passwordConfirm" value="<%= locals.old && old.passwordConfirm ? old.passwordConfirm: null %>"
-                                class="contraseniaConfir" placeholder="Confirmar contraseña">
+                                class="contraseniaConfir field-required" placeholder="Confirmar contraseña"><i class="fa-solid fa-plant-wilt" id="icon-confirPass-error"></i><i class="fa-solid fa-seedling" id="icon-confirPass-valid"></i>
                                 <% if (!locals.errors) { %>
                                     <span class="text-danger">&nbsp;</span>
                             <!-- <span class="text-danger">Este campo es obligatorio</span> -->
@@ -112,12 +116,13 @@
                               
                         </div>
 
-
+                        <h3 style="font-size: var(--letra-favMobile);" class="titulo-registro-inputs invalid-form"></h3>
 
                         <!---BOTÓN ENVIAR-->
                         <div class="contenedor-boton-register">
                             <button type="submit" class="boton-register">ENVIAR</button>
                         </div>
+                        
                     </form>
                 </section>
 
@@ -138,7 +143,7 @@
 
             <%- include("../partials/footer") %>
 
-
+            <script src="/js/functions/validationRegister.js"></script>      
     </body>
 
 </html>
