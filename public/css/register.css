@@ -25,12 +25,15 @@ main.registro section.section-inputs-registro h3.titulo-registro-inputs {
 
 }
 
+
 /*------------------NOMBRE Y APELLIDO----------------------------*/
+
 
 main.registro
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreApellidoRegister {
+  position: relative; /*nuevo*/
   display: flex;
   margin: 20px;
   flex-flow: column;
@@ -38,15 +41,24 @@ main.registro
 }
 
 main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
   div.nombreApellidoRegister
   span.text-danger {
-  /* font-size: var(--letra-mas-pequeña); */
+    font-size: var(--letra-mas-pequeña);
+  }
 
-  left: 10%;
 
-  bottom: 0;
+/*div {
+  background-color: #b4dad9;;
+}*/
+
+main.registro
+  div.nombreApellidoRegister
+  span.error-name {
+  position: absolute;/*nuevo*/
+  font-size: var(--letra-bastante-pequeña); /*nuevo*/
+  color: #dd957e;/*nuevo*/
+ /* left: 185px;*/
+  bottom: 65px;/*nuevo*/
 }
 
 main.registro
@@ -71,6 +83,7 @@ main.registro
   padding-left: 5px; */
 }
 
+
 main.registro
   section.section-inputs-registro
   form.form-inputs-registro
@@ -81,6 +94,9 @@ main.registro
   box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
 }
 
+
+
+
 /*--------------------NOMBRE DE USUARIO---------------------------*/
 
 main.registro
@@ -88,20 +104,27 @@ main.registro
   form.form-inputs-registro
   div.nombreDelaCuentaRegister {
   display: flex;
-
   margin: 20px 0;
-
   flex-flow: column;
-
   align-items: center;
+  position: relative; /*nuevo*/
 }
 
 main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
   div.nombreDelaCuentaRegister
   span.text-danger {
-  font-size: var(--letra-mas-pequeña);
+    font-size: var(--letra-mas-pequeña);
+  }
+
+
+main.registro
+  div.nombreDelaCuentaRegister
+  span.error-username {
+    position: absolute;/*nuevo*/
+    font-size: var(--letra-bastante-pequeña); /*nuevo*/
+    color: #dd957e;/*nuevo*/
+   /* left: 185px;*/
+    bottom: 70px;/*nuevo*/
 }
 
 main.registro
@@ -143,22 +166,29 @@ main.registro
   form.form-inputs-registro
   div.emailregistro {
   /* margin: 0 0 20px 0; */
-
   display: flex;
-
   margin: 20px 0;
-
   flex-flow: column;
-
   align-items: center;
+  position: relative;/*nuevo*/
 }
 
 main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
   div.emailregistro
   span.text-danger {
   font-size: var(--letra-mas-pequeña);
+}
+
+
+
+main.registro
+  div.emailregistro
+  span.error-email {
+    position: absolute;/*nuevo*/
+    font-size: var(--letra-bastante-pequeña); /*nuevo*/
+    color: #dd957e;/*nuevo*/
+   /* left: 185px;*/
+    bottom: 70px;/*nuevo*/
 }
 
 main.registro
@@ -200,14 +230,11 @@ main.registro
   form.form-inputs-registro
   div.contraseniaRegister {
   /* margin: 0 0 20px 0; */
-
   display: flex;
-
   /* margin: 20px 0; */
-
   flex-flow: column;
-
   align-items: center;
+  position: relative; /*nuevo*/
 }
 
 main.registro
@@ -216,6 +243,16 @@ main.registro
   div.contraseniaRegister
   span.text-danger {
   font-size: var(--letra-mas-pequeña);
+}
+
+main.registro
+  div.contraseniaRegister
+  span.error-password {
+    position: absolute;/*nuevo*/
+    font-size: var(--letra-bastante-pequeña); /*nuevo*/
+    color: #dd957e;/*nuevo*/
+   /* left: 185px;*/
+    bottom: 70px;/*nuevo*/
 }
 
 main.registro
@@ -257,14 +294,11 @@ main.registro
   form.form-inputs-registro
   div.contraseniaConfirRegister {
   /* margin: 0 0 20px 0; */
-
   display: flex;
-
   margin: 20px 0;
-
   flex-flow: column;
-
   align-items: center;
+  position: relative; /*nuevo*/
 }
 
 main.registro
@@ -274,6 +308,17 @@ main.registro
   span.text-danger {
   font-size: var(--letra-mas-pequeña);
 }
+
+main.registro
+  div.contraseniaConfirRegister
+  span.error-passwordConfirm {
+    position: absolute;/*nuevo*/
+    font-size: var(--letra-bastante-pequeña); /*nuevo*/
+    color: #dd957e;/*nuevo*/
+   /* left: 185px;*/
+    bottom: 70px;/*nuevo*/
+}
+
 
 main.registro
   section.section-inputs-registro
