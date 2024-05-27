@@ -5,10 +5,10 @@ const inputDescription = document.querySelector("[name='description']");
 const inputFeaturedDescription = document.querySelector("[name='featuredDescription']");
 
 // TALLES
-const inputSize = document.querySelector("[name='talle']");
+const inputSizes = document.querySelectorAll("[name^='talle']");
 
 // COLORES
-// const inputColors = document.querySelector("[]");
+const inputColors = document.querySelectorAll("[name^='color']");
 
 const inputAveriable = document.querySelector("[name='available']");
 const inputImage = document.querySelector("[name='image']");
@@ -17,18 +17,20 @@ const exRegAlfanumeric = /^[a-zA-Z0-9\s]*$/;
 window.addEventListener('load', function(){
     let existError = true;
 
-    const statusInvalid = (elementErr, msgErr, elementInput) => {
-        elementErr.innerHTML = msgErr;
-        elementInput.classList.add("is-invalid");
-        existError = true;
-    };
+    const invalid = (eError, msgErr, eInput) => {
+      eError.innerHTML = msgErr;
+      eInput.classList.add("is-invalid");
+      eInput.style.border = "0.1px solid red";
+      existError = true;
+  };
 
-    const statusValid = (elementErr, elementInput) => {
-        elementErr.innerHTML = null;
-        elementInput.classList.add("is-valid");
-        elementInput.classList.remove("is-invalid");
-        existError = false;
-      };
+  const valid = (eError, eInput) => {
+      eError.innerHTML = null;
+      eInput.classList.add("is-valid");
+      eInput.classList.remove("is-invalid");
+      eInput.style.border = "1.5px solid #b8b8b8"
+      existError = false;
+    };
 
 ///////////////////////////////////////////////////////////////
       /* VALIDATION INPUT NAME */
@@ -37,16 +39,16 @@ window.addEventListener('load', function(){
     const value = this.value.trim();
     switch (true) {
         case !value.length:
-            statusInvalid(errName, "El nombre es requerido", this);
+            invalid(errName, "El nombre es requerido", this);
             break;  
         case !exRegAlfanumeric.test(value):
-            statusInvalid(errName, "El nombre debe ser alfanumérico", this);
+            invalid(errName, "El nombre debe ser alfanumérico", this);
             break;
         case value.length < 5 || value.length > 100:
-            statusInvalid(errTitle,"El nombre debe tener un mínimo de 5 caracteres", this);
+            invalid(errTitle,"El nombre debe tener un mínimo de 5 caracteres", this);
             break;
         default:
-            statusValid(errName, this);
+            valid(errName, this);
             break;
     }
     });
@@ -66,26 +68,19 @@ window.addEventListener('load', function(){
       const value = this.value.trim();
       switch (true) {
         case !value.length:
-          statusInvalid(errPrice, "El precio es requerido", this);
+          invalid(errPrice, "El precio es requerido", this);
           break;
   
         case isNaN(value):
-          errPrice.innerHTML = "El precio debe ser numérico";
-          this.classList.add("is-invalid");
-          existError = true;
+          invalid(errPrice, "El precio debe ser numérico", this);
           break;
   
         case value < 0:
-          errPrice.innerHTML = "El precio debe tener un valor positivo";
-          this.classList.add("is-invalid");
-          existError = true;
+          invalid(errPrice, "El precio debe tener un valor positivo", this);
           break;
   
         default:
-          errPrice.innerHTML = null;
-          this.classList.add("is-valid");
-          this.classList.remove("is-invalid");
-          existError = false;
+          valid(errPrice, this);
           break;
       }
     });
@@ -103,16 +98,10 @@ window.addEventListener('load', function(){
     /* VALIDATION INPUT CATEGORY */
     inputCategory.addEventListener("blur", function () {
     const errCategory = document.querySelector(".error-category");
-    if (!this.value || this.value === "Categorías de producto") {
-        errCategory.innerHTML = "La categoría es requerida";
-        this.classList.add("is-invalid");
-        this.classList.remove("is-valid");
-        existError = true;
+    if (!this.value || this.value === "Categorías de producto") {      
+        invalid(errCategory, "La categoría es requerida", this);
     } else {
-        errCategory.innerHTML = null;
-        this.classList.add("is-valid");
-        this.classList.remove("is-invalid");
-        existError = false;
+        valid(errCategory, this);
     }
 });
 /* END VALIDATION INPUT CATEGORY */
@@ -127,29 +116,17 @@ window.addEventListener('load', function(){
 
     switch (true) {
       case !value.length:
-        errDescription.innerHTML = "La descripción es requerida";
-        this.classList.add("is-invalid");
-        existError = true;
+        invalid(errDescription, "La descripción es requerida", this);
         break;
 
       case !exRegAlfanumeric.test(value):
-        errDescription.innerHTML = "La descripción debe ser alfanumérica";
-        this.classList.add("is-invalid");
-        existError = true;
+        invalid(errDescription, "La descripción debe ser alfanumérico", this);
         break;
-
-      case value.length < 30 || value.length > 500:
-        errDescription.innerHTML =
-          "La descripción debe tener un mínimo de 30 y un máximo de 500 caracteres";
-        this.classList.add("is-invalid");
-        existError = true;
+      case value.length < 10 || value.length > 100:
+        invalid(errDescription, "La descripción debe tener un mínimo de 10 y un tamaño de 100 caracteres", this);
         break;
-
       default:
-        errDescription.innerHTML = null;
-        this.classList.add("is-valid");
-        this.classList.remove("is-invalid");
-        existError = false;
+        valid(errDescription, this);
         break;
     }
   });
@@ -172,29 +149,19 @@ window.addEventListener('load', function(){
    
        switch (true) {
          case !value.length:
-           errFeaturedDescription.innerHTML = "La descripción destacada es requerida";
-           this.classList.add("is-invalid");
-           existError = true;
+          invalid(errFeaturedDescription, "La descripción destacada es requerida", this);
            break;
    
          case !exRegAlfanumeric.test(value):
-           errFeaturedDescription.innerHTML = "La descripción destacada debe ser alfanumérica";
-           this.classList.add("is-invalid");
-           existError = true;
+          invalid(errFeaturedDescription, "La descripción destacada debe ser alfanumérico", this);
            break;
    
          case value.length < 5 || value.length > 100:
-           errFeaturedDescription.innerHTML =
-             "La descripción destacada debe tener un mínimo de 5 y un máximo de 100 caracteres";
-           this.classList.add("is-invalid");
-           existError = true;
+          invalid(errFeaturedDescription, "La descripción destacada debe tener un mínimo de 5 y un tamaño de 100 caracteres", this);
            break;
    
          default:
-           errFeaturedDescription.innerHTML = null;
-           this.classList.add("is-valid");
-           this.classList.remove("is-invalid");
-           existError = false;
+           valid(errFeaturedDescription, this);
            break;
        }
      });
@@ -217,64 +184,14 @@ inputSizes.forEach(inputSize => {
         const errSize = document.querySelector('.error-sizes');
 
         if (checkedSizes.length === 0) {
-            statusInvalid(errSize, 'Debe seleccionar al menos un talle', this);
+            invalid(errSize, 'Debe seleccionar al menos un talle', this);
         } else {
-            statusValid(errSize, this);
+            valid(errSize, this);
         }
     });
 });
 
 // /* END VALIDATION INPUT SIZES */
-
-///////////////////////////////////////////////////////////////
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-/* VALIDATION INPUT COLORS */
-
-/* END VALIDATION INPUT COLORS */
-
-
-
-///////////////////////////////////////////////////////////////
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-/* VALIDATION INPUT AVAILABLE */
-
-/* END VALIDATION INPUT AVAILABLE */
 
 
 ///////////////////////////////////////////////////////////////
@@ -286,16 +203,16 @@ inputImage.addEventListener("change", function () {
 
     switch (true) {
         case !files.length:
-            statusInvalid(errImgs, "Debe subir al menos una imagen", this);
+            invalid(errImgs, "Debe subir al menos una imagen", this);
             break;
         case files.length > 3:
-            statusInvalid(errImgs, "No puedes ingresar más de 3 archivos", this);
+            invalid(errImgs, "No puedes ingresar más de 3 archivos", this);
             break;
         case files.some(file => !regExpFiles.test(file.name)):
-            statusInvalid(errImgs, "Formato de archivo no válido. Solo se permiten: .png, .jpg, .jpeg, .webp, .gif", this);
+            invalid(errImgs, "Formato de archivo no válido. Solo se permiten: .png, .jpg, .jpeg, .webp, .gif", this);
             break;
         default:
-            statusValid(errImgs, this);
+            valid(errImgs, this);
             break;
     }
 });
@@ -312,8 +229,8 @@ inputImage.addEventListener("change", function () {
    const isCategory = inputCategory.options[inputCategory.selectedIndex].value?.trim();
    const isDescription = inputDescription.value?.trim();
    const isFeaturedDescription = inputFeaturedDescription.value?.trim();
-  //  const isSize = inputSize
-  //  const isColors = inputColors
+   const isSize = inputSize
+   const isColors = inputColors
    const isImage = inputImage.files.length;
    event.preventDefault();
 
@@ -323,11 +240,11 @@ inputImage.addEventListener("change", function () {
      case !isCategory:
      case !isDescription:
      case !isFeaturedDescription:
-    //  case !isSize:
+     case !isSize:
     //  case !isColors:
      case !isImage:
        existError = true;
-       errFormGeneral.innerHTML = "Todos los campos son requeridos";
+       errFormGeneral.innerHTML = "Revisa los campos con errores 💔";
        errFormGeneral.classList.add("alert", "alert-danger");
        fieldsRequired.forEach((field) => (field.innerHTML = "*"));
        break;
@@ -338,6 +255,8 @@ inputImage.addEventListener("change", function () {
    }
  });
 });
+
+
 
 
 
