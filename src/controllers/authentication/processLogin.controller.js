@@ -57,11 +57,11 @@ module.exports = (req, res) => {
       name: user.name,
       surname: user.surname,
       avatar: user.avatar,
-      id_rol: user.id_rol.name,
+      id_rol: user.id_rol,
     };
   
     if(recordame ){
-      res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 });
+      res.cookie("userLogin", req.session.userLogin, { maxAge: 6000 * 30 * 100 });
     } 
     res.redirect("/");
 

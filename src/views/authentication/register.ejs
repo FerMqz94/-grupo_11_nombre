@@ -56,7 +56,9 @@
 
                         <div class="emailregistro">
                             <label for="email"></label>
-                            <span class="error-email"></span>
+                            <span class="error-email">
+                                <%= errors?.email?.msg %>
+                            </span>
                             <input type="email" id="email" name="email" class="email field-required"
                                 value="<%= locals.old && old.email ? old.email: null %>"
                                 placeholder="Dirección de correo electrónico"><i class="fa-solid fa-plant-wilt"
