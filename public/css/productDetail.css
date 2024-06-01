@@ -1153,7 +1153,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.visualizacion-producto div.talles div button {
     width: 35px;
-    height: 150%;
+    height: 5%;
+    margin-top: -4%;
   }
 
   /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
@@ -1208,8 +1209,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-boton-carrito
     button.agregar-carrito {
     margin-top: 35px;
-    width: 91%;
-    height: 45px;
+    width: 89%;
+    height: 54px;
     font-size: var(--letra-grande);
     background-color: var(--verde-azulado-claro);
     color: var(--blanco);
@@ -1275,18 +1276,13 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     form.form-carrito
     input.input-carrito {
     width: 55%;
-
     display: inline-block;
-
-    margin-right: 0;
-
+    margin-left: -2px;
     height: 45px;
-
     border: 2px solid var(--gris-claro);
-
-    padding-left: 3px;
-
+    padding-left: -3px;
     padding-top: 2.5px;
+    margin-bottom: 6%;
   }
 
   main.vista-producto
@@ -1304,11 +1300,12 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     form.form-carrito
     button.boton-calcular {
     border: 2px solid var(--gris-claro);
-    font-size: var(--letra-grande);
-    width: 35%;
+    font-size: var(--letra-mediana);
+    width: 65%;
     display: inline-block;
     height: 45px;
     background-color: var(--blanco);
+    margin-left: -3px;
   }
 
   /*-------CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA----------*/

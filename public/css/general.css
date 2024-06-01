@@ -3,7 +3,6 @@
     --fuente-general: sans-serif;
 
     /* TAMAÑO DE FUENTES */
-
     --letra-grande: 20px;
     --letra-mediana: 16px;
     --letra-pequeña: 15px;
@@ -22,7 +21,7 @@
  
 
 
-    /* COLORES */    
+    /* COLORES */
     --gris-claro: #b8b8b8;
     --verde-azulado: #419197;
     --blanco: #ffffff;
@@ -38,9 +37,6 @@
     --color-facebook: #3b5998;
     --color-google: #ff566b;
     --color-twitter: #1fcdcd;
-    
-
-
 }
 
 
