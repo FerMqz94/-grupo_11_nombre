@@ -7,50 +7,9 @@ window.addEventListener('load', function () {
      const errorPasswor = document.querySelector(".error-password");
 //     // const button = document.querySelector(".contenedor-boton-login")
           const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          const passwordRegex =  /^(?=.*\p{Ll})(?=.*\p{Lu})(?=.*[\d|@#$!%*?&])[\p{L}\d@#$!%*?&]{8,30}$/
+          const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?])[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]{8,16}$/;
         
-// //     function validarEmail(email) {
-// //       const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// //       return regex.test(email);
-// //     }
-// //     function validarPassword(password) {
-// //       const passwordRegex = /^.{8,30}$/;
-// //       return passwordRegex.test(password);
-// //     }
-// //     emailInput.addEventListener("blur",function(){
-// //       const value = emailInput.value.trim();
-// //       if (value.length === 0) {
-// //         errorEmail.textContent = 'El campo email es obligatorio';
-// //         emailInput.classList.add("is-invalid");
-// //         } else if (!validarEmail(value)) {
-// //           errorEmail.textContent = 'El formato del email no es válido';
-// //         } else {
-// //           errorEmail.textContent = '';
-// //         }
-// //       }) 
-// //       inputPassword.addEventListener("blur",function(){
-// //         const value = inputPassword.value.trim();
-// //         if (value === '') {
-// //           errorPasswor.textContent = 'El campo password es obligatorio';
-// //         } else if (!validarPassword(value)) {
-// //           errorPasswor.textContent = 'El minimo caracter es de 8 ';
-// //         } else {
-// //           errorPasswor.textContent = '';
-// //         }
-// //       })
-// //     formulario.addEventListener('submit', (e) => {
-      
-    
-    
-// //     e.preventDefault();
-     
-// //       if (errorEmail.textContent === '' && errorPasswor.textContent === '') {
-        
-// //         formulario.submit();
-// //         return true;
-// //       }
-// //     });
-// // })
+// //   
 
 
   let existError = true;
