@@ -29,7 +29,7 @@ main.registro section.section-inputs-registro h3.titulo-registro-inputs {
 /*------------------NOMBRE Y APELLIDO----------------------------*/
 
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreApellidoRegister {
@@ -40,7 +40,7 @@ main.registro
   align-items: center;
 }
 
-main.registro
+/* main.registro */
   div.nombreApellidoRegister
   span.text-danger {
     font-size: var(--letra-mas-pequeña);
@@ -51,7 +51,7 @@ main.registro
   background-color: #b4dad9;;
 }*/
 
-main.registro
+/* main.registro */
   div.nombreApellidoRegister
   span.error-name {
   position: absolute;/*nuevo*/
@@ -61,7 +61,7 @@ main.registro
   bottom: 65px;/*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreApellidoRegister
@@ -99,7 +99,7 @@ main.registro
 
 /*--------------------NOMBRE DE USUARIO---------------------------*/
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreDelaCuentaRegister {
@@ -110,24 +110,24 @@ main.registro
   position: relative; /*nuevo*/
 }
 
-main.registro
+/* main.registro */
   div.nombreDelaCuentaRegister
   span.text-danger {
     font-size: var(--letra-mas-pequeña);
   }
 
 
-main.registro
+/* main.registro */
   div.nombreDelaCuentaRegister
   span.error-username {
     position: absolute;/*nuevo*/
     font-size: var(--letra-bastante-pequeña); /*nuevo*/
     color: #dd957e;/*nuevo*/
-   /* left: 185px;*/
+    /* left: 185px;*/
     bottom: 70px;/*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreDelaCuentaRegister
@@ -140,7 +140,7 @@ main.registro
     width: 65%;
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.nombreDelaCuentaRegister
@@ -161,7 +161,7 @@ main.registro
 
 /*----------------EMAIL---------------------*/
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.emailregistro {
@@ -181,7 +181,7 @@ main.registro
 
 
 
-main.registro
+/* main.registro */
   div.emailregistro
   span.error-email {
     position: absolute;/*nuevo*/
@@ -191,7 +191,7 @@ main.registro
     bottom: 70px;/*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.emailregistro
@@ -204,7 +204,7 @@ main.registro
     width: 65%;
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.emailregistro
@@ -225,7 +225,7 @@ main.registro
 
 /*--------------CONTRASEÑA---------------------*/
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaRegister {
@@ -237,7 +237,7 @@ main.registro
   position: relative; /*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaRegister
@@ -245,7 +245,7 @@ main.registro
   font-size: var(--letra-mas-pequeña);
 }
 
-main.registro
+/* main.registro */
   div.contraseniaRegister
   span.error-password {
     position: absolute;/*nuevo*/
@@ -255,7 +255,7 @@ main.registro
     bottom: 70px;/*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaRegister
@@ -268,7 +268,7 @@ main.registro
     width: 65%;
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaRegister
@@ -289,7 +289,7 @@ main.registro
 
 /*---------------------------CONFIRMACIÓN DE CONTRASEÑA-------------------------------------*/
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaConfirRegister {
@@ -301,7 +301,7 @@ main.registro
   position: relative; /*nuevo*/
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaConfirRegister
@@ -309,7 +309,7 @@ main.registro
   font-size: var(--letra-mas-pequeña);
 }
 
-main.registro
+/* main.registro */
   div.contraseniaConfirRegister
   span.error-passwordConfirm {
     position: absolute;/*nuevo*/
@@ -320,7 +320,7 @@ main.registro
 }
 
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaConfirRegister
@@ -333,7 +333,7 @@ main.registro
     width: 65%;
 }
 
-main.registro
+/* main.registro */
   section.section-inputs-registro
   form.form-inputs-registro
   div.contraseniaConfirRegister

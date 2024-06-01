@@ -90,7 +90,11 @@ const db = require('../../db/models');
 const fieldNameDefault = body("name")
     .notEmpty()
     .withMessage("Nombre requerido")
-    .bail();
+    .bail()
+    .isLength({ min: 4 })
+    .withMessage("Debe contener al menos 4 caracteres")
+    .isLength({ max: 20 })
+    .withMessage("No puede tener más de 20 caracteres");
 
 const fieldUsernameDefault = body("username")
     .notEmpty()
