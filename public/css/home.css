@@ -180,16 +180,16 @@ justify-content: center;
     display: inline;
     width: 7%;
     position: fixed;
-    right: 50px;
-    bottom: 31px;
+    right: 22px;
+    bottom: 25px;
   }
 
   .home img.logo-flecha {
     display: inline;
     width: 5%;
     position: fixed;
-    left: 50px;
-    bottom: 50px;
+    left: 22px;
+    bottom: 25px;
   }
 
   /* ------------------- General -------------------*/

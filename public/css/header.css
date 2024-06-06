@@ -100,6 +100,7 @@ a {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  /* margin-left: -20px; */
 }
 /* .redirecciones */
  .seleccionar-destino .barra-busqueda-movil{
@@ -310,7 +311,7 @@ display: none;
     margin: 0;
     background-color: white;
     color: #b2b2b2;
-    padding: 5px 5px 5px 8px;
+    padding: 5px 43px 5px 8px;
     border-radius: 33px;
     border: solid 1px #b0a696;
     /* display: flex; */
@@ -337,6 +338,9 @@ display: none;
     border-radius: 50%;
     padding: 7px
   }
+  /* .header-vista-tablet-pc .fa-cart-shopping :hover {
+    color: black;
+  } */
 
   .flecha {
     transform: rotate(340deg);

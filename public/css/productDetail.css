@@ -222,17 +222,13 @@ main.vista-producto
 
 main.vista-producto section.visualizacion-producto div.talles {
   display: flex;
-
-  justify-content: space-between;
-
   margin: 5px 0px 50px 30px;
-
   width: 80%;
 }
 
 main.vista-producto section.visualizacion-producto div.talles div button {
   width: 32px;
-  height: 150%;
+  /* height: 150%; */
   background-color: var(--blanco);
   font-size: var(--letra-mediana);
   color: var(--gris-claro);
@@ -266,9 +262,7 @@ main.vista-producto
 
 main.vista-producto section.visualizacion-producto div.cantidad-carrito {
   margin: 10px 0px 15px 30px;
-
   width: 95%;
-
   position: relative;
 }
 
@@ -1537,7 +1531,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   main.vista-producto div.boton-whatsapp {
     position: fixed;
     right: 50px;
-    bottom: 130px;
+    bottom: 35px;
     animation: emerge 0.8s 1;
     animation-timing-function: ease-out;
   }
