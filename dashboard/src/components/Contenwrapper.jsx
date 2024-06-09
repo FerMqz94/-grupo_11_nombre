@@ -62,7 +62,7 @@ function ContentWrapper() {
  
 					<div className="border p-1 m-3">
 
-          <table class="table table-bordered m-4">
+          <table className="table table-bordered m-4">
             <TableHead items={dataTableHead} />
 
             <tbody>

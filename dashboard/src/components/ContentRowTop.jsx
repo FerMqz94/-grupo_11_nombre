@@ -2,7 +2,7 @@
 import React from "react";
 import imagenFondo from "../assets/images/mandalorian.jpg";
 import { ContentDataMovie } from "./ContentDataMovie";
-import Detail from "./Detail";
+
 
 function ContentRowTop({ data }) {
   return (
@@ -53,11 +53,19 @@ function ContentRowTop({ data }) {
                   veritatis iure voluptate reiciendis a magnam, vitae, aperiam
                   voluptatum non corporis quae dolorem culpa citationem ratione
                   aperiam voluptatum non corporis ratione aperiam voluptatum
-                  quae dolorem culpa ratione aperiam voluptatum?
-                </p>
-<Detail/>
-           
-           
+                  quae dolorem culpa ratione aperiam voluptatum?</p>
+                  <div>
+       
+         
+      <a
+                  className="btn btn-danger"
+                  target="_blank"
+                  rel="nofollow"
+                  href="/"
+                >
+                  View movie detail
+                </a>
+   </div> 
               </div>
             </div>
           </div>
