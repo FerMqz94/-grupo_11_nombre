@@ -11,7 +11,7 @@ router.post("/iniciar", loginValidation, processLogin);
 
 //  /autenticacion/registrar
 router.get("/registrar", register);
-router.post("/registrar",  processRegister); //registerValidation,
+router.post("/registrar",registerValidation,  processRegister); //
 
 router.get("/cerrar-sesion", logout)
 

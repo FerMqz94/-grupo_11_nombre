@@ -10,7 +10,7 @@ window.addEventListener('load', function () {
 
     inputName.addEventListener('input', function () {
 
-        
+        let existError = true;
         const value = inputName.value.trim();
         // const errName = document.querySelector('#errName');
 
@@ -94,14 +94,14 @@ window.addEventListener('load', function () {
         switch (true) {
             case value.length === 0:
                 nameClass.style.border = "1.8px solid red";
-                EmailError.innerHTML = "";
+                EmailError.innerHTML = "Email requerido";
                 existError = true
 
                 break;
-            case !emailRegex.test(value):
-                nameClass.style.border = "1.8px solid red";
-                EmailError.innerHTML = "Formato de email inválido";
-                existError = true
+            // case !emailRegex.test(value):
+            //     nameClass.style.border = "1.8px solid red";
+            //     EmailError.innerHTML = "Formato de email inválido";
+            //     existError = true
 
 
                 break;
@@ -115,10 +115,10 @@ window.addEventListener('load', function () {
         
     })
 
-
+let existErrorPassword = true
     inputPassword.addEventListener('input', function () {
 
-        // existError = true
+        
         const value = inputPassword.value.trim();
         // const errName = document.querySelector('#errName');
 
@@ -128,34 +128,35 @@ window.addEventListener('load', function () {
             case value.length === 0:
                 nameClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "Campo requerido";
-                existError = true
+                existErrorPassword = true
 
                 break;
             case value.length <= 7:
                 nameClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-                existError = true
+                existErrorPassword = true
 
                 break;
                 case value.length > 16:
                 nameClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
-                existError = true
+                existErrorPassword = true
 
                 break;
 
             default:
                 nameClass.style.border = "1.8px solid #b8b8b8"
                 passwordError.innerHTML = null
-                existError = false
+                existErrorPassword = false
                 break
         }
         
     })
-
+let existErrorConfirmPassword = true;
     inputConfirmPassword.addEventListener('input', function () {
 
-        existError = true
+        let existErrorConfirmPassword = true;
+
         const value = inputConfirmPassword.value.trim();
         const valueP = inputPassword.value.trim();
         // const errName = document.querySelector('#errName');
@@ -167,27 +168,30 @@ window.addEventListener('load', function () {
             case value.length === 0:
                 passwordConfirmClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "Campo requerido";
-                existError = true
+                existErrorConfirmPassword = true
 
                 break;
             case value.length <= 7:
                 passwordConfirmClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-                existError = true
+                existErrorConfirmPassword = true
 
                 break;
                 case value.length > 16:
                     passwordConfirmClass.style.border = "1.8px solid red";
                 passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
-                existError = true
+                existErrorConfirmPassword = true
 
                 break;
                 case value !== valueP:
                     passwordConfirmClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "queso";
-                existError = true
+                passwordError.innerHTML = "Las contraseñas no coinciden";
+                existErrorConfirmPassword = true
 
                 break;
+
+                // case s :
+                // break;
 
             default:
                 passwordConfirmClass.style.border = "1.8px solid #b8b8b8"
@@ -204,7 +208,7 @@ window.addEventListener('load', function () {
     formUser.addEventListener("submit", function(event){
 
 // event.preventDefault();
-        if (existError === false) {
+        if (existError === false && existErrorPassword === false && existError === false) {
             this.submit();
           } else {
             event.preventDefault();

@@ -6,11 +6,8 @@ module.exports = (req, res) => {
         include: ["images", "category", "colors", "sizes"]
     })
     .then((products) => { 
-        res.render('./admin/listProducts', {products}, (err,content) => {
-            err && res.send(err.mesage)
-            res.render('partials/dashboard', {
-              contentView:content
-            })
+        res.render('products/list', {products}  
+           )
+        
         })
-    })
-}
+    }

@@ -69,10 +69,45 @@
                                     </div>
                                     <% } %>
                                         <% } else { %>
-                                            <% if(locals.userLogin?.rol==="REGULAR" ) {%>
+                                          
+                                            <% if(locals.userLogin.id_rol == 2 ) {%>
+
                                                 <div class="perfil">
                                                     <a
-                                                        href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
+                                                        href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin.id %>"><i
+                                                            class="fa-solid fa-user"
+                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                        mi perfil</a>
+                                                </div>
+
+                                                <div class="vista-admin">
+                                                    <a href="/admin/productos"><i class="fa-solid fa-user"
+                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                        productos desde vista admin</a>
+                                                </div>
+                                                <div class="cerrar-sesion">
+                                                    <a href="/autenticacion/cerrar-sesion">
+                                                        <i class="fa-solid fa-user-minus"
+                                                            style='color: red;'></i>&nbsp;cerrar sesion
+                                                        </a>
+                                                    
+                                                    <!-- <a href="/autenticacion/cerrar-sesion"> -->
+                                                        <!-- <input type="checkbox" id="cerrar-session-movil" class="cerrar-session-pc-tablet">
+                                                        <label for="cerrar-session-movil">
+                                                        <i class="fa-solid fa-user-minus"
+                                                            style='color: red;'></i>&nbsp;cerrar sesion
+                                                        </label>
+                                                        <nav class="cerrar-session-opciones">
+                                                            <p class="texto-header-movil">¿estas seguro de cerrar session?</p>
+                                                            <p
+                                                            class="opciones-cerrar-session"><a href="#">si</a> &nbsp;&nbsp; <a href="#">no</a></p>
+                                                        </nav> -->
+                                                        <!-- </a> -->
+                                                </div>
+                                                <% } else { %>
+                                                                                                   
+                                                <div class="perfil"> 
+                                                    <a href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
                                                             class="fa-solid fa-user"
                                                             style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
                                                         mi perfil</a>
@@ -82,39 +117,6 @@
                                                             class="fa-solid fa-user-minus"
                                                             style='color: red;'></i>&nbsp;cerrar sesion</a>
                                                 </div>
-                                                <% } else { %>
-                                                    <div class="perfil">
-                                                        <a
-                                                            href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin.id %>"><i
-                                                                class="fa-solid fa-user"
-                                                                style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
-                                                            mi perfil</a>
-                                                    </div>
-
-                                                    <div class="vista-admin">
-                                                        <a href="/admin/productos"><i class="fa-solid fa-user"
-                                                                style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
-                                                            productos desde vista admin</a>
-                                                    </div>
-                                                    <div class="cerrar-sesion">
-                                                        <a href="/autenticacion/cerrar-sesion">
-                                                            <i class="fa-solid fa-user-minus"
-                                                                style='color: red;'></i>&nbsp;cerrar sesion
-                                                            </a>
-                                                        
-                                                        <!-- <a href="/autenticacion/cerrar-sesion"> -->
-                                                            <!-- <input type="checkbox" id="cerrar-session-movil" class="cerrar-session-pc-tablet">
-                                                            <label for="cerrar-session-movil">
-                                                            <i class="fa-solid fa-user-minus"
-                                                                style='color: red;'></i>&nbsp;cerrar sesion
-                                                            </label>
-                                                            <nav class="cerrar-session-opciones">
-                                                                <p class="texto-header-movil">¿estas seguro de cerrar session?</p>
-                                                                <p
-                                                                class="opciones-cerrar-session"><a href="#">si</a> &nbsp;&nbsp; <a href="#">no</a></p>
-                                                            </nav> -->
-                                                            <!-- </a> -->
-                                                    </div>
 
                                                     <% } %>
 
@@ -157,33 +159,34 @@
                                     </a>
                                     <% } %>
                                         <% } else { %>
-                                            <% if(locals.userLogin?.rol==="REGULAR" ) {%>
-                                                <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>">
+                                            <% if(locals.userLogin?.rol=== 2) {%>
+                                                
+                                                <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>">
                                                     <p class="texto-header"
-                                                        style="color: var(--blanco); font-size: var(--letra-grande)">Ver
-                                                        mi perfil</p>
+                                                        style="color: var(--blanco); font-size: var(--letra-mediana); margin: 0px;">
+                                                        Ver mi perfil</p>
                                                 </a>
-
-
-                                                <a>
-                                                    <p class="mensaje-userLogin"
-                                                        style=" color: var(--blanco);font-size: var(--letra-grande); ">
-                                                        ¡Hola, <%= userLogin.name%>! ¡Vamos a brillar! 🌈💫<i
-                                                                class="fa-solid fa-star"></i></p>
+                                                <a href="/admin/productos">
+                                                    <p class="texto-header"
+                                                        style=" color: var(--blanco);font-size: var(--letra-mediana); ">
+                                                        ¡Hola, <%= userLogin.name%>! 🟠 Administrar productos</p>
                                                 </a>
+                                                
 
                                                 <% } else { %>
-
-                                                    <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>">
+                                                    <a href="/users/perfil-usuario/<%= locals.userLogin?.id%>">
                                                         <p class="texto-header"
-                                                            style="color: var(--blanco); font-size: var(--letra-mediana); margin: 0px;">
-                                                            Ver mi perfil</p>
+                                                            style="color: var(--blanco); font-size: var(--letra-grande)">Ver
+                                                            mi perfil</p>
                                                     </a>
-
-                                                    <a href="/admin/productos">
-                                                        <p class="texto-header"
-                                                            style=" color: var(--blanco);font-size: var(--letra-mediana); ">
-                                                            ¡Hola, <%= userLogin.name%>! 🟠 Administrar productos</p>
+    
+    
+                                                    <a>
+                                                        <p class="mensaje-userLogin"
+                                                            style=" color: var(--blanco);font-size: var(--letra-grande); ">
+                                                            ¡Hola, <%= userLogin.name%>! ¡Vamos a brillar!
+                                                            <!-- <i class="fa-solid fa-star"></i> -->
+                                                        </p>
                                                     </a>
 
                                                     <% } %>

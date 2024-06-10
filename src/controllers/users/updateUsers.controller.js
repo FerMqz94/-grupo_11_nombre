@@ -73,14 +73,15 @@ module.exports = (req, res) => {
     
   } else {
     const { id }  = req.params
+    // let userFind = db.Users.findByPk(id)
 
 
     db.Users.findByPk(req.params.id)
-    .then((userFind, errors) => {
+    .then((userFind) => {
       res.render("users/perfilUsuario", {
-      // old: req.body,
+      old: req.body,
       errors: errors.mapped(),
-      user : userFind
+      user: userFind
     })
     })
     
