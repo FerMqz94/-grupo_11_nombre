@@ -1,3 +1,33 @@
+# SPRINT SIETE (PT 2)
+
+### --------------------------------------------------- ###
+
+# RETROSPECTIVA_GRUPO_11_ZINKE 
+(◕‿◕)(◕‿◕)
+🧔👨🦰🧑👩🦳
+
+🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 
+# METODOLOGÍA ESTRELLA DE MAR ⭐
+🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 🌟 
+
+## 🌟 Comenzar a hacer:
+Es crucial compartir el conocimiento que tengamos claro y asegurarnos de mantenernos comunicados y prolijos cuando trabajemos en el mismo archivo. Esto nos permitirá colaborar de manera más efectiva y evitar malentendidos. Compartir información y mantener una comunicación abierta facilitará la resolución de problemas y mejorará la calidad de nuestro trabajo en equipo.
+
+## 🌟 Hacer más:
+Nos comprometemos a pedir ayuda a los profesores cuando nos sintamos muy estancados. Además, debemos utilizar más el grupo de WhatsApp donde están los profesores para plantear nuestras dudas y obtener orientación. Aprovechar estos recursos nos ayudará a superar obstáculos más rápidamente y a progresar con mayor seguridad en nuestros proyectos.
+
+## 🌟 Continuar haciendo:
+Continuaremos con la práctica de realizar un mínimo de tres dailys semanales. Estas reuniones son esenciales para compartir nuestro progreso, recibir retroalimentación y brindar apoyo a nuestros compañeros. Mantener esta rutina nos permitirá trabajar de manera más coordinada y eficiente, asegurando que todos estemos alineados con los objetivos del equipo.
+
+## 🌟 Hacer menos:
+Para ser más productivos, debemos reducir la procrastinación. Es fundamental identificar y eliminar las distracciones que nos impiden avanzar en nuestras tareas. Adoptar una actitud más proactiva y enfocada nos permitirá aprovechar mejor nuestro tiempo y mejorar nuestro rendimiento.
+
+## 🌟 Dejar de hacer:
+Nos comprometemos a dejar de dilatar el momento en el que necesitamos ayuda y no consultar a los profesores cuando estamos estancados. Superar cualquier reticencia a pedir ayuda es crucial para nuestro desarrollo y éxito. Reconocer que los profesores están para apoyarnos y aprovechar su experiencia nos permitirá superar los desafíos de manera más eficiente y avanzar en nuestros proyectos con mayor confianza.
+
+
+
+
 ### ---------------------------------------------------
 
 # SPRINT SIETE 
