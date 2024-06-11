@@ -386,16 +386,13 @@ main.perfil-usuario {
   
   article.article-redes-sociales-register {
     margin: 50px 20px 70px 20px;
-  
     text-align: center;
-  
     /* margin: 30px 0 30px 30px; */
-  
     display: flex;
-  
     flex-direction: column;
-  
+    align-content: flex-end;
     align-items: center;
+    /* width: 50%; */
   }
   
   article.article-redes-sociales-register h3.redes-sociales-register-titulo {
@@ -408,16 +405,11 @@ main.perfil-usuario {
   
   article.article-redes-sociales-register div.imagenes-redes-sociales {
     /* margin-left: 15px; */
-  
     display: flex;
-  
-    width: 60%;
-  
+    width: 100%;
     /* display: flex; */
-  
     /* width: 95%; */
-  
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
   
   article.article-redes-sociales-register
@@ -685,6 +677,7 @@ main.perfil-usuario {
   
     article.article-redes-sociales-register {
       margin-top: 70px;
+      width: 100%;
     }
   
     article.article-redes-sociales-register h3.redes-sociales-register-titulo {
@@ -776,7 +769,6 @@ main.perfil-usuario {
   
     article.article-redes-sociales-register div.imagenes-redes-sociales {
       margin: auto;
-  
-      width: 40%;
+      /* width: 40%; */
     }
   }

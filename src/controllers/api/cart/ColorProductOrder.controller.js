@@ -42,10 +42,19 @@ module.exports = async (req, res) => {
         const color4 = productColors.length > 3 ? productColors[3] : -1;
         const color5 = productColors.length > 4 ? productColors[4] : -1;
 
+        const color6 = productColors.length > 0 ? productColors[5] : -1;
+        const color7 = productColors.length > 1 ? productColors[6] : -1;
+        const color8 = productColors.length > 2 ? productColors[7] : -1;
+        const color9 = productColors.length > 3 ? productColors[8] : -1;
+        const color10 = productColors.length > 4 ? productColors[9] : -1;
+
+        const color11 = productColors.length > 0 ? productColors[10] : -1;
+        const color12 = productColors.length > 1 ? productColors[11] : -1;
+        const color13 = productColors.length > 2 ? productColors[12] : -1;
+        const color14 = productColors.length > 3 ? productColors[13] : -1;
+        const color15 = productColors.length > 4 ? productColors[14] : -1;
 
         // return res.json(idColor)
-
-
 
         let Numcolor1 = parseInt(color1["id_color"])
         let Numcolor2 = parseInt(color2["id_color"])
@@ -53,16 +62,39 @@ module.exports = async (req, res) => {
         let Numcolor4 = parseInt(color4["id_color"])
         let Numcolor5 = parseInt(color5["id_color"])
 
+        let Numcolor6 = parseInt(color6["id_color"])
+        let Numcolor7 = parseInt(color7["id_color"])
+        let Numcolor8 = parseInt(color8["id_color"])
+        let Numcolor9 = parseInt(color9["id_color"])
+        let Numcolor10 = parseInt(color10["id_color"])
+
+        let Numcolor11 = parseInt(color11["id_color"])
+        let Numcolor12 = parseInt(color12["id_color"])
+        let Numcolor13 = parseInt(color13["id_color"])
+        let Numcolor14 = parseInt(color14["id_color"])
+        let Numcolor15 = parseInt(color15["id_color"])
+
         let parseIdColor = parseInt(idColor)
 
         // return res.json(Numcolor1)
 
 
+        if (parseIdColor === Numcolor1 ||
+            parseIdColor === Numcolor2 ||
+            parseIdColor === Numcolor3 ||
+            parseIdColor === Numcolor4 ||
+            parseIdColor === Numcolor5 ||
 
-
-        // console.log(casa)
-
-        if (parseIdColor === Numcolor1 || parseIdColor === Numcolor2 || parseIdColor === Numcolor3 || parseIdColor === Numcolor4 || parseIdColor === Numcolor5) { //throw new Error("el producto no tiene ese talle disponible")
+            parseIdColor === Numcolor6 ||
+            parseIdColor === Numcolor7 ||
+            parseIdColor === Numcolor8 ||
+            parseIdColor === Numcolor9 ||
+            parseIdColor === Numcolor10 ||
+            parseIdColor === Numcolor11 ||
+            parseIdColor === Numcolor12 ||
+            parseIdColor === Numcolor13 || 
+            parseIdColor === Numcolor14 ||
+            parseIdColor === Numcolor15 ) { //throw new Error("el producto no tiene ese talle disponible")
 
             // return res.json(idSizeConparation)
             const { id } = req.params
