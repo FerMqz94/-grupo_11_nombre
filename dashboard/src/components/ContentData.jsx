@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-export const ContentDataMovie = ({title, color, digit, icon}) => {
-  // const {title, color, digit, icon} = props
+export const ContentData = ({title, color, digit, icon}) => {
+  const {title, color, digit, icon} = props
   return (
     <div className="col-md-4 mb-4">
       <div className={`card border-left-${color} shadow h-100 py-2`}>
@@ -25,14 +25,14 @@ export const ContentDataMovie = ({title, color, digit, icon}) => {
 };
 
 
-ContentDataMovie.propTypes = {
+ContentData.propTypes = {
   title: PropTypes.string,
   color: PropTypes.string,
   digit: PropTypes.number,
   icon: PropTypes.string, 
 }
 
-ContentDataMovie.defaultProps = {
+ContentData.defaultProps = {
   title: "Titulo no definido",
   color: "dark",
   digit: 0,

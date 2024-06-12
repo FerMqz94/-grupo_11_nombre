@@ -6,7 +6,7 @@ const port = 3030;
 const methodOverride = require('method-override');
 const session = require("express-session")
 let cookieParser = require('cookie-parser');
-// const cors = require('cors')
+const cors = require('cors')
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
@@ -17,7 +17,7 @@ app.set("view engine" , "ejs")
 app.set("views" ,path.join(__dirname,"./src/views"))
 
 // MiDDLEWARES
-// app.use(cors())
+app.use(cors())
 app.use(express.static('public'));
 app.use(partials());
 app.use(express.urlencoded({extended: false}));
