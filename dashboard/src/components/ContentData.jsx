@@ -1,7 +1,12 @@
 import React from "react";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-export const ContentDataMovie = ({title, color, digit, icon}) => {
+export const ContentData = ({
+  title = "Titulo no definido",
+  color = "dark",
+  digit = 0,
+  icon = "question",
+}) => {
   // const {title, color, digit, icon} = props
   return (
     <div className="col-md-4 mb-4">
@@ -9,10 +14,14 @@ export const ContentDataMovie = ({title, color, digit, icon}) => {
         <div className="card-body">
           <div className="row no-gutters align-items-center">
             <div className="col mr-2">
-              <div className={`text-xs font-weight-bold text-${color} text-uppercase mb-1`}>
-                {title} 
+              <div
+                className={`text-xs font-weight-bold text-${color} text-uppercase mb-1`}
+              >
+                {title}
               </div>
-              <div className="h5 mb-0 font-weight-bold text-gray-800">{digit}</div>
+              <div className="h5 mb-0 font-weight-bold text-gray-800">
+                {digit}
+              </div>
             </div>
             <div className="col-auto">
               <i className={`fas fa-${icon} fa-2x text-gray-300`}></i>
@@ -24,17 +33,16 @@ export const ContentDataMovie = ({title, color, digit, icon}) => {
   );
 };
 
-
-ContentDataMovie.propTypes = {
+ContentData.propTypes = {
   title: PropTypes.string,
   color: PropTypes.string,
   digit: PropTypes.number,
-  icon: PropTypes.string, 
-}
+  icon: PropTypes.string,
+};
 
-ContentDataMovie.defaultProps = {
+/* ContentData.defaultProps = {
   title: "Titulo no definido",
   color: "dark",
   digit: 0,
   icon: "question"
-}
+} */
