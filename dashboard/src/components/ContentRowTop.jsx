@@ -4,17 +4,21 @@ import Alert from "./reutilice/Alert.jsx";
 
 import imagenFondo from "../assets/images/mandalorian.jpg";
 import { ContentData } from "./ContentData";
+import CategoryItem from "./CategoryItem.jsx";
 
 
 function ContentRowTop({ data }) {
   const [metrics, setMetrics] = useState([]);
+  const [categories, setcategories] = useState([]);
   const [lastProduct, setLastProduct] = useState({});
   const [loading, setLoading] = useState({
     metrics: true,
+   categories: true,
     lastProduct: true
   });
   const [errors, setErrors] = useState({
     metrics: "",
+    categories:"",
     lastProduct: ""
   });
   useEffect(() => {
@@ -39,6 +43,33 @@ function ContentRowTop({ data }) {
         setErrors({
           ...errors,
           metrics: error.message,
+        });
+      }
+    };
+
+  
+    const getCategories = async () => {
+      try {
+        const endpoint =
+          "http://localhost:3030/api/query?q=SELECT name FROM categories";
+        const { ok, data } = await fetch(endpoint, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }).then((res) => res.json());
+
+        ok && setcategories(data);
+
+        setTimeout(() => {
+          setLoading({
+            ...loading,
+            chefs: false,
+          });
+        }, 2000);
+      } catch (error) {
+        setErrors({
+          ...errors,
+          categories: error.message,
         });
       }
     };
@@ -73,6 +104,7 @@ function ContentRowTop({ data }) {
     }
   };
 
+  getCategories();
   getMetrics();
   getLastProduct();
 }, []);
@@ -114,7 +146,7 @@ function ContentRowTop({ data }) {
             <div className="card shadow mb-4">
               <div className="card-header py-3">
                 <h5 className="m-0 font-weight-bold text-gray-800">
-                  Ultimo producto : <strong>{lastProduct.name}</strong> 
+                 Ultimo producto : <strong>{lastProduct.name}</strong> 
                 </h5>
               </div>
               <div className="card-body">
@@ -127,12 +159,8 @@ function ContentRowTop({ data }) {
                   />
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Dolores, consequatur explicabo officia inventore libero
-                  veritatis iure voluptate reiciendis a magnam, vitae, aperiam
-                  voluptatum non corporis quae dolorem culpa citationem ratione
-                  aperiam voluptatum non corporis ratione aperiam voluptatum
-                  quae dolorem culpa ratione aperiam voluptatum?</p>
+                {lastProduct.description}
+              </p>
                   <a
                   className="btn btn-danger"
                   rel="nofollow"
@@ -152,61 +180,14 @@ function ContentRowTop({ data }) {
             <div className="card shadow mb-4">
               <div className="card-header py-3">
                 <h5 className="m-0 font-weight-bold text-gray-800">
-                  Genres in Data Base
+                  categorias de productos 
                 </h5>
               </div>
               <div className="card-body">
                 <div className="row">
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Acción</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Animación</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Aventura</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Ciencia Ficción</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Comedia</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Documental</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Drama</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Fantasia</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Infantiles</div>
-                    </div>
-                  </div>
-                  <div className="col-lg-6 mb-4">
-                    <div className="card bg-dark text-white shadow">
-                      <div className="card-body">Musical</div>
-                    </div>
-                  </div>
+                  {categories.map(({ name }) => (
+                    <CategoryItem key={name} name={name} />
+                  ))}
                 </div>
               </div>
             </div>
