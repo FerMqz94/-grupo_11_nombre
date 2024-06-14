@@ -114,7 +114,7 @@ function ContentRowTop({ data }) {
             <div className="card shadow mb-4">
               <div className="card-header py-3">
                 <h5 className="m-0 font-weight-bold text-gray-800">
-                 Ultimo producto : <strong>{lastProduct.title}</strong> 
+                 Ultimo producto : <strong>{lastProduct.name}</strong> 
                 </h5>
               </div>
               <div className="card-body">
