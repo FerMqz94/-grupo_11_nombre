@@ -1,23 +1,23 @@
-import React from 'react';
-import Sidebar from './components/Sidebar.jsx';
-import Contentwrapper from './components/Contenwrapper.jsx'
-import './assets/css/App.css';
+// import React from 'react';
+// import Sidebar from './components/Dashboard/Sidebar.jsx';
+// import Contentwrapper from './components/Dashboard/Contenwrapper.jsx'
+// import './assets/css/App.css';
 
 
-function App() {
-  return (
-	<div id="wrapper">
+// function App() {
+//   return (
+// 	<div id="wrapper">
 
-	<Sidebar/>
+// 	<Sidebar/>
 	
-	<Contentwrapper/>
+// 	<Contentwrapper/>
 
 
 	
 
 
-	</div>
-);
-}
+// 	</div>
+// );
+// }
 
-export default App;
+// export default App;

@@ -1,5 +1,5 @@
 import React from 'react'
-import jordan from '../assets/images/jordan-walke.png'
+import jordan from '../../assets/images/jordan-walke.png'
 const Topbar  =function () {
     return (
 

@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from "react";
-import Alert from "./reutilice/Alert.jsx";
+import Alert from "../reutilice/Alert.jsx";
 
-import imagenFondo from "../assets/images/mandalorian.jpg";
+import imagenFondo from "../../assets/images/mandalorian.jpg";
 import { ContentData } from "./ContentData";
 import CategoryItem from "./CategoryItem.jsx";
 

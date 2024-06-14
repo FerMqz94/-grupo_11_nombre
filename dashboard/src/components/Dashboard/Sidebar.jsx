@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoDH from '../assets/images/imagen-header.png'
+import logoDH from '../../assets/images/imagen-header.png'
 export const SideBar = function () {
     
     return (
@@ -33,10 +33,10 @@ export const SideBar = function () {
 
     {/* Nav Item - Pages */}
     <li className="nav-item">
-        <a className="nav-link collapsed" href="/">
-            <i className="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-        </a>
+        <Link className="nav-link collapsed" to="/productos">
+            <i className="fas fa-rectangle-list"></i>
+            <span>Productos</span>
+        </Link>
     </li>
 
     {/* Nav Item - Charts */}
