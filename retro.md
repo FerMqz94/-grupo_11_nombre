@@ -256,7 +256,7 @@ https://paolamarianvera.atlassian.net/jira/software/projects/EC/boards/3
 # RETROSPECTIVA_GRUPO_11_ZINKE 
 
 (◕‿◕)(◕‿◕)
-🧔‍♂️👨‍🦰🧑👨‍🦱👩‍🦳
+🧔👨‍🦰🧑👨‍🦱👩‍🦳
 
 # METODOLOGÍA ESTRELLA DE MAR ⭐
 
