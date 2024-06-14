@@ -1,17 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from '../components/Dashboard/Sidebar.jsx';
+import '../assets/css/App.css';
 import PropTypes from 'prop-types'
 
 const Product = props => {
   return (
-    <div>
-      
-    </div>
+    <>
+    <h1>TODOS LOS PRODUCTOS</h1>    
+    </>
   )
 }
 
 Product.propTypes = {
 
 }
-
 export default Product
 

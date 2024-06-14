@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "./Footer";
 import Topbar from "./Topbar";
 import ContentRowTop from "./ContentRowTop";
-
+import {Outlet} from "react-router-dom";
 
 function ContentWrapper() {
   // const metrics = [
@@ -45,7 +45,7 @@ function ContentWrapper() {
           <ContentRowTop />
  
 			
-
+          <Outlet />
 			
 
           <Footer />
