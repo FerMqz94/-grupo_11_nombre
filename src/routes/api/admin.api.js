@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const { storeApi, updateApi } = require("../../controllers/api/admin")
-const {listApi, renderImgProduct} = require("../../controllers/api/admin")
+const {listApi, renderImgProduct, } = require("../../controllers/api/admin")
 
 
 // /api/admin

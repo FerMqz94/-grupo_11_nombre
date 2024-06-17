@@ -23,16 +23,17 @@ const Product = () => {
       try {
         const {
           ok,
-          data = [],
+          products = [],
           msg = null,
         } = await fetch(endpoint).then((res) => res.json());
         // quizas no funcione
+
         if (!ok) throw new Error(msg);
 
         ok &&
         setStatesProducts({
             ...statesProducts,
-            products: data,
+            products: products,
             loading: false,
           });
       } catch (error) {
