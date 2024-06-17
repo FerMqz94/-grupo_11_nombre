@@ -1,5 +1,6 @@
 * {
   margin-top: 0;
+  /* transition: 1s; */
 }
 a {
   text-decoration: none;
@@ -41,6 +42,7 @@ a {
 
  .ul-menu{
   display: none;
+  transition: 1s;
 }
 
 .input-menu:checked  ~ .ul-menu{
@@ -51,6 +53,7 @@ a {
   align-items: flex-start;
   background-color: #ffefd6;
   border-bottom: #f99b7d solid;
+  /* transition: 1s; */
 }
 
 .input-menu:checked  ~
@@ -64,14 +67,7 @@ a {
   display: none;
  }
 
-/* li {
-  display: block;
-  background: lightgrey;
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-  border-bottom: 1px solid grey;
-} */
+
 
 
 .redirecciones .barra-productos {
@@ -139,8 +135,7 @@ a {
 .encabezado .envio {
   display: none;
 }
-.header-vista-movil {
-}
+.header-vista-movil {}
 .logo {
   background: linear-gradient(var(--molocoton-oscuro), var(--verde-azulado-claro));
   margin-bottom: 0;
@@ -169,6 +164,7 @@ a {
   border-bottom: solid #f99b7d 2px;
   margin-top: 0;
   padding: 5px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 21%);
 }
 
 .redirecciones .barra-productos {

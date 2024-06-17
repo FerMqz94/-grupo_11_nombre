@@ -24,11 +24,16 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     id_product: DataTypes.INTEGER
   }, {
+    // sequelize,
+    // modelName: 'Images',
+    // tableName: 'images',
+    // underscored: true,
+    // paranoid: true
     sequelize,
     modelName: 'Images',
-    tableName: 'images',
-    // underscored: true,
-    paranoid: true
+    // tableName: 'images',
+    timestamps: false,
+    onDelete: "CASCADE"
   });
   return Images;
 };

@@ -1,100 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include("../partials/head", {view : "carrito"}) %>
+<%- include("../partials/head", {view : "carrito" }) %>
 
-<body>
-    <%- include("../partials/header", {carrito : "black", registro: true,ingreso: true}) %>
-    <main class="main-carrito">
-        <!-- por si no hay nada en este -->
-        <div class="carrito-vacio">
-            <p><i class="fa-solid fa-bag-shopping"></i></p>
-            <p class="texto-1">no hay nada en el</p>
-            <p class="texto-2">carrito</p>
-            <p class="explorar-carrito">explorar</p>
-        </div>
-        <!-- cuando tenes algo en el carrito -->
-        <div class="vista-carrito-con-productos">
-            <div class="productos">
-                <div class="info-compra">
-                    <div class="info-datos-img">
-                        <img src="/images/products/norm-core.png" alt="imagen-de-carrito"
-                            class="img-carrito">
-                        <div class="producto-info">
-                            <p class="datos-producto">nombre del producto</p>
-                            <p class="datos-producto">precio $100000</p>
-                            <p class="datos-producto">cantidad - 1 +</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-trash"></i>
+    <body>
+        <%- include("../partials/header", {carrito : "black" , registro: true,ingreso: true}) %>
+
+            <main class="main-carrito">
+
+                <!-- por si no hay nada en este -->
+                <div class="carrito-vacio">
+                    <p><i class="fa-solid fa-bag-shopping"></i></p>
+                    <p class="texto-1">no hay nada en el</p>
+                    <p class="texto-2">carrito</p>
+                    <p class="explorar-carrito">explorar</p>
                 </div>
-                <div class="info-compra">
-                    <div class="info-datos-img">
-                        <img src="/images/products/poison-ivy.png" alt="imagen-de-carrito"
-                            class="img-carrito">
-                        <div class="producto-info">
-                            <p class="datos-producto">nombre del producto</p>
-                            <p class="datos-producto">precio $100000</p>
-                            <p class="datos-producto">cantidad - 1 +</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="info-compra">
-                    <div class="info-datos-img">
-                        <img src="/images/products/dos-continentes.png" alt="imagen-de-carrito"
-                            class="img-carrito">
-                        <div class="producto-info">
-                            <p class="datos-producto">nombre del producto</p>
-                            <p class="datos-producto">precio $100000</p>
-                            <p class="datos-producto">cantidad - 1 +</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="info-compra">
-                    <div class="info-datos-img">
-                        <img src="/images/products/blazer-over-vista-2.png" alt="imagen-de-carrito"
-                            class="img-carrito">
-                        <div class="producto-info">
-                            <p class="datos-producto">nombre del producto</p>
-                            <p class="datos-producto">precio $100000</p>
-                            <p class="datos-producto">cantidad - 1 +</p>
-                        </div>
-                    </div>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="precio">
-                    <p class="texto-carrito">precio total: $</p>
-                </div>
-            </div>
-            <p class="comprar">comprar</p>
-        </div>
-        <!-- recomendaciones -->
-        <section class="otrosFav">
-            <h3 class="otrosFav">OTROS FAV</h3>
-            <div class="contenedor-otros-productos">
-        <%  products.forEach((p, index) => { %>
-            
-            <%  if(index <= 3) { %>
-                
-                    <article class="productos-otrosFav dos-continentes">
-                      <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>" alt="<%= p.name%>">
-                      <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
-                        <h4 class="h4-dos-conti"><%= p.name%></h4>
-                      </a>
-                      <p class="p-dos-conti"><%= p.price%></p>
-                    </article>
+                <!-- cuando tenes algo en el carrito -->
+                 
+                <div class="vista-carrito-con-productos">
                     
-            <%  }  %>         
-            <% })  %>  
-        </div>
-          </section>  
-    </main>
+                    <div class="productos" id="carrito">
+                        <!-- <div class="info-compra">
+                            <div class="info-datos-img">
+                                <img src="/images/products/norm-core.png" alt="imagen-de-carrito" class="img-carrito">
+                                <div class="producto-info">
+                                    <p class="datos-producto">nombre del producto</p>
+                                    <p class="datos-producto">precio $1</p>
+                                    <p class="datos-producto">cantidad - 1 +</p>
+                                    <p class="datos-producto">talle: 1 </p>
+                                    <p class="datos-producto">color: <i class="fa-regular fa-circle"
+                                            style="background-color: black;"></i></p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-trash"></i>
+                        </div> -->
+                    </div> 
 
- <%- include("../partials/footer")  %>
 
 
-</body>
+            
+<input type="checkbox" id="boton-carrito" class="input-carrito" style="display: none;">
+                    <div class="boton-de-cerrar">
+                        
+                        <label  for="boton-carrito">  
+                             
+                            <i class="fa-solid fa-chevron-up"></i>
+                        </label>
+                    </div>
+                    <div class="botones">
+
+                        <button class="vaciar" id="vaciar">vaciar carrito</button>
+
+
+                        <button class="mirar">seguir mirando</button>
+                        <button id="comprar" class="comprar">comprar</button>
+
+                        <div class="precio">
+                            <p class="texto-carrito">precio total: $<output id="total">0</output> </p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- recomendaciones -->
+                <!-- <section class="otrosFav">
+                    <h3 class="otrosFav">OTROS FAV</h3>
+                    <div class="contenedor-otros-productos">
+                        <% products.forEach((p, index)=> { %>
+
+                            <% if(index <=3) { %>
+
+                                <article class="productos-otrosFav dos-continentes">
+                                    <img class="blazer-dos-conti" src="/images/products/<%= p.image[0]%>"
+                                        alt="<%= p.name%>">
+                                    <a href="/producto-detalle/<%= p.id%>" class="a-dos-conti">
+                                        <h4 class="h4-dos-conti">
+                                            <%= p.name%>
+                                        </h4>
+                                    </a>
+                                    <p class="p-dos-conti">
+                                        <%= p.price%>
+                                    </p>
+                                </article>
+
+                                <% } %>
+                                    <% }) %>
+                    </div>
+                </section> -->
+            </main>
+
+            <%- include("../partials/footer") %>
+
+                <script src="/js/functions/cart.js"></script>
+    </body>
 
 </html>

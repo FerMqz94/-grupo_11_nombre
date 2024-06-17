@@ -155,7 +155,7 @@ let existErrorPassword = true
 let existErrorConfirmPassword = true;
     inputConfirmPassword.addEventListener('input', function () {
 
-        let existErrorConfirmPassword = true;
+        // let existErrorConfirmPassword = true;
 
         const value = inputConfirmPassword.value.trim();
         const valueP = inputPassword.value.trim();
