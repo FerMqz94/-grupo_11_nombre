@@ -42,17 +42,17 @@ module.exports = async (req, res) => {
         const color4 = productColors.length > 3 ? productColors[3] : -1;
         const color5 = productColors.length > 4 ? productColors[4] : -1;
 
-        const color6 = productColors.length > 0 ? productColors[5] : -1;
-        const color7 = productColors.length > 1 ? productColors[6] : -1;
-        const color8 = productColors.length > 2 ? productColors[7] : -1;
-        const color9 = productColors.length > 3 ? productColors[8] : -1;
-        const color10 = productColors.length > 4 ? productColors[9] : -1;
+        const color6 = productColors.length > 5 ? productColors[5] : -1;
+        const color7 = productColors.length > 6 ? productColors[6] : -1;
+        const color8 = productColors.length > 7 ? productColors[7] : -1;
+        const color9 = productColors.length > 8 ? productColors[8] : -1;
+        const color10 = productColors.length > 9 ? productColors[9] : -1;
 
-        const color11 = productColors.length > 0 ? productColors[10] : -1;
-        const color12 = productColors.length > 1 ? productColors[11] : -1;
-        const color13 = productColors.length > 2 ? productColors[12] : -1;
-        const color14 = productColors.length > 3 ? productColors[13] : -1;
-        const color15 = productColors.length > 4 ? productColors[14] : -1;
+        const color11 = productColors.length > 10 ? productColors[10] : -1;
+        const color12 = productColors.length > 11 ? productColors[11] : -1;
+        const color13 = productColors.length > 12 ? productColors[12] : -1;
+        const color14 = productColors.length > 13 ? productColors[13] : -1;
+        const color15 = productColors.length > 14 ? productColors[14] : -1;
 
         // return res.json(idColor)
 
@@ -117,14 +117,14 @@ module.exports = async (req, res) => {
             })
             // return res.json(recond)
 
-            console.log()
-            console.log(id)
+            // console.log()
+            // console.log(id)
 
-            console.log(orders.id)
+            // console.log(orders.id)
 
             // recond.id_color = parseIdColor
 
-       console.log(recond.id_color)     
+    //    console.log(recond.id_color)     
             // await recond.save();
 
 

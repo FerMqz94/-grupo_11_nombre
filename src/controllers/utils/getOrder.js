@@ -5,7 +5,7 @@ module.exports = async (req) => {
         where: {
             [Op.and]: [
                 {
-                    id_user: req.query.id_user,
+                    id_user: req.session.userLogin?.id || req.query.id_user,
                 },
                 {
                     state: "pending",
@@ -13,7 +13,7 @@ module.exports = async (req) => {
             ]
         },
         defaults: {
-            id_user:  req.query.id_user
+            id_user:  req.session.userLogin?.id || req.query.id_user
         },
         include: [ 
             {
