@@ -30,7 +30,6 @@ function ContentRowTop({ data }) {
             "Content-Type": "application/json",
           },
         }).then((res) => res.json());
-        console.log(data);
         ok && setMetrics(data);
 
         setTimeout(() => {
