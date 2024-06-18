@@ -36,6 +36,11 @@ module.exports = (sequelize, DataTypes) => {
     tableName: 'colors',
     // underscored: true,
     paranoid: true
+    // sequelize,
+    // modelName: 'Colors',
+
+    // timestamps: false,
+    // onDelete: "CASCADE"
   });
   return Colors;
 };
