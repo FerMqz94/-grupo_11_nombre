@@ -45,7 +45,8 @@ function ContentRowTop({ data }) {
         });
       }
     };
-
+ 
+    
   
     const getCategories = async () => {
       try {
@@ -154,7 +155,7 @@ function ContentRowTop({ data }) {
                     className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                     style={{ width: 40 + "rem" }}
                     src={"http://localhost:3030/api/producto-detalle/image/" + lastProduct.image}
-                    alt=" Star Wars - Mandalorian "
+                    alt=" campera jean "
                   />
                 </div>
                 <p>
