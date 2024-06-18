@@ -2,63 +2,110 @@
 <html lang="es">
 
   <%- include("../partials/head", {view : "contactUS"}) %>
-  
-<body class="body-contact-us">
-  <%- include("../partials/header", {contactUs : "black", registro: true,ingreso: true }) %>
-  
-  <main class="contact-us">
 
+<body class="body-contact-us bg-light">
+  <%- include("../partials/header", {contactUs : "black", registro: true, ingreso: true }) %>
+  
+  <main class="contact-us my-5">
     <div class="container">
-      <h1>¿EN QUÉ PODEMOS AYUDARTE?</h1>
-      <div class="contact-info">
-          <p>Te podés comunicar con nosotros de Lunes a Domingo de 9 a 21hrs.</p>
-          <p>Escribinos por Whatsapp al <a href="https://wa.me/5491127996935" target="_blank">+54 9 11 2799-6935</a>.</p>
-          <p>También podés llamarnos al <a href="tel:+541151686098">+54 11 5168 6098</a>.</p>
-          <p>Si querés mandar un mail hacé click <a href="mailto:contacto@zinke.com">acá</a>.</p>
+      <h1 class="text-center mb-5">¿EN QUÉ PODEMOS AYUDARTE?</h1>
+      <div class="contact-info mb-5">
+        <div class="card p-4 shadow-sm">
+          <p class="mb-2">Te podés comunicar con nosotros de Lunes a Domingo de 9 a 21hrs.</p>
+          <p class="mb-2">Escribinos por Whatsapp al <a href="https://wa.me/5491127996935" target="_blank" class="text-success">+54 * ** ****-****</a>.</p>
+          <p class="mb-2">También podés llamarnos al <a href="tel:+541151686098" class="text-primary">+54 ** **** ****</a>.</p>
+          <p class="mb-0">Si querés mandar un mail hacé click <a href="mailto:contacto@zinke.com" class="text-danger">acá</a>.</p>
+        </div>
       </div>
 
-      <h2>SERVICIO DE ASISTENCIA RÁPIDA</h2>
-      <div class="faq">
-          <div class="faq-item">
-              <h3>ENVÍO Y ENTREGA</h3>
-              <p>Ofrecemos opciones de entrega estándar, express y recogida en tienda.</p>
+      <h2 class="text-center mb-4">SERVICIO DE ASISTENCIA RÁPIDA</h2>
+      <div class="faq accordion" id="faqAccordion">
+        <div class="faq-item card mb-3">
+          <div class="card-header" id="headingOne">
+            <h3 class="mb-0">
+              <button class="btn btn-link text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                ENVÍO Y ENTREGA
+              </button>
+            </h3>
           </div>
-          <div class="faq-item">
-              <h3>DEVOLUCIONES</h3>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              Ofrecemos opciones de entrega estándar, express y recogida en tienda.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item card mb-3">
+          <div class="card-header" id="headingTwo">
+            <h3 class="mb-0">
+              <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                DEVOLUCIONES
+              </button>
+            </h3>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="card-body">
               <p>Nuestra política de devoluciones permite cambios y devoluciones dentro de los 30 días posteriores a la compra.</p>
               <p>Las excepciones incluyen productos personalizados y en oferta.</p>
               <p>El reintegro se procesará dentro de los 5 a 7 días hábiles después de recibir el producto devuelto.</p>
+            </div>
           </div>
-          <div class="faq-item">
-              <h3>PEDIDOS</h3>
+        </div>
+
+        <div class="faq-item card mb-3">
+          <div class="card-header" id="headingThree">
+            <h3 class="mb-0">
+              <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                PEDIDOS
+              </button>
+            </h3>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="card-body">
               <p>Podés utilizar tarjetas de crédito, débito y PayPal para realizar tus pedidos en Zinke.</p>
-              <p>Podés hacer el seguimiento del estado de tu pedido desde tu cuenta en nuestra página web.</p>
               <p>Los pedidos se pueden cancelar o modificar dentro de las primeras 24 horas después de su realización.</p>
+            </div>
           </div>
-          <div class="faq-item">
-              <h3>INFORMACIÓN DEL PRODUCTO</h3>
+        </div>
+
+        <div class="faq-item card mb-3">
+          <div class="card-header" id="headingFour">
+            <h3 class="mb-0">
+              <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                INFORMACIÓN DEL PRODUCTO
+              </button>
+            </h3>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+            <div class="card-body">
               <p>Todos los productos Zinke tienen una garantía de un año.</p>
               <p>Podés encontrar tu talle adecuado utilizando nuestra guía de talles disponible en cada página de producto.</p>
-              <p>Para limpiar tu calzado, ropa o equipo Zinke, seguí las instrucciones específicas en la etiqueta de cada producto.</p>
-              <p>Para verificar la autenticidad de tu calzado Zinke, buscá nuestro sello de autenticidad en la caja y el producto.</p>
+            </div>
           </div>
-          <div class="faq-item">
-              <h3>CORPORATIVO</h3>
-              <p>Podés obtener más información acerca de Zinke, Inc. en nuestra sección "Sobre Nosotros".</p>
-              <p>Para conseguir los últimos lanzamientos de calzado de Zinke, suscribite a nuestro boletín de noticias.</p>
-          </div>
-      </div>
-  </div>
+        </div>
 
+        <div class="faq-item card mb-3">
+          <div class="card-header" id="headingFive">
+            <h3 class="mb-0">
+              <button class="btn btn-link text-decoration-none collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                CORPORATIVO
+              </button>
+            </h3>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+            <div class="card-body">
+              <p>Podés obtener más información acerca de Zinke, Inc. en nuestra sección "Sobre Nosotros".</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
   <%- include("../partials/footer") %>
-  
-    <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"></script>
 
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
