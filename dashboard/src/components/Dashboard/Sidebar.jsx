@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logoDH from '../../assets/images/imagen-header.png'
+import zinke from '../../assets/images/imagen-header.png'
 export const SideBar = function () {
     
     return (
 
-<ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul className="navbar-nav   sidebar sidebar-black accordion" id="accordionSidebar">
     { /* Sidebar */}
 
     {/* Sidebar - Brand */}
     <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div className="sidebar-brand-icon">
-            <img className="w-50" src= {logoDH} alt="Digital House" />
+            <img className="w-50" src= {zinke} alt="zinke" />
         </div>
     </a>
 
@@ -48,11 +48,15 @@ export const SideBar = function () {
 
     {/* Nav Item - Tables */}
     <li className="nav-item">
+        <Link className="nav-link" to="/buscar">
+            <i className="fas fa-fw fa-table"></i>
+            <span> SEARCH</span></Link>
+    </li>
+    <li className="nav-item">
         <a className="nav-link" href="/">
             <i className="fas fa-fw fa-table"></i>
             <span>Ventas</span></a>
     </li>
-
     {/* Divider */}
     <hr className="sidebar-divider d-none d-md-block"/>
     {/* End of Sidebar */}

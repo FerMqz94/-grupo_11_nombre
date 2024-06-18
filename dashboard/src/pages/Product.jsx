@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../assets/css/App.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { Container } from "@mui/system";
-// import PropTypes from 'prop-types'
-// import { TableHead } from '../components/Products/TableHead';
 
 const Product = () => {
   const [statesProducts, setStatesProducts] = useState({
@@ -17,25 +15,23 @@ const Product = () => {
     rows: [],
   });
 
+  const [searchTerm, setSearchTerm] = useState(""); // State for search term
+
   useEffect(() => {
     const endpoint = "http://localhost:3030/api/admin/products";
+
     const getProducts = async () => {
       try {
-        const {
-          ok,
-          products = [],
-          msg = null,
-        } = await fetch(endpoint).then((res) => res.json());
-        // quizas no funcione
+        const response = await fetch(endpoint);
+        const { ok, products = [], msg = null } = await response.json();
 
         if (!ok) throw new Error(msg);
 
-        ok &&
         setStatesProducts({
-            ...statesProducts,
-            products: products,
-            loading: false,
-          });
+          ...statesProducts,
+          products,
+          loading: false,
+        });
       } catch (error) {
         setStatesProducts({
           ...statesProducts,
@@ -48,90 +44,82 @@ const Product = () => {
   }, []);
 
   useEffect(() => {
-    
-    const dataObjProduct = Object.entries(statesProducts.products.length ? statesProducts.products[0] : {})
-   
-    const listWrite = ["id","name","price","description"];
-    const headerNameTable = {id:"ID",name:"NOMBRE",price:"PRECIO",description:"DESCRIPCION"}
-    const columnsFormat = dataObjProduct
-    .filter(([key,value]) => listWrite.includes(key))
+    const dataObjProduct = statesProducts.products.length
+      ? Object.entries(statesProducts.products[0])
+      : [];
 
-    .map(([key, value]) => {
-      return {
+    const listWrite = ["id", "name", "price", "description"];
+    const headerNameTable = {
+      id: "ID",
+      name: "NOMBRE",
+      price: "PRECIO",
+      description: "DESCRIPCION",
+    };
+
+    const columnsFormat = dataObjProduct
+      .filter(([key, value]) => listWrite.includes(key))
+      .map(([key, value]) => ({
         field: key,
         headerName: headerNameTable[key],
         width: 150,
         type: typeof value,
-        editable: true
-      }
-    })
-    
-    const rowsFormat = [];
-    statesProducts.products
-    .forEach((product) => {
-      const objData = {};
-      Object.entries(product).forEach(([key,value]) => {
-        if(listWrite.includes(key)) {
-          objData[key] = value;
-        }
-      });
-      rowsFormat.push(objData);
-    })
+        editable: true, // Adjust as needed
+      }));
+
+    // Filter products based on search term
+    const filteredProducts = statesProducts.products.filter((product) =>
+      Object.values(product)
+        .join("")
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+
+    const rowsFormat = filteredProducts.map((product) => ({
+      ...product, // Extract all product properties
+    }));
 
     setDataGrid({
       rows: rowsFormat,
-      columns: columnsFormat
-    })    
-  }, [statesProducts.products]);
+      columns: columnsFormat,
+    });
+  }, [statesProducts.products, searchTerm]);
 
-
-  const rowProduct = [
-    {
-      id: 1,
-      name: "Remera",
-      price: 1000,
-      description: "Descripcion de la remera"
-    },
-  ];
-
-  const columnsProducts = [
-    {
-      field: "id",
-      headerName: "ID",
-      width: 150,
-      type: "number"
-    },
-    {
-      field: "title",
-      headerName: "Titulo",
-      width: 150,
-      type: "string"
-    },
-  ];
-
-
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
 
   return (
     <>
-    <h1 className="text-center my-4">LISTA DE PRODUCTOS</h1>
-    <Container maxWidth="lg" className="d-flex justify-content-center">
-      <div className="w-100" style={{ height: 400 }}>
-        <DataGrid
-          rows={dataGrid.rows}
-          columns={dataGrid.columns}
-          initialState={{
-            pagination: {
-              paginationModel: { page: 0, pageSize: 5 },
-            },
-          }}
-          pageSizeOptions={[5, 10]}
-          checkboxSelection
-        />
-      </div>
-    </Container>
-  </>
+      <h1 className="text-center my-4">LISTA DE PRODUCTOS</h1>
+      <Container maxWidth="lg" className="d-flex justify-content-center">
+        <div className="mb-3">
+          <input
+            type="text"
+            placeholder="Buscar productos..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+        </div>
+        <div className="w-100" style={{ height: 400 }}>
+          <DataGrid
+            rows={dataGrid.rows}
+            columns={dataGrid.columns}
+            initialState={{
+              pagination: {
+                paginationModel: { page: 0, pageSize: 5 },
+              },
+            }}
+            pageSizeOptions={[5, 10]}
+            checkboxSelection
+          />
+        </div>
+      </Container>
+    </>
   );
 };
 
-Product.propTypes = {};
 export default Product;
+
+
+
+
