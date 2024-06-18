@@ -25,6 +25,10 @@ module.exports = (req, res) => {
   })
   .catch(error => {
     console.error("Error al buscar el producto:", error);
-    res.status(500).json({ ok: false, error: "Error interno del servidor" });
+    // res.status(500).json({ ok: false, error: "Error interno del servidor" }); comentado 6/16/24 para intentar mejorarlo para el dashboard
+    res.status(err.status || 500).json({
+      ok: false,
+      msg: err.message
+    });
   });
 };

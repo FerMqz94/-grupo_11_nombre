@@ -2,6 +2,10 @@ const { getOrder } = require('../../utils');
 const getUrlOrigin = require('../../utils/getUrlOrigin');
 const { literal } = require("sequelize");
 module.exports = async (req, res) => {
+
+
+    const originServer = () => `${req.protocol}://${req.get("host")}`
+
     try {
         const [orders, isCreate] = await getOrder(req)
 
@@ -13,14 +17,15 @@ module.exports = async (req, res) => {
                 include: [
                     {
                         association: "products",
-                 
-                        // include: [{
+                        include:  "images"
+                        // [{
                         //     association: "images",
-                        //     attributes: {
-                        //         include:
-                        //             [[literal(`CONCAT('${getUrlOrigin(req)}/api/producto-detalle/', +)`), "+",]],
-                        //     },
-                        // }],
+                        //     // attributes: {
+                        //     //     include: [[literal(`CONCAT( '${getUrlOrigin(req)}/api/producto-detalle/image', name)`), "name"]]
+                        //     // },
+                        // }]
+                        ,
+
                         through: {
                             attributes: ["quantity", "id_color", "id_size"]
                         },
@@ -37,3 +42,4 @@ module.exports = async (req, res) => {
     }
     //res.status(500).json({ok: false,msg: "ok"})
 }
+
