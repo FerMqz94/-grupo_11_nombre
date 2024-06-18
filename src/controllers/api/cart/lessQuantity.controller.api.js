@@ -18,17 +18,35 @@ module.exports = async (req, res) => {
                 ]
                 
             },
-            // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
         })
 
 
+let algo = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
         // return res.json(recond)
+        // if (recond.quantity > 1) {
+        //     algo = recond.quantity--
+        //     // await recond.save();
+        //     await algo  
+        // }
+        // return res.json(algo)
 
-        if (recond.quantity > 1) {
-            recond.quantity--
-            await recond.save();
-        }
+        db.Orders_Products.update(
+            {
+                quantity: algo
+            },
+            {
+            where: {
+                [Op.and]: [
+                    {
+                        id_order: orders.id,
+                    },
+                    {
+                        id_product: id,
+                    }
+                ]
+            }
+        })
 
 
         res.status(200).json({

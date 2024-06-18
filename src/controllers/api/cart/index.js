@@ -1,3 +1,5 @@
+const clearProductsController = require("./clearProducts.controller");
+
 module.exports = {
     getOrder: require("./getOrder.controller.api"),
     addProductToOrder: require("./addProductToOrder.controller.api"),
@@ -6,8 +8,8 @@ module.exports = {
     lessQuantity: require("./lessQuantity.controller.api"),
     canceledOrder: require("./canceledOrder.controller.api"),
     completedOrder: require("./completedOrder.controller.api"),
-    colorProductOrder: require("./colorProductOrder.controller"),
+    colorProductOrder: require("./ColorProductOrder.controller"),
     ziseProductOrder: require("./sizeProductOrder.controller"),
-
+    clearProducts: require("./clearProducts.controller")
 
 }

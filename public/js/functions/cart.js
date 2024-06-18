@@ -1,4 +1,4 @@
-// 1:00:00
+// 1:33:31
 
 const $ = (element) => document.querySelector(element)
 
@@ -14,18 +14,18 @@ const server = "http://localhost:3030"
 let productsCart = [];
 
 
-const getShoppingCart = () => fetch(`${server}/api/carrito?id_user=1`).then(res => res.json())
+const getShoppingCart = (server) => fetch(`${server}/api/carrito?id_user=1`).then(res => res.json())
 const getCartSructure = (p) => {
 
     function color(a) {
-        if (a == p.colors[0].id) {
+        if (p.Orders_Products.id_color == p.colors[0].id) {
             return p.colors[0].hexadecimal
-        } else if (a == p.colors[1].id) {
+        } else if (p.Orders_Products.id_color == p.colors[1].id) {
             return p.colors[1].hexadecimal
-        } else if (a == p.colors[2].id) {
+        } else if (p.Orders_Products.id_color == p.colors[2].id) {
             return p.colors[2].hexadecimal
         } else {
-            return "none"
+            return ""
         }
     }
 
@@ -53,6 +53,8 @@ const getCartSructure = (p) => {
     const color3Exist = (p.colors[2] && p.colors[2].hexadecimal) ? "revert" : "none";
     const color3Name = (p.colors[2] && p.colors[2].hexadecimal) ? p.colors[2].name : "";
 
+    // ${color(p.Orders_Products.id_color >= 1 ? p.Orders_Products.id_color : 0)}
+    // ${converterMoneyArs(p.price)}
     return `
             <div class="info-compra">
                             <div class="info-datos-img">
@@ -60,22 +62,17 @@ const getCartSructure = (p) => {
                                 <img src="${server}/api/producto-detalle/image/${p.images[0].name}" alt="imagen-de-carrito" class="img-carrito">
                                 <div class="producto-info">
                                     <p class="datos-producto">${p.name}</p>
-                                    <p class="datos-producto">precio $ ${converterMoneyArs(p.price)}</p>
-                                    <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} +</p>
+                                    <p class="datos-producto">precio $ ${p.price}</p>
+                                    <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
                                     <p class="datos-producto">talle: ${p.Orders_Products.id_size} </p>
-                                    <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: ${color(p.Orders_Products.id_color)};"></i>&nbsp;
+                                    <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: black;"></i>&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down"></i></label> </p>
                                                 <div class="colores-opciones">
                                                 <p style="display:${color1Exist}">${color1Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color1}; display:${color1Exist}"></i></p>
                                                 <p style="display:${color2Exist}">${color2Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color2}; display:${color2Exist}"></i></p>
                                                 <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
 
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
+
                                             </div>
                                 </div>
                             </div>
@@ -83,10 +80,19 @@ const getCartSructure = (p) => {
                         </div>`
 }
 const painCartsInView = (products = [], elementContainerProduct) => {
+    elementContainerProduct.innerHTML = ""
     productsCart.forEach((product) => {
 
         elementContainerProduct.innerHTML += getCartSructure(product)
     })
+}
+const processReloadCart = async (server, containerProducts,outputTotal) => {
+    const { ok,
+        data: { total, products }
+    } = await getShoppingCart(server)
+    ok && (productsCart = products);
+    painCartsInView(productsCart, containerProducts);
+    outputTotal.innerHTML = total
 }
 
 
@@ -97,36 +103,64 @@ window.addEventListener('load', async (event) => {
     const outputTotal = $('#total')
 
     try {
-        const { ok, data: { products } } = await getShoppingCart()
-
-        ok && (productsCart = products);
-
-        painCartsInView(productsCart, containerProducts)
-
-
-
-        // console.log({ ok, isCreate, data })
+        processReloadCart(server, containerProducts, outputTotal)
     }
     catch (error) {
         console.error(error.menssage)
     }
 
-
-
-})
-    const lessProduct = async (id) => {
+    binClearCart.addEventListener("click", async () => {
+        //   alert("alalla")
         try {
-            const { ok, msg } = await fetch(`${server}/api/carrito/less/${id}?id_user=1`,{
+            const containerProducts = $('#carrito')
+            const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
                 method: "PATCH"
             }).then(res => res.json())
             console.log(ok, msg)
-    
-            // ok && (productsCart = products);
-    
-            // painCartsInView(productsCart, containerProducts)
+            if (ok) {
+                processReloadCart(server, containerProducts,outputTotal)
+            }
         }
         catch (error) {
             console.error(error.menssage)
         }
+    })
+  
+})
+const lessProduct = async (id) => {
+    try {
+        const outputTotal = $('#total')
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/less/${id}?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts,outputTotal)
+        }
+
+
     }
+    catch (error) {
+        console.error(error.menssage)
+    }
+}
+const moreProduct = async (id) => {
+    try {
+        const outputTotal = $('#total')
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/more/${id}?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts,outputTotal)
+        }
+
+
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+}
 // odio la vida y a todos por igual 

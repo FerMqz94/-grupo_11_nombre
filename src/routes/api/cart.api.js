@@ -1,6 +1,6 @@
 
 const router = require("express").Router()
-const { getOrder, addProductToOrder, removeProductToOrder, moreQuantity,lessQuantity, canceledOrder, completedOrder, colorProductOrder, ziseProductOrder } = require("../../controllers/api/cart")
+const { getOrder, addProductToOrder, removeProductToOrder, moreQuantity,lessQuantity, canceledOrder, completedOrder, colorProductOrder, ziseProductOrder, clearProducts } = require("../../controllers/api/cart")
 
 
 router.get("/", getOrder);
@@ -8,6 +8,8 @@ router.get("/", getOrder);
 router.patch("/add/:id", addProductToOrder);
 
 router.patch("/remove/:id", removeProductToOrder);
+// clearProducts
+router.patch("/removeAll", clearProducts);
 
 router.patch("/more/:id", moreQuantity);
 

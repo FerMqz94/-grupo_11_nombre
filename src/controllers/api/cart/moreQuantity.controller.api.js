@@ -21,21 +21,26 @@ module.exports = async (req, res) => {
 
 
         // return res.json(recond)
-        recond.quantity++
-        await recond.save();
+        let algo = recond.quantity + 1
+        // await recond.save();
 
-        // orders = await orders.reload({
-        //     include: [
-        //         {
-        //             association: "products",
-        //             througth: {
-        //                 attrubutes: ["quantity"]
-        //             }
-        //         }]
-        // });
-        // const total = getOrder(orders.products);
-        // orders.total = total;
-        // await orders.save();
+
+        db.Orders_Products.update(
+            {
+                quantity: algo
+            },
+            {
+            where: {
+                [Op.and]: [
+                    {
+                        id_order: orders.id,
+                    },
+                    {
+                        id_product: id,
+                    }
+                ]
+            }
+        })
 
         res.status(200).json({
             ok: true,
