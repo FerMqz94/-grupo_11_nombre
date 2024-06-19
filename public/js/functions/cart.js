@@ -1,4 +1,42 @@
-// 1:33:31
+// `
+//             <div class="info-compra"> 
+//                             <div class="info-datos-img">
+//                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
+//                                 <img src="${server}/api/producto-detalle/image/${p.images[0].name}" alt="imagen-de-carrito" class="img-carrito">
+//                                 <div class="producto-info">
+//                                     <p class="datos-producto">${p.name}</p>
+//                                     <p class="datos-producto">precio $ ${p.price}</p>
+//                                     <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
+//                                     <p class="datos-producto">talle: ${p.Orders_Products.id_size} </p>
+//                                     <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: ${p.id};"></i>&nbsp;
+//                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down"></i></label> </p>
+//                                                 <div class="colores-opciones">
+
+//                                                 <p style="display:${color1Exist}">
+//                                                 <button onclick="changeColor(${p.id},${color1Info})">
+//                                                 ${color1Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color1}; display:${color1Exist}"></i>
+//                                                 </button>
+//                                                 </p>
+
+//                                                 <p style="display:${color2Exist}">
+//                                                 <button onclick="changeColor(${p.id},${color2Info})">
+//                                                 ${color2Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color2}; display:${color2Exist}"></i>
+//                                                 </button>
+//                                                 </p>
+
+//                                                 <p style="display:${color3Exist}">
+//                                                 <button onclick="changeColor(${p.id},${color3Info})">
+//                                                 ${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i>
+//                                                 </button>
+//                                                 </p>
+
+
+//                                             </div>
+//                                 </div>
+//                             </div>
+//                             <div><i class="fa-solid fa-trash"></i></div>
+//                         </div>`
+// aca dejaba anotado el minuto de la clase x las dudas si tanta curiosidad te da esta linea y yo solo la puedo eliminar
 
 const $ = (element) => document.querySelector(element)
 
@@ -40,23 +78,40 @@ const getCartSructure = (p) => {
     //         return "none"
     //     }
     // }
+    // function filterColors(id_color) {} 
+    // if (p.colors[0] && p.colors[0].hexadecimal) {
+    //     let color1 = p.colors[0].hexadecimal
+    //     let color1Exist = "revert"
+    // }
 
-    const color1 = (p.colors[0] && p.colors[0].hexadecimal) ? p.colors[0].hexadecimal : "";
-    const color1Exist = (p.colors[0] && p.colors[0].hexadecimal) ? "revert" : "none";
-    const color1Name = (p.colors[0] && p.colors[0].hexadecimal) ? p.colors[0].name : "";
+    const colorFilter = (id,opcion1, opcion2) => p.colors[id] && p.colors[id].hexadecimal ? opcion1 : opcion2;
 
-    const color2 = (p.colors[1] && p.colors[1].hexadecimal) ? p.colors[1].hexadecimal : "";
-    const color2Exist = (p.colors[1] && p.colors[1].hexadecimal) ? "revert" : "none";
-    const color2Name = (p.colors[1] && p.colors[1].hexadecimal) ? p.colors[1].name : "";
+    let color1 = colorFilter(0 ,p.colors[0].hexadecimal,"")
+    let color1Exist = colorFilter(0 ,"revert" , "none");
+    let color1Name =  colorFilter(0 ,p.colors[0].name , "");
+    let color1Info = colorFilter(0 ,p.colors[0].id , "");
 
-    const color3 = (p.colors[2] && p.colors[2].hexadecimal) ? p.colors[2].hexadecimal : "";
-    const color3Exist = (p.colors[2] && p.colors[2].hexadecimal) ? "revert" : "none";
-    const color3Name = (p.colors[2] && p.colors[2].hexadecimal) ? p.colors[2].name : "";
+    let color2 = colorFilter(1 ,p.colors[1].hexadecimal,"")
+    let color2Exist = colorFilter(1 ,"revert" , "none");
+    let color2Name = colorFilter(1 ,p.colors[1].name , "");
+    let color2Info = colorFilter(1 ,p.colors[1].id , "");
+
+    let color3 = colorFilter(2 ,p.colors[2].hexadecimal,"")
+    let color3Exist = colorFilter(2 ,"revert" , "none");
+    let color3Name = colorFilter(2 ,p.colors[2].name , "");
+    let color3Info = colorFilter(2 ,p.colors[2].id , "");
+
+    let color4 = colorFilter(3 ,p.colors[3].hexadecimal,"")
+    let color4Exist = colorFilter(3 ,"revert" , "none");
+    let color4Name = colorFilter(3 ,p.colors[3].name , "");
 
     // ${color(p.Orders_Products.id_color >= 1 ? p.Orders_Products.id_color : 0)}
     // ${converterMoneyArs(p.price)}
+
+    // <button onclick="changeColor(${p.id},${p.colors[0].id})">aaaaaaaa</button>
+
     return `
-            <div class="info-compra">
+            <div class="info-compra"> 
                             <div class="info-datos-img">
                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
                                 <img src="${server}/api/producto-detalle/image/${p.images[0].name}" alt="imagen-de-carrito" class="img-carrito">
@@ -65,12 +120,27 @@ const getCartSructure = (p) => {
                                     <p class="datos-producto">precio $ ${p.price}</p>
                                     <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
                                     <p class="datos-producto">talle: ${p.Orders_Products.id_size} </p>
-                                    <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: black;"></i>&nbsp;
+                                    <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: ${p.id};"></i>&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down"></i></label> </p>
                                                 <div class="colores-opciones">
-                                                <p style="display:${color1Exist}">${color1Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color1}; display:${color1Exist}"></i></p>
-                                                <p style="display:${color2Exist}">${color2Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color2}; display:${color2Exist}"></i></p>
-                                                <p style="display:${color3Exist}">${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i></p>
+
+                                                <p style="display:${color1Exist}">
+                                                <button onclick="changeColor(${p.id},${color1Info})">
+                                                ${color1Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color1}; display:${color1Exist}"></i>
+                                                </button>
+                                                </p>
+
+                                                <p style="display:${color2Exist}">
+                                                <button onclick="changeColor(${p.id},${color2Info})">
+                                                ${color2Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color2}; display:${color2Exist}"></i>
+                                                </button>
+                                                </p>
+
+                                                <p style="display:${color3Exist}">
+                                                <button onclick="changeColor(${p.id},${color3Info})">
+                                                ${color3Name}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${color3}; display:${color3Exist}"></i>
+                                                </button>
+                                                </p>
 
 
                                             </div>
@@ -92,7 +162,9 @@ const processReloadCart = async (server, containerProducts,outputTotal) => {
     } = await getShoppingCart(server)
     ok && (productsCart = products);
     painCartsInView(productsCart, containerProducts);
+
     outputTotal.innerHTML = total
+
 }
 
 
@@ -158,6 +230,56 @@ const moreProduct = async (id) => {
         }
 
 
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+    
+}
+const revomeProduct = async (id) => {
+    try {
+        const outputTotal = $('#total')
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/product/${id}?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts,outputTotal)
+        }
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+}
+const changeColor = async (id,id_color) => {
+    try {
+ 
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/product/${id}/color/${id_color}?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts,outputTotal)
+        }
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+}
+
+const changeZise = async (id,id_size) => {
+    try {
+
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/product/${id}/color/${id_size}?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts,outputTotal)
+        }
     }
     catch (error) {
         console.error(error.menssage)

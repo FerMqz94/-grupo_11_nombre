@@ -131,22 +131,42 @@
   font-size: 90%;
   width: 145px;
 }
+.main-carrito .productos .info-compra .producto-info .datos-producto button{
+    width: 25px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0px;
+}
 
 .producto-info .colores-opciones{
-  position: absolute;
-  background-color: white;
-  /* bottom: 24%; */
-  padding: 5px;
-  /* border-bottom: 1px solid; */
-  width: auto;
-  height: 50px;
-  margin-top: 120px;
-  width: 80px;
-  display: none;
-  overflow-y: auto;
-  box-shadow: 0 4px 8px rgb(0 0 0 / 41%);
-  border-radius: 10px;
-  scrollbar-width: none;
+  
+position: absolute;
+  
+background-color: white;
+  
+/* bottom: 24%; */
+  
+padding: 5px;
+  
+/* border-bottom: 1px solid; */
+  
+width: auto;
+  
+height: 50px;
+  
+margin-top: 120px;
+  
+width: 80px;
+  
+display: none;
+  
+overflow-y: auto;
+  
+box-shadow: 0 4px 8px rgb(0 0 0 / 41%);
+  
+border-radius: 10px;
+  
+scrollbar-width: none;
 }
 .producto-info .colores-opciones p{
   margin: 0
@@ -609,6 +629,7 @@ div .comprar:hover {
     margin: auto;
     margin-left: 5%;
     margin-top: 1%;
+    width: 50%;
   }
   .main-carrito .productos .info-compra {
   width: 350px;

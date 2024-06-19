@@ -20,8 +20,17 @@ module.exports = async (req, res) => {
             },
         })
 
+        let total = 0;
+        orders.products.forEach(({ price,
+            Orders_Products : { 
+                dataValues: { quantity }
+             }, }) => {
+            total += price * quantity;
+        })
+        orders.total = total;
+        await orders.save()
 
-let algo = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
+        let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
         // return res.json(recond)
         // if (recond.quantity > 1) {
@@ -33,7 +42,7 @@ let algo = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
         db.Orders_Products.update(
             {
-                quantity: algo
+                quantity: cantidad
             },
             {
             where: {
@@ -47,6 +56,7 @@ let algo = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
                 ]
             }
         })
+
 
 
         res.status(200).json({
