@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
                         // include:  ["colors"],
 
                         association: "products",
-                        include:  ["images", "colors"]
+                        include:  ["images", "colors", "sizes"]
                         // [{
                         //     association: "images",
                         //     // attributes: {
