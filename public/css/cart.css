@@ -168,6 +168,10 @@ border-radius: 10px;
   
 scrollbar-width: none;
 }
+.producto-info .colores-opciones p button{
+  background-color: transparent;
+  border: black;
+}
 .producto-info .colores-opciones p{
   margin: 0
 }
