@@ -15,7 +15,7 @@ module.exports = (req, res) => {
       name: product.name,
       description: product.description,
       price: product.price,
-      category: product.category ? product.category.name : null,
+      category: product.category ? product.category.name  : null,
       sizes: product.sizes.map(size => size.size),
       colors: product.colors.map(color => color.name),
       images: product.images.map(image => image.name) 
