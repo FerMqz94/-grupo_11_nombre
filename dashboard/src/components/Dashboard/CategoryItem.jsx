@@ -1,38 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const CategoryItem = ({ name  }) => {
+const CategoryItem = ({nameCat, number}) => {
+ 
   return (
-    <div className="col-lg-6 mb-4">
-      <div className="card bg-primary text-white shadow">
-        <div className="card-body">{name}</div>
-      
-      </div>
+    <div className="card bg-dark text-white shadow">
+    <div className='card-body'>{nameCat}:  <span className='pl-2'>{number}</span></div>
     </div>
   );
 };
 
 CategoryItem.propTypes = {};
 
-export default CategoryItem;
-
-// import React from "react";
-// import PropTypes from "prop-types";
-// const [lastProduct] = useState({});
-// const CategoryItem = ({ name, quantity }) => {
-//   return (
-//     <div className="col-lg-6 mb-4">
-//       <div className="card bg-dark text-white shadow">
-//         <div className="card-body">
-//           {lastProduct && ( // Check if lastProduct is available
-//             <>
-//               {name} ({quantity} productos)
-//             </>
-//           )}
-//           {!lastProduct && <p>Cargando producto...</p>} {/* Display a loading message if not available */}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default CategoryItem;
+export default CategoryItem

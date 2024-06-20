@@ -1,15 +1,15 @@
-
 import React, { useEffect, useState } from "react";
 import Alert from "../reutilice/Alert.jsx";
 
-import imagenFondo from "../../assets/images/mandalorian.jpg";
+///import imagenFondo from "../../assets/images/mandalorian.jpg";
 import { ContentData } from "./ContentData";
 import CategoryItem from "./CategoryItem.jsx";
 
 
+
 function ContentRowTop({ data }) {
   const [metrics, setMetrics] = useState([]);
-  const [categories, setcategories] = useState([]);
+//  const [categories, setcategories] = useState([]);
   const [lastProduct, setLastProduct] = useState({});
   const [loading, setLoading] = useState({
     metrics: true,
@@ -21,6 +21,15 @@ function ContentRowTop({ data }) {
     categories:"",
     lastProduct: ""
   });
+
+/// CÓDIGO PARA EL NÚMERO EN LA CATEGORÍA
+const [statesCountCategories, setStatesCountCategories] = useState({
+  loading: true,
+  countByCategory: {},
+  error: "",
+});
+
+
   useEffect(() => {
     const getMetrics = async () => {
       try {
@@ -45,10 +54,9 @@ function ContentRowTop({ data }) {
         });
       }
     };
- 
-    
+
   
-    const getCategories = async () => {
+    /*const getCategories = async () => {
       try {
         const endpoint =
           "http://localhost:3030/api/query?q=SELECT name FROM categories";
@@ -72,8 +80,33 @@ function ContentRowTop({ data }) {
           categories: error.message,
         });
       }
+    };*/
+
+    const getCountCategories = async () => {
+      try {
+        const endpoint = "http://localhost:3030/api/admin/products"; 
+        const { 
+          ok, 
+          countByCategory = {},
+          msg = null,
+        } = await fetch(endpoint).then((res) => res.json());
+
+        if (!ok) throw new Error(msg);
+        
+        ok &&
+        setStatesCountCategories({
+            loading: false,
+            countByCategory : countByCategory,
+          });
+      } catch (error) {
+        setStatesCountCategories({
+          ...statesCountCategories,
+          error: error.message,
+        });
+      }
     };
-    
+  
+  
   const getLastProduct = async () => {
     try {
       const endpoint =
@@ -104,10 +137,41 @@ function ContentRowTop({ data }) {
     }
   };
 
-  getCategories();
+
+  //getCategories();
+  getCountCategories();
   getMetrics();
   getLastProduct();
 }, []);
+
+
+
+
+const categoriesFormat = [];
+const nameFieldCategories = {
+  Abrigos:"abrigos",
+  Jeans: "jeans",
+  Buzos_sweaters: "buzosysweaters",
+  Remeras: "remeras",
+  Camisas_blusas: "camisasyblusas",
+  Tops: "tops",
+  Pantalones_shorts: "pantalonesyshorts",
+  Vestidos_polleras: "vestidosypolleras",
+  Cápsula_Beige: "capsulabeige",
+  Cápsula_American: "capsulaamerican",
+  Cápsula_3024: "capsula3024",
+  Sin_categoría: "sincategoria"
+  }
+  
+   Object.entries(statesCountCategories.countByCategory).forEach(([key, value]) => {
+     categoriesFormat.push({
+      key: key,
+      value: value
+     })
+   })
+  
+
+
 
   return (
     <React.Fragment>
@@ -155,7 +219,7 @@ function ContentRowTop({ data }) {
                     className="img-fluid px-3 px-sm-4 mt-3 mb-4"
                     style={{ width: 40 + "rem" }}
                     src={"http://localhost:3030/api/producto-detalle/image/" + lastProduct.image}
-                    alt=" campera jean "
+                    alt=" Star Wars - Mandalorian "
                   />
                 </div>
                 <p>
@@ -184,10 +248,22 @@ function ContentRowTop({ data }) {
                 </h5>
               </div>
               <div className="card-body">
-                <div className="row">
-                  {categories.map(({ name }) => (
-                    <CategoryItem key={name} name={name} />
-                  ))}
+                <div className="d-flex column">
+                
+                <div className="col-lg-12 mb-4">
+               {/*} {categories.map(({ name }) => (
+                    <div className="card bg-dark text-white shadow">
+                    <CategoryItem key={name} name={name}   />
+                    </div>
+                  ))}*/}
+                 {
+                  categoriesFormat.map(({key, value}) => (
+                      <CategoryItem key={key} number={value} nameCat={key}/>
+                  ))
+                 }
+                </div>
+              
+                
                 </div>
               </div>
             </div>
