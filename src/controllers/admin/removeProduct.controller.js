@@ -1,13 +1,24 @@
-const { saveData, loadData } = require('../../database')
 
-module.exports = (req,res) => {
-    const {id} = req.params
 
-    const products = loadData()
+const db = require('../../db/models');
 
-    const productLessOne = products.filter(p => p.id !== +id)
+module.exports = async (req, res) => {
+  const { id } = req.params; RL
 
-    saveData(productLessOne);
+  try {
+    
+    const product = await db.Product.findByPk(id);
 
-    res.redirect("/admin/productos")
+    if (!product) {
+      return res.status(404).send('Producto no encontrado');
+    }
+
+  
+    await product.destroy(); s
+
+    res.redirect('/admin/productos'); 
+  } catch (error) {
+    console.error(error); 
+    res.status(500).send('Se produjo un error al eliminar el producto');
+  }
 };

@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
         const product = orders.products.find(product => product.id === parseInt(id_product));
         const productColors = product ? product.productColors.map(color => ({ id_color: color.id_color })) : [];
 
-        // return res.json(product)
+        // return res.json(productColors)
         // console.log
         
 
@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
         const color14 = productColors.length > 13 ? productColors[13] : -1;
         const color15 = productColors.length > 14 ? productColors[14] : -1;
 
-        // return res.json(idColor)
+        // return res.json(color1)
 
         let Numcolor1 = parseInt(color1["id_color"])
         let Numcolor2 = parseInt(color2["id_color"])

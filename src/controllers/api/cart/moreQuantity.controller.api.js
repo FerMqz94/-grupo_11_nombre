@@ -20,22 +20,38 @@ module.exports = async (req, res) => {
         })
 
 
+        let total = 0;
+        orders.products.forEach(({ price,
+            Orders_Products : { 
+                dataValues: { quantity }
+             }, }) => {
+            total += price * quantity;
+        })
+        orders.total = total;
+        await orders.save()
         // return res.json(recond)
-        recond.quantity++
-        await recond.save();
+        let cantidad = recond.quantity + 1
+        // await recond.save();
 
-        // orders = await orders.reload({
-        //     include: [
-        //         {
-        //             association: "products",
-        //             througth: {
-        //                 attrubutes: ["quantity"]
-        //             }
-        //         }]
-        // });
-        // const total = getOrder(orders.products);
-        // orders.total = total;
-        // await orders.save();
+
+        db.Orders_Products.update(
+            {
+                quantity: cantidad
+            },
+            {
+            where: {
+                [Op.and]: [
+                    {
+                        id_order: orders.id,
+                    },
+                    {
+                        id_product: id,
+                    }
+                ]
+            }
+        })
+ 
+
 
         res.status(200).json({
             ok: true,

@@ -16,34 +16,55 @@
                     <p class="explorar-carrito">explorar</p>
                 </div>
                 <!-- cuando tenes algo en el carrito -->
-                 
+
                 <div class="vista-carrito-con-productos">
-                    
+
                     <div class="productos" id="carrito">
+
                         <!-- <div class="info-compra">
                             <div class="info-datos-img">
+
+                                <input type="checkbox" id="boton-carrito-colores-1" class="input-carrito-colores" style="display: none;">
+
                                 <img src="/images/products/norm-core.png" alt="imagen-de-carrito" class="img-carrito">
                                 <div class="producto-info">
                                     <p class="datos-producto">nombre del producto</p>
                                     <p class="datos-producto">precio $1</p>
                                     <p class="datos-producto">cantidad - 1 +</p>
                                     <p class="datos-producto">talle: 1 </p>
-                                    <p class="datos-producto">color: <i class="fa-regular fa-circle"
-                                            style="background-color: black;"></i></p>
+                                    <p class="datos-producto">color: 
+                                        <i class="fa-regular fa-circle" style="background-color: black;"></i>&nbsp;
+                                        <label for="boton-carrito-colores-1"><i class="fa-solid fa-caret-down"></i></label> 
+                                    </p>
+                                            <div class="colores-opciones">
+                                                <i class="fa-regular fa-circle" style="background-color: black;"></i>
+                                                <i class="fa-regular fa-circle" style="background-color: black;"></i>
+                                                <i class="fa-regular fa-circle" style="background-color: black;"></i>
+                                                <i class="fa-regular fa-circle" style="background-color: black;"></i>
+                                                <i class="fa-regular fa-circle" style="background-color: black;"></i>
+                                            </div>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-trash"></i>
+                            <div><i class="fa-solid fa-trash"></i></div>
                         </div> -->
-                    </div> 
 
-
-
-            
-<input type="checkbox" id="boton-carrito" class="input-carrito" style="display: none;">
-                    <div class="boton-de-cerrar">
                         
-                        <label  for="boton-carrito">  
-                             
+                        
+                        
+                     
+
+
+
+                    </div>
+
+
+                    <!-- <button onclick="lessProduct"></button> -->
+
+                    <input type="checkbox" id="boton-carrito" class="input-carrito" style="display: none;">
+                    <div class="boton-de-cerrar">
+
+                        <label for="boton-carrito">
+
                             <i class="fa-solid fa-chevron-up"></i>
                         </label>
                     </div>
@@ -56,7 +77,7 @@
                         <button id="comprar" class="comprar">comprar</button>
 
                         <div class="precio">
-                            <p class="texto-carrito">precio total: $<output id="total">0</output> </p>
+                            <p class="texto-carrito">total: $<output id="total">0</output> </p>
                         </div>
                     </div>
 
@@ -89,6 +110,7 @@
                                     <% }) %>
                     </div>
                 </section> -->
+
             </main>
 
             <%- include("../partials/footer") %>

@@ -201,29 +201,5 @@
       "new": false,
       "sale": false,
       "available": true
-   },
-   {
-      "id": 9,
-      "image": [
-         "image-1710445129750.png",
-         "image-1710445129751.png",
-         "image-1710445130260.jpg"
-      ],
-      "name": "Blazer oversize",
-      "description": "Blazer oversize tela sastrera con botones en la manga",
-      "featuredDescription": "Blazer oversize con mas estilo del que esperabas",
-      "category": "Abrigos",
-      "sizes": [
-         4,
-         2,
-         3
-      ],
-      "colors": [
-         1
-      ],
-      "price": 29000,
-      "new": false,
-      "sale": true,
-      "available": true
    }
 ]

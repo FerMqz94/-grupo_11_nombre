@@ -18,17 +18,45 @@ module.exports = async (req, res) => {
                 ]
                 
             },
-            // attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
         })
 
+        let total = 0;
+        orders.products.forEach(({ price,
+            Orders_Products : { 
+                dataValues: { quantity }
+             }, }) => {
+            total += price * quantity;
+        })
+        orders.total = total;
+        await orders.save()
 
+        let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
         // return res.json(recond)
+        // if (recond.quantity > 1) {
+        //     algo = recond.quantity--
+        //     // await recond.save();
+        //     await algo  
+        // }
+        // return res.json(algo)
 
-        if (recond.quantity > 1) {
-            recond.quantity--
-            await recond.save();
-        }
+        db.Orders_Products.update(
+            {
+                quantity: cantidad
+            },
+            {
+            where: {
+                [Op.and]: [
+                    {
+                        id_order: orders.id,
+                    },
+                    {
+                        id_product: id,
+                    }
+                ]
+            }
+        })
+
 
 
         res.status(200).json({
