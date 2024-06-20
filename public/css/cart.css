@@ -132,6 +132,19 @@
   width: 145px;
   white-space: nowrap;
 }
+
+.producto-info .talles-opciones {
+  position: absolute;
+  background-color: white;
+  border: solid 1px;
+  margin-top: 95px;
+  display: none;
+}
+
+.input-carrito-talles:checked ~  .producto-info .talles-opciones {
+  display: revert;
+}
+
 .main-carrito .productos .info-compra .producto-info .datos-producto button{
     width: 25px;
     background-color: transparent;
