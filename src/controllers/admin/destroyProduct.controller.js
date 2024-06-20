@@ -1,26 +1,25 @@
-const { loadData, saveData } = require("../../database");
-const path = require("path")
-const fs = require("fs")
-module.exports = (req,res) => {
-  const {id} = req.params
-  const products = loadData('products')
 
-  const productsLessOne = products.filter(p => p.id !== +id)
-  const productDestroy = products.find(p => p.id === +id)
+const db = require('../../db/models');
 
-  const pathFiles = productDestroy.image.map(filename =>
-    path.join(__dirname, "../../../public/images/products/", filename)
-  );
-  
-  pathFiles.forEach(pathFile => {
-    const existFile = fs.existsSync(pathFile);
-    if (existFile) {
-      fs.unlinkSync(pathFile);
+module.exports = async (req, res) => {
+  const { id } = req.params; RL
+
+  try {
+    
+    const product = await db.Product.findByPk(id);
+
+    if (!product) {
+      return res.status(404).send('Producto no encontrado');
     }
-  });
-  saveData(productsLessOne)
 
-  res.redirect("/admin/productos")
-}
+  
+    await product.destroy(); s
+
+    res.redirect('/admin/productos'); 
+  } catch (error) {
+    console.error(error); 
+    res.status(500).send('Se produjo un error al eliminar el producto');
+  }
+};
 
 
