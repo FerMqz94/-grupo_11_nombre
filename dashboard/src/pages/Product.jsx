@@ -182,7 +182,7 @@ function Products() {
         id: p.id,
         name: p.name,
         price: `$ ${p.price}`,
-
+        description: p.description.name,
         category: p.category.name,
         photo: urlApiImage 
     }))
@@ -198,7 +198,7 @@ function Products() {
                 </div>
             ),
         },
-        
+        { field: ' description', headerName: 'descripcion',  },
         { field: 'category', headerName: 'Categoria', flex: 1 },
         {
             field: 'photo',
