@@ -8,31 +8,55 @@ const converterMoneyArs = (num = 0) => num.toLocaleString({
 })
 
 
-
 const server = "http://localhost:3030"
 let productsCart = [];
 
 const getShoppingCart = (server) => fetch(`${server}/api/carrito?id_user=1`).then(res => res.json())
 const getCartSructure = (p) => {
 
-    function color(id) {
-        if (id == p.colors[0].id) {
-            return p.colors[0].hexadecimal
-        } else if (id == p.colors[1].id) {
-            return p.colors[1].hexadecimal
-        } else if (id == p.colors[2].id) {
-            return p.colors[2].hexadecimal
-        } else {
-            return "transparent"
+
+    let talle = (i) => `<p class="datos-producto"> <button onclick="changeZise(${p.id},${i})"> talle: ${i}</button></p>`
+
+    const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
+    const opcionSize = (id) => sizeExist(id) ? talle(id + 1) : "";
+
+    let generateSizes = (id) => {
+        let t = ''; 
+        for (let i = 0; i < 50; i++) {
+            t += opcionSize(i); 
         }
-    }
-    let colorSelect = (id) => color(id) !== "transparent" ? color(id) : "transparent"
+        return t;
+    };
+
+  
+    // const Talle1 = (infoTalle) => p.sizes[0].id
+
+
+
+    // ${talles(6)}
+
+    let Getcolor = (id) => {
+        let t = "transparent"; 
+        for (let i = 0; i < 50; i++) {
+            if (colorFilter(i)) {
+                if (id == p.colors[i].id ) {
+                    t = p.colors[i].hexadecimal
+                break
+                } 
+            }
+        }
+        return t;
+    };
+
+    let orderColor = p.Orders_Products.id_color > 0 ? p.Orders_Products.id_color : 1
+    let colorSelect = (id) => Getcolor(id) !== "transparent" ? Getcolor(id) : "transparent";
+
 
     const colorFilter = (id) => p.colors[id] && p.colors[id].hexadecimal
     let hexadecimalColor = (id) => colorFilter(id) ? p.colors[id].hexadecimal : ""
     let colorExist = (id) => colorFilter(id) ? "revert" : "none";
     let colorName = (id) => colorFilter(id) ? p.colors[id].name : "";
-    let colorInfo = (id) => colorFilter(id)  ? p.colors[id].id : "";
+    let colorInfo = (id) => colorFilter(id) ? p.colors[id].id : "";
 
     function opcionColor(i) {
         if (p.colors[i] && p.colors[i].hexadecimal) {
@@ -46,26 +70,37 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
             return ""
         }
     }
+    const circleColor = `<i class="fa-regular fa-circle" style="background-color: ${colorSelect(orderColor)};"></i>`
+    const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>`
+
+    let ColorsExist = () => {
+        let c = '';
+        for (let i = 0; i <= 50; i++) {
+            c += opcionColor(i)
+        }
+        return c;
+    };
+
 
     return `
             <div class="info-compra"> 
                             <div class="info-datos-img">
                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
+                                 <input type="checkbox" id="boton-carrito-talles-${p.id}" class="input-carrito-talles" style="display: none;">
                                 <img src="${server}/api/producto-detalle/image/${p.images[0].name}" alt="imagen-de-carrito" class="img-carrito">
                                 <div class="producto-info">
                                     <p class="datos-producto">${p.name}</p>
                                     <p class="datos-producto">precio $ ${p.price}</p>
                                     <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
-                                    <p class="datos-producto">talle: ${p.Orders_Products.id_size} </p>
-                                    <p class="datos-producto">color:  <i class="fa-regular fa-circle" style="background-color: ${colorSelect(p.Orders_Products.id_color)};"></i>&nbsp;
+                                    <p class="datos-producto">talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down"></i></label></p>
+                                    <div class="talles-opciones">
+                                    ${generateSizes()}
+
+                                    </div>
+                                    <p class="datos-producto">color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down"></i></label> </p>
                                                 <div class="colores-opciones">
-                                                ${opcionColor(0)}
-                                                ${opcionColor(1)}
-                                                ${opcionColor(2)}
-                                                ${opcionColor(3)}
-                                                ${opcionColor(4)}
-                                                ${opcionColor(5)}
+                                                ${ColorsExist()}
                                             </div>
                                 </div>
                             </div>
@@ -83,12 +118,12 @@ const painCartsInView = (products = [], elementContainerProduct) => {
         elementContainerProduct.innerHTML += getCartSructure(product)
     })
 }
-const processReloadCart = async (server, containerProducts,outputTotal) => {
+const processReloadCart = async (server, containerProducts, outputTotal) => {
     const { ok,
         data: { total, products }
     } = await getShoppingCart(server)
     ok && (productsCart = products);
-    painCartsInView(productsCart, containerProducts,outputTotal);
+    painCartsInView(productsCart, containerProducts, outputTotal);
 
     outputTotal.innerHTML = total
 
@@ -117,14 +152,14 @@ window.addEventListener('load', async (event) => {
             }).then(res => res.json())
             console.log(ok, msg)
             if (ok) {
-                processReloadCart(server, containerProducts,outputTotal)
+                processReloadCart(server, containerProducts, outputTotal)
             }
         }
         catch (error) {
             console.error(error.menssage)
         }
     })
-  
+
 })
 const lessProduct = async (id) => {
     try {
@@ -135,7 +170,7 @@ const lessProduct = async (id) => {
         }).then(res => res.json())
         console.log(ok, msg)
         if (ok) {
-            processReloadCart(server, containerProducts,outputTotal)
+            processReloadCart(server, containerProducts, outputTotal)
         }
 
 
@@ -153,7 +188,7 @@ const moreProduct = async (id) => {
         }).then(res => res.json())
         console.log(ok, msg)
         if (ok) {
-            processReloadCart(server, containerProducts,outputTotal)
+            processReloadCart(server, containerProducts, outputTotal)
         }
 
 
@@ -161,9 +196,9 @@ const moreProduct = async (id) => {
     catch (error) {
         console.error(error.menssage)
     }
-    
+
 }
-const changeColor = async (id,id_color) => {
+const changeColor = async (id, id_color) => {
     try {
         const outputTotal = $('#total')
         const containerProducts = $('#carrito')
@@ -172,7 +207,7 @@ const changeColor = async (id,id_color) => {
         }).then(res => res.json())
         console.log(ok, msg)
         if (ok) {
-            processReloadCart(server, containerProducts,outputTotal)
+            processReloadCart(server, containerProducts, outputTotal)
         }
     }
     catch (error) {
@@ -180,16 +215,16 @@ const changeColor = async (id,id_color) => {
     }
 }
 
-const changeZise = async (id,id_size) => {
+const changeZise = async (id, id_size) => {
     try {
         const outputTotal = $('#total')
         const containerProducts = $('#carrito')
-        const { ok, msg } = await fetch(`${server}/api/carrito/product/${id}/color/${id_size}?id_user=1`, {
+        const { ok, msg } = await fetch(`${server}/api/carrito/product/${id}/size/${id_size}?id_user=1`, {
             method: "PATCH"
         }).then(res => res.json())
         console.log(ok, msg)
         if (ok) {
-            processReloadCart(server, containerProducts,outputTotal)
+            processReloadCart(server, containerProducts, outputTotal)
         }
     }
     catch (error) {
@@ -206,7 +241,7 @@ const deleteProduct = async (id) => {
         }).then(res => res.json())
         console.log(ok, msg)
         // if (ok) {
-            processReloadCart(server, containerProducts,outputTotal)
+        processReloadCart(server, containerProducts, outputTotal)
         // }
     }
     catch (error) {
