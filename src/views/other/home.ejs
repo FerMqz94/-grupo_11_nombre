@@ -110,6 +110,21 @@
         <%  }  %>
         <% })  %>   
     </div>
+    <div class="contenedor-imagenes-sector-2">
+        <% products.forEach((p, index) => { %>
+        <%  if(index <= 12 && index > 3) { %>
+
+        
+          <%  p.images.forEach((img , inde) => { %>
+            <%  if(inde <= 0) { %>
+            <a href="/producto-detalle/<%= p.id %>">
+          <img class="foto img-home" src="/images/products/<%= img.name%>" alt="<%= img.name%>" /></a>
+          <%  }  %> 
+          <% })  %> 
+        <%  }  %>
+        <% })  %>   
+    </div>
+    
 
     <div class="contenedor-imagenes-sector-3">
       <img class="foto img-home" src="/images/other/capsula-1.png" alt="image-beige" />
