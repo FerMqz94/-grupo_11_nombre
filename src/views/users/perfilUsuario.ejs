@@ -99,12 +99,12 @@
 
                         <!---BOTÓN ENVIAR-->
                         <div class="contenedor-boton-register col-6 d-flex justify-content-center">
-                            <button type="submit" class="boton-register">ACTUALIZAR DATOS</button>
-                            <button type="submit" class="boton-register"><a href="/">CANCELAR</a></button>
+                            <button type="submit" class="boton-register boton-actualizar">ACTUALIZAR DATOS</button>
+                            <button type="submit" class="boton-register boton-cancelar"><a href="/">CANCELAR</a></button>
                         </div>                        
                     </form>
                     <form action="/users/eliminar-usuario/<%= user.id %>" method="post" class="modal-footer">
-                        <button type="submit" class="btn btn-info btn-danger-custom">Confirmar</button>
+                        <button type="submit" class="btn btn-primary btn-danger-custom">Confirmar</button>
                     </form>
                 </section>
 

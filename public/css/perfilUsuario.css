@@ -345,25 +345,31 @@ main.perfil-usuario {
     form.form-inputs-registro
     button.boton-register {
     /* margin-top: 20px; */
-  
     width: 280px;
-  
     height: 35px;
-  
-    border: none;
-  
-    background-color: var(--verde-azulado-claro);
-  
+    border: none;    
     color: var(--blanco);
-  
     border-radius: 5px;
-  
     /* font-size: var(--letra-mediana); */
-  
     letter-spacing: 1px;
-  
     transition: all 1s;
   }
+ 
+  main.perfil-usuario
+  section.section-inputs-registro
+  form.form-inputs-registro
+  button.boton-actualizar {
+    background-color: var(--verde-azulado);
+  }
+
+  main.perfil-usuario
+  section.section-inputs-registro
+  form.form-inputs-registro
+  button.boton-cancelar {
+    background-color: var(--molocoton-oscuro);
+  }
+
+
 
   main.perfil-usuario
   section.section-inputs-registro
@@ -655,11 +661,9 @@ main.perfil-usuario {
       div.contenedor-boton-register {
       display: flex;
       flex-direction: row;
-      margin-top: 60px;
-      width: 80%;
+      width: 100%;
       justify-content: center;
       padding-bottom: 40px;
-  
       /* border-bottom: 2px dashed var(--gris-claro); */
     }
   
@@ -667,10 +671,9 @@ main.perfil-usuario {
       section.section-inputs-registro
       form.form-inputs-registro
       button.boton-register {
-      margin-left: 5px;  
-      width: 300px;
+      margin: 0px 40px 0px 40px;
+      width: 200px;
       height: 50px;
-      font-size: var(--letra-grande);
     }
   
     /*--------------REGISTRARSE CON REDES SOCIALES------------------*/
@@ -747,7 +750,6 @@ main.perfil-usuario {
       section.section-inputs-registro
       form.form-inputs-registro
       div.contenedor-boton-register {
-      padding-bottom: 60px;
     }
   
     main.perfil-usuario
