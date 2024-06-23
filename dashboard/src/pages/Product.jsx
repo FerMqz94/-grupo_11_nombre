@@ -123,261 +123,194 @@
 
 
 
-// import React from 'react'
-// import { DataGrid } from '@mui/x-data-grid';
-// import { useEffect, useState } from 'react';
-// // import '../assets/css/products.css'
-// import { Button } from '@mui/material';
-// import Dialog from '@mui/material/Dialog';
-// import DialogActions from '@mui/material/DialogActions';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
-// import DialogTitle from '@mui/material/DialogTitle';
-// import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react'
+import { DataGrid } from '@mui/x-data-grid';
+import { useEffect, useState } from 'react';
+// import '../assets/css/products.css'
+import { Button } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate, useParams } from 'react-router-dom';
 
-// function Products() {
+function Products() {
 
-//     const navigate = useNavigate()
+    const navigate = useNavigate()
 
-//     let [products, setProducts] = useState([])
+    let [products, setProducts] = useState([])
 
-//     const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false);
 
-//     const handleClickOpen = () => {
-//         setOpen(true);
-//     };
-
-//     const handleClose = () => {
-//         setOpen(false);
-//     };
-
-
-//     const urlApiProducts = 'http://localhost:3030/api/admin/products'
-//     const urlApiImage = 'http://localhost:3030/api/producto-detalle/image/image-1710443655501.png'
-
-//     useEffect(() => {
-//         fetch(urlApiProducts)
-//             .then(response => response.json())
-//             .then(data => setProducts(data))
-//     }, [])
-
-//     const prods = products.products || []
-
-//     function handleButtonDetail(id) {
-//         const url = 'http://localhost:3030/api/producto-detalle' + id
-//         window.open(url, '_blank')
-//     }
-
-
-//     const handleButtonEdit = (id) => {
-//         navigate(`/admin/products/edit/${id}`)
-//     }
-
-//     function handleButtonDelete(id) {
-
-//     }
-
-
-//     let rows = prods.map(p => ({
-//         id: p.id,
-//         name: p.name,
-//         price: `$ ${p.price}`,
-
-//         category: p.category.name,
-//         photo: urlApiImage 
-//     }))
-
-//     const columns = [
-//         { field: 'id', headerName: 'ID', width: 80 },
-//         { field: 'name', headerName: 'Nombre', flex: 1 },
-//         {
-//             field: 'price', headerName: 'Precio', width: 100,
-//             renderCell: (params) => (
-//                 <div style={{ width: '100%', textAlign: 'center' }}>
-//                     {params.value}
-//                 </div>
-//             ),
-//         },
-        
-//         { field: 'category', headerName: 'Categoria', flex: 1 },
-//         {
-//             field: 'photo',
-//             headerName: 'Imagen',
-//             width: 200,
-//             renderCell: (params) => (
-//                 <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
-//             ),
-//         },
-//         {
-//             field: 'ver',
-//             headerName: '',
-//             width: 120,
-//             renderCell: (params) => (
-//                 <div className='buttonDashboardContainer'>
-//                     <Button
-//                         variant="contained"
-//                         color="info"
-//                         onClick={() => handleButtonDetail(params.row.id)}
-//                     >
-//                         Ver
-//                     </Button>
-//                 </div>
-//             ),
-//         },
-//         {
-//             field: 'actionEdit',
-//             headerName: '',
-//             width: 120,
-//             renderCell: (params) => (
-//                 <div className='buttonDashboardContainer'>
-//                     <Button
-//                         variant="contained"
-//                         color="success"
-//                         onClick={() => handleButtonEdit(params.row.id)}
-//                     >
-//                         Editar
-//                     </Button>
-//                 </div>
-//             ),
-//         },
-//         {
-//             field: 'actionDelete',
-//             headerName: '',
-//             width: 120,
-//             renderCell: (params) => (
-//                 <div className='buttonDashboardContainer'>
-//                     <Button
-//                         variant="contained"
-//                         color="error"
-//                         onClick={() => handleClickOpen()}
-//                     >
-//                         Eliminar
-//                     </Button>
-//                 </div>
-//             ),
-//         }
-//     ];
-
-
-
-//     return (
-//         <div className='DataGridContainer'>
-//             <h1 style={{textAlign: 'center'}}>Productos</h1>
-//             <div style={{ height: '600', width: '100%', overflow: 'scroll' }}>
-              
-//                 <DataGrid
-//                     rows={rows}
-//                     columns={columns}
-//                     rowHeight={80}
-//                     initialState={{
-//                         pagination: {
-//                             paginationModel: { page: 0, pageSize: 5 },
-                         
-//                         },
-//                     }}
-//                     pageSizeOptions={[5, 10]}
-//                     checkboxSelection
-//                 />
-//             </div>
-//             <Dialog
-//                 open={open}
-//                 onClose={handleClose}
-//                 aria-labelledby="alert-dialog-title"
-//                 aria-describedby="alert-dialog-description"
-//                 sx={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
-//             >
-//                 <DialogTitle id="alert-dialog-title">
-//                 </DialogTitle>
-//                 <DialogContent>
-//                     <DialogContentText id="alert-dialog-description">
-//                         Estas Seguro que deseas eliminar este producto?
-//                     </DialogContentText>
-//                 </DialogContent>
-//                 <DialogActions>
-//                     <Button
-//                         variant="contained"
-//                         color="info"
-//                         onClick={handleClose}>Cancelar</Button>
-//                     <Button
-//                         variant="contained"
-//                         color="error"
-//                         onClick={handleClose} autoFocus>
-//                         Confirmar
-//                     </Button>
-//                 </DialogActions>
-//             </Dialog>
-//         </div>
-//     )
-// }
-
-// export default Products
-
-
-import { Container, Grid, Typography } from "@mui/material";
-import React, { useState, useEffect } from "react";
-
-const ProductImages = () => {
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:3030/api/admin/products");
-        const data = await response.json();
-
-        if (!data.ok) {
-          throw new Error(data.msg || "Failed to fetch products");
-        }
-
-        setProducts(data.products);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
-      }
+    const handleClickOpen = () => {
+        setOpen(true);
     };
 
-    fetchProducts();
-  }, []);
+    const handleClose = () => {
+        setOpen(false);
+    };
 
-  if (isLoading) {
-    return <Typography variant="h6" component="div">Loading products...</Typography>;
-  }
 
-  if (error) {
-    return <Typography variant="h6" component="div">Error: {error}</Typography>;
-  }
+    const urlApiProducts = 'http://localhost:3030/api/admin/products'
+    const urlApiImage = 'http://localhost:3030/api/producto-detalle/image/image-1710443655501.png'
 
-  return (
-    <Container maxWidth="lg">
-      <Typography variant="h3" component="div" className="text-center my-4">
-        Lista de Productos con Imágenes
-      </Typography>
-      <Grid container spacing={2}>
-        {products.map((product) => (
-          <Grid item xs={12} md={6} key={product.id}>
-            <div className="product-card">
-              <img
-                src={`/api/producto-detalle/image/${product.image}`} // Assuming 'image' field holds the image filename
-                alt={product.name}
-                onError={(event) => {
-                  event.target.src = "/no-image.png"; // Default image if loading fails
-                }}
-              />
-              <div className="product-info">
-                <Typography variant="h5" component="div">
-                  {product.name}
-                </Typography>
-                {/* Add other product details as needed */}
-              </div>
+    useEffect(() => {
+        fetch(urlApiProducts)
+            .then(response => response.json())
+            .then(data => setProducts(data))
+    }, [])
+
+    const prods = products.products || []
+
+    function handleButtonDetail(id) {
+        const url = 'http://localhost:3030/api/producto-detalle' + id
+        window.open(url, '_blank')
+    }
+
+
+    const handleButtonEdit = (id) => {
+        navigate(`/admin/products/edit/${id}`)
+    }
+
+    function handleButtonDelete(id) {
+
+    }
+
+
+    let rows = prods.map(p => ({
+        id: p.id,
+        name: p.name,
+        price: `$ ${p.price}`,
+
+        category: p.category.name,
+        photo: urlApiImage 
+    }))
+
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 80 },
+        { field: 'name', headerName: 'Nombre', flex: 1 },
+        {
+            field: 'price', headerName: 'Precio', width: 100,
+            renderCell: (params) => (
+                <div style={{ width: '100%', textAlign: 'center' }}>
+                    {params.value}
+                </div>
+            ),
+        },
+        
+        { field: 'category', headerName: 'Categoria', flex: 1 },
+        {
+            field: 'photo',
+            headerName: 'Imagen',
+            width: 200,
+            renderCell: (params) => (
+                <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
+            ),
+        },
+        {
+            field: 'ver',
+            headerName: '',
+            width: 120,
+            renderCell: (params) => (
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="info"
+                        onClick={() => handleButtonDetail(params.row.id)}
+                    >
+                        Ver
+                    </Button>
+                </div>
+            ),
+        },
+        {
+            field: 'actionEdit',
+            headerName: '',
+            width: 120,
+            renderCell: (params) => (
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="success"
+                        onClick={() => handleButtonEdit(params.row.id)}
+                    >
+                        Editar
+                    </Button>
+                </div>
+            ),
+        },
+        {
+            field: 'actionDelete',
+            headerName: '',
+            width: 120,
+            renderCell: (params) => (
+                <div className='buttonDashboardContainer'>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={() => handleClickOpen()}
+                    >
+                        Eliminar
+                    </Button>
+                </div>
+            ),
+        }
+    ];
+
+
+
+    return (
+        <div className='DataGridContainer'>
+            <h1 style={{textAlign: 'center'}}>Productos</h1>
+            <div style={{ height: '100', width: '400', overflow: 'scroll' }}>
+              
+                <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    rowHeight={80}
+                    initialState={{
+                        pagination: {
+                            paginationModel: { page: 0, pageSize: 5 },
+                         
+                        },
+                    }}
+                    pageSizeOptions={[5, 10]}
+                    checkboxSelection
+                />
             </div>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
-  );
-};
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                sx={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+            >
+                <DialogTitle id="alert-dialog-title">
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        Estas Seguro que deseas eliminar este producto?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        variant="contained"
+                        color="info"
+                        onClick={handleClose}>Cancelar</Button>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={handleClose} autoFocus>
+                        Confirmar
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </div>
+    )
+}
 
-export default ProductImages;
+export default Products
+
+
+
