@@ -90,7 +90,6 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                                     <p class="datos-producto">talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
                                     <div class="talles-opciones">
                                     ${generateSizes()}
-
                                     </div>
                                     <p class="datos-producto">color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down boton-colores"></i></label> </p>
@@ -143,6 +142,23 @@ window.addEventListener('load', async (event) => {
             }).then(res => res.json())
             console.log(ok, msg)
             if (ok) {
+                processReloadCart(server, containerProducts, outputTotal)
+            }
+        }
+        catch (error) {
+            console.error(error.menssage)
+        }
+    })
+
+    binBuy.addEventListener("click", async () => {
+        try {
+            const containerProducts = $('#carrito')
+            const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
+                method: "PATCH"
+            }).then(res => res.json())
+            console.log(ok, msg)
+            if (ok) {
+                alert("orden completada con exito")
                 processReloadCart(server, containerProducts, outputTotal)
             }
         }

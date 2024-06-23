@@ -1,17 +1,17 @@
-let size_id = 0;
-let color_id = 0;
+let size_id = null;
+let color_id = null;
 
 const getSize = async (id) => {
     size_id = id;
     console.log(size_id) 
     return size_id
-}
+};
 
 const getcolor = (id) => {
     color_id = id;
     console.log(color_id) 
     return color_id
-}
+};
 
 const addProductCart = async (id,id_color,id_size) => {
 
