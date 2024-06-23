@@ -20,193 +20,199 @@
           <a class="blazer">
             <%= product.name %>
           </a>
-          </div>
+        </div>
 
 
-          <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
+        <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
 
 
 
 
-          <section class="visualizacion-producto">
+        <section class="visualizacion-producto">
 
-            <div class="contenedor-vistas-imagenes">
+          <div class="contenedor-vistas-imagenes">
 
-              <div class="glider-contain">
-                <div class="glider">
-                  <!--img 1-->
-                  <% product.images.forEach(img=> { %>
-                    <% if (img) { %>
-                      <div>
-                        <div class="contenedor-blazerOver-principal">
-                          <i class="fa-solid fa-magnifying-glass"></i>
-                          <i class="fa-regular fa-heart"></i>
-                          <div class="contenedor-img-principal">
-                            <img class="blazer-over-principal" src="/images/products/<%= img.name %>"
-                              alt="<%= product.name %>">
-                          </div>
+            <div class="glider-contain">
+              <div class="glider">
+                <!--img 1-->
+                <% product.images.forEach(img=> { %>
+                  <% if (img) { %>
+                    <div>
+                      <div class="contenedor-blazerOver-principal">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-regular fa-heart"></i>
+                        <div class="contenedor-img-principal">
+                          <img class="blazer-over-principal" src="/images/products/<%= img.name %>"
+                            alt="<%= product.name %>">
                         </div>
                       </div>
+                    </div>
+                    <% } %>
+                      <% }) %>
+              </div>
+              <% if (product.images[1]) { %>
+                <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
+                <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
+                <% } else {%>
+                  <% } %>
+                    <div rol="tablist" class="dots"></div>
+            </div>
+
+          </div>
+
+
+
+
+
+          <!--CONTENEDOR GLOBAL DE TODA LA DATA DEL PRODUCTO QUE NO SEAN FOTOS-->
+          <div class="contenedor-global-info-producto">
+
+
+            <!---CONTENEDOR DE DATOS PRINCIPALES DEL PRODUCTO NOMBRE-PRECIO-TALLE-->
+            <div class="nombre-precio-talle">
+              <h2 class="blazer-over">
+                <%= product.name%>
+              </h2>
+              <P class="precio">$<%= product.price %>
+              </P>
+              <P class="talle">TALLE: <span>2</span></p>
+
+
+              <div>
+                <p>Colores</p>
+                <% const colorNames=product.colors.map(color=> color.name) %>
+                  <% colors.forEach(c=> { %>
+                    <% if (colorNames.includes(c.name)) { %>
+                      <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %>
+                        style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width:
+                          25px;" onclick="getcolor('<%= c.id %>')">
+                      </button>
                       <% } %>
                         <% }) %>
-                </div>
-                <% if (product.images[1]) { %>
-                  <button aria-label="Previous" class="glider-prev"><i class="fa-solid fa-angle-left"></i></button>
-                  <button aria-label="Next" class="glider-next"><i class="fa-solid fa-angle-right"></i></button>
-                  <% } else {%>
-                    <% } %>
-                      <div rol="tablist" class="dots"></div>
               </div>
-
-            </div>
-
-
-
-
-
-            <!--CONTENEDOR GLOBAL DE TODA LA DATA DEL PRODUCTO QUE NO SEAN FOTOS-->
-            <div class="contenedor-global-info-producto">
-
-
-              <!---CONTENEDOR DE DATOS PRINCIPALES DEL PRODUCTO NOMBRE-PRECIO-TALLE-->
-              <div class="nombre-precio-talle">
-                <h2 class="blazer-over">
-                  <%= product.name%>
-                </h2>
-                <P class="precio">$<%= product.price %>
-                </P>
-                <P class="talle">TALLE: <span>2</span></p>
-
-
-                <div>
-                  <p>Colores</p>
-                  <% const colorNames=product.colors.map(color=> color.name) %>
-                    <% colors.forEach(c=> { %>
-                      <% if (colorNames.includes(c.name)) { %>
-                        <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %>
-                          style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width:
-                            25px;" onclick="getcolor('<%= c.id %>')">
+              <div class="talles">
+                <% const sizesSpanish={ 1: "uno" , 2: "dos" , 3: "tres" , 4: "cuatro" , 5: "cinco" }; %>
+                  <% const sizesId=product.sizes.map(size=> size.id) %>
+                    <% sizes.forEach(s=> { %>
+                      <div class="<%= sizesSpanish[s.id]%>">
+                        <button type="button" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>')">
+                          <%= s.size %>
                         </button>
-                        <% } %>
-                          <% }) %>
-                </div>
-                <div class="talles">
-                  <% const sizesSpanish={ 1: "uno" , 2: "dos" , 3: "tres" , 4: "cuatro" , 5: "cinco" }; %>
-                    <% const sizesId=product.sizes.map(size=> size.id) %>
-                      <% sizes.forEach(s=> { %>
-                        <div class="<%= sizesSpanish[s.id]%>">
-                          <button  type="button" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>')">
-                            <%= s.size %>
-                          </button>
-                        </div>
-                        <% }) %>
-                </div>
-
-                <div class="cantidad-carrito">
-                  <form class="form-carrito" action="/productDetail" method="POST">
-                    <label class="label-carrito" for="cantidad">CANTIDAD</label>
-                    <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
-                    <div class="contenedor-boton-carrito">
-                      <button type="submit" class="agregar-carrito" onclick="addProductCart('<%= product.id %>','<%= product.sizes[0].id %>','<%= product.colors[0].id %>')">
-                        <a href="#"> 
-                          AGREGAR AL CARRITO
-                        </a>
-                      </button>
-                    </div>
-                  </form>
-                </div>
-
-                <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
-
-                <div class="envio">
-                  <form action="/productDetail" method="POST" class="form-carrito">
-                    <i class="fa-solid fa-truck"></i>
-                    <label class="label-carrito" for="medioEnvio">Medios de envío</label>
-                    <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio"
-                      placeholder="Tu código postal">
-                    <button type="submit" class="boton-calcular">CALCULAR</button>
-                    <p class="nose-postal">No sé mi código postal</p>
-                  </form>
-                </div>
-
-                <!---CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA-->
-
-                <article class="info-adicional-compra">
-                  <div class="detalle-talles">
-                    <i class="fa-solid fa-ruler-combined"></i>
-                    <h3 class="talles">Guía de talles</h3>
-                    <i class="fa-solid fa-plus"></i>
-                  </div>
-                  <div class="cambiosDevo">
-                    <i class="fa-solid fa-arrows-rotate"></i>
-                    <h3 class="cambios">Cambios y devoluciones</h3>
-                    <i class="fa-solid fa-plus"></i>
-                  </div>
-                  <div class="formaPago">
-                    <i class="fa-solid fa-id-card"></i>
-                    <h3 class="formaPago">Forma de pago</h3>
-                    <i class="fa-solid fa-plus"></i>
-                  </div>
-                </article>
-
+                      </div>
+                      <% }) %>
               </div>
 
-          </section>
+              <div class="cantidad-carrito">
+                <!-- <form class="form-carrito" action="/productDetail" method="POST"> -->
+                <div class="form-carrito">
+                  <label class="label-carrito" for="cantidad">CANTIDAD</label>
+                  <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
+                  <div class="contenedor-boton-carrito">
+                    <button type="submit" class="agregar-carrito"
+                      onclick="addProductCart('<%= product.id %>','<%= product.colors[0].id %>','<%= product.sizes[0].size %>')">
+                      <!-- <a href="#">  -->
+                      AGREGAR AL CARRITO
+                      <!-- </a> -->
+                    </button>
+                  </div>
+                </div>
+                <!-- </form> -->
+              </div>
 
-          <!---------------DESCRIPCIÓN DESTACADA DEL PRODUCTO MÁS EXTENSA------->
+              <!---CONTENEDOR ENVIO Y MEDIOS DE ENVIO-->
+              <!-- ESTA PARTE FUE COMENTADA DEBIDO A QUE AUN NO LE DAN USO -->
 
-          <article class="contenedor-descripcion">
-            <p class="descripcion">
-              <%= product.description%>
-            </p>
-            <h5 class="descripcion-destacada">
-              <%= product.featuredDescription %>
-                </p>
-          </article>
+              <!-- <div class="envio">
+                <form action="#" method="POST" class="form-carrito"> SI SE VA USAR EL FORM ELIMINEN EL DIV CON LA CLASE form-carrito 
+                  <div  class="form-carrito"> SI NO USAN EL FOR ELIMINENLO Y POR PARTE DEL CSS ESTA SOLUCIONADO POR SI QUIEREN ELIMINAR ALGUNO DE LOS DOS
+                  <i class="fa-solid fa-truck"></i>
+                  <label class="label-carrito" for="medioEnvio">Medios de envío</label>
+                  <input class="input-carrito" type="number" name="envio" value="" id="medioEnvio"
+                    placeholder="Tu código postal">
+                  <button type="submit" class="boton-calcular">CALCULAR</button>
+                  <p class="nose-postal">No sé mi código postal</p>
+                </div>
+                </form> 
+              </div> -->
 
-          <!-----OTROS PRODUCTOS------->
-          <section class="otrosFav">
-            <h3 class="otrosFav">OTROS FAV</h3>
-            <div class="contenedor-otros-productos">
-              <% products.forEach((p, index)=> { %>
+              <!---CONTENEDOR DE INFO ADICIONAL PARA LA COMPRA-->
 
-                <% if(index <=3) { %>
-                  <article class="productos-otrosFav dos-continentes">
-                    <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>"
-                      alt="<%= p.name %>">
-                    <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
-                      <h4 class="h4-dos-conti">
-                        <%= p.name %>
-                      </h4>
-                    </a>
-                    <p class="p-dos-conti">$<%= p.price %>
-                    </p>
-                  </article>
-                  <% } %>
+              <article class="info-adicional-compra">
+                <div class="detalle-talles">
+                  <i class="fa-solid fa-ruler-combined"></i>
+                  <h3 class="talles">Guía de talles</h3>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="cambiosDevo">
+                  <i class="fa-solid fa-arrows-rotate"></i>
+                  <h3 class="cambios">Cambios y devoluciones</h3>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="formaPago">
+                  <i class="fa-solid fa-id-card"></i>
+                  <h3 class="formaPago">Forma de pago</h3>
+                  <i class="fa-solid fa-plus"></i>
+                </div>
+              </article>
 
-                    <% }) %>
             </div>
-          </section>
 
+        </section>
 
+        <!---------------DESCRIPCIÓN DESTACADA DEL PRODUCTO MÁS EXTENSA------->
 
-          <div class="boton-whatsapp">
-            <img src="/images/other/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo" />
+        <article class="contenedor-descripcion">
+          <p class="descripcion">
+            <%= product.description%>
+          </p>
+          <h5 class="descripcion-destacada">
+            <%= product.featuredDescription %>
+              </p>
+        </article>
+
+        <!-----OTROS PRODUCTOS------->
+        <section class="otrosFav">
+          <h3 class="otrosFav">OTROS FAV</h3>
+          <div class="contenedor-otros-productos">
+            <% products.forEach((p, index)=> { %>
+
+              <% if(index <=3) { %>
+                <article class="productos-otrosFav dos-continentes">
+                  <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>"
+                    alt="<%= p.name %>">
+                  <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
+                    <h4 class="h4-dos-conti">
+                      <%= p.name %>
+                    </h4>
+                  </a>
+                  <p class="p-dos-conti">$<%= p.price %>
+                  </p>
+                </article>
+                <% } %>
+
+                  <% }) %>
           </div>
+        </section>
 
 
-          <!--------IMAGEN DE CIERRE CON MENSAJE DE LA MARCA------------->
 
-          <div class="imagen-cierre">
-
-            <img src="/images/banner/mensaje-de-la-marca-desktop-tablet.png" alt="banner_inferior"
-              class="imagen-cierre-desk-tablet">
-            <img src="/images/banner/mensaje-de-la-marca-phone.png" alt="mensaje marca mobile"
-              class="imagen-cierre-mobile">
-          </div>
+        <div class="boton-whatsapp">
+          <img src="/images/other/whatsapp.png" class="whatsapp-simbol" alt="whatsapp-símbolo" />
+        </div>
 
 
-          <!-- este codigo es para indentificar una palabra dentro de un array -->
+        <!--------IMAGEN DE CIERRE CON MENSAJE DE LA MARCA------------->
+
+        <div class="imagen-cierre">
+
+          <img src="/images/banner/mensaje-de-la-marca-desktop-tablet.png" alt="banner_inferior"
+            class="imagen-cierre-desk-tablet">
+          <img src="/images/banner/mensaje-de-la-marca-phone.png" alt="mensaje marca mobile"
+            class="imagen-cierre-mobile">
+        </div>
+
+
+        <!-- este codigo es para indentificar una palabra dentro de un array -->
 
       </main>
       <%- include("../partials/footer") %>
