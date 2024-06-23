@@ -4,12 +4,11 @@
 /*-------MAIN -----VISTA PRODUCTO-----------*/
 main.vista-producto {
   font-family: var(--fuente-general);
-  width: 100;
+  /* width: 98%; */
 }
 
 main.vista-producto div.contenedor-busqueda {
   font-size: var(--letra-mas-pequeña);
-
   margin: 20px 0 20px 30px;
 }
 
@@ -24,7 +23,8 @@ main.vista-producto div.contenedor-busqueda a.blazer {
 }
 
 main.vista-producto section.visualizacion-producto {
-  /* width: 90%; */
+  width: 90%;
+  /* margin: 0 auto; */
 }
 
 /*-------CONTENEDOR DONDE VAN A ESTAR LAS IMAGENES DEL PRODUCTO----------*/
@@ -33,13 +33,15 @@ main.vista-producto
   section.visualizacion-producto
   div.contenedor-vistas-imagenes {
   margin: 0 0 10px 30px;
+  /* width: 90%; */
+  /* margin: 0 auto; */
 }
 
 main.vista-producto
   section.visualizacion-producto
   div.contenedor-vistas-imagenes
   div.contenedor-blazerOver-principal {
-  width: 90%;
+  /* width: 90%; */
   position: relative;
   height: 450px;
   /* height: 100%; */
@@ -49,6 +51,7 @@ main.vista-producto
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  /* margin-left: 10px; */
 }
 
 /*-ICONO LUPA---*/
@@ -172,13 +175,14 @@ main.vista-producto
   section.visualizacion-producto
   div.contenedor-global-info-producto {
   width: 90%;
+  margin: 0 auto;
 }
 
 /*---CONTENEDOR DE DATOS PRINCIPALES NOMBRE-PRECIO-TALLE---*/
 main.vista-producto section.visualizacion-producto div.nombre-precio-talle {
-  margin: 25px 0px 20px 30px;
-
-  width: 85%;
+  /* margin: 25px 0px 20px 30px; */
+  /* width: 100%; */
+  margin: 0 auto;
 }
 
 main.vista-producto
@@ -261,7 +265,7 @@ main.vista-producto
 /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
 
 main.vista-producto section.visualizacion-producto div.cantidad-carrito {
-  margin: 10px 0px 15px 30px;
+  /* margin: 10px 0px 15px 30px; */
   width: 95%;
   position: relative;
 }
@@ -373,10 +377,10 @@ main.vista-producto
 
 main.vista-producto section.visualizacion-producto div.envio {
   margin: 20px 0 20px 30px;
-
   width: 100%;
-
   padding: 0;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 main.vista-producto section.visualizacion-producto div.envio form.form-carrito {
@@ -491,8 +495,7 @@ main.vista-producto
 main.vista-producto
   section.visualizacion-producto
   article.info-adicional-compra {
-  margin: 50px 0px 30px 30px;
-
+  /* margin: 50px 0px 30px 30px; */
   font-size: var(--letra-mediana);
 }
 
@@ -943,8 +946,9 @@ main.vista-producto div.boton-whatsapp img.whatsapp-simbol:hover {
 /*----------CONTENEDOR DE LAS IMÁGENES DE CIERRE DE LA VISTA-------------*/
 
 main.vista-producto div.imagen-cierre {
-  width: 95%;
+  width: 90%;
   /* margin: 20px 0 0 30px; */
+  margin: 0 auto;
 }
 
 main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
@@ -952,7 +956,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-desk-tablet {
 }
 
 main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
-  width: 90%;
+  width: 100%;
 }
 
 /*------------------------------------------------------------------------------------------------*/
@@ -1147,7 +1151,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.visualizacion-producto div.talles div button {
     width: 35px;
-    height: 5%;
+    /* height: 5%; */
     margin-top: -4%;
   }
 

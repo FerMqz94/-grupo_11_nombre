@@ -20,7 +20,7 @@
           <a class="blazer">
             <%= product.name %>
           </a>
-          <!-- </div> -->
+          </div>
 
 
           <!---CONTENEDORES DE LAS VISTAS DEL PRODUCTO-->
@@ -85,7 +85,7 @@
                       <% if (colorNames.includes(c.name)) { %>
                         <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %>
                           style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width:
-                            25px;">
+                            25px;" onclick="getcolor('<%= c.id %>')">
                         </button>
                         <% } %>
                           <% }) %>
@@ -95,7 +95,7 @@
                     <% const sizesId=product.sizes.map(size=> size.id) %>
                       <% sizes.forEach(s=> { %>
                         <div class="<%= sizesSpanish[s.id]%>">
-                          <button type="button" class="boton-<%= sizesSpanish[s.id]%>">
+                          <button  type="button" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>')">
                             <%= s.size %>
                           </button>
                         </div>
@@ -107,7 +107,11 @@
                     <label class="label-carrito" for="cantidad">CANTIDAD</label>
                     <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
                     <div class="contenedor-boton-carrito">
-                      <button type="submit" class="agregar-carrito"><a href="/carrito">AGREGAR AL CARRITO</button>
+                      <button type="submit" class="agregar-carrito" onclick="addProductCart('<%= product.id %>','<%= product.sizes[0].id %>','<%= product.colors[0].id %>')">
+                        <a href="#"> 
+                          AGREGAR AL CARRITO
+                        </a>
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -213,6 +217,9 @@
 
         <!--SCRIPT DE CONFIGS GLIDER-->
         <script src="/js/configs/glider.js"></script>
+
+        <!-- PERMITE AÑADIR AL CARRITO -->
+        <script src="/js/functions/addProductToCart.js"></script>
 
 
   </body>

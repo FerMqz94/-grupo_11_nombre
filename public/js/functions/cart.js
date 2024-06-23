@@ -1,4 +1,4 @@
-// aca dejaba anotado el minuto de la clase x las dudas si tanta curiosidad te da esta linea y yo solo la puedo eliminar
+// 20:00
 
 const $ = (element) => document.querySelector(element)
 
@@ -14,54 +14,50 @@ let productsCart = [];
 const getShoppingCart = (server) => fetch(`${server}/api/carrito?id_user=1`).then(res => res.json())
 const getCartSructure = (p) => {
 
-
-    let talle = (i) => `<p class="datos-producto"> <button onclick="changeZise(${p.id},${i})"> talle: ${i}</button></p>`
-
-    const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
-    const opcionSize = (id) => sizeExist(id) ? talle(id + 1) : "";
+    function talle(i) {
+        return `<p class="datos-producto">
+        <button onclick="changeZise(${p.id},${i})"> talle: ${i}</button>
+        </p>`;
+    }
+   const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
+    const sizeInfo = (id) => sizeExist(id) ? p.sizes[id].id : ""; 
+    const opcionSize = (id) => sizeExist(id) ? talle(sizeInfo(id)) : "";
 
     let generateSizes = (id) => {
-        let t = ''; 
+        let t = '';
         for (let i = 0; i < 50; i++) {
-            t += opcionSize(i); 
-        }
-        return t;
-    };
-
-  
-    // const Talle1 = (infoTalle) => p.sizes[0].id
-
-
-
-    // ${talles(6)}
-
-    let Getcolor = (id) => {
-        let t = "transparent"; 
-        for (let i = 0; i < 50; i++) {
-            if (colorFilter(i)) {
-                if (id == p.colors[i].id ) {
-                    t = p.colors[i].hexadecimal
-                break
-                } 
+            if (p.sizes[i] && p.sizes[i].id) {
+                t += opcionSize(i);
             }
         }
         return t;
     };
 
-    let orderColor = p.Orders_Products.id_color > 0 ? p.Orders_Products.id_color : 1
+    let Getcolor = (id) => {
+        let t = "transparent";
+        for (let i = 0; i < 50; i++) {
+            if (colorFilter(i)) {
+                if (id == p.colors[i].id) {
+                    t = p.colors[i].hexadecimal
+                    break
+                }
+            }
+        }
+        return t;
+    };
+
+    let orderColor = p.Orders_Products.id_color > 0 ? p.Orders_Products.id_color : 1;
     let colorSelect = (id) => Getcolor(id) !== "transparent" ? Getcolor(id) : "transparent";
 
-
-    const colorFilter = (id) => p.colors[id] && p.colors[id].hexadecimal
-    let hexadecimalColor = (id) => colorFilter(id) ? p.colors[id].hexadecimal : ""
+    const colorFilter = (id) => p.colors[id] && p.colors[id].hexadecimal;
+    let hexadecimalColor = (id) => colorFilter(id) ? p.colors[id].hexadecimal : "";
     let colorExist = (id) => colorFilter(id) ? "revert" : "none";
     let colorName = (id) => colorFilter(id) ? p.colors[id].name : "";
     let colorInfo = (id) => colorFilter(id) ? p.colors[id].id : "";
 
     function opcionColor(i) {
         if (p.colors[i] && p.colors[i].hexadecimal) {
-            return `
-            <p>
+            return `<p>
 <button onclick="changeColor(${p.id},${colorInfo(i)})">
 ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: ${hexadecimalColor(i)}; display:${colorExist(i)}"></i>
 </button>
@@ -70,8 +66,8 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
             return ""
         }
     }
-    const circleColor = `<i class="fa-regular fa-circle" style="background-color: ${colorSelect(orderColor)};"></i>`
-    const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>`
+    const circleColor = `<i class="fa-regular fa-circle" style="background-color: ${colorSelect(orderColor)};"></i>`;
+    const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>`;
 
     let ColorsExist = () => {
         let c = '';
@@ -80,7 +76,6 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
         }
         return c;
     };
-
 
     return `
             <div class="info-compra"> 
@@ -92,13 +87,13 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                                     <p class="datos-producto">${p.name}</p>
                                     <p class="datos-producto">precio $ ${p.price}</p>
                                     <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
-                                    <p class="datos-producto">talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down"></i></label></p>
+                                    <p class="datos-producto">talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
                                     <div class="talles-opciones">
                                     ${generateSizes()}
 
                                     </div>
                                     <p class="datos-producto">color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
-                                        <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down"></i></label> </p>
+                                        <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down boton-colores"></i></label> </p>
                                                 <div class="colores-opciones">
                                                 ${ColorsExist()}
                                             </div>
@@ -117,7 +112,7 @@ const painCartsInView = (products = [], elementContainerProduct) => {
 
         elementContainerProduct.innerHTML += getCartSructure(product)
     })
-}
+};
 const processReloadCart = async (server, containerProducts, outputTotal) => {
     const { ok,
         data: { total, products }
@@ -126,10 +121,7 @@ const processReloadCart = async (server, containerProducts, outputTotal) => {
     painCartsInView(productsCart, containerProducts, outputTotal);
 
     outputTotal.innerHTML = total
-
-}
-
-
+};
 window.addEventListener('load', async (event) => {
     const containerProducts = $('#carrito')
     const binClearCart = $('#vaciar')
@@ -144,7 +136,6 @@ window.addEventListener('load', async (event) => {
     }
 
     binClearCart.addEventListener("click", async () => {
-        //   alert("alalla")
         try {
             const containerProducts = $('#carrito')
             const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
@@ -172,8 +163,6 @@ const lessProduct = async (id) => {
         if (ok) {
             processReloadCart(server, containerProducts, outputTotal)
         }
-
-
     }
     catch (error) {
         console.error(error.menssage)
@@ -190,8 +179,6 @@ const moreProduct = async (id) => {
         if (ok) {
             processReloadCart(server, containerProducts, outputTotal)
         }
-
-
     }
     catch (error) {
         console.error(error.menssage)
@@ -214,7 +201,6 @@ const changeColor = async (id, id_color) => {
         console.error(error.menssage)
     }
 }
-
 const changeZise = async (id, id_size) => {
     try {
         const outputTotal = $('#total')
@@ -231,7 +217,6 @@ const changeZise = async (id, id_size) => {
         console.error(error.menssage)
     }
 }
-
 const deleteProduct = async (id) => {
     try {
         const outputTotal = $('#total')
@@ -240,9 +225,7 @@ const deleteProduct = async (id) => {
             method: "PATCH"
         }).then(res => res.json())
         console.log(ok, msg)
-        // if (ok) {
         processReloadCart(server, containerProducts, outputTotal)
-        // }
     }
     catch (error) {
         console.error(error.menssage)
