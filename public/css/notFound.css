@@ -2,5 +2,8 @@
     font-size: 100px;
     color: var(--gris-pizarra);
     text-align: center;
-    margin: 300px 0px
+    margin: 300px 0px;
+ 
 }
+
+.error {margin-left: 26%;margin-top: -13%;}
