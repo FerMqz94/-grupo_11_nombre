@@ -52,5 +52,12 @@ const addProductCart = async (id,id_color,id_size) => {
       } catch (error) {
         console.error(error.message);
       };
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "producto agregado al carrito con exito",
+        showConfirmButton: false,
+        timer: 1500
+      });
 
 }

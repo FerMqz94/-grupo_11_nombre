@@ -33,16 +33,9 @@ module.exports = async (req, res) => {
 
 
 
-        let total = 0;
-        orders.products.forEach(({ price,
-            Orders_Products : { 
-                dataValues: { quantity }
-             }, }) => {
-            total += price * quantity;
-        })
         // return res.json(orders)
 
-        // const total = getTotalOrder(orders.products);
+        const total = getTotalOrder(orders.products);
         orders.total = total;
         await orders.save()
 

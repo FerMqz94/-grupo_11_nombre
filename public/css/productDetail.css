@@ -1152,7 +1152,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     input.input-carrito {
     /* width: 170px; */
     height: 40px;
-    position: absolute;
+    /* position: absolute; */
     bottom: 75px;
     left: 1px;
     border: 2px solid var(--gris-claro);
@@ -1578,7 +1578,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   }
 
   main.vista-producto section.visualizacion-producto {
-    /* margin-left: 0px; */
+    margin-left: auto 0;
   }
 
   /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/
@@ -1588,6 +1588,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.contenedor-vistas-imagenes {
     margin-top: 20px;
     width: 42%;
+    margin-right: 30px;
   }
 
   main.vista-producto
@@ -1706,10 +1707,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.cantidad-carrito
     .form-carrito
     input.input-carrito {
-    bottom: 70px;
-
+    /* bottom: 70px; */
     width: 150px;
-
     height: 45px;
   }
 
@@ -1718,7 +1717,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     div.cantidad-carrito
     .form-carrito
     div.contenedor-boton-carrito {
-    margin-top: 40px;
+    /* margin-top: 40px; */
+    margin-top: 0;
   }
 
   main.vista-producto

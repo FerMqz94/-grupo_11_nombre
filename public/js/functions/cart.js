@@ -19,8 +19,8 @@ const getCartSructure = (p) => {
         <button onclick="changeZise(${p.id},${i})"> talle: ${i}</button>
         </p>`;
     }
-   const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
-    const sizeInfo = (id) => sizeExist(id) ? p.sizes[id].id : ""; 
+    const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
+    const sizeInfo = (id) => sizeExist(id) ? p.sizes[id].id : "";
     const opcionSize = (id) => sizeExist(id) ? talle(sizeInfo(id)) : "";
 
     let generateSizes = (id) => {
@@ -135,8 +135,27 @@ window.addEventListener('load', async (event) => {
     }
 
     binClearCart.addEventListener("click", async () => {
-        try {
+
+        // Swal.fire({
+        //     title: "Are you sure?",
+        //     text: "You won't be able to revert this!",
+        //     icon: "warning",
+        //     showCancelButton: true,
+        //     confirmButtonColor: "#3085d6",
+        //     cancelButtonColor: "#d33",
+        //     confirmButtonText: "Yes, delete it!"
+        //   }).then((result) => {
+        //     if (result.isConfirmed) {
+        //       Swal.fire({
+        //         title: "Deleted!",
+        //         text: "Your file has been deleted.",
+        //         icon: "success"
+        //       });
+        //     }
+        //   });
+        try {   
             const containerProducts = $('#carrito')
+            if (!productsCart.length) return
             const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
                 method: "PATCH"
             }).then(res => res.json())
@@ -158,7 +177,7 @@ window.addEventListener('load', async (event) => {
             }).then(res => res.json())
             console.log(ok, msg)
             if (ok) {
-                alert("orden completada con exito")
+
                 processReloadCart(server, containerProducts, outputTotal)
             }
         }

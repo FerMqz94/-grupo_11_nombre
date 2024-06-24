@@ -1,6 +1,7 @@
 const { Op, where } = require('sequelize')
 const db = require('../../../db/models')
 const { getOrder } = require('../../utils')
+const { getTotalOrder } = require('../../utils/getTotalOrder')
 module.exports = async (req, res) => {
     try {
         const { id } = req.params
@@ -20,29 +21,17 @@ module.exports = async (req, res) => {
             },
         })
 
-        let total = 0;
-        orders.products.forEach(({ price,
-            Orders_Products : { 
-                dataValues: { quantity }
-             }, }) => {
-            total += price * quantity;
-        })
-        orders.total = total;
-        await orders.save()
+
+
+
 
         let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
-        // return res.json(recond)
-        // if (recond.quantity > 1) {
-        //     algo = recond.quantity--
-        //     // await recond.save();
-        //     await algo  
-        // }
-        // return res.json(algo)
+  
 
         db.Orders_Products.update(
             {
-                quantity: cantidad
+                quantity: cantidad,
             },
             {
             where: {
@@ -56,8 +45,9 @@ module.exports = async (req, res) => {
                 ]
             }
         })
-
-
+        let total = getTotalOrder(orders.products)
+        orders.total = total;
+        await orders.save()
 
         res.status(200).json({
             ok: true,
