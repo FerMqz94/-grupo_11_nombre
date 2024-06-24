@@ -1,1 +1,96 @@
-/* Comentado porque tiene errores a solucionar */
+/* General */
+.body-list{
+  font-family: var(--fuente-general);
+  margin: 0;
+  padding: 0;
+  background-color: var(--gris-85);
+  color: var(--gris-pizarra);
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.body-list .page-content {
+  padding: 20px;
+}
+
+/* Estilos para las tarjetas de productos */
+.body-list .card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--blanco);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.body-list .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.body-list .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.body-list .card-body {
+  padding: 20px;
+}
+
+.body-list .card-title {
+  font-size: var(--letra-titular-menor);
+  color: var(--gris-pizarra);
+  margin-bottom: 10px;
+}
+
+.body-list .card-text {
+  font-size: var(--letra-mediana);
+  color: var(--gris-terciopelo);
+  margin-bottom: 15px;
+}
+
+.body-list .price {
+  font-size: var(--letra-mas-grande);
+  color: var(--verde-azulado);
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--blanco-almendra);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.body-list .btn-primary {
+  background-color: var(--verde-azulado);
+  border: 1px solid var(--verde-azulado);
+  color: var(--blanco);
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: var(--letra-pequeña);
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.body-list .btn-primary:hover {
+  background-color: var(--verde-azulado-claro);
+  border-color: var(--verde-azulado-claro);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .body-list .card {
+    flex-basis: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .body-list .card {
+    flex-basis: calc(100% - 30px);
+  }
+}
