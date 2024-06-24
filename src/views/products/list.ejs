@@ -8,17 +8,34 @@
     <%- include("../partials/header", {list : "black", registro: true,ingreso: true }) %>
   
 
-    <main class="page-content">
+    <main class="page-content" class= "row row-cols-1 row-cols-md-2 g-4">
         <% products.forEach(p => { %>
+          <%  p.images.forEach((img, inde) => { %>
+            <%  if(inde <= 0) { %>
+ <div class="card col-12 col-md-6 col-lg-4 display-flex " style="width: 18rem;">
+  <img src="/images/products/<%= img.name%>" class="card-img-top" style="height: 120px;object-fit: contain;"
+    alt="...">
+    <%  }  %> 
+    <% })  %> 
+  <div class="card-body">
+    <h5 class="card-title"><%= p.name %></h5>
+    <p class="card-text"><%= p.description %></p>
+      <span>$<%= p.price %></span>
+      
+    <a href="/productDetail/<%= p.id %>" class="btn btn-primary">Ver más </a>
+  </div>
+</div> 
+  <% }) %>     
+        <!-- </% products.forEach(p => { %>
             <div class="card">
-                <div class="content" data-bg-image="<%= p.images[0].name %>">
-                  <h2 class="title"><%= p.name %></h2>
-                  <p class="copy"><%= p.featuredDescription%></p>
-                  <p class="">$<%= p.price%></p>
+                <div class="content" data-bg-image="</%= p.images[0].name %>">
+                  <h2 class="title"></%= p.name %></h2>
+                  <p class="copy"></%= p.featuredDescription%></p>
+                  <p class="">$</%= p.price%></p>
                   <button class="btn">VER PRODUCTO</button>
                 </div>
             </div>
-        <% }) %>    
+        </% }) %>     -->
     </main>
 
   <%- include("../partials/footer") %>
