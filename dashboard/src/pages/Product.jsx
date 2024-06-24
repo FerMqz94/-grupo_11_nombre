@@ -182,7 +182,7 @@ function Products() {
         id: p.id,
         name: p.name,
         price: `$ ${p.price}`,
-        description: p.description.name,
+
         category: p.category.name,
         photo: urlApiImage 
     }))
@@ -198,7 +198,7 @@ function Products() {
                 </div>
             ),
         },
-        { field: ' description', headerName: 'descripcion',  },
+        
         { field: 'category', headerName: 'Categoria', flex: 1 },
         {
             field: 'photo',
@@ -263,7 +263,7 @@ function Products() {
     return (
         <div className='DataGridContainer'>
             <h1 style={{textAlign: 'center'}}>Productos</h1>
-            <div style={{ height: '600', width: '100%', overflow: 'scroll' }}>
+            <div style={{ height: '100', width: '400', overflow: 'scroll' }}>
               
                 <DataGrid
                     rows={rows}
