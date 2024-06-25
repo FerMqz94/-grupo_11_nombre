@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import zinke from '../../assets/images/imagen-header.png'
+import styles from '../../../public/css/Sidebar.module.css';
 export const SideBar = function () {
     
     return (
 
-<ul className="navbar-nav   sidebar sidebar-black accordion" id="accordionSidebar">
+<ul className={`navbar-nav sidebar sidebar-black accordion ${styles.fondo}`} id="accordionSidebar">
     { /* Sidebar */}
 
     {/* Sidebar - Brand */}
     <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
         <div className="sidebar-brand-icon">
-            <img className="w-50" src= {zinke} alt="zinke" />
+            <img className={`w-50 ${styles.logo}`} src= {zinke} alt="zinke" />
         </div>
     </a>
 
@@ -19,8 +20,8 @@ export const SideBar = function () {
     <hr className="sidebar-divider my-0" />
 
     {/* Nav Item - Dashboard */}
-    <li className="nav-item active">
-        <a className="nav-link" href="/">
+    <li className={`nav-item active ${styles.item}`}>
+        <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard - ZINKE</span></a>
     </li>
@@ -29,31 +30,31 @@ export const SideBar = function () {
     <hr className="sidebar-divider" />
 
     {/* Heading */}
-    <div className="sidebar-heading">Actions</div>
+    <div className={`sidebar-heading ${styles.link}`}>Actions</div>
 
     {/* Nav Item - Pages */}
-    <li className="nav-item">
-        <Link className="nav-link collapsed" to="/productos">
+    <li className={`nav-item ${styles.item}`}>
+        <Link className={`nav-link collapsed ${styles.link}`} to="/productos">
             <i className="fas fa-rectangle-list"></i>
             <span>Productos</span>
         </Link>
     </li>
 
     {/* Nav Item - Charts */}
-    <li className="nav-item">
-        <a className="nav-link" href="/">
+    <li className={`nav-item ${styles.item}`}>
+        <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-chart-area"></i>
             <span>Usuarios</span></a>
     </li>
 
     {/* Nav Item - Tables */}
-    <li className="nav-item">
-        <Link className="nav-link" to="/buscar">
+    <li className={`nav-item ${styles.item}`}>
+        <Link className={`nav-link ${styles.link}`} to="/buscar">
             <i className="fas fa-fw fa-table"></i>
             <span> SEARCH</span></Link>
     </li>
-    <li className="nav-item">
-        <a className="nav-link" href="/">
+    <li className={`nav-item ${styles.item}`}>
+        <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-table"></i>
             <span>Ventas</span></a>
     </li>

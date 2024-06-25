@@ -1,0 +1,50 @@
+:root {
+    /* TAMAÑO DE FUENTES */
+    --letra-grande: 20px;
+    --letra-mediana: 16px;
+    --letra-pequeña: 15px;
+    --letra-bastante-pequeña: 13px;
+    --letra-mas-pequeña: 11px;
+    --letra-mas-grande: 25px;
+    --letra-favMobile: 30px;
+    --letra-mayor-tamaño: 35px;
+    --letra-titular-menor: 40px;
+    --letra-titular-mayor: 50px;
+
+    /* COLORES */
+    --gris-claro: #b8b8b8;
+    --verde-azulado: #419197;
+    --blanco: #ffffff;
+    --turquesa: #32e0c4;
+    --negro: #000000;
+    --blanco-almendra: #ffefd6;
+    --molocoton-oscuro: #f99b7d;
+    --gris-pizarra: #212121;
+    --gris-terciopelo: #676767;
+    --gris85:#d9d9d9;
+    --verde-azulado-claro: #3ea1a0;
+    --gris74: #747474;
+    --transparente: #ffffff0e;
+    --transparente-oscuro: #ffffff2c;
+}
+
+.fondo {
+    background: linear-gradient(var(--verde-azulado-claro),var(--molocoton-oscuro));
+}
+
+.link {
+    color: var(--blanco-almendra);
+}
+
+.item {
+    color: var(--blanco-almendra);
+    background-color: var(--transparente);
+}
+
+.item :hover {
+    color: var(--gris-pizarra);
+    background: linear-gradient(var(--verde-azulado-claro),var(--molocoton-oscuro));    
+    font-size: 20px;
+    transition: 0.3s;
+
+}
