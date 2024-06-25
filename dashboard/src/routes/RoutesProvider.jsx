@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../pages/Root";
 import Dashboard from "../pages/Dashboard";
 import { routesProducts , } from "./RoutesProduct";
-import{routesSearch} from "./RouterSearch"
+import{routesUsers} from "./RouterUsers"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,9 +13,9 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       ...routesProducts,
-      ... routesSearch,
+      ... routesUsers,
     ],
   },
 ]);
 
-export const RouterProvider_ = () => <RouterProvider router={router} />;
+export const RouterProvider_ = () => < RouterProvider router={router} />;

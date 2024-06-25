@@ -41,16 +41,16 @@ export const SideBar = function () {
 
     {/* Nav Item - Charts */}
     <li className="nav-item">
-        <a className="nav-link" href="/">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Usuarios</span></a>
+        <Link className="nav-link" to="/usuarios">
+        <i class="fa-regular fa-user"></i>
+            <span>Usuarios</span></Link>
     </li>
 
     {/* Nav Item - Tables */}
     <li className="nav-item">
-        <Link className="nav-link" to="/buscar">
+        <a className="nav-link" to="/buscar">
             <i className="fas fa-fw fa-table"></i>
-            <span> SEARCH</span></Link>
+            <span> SEARCH</span></a>
     </li>
     <li className="nav-item">
         <a className="nav-link" href="/">

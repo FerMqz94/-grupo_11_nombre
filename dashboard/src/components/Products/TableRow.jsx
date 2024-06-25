@@ -5,7 +5,7 @@ export const TableRow = ({ id,title, duration, rating, genre, awards }) => {
   return (
     <tr>
       <td><Link to={`/productos/${id}`}>{id}</Link></td>
-      <td><Link to={`/buscar/${id}`}>{id}</Link></td>
+      <td><Link to={`/usuarios/${id}`}>{id}</Link></td>
       <td>Opcion</td>
       <td><h3>Opcion 1</h3></td>
       <td><h3>Opcion 2</h3></td>
