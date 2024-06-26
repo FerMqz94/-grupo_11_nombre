@@ -13,7 +13,7 @@ const getcolor = (id) => {
     return color_id
 };
 
-const addProductCart = async (id,id_color,id_size) => {
+const addProductCart = async (id,id_color,id_size, image) => {
 
     const server = "http://localhost:3030";
 
@@ -22,6 +22,7 @@ const addProductCart = async (id,id_color,id_size) => {
     let colorId = color_id > 0 ? color_id : id_color;
 
     console.log(id,sizeId, colorId)
+    console.log(image)
 
     try {
       const { ok, msg } = await fetch(`${server}/api/carrito/add/${id}?id_user=1`, {
@@ -53,11 +54,20 @@ const addProductCart = async (id,id_color,id_size) => {
         console.error(error.message);
       };
       Swal.fire({
+        width: 250,
         position: "top-end",
-        icon: "success",
+        // icon: "success",
+        imageUrl:`${server}/api/producto-detalle/image/${image}`,
+        imageWidth: 100,
+        imageHeight: 120,
         title: "producto agregado al carrito con exito",
+        html: `<a href="/carrito" class="ver-carrito"> ver carrito</a>`,
+        // titleFontSize: 10,
         showConfirmButton: false,
-        timer: 1500
+        timer: 3500,
+        customClass: {
+          title: 'alerta-carrito'
+      }
       });
 
 }

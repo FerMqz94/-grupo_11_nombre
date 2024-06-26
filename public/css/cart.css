@@ -145,6 +145,7 @@
   box-shadow: 0px 4px 9px rgb(0 0 0 / 41%);
   overflow-y: auto;
   height: 50px;
+  width: 80px;
 }
 
 .input-carrito-talles:checked ~  .producto-info .talles-opciones {
