@@ -70,7 +70,7 @@
                                     <% } %>
                                         <% } else { %>
                                           
-                                            <% if(locals.userLogin.id_rol == 2 ) {%>
+                                            <% if(locals.userLogin.id_rol === 2 ) {%>
 
                                                 <div class="perfil">
                                                     <a
@@ -162,7 +162,7 @@
                                     </a>
                                     <% } %>
                                         <% } else { %>
-                                            <% if(locals.userLogin?.rol=== 2) {%>
+                                            <% if(locals.userLogin.id_rol === 2) {%>
                                                 
                                                 <a href="/users/perfil-usuario/<%=locals.userLogin?.id%>">
                                                     <p class="texto-header"

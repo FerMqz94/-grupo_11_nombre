@@ -5,7 +5,7 @@ const { getTotalOrder } = require('../../utils/getTotalOrder')
 module.exports = async (req, res) => {
     try {
         const { id } = req.params
-        const [orders, isCreate] = await getOrder(req);
+        let [orders, isCreate] = await getOrder(req)
 
         const recond = await db.Orders_Products.findOne({
             where: {
@@ -22,6 +22,19 @@ module.exports = async (req, res) => {
         })
 
 
+        orders = await orders.reload({
+            include: [
+                {
+                    association: "products",
+                    through: {
+                        attributes: ["quantity", "id_color", "id_size"]
+                    },
+                }]
+        })
+        
+        let total = getTotalOrder(orders.products)
+        orders.total = total;
+        await orders.save()
 
 
         let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
@@ -44,9 +57,8 @@ module.exports = async (req, res) => {
                 ]
             }
         })
-        let total = getTotalOrder(orders.products)
-        orders.total = total;
-        await orders.save()
+
+
 
         res.status(200).json({
             ok: true,
