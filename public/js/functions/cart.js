@@ -87,13 +87,13 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                                 
                                 <div class="producto-info">
                                     <p class="datos-producto">${p.name}</p>
-                                    <p class="datos-producto">precio $ ${p.price}</p>
-                                    <p class="datos-producto">cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
-                                    <p class="datos-producto">talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
+                                    <p class="datos-producto">Precio $ ${p.price}</p>
+                                    <p class="datos-producto">Cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
+                                    <p class="datos-producto">Talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
                                     <div class="talles-opciones">
                                     ${generateSizes()}
                                     </div>
-                                    <p class="datos-producto">color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
+                                    <p class="datos-producto">Color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down boton-colores"></i></label> </p>
                                                 <div class="colores-opciones">
                                                 ${ColorsExist()}
@@ -141,20 +141,20 @@ window.addEventListener('load', async (event) => {
     binClearCart.addEventListener("click", async () => {
 
         Swal.fire({
-            title: "¿estas seguro?",
-            text: "¡no se puede revertir!",
+            title: "¿Estas seguro?",
+            text: "¡No se puede revertir!",
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
-            confirmButtonText: "si, ¡quiero eliminar todo!",
-            cancelButtonText: "cancelar",
+            confirmButtonText: "Si, ¡quiero eliminar todo!",
+            cancelButtonText: "Cancelar",
           }).then((result) => {
             if (result.isConfirmed) {
             deleteAllProducts()
               Swal.fire({
-                title: "¡eliminado!",
-                text: "vaciaste el carrito.",
+                title: "¡Eliminado!",
+                text: "Vaciaste el carrito.",
                 icon: "success"
               });
               processReloadCart(server, containerProducts, outputTotal)
