@@ -76,13 +76,15 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
         }
         return c;
     };
-
-    return `
+// <button onclick="productDetail('${p.name}','${p.images[0].name}')"></button>
+    return ` 
             <div class="info-compra"> 
                             <div class="info-datos-img">
                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
                                  <input type="checkbox" id="boton-carrito-talles-${p.id}" class="input-carrito-talles" style="display: none;">
+                                 
                                 <img src="${server}/api/producto-detalle/image/${p.images[0].name}" alt="imagen-de-carrito" class="img-carrito">
+                                
                                 <div class="producto-info">
                                     <p class="datos-producto">${p.name}</p>
                                     <p class="datos-producto">precio $ ${p.price}</p>
@@ -98,13 +100,15 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                                             </div>
                                 </div>
                             </div>
-                            <div>
+                            <div class="opciones">
                             <button onclick="deleteProduct(${p.id})">
                             <i class="fa-solid fa-trash"></i>
                             </button>
                             </div>
                         </div>`
 }
+
+
 const painCartsInView = (products = [], elementContainerProduct) => {
     elementContainerProduct.innerHTML = ""
     productsCart.forEach((product) => {
@@ -136,37 +140,40 @@ window.addEventListener('load', async (event) => {
 
     binClearCart.addEventListener("click", async () => {
 
-        // Swal.fire({
-        //     title: "Are you sure?",
-        //     text: "You won't be able to revert this!",
-        //     icon: "warning",
-        //     showCancelButton: true,
-        //     confirmButtonColor: "#3085d6",
-        //     cancelButtonColor: "#d33",
-        //     confirmButtonText: "Yes, delete it!"
-        //   }).then((result) => {
-        //     if (result.isConfirmed) {
-        //       Swal.fire({
-        //         title: "Deleted!",
-        //         text: "Your file has been deleted.",
-        //         icon: "success"
-        //       });
-        //     }
-        //   });
-        try {   
-            const containerProducts = $('#carrito')
-            if (!productsCart.length) return
-            const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
-                method: "PATCH"
-            }).then(res => res.json())
-            console.log(ok, msg)
-            if (ok) {
-                processReloadCart(server, containerProducts, outputTotal)
+        Swal.fire({
+            title: "¿estas seguro?",
+            text: "¡no se puede revertir!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "si, ¡quiero eliminar todo!",
+            cancelButtonText: "cancelar",
+          }).then((result) => {
+            if (result.isConfirmed) {
+            deleteAllProducts()
+              Swal.fire({
+                title: "¡eliminado!",
+                text: "vaciaste el carrito.",
+                icon: "success"
+              });
+              processReloadCart(server, containerProducts, outputTotal)
             }
-        }
-        catch (error) {
-            console.error(error.menssage)
-        }
+          });
+        // try {   
+        //     const containerProducts = $('#carrito')
+        //     if (!productsCart.length) return
+        //     const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
+        //         method: "PATCH"
+        //     }).then(res => res.json())
+        //     console.log(ok, msg)
+        //     if (ok) {
+        //         processReloadCart(server, containerProducts, outputTotal)
+        //     }
+        // }
+        // catch (error) {
+        //     console.error(error.menssage)
+        // }
     })
 
     binBuy.addEventListener("click", async () => {
@@ -265,5 +272,40 @@ const deleteProduct = async (id) => {
     catch (error) {
         console.error(error.menssage)
     }
+}
+
+const deleteAllProducts = async (id) => {
+    try {   
+        const containerProducts = $('#carrito')
+        if (!productsCart.length) return
+
+        const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        
+        console.log(ok, msg)
+        if (ok) {
+            processReloadCart(server, containerProducts, outputTotal)
+        }
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+
+}
+
+const productDetail =  (name,img,des) => {
+
+    console.log("ayhsgbagsgjhqas")
+
+    Swal.fire({
+        title: `${name}`,
+        text: `${name}`,
+        imageUrl: `${server}/api/producto-detalle/image/${img}`,
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: "Custom image"
+      });
+
 }
 // odio la vida y a todos por igual 

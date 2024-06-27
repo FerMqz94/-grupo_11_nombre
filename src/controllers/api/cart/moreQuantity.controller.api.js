@@ -21,20 +21,9 @@ module.exports = async (req, res) => {
         })
 
 
+        let cantidad = recond.quantity + 1;
 
-
-        // orders.products.forEach(({ price,
-        //     Orders_Products : { 
-        //         dataValues: { quantity }
-        //      }, }) => {
-        //     total += price * quantity;
-        // })
-
-
-
-        let cantidad = recond.quantity + 1
-
-        db.Orders_Products.update(
+        await db.Orders_Products.update(
             {
                 quantity: cantidad
             },
@@ -50,7 +39,15 @@ module.exports = async (req, res) => {
                 ]
             }
         })
-        
+        // await db.Orders.update(
+        //     {
+        //         total: total
+        //     },
+        //     {
+        //     where: {
+        //         id: orders.id
+        //     }
+        // })
         let total = getTotalOrder(orders.products);
         orders.total = total;
         await orders.save()

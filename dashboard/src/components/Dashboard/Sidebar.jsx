@@ -51,7 +51,7 @@ export const SideBar = function () {
     <li className={`nav-item ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} to="/buscar">
             <i className="fas fa-fw fa-table"></i>
-            <span> SEARCH</span></a>
+            <span> SEARCH</span></Link>
     </li>
     <li className={`nav-item ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} href="/">

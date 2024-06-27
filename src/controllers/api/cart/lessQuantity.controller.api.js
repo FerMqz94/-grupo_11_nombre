@@ -24,12 +24,11 @@ module.exports = async (req, res) => {
 
 
 
-
         let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
 
   
 
-        db.Orders_Products.update(
+        await db.Orders_Products.update(
             {
                 quantity: cantidad,
             },
