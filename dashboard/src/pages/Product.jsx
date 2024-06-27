@@ -138,7 +138,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 function Products() {
 
     const navigate = useNavigate()
-
+  
     let [products, setProducts] = useState([])
 
     const [open, setOpen] = useState(false);
@@ -153,7 +153,7 @@ function Products() {
 
 
     const urlApiProducts = 'http://localhost:3030/api/admin/products'
-    const urlApiImage = 'http://localhost:3030/api/producto-detalle/image/image-1710443655501.png'
+    const urlApiImage = "http://localhost:3030/api/admin/products/image-17"
 
     useEffect(() => {
         fetch(urlApiProducts)
@@ -184,7 +184,7 @@ function Products() {
         price: `$ ${p.price}`,
 
         category: p.category.name,
-        photo: urlApiImage 
+        photo: urlApiImage + p.image 
     }))
 
     const columns = [

@@ -42,14 +42,14 @@ export const SideBar = function () {
 
     {/* Nav Item - Charts */}
     <li className={`nav-item ${styles.item}`}>
-        <a className={`nav-link ${styles.link}`} href="/">
-            <i className="fas fa-fw fa-chart-area"></i>
-            <span>Usuarios</span></a>
+        <Link className={`nav-link ${styles.link}`} to="/usuarios">
+        <i className="fa-solid fa-user-tie"></i>
+            <span>Usuarios</span></Link>
     </li>
 
     {/* Nav Item - Tables */}
     <li className={`nav-item ${styles.item}`}>
-        <Link className={`nav-link ${styles.link}`} to="/buscar">
+        <a className={`nav-link ${styles.link}`} to="/buscar">
             <i className="fas fa-fw fa-table"></i>
             <span> SEARCH</span></a>
     </li>
