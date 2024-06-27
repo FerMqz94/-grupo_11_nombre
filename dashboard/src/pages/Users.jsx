@@ -1,124 +1,130 @@
-import React, { useState, useEffect } from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import { Container } from "@mui/system";
+// import React, { useState, useEffect } from "react";
+// import { DataGrid } from "@mui/x-data-grid";
+// import { Container } from "@mui/system";
 
-const Users = () => {
-  const [statesUsers, setStatesUsers] = useState({
-    loading: true,
-    users: [],
-    error: "",
-  });
+// const Users = () => {
+//   const [statesUsers, setStatesUsers] = useState({
+//     loading: true,
+//     users: [],
+//     error: "",
+//   });
 
-  const [dataGrid, setDataGrid] = useState({
-    columns: [],
-    rows: [],
-  });
+//   const [dataGrid, setDataGrid] = useState({
+//     columns: [],
+//     rows: [],
+//   });
 
-  const [searchTerm, setSearchTerm] = useState(""); 
+//   const [searchTerm, setSearchTerm] = useState(""); 
 
-  const urlApiUsers ='http://localhost:3030/api/users'; 
+//   const urlApiUsers ='http://localhost:3030/api/users'; 
 
-  useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const response = await fetch(urlApiUsers);
-        const { ok, data = [], msg = null } = await response.json();
-console.log(data);
-        if (!ok) throw new Error(msg);
-        console.log(data);
-        setStatesUsers({
-          ...statesUsers,
-          data,
-          loading: false,
-        });
-      } catch (error) {
-        setStatesUsers({
-          ...statesUsers,
-          error: error.message,
-        });
-      }
-    };
+//   useEffect(() => {
+//     const getUsers = async () => {
+//       try {
+//         const response = await fetch(urlApiUsers);
+//         const { ok, data = [], msg = null } = await response.json();
+// console.log(data);
+//         if (!ok) throw new Error(msg);
+//         console.log(data);
+//         setStatesUsers({
+//           ...statesUsers,
+//           data,
+//           loading: false,
+//         });
+//       } catch (error) {
+//         setStatesUsers({
+//           ...statesUsers,
+//           error: error.message,
+//         });
+//       }
+//     };
 
   
-    getUsers();
-  }, []);
+//     getUsers();
+//   }, []);
   
-  useEffect(() => {
-    const dataObjUser = statesUsers.users.length
-    ? Object.entries(statesUsers.users[0])
-    : [];
-    console.log(statesUsers);
-    const listWrite = ["id", "name", "email"]; 
-    const headerNameTable = {
-      id: "ID",
-      name: "Name",
-      email: "Email",
+//   useEffect(() => {
+//     const dataObjUser = statesUsers.users.length
+//     ? Object.entries(statesUsers.users[0])
+//     : [];
+//     console.log(statesUsers);
+//     const listWrite = ["id", "name", "email"]; 
+//     const headerNameTable = {
+//       id: "ID",
+//       name: "Name",
+//       email: "Email",
       
-    };
+//     };
     
-    const columnsFormat = dataObjUser
-    .filter(([key, value]) => listWrite.includes(key))
-    .map(([key, value]) => ({
-      field: key,
-      headerName: headerNameTable[key],
-      width: 150,
-      type: typeof value,
-      editable: true, 
-    }));
+//     const columnsFormat = dataObjUser
+//     .filter(([key, value]) => listWrite.includes(key))
+//     .map(([key, value]) => ({
+//       field: key,
+//       headerName: headerNameTable[key],
+//       width: 150,
+//       type: typeof value,
+//       editable: true, 
+//     }));
   
     
-    const filteredUsers = statesUsers.users.filter((users) =>
-      Object.values(users)
-        .join("")
-        .toLowerCase()
-        .includes(searchTerm.toLowerCase())
-    );
-    console.log(statesUsers);
-    const rowsFormat = filteredUsers.map((users) => ({
-      ...users, 
-    }));
+//     const filteredUsers = statesUsers.users.filter((users) =>
+//       Object.values(users)
+//         .join("")
+//         .toLowerCase()
+//         .includes(searchTerm.toLowerCase())
+//     );
+//     console.log(statesUsers);
+//     const rowsFormat = filteredUsers.map((users) => ({
+//       ...users, 
+//     }));
 
-    setDataGrid({
-      rows: rowsFormat,
-      columns: columnsFormat,
-    });
-  }, [statesUsers.users, searchTerm]);
+//     setDataGrid({
+//       rows: rowsFormat,
+//       columns: columnsFormat,
+//     });
+//   }, [statesUsers.users, searchTerm]);
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+//   const handleSearchChange = (event) => {
+//     setSearchTerm(event.target.value);
+//   };
 
-  return (
-    <>
-      <h1 className="text-center my-4">LISTA DE USUARIOS</h1>
-      <Container maxWidth="lg" className="d-flex justify-content-center">
-        <div className="mb-3">
-          <input
-            type="text"
-            placeholder="Buscar usuarios..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-          />
-        </div>
-        <div className="w-100" style={{ height: 400 }}>
-          <DataGrid
-            rows={dataGrid.rows}
-            columns={dataGrid.columns}
-            initialState={{
-              pagination: {
-                paginationModel: { page: 0, pageSize: 5 },
-              },
-            }}
-            pageSizeOptions={[5, 10]}
-            checkboxSelection
-          />
-        </div>
-      </Container>
-    </>
-  );
-};
+//   return (
+//     <>
+//       <h1 className="text-center my-4">LISTA DE USUARIOS</h1>
+//       <Container maxWidth="lg" className="d-flex justify-content-center">
+//         <div className="mb-3">
+//           <input
+//             type="text"
+//             placeholder="Buscar usuarios..."
+//             value={searchTerm}
+//             onChange={handleSearchChange}
+//           />
+//         </div>
+//         <div className="w-100" style={{ height: 400 }}>
+//           <DataGrid
+//             rows={dataGrid.rows}
+//             columns={dataGrid.columns}
+//             initialState={{
+//               pagination: {
+//                 paginationModel: { page: 0, pageSize: 5 },
+//               },
+//             }}
+//             pageSizeOptions={[5, 10]}
+//             checkboxSelection
+//           />
+//         </div>
+//       </Container>
+//     </>
+//   );
+// };
 
-export default Users;
+// export default Users;
+
+
+// src/Dashboard.js
+
+
+
 
 // import React from 'react'
 // import { useEffect, useState } from 'react';
