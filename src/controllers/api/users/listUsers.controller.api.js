@@ -1,11 +1,15 @@
 const db = require("../../../db/models")
+const {literal, Association} =require("sequelize")
 
 module.exports = (req,res) => {
     
   db.Users.findAndCountAll({
     include: ['rols','favorites','orders'],
     attributes:{
-      exclude: ["createdAt","updatedAt"]
+      exclude: ["createdAt","updatedAt", "password"],
+      include:[[literal("CONCAT('http://localhost:3030/api/users/', avatar)"),"avatar"]]
+        
+  
     }          
   })
   .then((users) => {

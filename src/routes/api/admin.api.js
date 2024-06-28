@@ -7,5 +7,5 @@ const {listApi, renderImgProduct, } = require("../../controllers/api/admin")
 router.post('/', storeApi),
 router.put('/:id', updateApi)
 router.get("/products", listApi);
-router.get("/products/:image", renderImgProduct)// /api/products/image
+router.get("/images/:image", renderImgProduct)// /api/products/image
 module.exports = router;
