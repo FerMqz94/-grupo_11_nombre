@@ -48,7 +48,7 @@ export const SideBar = function () {
     </li>
 
     {/* Nav Item - Tables */}
-    <li className={`nav-item ${styles.item}`}>
+    <li  className={`nav-item ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-table"></i>
             <span> SEARCH</span></a>

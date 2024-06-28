@@ -1,299 +1,181 @@
-// import React, { useState, useEffect } from "react";
-// import { DataGrid } from "@mui/x-data-grid";
-// import { Container } from "@mui/system";
-
-// const Users = () => {
-//   const [statesUsers, setStatesUsers] = useState({
-//     loading: true,
-//     users: [],
-//     error: "",
-//   });
-
-//   const [dataGrid, setDataGrid] = useState({
-//     columns: [],
-//     rows: [],
-//   });
-
-//   const [searchTerm, setSearchTerm] = useState(""); 
-
-//   const urlApiUsers ='http://localhost:3030/api/users'; 
-
-//   useEffect(() => {
-//     const getUsers = async () => {
-//       try {
-//         const response = await fetch(urlApiUsers);
-//         const { ok, data = [], msg = null } = await response.json();
-// console.log(data);
-//         if (!ok) throw new Error(msg);
-//         console.log(data);
-//         setStatesUsers({
-//           ...statesUsers,
-//           data,
-//           loading: false,
-//         });
-//       } catch (error) {
-//         setStatesUsers({
-//           ...statesUsers,
-//           error: error.message,
-//         });
-//       }
-//     };
-
-  
-//     getUsers();
-//   }, []);
-  
-//   useEffect(() => {
-//     const dataObjUser = statesUsers.users.length
-//     ? Object.entries(statesUsers.users[0])
-//     : [];
-//     console.log(statesUsers);
-//     const listWrite = ["id", "name", "email"]; 
-//     const headerNameTable = {
-//       id: "ID",
-//       name: "Name",
-//       email: "Email",
-      
-//     };
-    
-//     const columnsFormat = dataObjUser
-//     .filter(([key, value]) => listWrite.includes(key))
-//     .map(([key, value]) => ({
-//       field: key,
-//       headerName: headerNameTable[key],
-//       width: 150,
-//       type: typeof value,
-//       editable: true, 
-//     }));
-  
-    
-//     const filteredUsers = statesUsers.users.filter((users) =>
-//       Object.values(users)
-//         .join("")
-//         .toLowerCase()
-//         .includes(searchTerm.toLowerCase())
-//     );
-//     console.log(statesUsers);
-//     const rowsFormat = filteredUsers.map((users) => ({
-//       ...users, 
-//     }));
-
-//     setDataGrid({
-//       rows: rowsFormat,
-//       columns: columnsFormat,
-//     });
-//   }, [statesUsers.users, searchTerm]);
-
-//   const handleSearchChange = (event) => {
-//     setSearchTerm(event.target.value);
-//   };
-
-//   return (
-//     <>
-//       <h1 className="text-center my-4">LISTA DE USUARIOS</h1>
-//       <Container maxWidth="lg" className="d-flex justify-content-center">
-//         <div className="mb-3">
-//           <input
-//             type="text"
-//             placeholder="Buscar usuarios..."
-//             value={searchTerm}
-//             onChange={handleSearchChange}
-//           />
-//         </div>
-//         <div className="w-100" style={{ height: 400 }}>
-//           <DataGrid
-//             rows={dataGrid.rows}
-//             columns={dataGrid.columns}
-//             initialState={{
-//               pagination: {
-//                 paginationModel: { page: 0, pageSize: 5 },
-//               },
-//             }}
-//             pageSizeOptions={[5, 10]}
-//             checkboxSelection
-//           />
-//         </div>
-//       </Container>
-//     </>
-//   );
-// };
-
-// export default Users;
+import React from 'react'
+import { DataGrid } from '@mui/x-data-grid';
+import { useEffect, useState } from 'react';
+// import '../assets/css/products.css'
+import { Button } from '@mui/material';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
-// src/Dashboard.js
+const Users = () => {
+  let [users, setUsers] = useState([])
+
+const [open, setOpen] = useState(false);
+
+const handleClickOpen = () => {
+    setOpen(true);
+};
+
+const handleClose = () => {
+    setOpen(false);
+};
+
+const urlApiUsers = 'http://localhost:3030/api/users'
+
+useEffect(() => {
+    fetch(urlApiUsers)
+        .then(response => response.json())
+        .then(data => {setUsers(data)  
+})
+}, [])
+
+const infoUsers = users.data || []
+const listUsers = infoUsers.rows || []
+console.log(listUsers)
+//const listInfoUsers = infoUsers.rows
+//console.log(listInfoUsers)
+
+function handleButtonDetail(id) {
+  const url = 'http://localhost:3030/api/users/detail' + id
+  window.open(url, '_blank')
+}
 
 
+const handleButtonEdit = (id) => {
+ navigate(`/api/users/detail/edit/${id}`)
+}
 
+function handleButtonDelete(id) {
 
-// import React from 'react'
-// import { useEffect, useState } from 'react';
-// import { DataGrid } from '@mui/x-data-grid';
-// import { Maximize } from '@mui/icons-material';
+}
 
+let rows = listUsers.map(({id, name, username, email, avatar, rols}) => ({
+    id: id,
+    name: name,
+    username: username, 
+    email: email,
+    avatar: avatar,
+    rol: rols.name
+}))
 
-// function Users() {
-//     let [Users, setUsers] = useState([]);
+console.log(rows)
 
-//     const urlApiUsers = 'http://localhost:3030/api/users';
+const columns = [
+  { field: 'id', headerName: 'ID', width: 80 },
+  { field: 'name', headerName: 'Nombre', flex: 1 },
+  { field: 'username', headerName: 'Nombre de usuario', width: 100 },
+  { field: 'email', headerName: 'Email', flex: 1 },
+  {field: 'rol', headerName: 'Rol', width: 80,},
+  {
+      field: 'avatar',
+      headerName: 'Imagen',
+      width: 200,
+      renderCell: (params) => (
+          <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px", borderRadius: '50%' }} />
+      ),
+  },
+  {
+      field: 'ver',
+      headerName: '',
+      width: 120,
+      renderCell: (params) => (
+          <div className='buttonDashboardContainer'>
+              <Button
+                  variant="contained"
+                  color="info"
+                  onClick={() => handleButtonDetail(params.row.id)}
+              >
+                  Ver
+              </Button>
+          </div>
+      ),
+  },
+  {
+      field: 'actionEdit',
+      headerName: '',
+      width: 120,
+      renderCell: (params) => (
+          <div className='buttonDashboardContainer'>
+              <Button
+                  variant="contained"
+                  color="success"
+                  onClick={() => handleButtonEdit(params.row.id)}
+              >
+                  Editar
+              </Button>
+          </div>
+      ),
+  },
+  {
+      field: 'actionDelete',
+      headerName: '',
+      width: 120,
+      renderCell: (params) => (
+          <div className='buttonDashboardContainer'>
+              <Button
+                  variant="contained"
+                  color="error"
+                  onClick={() => handleClickOpen()}
+              >
+                  Eliminar
+              </Button>
+          </div>
+      ),
+  }
+];
 
-//     useEffect(() => {
-//         fetch(urlApiUsers)
-//             .then(response => response.json())
-//             .then(data => setUsers(data));
-//     }, []);
+  return (
+    <div className='DataGridContainer'>
+            <h1 style={{textAlign: 'center'}}>Usuarios</h1>
+            <div style={{ height: '100', width: '400', overflow: 'scroll' }}>
+              
+                <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    rowHeight={80}
+                    initialState={{
+                        pagination: {
+                            paginationModel: { page: 0, pageSize: 5 },
+                         
+                        },
+                    }}
+                    pageSizeOptions={[5, 10]}
+                    checkboxSelection
+                />
+            </div>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="alert-dialog-title"
+                aria-describedby="alert-dialog-description"
+                sx={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}
+            >
+                <DialogTitle id="alert-dialog-title">
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText id="alert-dialog-description">
+                        ¿Estas Seguro que deseas eliminar este usuario?
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        variant="contained"
+                        color="info"
+                        onClick={handleClose}>Cancelar</Button>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={handleClose} autoFocus>
+                        Confirmar
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </div>
+  )
+}
 
-//     console.log(Users.users);
-
-
-//     const columns = [
-//         { field: 'id', headerName: 'ID', width: 50 },
-//         { field: 'name', headerName: 'Nombre', width: 150 },
-//         { field: 'lastName', headerName: 'Apellido', width: 150 },
-//         { field: 'email', headerName: 'Email', width: 350 },
-//         // {
-//         //     field: 'photo',
-//         //     headerName: 'Imagen',
-//         //     width: 200,
-//         //     renderCell: (params) => (
-//         //         <img src={''} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px" }} />
-//         //     ),
-//         // },
-//       ];
-     
-//        const data = Users.users || []
-// console.log(data);
-//       const rows = data.map(u => (
-//         { id: u.id, name: u.name, lastName: u.surname, email: u.email }
-//       ))
-   
-
-//     return (
-//         <div style={{ width: '100%' }}>
-//             <h1 style={{textAlign: 'center'}}>Usuarios</h1>
-//         <DataGrid
-//           rows={rows}
-//           columns={columns}
-//           initialState={{
-//             pagination: {
-//               paginationModel: { page: 0, pageSize: 10 },
-//             },
-//           }}
-//           pageSizeOptions={[5, 10]}
-//           sx={{margin: '10px auto', width: '700px', minHeight: '500px', height: 'auto',}}
-//         //   checkboxSelection
-//         />
-//       </div>
-//     )
-// }
-
-// export default Users
-
-
-
-
-// import React, { useState, useEffect } from "react";
-// import { DataGrid } from "@mui/x-data-grid";
-// import { Container } from "@mui/system";
-
-// const Users = () => {
-//   const [users, setUsers] = useState([]); // Simplified state for users
-//   const [isLoading, setIsLoading] = useState(true); // Loading state flag
-//   const [error, setError] = useState(null); // Error state for error handling
-//   const [searchTerm, setSearchTerm] = useState(""); // Search input state
-
-//   const urlApiUsers = "http://localhost:3030/api/users"; // API endpoint
-
-//   // Improved error handling and loading state management
-//   useEffect(() => {
-//     const getUsers = async () => {
-//       try {
-//         const response = await fetch(urlApiUsers);
-//         if (!response.ok) {
-//           throw new Error(`API request failed with status ${response.status}`);
-//         }
-//         const data = await response.json();
-//         setUsers(data);
-//       } catch (err) {
-//         setError(err.message);
-//       } finally {
-//         setIsLoading(false);
-//       }
-//     };
-
-//     getUsers();
-//   }, []);
-
-//   // Search functionality with case-insensitive matching
-//   const filteredUsers = React.useMemo(() => {
-//     if (!searchTerm) return users;
-//     return users.filter((user) =>
-//       Object.values(user)
-//         .join("")
-//         .toLowerCase()
-//         .includes(searchTerm.toLowerCase())
-//     );
-//   }, [users, searchTerm]); // Optimized dependency array
-
-//   const handleSearchChange = (event) => {
-//     setSearchTerm(event.target.value);
-//   };
-
-//   // DataGrid columns based on user data structure
-//   const columns = React.useMemo(() => {
-//     const userKeys = users.length > 0 ? Object.keys(users[0]) : [];
-//     return userKeys.map((key) => ({
-//       field: key,
-//       headerName: key[0].toUpperCase() + key.slice(1), // Human-readable headers
-//       width: 150,
-//     }));
-//   }, [users]); // Only update columns when users change
-
-//   const content = (
-//     <>
-//       <h1 className="text-center my-4">LISTA DE USUARIOS</h1>
-//       <Container maxWidth="lg" className="d-flex justify-content-center">
-//         <div className="mb-3">
-//           <input
-//             type="text"
-//             placeholder="Buscar usuarios..."
-//             value={searchTerm}
-//             onChange={handleSearchChange}
-//           />
-//         </div>
-//         <div className="w-100" style={{ height: 400 }}>
-//           {isLoading ? (
-//             <p>Cargando usuarios...</p>
-//           ) : error ? (
-//             <p>Error: {error}</p>
-//           ) : (
-//             <DataGrid
-//               rows={filteredUsers}
-//               columns={columns}
-//               initialState={{
-//                 pagination: {
-//                   paginationModel: { page: 0, pageSize: 5 },
-//                 },
-//               }}
-//               pageSizeOptions={[5, 10]}
-//               checkboxSelection
-//             />
-//           )}
-//         </div>
-//       </Container>
-//     </>
-//   );
-
-//   return content;
-// };
-
-// export default Users;
-
-
-
-
-
-
-
-
-
+export default Users;

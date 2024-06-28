@@ -168,7 +168,7 @@ module.exports = (req, res) => {
               attributes: {
                 include: [
                   [     
-                    literal(`CONCAT('${originServer(req)}/api/admin/products/', Images.name)`),
+                    literal(`CONCAT('${originServer(req)}/api/admin/images/', Images.name)`),
                    "images",
                  ]
                ],

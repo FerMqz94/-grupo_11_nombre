@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
     // const colors = db.Orders.findOrCreate()
 
     try {
-        const [orders, isCreate] = await getOrder(req)
+        let [orders, isCreate] = await getOrder(req)
 
         const statusCode = isCreate ? 201 : 200;
 
@@ -19,23 +19,24 @@ module.exports = async (req, res) => {
                 // colors,
                 include: [
                     {
-                        // include:  ["colors"],
-
                         association: "products",
-                        include:  ["images", "colors", "sizes"]
-                        // [{
-                        //     association: "images",
-                        //     // attributes: {
-                        //     //     include: [[literal(`CONCAT( '${getUrlOrigin(req)}/api/producto-detalle/image', name)`), "name"]]
-                        //     // },
-                        // }]
-                        ,
+                        include: 
+                        [{
+                            association: "images",
+                            attributes: {
+                                include: [[literal(`CONCAT( '${getUrlOrigin(req)}/api/producto-detalle/image/', "name")`), "imgName",],],
+                                exclude: ['createdAt', 'updatedAt', 'deletedAt']
+                            },
 
+                        },{
+                            association:"colors",
+                            exclude: ['createdAt', 'updatedAt', 'deletedAt']
+                        }, "sizes"], 
                         through: {
                             attributes: ["quantity", "id_color", "id_size"]
                         },
                         attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
-                    }]
+                    },]
             }),
 
         })

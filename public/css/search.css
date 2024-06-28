@@ -40,9 +40,10 @@
     margin-left: 2%;
     }
     .nombre-busqueda h2{font-size: 23px;}
-  .resultados {
+  .resultados  {
+   
   }
-
+  .error { }
   .resultados .producto {
     width: 30%;
   }
