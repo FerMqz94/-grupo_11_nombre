@@ -943,12 +943,23 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 /*-------------------------------ALERTA CUANDO AGREGAS AL CARRITO----------------------------------*/
 
 .alerta-carrito{
-  font-size: 15px;
+  font-size: 90%;
 }
 .ver-carrito {
-  /* background-color: black; */
+color: white;
 }
-
+div:where(.swal2-container) .swal2-html-container{
+  /* font-size: 15px; */
+  padding: 5px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+  background-color: #000000;
+  width: 40%;
+}
+.ver-carrito:hover {
+  color: white;
+  }
 /*------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------*/
 /*---------------------------------MEDIA QUERY TABLET------------------------------------------*/
