@@ -38,23 +38,23 @@
         <div class="ul-menu">
 
 
-            <div class="home"><a href="<%= locals.home ? '#'  : '/' %>"><i class="fa-solid fa-house"
-                        style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;inicio</a></div>
+            <div class="seccion-burger-header"><a href="<%= locals.home ? '#'  : '/' %>"><i class="fa-solid fa-house"
+                        style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;Inicio</a></div>
 
-            <div class="productos">
+            <div class="seccion-burger-header">
                 <a href="<%= locals.productos ? '#'  : " /lista/productos" %>"><i class="fa-solid fa-list"
-                        style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;productos</a>
+                        style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;Productos</a>
             </div>
 
-            <div class="carrito">
+            <div class="seccion-burger-header">
                 <a href="<%= locals.carrito ? '#'  : " /carrito" %>"><i class="fa-solid fa-cart-shopping"
-                        style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;carrito</a>
+                        style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;Carrito</a>
             </div>
 
             <% if (!locals.userLogin) { %>
                 <% if (registro===false) { %>
                     <% } else { %>
-                        <div class="registro">
+                        <div class="seccion-burger-header">
                             <a href="/autenticacion/registrar"><i class="fa-solid fa-users"
                                     style='color: gray;'></i>&nbsp;Registrarse</a>
                         </div>
@@ -62,9 +62,9 @@
 
                             <% if (ingreso===false) { %>
                                 <% } else { %>
-                                    <div class="iniciar-session">
+                                    <div class="seccion-burger-header">
                                         <a href="/autenticacion/iniciar"><i class="fa-solid fa-key"
-                                                style='color: gray;'></i>&nbsp;iniciar
+                                                style='color: gray;'></i>&nbsp;Iniciar
                                             sesión</a>
                                     </div>
                                     <% } %>
@@ -72,23 +72,23 @@
                                           
                                             <% if(locals.userLogin.id_rol === 2 ) {%>
 
-                                                <div class="perfil">
+                                                <div class="seccion-burger-header">
                                                     <a
                                                         href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin.id %>"><i
                                                             class="fa-solid fa-user"
-                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;Ver
                                                         mi perfil</a>
                                                 </div>
 
-                                                <div class="vista-admin">
+                                                <div class="seccion-burger-header">
                                                     <a href="/admin/productos"><i class="fa-solid fa-user"
-                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                            style="<%= locals.carrito ? 'color: ' + carrito + ';' : 'color: gray;' %>"></i>&nbsp;Ver
                                                         productos desde vista admin</a>
                                                 </div>
                                                 <div class="cerrar-sesion">
                                                     <a href="/autenticacion/cerrar-sesion" class="text-danger">
                                                         <i class="fa-solid fa-user-minus"
-                                                            style='color: red;'></i>&nbsp;cerrar sesion
+                                                            style='color: red;'></i>&nbsp;Cerrar sesion
                                                         </a>
                                                     
                                                     <!-- <a href="/autenticacion/cerrar-sesion"> -->
@@ -109,26 +109,26 @@
                                                 <div class="perfil"> 
                                                     <a href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
                                                             class="fa-solid fa-user"
-                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;ver
+                                                            style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;Ver
                                                         mi perfil</a>
                                                 </div>
                                                 <div class="cerrar-sesion">
                                                     <a href="/autenticacion/cerrar-sesion"><i
                                                             class="fa-solid fa-user-minus"
-                                                            style='color: red;'></i>&nbsp;cerrar sesion</a>
+                                                            style='color: red;'></i>&nbsp;Cerrar sesion</a>
                                                 </div>
 
                                                     <% } %>
 
                                                         <% } %>
-                                                        <div class="carrito" style="padding-left: 10px;">
-                                                            <a href="<%= locals.contactUS ? '#'  : " /contacto"%>"><i class="fa-solid fa-info"
-                                                                    style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;contacto</a>
+                                                        <div class="seccion-burger-header">
+                                                            <a href="<%= locals.contactUS ? '#'  : " /contacto"%>"><i class="fa-solid fa-address-book"
+                                                                    style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;Contacto</a>
                                                         </div>
 
-                                                        <div class="carrito" style="padding-left: 10px;">
-                                                            <a href="<%= locals.aboutUs ? '#'  : " /sobre-nosotros"%>"><i class="fa-solid fa-info"
-                                                                    style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;&nbsp;sobre
+                                                        <div class="seccion-burger-header">
+                                                            <a href="<%= locals.aboutUs ? '#'  : " /sobre-nosotros"%>"><i class="fa-solid fa-circle-info"
+                                                                    style="<%= locals.aboutUs ? 'color: ' + aboutUs + ';' : 'color: gray;' %>"></i>&nbsp;Sobre
                                                                 nosotros</a>
                                                         </div>
         </div>

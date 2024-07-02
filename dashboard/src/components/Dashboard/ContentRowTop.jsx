@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Alert from "../reutilice/Alert.jsx";
-
+import styles from '../../../public/css/Dashboard/ContentRowTop.module.css';
 ///import imagenFondo from "../../assets/images/mandalorian.jpg";
 import { ContentData } from "./ContentData";
 import CategoryItem from "./CategoryItem.jsx";
@@ -178,7 +178,7 @@ const nameFieldCategories = {
       {/*<!-- Content Row Top -->*/}
       <div className="container-fluid">
         <div className="d-sm-flex aligns-items-center justify-content-between mb-4">
-          <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+          <h1 className={`h3 mb-0 text-gray-800 ${styles.fondo}`}>App Dashboard</h1>
         </div>
 
         {/*<!-- Content Row Movies-->*/}

@@ -45,6 +45,11 @@ a {
   transition: 1s;
 }
 
+.seccion-burger-header a {
+  color: var(--gris-pizarra);
+  font-weight: bold;
+}
+
 .input-menu:checked  ~ .ul-menu{
   display:block;
   display: flex;

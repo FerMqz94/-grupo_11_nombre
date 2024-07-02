@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import zinke from '../../assets/images/imagen-header.png'
-import styles from '../../../public/css/Sidebar.module.css';
+import styles from '../../../public/css/Dashboard/Sidebar.module.css';
 export const SideBar = function () {
     
     return (
