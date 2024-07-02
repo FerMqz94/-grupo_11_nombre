@@ -3,6 +3,7 @@ import { DataGrid } from '@mui/x-data-grid';
 import { useEffect, useState } from 'react';
 // import '../assets/css/products.css'
 import { Button } from '@mui/material';
+import styles from '../../public/css/Users/Users.module.css';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -130,7 +131,7 @@ const columns = [
 
   return (
     <div className='DataGridContainer'>
-            <h1 style={{textAlign: 'center'}}>Usuarios</h1>
+            <h1 className={styles.titulo} style={{textAlign: 'center'}}>Usuarios</h1>
             <div style={{ height: '100', width: '400', overflow: 'scroll' }}>
               
                 <DataGrid

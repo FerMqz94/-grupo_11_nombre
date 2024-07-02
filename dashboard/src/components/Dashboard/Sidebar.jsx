@@ -23,7 +23,7 @@ export const SideBar = function () {
     <li className={`nav-item active ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - ZINKE</span></a>
+            <span>Panel Principal - ZINKE</span></a>
     </li>
 
     {/* Divider */}
@@ -48,11 +48,6 @@ export const SideBar = function () {
     </li>
 
     {/* Nav Item - Tables */}
-    <li  className={`nav-item ${styles.item}`}>
-        <a className={`nav-link ${styles.link}`} href="/">
-            <i className="fas fa-fw fa-table"></i>
-            <span> SEARCH</span></a>
-    </li>
     <li className={`nav-item ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} href="/">
             <i className="fas fa-fw fa-table"></i>

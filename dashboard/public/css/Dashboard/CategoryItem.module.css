@@ -1,0 +1,8 @@
+.categories {
+    background: linear-gradient(to right, var(--blanco-almendra) 0%, var(--blanco) 100%);
+    color: var(--gris-terciopelo); /* Cambiado a un tono de gris más oscuro para contraste */
+    font-weight: bold;
+    font-size: 1.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra de texto más clara */
+}

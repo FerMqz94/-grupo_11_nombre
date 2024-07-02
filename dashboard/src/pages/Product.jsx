@@ -10,6 +10,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate, useParams } from 'react-router-dom';
+import styles from '../../public/css/Products/Product.module.css';
 
 function Products() {
 
@@ -132,7 +133,7 @@ function Products() {
 
     return (
         <div className='DataGridContainer'>
-            <h1 style={{textAlign: 'center'}}>Productos</h1>
+            <h1 className={styles.titulo} style={{textAlign: 'center'}}>Productos</h1>
             <div style={{ height: '100', width: '400', overflow: 'scroll' }}>
               
                 <DataGrid
