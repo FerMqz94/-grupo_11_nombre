@@ -96,13 +96,18 @@ window.addEventListener('load', () => {
 
     inputName.addEventListener('blur', function () {
         const value = this.value.trim();
+        const nameRegex = /^[A-Za-z0-9\s]+$/g;
         switch (true) {
             case !value.length:
                 statusInvalid(nameError, "El nombre es requerido", newStyleInputInvalid, '.nombreApellido')
                 displayIconToShowInvalid(iconErrorName, iconValidName)
                 break;
-            case value.length < 3:
-                statusInvalid(nameError, "Debe tener al menos 4 caracteres", newStyleInputInvalid, '.nombreApellido')
+            case !nameRegex.test(value):
+                statusInvalid(nameError, "Los nombres y apellidos deben ser carácteres alfanuméricos", newStyleInputInvalid, '.nombreApellido')
+                displayIconToShowInvalid(iconErrorName, iconValidName)
+                break;
+            case value.length < 4 || value.length > 20:
+                statusInvalid(nameError, "Debe tener entre 4 y 20 caracteres", newStyleInputInvalid, '.nombreApellido')
                 displayIconToShowInvalid(iconErrorName, iconValidName)
             break;
             default:
@@ -158,7 +163,9 @@ const EmailError = document.querySelector('.error-email');
 inputEmail.addEventListener('blur', function () {
     
     const value = this.value.trim();
-    const emailRegex =  /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+    /*const emailRegex =  /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;*/
+
+    const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     switch (true) {
         case !value.length:
@@ -168,6 +175,7 @@ inputEmail.addEventListener('blur', function () {
         case !emailRegex.test(value):
             statusInvalid(EmailError, "Formato de email inválido", newStyleInputInvalid, '.email')
             displayIconToShowInvalid(iconErrorEmail, iconValidEmail)
+            break;
         default:
             statusValid(EmailError, newStyleInputValid, '.email');
             displayIconToShowValid(iconValidEmail, iconErrorEmail)
