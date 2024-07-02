@@ -942,6 +942,7 @@ div .comprar:hover {
     border: solid 0px;
     padding: 1px;
     z-index: 1;
+    width: auto;
 }
   
   .input-carrito-colores:checked ~ .producto-info .colores-opciones {
@@ -960,7 +961,7 @@ div .comprar:hover {
     /* margin: 2.6%; */
     /* margin-left: 6%; */
     font-size: 20px;
-    padding-right: 70px;
+    /* padding-right: 63px; */
   }
   .main-carrito .productos .info-compra .fa-trash {
     margin-right: 2%;

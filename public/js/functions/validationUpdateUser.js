@@ -115,92 +115,92 @@ window.addEventListener('load', function () {
         
     })
 
-let existErrorPassword = true
-    inputPassword.addEventListener('input', function () {
+// let existErrorPassword = true
+//     inputPassword.addEventListener('input', function () {
 
         
-        const value = inputPassword.value.trim();
-        // const errName = document.querySelector('#errName');
+//         const value = inputPassword.value.trim();
+//         // const errName = document.querySelector('#errName');
 
-        let nameClass = document.querySelector('.contraseniaRegister #contrasenia');
-        let passwordError = document.querySelector('.error-password');
-        switch (true) {
-            case value.length === 0:
-                nameClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "Campo requerido";
-                existErrorPassword = true
+//         let nameClass = document.querySelector('.contraseniaRegister #contrasenia');
+//         let passwordError = document.querySelector('.error-password');
+//         switch (true) {
+//             case value.length === 0:
+//                 nameClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "Campo requerido";
+//                 existErrorPassword = true
 
-                break;
-            case value.length <= 7:
-                nameClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-                existErrorPassword = true
+//                 break;
+//             case value.length <= 7:
+//                 nameClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
+//                 existErrorPassword = true
 
-                break;
-                case value.length > 16:
-                nameClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
-                existErrorPassword = true
+//                 break;
+//                 case value.length > 16:
+//                 nameClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
+//                 existErrorPassword = true
 
-                break;
+//                 break;
 
-            default:
-                nameClass.style.border = "1.8px solid #b8b8b8"
-                passwordError.innerHTML = null
-                existErrorPassword = false
-                break
-        }
+//             default:
+//                 nameClass.style.border = "1.8px solid #b8b8b8"
+//                 passwordError.innerHTML = null
+//                 existErrorPassword = false
+//                 break
+//         }
         
-    })
-let existErrorConfirmPassword = true;
-    inputConfirmPassword.addEventListener('input', function () {
+//     })
+// let existErrorConfirmPassword = true;
+//     inputConfirmPassword.addEventListener('input', function () {
 
-        // let existErrorConfirmPassword = true;
+//         // let existErrorConfirmPassword = true;
 
-        const value = inputConfirmPassword.value.trim();
-        const valueP = inputPassword.value.trim();
-        // const errName = document.querySelector('#errName');
+//         const value = inputConfirmPassword.value.trim();
+//         const valueP = inputPassword.value.trim();
+//         // const errName = document.querySelector('#errName');
 
 
-        let passwordConfirmClass = document.querySelector('.contraseniaConfirRegister #contraseniaConfir');
-        let passwordError = document.querySelector('.error-passwordConfirm');
-        switch (true) {
-            case value.length === 0:
-                passwordConfirmClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "Campo requerido";
-                existErrorConfirmPassword = true
+//         let passwordConfirmClass = document.querySelector('.contraseniaConfirRegister #contraseniaConfir');
+//         let passwordError = document.querySelector('.error-passwordConfirm');
+//         switch (true) {
+//             case value.length === 0:
+//                 passwordConfirmClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "Campo requerido";
+//                 existErrorConfirmPassword = true
 
-                break;
-            case value.length <= 7:
-                passwordConfirmClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
-                existErrorConfirmPassword = true
+//                 break;
+//             case value.length <= 7:
+//                 passwordConfirmClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "La contraseña debe tener al menos 8 caracteres";
+//                 existErrorConfirmPassword = true
 
-                break;
-                case value.length > 16:
-                    passwordConfirmClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
-                existErrorConfirmPassword = true
+//                 break;
+//                 case value.length > 16:
+//                     passwordConfirmClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "La contraseña no debe tener más de 16 caracteres";
+//                 existErrorConfirmPassword = true
 
-                break;
-                case value !== valueP:
-                    passwordConfirmClass.style.border = "1.8px solid red";
-                passwordError.innerHTML = "Las contraseñas no coinciden";
-                existErrorConfirmPassword = true
+//                 break;
+//                 case value !== valueP:
+//                     passwordConfirmClass.style.border = "1.8px solid red";
+//                 passwordError.innerHTML = "Las contraseñas no coinciden";
+//                 existErrorConfirmPassword = true
 
-                break;
+//                 break;
 
-                // case s :
-                // break;
+//                 // case s :
+//                 // break;
 
-            default:
-                passwordConfirmClass.style.border = "1.8px solid #b8b8b8"
-                passwordError.innerHTML = null
-                existError = false
-                break
-        }
+//             default:
+//                 passwordConfirmClass.style.border = "1.8px solid #b8b8b8"
+//                 passwordError.innerHTML = null
+//                 existError = false
+//                 break
+//         }
         
-    })
+//     })
 
 
 
@@ -208,7 +208,9 @@ let existErrorConfirmPassword = true;
     formUser.addEventListener("submit", function(event){
 
 // event.preventDefault();
-        if (existError === false && existErrorPassword === false && existError === false) {
+        if (existError === false 
+            // && existErrorPassword === false && existError === false
+        ) {
             this.submit();
           } else {
             event.preventDefault();

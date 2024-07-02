@@ -20,25 +20,18 @@ module.exports = async (req, res) => {
                 include: [
                     {
                         association: "products",
-                        include: 
-                        [{
+                        include: [{
                             association: "images",
                             attributes: {
                                 include: [[literal(`CONCAT( '${getUrlOrigin(req)}/api/producto-detalle/image/', "name")`), "imgName",],],
-                                exclude: ['createdAt', 'updatedAt', 'deletedAt']
                             },
-
-                        },{
-                            association:"colors",
-                            exclude: ['createdAt', 'updatedAt', 'deletedAt']
-                        }, "sizes"], 
+                        }, "colors", "sizes"], 
                         through: {
                             attributes: ["quantity", "id_color", "id_size"]
                         },
                         attributes: { exclude: ['createdAt', 'updatedAt', 'deletedAt'] }
                     },]
             }),
-
         })
     }
     catch (err) {
@@ -49,4 +42,3 @@ module.exports = async (req, res) => {
     }
     //res.status(500).json({ok: false,msg: "ok"})
 }
-

@@ -54,12 +54,13 @@ const addProductCart = async (id,id_color,id_size, image) => {
         console.error(error.message);
       };
       Swal.fire({
-        width: 250,
+        width: 300,
+        // height: auto,
         position: "top-end",
         // icon: "success",
         imageUrl:`${server}/api/producto-detalle/image/${image}`,
-        imageWidth: 100,
-        imageHeight: 120,
+        imageWidth: 140,
+        imageHeight: 180,
         title: "producto agregado al carrito con exito",
         html: `<a href="/carrito" class="ver-carrito"> ver carrito</a>`,
         // titleFontSize: 10,

@@ -56,7 +56,7 @@ module.exports = (req, res) => {
           name: name.trim(),
           username: username.trim(),
           email: email.trim(),
-          password: password ? bcrypt.hashSync(password, 10) : password,
+          password: password ? bcrypt.hashSync(password, 12) : password,
           // id_rol: id_rol === 1 ? 1 : 2,
           // avatar: "default-avatar.jpg"
         }, {

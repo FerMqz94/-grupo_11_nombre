@@ -11,7 +11,7 @@ const { userDelete } = require("../controllers/authentication");
 
 //  /users/perfil-usuario
 router.get("/perfil-usuario/:id", perfilUsuario);
-router.put("/perfil-usuario/:id",updateUsersValidation, updateUsers) 
+router.put("/perfil-usuario/:id",updateUsersValidation, updateUsers) //
 router.post("/eliminar-usuario/:id", userDelete)
 
 module.exports = router;

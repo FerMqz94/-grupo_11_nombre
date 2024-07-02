@@ -52,13 +52,11 @@ a {
 
 .input-menu:checked  ~ .ul-menu{
   display:block;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  /* display: flex; */
   background-color: #ffefd6;
   border-bottom: #f99b7d solid;
-  /* transition: 1s; */
+  transition: 1s;
+  flex-direction: column;
 }
 
 .input-menu:checked  ~
@@ -349,8 +347,8 @@ display: none;
     color: black;
     margin: 0;
     font-size: 16px;
-    margin-top: 5px;
-    margin-bottom: 6px;
+    /* margin-top: 5px; */
+    /* margin-bottom: 6px; */
   }
 
   .header-vista-tablet-pc .color-blanco {
