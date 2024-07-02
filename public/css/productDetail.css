@@ -991,8 +991,9 @@ div:where(.swal2-container) .swal2-html-container{
     position: relative;
     height: 500px;
     margin-top: 10%;
+    border: 1px solid var(--molocoton-oscuro);
     border-radius: 5%;
-    background-color: var(--gris-claro);
+    background-color: var(--blanco);
     display: flex;
     justify-content: center;
     margin-top: 20px;
