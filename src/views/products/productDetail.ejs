@@ -72,7 +72,19 @@
               </h2>
               <P class="precio">$<%= product.price %>
               </P>
-              <P class="talle">TALLE: <span>2</span></p>
+              <P class="talle">TALLE: <span class="view-size"></span></p>
+
+              <div class="talles">
+                  <% const sizesSpanish={ 1: "uno" , 2: "dos" , 3: "tres" , 4: "cuatro" , 5: "cinco" }; %>
+                    <% const sizesId=product.sizes.map(size=> size.id) %>
+                      <% sizes.forEach(s=> { %>
+                        <div class="<%= sizesSpanish[s.id]%>">
+                          <button type="button" style="margin-left: 4px; margin-top: 10px;" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>'); showSize('<%= s.size %>')">
+                            <%= s.size %>
+                          </button>
+                        </div>
+                        <% }) %>
+              </div>
 
 
               <div>
@@ -87,17 +99,7 @@
                       <% } %>
                         <% }) %>
               </div>
-              <div class="talles">
-                <% const sizesSpanish={ 1: "uno" , 2: "dos" , 3: "tres" , 4: "cuatro" , 5: "cinco" }; %>
-                  <% const sizesId=product.sizes.map(size=> size.id) %>
-                    <% sizes.forEach(s=> { %>
-                      <div class="<%= sizesSpanish[s.id]%>">
-                        <button type="button" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>')">
-                          <%= s.size %>
-                        </button>
-                      </div>
-                      <% }) %>
-              </div>
+             
 
               <div class="cantidad-carrito">
                 <!-- <form class="form-carrito" action="/productDetail" method="POST"> -->
@@ -223,6 +225,9 @@
 
         <!-- PERMITE AÑADIR AL CARRITO -->
         <script src="/js/functions/addProductToCart.js"></script>
+        <!--VINCULACIÓN ARCHIVO PARA DINAMIZAR LA VISTA-->
+        <script src="/js/functions/detailProduct.js"></script>
+      </body>
 
 
   </body>

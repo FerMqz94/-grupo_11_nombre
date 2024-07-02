@@ -46,7 +46,8 @@ main.vista-producto
   height: 450px;
   height: 100%;
   border-radius: 5%;
-  background-color: var(--gris-claro);
+  border: 1.5px solid var(--gris-claro);
+  /*background-color: var(--gris-claro);*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,11 +132,8 @@ main.vista-producto
   div.contenedor-img-principal
   img.blazer-over-principal {
   width: 70%;
-
   height: 350px;
-
-  object-fit: contain;
-
+  object-fit: cover;
   /* margin-bottom: 15%; */
 }
 
@@ -261,7 +259,7 @@ main.vista-producto
   div.talles
   div.dos
   button.boton-dos {
-  border: 2px solid var(--molocoton-oscuro);
+  border: 2px solid var(--gris-claro);
 }
 
 /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
@@ -991,9 +989,8 @@ div:where(.swal2-container) .swal2-html-container{
     position: relative;
     height: 500px;
     margin-top: 10%;
-    border: 1px solid var(--molocoton-oscuro);
     border-radius: 5%;
-    background-color: var(--blanco);
+    /* background-color: var(--gris-claro); */
     display: flex;
     justify-content: center;
     margin-top: 20px;
