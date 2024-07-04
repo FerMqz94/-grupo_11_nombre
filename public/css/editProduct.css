@@ -16,23 +16,39 @@ main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto{
     height: 35px;
     transition: all 1s ease-in-out;
 }
+.editar-producto .letra {
+    color: var(--verde-azulado-claro);
+    margin-bottom: 7px;
+}
+
+.editar-producto .text-custom-editar-producto {
+    background-image: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 2.8em;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    opacity: 0.9;
+    transition: transform 0.5s ease;
+    animation: fadeIn 1s ease-out forwards;
+}
 
 main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto:hover{
    background-color: var(--gris85);
-   color: var(--verde-azulado-claro)
+   color: var(--gris-claro)
 }
 
 main.editar-producto div.vista-editar-producto .form-floating{
     margin-top: 20px;
 }
 main.editar-producto div.vista-editar-producto .form-control {
-    background-color: var(--gris-claro);
     color: var(--gris-pizarra);
     padding: 1em;
     border-radius: 10px;
     border: 2px solid transparent;
     outline: none;
     line-height: 1.4;
+    border: 1.5px solid var(--gris-claro);
 }
 main.editar-producto div.vista-editar-producto .form-control:hover{
     cursor: pointer;
@@ -45,26 +61,32 @@ main.editar-producto div.vista-editar-producto .form-control:focus{
     border-color:var(--gris-pizarra);
 }
 main.editar-producto div.vista-editar-producto .form-select {
-    background-color: var(--gris-claro);
-    color: var(--gris-pizarra);
-    border-radius: 10px;
-    border: 2px solid transparent;
-    outline: none;
-    line-height: 1.4;
-    margin-bottom: 10px;
+    appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  border: 1.5px solid var(--gris-claro);
+/*  display: inline-block;*/
+	width: 100%;
+	cursor: pointer;
+  padding: 7px 10px;
+  height: 42px;
+  color: var(--gris-pizarra);
+  background-color: rgba(249, 155, 128, 0.4);
+  border-radius: 10px;
+  position: relative;
+  transition: all 0.5s ease;
+	font-size: var(--letra-pequeña);
 }
 main.editar-producto div.vista-editar-producto .form-select:hover{
-    cursor: pointer;
+    background: var(--molocoton-oscuro);
 }
 
 main.editar-producto div.vista-editar-producto .form-select:focus{
-    cursor: text;
-    color: var(--gris-pizarra);
-    background-color: var(--blanco);
-    border-color:var(--gris-pizarra);
+    outline: none;
+    border: none;
+    box-shadow: 0 0 2px 2px inset var(--molocoton-oscuro);
 }
 main.editar-producto div.vista-editar-producto textarea{
-    background-color: var(--gris-claro);
     color: var(--gris-pizarra);
     padding: 1em;
     border-radius: 10px;
@@ -99,7 +121,7 @@ main.editar-producto div.vista-editar-producto .form-check-input-talle:checked {
 }
 
 main.editar-producto div.vista-editar-producto .form-check-input-talle:checked ~ label{
-    color: var(--turquesa);
+    color: var(--verde-azulado-claro);
 }
 main.editar-producto div.vista-editar-producto .colors-check {
     display:flex;
@@ -169,84 +191,83 @@ main.editar-producto div.vista-editar-producto .form-check-span-color {
 main.editar-producto div.vista-editar-producto .form-check-label-color-black:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: var(--negro);
     color: var(--blanco);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-beige:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: beige;
     color: var(--negro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-blue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: blue;
     color: var(--turquesa);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-white:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: var(--blanco);
     color: var(--negro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-red:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: red;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-green:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: green;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-purple:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: violet;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-orange:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: orange;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: lightblue;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-gray:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: var(--gris-claro);
     color: var(--negro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-lavender:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #d29bfd;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-pink:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #ff0080;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-silver:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #8a9597;
     color: var(--negro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-bluishGreen:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: #084d6e;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 main.editar-producto div.vista-editar-producto .form-check-label-color-gold:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
     background: gold;
     color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--verde-azulado-claro);
+    box-shadow: 0px 2px 20px var(--gris-terciopelo);
 }
 
 main.editar-producto .contenedor-switch input.input-switch-disponible {
     display: none;
   }
   main.editar-producto .contenedor-switch.contenedor-switch label {
-    color: var(--verde-azulado-claro);
+    color: var(--gris-claro);
     position: relative;
   }
   main.editar-producto .contenedor-switch input.input-switch-disponible + label::before {
@@ -263,8 +284,8 @@ main.editar-producto .contenedor-switch input.input-switch-disponible {
   }
   
   main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::before{
-    background-color: var(--verde-azulado-claro);
-    border: 1px solid var(--verde-azulado-claro);
+    background-color: var(--gris-claro);
+    border: 1px solid var(--gris-claro);
   }
   
   main.editar-producto .contenedor-switch input.input-switch-disponible + label::after {
@@ -285,8 +306,8 @@ main.editar-producto .contenedor-switch input.input-switch-disponible {
   main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::after {
     left: -40px;
     transition: all 0.3s ease-in;
-    background: var(--molocoton-oscuro);
-    border: 1px solid var(--molocoton-oscuro);
+    background: var(--gris-terciopelo);
+    border: 1px solid var(--gris-terciopelo);
 }
 main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
     display: inline-block;
@@ -385,6 +406,7 @@ main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-cre
         display: flex;
         justify-content: center; /* Centrar horizontalmente */
         align-items: center; /* Centrar verticalmente */
+        box-shadow: 0 0 20px 4px rgba(249, 155, 128, 0.4);
     }
     main.editar-producto div.vista-editar-producto .colors-check {
         display:flex;

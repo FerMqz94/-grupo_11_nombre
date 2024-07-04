@@ -17,12 +17,12 @@
                     <form action="/admin/editar-productos/<%= product.id %>?_method=PUT" method="POST" class="my-5" enctype="multipart/form-data">
                         <!-- Nombre y Precio del Producto -->
                         <div class="mb-3">
-                            <label for="nombreProducto" class="form-label">Nombre:</label>
+                            <label class="letra" for="nombreProducto" class="form-label">Nombre:</label>
                             <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del producto" name="name" value="<%= product.name %>">
                             <p class="error-name text-danger"></p>
                         </div>
                         <div class="mb-3">
-                            <label for="precioProducto" class="form-label">Precio:</label>
+                            <label for="precioProducto" class="form-label letra">Precio:</label>
                             <input type="text" class="form-control" id="precio-producto" placeholder="Precio del producto" name="price" value="<%= product.price %>">
                             <p class="error-price text-danger"></p>
                         </div>
@@ -34,15 +34,15 @@
                                     <option <%= product.id_category === c.id ? "selected" : "" %> value="<%= c.id %>"><%= c.name %></option>
                                 <% }) %>
                             </select>
-                            <label for="catSeleccionada">Seleccionado</label>
+                            <label for="catSeleccionada"></label>
                         </div>
                         <!-- Descripciones -->
-                        <label for="descripcionProducto">Descripción:</label>
+                        <label class="letra" for="descripcionProducto">Descripción:</label>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Describe el producto" id="descripcion-producto" style="height: 100px" name="description"><%= product.description %></textarea>
                             <p class="error-description text-danger"></p>
                         </div>
-                        <label for="descripcionProducto">Descripción destacada:</label>
+                        <label class="letra" for="descripcionProducto">Descripción destacada:</label>
                         <div class="form-floating">
                             <textarea class="form-control" placeholder="Describe el producto" id="desc-destacada" name="featuredDescription"><%= product.featuredDescription %></textarea>
                             <p class="error-featuredDescription text-danger"></p>
@@ -54,13 +54,13 @@
                             <% sizes.forEach(size => { %>
                                 <div class="form-check-talles">
                                     <input class="form-check-input-talle" type="checkbox" value="<%= size.id %>" id="<%= size.size %>" name="talle<%= size.size %>" <% if (sizeIds.includes(size.id)) { %> checked <% } %>>
-                                    <label class="form-check-label-talle" for="talle<%= size.size %>">Talle <%= size.size %></label>
+                                    <label class="form-check-label-talle letra" for="talle<%= size.size %>">Talle <%= size.size %></label>
                                 </div>
                             <% }) %>                            
                         </div>
                         <!-- Colores -->
                         <div class="colors-check">
-                            <h3 class="titulo-colores col-12 my-3">Colores</h3>
+                            <h3 class="titulo-colores letra col-12 my-3">Colores</h3>
 
                             <% const colorsSpanish = { 
                                 "black": "Negro",
@@ -90,7 +90,7 @@
                             <% }) %>
                         </div>
                         <!-- Nuevo - Oferta -->
-                        <h3 class="titulo-nuevo-oferta col-12 my-3">Producto Nuevo o En Oferta</h3>
+                        <h3 class="titulo-nuevo-oferta letra col-12 my-3">Producto Nuevo o En Oferta</h3>
                         <div class="nuevo-oferta-contenedor d-flex flex-wrap-wrap">
                             <div class="nuevo-oferta d-flex my-3 col-6 my-md-5">
                                 <div class="nuevo col-6 col-md-4 col-lg-2">
@@ -114,7 +114,7 @@
                             </div>
                         </div>
                         <!-- Disponible -->
-                        <h3 class="titulo-nuevo-oferta col-12 my-3">Estado</h3>
+                        <h3 class="titulo-nuevo-oferta col-12 my-3 letra">Estado</h3>
                         <div class="form-check form-switch d-flex my-3 col-10 mx-auto my-md-3">
                             <div class="contenedor-switch col-10">
                                 <input type="checkbox" class="input-switch-disponible" id="available" name="available" value="1" <%= product.available ? "checked" : "" %>>

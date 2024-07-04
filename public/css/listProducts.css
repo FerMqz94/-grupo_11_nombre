@@ -13,20 +13,15 @@
 }
 
 .body-admin-list-products .titulo {
-  background: linear-gradient(to right, var(--turquesa), var(--verde-azulado-claro));
-  background-size: 200% 200%;
-  background-clip: text;
+  background-image: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+  -webkit-background-clip: text;
   color: transparent;
-  text-align: center;
-  user-select: none;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.8em;
   font-weight: bold;
-  display: inline-block;
-  width: 100%;
-  padding: 0 10px;
-  animation: gradient-shift 3s ease infinite;
-  margin: 30px 0px 0px 0px;
+  letter-spacing: 1.2px;
+  opacity: 0.9;
+  transition: transform 0.5s ease;
+  animation: fadeIn 1s ease-out forwards;
 }
 
 
