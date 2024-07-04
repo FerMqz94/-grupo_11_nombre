@@ -23,8 +23,113 @@
   flex-wrap: wrap;
 }
 
+.container-home {
+  display: grid;
+  place-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
+.card-container-home {
+  display: grid;
+  row-gap: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
 
+.card-article-home {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  flex: 1 1 calc(50% - 20px);
+  max-width: calc(50% - 20px); 
+}
+
+.card-img-home {
+  width: 100%;
+  height: auto;
+  border-radius: 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-data-home {
+  width: 70%;
+  background-color: var(--blanco);
+  padding: 5% 10%;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -18rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s; 
+}
+
+.card-title-home {
+  color:black;
+  font-size: 70%;
+  margin: 10px 0;
+}
+
+.card-description-home {
+  display: block;
+  font-size: 50%;
+  margin-bottom: .75rem;
+}
+.card-price-home {
+  display: block;
+  font-size: 80%;
+  color: #008000;
+  margin-bottom: .75rem;
+}
+.card-button-home {
+  font-size: 60%;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card-button-home:hover{
+  text-decoration: underline;
+}
+
+.card-article-home:hover .card-data-home {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s
+}
+
+.card-article-home:not(:hover) .card-data-home{
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50%{
+    transform: translateY(-20rem);
+  }
+  100%{
+    transform: translateY(-19rem);
+  }
+}
+
+@keyframes remove-data {
+    0%{
+      transform: translateY(-19rem);
+    }
+    50%{
+      transform: translateY(-20rem);
+    }
+    100%{
+      transform: translateY(.5rem)
+    }
+}
   /* CAPSULAS*/
   .home .titulo-capsula {
     display: none;
@@ -137,6 +242,25 @@ width: calc(50% - 3px);
     display: none;
   }
 
+  .card-article-home {
+    flex: 1 1 calc(33.333% - 10px); /* Para tabletas, 3 tarjetas por fila */
+    max-width: calc(33.333% - 20px); /* Ajuste del ancho máximo */
+  }
+
+  .card-title-home {
+    font-size: 80%;
+  }
+  
+  .card-description-home {
+    font-size: 50%;
+  }
+  .card-price-home {
+    font-size: 80%;
+  }
+  .card-button-home {
+    font-size: 60%;
+  }
+
   /* CAPSULAS*/
   .home .titulo-capsula {
     display: flex;
@@ -228,6 +352,24 @@ justify-content: center;
     display: block;  
   }
 
+  .card-article-home {
+    flex: 1 1 calc(25% - 10px); /* Para PC, 4 tarjetas por fila */
+    max-width: calc(25% - 20px); /* Ajuste del ancho máximo */
+  }
+
+  .card-title-home {
+    font-size: 120%;
+  }
+  
+  .card-description-home {
+    font-size: 70%;
+  }
+  .card-price-home {
+    font-size: 120%;
+  }
+  .card-button-home {
+    font-size: 80%;
+  }
   /* CAPSULAS*/
 
   .home .capsulas {

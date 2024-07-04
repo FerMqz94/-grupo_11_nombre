@@ -80,37 +80,27 @@
       </div>
     </div>
 
-    <div class="contenedor-imagenes">
-      <a href="/producto-detalle">
-        <div class="contenedor-imagenes-sector-1">
-      </a>
-
-      <%  products.forEach((p, index) => { %>
-      <%  if(index <= 3) { %>
-        <%  p.images.forEach((img, inde) => { %>
-          <%  if(inde <= 0) { %>
-          <a href="/producto-detalle/<%= p.id %>">
-          <img class="foto img-home" src="/images/products/<%= img.name%>" alt="<%= img.name%>%>" /></a>
-          <%  }  %> 
-          <% })  %> 
-      <%  }  %>         
-      <% })  %>      
-    </div>
-
-    <div class="contenedor-imagenes-sector-2">
+    <div class="container-home">
+      <div class="card-container-home">
         <% products.forEach((p, index) => { %>
-        <%  if(index <= 7 && index > 3) { %>
-
-        
-          <%  p.images.forEach((img , inde) => { %>
-            <%  if(inde <= 0) { %>
-            <a href="/producto-detalle/<%= p.id %>">
-          <img class="foto img-home" src="/images/products/<%= img.name%>" alt="<%= img.name%>" /></a>
-          <%  }  %> 
-          <% })  %> 
-        <%  }  %>
-        <% })  %>   
+          <% if (index <= 7) { %>
+            <article class="card-article-home">
+              <img class="card-img-home" src="/images/products/<%= p.images[0].name %>" alt="<%= p.images[0].name %>" />
+              <div class="card-data-home">
+                <h2 class="card-title-home"><%= p.name %></h2>
+                <span class="card-description-home"><%= p.description %></span>
+                <span class="card-price-home">$<%= p.price %></span>
+                <a href="/producto-detalle/<%= p.id %>" class="card-button-home">VER PRODUCTO</a>
+              </div>
+            </article>
+          <% } %>
+        <% }) %>
+      </div>
     </div>
+    
+
+
+
  
     
 
