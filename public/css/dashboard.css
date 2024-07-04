@@ -8,9 +8,15 @@
 
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
-.dashboard .main-menu .logo{
+
+.dashboard .logo-container {
   
 }
+
+.dashboard .logo-image {
+  
+}
+
 
 .dashboard .main-menu .settings {
   
@@ -81,16 +87,7 @@ font-size: 1em;
   
 }
 
- .fa {
-position: relative;
-display: table-cell;
-width: 55px;
-height: 36px;
-text-align: center;
-top:12px; 
-font-size:20px;
-
-}
+ .fa {position: relative;display: table-cell;width: 55px;height: 36px;text-align: center;top:12px;font-size:20px;}
 
 
 
