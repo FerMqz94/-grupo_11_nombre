@@ -131,11 +131,27 @@
 
                 <div class="colores-producto-editar-crear d-flex flex-wrap my-3 col-10 my-lg-4">
                     <h3 class="titulo-colores col-12 my-3 my-lg-4">Colores<span class="field-required text-danger"></span></h3>
-
+                    <% const colorsSpanish = { 
+                        "black": "Negro",
+                        "beige": "Beige",
+                        "blue": "Azul",
+                        "white": "Blanco",
+                        "red": "Rojo",
+                        "green": "Verde",
+                        "purple": "Violeta",
+                        "orange": "Naranja",
+                        "lightblue": "Celeste",
+                        "gray": "Gris",
+                        "lavender": "Lila",
+                        "pink": "Rosa",
+                        "silver": "Plata",
+                        "bluishGreen": "Petróleo",
+                        "gold": "Oro"
+                    }; %>
                     <% colors.forEach(c => { %>
                         <div class="checkbox-color d-flex align-items-center col-6 my-2 col-md-4 my-md-3 col-lg-3 my-lg-4">
                         <input type="checkbox" class="input-color <%= c.name %>" id="<%= c.name %>" autocomplete="off" name="<%= c.name %>" value="<%= c.id %>">
-                        <label class="label-color mx-2" for="<%= c.name %>"><%= c.name %></label>
+                        <label class="label-color mx-2" for="<%= c.name %>"><%= colorsSpanish[c.name] %></label>
                         </div>
                     <% }) %>
                     
