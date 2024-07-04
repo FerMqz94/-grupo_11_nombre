@@ -226,7 +226,7 @@ const nameFieldCategories = {
                 {lastProduct.description}
               </p>
                   <a
-                  className="btn btn-danger"
+                  className='btn btn-primary'
                   rel="nofollow"
                   // onClick={handleOpenModal}
                   href={"http://localhost:3030/producto-detalle/" + lastProduct.id}
@@ -244,7 +244,7 @@ const nameFieldCategories = {
             <div className="card shadow mb-4">
               <div className="card-header py-3">
                 <h5 className="m-0 font-weight-bold text-gray-800">
-                  categorias de productos 
+                  Categorías de productos 
                 </h5>
               </div>
               <div className="card-body">
