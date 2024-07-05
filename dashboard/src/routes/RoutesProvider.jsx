@@ -14,7 +14,7 @@ const router = createBrowserRouter([
       },
       ...routesProducts,
       ... routesUsers,
-      ... routesGraficos,
+     
     ],
   },
 ]);

@@ -78,54 +78,54 @@ const columns = [
           <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px", borderRadius: '50%' }} />
       ),
   },
-  {
-      field: 'ver',
-      headerName: '',
-      width: 120,
-      renderCell: (params) => (
-          <div className='buttonDashboardContainer'>
-              <Button
-                  variant="contained"
-                  color="info"
-                  onClick={() => handleButtonDetail(params.row.id)}
-              >
-                  Ver
-              </Button>
-          </div>
-      ),
-  },
-  {
-      field: 'actionEdit',
-      headerName: '',
-      width: 120,
-      renderCell: (params) => (
-          <div className='buttonDashboardContainer'>
-              <Button
-                  variant="contained"
-                  color="success"
-                  onClick={() => handleButtonEdit(params.row.id)}
-              >
-                  Editar
-              </Button>
-          </div>
-      ),
-  },
-  {
-      field: 'actionDelete',
-      headerName: '',
-      width: 120,
-      renderCell: (params) => (
-          <div className='buttonDashboardContainer'>
-              <Button
-                  variant="contained"
-                  color="error"
-                  onClick={() => handleClickOpen()}
-              >
-                  Eliminar
-              </Button>
-          </div>
-      ),
-  }
+//   {
+//       field: 'ver',
+//       headerName: '',
+//       width: 120,
+//       renderCell: (params) => (
+//           <div className='buttonDashboardContainer'>
+//               <Button
+//                   variant="contained"
+//                   color="info"
+//                   onClick={() => handleButtonDetail(params.row.id)}
+//               >
+//                   Ver
+//               </Button>
+//           </div>
+//       ),
+//   },
+//   {
+//       field: 'actionEdit',
+//       headerName: '',
+//       width: 120,
+//       renderCell: (params) => (
+//           <div className='buttonDashboardContainer'>
+//               <Button
+//                   variant="contained"
+//                   color="success"
+//                   onClick={() => handleButtonEdit(params.row.id)}
+//               >
+//                   Editar
+//               </Button>
+//           </div>
+//       ),
+//   },
+//   {
+//       field: 'actionDelete',
+//       headerName: '',
+//       width: 120,
+//       renderCell: (params) => (
+//           <div className='buttonDashboardContainer'>
+//               <Button
+//                   variant="contained"
+//                   color="error"
+//                   onClick={() => handleClickOpen()}
+//               >
+//                   Eliminar
+//               </Button>
+//           </div>
+//       ),
+//   }
 ];
 
   return (
@@ -179,3 +179,6 @@ const columns = [
 }
 
 export default Users;
+
+
+

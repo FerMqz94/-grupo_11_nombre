@@ -2,7 +2,7 @@
 const db = require('../../db/models');
 
 module.exports = async (req, res) => {
-  const { id } = req.params; RL
+  const { id } = req.params; 
 
   try {
     
@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
     }
 
   
-    await product.destroy(); s
+    await product.destroy(); 
 
     res.redirect('/admin/productos'); 
   } catch (error) {
