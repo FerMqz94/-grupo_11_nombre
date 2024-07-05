@@ -42,7 +42,7 @@ main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-
 /*CONTENEDOR DE TODOS LA FORM*/
 main.editar-producto div.vista-producto-editar-contenedor div.card {
     border: none;
-    box-shadow: 0 0 20px 4px #80f9e166;
+    box-shadow: 0 0 20px 4px #409196;
 }
 
 /*CONTENEDOR DEL INPUT NOMBRE PRODUCTO*/
@@ -101,20 +101,20 @@ main.editar-producto div.seleccionar-categoria {
 
 main.editar-producto div.seleccionar-categoria select.categoria-producto{
   appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: 1.5px solid var(--gris-claro);
-/*  display: inline-block;*/
-	width: 100%;
-	cursor: pointer;
+  /*  display: inline-block;*/
+  width: 100%;
+  cursor: pointer;
   padding: 7px 10px;
   height: 42px;
   color: var(--gris-pizarra);
-  background-color: rgba(153, 254, 234, 0.4);
+  background-color: var(--verde-azulado);
   border-radius: 10px;
   position: relative;
   transition: all 0.5s ease;
-	font-size: var(--letra-pequeña);
+  font-size: var(--letra-pequeña);
 }
 
 main.editar-producto div.seleccionar-categoria select.categoria-producto::-ms-expand{
