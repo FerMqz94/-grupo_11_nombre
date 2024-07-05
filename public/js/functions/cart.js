@@ -18,8 +18,8 @@ const getCartSructure = (p) => {
         return `<p class="datos-producto">
         <button onclick="changeZise(${p.id},${i})"> Talle: ${i}</button>
         </p>`;
-    }
-    const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
+    };
+    const sizeExist = (id) => p.sizes[id] && p.sizes[id].id;
     const sizeInfo = (id) => sizeExist(id) ? p.sizes[id].id : "";
     const opcionSize = (id) => sizeExist(id) ? talle(sizeInfo(id)) : "";
 
@@ -65,7 +65,7 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
         } else {
             return ""
         }
-    }
+    };
     const circleColor = `<i class="fa-regular fa-circle" style="background-color: ${colorSelect(orderColor)};"></i>`;
     const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>`;
 
@@ -106,7 +106,7 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                             </button>
                             </div>
                         </div>`
-}
+};
 
 
 const painCartsInView = (products = [], elementContainerProduct) => {
@@ -177,11 +177,47 @@ window.addEventListener('load', async (event) => {
         // catch (error) {
         //     console.error(error.menssage)
         // }
-    })
+    });
 
     binBuy.addEventListener("click", async () => {
 
-        buyProducts()
+        let timerInterval;
+        Swal.fire({
+          title: "Auto close alert!",
+          html: "I will close in <b></b> milliseconds.",
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading();
+            const timer = Swal.getPopup().querySelector("b");
+            timerInterval = setInterval(() => {
+              timer.textContent = `${Swal.getTimerLeft()}`;
+            }, 100);
+          },
+          willClose: () => {
+            clearInterval(timerInterval);
+            // Swal.fire({
+            //     icon: "error",
+            //     title: "Oops...",
+            //     text: "Something went wrong!",
+            //     footer: '<a href="#">Why do I have this issue?</a>'
+            //   });
+            // alert("aujshdsuhdsikudh")
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+            alert("algo")
+          } else if (result.dismiss !== Swal.DismissReason.timer) {
+            console.log("I was closed by the timer");
+            alert("eeeeeeeee")
+          }
+        });
+
+buyProducts()
+
+
         // try {
         //     const containerProducts = $('#carrito')
         //     const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
