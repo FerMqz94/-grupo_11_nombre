@@ -262,6 +262,9 @@ main.vista-producto
   border: 2px solid var(--gris74);
 }
 
+
+
+
 /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
 
 main.vista-producto section.visualizacion-producto div.cantidad-carrito {
