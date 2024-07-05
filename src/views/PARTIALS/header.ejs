@@ -10,7 +10,7 @@
 
             <img src="/images/icon/imagen-header.ico" alt="img-logo" class="img-header">
             <i class="zinke">zinke</i>
-            <p class="lema">inspirate en tus instintos</p>
+            <p class="lema">Inspírate en tus instintos</p>
         </div>
 
         <div class="redirecciones">
@@ -23,7 +23,7 @@
             <div class="seleccionar-destino">
                 <!-- <label for="menu" class="menu"> <i class="fa-solid fa-bars"></i> </label> -->
                 <form action="/resultados" method="get" class="form-busqueda-movil">
-                    <input type="text" name="keywords" placeholder="¿que estas buscando?" class="barra-busqueda-movil" value="<%= typeof keywords !== 'undefined' ? keywords : '' %>"
+                    <input type="text" name="keywords"  placeholder="¿Qué estás buscando?" class="barra-busqueda-movil" value="<%= typeof keywords !== 'undefined' ? keywords : '' %>"
                         required>
                     <button class="boton-buscar-movil"><i class="fa-solid fa-magnifying-glass "></i></button>
                     </p>
@@ -142,7 +142,7 @@
             </div>
 
             <form action="/resultados" method="get" class="barra-busqueda">
-                <input type="text" name="keywords" placeholder="¿que estas buscando?" value="<%= typeof keywords !== 'undefined' ? keywords : '' %>"
+                <input type="text" name="keywords" placeholder="¿Qué estás buscando?" value="<%= typeof keywords !== 'undefined' ? keywords : '' %>"
                     class="barra-busqueda barra-busqueda-interior" required>
                 <button class="barra-busqueda-icon"><i class="fa-solid fa-magnifying-glass "></i></button>
                 </p>
@@ -211,7 +211,7 @@
             </p>
             <p class="texto-header">
                     <a href="<%= locals.productos ? '#'  : '/lista/productos' %>" style="color: black">
-                        <% if (locals.list)  {%>♦ PRODUCTOS</a>
+                        <% if (locals.productos)  {%>♦ PRODUCTOS</a>
                         <% } else  {%>
                             PRODUCTOS </a>
                             <% } %>
