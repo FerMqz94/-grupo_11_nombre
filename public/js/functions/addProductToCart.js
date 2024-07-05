@@ -1,6 +1,10 @@
 let size_id = null;
 let color_id = null;
 
+const cantidadInput = document.getElementById('cantidad');
+
+
+
 const getSize = async (id) => {
     size_id = id;
     console.log(size_id) 
@@ -23,6 +27,7 @@ const addProductCart = async (id,id_color,id_size, image) => {
 
     console.log(id,sizeId, colorId)
     console.log(image)
+    console.log(cantidadInput)
 
     try {
       const { ok, msg } = await fetch(`${server}/api/carrito/add/${id}?id_user=1`, {

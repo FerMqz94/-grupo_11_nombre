@@ -16,7 +16,7 @@ const getCartSructure = (p) => {
 
     function talle(i) {
         return `<p class="datos-producto">
-        <button onclick="changeZise(${p.id},${i})"> talle: ${i}</button>
+        <button onclick="changeZise(${p.id},${i})"> Talle: ${i}</button>
         </p>`;
     }
     const sizeExist = (id) => p.sizes[id] && p.sizes[id].id
@@ -152,11 +152,14 @@ window.addEventListener('load', async (event) => {
           }).then((result) => {
             if (result.isConfirmed) {
             deleteAllProducts()
+            processReloadCart(server, containerProducts, outputTotal)
               Swal.fire({
                 title: "¡Eliminado!",
                 text: "Vaciaste el carrito.",
                 icon: "success"
               });
+              processReloadCart(server, containerProducts, outputTotal)
+              processReloadCart(server, containerProducts, outputTotal)
               processReloadCart(server, containerProducts, outputTotal)
             }
           });
@@ -177,20 +180,22 @@ window.addEventListener('load', async (event) => {
     })
 
     binBuy.addEventListener("click", async () => {
-        try {
-            const containerProducts = $('#carrito')
-            const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
-                method: "PATCH"
-            }).then(res => res.json())
-            console.log(ok, msg)
-            if (ok) {
 
-                processReloadCart(server, containerProducts, outputTotal)
-            }
-        }
-        catch (error) {
-            console.error(error.menssage)
-        }
+        buyProducts()
+        // try {
+        //     const containerProducts = $('#carrito')
+        //     const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
+        //         method: "PATCH"
+        //     }).then(res => res.json())
+        //     console.log(ok, msg)
+        //     if (ok) {
+
+        //         processReloadCart(server, containerProducts, outputTotal)
+        //     }
+        // }
+        // catch (error) {
+        //     console.error(error.menssage)
+        // }
     })
 
 })
@@ -285,6 +290,24 @@ const deleteAllProducts = async (id) => {
         
         console.log(ok, msg)
         if (ok) {
+            processReloadCart(server, containerProducts, outputTotal)
+        }
+    }
+    catch (error) {
+        console.error(error.menssage)
+    }
+
+}
+
+const buyProducts = async (id) => {
+    try {
+        const containerProducts = $('#carrito')
+        const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
+            method: "PATCH"
+        }).then(res => res.json())
+        console.log(ok, msg)
+        if (ok) {
+
             processReloadCart(server, containerProducts, outputTotal)
         }
     }

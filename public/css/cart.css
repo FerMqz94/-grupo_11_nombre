@@ -129,7 +129,7 @@
 .main-carrito .productos .info-compra .producto-info .datos-producto {
   margin: 1%;
   font-size: 90%;
-  width: 70px;
+  /* width: 70px; */
   white-space: nowrap;
 }
 
@@ -688,7 +688,7 @@ div .comprar:hover {
   .main-carrito .productos .info-compra .producto-info .datos-producto {
     margin: 1%;
     font-size: 14px;
-    width: 166%;
+    /* width: 166%; */
     padding-right: 40px;
   }
   .main-carrito .productos .info-compra .fa-trash {
@@ -746,6 +746,7 @@ div .comprar:hover {
     height: 220px;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 100px;
   }
 
   .main-carrito .botones .vaciar {
@@ -943,6 +944,7 @@ div .comprar:hover {
     padding: 1px;
     z-index: 1;
     width: auto;
+    padding: 10px;
 }
   
   .input-carrito-colores:checked ~ .producto-info .colores-opciones {
