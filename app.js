@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -9,8 +9,8 @@ const session = require("express-session")
 let cookieParser = require('cookie-parser');
 const cors = require('cors')
 
-// const passport = require('passport');
-// const { configServicegoogle } = require("./src/service/google.service");
+const passport = require('passport');
+const { configServicegoogle } = require("./src/service/google.service");
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
@@ -29,9 +29,9 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(session({ secret: "palabra secreta" }))
-// app.use(passport.initialize());
-// app.use(passport.session());
-// configServicegoogle()
+app.use(passport.initialize());
+app.use(passport.session());
+configServicegoogle()
 
 app.use(checkCookie)
 app.use(checkSession)
