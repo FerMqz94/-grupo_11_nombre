@@ -87,7 +87,7 @@
                 <td class=""><%= p.available ? "✔️" : "❌" %></td>
                 <td>
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="" class="btn acc-btn btn-info d-inline-block info">Info</a>
+                    <a href="/producto-detalle/<%= p.id %>" class="btn acc-btn btn-info d-inline-block info">Info</a>
                     <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
                    <button class="button"><a href="/admin/eliminar-producto?id=<%= p.id %>&<%=p.name = p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a></button>
                    <!-- <form action="/admin/eliminar-producto/<%= p.id %>&<%=p.name = p.name %>?_method=DELETE" method="post"
