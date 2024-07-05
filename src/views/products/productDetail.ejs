@@ -86,7 +86,7 @@
                           </div>
                           <% } else {%>
                             <div class="<%= sizesSpanish[s.id]%>">
-                            <button type="button" style="margin-left: 4px; margin-top: 10px; border: 2px solid var(--gris85); color: var(--gris85);" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" > <%= s.size %></button>
+                            <button type="button" style="margin-left: 4px; margin-top: 10px; border: 2px solid var(--gris85); color: var(--gris85);" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" onclick="showMsgNoSize('<%= s.size %>')" > <%= s.size %></button>
                             </div>
                         <% } %>
                         <% }) %>
@@ -98,7 +98,7 @@
                 <% const colorNames=product.colors.map(color=> color.name) %>
                   <% colors.forEach(c=> { %>
                     <% if (colorNames.includes(c.name)) { %>
-                      <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %>
+                      <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %> id="<%= c.id %>"
                         style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 25px; width:
                           25px;" onclick="getcolor('<%= c.id %>')">
                       </button>
