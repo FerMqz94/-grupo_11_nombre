@@ -1,13 +1,17 @@
-main.editar-producto {
-    font-family: var(--fuente-general);
-    margin-left: 20px;
+
+/*CONTENEDOR GLOBAL DE TODOS LOS ESTILOS*/
+main.editar-producto div.vista-producto-editar-contenedor{
+    margin-left: 50px;
+    width: 80%;
 }
 
-main.editar-producto div.vista-editar-producto div.contenedor-titulo-boton-editar{
+/*CONTENEDOR BOTÓN VOLVER Y TÍTULO PRINCIPAL*/
+main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-boton-editar{
     width: 100%;
 }
 
-main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto{
+/*BOTÓN VOLVER A LISTADO DE PRODUCTO*/
+main.editar-producto div.vista-producto-editar-contenedor  a.btn-custom-producto{
     font-size: var(--letra-mediana);
     background-color: var(--verde-azulado-claro);
     color: var(--blanco);
@@ -15,54 +19,88 @@ main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto{
     width: 150px;
     height: 35px;
     transition: all 1s ease-in-out;
-    margin-left: 300px;
-}
-.editar-producto .letra {
-    color: var(--verde-azulado-claro);
-    margin-bottom: 7px;
 }
 
-.editar-producto .text-custom-editar-producto {
-    background-image: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 2.8em;
-    font-weight: bold;
-    letter-spacing: 1.2px;
-    opacity: 0.9;
-    transition: transform 0.5s ease;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-main.editar-producto div.vista-editar-producto  a.btn-custom-editar-producto:hover{
+main.editar-producto div.vista-producto-editar-contenedor  a.btn-custom-producto:hover{
    background-color: var(--gris85);
-   color: var(--gris-claro)
+   color: var(--verde-azulado-claro)
 }
 
-main.editar-producto div.vista-editar-producto .form-floating{
-    margin-top: 20px;
-}
-main.editar-producto div.vista-editar-producto .form-control {
-    color: var(--gris-pizarra);
-    padding: 1em;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    outline: none;
-    line-height: 1.4;
-    border: 1.5px solid var(--gris-claro);
-}
-main.editar-producto div.vista-editar-producto .form-control:hover{
-    cursor: pointer;
+/*TITULO MAYOR DE LA PÁGINA*/
+main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-boton-editar h1.text-custom-producto{
+  background-image: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 2.8em;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  opacity: 0.9;
+  transition: transform 0.5s ease;
+  animation: fadeIn 1s ease-out forwards;
 }
 
-main.editar-producto div.vista-editar-producto .form-control:focus{
-    cursor: text;
-    color: var(--gris-pizarra);
-    background-color: var(--blanco);
-    border-color:var(--gris-pizarra);
+/*CONTENEDOR DE TODOS LA FORM*/
+main.editar-producto div.vista-producto-editar-contenedor div.card {
+    border: none;
+    box-shadow: 0 0 20px 4px #80f9e166;
 }
-main.editar-producto div.vista-editar-producto .form-select {
-    appearance: none;
+
+/*CONTENEDOR DEL INPUT NOMBRE PRODUCTO*/
+
+
+/*LABEL NOMBRE PRODUCTO*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.nombre-producto-edit label.nombre-producto{
+  color: var(--verde-azulado-claro);
+  font-size: var(--letra-mediana);
+  margin-bottom: 7px;
+
+}
+
+/*IMPUT NOMBRE PRODUCTO*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.nombre-producto-edit input.nombre-producto{
+  border: 1.5px solid var(--gris-claro);
+  border-radius: 10px;
+  padding: 7px 10px;
+  height: 42px;
+}
+
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.nombre-producto-edit input.nombre-producto:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px inset var(--verde-azulado-claro);
+}
+
+/*CONTENEDPOR PRECIO PRODUCTO*/
+
+/*LABEL PRECIO PRODUCTO*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.precio-producto-edit label.precio-producto{
+  color: var(--verde-azulado-claro);
+  font-size: var(--letra-mediana);
+  margin-bottom: 7px;
+
+}
+
+/*INPUT PRECIO PRODUCTO*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.precio-producto-edit input.precio-producto{
+  border: 1.5px solid var(--gris-claro);
+  border-radius: 10px;
+  padding: 7px 10px;
+  height: 42px;
+}
+
+main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.precio-producto-edit input.precio-producto:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px inset var(--verde-azulado-claro);
+}
+
+/*SELECCIONAR CATEGORIA DE PRODUCTO*/
+main.editar-producto div.seleccionar-categoria {
+  position: relative;
+}
+
+main.editar-producto div.seleccionar-categoria select.categoria-producto{
+  appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
   border: 1.5px solid var(--gris-claro);
@@ -72,245 +110,412 @@ main.editar-producto div.vista-editar-producto .form-select {
   padding: 7px 10px;
   height: 42px;
   color: var(--gris-pizarra);
-  background-color: rgba(249, 155, 128, 0.4);
+  background-color: rgba(153, 254, 234, 0.4);
   border-radius: 10px;
   position: relative;
   transition: all 0.5s ease;
 	font-size: var(--letra-pequeña);
 }
-main.editar-producto div.vista-editar-producto .form-select:hover{
-    background: var(--molocoton-oscuro);
+
+main.editar-producto div.seleccionar-categoria select.categoria-producto::-ms-expand{
+  display: none;
 }
 
-main.editar-producto div.vista-editar-producto .form-select:focus{
-    outline: none;
-    border: none;
-    box-shadow: 0 0 2px 2px inset var(--molocoton-oscuro);
-}
-main.editar-producto div.vista-editar-producto textarea{
-    color: var(--gris-pizarra);
-    padding: 1em;
-    border-radius: 10px;
-    border: 2px solid transparent;
-    outline: none;
-    line-height: 1.4;
-    transition: all 0.2s;
+main.editar-producto div.seleccionar-categoria select.categoria-producto:hover{
+	background: var(--verde-azulado-claro);
 }
 
-main.editar-producto div.vista-editar-producto textarea:hover{
-    cursor: pointer;
+
+main.editar-producto div.seleccionar-categoria select.categoria-producto:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px inset var(--verde-azulado);
 }
 
-main.editar-producto div.vista-editar-producto textarea:focus{
-    cursor: text;
-    color: var(--gris-pizarra);
-    background-color: var(--blanco);
-    border-color:var(--gris-pizarra);
+/*-----ICONO DEL SELECT----------*/
+main.editar-producto div.seleccionar-categoria div.contenedor-seleccionar-categoria i.fa-caret-down{
+  color: var(--gris-claro);
+  font-size: 1.2rem;
+	position: absolute;
+	right: 30px;
+	top: calc(50% - 10px);
+	display: block;
 }
 
-main.editar-producto div.vista-editar-producto .form-check-input-talle {
-    margin-right: 6px;
+/*--------DESCRIPCIÓN DEL PRODUCTO----------*/
+
+/*DESCRIPCIÓN MAYOR O MÁS LARGA*/
+
+main.editar-producto div.descripcion-producto-editar div.texarea-descripcion-mayor textarea{
+  border-radius: 10px;
+  border: 1.5px solid var(--gris-claro);
+
 }
 
-main.editar-producto div.vista-editar-producto .form-check-label-talle {
-    color:var(--negro);
-    text-shadow: 0 1px 4px rgba(0,0,0,.5);
+main.editar-producto div.descripcion-producto-editar div.texarea-descripcion-mayor textarea:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px inset var(--verde-azulado-claro);
 }
 
-main.editar-producto div.vista-editar-producto .form-check-input-talle:checked {
-    accent-color: var(--turquesa);
+main.editar-producto div.descripcion-producto-editar div.texarea-descripcion-mayor textarea::placeholder{
+  font-size: var(--letra-pequeña);
+  color: var(--verde-azulado-claro);
 }
 
-main.editar-producto div.vista-editar-producto .form-check-input-talle:checked ~ label{
-    color: var(--verde-azulado-claro);
+/*DESCRIPCIÓN DESTACADA DEL PRODUCTO*/
+
+
+main.editar-producto div.descripcion-producto-editar div.textarea-descripcion-destacada textarea{
+  border-radius: 10px;
+  border: 1.5px solid var(--gris-claro);
 }
-main.editar-producto div.vista-editar-producto .colors-check {
-    display:flex;
-    flex-wrap: wrap;
-    padding: 15px;
+
+main.editar-producto div.descripcion-producto-editar div.textarea-descripcion-destacada textarea:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 2px 2px inset var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-black input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.descripcion-producto-editar div.textarea-descripcion-destacada textarea::placeholder{
+  font-size: var(--letra-mas-pequeña);
+  color: var(--verde-azulado-claro);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-beige input[type= "checkbox"] {
-    display: none;
+
+/*CONTENEDOR TALLES Y OTROS ELEMENTOS QUE ESTÁN DENTRO DE ÉL*/
+main.editar-producto div.talles-producto-edit {
+position: relative;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-blue input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit h3.titulo-talles{
+  font-size: var(--letra-grande);
+  line-height: 1;
+  color: var(--verde-azulado-claro);
+  margin-bottom: 0; 
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-white input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit div.contenedor-talle{
+  position: relative
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-red input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit input.custom-checkbox {
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: var(--gris-claro);
+  transition: all 0.5s;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-green input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit div.contenedor-talle i.fa-check{
+ position: absolute;
+ font-size: 1.5rem;
+ left:5px;
+ top: 2px;
+ color: var(--blanco);
+ display: none;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-purple input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit label{
+  font-size: var(--letra-grande);
+  color: var(--gris-claro)
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-orange input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit input.custom-checkbox:checked{
+  background-color: var(--verde-azulado);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.talles-producto-edit input.custom-checkbox:checked + i.fa-check {
+  display: block;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-gray input[type= "checkbox"] {
-    display: none;
+
+/*COLORES*/
+
+
+main.editar-producto div.colores-producto-editar h3.titulo-colores{
+  font-size: var(--letra-grande);
+  line-height: 1;
+  color: var(--verde-azulado-claro);
+  margin-bottom: 0;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lavender input[type= "checkbox"] {
-    display: none;
+
+
+/*SETEOS GRALES*/
+main.editar-producto div.colores-producto-editar div.checkbox-color input.input-color{
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  background-color: var(--gris-claro);
+  transition: all 0.5s;
+} 
+
+
+main.editar-producto div.colores-producto-editar div.checkbox-color label.label-color{
+  font-size: var(--letra-mediana);
+  color: var(--gris-claro)
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-pink input[type= "checkbox"] {
-    display: none;
+
+/*COLOR POR COLOR EN EL CHECKED*/
+main.editar-producto div.colores-producto-editar div.checkbox-color input.black:checked{
+  background-color: black;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-silver input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.beige:checked{
+  background-color: beige;
+  border: 0.5px solid var(--gris85);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-bluishGreen input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.blue:checked{
+  background-color: blue;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-gold input[type= "checkbox"] {
-    display: none;
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.white:checked{
+  background-color: white;
+  border: 0.5px solid var(--gris85);
 }
-main.editar-producto div.vista-editar-producto .form-check-span-color {
-    position: relative;
-    display: inline-block;
-    margin-top: 10px;
-    background: var(--gris-claro);
-    padding: 15px 20px;
-    color: var(--negro);
-    text-shadow: 0 1px 4px rgba(0,0,0,.5);
-    border-radius: 30px;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.5s;
-    user-select: none;
-    overflow: hidden;
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.red:checked{
+  background-color: red;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-black:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: var(--negro);
-    color: var(--blanco);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.green:checked{
+  background-color: green;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-beige:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: beige;
-    color: var(--negro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.purple:checked{
+  background-color: purple;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-blue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: blue;
-    color: var(--turquesa);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.orange:checked{
+  background-color: orange;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-white:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: var(--blanco);
-    color: var(--negro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.lightblue:checked{
+  background-color: lightblue;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-red:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: red;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.gray:checked{
+  background-color: gray;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-green:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: green;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.lavender:checked{
+  background-color: lavender;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-purple:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: violet;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.pink:checked{
+  background-color: pink;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-orange:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: orange;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.silver:checked{
+  background-color: silver;
+  border: 0.5px solid var(--gris85);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lightblue:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: lightblue;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.bluishGreen:checked{
+  background-color: var(--verde-azulado);
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-gray:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: var(--gris-claro);
-    color: var(--negro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.colores-producto-editar div.checkbox-color input.gold:checked{
+  background-color: gold;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-lavender:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: #d29bfd;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+/*NUEVO - OFERTA */
+
+main.editar-producto div.nuevo-oferta div.nuevo input{
+  display: none;
+} 
+
+main.editar-producto div.nuevo-oferta div.oferta input{
+  display: none;
+} 
+
+main.editar-producto div.nuevo-oferta div.nuevo div.nuevo-oferta-contenedor {
+  width: 80px;
+  height: 80px;
+  background-color: var(--gris-claro);
+  transition: all 0.5s ease;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 50%;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-pink:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: #ff0080;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.nuevo-oferta div.nuevo input:checked + div.nuevo-oferta-contenedor{
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+  color: var(--blanco);
+
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-silver:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: #8a9597;
-    color: var(--negro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+main.editar-producto div.nuevo-oferta div.oferta div.nuevo-oferta-contenedor {
+  width: 80px;
+  height: 80px;
+  background-color: var(--gris-claro);
+  transition: all 0.5s ease;
+  display: inline-block;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 50%;
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-bluishGreen:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: #084d6e;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
+
+
+main.editar-producto div.nuevo-oferta div.oferta input:checked + div.nuevo-oferta-contenedor{
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
+  color: var(--blanco);
+
 }
-main.editar-producto div.vista-editar-producto .form-check-label-color-gold:nth-child(6n + 1) input[type= "checkbox"]:checked ~ .form-check-span-color {
-    background: gold;
-    color: var(--gris-claro);
-    box-shadow: 0px 2px 20px var(--gris-terciopelo);
-}
+
+
+/*SWITCH*/
 
 main.editar-producto .contenedor-switch input.input-switch-disponible {
-    display: none;
-  }
-  main.editar-producto .contenedor-switch.contenedor-switch label {
-    color: var(--gris-claro);
-    position: relative;
-  }
-  main.editar-producto .contenedor-switch input.input-switch-disponible + label::before {
-    content: " ";
-    display: block;
-    height: 18px;
-    width: 45px;
-    border: 1px solid var(--gris-claro);
-    border-radius: 9px;
-    position: absolute;
-    top: 0px;
-    left: -65px;
-    background: var(--gris-claro);
-  }
-  
-  main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::before{
-    background-color: var(--gris-claro);
-    border: 1px solid var(--gris-claro);
-  }
-  
-  main.editar-producto .contenedor-switch input.input-switch-disponible + label::after {
-    content: " ";
-    display: block;
-    height: 30px;
-    width: 30px;
-    border: 1px solid var(--gris85);
-    border-radius: 50%;
-    position: absolute;
-    top: -6px;
-    left: -75px;
-    background: var(--gris85);
-    transition: all 0.3s ease-in;
-  }
-  
-  
-  main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::after {
-    left: -40px;
-    transition: all 0.3s ease-in;
-    background: var(--gris-terciopelo);
-    border: 1px solid var(--gris-terciopelo);
+  display: none;
 }
-main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{
+main.editar-producto .contenedor-switch.contenedor-switch label {
+  color: var(--verde-azulado-claro);
+  position: relative;
+}
+main.editar-producto .contenedor-switch input.input-switch-disponible + label::before {
+  content: " ";
+  display: block;
+  height: 18px;
+  width: 45px;
+  border: 1px solid var(--gris-claro);
+  border-radius: 9px;
+  position: absolute;
+  top: 0px;
+  left: -65px;
+  background: var(--gris-claro);
+}
+
+main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::before{
+  background-color: var(--verde-azulado-claro);
+  border: 1px solid var(--verde-azulado-claro);
+}
+
+main.editar-producto .contenedor-switch input.input-switch-disponible + label::after {
+  content: " ";
+  display: block;
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--gris85);
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: -75px;
+  background: var(--gris85);
+  transition: all 0.3s ease-in;
+}
+
+
+main.editar-producto .contenedor-switch input.input-switch-disponible:checked + label::after {
+  left: -40px;
+  transition: all 0.3s ease-in;
+  background: var(--gris-claro);
+  border: 1px solid var(--gris-claro);
+}
+
+
+/*ESTILOS SUBIR IMAGEN*/
+
+/*TITULAR SUBIR IMAGEN*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen h3 {
+  font-size: var(--letra-grande);
+  line-height: 1;
+  color: var(--verde-azulado-claro);
+  margin-bottom: 0;
+}
+
+/*CONTENEDORES DE IMPUT SUBIR IMAGEN*/
+main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+
+main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto div {
+    margin: 0 0 0.5rem 0;
+    color: var(--gris-claro);
+    text-align: center;
+}
+
+main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto input.input-imagen-edit-producto {
+    display: none;
+}
+
+
+main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto label.editar-producto {
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--blanco);
+    border-radius: 7px;
+    border: 3px solid var(--gris85);
+    transition: all 0.5s ease;
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto label.editar-producto:hover {
+    border-color: var(--molocoton-oscuro);
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto .btn {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    font-weight: 500;
+    font-size: var(--letra-mediana);
+    text-decoration: none;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+    padding: 0 1rem;
+    height: 36px;
+    line-height: 36px;
+    color: var(--blanco);
+    transition: all 1s ease-in-out;
+    background: var(--verde-azulado-claro);
+ 
+  }
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto .btn:hover {
+    background-color: var(--gris85);
+    color: var(--gris-pizarra);
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto div.icono-archivo-imagen-editar i.fa-download {
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    transition: all 0.2s ease-in-out;
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto div.icono-archivo-imagen-editar i.fa-download:hover {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto label.editar-producto:hover {
+    border: 3px solid var(--molocoton-oscuro);
+    box-shadow: inset 0 0 5px 6px rgba(249, 155, 128, 0.4);
+  }
+
+
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto span.mensaje-para-usuario-imagen-edit {
+    display: block;
+    font-size: var(--letra-mas-pequeña);
+    color: var(--molocoton-oscuro);
+  }
+
+ /*BOTÓN DE ENVIAR FORMULARIO*/
+
+  main.editar-producto div.boton-enviar-formulario-editar .button-submit-editar{
     display: inline-block;
     text-align: center;
     border: none;
@@ -324,13 +529,13 @@ main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-cre
     background:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
   }
 
-  main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar:hover {
+  main.editar-producto div.boton-enviar-formulario-editar .button-submit-editar:hover {
     background: rgba(249, 155, 128, 0.4);
 
   }
 
 
-  main.editar-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto {
+  main.editar-producto div.boton-enviar-formulario-editar a.btn-custom-edit-producto {
     font-weight: 600;
     font-size: var(--letra-mediana);
     text-decoration: none;
@@ -339,80 +544,125 @@ main.editar-producto div.boton-enviar-formulario-crear-editar .button-submit-cre
   }
 
 
-  main.editar-producto div.boton-enviar-formulario-crear-editar a.btn-custom-crear-edit-producto:hover {
+  main.editar-producto div.boton-enviar-formulario-editar a.btn-custom-edit-producto:hover {
     color: var(--gris-pizarra);
     font-weight: 300;
     transition: all 0.5s ease-in-out;
   }
+  
 
 
-  /*NUEVO OFERTA*/
-
-  main.editar-producto div.nuevo-oferta div.nuevo input{
-    display: none;
-  } 
-  
-  main.editar-producto div.nuevo-oferta div.oferta input{
-    display: none;
-  } 
-  
-  main.editar-producto div.nuevo-oferta div.nuevo div.nuevo-oferta-contenedor {
-    width: 80px;
-    height: 80px;
-    background-color: var(--gris-claro);
-    transition: all 0.5s ease;
-    display: inline-block;
-    text-align: center;
-    font-weight: 500;
-    border-radius: 50%;
-  }
-  
-  main.editar-producto div.nuevo-oferta div.nuevo input:checked + div.nuevo-oferta-contenedor{
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
-    color: var(--blanco);
-  
-  }
-  
-  main.editar-producto div.nuevo-oferta div.oferta div.nuevo-oferta-contenedor {
-    width: 80px;
-    height: 80px;
-    background-color: var(--gris-claro);
-    transition: all 0.5s ease;
-    display: inline-block;
-    text-align: center;
-    font-weight: 500;
-    border-radius: 50%;
-  }
-  
-  
-  main.editar-producto div.nuevo-oferta div.oferta input:checked + div.nuevo-oferta-contenedor{
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%);
-    color: var(--blanco);
-  
-  }
+/*--------------------------------------------------------------------------*/
+/*------------------------MEDUA QUERY TABLER-------------------------------*/
 
 @media (min-width: 768px) {
-    main.editar-producto {
-        margin-left: 20px;
+
+    main.editar-producto div.vista-producto-editar-contenedor{
+      
+width: 65%;
+      
+margin-left: 255px;
     }
+
+    main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-boton-editar{
+        width: 85%;
+    }
+
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto {
+
+width: 70%;
+
 }
+
+}
+
+/*-----------------------MEDIA QUERY DESKTOP---------------------------*/
 
 
 @media (min-width: 1024px) {
-    main.editar-producto {
-        margin-left: 20px;
-        
-    }
-    main.editar-producto div.card {
-        display: flex;
-        justify-content: center; /* Centrar horizontalmente */
-        align-items: center; /* Centrar verticalmente */
-        box-shadow: 0 0 20px 4px rgba(249, 155, 128, 0.4);
-    }
-    main.editar-producto div.vista-editar-producto .colors-check {
-        display:flex;
-        flex-wrap: wrap;
-        padding: 15px;
+    
+    main.editar-producto div.vista-producto-editar-contenedor{
+    width: 70%;
     }
     
-}
+    main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-boton-editar{
+        width: 70%;
+    }
+    
+    main.editar-producto div.vista-producto-editar-contenedor  a.btn-custom-producto{
+        font-size: var(--letra-grande);
+        width: 180px;
+        height: 50px;
+    }
+    
+    main.editar-producto div.vista-producto-editar-contenedor div.contenedor-titulo-boton-editar h1.text-custom-producto{
+        font-size: var(--letra-titular-menor);
+    }
+        
+    
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen div.contenedor-input-label-producto {
+        width: 50%;
+        max-width: 400px;
+    }
+
+    /*CONTENEDOR DE SELECCIONAR CATEGORIA Y SUS ELEMENTOS*/
+
+    main.editar-producto div.seleccionar-categoria div.contenedor-seleccionar-categoria{
+      position: relative;
+    }
+
+    main.editar-producto div.seleccionar-categoria select.categoria-producto {
+      width:96%;
+      height: 50px;
+    }
+
+
+    /*INPUTS NOMBRE Y PRECIO + LABEL*/
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.nombre-producto-edit input.nombre-producto {
+      height: 50px;
+
+    } 
+
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.nombre-producto-edit label.nombre-producto {
+      font-size: var(--letra-grande);
+    }
+
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.precio-producto-edit input.precio-producto {
+      height: 50px;
+    }
+
+    main.editar-producto div.vista-producto-editar-contenedor div.card div.container div div.precio-producto-edit label.precio-producto {
+      font-size: var(--letra-grande);
+    }
+
+    /*DESCRIPCIÓN PRODUCTO*/
+    main.editar-producto div.descripcion-producto-editar div.texarea-descripcion-mayor textarea::placeholder{
+      font-size: var(--letra-grande);
+    }    
+
+
+    /*DESCRIPCIÓN DESTACADA*/
+
+    main.editar-producto div.descripcion-producto-editar div.textarea-descripcion-destacada textarea{
+      height: 100px;
+    }
+
+    main.editar-producto div.descripcion-producto-editar div.textarea-descripcion-destacada textarea::placeholder{
+      font-size: var(--letra-mediana);
+    }
+
+    /*TALLES*/
+  main.editar-producto div.talles-producto-edit h3.titulo-talles{
+    font-size: var(--letra-mas-grande);
+  }
+
+  /*COLORES*/
+  main.editar-producto div.colores-producto-editar h3.titulo-colores{
+    font-size: var(--letra-mas-grande);
+  }
+
+  /*TITULO DE IMAGEN*/
+  main.editar-producto div.vista-producto-editar-contenedor div.card div.subir-imagen h3 {
+    font-size: var(--letra-mas-grande);
+  }
+} 

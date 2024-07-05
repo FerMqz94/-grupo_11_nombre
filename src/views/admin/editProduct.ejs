@@ -1,149 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include("../partials/head", {view : "Editar productos"}) %>
-
+    <%- include("../partials/head", {view : "Editar producto"}) %>
 <body>
-    <main class="editar-producto">
-        <!-- Navegador Dashboard -->
-        <div class="dashboard-admin-contenido">
-            <div class="vista-editar-producto my-4 p-5 mx-auto">
-                <!-- Volver al listado y Editar Producto -->
-                <div class="contenedor-titulo-boton-editar d-flex flex-column flex-md-row justify-content-between">
-                    <a href="/admin/productos" class="btn btn-custom-editar-producto my-3 my-md-5 d-sm-block d-md-inline-block">Volver al listado</a>
-                    <h1 class="text-custom-editar-producto my-3 my-md-5 d-sm-block d-md-inline-block mx-auto">Editar Producto</h1>
-                </div>
-                <div class="card">
-                    <form action="/admin/editar-productos/<%= product.id %>?_method=PUT" method="POST" class="my-5" enctype="multipart/form-data">
-                        <!-- Nombre y Precio del Producto -->
-                        <div class="mb-3">
-                            <label class="letra" for="nombreProducto" class="form-label">Nombre:</label>
-                            <input type="text" class="form-control" id="nombre-producto" placeholder="Nombre del producto" name="name" value="<%= product.name %>">
-                            <p class="error-name text-danger"></p>
-                        </div>
-                        <div class="mb-3">
-                            <label for="precioProducto" class="form-label letra">Precio:</label>
-                            <input type="text" class="form-control" id="precio-producto" placeholder="Precio del producto" name="price" value="<%= product.price %>">
-                            <p class="error-price text-danger"></p>
-                        </div>
-                        <!-- Categorías -->
-                        <div class="form-floating">
-                            <select class="form-select" id="seleccionCategoria" aria-label="Categorias de producto" name="category">
-                                <option selected hidden class="texto-selector-categoria">Categorías de Producto</option>
-                                <% categories.forEach(c => { %>
-                                    <option <%= product.id_category === c.id ? "selected" : "" %> value="<%= c.id %>"><%= c.name %></option>
-                                <% }) %>
-                            </select>
-                            <label for="catSeleccionada"></label>
-                        </div>
-                        <!-- Descripciones -->
-                        <label class="letra" for="descripcionProducto">Descripción:</label>
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Describe el producto" id="descripcion-producto" style="height: 100px" name="description"><%= product.description %></textarea>
-                            <p class="error-description text-danger"></p>
-                        </div>
-                        <label class="letra" for="descripcionProducto">Descripción destacada:</label>
-                        <div class="form-floating">
-                            <textarea class="form-control" placeholder="Describe el producto" id="desc-destacada" name="featuredDescription"><%= product.featuredDescription %></textarea>
-                            <p class="error-featuredDescription text-danger"></p>
-                        </div>
-                        <!-- Talles -->
-                        <div class="talles-check">
-                            <h3 class="titulo-talles col-12 my-3">Talles</h3>
-                            <% const sizeIds = product.sizes.map(size => size.id) %>
-                            <% sizes.forEach(size => { %>
-                                <div class="form-check-talles">
-                                    <input class="form-check-input-talle" type="checkbox" value="<%= size.id %>" id="<%= size.size %>" name="talle<%= size.size %>" <% if (sizeIds.includes(size.id)) { %> checked <% } %>>
-                                    <label class="form-check-label-talle letra" for="talle<%= size.size %>">Talle <%= size.size %></label>
-                                </div>
-                            <% }) %>                            
-                        </div>
-                        <!-- Colores -->
-                        <div class="colors-check">
-                            <h3 class="titulo-colores letra col-12 my-3">Colores</h3>
+    
 
-                            <% const colorsSpanish = { 
-                                "black": "Negro",
-                                "beige": "Beige",
-                                "blue": "Azul",
-                                "white": "Blanco",
-                                "red": "Rojo",
-                                "green": "Verde",
-                                "purple": "Violeta",
-                                "orange": "Naranja",
-                                "lightblue": "Celeste",
-                                "gray": "Gris",
-                                "lavender": "Lila",
-                                "pink": "Rosa",
-                                "silver": "Plata",
-                                "bluishGreen": "Petróleo",
-                                "gold": "Oro"
-                            }; %>
-                            <% const colorsIds = product.colors.map(color => color.id) %>
-                            <% colors.forEach(color => { %>
-                                    <div class="form-check-color">
-                                        <label class="form-check-label-color-<%= color.name %>">
-                                            <input class="form-check-input-color" type="checkbox" value="<%= color.id %>" id="<%= color.name %>" name="<%= color.name %>" <% if (colorsIds.includes(color.id)) { %> checked <% } %>>
-                                            <span class="form-check-span-color" for="<%= color.name %>"><%= colorsSpanish[color.name] %></span>
-                                        </label>
-                                    </div>   
-                            <% }) %>
-                        </div>
-                        <!-- Nuevo - Oferta -->
-                        <h3 class="titulo-nuevo-oferta letra col-12 my-3">Producto Nuevo o En Oferta</h3>
-                        <div class="nuevo-oferta-contenedor d-flex flex-wrap-wrap">
-                            <div class="nuevo-oferta d-flex my-3 col-6 my-md-5">
-                                <div class="nuevo col-6 col-md-4 col-lg-2">
-                                    <label class="" for="option1">
-                                        <input type="radio" class="" name="neworsale" id="option1" autocomplete="off" value="new" <%= product.new ? "checked" : "" %>>
-                                        <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
-                                            <span>Nuevo</span>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="nuevo-oferta d-flex my-3 col-6 my-md-5">
-                                <div class="oferta col-6 col-md-4 col-lg-2">
-                                    <label class="" for="option2">
-                                        <input type="radio" class="" name="neworsale" id="option2" autocomplete="off" value="sale"<%= product.sale ? "checked" : "" %>>
-                                        <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
-                                            <span>Oferta</span>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Disponible -->
-                        <h3 class="titulo-nuevo-oferta col-12 my-3 letra">Estado</h3>
-                        <div class="form-check form-switch d-flex my-3 col-10 mx-auto my-md-3">
-                            <div class="contenedor-switch col-10">
-                                <input type="checkbox" class="input-switch-disponible" id="available" name="available" value="1" <%= product.available ? "checked" : "" %>>
-                                <label class="mx-5" for="available">Disponible</label>
-                            </div>
-                        </div>
-                        <!-- Subir imagen -->
-                        <div>
-                            <input class="form-control form-control-lg" id="formFileLg" type="file" name="image" accept="image/*" multiple>
-                            <ul>
-                                <% product.images.forEach(image => { %>
-                                    <li><%= image.name %></li>
-                                <% }) %>
-                            </ul>
-                            <p class="error-imgs text-danger"></p>
-                            <!-- <p class="text-danger col-12">
-                                <%= /* locals.errors?.image?.msg */%>
-                            </p> -->
-                        </div>
+<main class="editar-producto">
 
-                        <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
-                            <button type="submit" class="button-submit-crear-editar my-3">Enviar cambios</button>
-                            <button class="button-submit-crear-editar my-3 mx-5"><a href="/admin/productos">Cancelar</a></button>
-                            <div class="err-form-general"></div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <!--CONTENEDOR GLOBAL DE CREACIÓN DE PRODUCTO-->
+
+    <div class="vista-producto-editar-contenedor my-4">
+          
+            <!--BOTÓN DE RETORNO Y TÍTULO-->
+
+        <div class="contenedor-titulo-boton-editar d-flex flex-column flex-md-row justify-content-between">
+            <a href="/admin/productos" class="btn btn-custom-producto my-3 my-md-5 d-sm-block d-md-inline-block">Volver al listado</a>
+            <h1 class="text-custom-producto my-3 my-md-5 d-sm-block d-md-inline-block">Editar Producto</h1>
         </div>
-    </main>
-    <script src="/js/functions/validationEditProduct.js"></script>
+
+        <!--FORMULARIOS DE DATOS-->
+
+       <div class="card">
+                    
+        <form action="/admin/editar-productos/<%= product.id %>?_method=PUT" method="POST" class="my-5" enctype="multipart/form-data" id="form-create-product"> 
+
+        <div class="container">
+            <div class="d-flex row p-0 justify-content-center">
+                <!--NOMBRE DEL PRODUCTO-->
+                <div class="nombre-producto-edit d-flex flex-column col-10 my-3 col-lg-5">
+                    <label for="name" class="nombre-producto">Nombre del producto:<span class="field-required text-danger"></span></label>                    
+                    <input class="nombre-producto" type="text" name="name" id="name" value="<%= product.name %>">
+                    <p class="text-danger error-name">
+
+
+                    </p>
+                </div>
+
+                <!---PRECIO DEL PRODUCTO-->
+                <div class="precio-producto-edit d-flex flex-column col-10 my-3 col-lg-5">
+                    <label for="price" class="precio-producto">Precio:<span class="field-required text-danger"></span></label>
+                    <input class="precio-producto" type="number" name="price" id="price" value="<%= product.price %>">
+                    <p class="text-danger error-price">
+
+
+                    </p>
+                </div>
+
+                <!--SELECCIÓN DE CATEGORÍA-->
+                <div class="seleccionar-categoria my-3 col-10 col-lg-10">
+                    <span class="field-required text-danger"></span>
+                   <div class="contenedor-seleccionar-categoria col-lg-6">
+                    
+                    <select class="col-12 categoria-producto" id="category" name="category">
+                        <option selected hidden>Categorías de producto<span class="field-required text-danger"></span></option>
+                        <% categories.forEach(c => { %> 
+                            <option <%= product.id_category === c.id ? "selected" : "" %> value="<%= c.id %>"><%= c.name %></option>
+                        <% }) %>
+                    </select>
+                      <i class="fa-solid fa-caret-down"></i>
+                      <p class="text-danger error-category"></p>
+                    </div>
+                </div>
+                
+                <!--SELECCIÓN DE DESCRIPCIÓN-->
+               <div class="col-10 my-3 descripcion-producto-editar">
+                <div class="texarea-descripcion-mayor">
+                    <span class="field-required text-danger"></span>
+                    <textarea class="form-control my-1" placeholder="Descripción del producto" id="description" name="description" style="height: 200px"><%= product.description %></textarea>
+                </div>   
+                <p class="text-danger error-description"></p>
+
+                 <!--SELECCIÓN DE DESCRIPCIÓN DESTACADA-->       
+                
+                <div class="textarea-descripcion-destacada">
+                    <span class="field-required text-danger"></span>
+                    <textarea class="form-control my-1" placeholder="Descripción destacada del producto" id="featuredDescription" name="featuredDescription"><%= product.featuredDescription %></textarea>
+                </div>
+                <p class="text-danger error-featuredDescription">
+
+                        
+                </p> 
+                </div>
+
+                <!--TALLES PRODUCTO-->
+                <div class="talles-producto-edit d-flex flex-wrap my-3 col-10 my-md-3">
+                    <h3 class="titulo-talles col-12 my-3 my-lg-4">Talles<span class="field-required text-danger"></span></h3>
+                    <% const sizeIds = product.sizes.map(size => size.id) %>
+                    <% sizes.forEach(s => { %>
+                        <div class="contenedor-talle d-flex align-items-center col-5 col-md-4 my-2 my-md-3 col-lg-2 mx-lg-2 my-lg-4">
+                            <input type="checkbox" class="custom-checkbox" id="<%= s.size%>" autocomplete="off" name="talle<%=s.size%>" value="<%= s.id %>" <% if (sizeIds.includes(s.id)) { %> checked <% } %>>
+                            <i class="fa-solid fa-check"></i>                            
+                            <label class="mx-2" for="<%= s.size %>"><%= s.size %></label>
+                        </div>
+                    <% }) %>
+                    <p class="text-danger error-sizes"></p>
+                </div>
+
+                <div class="colores-producto-editar d-flex flex-wrap my-3 col-10 my-lg-4">
+                    <h3 class="titulo-colores col-12 my-3 my-lg-4">Colores<span class="field-required text-danger"></span></h3>
+                    <% const colorsSpanish = { 
+                        "black": "Negro",
+                        "beige": "Beige",
+                        "blue": "Azul",
+                        "white": "Blanco",
+                        "red": "Rojo",
+                        "green": "Verde",
+                        "purple": "Violeta",
+                        "orange": "Naranja",
+                        "lightblue": "Celeste",
+                        "gray": "Gris",
+                        "lavender": "Lila",
+                        "pink": "Rosa",
+                        "silver": "Plata",
+                        "bluishGreen": "Petróleo",
+                        "gold": "Oro"
+                    }; %>
+                    <% const colorsIds = product.colors.map(color => color.id) %>
+                    <% colors.forEach(c => { %>
+                        <div class="checkbox-color d-flex align-items-center col-6 my-2 col-md-4 my-md-3 col-lg-3 my-lg-4">
+                        <input type="checkbox" class="input-color <%= c.name %>" id="<%= c.name %>" autocomplete="off" name="<%= c.name %>" value="<%= c.id %>" <% if (colorsIds.includes(c.id)) { %> checked <% } %>>
+                        <label class="label-color mx-2" for="<%= c.name %>"><%= colorsSpanish[c.name] %></label>
+                        </div>
+                    <% }) %>
+                    </div>
+                
+
+                <!---------NUEVO - OFERTA---------->
+                    <div class="nuevo-oferta d-flex my-3 col-10 my-md-5">
+                   
+                        <div class="nuevo col-6 col-md-4 col-lg-2">
+                            <label class="" for="new">
+                                <input type="radio" class="" name="neworsale" id="new" autocomplete="off" value="new" <%= product.new ? "checked" : "" %>>
+                                <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                                <span>Nuevo</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <div class="oferta col-6 col-md-4 col-lg-2">
+                            <label class="" for="sale">
+                                <input type="radio" class="" name="neworsale" id="sale" autocomplete="off" value="sale" <%= product.sale ? "checked" : "" %>>
+                                <div class="nuevo-oferta-contenedor d-flex align-items-center justify-content-center">
+                                    <span>Oferta</span>
+                                </div>
+                            </label>
+                        </div>    
+                    </div>
+
+                <!------DISPONIBLE-------->
+                <div class="form-check form-switch d-flex my-3 col-10 mx-auto my-md-3">
+                    <div class="contenedor-switch col-10">
+                        <input type="checkbox" class="input-switch-disponible" id="available" name="available" <%= product.available ? "checked" : "" %>>
+                        <label class="mx-5" for="available">Disponible</label>
+                    </div>
+                </div>
+            
+        
+
+                <!--SUBIR IMAGEN-->
+                <div class="subir-imagen col-12 my-md-4 my-lg-5">
+                    <h3 class="my-4 text-center col-12">Imagen producto<span class="field-required text-danger"></span></h3>
+                    
+                    <div class="contenedor-input-label-producto">
+                        <input id="image" class="input-imagen-edit-producto" type="file" name="image" accept="image/*" value="" multiple  />
+                        <label class="editar-producto" for="image">
+                        <div class="icono-archivo-imagen-editar">
+                            <i class="fa fa-download"></i>
+                            <div>Seleccioná un archivo o arrastralo acá</div>
+                            <span id="" class="btn btn-primary">Subí archivos</span>
+                            <span class="mensaje-para-usuario-imagen-edit">Formato de archivo no válido</span>
+                        </div>
+                        </label>
+                    </div>  
+                    <ul>
+                        <% product.images.forEach(image => { %>
+                            <li class="col-12 col-md-6 col-lg-4 my-3"><%= image.name %></li>
+                            <img class="img-product" src="/images/products/<%= image.name %>" alt="" style="width: 50px;height: 50px;object-fit: cover;">
+                        <% }) %>
+                    </ul>
+                
+                </div>
+
+                <p class="text-danger error-imgs"></p> 
+
+                <div class="boton-enviar-formulario-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
+                    <button type="submit" class="button-submit-editar my-3">Enviar cambios</button>
+                    <button class="button-submit-editar my-3 mx-5"><a href="/admin/productos">Cancelar</a></button>
+                </div>
+                <p class="text-danger col-12 text-center err-form-general alert alert-danger">Revisa los campos con errores</p>
+                            
+                </div>  
+
+            </div>
+            
+        </form> 
+        
+        </div>
+    </div>
+    
+</main>
+
+
+
+     
+    <script src="/js/functions/validationCreateProduct.js"></script>
 </body>
+</html>

@@ -118,10 +118,6 @@ window.addEventListener('load', function(){
       case !value.length:
         invalid(errDescription, "La descripción es requerida", this);
         break;
-
-      case !exRegAlfanumeric.test(value):
-        invalid(errDescription, "La descripción debe ser alfanumérico", this);
-        break;
       case value.length < 10 || value.length > 100:
         invalid(errDescription, "La descripción debe tener un mínimo de 10 y un tamaño de 100 caracteres", this);
         break;
@@ -151,11 +147,6 @@ window.addEventListener('load', function(){
          case !value.length:
           invalid(errFeaturedDescription, "La descripción destacada es requerida", this);
            break;
-   
-         case !exRegAlfanumeric.test(value):
-          invalid(errFeaturedDescription, "La descripción destacada debe ser alfanumérico", this);
-           break;
-   
          case value.length < 5 || value.length > 100:
           invalid(errFeaturedDescription, "La descripción destacada debe tener un mínimo de 5 y un tamaño de 100 caracteres", this);
            break;
