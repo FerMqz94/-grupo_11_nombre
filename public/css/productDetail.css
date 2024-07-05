@@ -259,7 +259,7 @@ main.vista-producto
   div.talles
   div.dos
   button.boton-dos {
-  border: 2px solid var(--gris-claro);
+  border: 2px solid var(--gris74);
 }
 
 /*-----CONTENEDOR CANTIDAD Y CARRITO-------*/
