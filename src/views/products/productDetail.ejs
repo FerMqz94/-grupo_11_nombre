@@ -173,11 +173,12 @@
 
         <!-----OTROS PRODUCTOS------->
         <section class="otrosFav">
-          <h3 class="otrosFav">OTROS FAV</h3>
+          <h3 class="otrosFav">OTROS PRODUCTOS</h3>
           <div class="contenedor-otros-productos">
             <% const firstId = products[0].id; %>
             <% const lastId = products[products.length - 1].id; %>
             <% const productId = product.id; %>
+            
             <% function getRandomUniqueIds(firstId, lastId, count, excludeId) { 
                 const uniqueIds = [];
                 while (uniqueIds.length < count) {
@@ -189,23 +190,29 @@
                 return uniqueIds;
             } %>
             
+            <% function randomOrder(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+                return array;
+            } %>
+            
             <% const randomIds = getRandomUniqueIds(firstId, lastId, 4, productId); %>
-            <% let displayedCount = 0; %>
-            <% products.forEach((p) => { %>
-                <% if (randomIds.includes(p.id) && displayedCount < 4) { %>
-                    <article class="productos-otrosFav dos-continentes">
-                        <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>" 
-                            alt="<%= p.name %>">
-                        <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
-                            <h4 class="h4-dos-conti">
-                                <%= p.name %>
-                            </h4>
-                        </a>
-                        <p class="p-dos-conti">$<%= p.price %></p>
-                    </article>
-                    <% displayedCount++; %>
-                <% } %>
-            <% }) %>
+            <% let randomProducts = products.filter(p => randomIds.includes(p.id)); %>
+            <% randomProducts = randomOrder(randomProducts); %>
+            <% randomProducts.forEach((p) => { %>
+                <article class="productos-otrosFav dos-continentes">
+                    <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>" 
+                        alt="<%= p.name %>">
+                    <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
+                        <h4 class="h4-dos-conti">
+                            <%= p.name %>
+                        </h4>
+                    </a>
+                    <p class="p-dos-conti">$<%= p.price %></p>
+                </article>
+            <% }); %>
           </div>
         </section>
 
