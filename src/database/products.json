@@ -2,9 +2,9 @@
    {
       "id": 1,
       "image": [
-         "image-1710443878037.png",
-         "image-1710443878038.png",
-         "image-1710443878040.png"
+         "image-1710443655500.png",
+         "image-1710443655501.png",
+         "image-1710443655503.png"
       ],
       "name": "Remera",
       "description": "Remera de algodón básica, usable en cualquier situación",
@@ -18,8 +18,8 @@
          5
       ],
       "colors": [
-         1,
-         2
+         2,
+         10
       ],
       "price": 8000,
       "new": false,
@@ -45,8 +45,8 @@
          5
       ],
       "colors": [
-         1,
-         2
+         9,
+         12
       ],
       "price": 42000,
       "new": false,
@@ -70,8 +70,7 @@
       ],
       "colors": [
          1,
-         2,
-         3
+         10
       ],
       "price": 18000,
       "new": false,
@@ -119,7 +118,7 @@
          3
       ],
       "colors": [
-         1
+         2
       ],
       "price": 13500,
       "new": false,
@@ -144,8 +143,7 @@
       ],
       "colors": [
          2,
-         3,
-         4
+         9
       ],
       "price": 12500,
       "new": false,
@@ -170,8 +168,7 @@
       ],
       "colors": [
          1,
-         2,
-         5
+         2
       ],
       "price": 11500,
       "new": false,
@@ -195,7 +192,8 @@
          4
       ],
       "colors": [
-         1
+         10,
+         12
       ],
       "price": 22000,
       "new": false,

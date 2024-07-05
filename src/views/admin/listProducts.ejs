@@ -51,11 +51,28 @@
                 <td class=""><%= p.description %></td>
                 <td class=""><%= p.featuredDescription %></td>
                 <td class=""><%= p.category?.name %></td>
+                <% const colorsSpanish = { 
+                  "black": "Negro",
+                  "beige": "Beige",
+                  "blue": "Azul",
+                  "white": "Blanco",
+                  "red": "Rojo",
+                  "green": "Verde",
+                  "purple": "Violeta",
+                  "orange": "Naranja",
+                  "lightblue": "Celeste",
+                  "gray": "Gris",
+                  "lavender": "Lila",
+                  "pink": "Rosa",
+                  "silver": "Plata",
+                  "bluishGreen": "Petróleo",
+                  "gold": "Oro"
+              }; %>
                 <td>
                   
                   <% for (let i= 0; i <  p.colors.length; i++) {%>
                     <% if(p.colors[i]) {%>
-                    <%= p.colors[i].name%>
+                    <%= colorsSpanish[p.colors[i].name]%>
                     <% } %>
                   <%}%>
                 </td>
