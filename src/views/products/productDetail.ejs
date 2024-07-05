@@ -76,13 +76,15 @@
 
               <div class="talles">
                   <% const sizesSpanish={ 1: "uno" , 2: "dos" , 3: "tres" , 4: "cuatro" , 5: "cinco" }; %>
-                    <% const sizesId=product.sizes.map(size=> size.id) %>
+                    <% const sizesIds=product.sizes.map(size=> size.id) %>
                       <% sizes.forEach(s=> { %>
-                        <div class="<%= sizesSpanish[s.id]%>">
-                          <button type="button" style="margin-left: 4px; margin-top: 10px;" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>'); showSize('<%= s.size %>')">
-                            <%= s.size %>
-                          </button>
-                        </div>
+                        <% if (sizesIds.includes(s.id)) { %>
+                          <div class="<%= sizesSpanish[s.id]%>">
+                            <button type="button" style="margin-left: 4px; margin-top: 10px;" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" onclick="getSize('<%= s.size %>'); showSize('<%= s.size %>')">
+                              <%= s.size %>
+                            </button>
+                          </div>
+                        <% } %>
                         <% }) %>
               </div>
 
@@ -173,23 +175,37 @@
         <section class="otrosFav">
           <h3 class="otrosFav">OTROS FAV</h3>
           <div class="contenedor-otros-productos">
-            <% products.forEach((p, index)=> { %>
-
-              <% if(index <=3) { %>
-                <article class="productos-otrosFav dos-continentes">
-                  <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>"
-                    alt="<%= p.name %>">
-                  <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
-                    <h4 class="h4-dos-conti">
-                      <%= p.name %>
-                    </h4>
-                  </a>
-                  <p class="p-dos-conti">$<%= p.price %>
-                  </p>
-                </article>
+            <% const firstId = products[0].id; %>
+            <% const lastId = products[products.length - 1].id; %>
+            <% const productId = product.id; %>
+            <% function getRandomUniqueIds(firstId, lastId, count, excludeId) { 
+                const uniqueIds = [];
+                while (uniqueIds.length < count) {
+                    const randomId = Math.floor(Math.random() * (lastId - firstId + 1)) + firstId;
+                    if (!uniqueIds.includes(randomId) && randomId !== excludeId) {
+                        uniqueIds.push(randomId);
+                    }
+                }
+                return uniqueIds;
+            } %>
+            
+            <% const randomIds = getRandomUniqueIds(firstId, lastId, 4, productId); %>
+            <% let displayedCount = 0; %>
+            <% products.forEach((p) => { %>
+                <% if (randomIds.includes(p.id) && displayedCount < 4) { %>
+                    <article class="productos-otrosFav dos-continentes">
+                        <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>" 
+                            alt="<%= p.name %>">
+                        <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
+                            <h4 class="h4-dos-conti">
+                                <%= p.name %>
+                            </h4>
+                        </a>
+                        <p class="p-dos-conti">$<%= p.price %></p>
+                    </article>
+                    <% displayedCount++; %>
                 <% } %>
-
-                  <% }) %>
+            <% }) %>
           </div>
         </section>
 
