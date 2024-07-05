@@ -235,8 +235,8 @@ main.vista-producto section.visualizacion-producto div.talles div button {
   /* height: 150%; */
   background-color: var(--blanco);
   font-size: var(--letra-mediana);
-  color: var(--gris-claro);
-  border: 2px solid var(--gris-claro);
+  color: var(--gris74);
+  border: 2px solid var(--gris74);
   transition: all 1s;
 }
 

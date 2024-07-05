@@ -84,6 +84,10 @@
                               <%= s.size %>
                             </button>
                           </div>
+                          <% } else {%>
+                            <div class="<%= sizesSpanish[s.id]%>">
+                            <button type="button" style="margin-left: 4px; margin-top: 10px; border: 2px solid var(--gris85); color: var(--gris85);" name="button-sizes" class="boton-<%= sizesSpanish[s.id]%>" > <%= s.size %></button>
+                            </div>
                         <% } %>
                         <% }) %>
               </div>
