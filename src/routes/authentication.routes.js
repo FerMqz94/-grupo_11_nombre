@@ -15,6 +15,16 @@ router.post("/registrar",registerValidation,  processRegister); //
 
 router.get("/cerrar-sesion", logout)
 
+// passport.serializeUser((user, done) => done(null, user));
+// passport.deserializeUser((user, done) => done(null, user));
+
+// PARA INICIAR SESION CON GOOGLE
+
+// router.get("/iniciar/google", passport.authenticate("google"));
+
+// router.get("/google/callback", passport.authenticate("google", { failureRedirect: "/autenticacion/iniciar" }), loginAndRegisterGoogle);
+
+
 
 
 
