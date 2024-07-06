@@ -8,7 +8,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-import { useNavigate, useParams } from 'react-router-dom';
+
 
 
 const Users = () => {
@@ -78,6 +78,8 @@ const columns = [
           <img src={params.value.toString()} alt={params.row.fullName} style={{ width: 'auto', height: '100%', padding: "7px", borderRadius: '50%' }} />
       ),
   },
+
+ 
 //   {
 //       field: 'ver',
 //       headerName: '',
@@ -127,7 +129,7 @@ const columns = [
 //       ),
 //   }
 ];
-
+  
   return (
     <div className='DataGridContainer'>
             <h1 style={{textAlign: 'center'}}>Usuarios</h1>

@@ -10,20 +10,20 @@ export const SideBar = function () {
     { /* Sidebar */}
 
     {/* Sidebar - Brand */}
-    <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+    <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="/">
         <div className="sidebar-brand-icon">
             <img className={`w-50 ${styles.logo}`} src= {zinke} alt="zinke" />
         </div>
-    </a>
+    </Link>
 
     {/* Divider */}
     <hr className="sidebar-divider my-0" />
 
     {/* Nav Item - Dashboard */}
     <li className={`nav-item active ${styles.item}`}>
-        <a className={`nav-link ${styles.link}`} href="/">
+        <Link className={`nav-link ${styles.link}`} to="/">
             <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - ZINKE</span></a>
+            <span>Dashboard - ZINKE</span></Link>
     </li>
 
     {/* Divider */}
@@ -49,9 +49,9 @@ export const SideBar = function () {
 
     {/* Nav Item - Tables */}
     <li  className={`nav-item ${styles.item}`}>
-        <a className={`nav-link ${styles.link}`} href="/">
+        <Link className={`nav-link ${styles.link}`} to="/graficos">
             <i className="fas fa-fw fa-table"></i>
-            <span> SEARCH</span></a>
+            <span>Graficos</span></Link>
     </li>
     <li className={`nav-item ${styles.item}`}>
         <a className={`nav-link ${styles.link}`} href="/">
