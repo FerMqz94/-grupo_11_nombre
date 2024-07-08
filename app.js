@@ -11,6 +11,7 @@ const cors = require('cors')
 
 const passport = require('passport');
 const { configServicegoogle } = require("./src/service/google.service");
+const { configServiceTwitter } = require("./src/service/twitter.service");
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
@@ -32,6 +33,7 @@ app.use(session({ secret: "palabra secreta" }))
 app.use(passport.initialize());
 app.use(passport.session());
 configServicegoogle()
+configServiceTwitter()
 
 app.use(checkCookie)
 app.use(checkSession)
