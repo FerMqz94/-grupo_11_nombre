@@ -2,7 +2,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "../pages/Root";
 import Dashboard from "../pages/Dashboard";
 import { routesProducts , } from "./RoutesProduct";
-import{routesUsers} from "./RouterUsers"
+import{routesUsers} from "./RouterUsers";
+import {routesGraficos} from "./RoutesGraficos"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
       },
       ...routesProducts,
       ... routesUsers,
+      ... routesGraficos,
     ],
   },
 ]);
