@@ -131,7 +131,7 @@ const usernameError = document.querySelector('.error-username');
 inputUsername.addEventListener('blur', function () {
 
     const value = this.value.trim();
-
+    const usernameRegex = /^[A-Za-z0-9\s]+$/g;
     switch (true) {
         case !value.length:
             statusInvalid(usernameError, "Nombre de usuario requerido",  newStyleInputInvalid, '.nombreDeCuenta');
@@ -141,7 +141,10 @@ inputUsername.addEventListener('blur', function () {
             statusInvalid(usernameError, "Debe tener entre 4 y 20 caracteres" , newStyleInputInvalid, '.nombreDeCuenta');
             displayIconToShowInvalid(iconErrorUser, iconValidUser);
             break;
-
+        case !usernameRegex.test(value):
+            statusInvalid(usernameError, "El nombre de usuari@ debe ser alfanumérico" , newStyleInputInvalid, '.nombreDeCuenta');
+            displayIconToShowInvalid(iconErrorUser, iconValidUser);
+             break;
         default:
             statusValid(usernameError, newStyleInputValid, '.nombreDeCuenta');
             displayIconToShowValid(iconValidUser, iconErrorUser)

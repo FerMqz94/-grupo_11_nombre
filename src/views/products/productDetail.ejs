@@ -35,14 +35,19 @@
                 <% product.images.forEach(img=> { %>
                   <% if (img) { %>
                     <div>
-                      <div class="contenedor-blazerOver-principal">
+                      <div class="card">
+                        <span id="heart-second" value="So" class="heart"><i onclick="wishList()" class="fas fa-heart"></i></span>
+                    <img src="/images/products/<%= img.name %>" class="first-image">
+                  
+                  </div>
+                      <!--<div class="contenedor-blazerOver-principal">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-regular fa-heart"></i>
                         <div class="contenedor-img-principal">
                           <img class="blazer-over-principal" src="/images/products/<%= img.name %>"
                             alt="<%= product.name %>">
                         </div>
-                      </div>
+                      </div>--->
                     </div>
                     <% } %>
                       <% }) %>
@@ -55,6 +60,14 @@
                     <div rol="tablist" class="dots"></div>
             </div>
 
+            <article class="contenedor-descripcion" style="width: 100%;">
+              <p class="descripcion">
+                <%= product.description%>
+              </p>
+              <h5 class="descripcion-destacada">
+                <%= product.featuredDescription %>
+                  </p>
+            </article>
           </div>
 
 
@@ -93,7 +106,7 @@
               </div>
 
 
-              <div>
+              <div style="margin-top: 10px;">
                 <p>Colores</p>
                 <% const colorNames=product.colors.map(color=> color.name) %>
                   <% colors.forEach(c=> { %>
@@ -168,7 +181,44 @@
                       </button> 
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                      <div class="accordion-body" style="height: 220px;"><table class="table" style="margin-bottom: 0px;">
+                        <thead style="font-size: 13px;">
+                          <tr>
+                            <th scope="col"></th>
+                            <th scope="col">1</th>
+                            <th scope="col">2</th>
+                            <th scope="col">3</th>
+                            <th scope="col">4</th>
+                            <th scope="col">5</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" style="font-size: 13px;">Contorno espalda</th>
+                            <td style="font-size: 12px;">88-92cm</td>
+                            <td style="font-size: 12px;">92-96cm</td>
+                            <td style="font-size: 12px;">96-100cm</td>
+                            <td style="font-size: 12px;">100-104cm</td>
+                            <td style="font-size: 12px;">104-108cm</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="font-size: 13px;">Contorno de cintura</th>
+                            <td style="font-size: 12px;">68-72cm</td>
+                            <td style="font-size: 12px;">72-76cm</td>
+                            <td style="font-size: 12px;">76-80cm</td>
+                            <td style="font-size: 12px;">80-84cm</td>
+                            <td style="font-size: 12px;">84-86cm</td>
+                          </tr>
+                          <tr>
+                            <th scope="row" style="font-size: 13px;">Contorno de cadera</th>
+                            <td style="font-size: 12px;">92-96cm</td>
+                            <td style="font-size: 12px;">96-100cm</td>
+                            <td style="font-size: 12px;">100-104cm</td>
+                            <td style="font-size: 12px;">104-108cm</td>
+                            <td style="font-size: 12px;">108-112cm</td>
+                          </tr>
+                        </tbody>
+                      </table></div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -180,7 +230,7 @@
                       </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                      <div class="accordion-body" style="font-size: 14px;">Hasta 30 días de cambio luego de la compra. Sólo por otro talle o producto. Consultar siempre el stock</div>
                     </div>
                   </div>
                   <div class="accordion-item">
@@ -192,7 +242,7 @@
                       </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                      <div class="accordion-body" style="font-size: 14px;">Recibimos todos los medios de pago. Podes abonar a través de Mercado Pago. Aceptamos visa y master. Si tenés tarjeta naranja, american o una tarjeta no bancaria podes abonar únicamente con Mercado Pago en 1 cuota. También podes abonar por transferencia bancaria y te hacemos un 15% de descuento.</div>
                     </div>
                   </div>
                 </div>
@@ -204,14 +254,7 @@
 
         <!---------------DESCRIPCIÓN DESTACADA DEL PRODUCTO MÁS EXTENSA------->
 
-        <article class="contenedor-descripcion">
-          <p class="descripcion">
-            <%= product.description%>
-          </p>
-          <h5 class="descripcion-destacada">
-            <%= product.featuredDescription %>
-              </p>
-        </article>
+       
 
         <!-----OTROS PRODUCTOS------->
         <section class="otrosFav">

@@ -23,6 +23,7 @@ main.vista-producto div.contenedor-busqueda a.blazer {
 }
 
 main.vista-producto section.visualizacion-producto {
+  margin-bottom: 25px;
   /* width: 90%; */
   /* margin: 0 auto; */
 }
@@ -37,23 +38,52 @@ main.vista-producto
   margin: 0 auto;
 }
 
-main.vista-producto
+/*main.vista-producto
   section.visualizacion-producto
   div.contenedor-vistas-imagenes
   div.contenedor-blazerOver-principal {
   /* width: 90%; */
-  position: relative;
+ /* position: relative;
   height: 450px;
   height: 100%;
-  border-radius: 5%;
-  border: 1.5px solid var(--gris-claro);
-  /*background-color: var(--gris-claro);*/
+ /* border-radius: 5%;
+  border: 1.5px solid var(--gris-claro); 
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* margin-left: 10px; */
+
+}*/
+
+main.vista-producto
+section.visualizacion-producto
+div.contenedor-vistas-imagenes .card{box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);border-radius: 15px;height: 280px;transition: transform .2s;overflow: hidden;width: 12rem;margin: auto;margin-bottom: 40px;margin-top: 30px;}
+
+.card:hover{
+transform: scale(1.10);
 }
+
+
+main.vista-producto
+section.visualizacion-producto
+div.contenedor-vistas-imagenes
+.first-image{margin: auto;width: 100%;height: 280px;border-top-left-radius: 15px;border-top-right-radius: 15px;object-fit: cover;}
+
+.heart{color: #989898;margin-top: 8px;margin-left: 150px;font-size: 20px;position: absolute;width: 20px;height: 20px;border-radius: 30px;padding: 0px;text-align: center;}
+
+.heart:hover{
+color: var(--molocoton-oscuro);
+background-color: #f9f9f9;
+-webkit-transition: all 1s ease;
+-moz-transition: all 1s ease;
+-o-transition: all 1s ease;
+transition: all 1s ease-in-out;
+}
+
+
+
+
+
 
 /*-ICONO LUPA---*/
 
@@ -132,7 +162,7 @@ main.vista-producto
   div.contenedor-img-principal
   img.blazer-over-principal {
   width: 70%;
-  height: 350px;
+  height: 100%;
   object-fit: cover;
   /* margin-bottom: 15%; */
 }
@@ -560,20 +590,17 @@ main.vista-producto
 main.vista-producto article.contenedor-descripcion {
   text-align: center;
   width: 90%;
-  margin: 40px 10px 70px 20px;
+  margin: 40px 10px 70px 0px;
 }
 
 /*--------------DESCRIPCION DESTACADA DEL PRODUCTO----------------------*/
 
 main.vista-producto article.contenedor-descripcion p.descripcion {
   font-size: var(--letra-mas-pequeña);
-
   letter-spacing: 2px;
-
+  margin: auto;
   margin-bottom: 3px;
-
   color: var(--gris74);
-
   line-height: 22px;
 }
 
@@ -983,7 +1010,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     margin: 0px 0 10px 30px;
   }
 
-  main.vista-producto
+  /*main.vista-producto
     section.visualizacion-producto
     div.contenedor-vistas-imagenes
     div.contenedor-blazerOver-principal {
@@ -991,12 +1018,67 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     position: relative;
     height: 500px;
     margin-top: 10%;
-    border-radius: 5%;
-    /* background-color: var(--gris-claro); */
+   
     display: flex;
     justify-content: center;
     margin-top: 20px;
-  }
+  }*/
+
+
+  main.vista-producto
+  section.visualizacion-producto
+  div.contenedor-vistas-imagenes .card{
+  box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+  border-radius: 15px;
+  height: 400px;
+  transition: transform .2s;
+  overflow: hidden;
+  width: 15rem;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.card:hover{
+  transform: scale(1.10);
+}
+
+
+main.vista-producto
+section.visualizacion-producto
+div.contenedor-vistas-imagenes
+.first-image{
+  margin: auto;
+  width: 100%;
+  height: 500px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+.heart{
+  color: #989898;
+  margin-top: 8px;
+  margin-left: 185px;
+  font-size: 30px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 30px;
+  padding: 0px;
+  text-align: center;
+}
+
+.heart:hover{
+  color: var(--molocoton-oscuro);
+  background-color: #f9f9f9;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease-in-out;
+}
+
+
 
   /*-ICONO LUPA---*/
 
@@ -1137,7 +1219,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.visualizacion-producto div.talles {
     display: flex;
-    margin: 5px 0px 50px 30px;
+    margin: 5px 0px 30px 30px;
     width: 70%;
     margin-left: 0;
   }
@@ -1599,6 +1681,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
 
   main.vista-producto section.visualizacion-producto {
     margin-left: auto 0;
+    height: 800px;
+    margin-bottom: 65px;
   }
 
   /*----------CONTENEDORES DE LAS IMÁGENES DEL BLAZER OVERZISE E IMÁGENES--------------*/
@@ -1611,14 +1695,67 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     margin-right: 30px;
   }
 
-  main.vista-producto
+  /*main.vista-producto
     section.visualizacion-producto
     div.contenedor-vistas-imagenes
     div.contenedor-blazerOver-principal {
     height: 700px;
 
     margin-top: 0;
-  }
+  }*/
+
+  main.vista-producto
+section.visualizacion-producto
+div.contenedor-vistas-imagenes .card{
+  box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+  border-radius: 15px;
+  height: 550px;
+  transition: transform .2s;
+  overflow: hidden;
+  width: 23rem;
+  margin: auto;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.card:hover{
+  transform: scale(1.10);
+}
+
+
+main.vista-producto
+section.visualizacion-producto
+div.contenedor-vistas-imagenes
+.first-image{
+  margin: auto;
+  width: 100%;
+  height: 550px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+}
+
+.heart{
+  color: #989898;
+  margin-top: 10px;
+  margin-left: 300px;
+  font-size: 30px;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  padding: 0px;
+  text-align: center;
+}
+
+.heart:hover{
+  color: var(--molocoton-oscuro);
+  background-color: #f9f9f9;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease-in-out;
+}
 
   /*CORAZÓN*/
 
@@ -1704,7 +1841,8 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
     section.visualizacion-producto
     div.nombre-precio-talle
     p.talle {
-    margin-top: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   /*------CONTENEDOR DE LOS TALLES POR NÚMERO---------*/
@@ -1788,7 +1926,7 @@ main.vista-producto div.imagen-cierre img.imagen-cierre-mobile {
   main.vista-producto
     section.visualizacion-producto
     article.info-adicional-compra {
-    margin-top: 40px;
+    margin-top: 5px;
     width: 80%;
     margin-left: 0;
   }
