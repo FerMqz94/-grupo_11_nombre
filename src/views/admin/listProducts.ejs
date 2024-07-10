@@ -82,9 +82,9 @@
                     <%= p.sizes[i].size%>
                   <%}%>
                 </td>
-                <td class=""><%= p.new ? "✔️" : "❌" %></td>
-                <td class=""><%= p.sale ? "✔️" : "❌" %></td>
-                <td class=""><%= p.available ? "✔️" : "❌" %></td>
+                <td class=""><%= p.new ? "🟢" : "🔴" %></td>
+                <td class=""><%= p.sale ? "🟢" : "🔴" %></td>
+                <td class=""><%= p.available ? "🟢" : "🔴" %></td>
                 <td>
                   <div class="btn-group" role="group" aria-label="Basic example">
                     <a href="/producto-detalle/<%= p.id %>" class="btn acc-btn btn-info d-inline-block info">Info</a>

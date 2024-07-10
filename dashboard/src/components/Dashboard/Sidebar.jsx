@@ -54,11 +54,11 @@ export const SideBar = function () {
     </li>
 
     {/* Nav Item - Tables */}
-    <li className={`nav-item ${styles.item}`}>
+    {/* <li className={`nav-item ${styles.item}`}>
         <Link className={`nav-link ${styles.link}`} to="/">
             <i className="fas fa-fw fa-table"></i>
             <span>Ventas</span></Link>
-    </li>
+    </li> */}
     {/* Divider */}
     <hr className="sidebar-divider d-none d-md-block"/>
     {/* End of Sidebar */}
