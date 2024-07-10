@@ -5,5 +5,6 @@ module.exports = {
     processRegister: require("./processRegister.controller"),
     logout: require("./logout.controller"),
     userDelete: require('./userDelete.controller'),
-    loginAndRegisterGoogle: require('./loginAndRegisterGoogle.controller')
+    loginAndRegisterGoogle: require('./loginAndRegisterGoogle.controller'),
+    loginAndRegisterTwitter: require("./loginAndRegisterTwitter.controller")
 }

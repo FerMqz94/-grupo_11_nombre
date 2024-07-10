@@ -1,34 +1,33 @@
 const db = require("../../db/models");
 
 module.exports = async (req,res) => {
-    // res.redirect("/");
-    // console.log(req.session.passport)
-    console.log("añgp")
-    console.log("añgp")
-    console.log("añgp")
-    console.log("añgp")
-    console.log("añgp")
-    console.log("añgp")
-    // console.log(profile)
-    
+    console.log(req.session.passport)
+
+
     try {
+    // console.log("añgp")
+    // console.log("añgp")
+    // console.log("añgp")
+    // console.log("añgp")
+
+        /**/
         const {user: {_json, provider}} = req.session.passport
 
-        const {sub, name, email, picture, displayName, given_name} = _json;
+        const { name, email, screen_name, profile_image_url} = _json;
 
-        console.log(sub)
+        console.log(provider)
 
         const [users, _] = await db.Users.findOrCreate({
             where: {
-                socialId: sub,
+                socialId: provider,
             },
             defaults: {
-                socialId: sub,
+                socialId: provider,
                 provider,
-                name: given_name,
-                username: displayName,
+                name: name,
+                username: screen_name,
                 email,
-                avatar: picture,
+                avatar: profile_image_url,
             },
         })
 

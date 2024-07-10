@@ -1,6 +1,6 @@
 // 20:00
 
-const $ = (element) => document.querySelector(element)
+const $ = (element) => document.querySelector(element);
 
 const converterMoneyArs = (num = 0) => num.toLocaleString({
     currency: "ARS",
@@ -67,7 +67,7 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
         }
     };
     const circleColor = `<i class="fa-regular fa-circle" style="background-color: ${colorSelect(orderColor)};"></i>`;
-    const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>`;
+    const emoteAlert = `<i class="fa-solid fa-triangle-exclamation" id="danger" style="color: #ff0000;"></i>`;
 
     let ColorsExist = () => {
         let c = '';
@@ -78,7 +78,7 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
     };
 // <button onclick="productDetail('${p.name}','${p.images[0].name}')"></button>
     return ` 
-            <div class="info-compra"> 
+            <div class="info-compra" id="info-compra"> 
                             <div class="info-datos-img">
                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
                                  <input type="checkbox" id="boton-carrito-talles-${p.id}" class="input-carrito-talles" style="display: none;">
@@ -89,11 +89,11 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
                                     <p class="datos-producto">${p.name}</p>
                                     <p class="datos-producto">Precio $ ${p.price}</p>
                                     <p class="datos-producto">Cantidad <button onclick="lessProduct(${p.id})">-</button>  ${p.Orders_Products.quantity} <button onclick="moreProduct(${p.id})">+</button></p>
-                                    <p class="datos-producto">Talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
+                                    <p class="datos-producto" id="talle">Talle: ${p.Orders_Products.id_size === null ? emoteAlert : p.Orders_Products.id_size}&nbsp; <label for="boton-carrito-talles-${p.id}"><i class="fa-solid fa-caret-down boton-talles"></i></label></p>
                                     <div class="talles-opciones">
                                     ${generateSizes()}
                                     </div>
-                                    <p class="datos-producto">Color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
+                                    <p class="datos-producto id="color">Color: ${p.Orders_Products.id_color === null ? emoteAlert : circleColor}&nbsp;
                                         <label for="boton-carrito-colores-${p.id}"><i class="fa-solid fa-caret-down boton-colores"></i></label> </p>
                                                 <div class="colores-opciones">
                                                 ${ColorsExist()}
@@ -139,6 +139,9 @@ window.addEventListener('load', async (event) => {
     }
 
     binClearCart.addEventListener("click", async () => {
+        const info = $('#info-compra');
+        // console.log(info)
+
 
         Swal.fire({
             title: "¿Estas seguro?",
@@ -163,28 +166,19 @@ window.addEventListener('load', async (event) => {
               processReloadCart(server, containerProducts, outputTotal)
             }
           });
-        // try {   
-        //     const containerProducts = $('#carrito')
-        //     if (!productsCart.length) return
-        //     const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
-        //         method: "PATCH"
-        //     }).then(res => res.json())
-        //     console.log(ok, msg)
-        //     if (ok) {
-        //         processReloadCart(server, containerProducts, outputTotal)
-        //     }
-        // }
-        // catch (error) {
-        //     console.error(error.menssage)
-        // }
+
     });
 
     binBuy.addEventListener("click", async () => {
+        const info = $('#info-compra');
+        const error = $('#danger');
+        // console.log(error)
+
 
         let timerInterval;
         Swal.fire({
-          title: "Auto close alert!",
-          html: "I will close in <b></b> milliseconds.",
+          title: "Procesando compra",
+        //   html: "I will close in <b></b> milliseconds.",
           timer: 2000,
           timerProgressBar: true,
           didOpen: () => {
@@ -196,26 +190,36 @@ window.addEventListener('load', async (event) => {
           },
           willClose: () => {
             clearInterval(timerInterval);
-            // Swal.fire({
-            //     icon: "error",
-            //     title: "Oops...",
-            //     text: "Something went wrong!",
-            //     footer: '<a href="#">Why do I have this issue?</a>'
-            //   });
-            // alert("aujshdsuhdsikudh")
+
           }
         }).then((result) => {
-          /* Read more about handling dismissals below */
-          if (result.dismiss === Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-            alert("algo")
-          } else if (result.dismiss !== Swal.DismissReason.timer) {
-            console.log("I was closed by the timer");
-            alert("eeeeeeeee")
+          if (result.dismiss === Swal.DismissReason.timer && info !== null && error === null) {
+
+            buyProducts()
+
+            Swal.fire({
+                icon: "success",
+                text: "Tu compra fue realizada con exito",
+              });
+                
+                setTimeout(() => {
+                    location.href = "/";
+                  }, 1000);
+              
+
+
+
+          } else if (result.dismiss !== Swal.DismissReason.timer || info === null || error !== null) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Algo salio mal",
+              });
+              
           }
         });
 
-buyProducts()
+
 
 
         // try {

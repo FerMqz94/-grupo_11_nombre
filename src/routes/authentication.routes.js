@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const { login, register, processRegister, processLogin, logout, loginAndRegisterGoogle } = require("../controllers/authentication");
-const {registerValidation} = require("../middlewares/validations/register.validation");
+const { login, register, processRegister, processLogin, logout, loginAndRegisterGoogle, loginAndRegisterTwitter } = require("../controllers/authentication");
+const { registerValidation } = require("../middlewares/validations/register.validation");
 const { loginValidation } = require("../middlewares/validations/login.validation");
 
 
@@ -15,7 +15,7 @@ router.post("/iniciar", loginValidation, processLogin);
 
 //  /autenticacion/registrar
 router.get("/registrar", register);
-router.post("/registrar",registerValidation,  processRegister); //
+router.post("/registrar", registerValidation, processRegister); //
 
 router.get("/cerrar-sesion", logout)
 
@@ -28,6 +28,19 @@ router.get("/iniciar/google", passport.authenticate("google"));
 
 router.get("/google/callback", passport.authenticate("google", { failureRedirect: "/autenticacion/iniciar" }), loginAndRegisterGoogle);
 
+// FUNCIONARA PROXIMAMENTE
+// PARA INICIAR SESION CON TWITTER O PARA LOS JOVENES X
+/**/
+router.get('/iniciar/twitter',passport.authenticate('twitter'));
+
+router.get('/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/autenticacion/iniciar' }), loginAndRegisterTwitter
+    /*
+    function (req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/');
+    }
+        */
+);
 
 
 
