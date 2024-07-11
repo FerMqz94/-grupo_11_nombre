@@ -149,23 +149,23 @@ const [statesCountCategories, setStatesCountCategories] = useState({
 
 const categoriesFormat = [];
 const nameFieldCategories = {
-  Abrigos:"abrigos",
-  Jeans: "jeans",
-  Buzos_sweaters: "buzosysweaters",
-  Remeras: "remeras",
-  Camisas_blusas: "camisasyblusas",
-  Tops: "tops",
-  Pantalones_shorts: "pantalonesyshorts",
-  Vestidos_polleras: "vestidosypolleras",
-  Cápsula_Beige: "capsulabeige",
-  Cápsula_American: "capsulaamerican",
-  Cápsula_3024: "capsula3024",
-  Sin_categoría: "sincategoria"
+  abrigos:"Abrigos",
+  buzosysweaters: "Buzos y sweaters",
+  camisasyblusas: "Camisas y blusas",
+  capsula3024: "Capsula 3024",
+  capsulaamerican: "Capsula American",
+  capsulabeige: "Capsula Beige",
+  jeans: "Jeans",
+  pantalonesyshorts: "Pantalones y shorts",
+  vestidosypolleras: "Vestidos y polleras",
+  remeras: "Remeras",
+  sincategoria: "Sin categoria",
+  tops: "Tops",
   }
   
    Object.entries(statesCountCategories.countByCategory).forEach(([key, value]) => {
      categoriesFormat.push({
-      key: key,
+      key: nameFieldCategories[key],
       value: value
      })
    })

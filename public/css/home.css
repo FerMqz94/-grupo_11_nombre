@@ -62,7 +62,7 @@
 
 .card-data-home {
   width: 70%;
-  background-color: var(--blanco);
+  background: linear-gradient(var(--blanco-almendra), var(--molocoton-oscuro));
   padding: 5% 10%;
   border-radius: 1rem;
   position: absolute;
@@ -76,24 +76,39 @@
 
 .card-title-home {
   color:black;
+  font-weight: bold;
+  background-color: var(--transparente);
+  border-radius: 10px;
+  padding: 5px;
   font-size: 70%;
   margin: 10px 0;
 }
 
 .card-description-home {
   display: block;
+  background-color: var(--transparente);
+  border-radius: 10px;
+  padding: 5px;
   font-size: 50%;
   margin-bottom: .75rem;
 }
 .card-price-home {
+  background-color: var(--transparente);
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px;
   display: block;
   font-size: 80%;
-  color: #008000;
+  color: var(--verde-azulado);
   margin-bottom: .75rem;
 }
 .card-button-home {
+  background-color: var(--transparente);
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 5px;
   font-size: 60%;
-  color: #007bff;
+  color: var(--negro);
   text-decoration: none;
 }
 
