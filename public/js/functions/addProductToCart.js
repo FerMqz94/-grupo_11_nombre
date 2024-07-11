@@ -3,7 +3,9 @@ let color_id = null;
 
 const cantidadInput = document.getElementById('cantidad');
 
-
+const redirect = (url) => {
+  window.location.href = url;
+};
 
 const getSize = async (id) => {
     size_id = id;

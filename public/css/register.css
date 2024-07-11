@@ -420,7 +420,7 @@ article.article-redes-sociales-register h3.redes-sociales-register-titulo {
 article.article-redes-sociales-register div.imagenes-redes-sociales {
   /* margin-left: 15px; */
   display: flex;
-  /* width: 60%; */
+  width: 60%;
   /* display: flex; */
   /* width: 95%; */
   justify-content: space-between;

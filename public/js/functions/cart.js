@@ -1,4 +1,4 @@
-// 20:00
+// const Algo = globalConfig.server;
 
 const $ = (element) => document.querySelector(element);
 
@@ -8,7 +8,9 @@ const converterMoneyArs = (num = 0) => num.toLocaleString({
 })
 
 
-const server = "http://localhost:3030"
+const server = "http://localhost:3030";
+// SERVER=https://59sxx87j-3030.brs.devtunnels.ms/
+// const serverOnline = process.env.SERVER;
 let productsCart = [];
 
 const getShoppingCart = (server) => fetch(`${server}/api/carrito?id_user=1`).then(res => res.json())
@@ -76,8 +78,7 @@ ${colorName(i)}:&nbsp;<i class="fa-regular fa-circle" style="background-color: $
         }
         return c;
     };
-// <button onclick="productDetail('${p.name}','${p.images[0].name}')"></button>
-    return ` 
+    return `
             <div class="info-compra" id="info-compra"> 
                             <div class="info-datos-img">
                                  <input type="checkbox" id="boton-carrito-colores-${p.id}" class="input-carrito-colores" style="display: none;">
@@ -141,31 +142,36 @@ window.addEventListener('load', async (event) => {
     binClearCart.addEventListener("click", async () => {
         const info = $('#info-compra');
         // console.log(info)
+        if (info == null) {
+            // alert("alfo")
+            document.info.disabled = true;
+        } else {
 
 
-        Swal.fire({
-            title: "¿Estas seguro?",
-            text: "¡No se puede revertir!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Si, ¡quiero eliminar todo!",
-            cancelButtonText: "Cancelar",
-          }).then((result) => {
-            if (result.isConfirmed) {
-            deleteAllProducts()
-            processReloadCart(server, containerProducts, outputTotal)
-              Swal.fire({
-                title: "¡Eliminado!",
-                text: "Vaciaste el carrito.",
-                icon: "success"
-              });
-              processReloadCart(server, containerProducts, outputTotal)
-              processReloadCart(server, containerProducts, outputTotal)
-              processReloadCart(server, containerProducts, outputTotal)
-            }
-          });
+            Swal.fire({
+                title: "¿Estas seguro?",
+                text: "¡No se puede revertir!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Si, ¡quiero eliminar todo!",
+                cancelButtonText: "Cancelar",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    deleteAllProducts()
+                    processReloadCart(server, containerProducts, outputTotal)
+                    Swal.fire({
+                        title: "¡Eliminado!",
+                        text: "Vaciaste el carrito.",
+                        icon: "success"
+                    });
+                    processReloadCart(server, containerProducts, outputTotal)
+                    processReloadCart(server, containerProducts, outputTotal)
+                    processReloadCart(server, containerProducts, outputTotal)
+                }
+            });
+        }
 
     });
 
@@ -173,69 +179,83 @@ window.addEventListener('load', async (event) => {
         const info = $('#info-compra');
         const error = $('#danger');
         // console.log(error)
+        if (info == null) {
+            // alert("alfo")
+            document.info.disabled = true;
+        } else {
+
+            const swalWithBootstrapButtons = Swal.mixin({
+                customClass: {
+                    //   confirmButton: "confirmar-carrito",
+                    //   cancelButton: "btn btn-danger"
+                },
+                // buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+                title: "¿Deseas confirmar la compra?",
+                // text: "You won't be able to revert this!",
+                icon: "info",
+                showCancelButton: true,
+                confirmButtonText: '<span class="carrito-comfirmar" style="color: #000">Sí, confirmar compra</span>',
+                confirmButtonColor: "#32e0c4",
+                cancelButtonText: "No, seguir mirando",
+                cancelButtonColor: "#000",
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    let timerInterval;
+                    Swal.fire({
+                        title: "Procesando compra",
+                        timer: 2000,
+                        timerProgressBar: true,
+                        didOpen: () => {
+                            Swal.showLoading();
+                            const timer = Swal.getPopup().querySelector("b");
+                            timerInterval = setInterval(() => {
+                                timer.textContent = `${Swal.getTimerLeft()}`;
+                            }, 100);
+                        },
+                        willClose: () => {
+                            clearInterval(timerInterval);
+
+                        }
+                    }).then((result) => {
+                        if (result.dismiss === Swal.DismissReason.timer && info !== null && error === null) {
+
+                            buyProducts()
+
+                            Swal.fire({
+                                icon: "success",
+                                text: "Tu compra fue realizada con exito",
+                            });
+
+                            setTimeout(() => {
+                                location.href = "/";
+                            }, 1000);
 
 
-        let timerInterval;
-        Swal.fire({
-          title: "Procesando compra",
-        //   html: "I will close in <b></b> milliseconds.",
-          timer: 2000,
-          timerProgressBar: true,
-          didOpen: () => {
-            Swal.showLoading();
-            const timer = Swal.getPopup().querySelector("b");
-            timerInterval = setInterval(() => {
-              timer.textContent = `${Swal.getTimerLeft()}`;
-            }, 100);
-          },
-          willClose: () => {
-            clearInterval(timerInterval);
-
-          }
-        }).then((result) => {
-          if (result.dismiss === Swal.DismissReason.timer && info !== null && error === null) {
-
-            buyProducts()
-
-            Swal.fire({
-                icon: "success",
-                text: "Tu compra fue realizada con exito",
-              });
-                
-                setTimeout(() => {
-                    location.href = "/";
-                  }, 1000);
-              
 
 
+                        } else if (result.dismiss !== Swal.DismissReason.timer || info === null || error !== null) {
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "Algo salio mal",
+                            });
 
-          } else if (result.dismiss !== Swal.DismissReason.timer || info === null || error !== null) {
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "Algo salio mal",
-              });
-              
-          }
-        });
+                        }
+                    });
+
+
+                }
+
+            })
 
 
 
 
-        // try {
-        //     const containerProducts = $('#carrito')
-        //     const { ok, msg } = await fetch(`${server}/api/carrito/completed?id_user=1`, {
-        //         method: "PATCH"
-        //     }).then(res => res.json())
-        //     console.log(ok, msg)
-        //     if (ok) {
 
-        //         processReloadCart(server, containerProducts, outputTotal)
-        //     }
-        // }
-        // catch (error) {
-        //     console.error(error.menssage)
-        // }
+        }
     })
 
 })
@@ -320,14 +340,14 @@ const deleteProduct = async (id) => {
 }
 
 const deleteAllProducts = async (id) => {
-    try {   
+    try {
         const containerProducts = $('#carrito')
         if (!productsCart.length) return
 
         const { ok, msg } = await fetch(`${server}/api/carrito/removeAll?id_user=1`, {
             method: "PATCH"
         }).then(res => res.json())
-        
+
         console.log(ok, msg)
         if (ok) {
             processReloadCart(server, containerProducts, outputTotal)
@@ -357,7 +377,7 @@ const buyProducts = async (id) => {
 
 }
 
-const productDetail =  (name,img,des) => {
+const productDetail = (name, img, des) => {
 
     console.log("ayhsgbagsgjhqas")
 
@@ -368,7 +388,7 @@ const productDetail =  (name,img,des) => {
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: "Custom image"
-      });
+    });
 
 }
 // odio la vida y a todos por igual 

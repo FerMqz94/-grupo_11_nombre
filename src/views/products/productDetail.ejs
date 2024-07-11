@@ -126,12 +126,20 @@
                   <label class="label-carrito" for="cantidad">CANTIDAD</label>
                   <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
                   <div class="contenedor-boton-carrito">
-                    <button type="submit" class="agregar-carrito"
-                      onclick="addProductCart('<%= product.id %>','<%= product.colors[0].id %>','<%= product.sizes[0].size %>','<%= product.images[0].name %>')">
+                    <% if (locals.userLogin) { %>
+                      <button type="submit" class="agregar-carrito" onclick="addProductCart('<%= product.id %>','<%= product.colors[0].id %>','<%= product.sizes[0].size %>','<%= product.images[0].name %>')">
                       <!-- <a href="#">  -->
                       AGREGAR AL CARRITO
                       <!-- </a> -->
                     </button>
+                      <% } else { %>
+                        <button type="submit" class="agregar-carrito"onclick="redirect('/autenticacion/iniciar')">
+                          <!-- <a href="/autenticacion/iniciar">  -->
+                          AGREGAR AL CARRITO
+                          <!-- </a> -->
+                        </button>
+                        <% }  %>
+
                   </div>
                 </div>
                 <!-- </form> -->

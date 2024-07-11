@@ -398,7 +398,7 @@ main.perfil-usuario {
     flex-direction: column;
     align-content: flex-end;
     align-items: center;
-    /* width: 50%; */
+    width: 100%;
   }
   
   article.article-redes-sociales-register h3.redes-sociales-register-titulo {
