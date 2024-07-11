@@ -106,13 +106,13 @@
                                                 </div>
                                                 <% } else { %>
                                                                                                    
-                                                <div class="perfil"> 
-                                                    <a href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>/users/perfil-usuario/<%=locals.userLogin?.id%>"><i
+                                                <div class="perfil seccion-burger-header"> 
+                                                    <a href="<%= locals.perfil ? '#'  : '/users/perfil-usuario/' + locals.userLogin?.id %>"><i
                                                             class="fa-solid fa-user"
                                                             style="<%= locals.perfil ? 'color: ' + perfil + ';' : 'color: gray;' %>"></i>&nbsp;Ver
                                                         mi perfil</a>
                                                 </div>
-                                                <div class="cerrar-sesion">
+                                                <div class="cerrar-sesion seccion-burger-header">
                                                     <a href="/autenticacion/cerrar-sesion"><i
                                                             class="fa-solid fa-user-minus"
                                                             style='color: red;'></i>&nbsp;Cerrar sesion</a>

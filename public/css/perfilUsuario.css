@@ -32,11 +32,8 @@ main.perfil-usuario {
     form.form-inputs-registro
     div.nombreApellidoRegister {
     display: flex;
-  
     margin: 20px 0;
-  
     flex-flow: column;
-  
     align-items: center;
   }
   
@@ -324,20 +321,14 @@ main.perfil-usuario {
     form.form-inputs-registro
     div.contenedor-boton-register {
     /* margin: 0 0 20px 0; */
-  
     display: flex;
-  
-    margin: 40px 0 0 0;
-  
+    /* margin: 40px 0 0 0; */
     flex-flow: column;
-  
-    align-items: center;
-  
-    /*margin-top: 20px;*/
-  
+    /* margin-top: 20px; */
     padding-bottom: 20px;
-  
     /* border-bottom: 1.5px dashed var(--gris-claro); */
+    margin: auto;
+    width: auto;
   }
   
   main.perfil-usuario
@@ -345,14 +336,16 @@ main.perfil-usuario {
     form.form-inputs-registro
     button.boton-register {
     /* margin-top: 20px; */
-    width: 280px;
+    width: 240px;
     height: 35px;
-    border: none;    
+    border: none;
     color: var(--blanco);
     border-radius: 5px;
     /* font-size: var(--letra-mediana); */
     letter-spacing: 1px;
     transition: all 1s;
+    margin: auto;
+    margin-bottom: 2px;
   }
  
   main.perfil-usuario
@@ -391,14 +384,14 @@ main.perfil-usuario {
   /*-----------------REDES SOCIALES------------------------*/
   
   article.article-redes-sociales-register {
-    margin: 50px 20px 70px 20px;
+    /* margin: 50px 10px 70px 10px; */
     text-align: center;
     /* margin: 30px 0 30px 30px; */
     display: flex;
     flex-direction: column;
     align-content: flex-end;
     align-items: center;
-    width: 100%;
+    /* width: 100%; */
   }
   
   article.article-redes-sociales-register h3.redes-sociales-register-titulo {
@@ -414,7 +407,7 @@ main.perfil-usuario {
     display: flex;
     width: 100%;
     /* display: flex; */
-    /* width: 95%; */
+    /* width: auto; */
     justify-content: space-evenly;
   }
   
