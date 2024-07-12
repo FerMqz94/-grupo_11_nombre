@@ -116,7 +116,7 @@ function CreateProduct() {
       
   };
 
- if (categories.length < 1 && colors.length < 1 && sizes.length < 1) {
+ if (categories.length < 1 || colors.length < 1 || sizes.length < 1) {
     return (
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
         <CircularProgress color="inherit" />
