@@ -12,7 +12,7 @@ const cors = require('cors')
 const passport = require('passport');
 const { configServicegoogle } = require("./src/service/google.service");
 const { configServiceTwitter } = require("./src/service/twitter.service");
-// const { configServiceFacebook } = require("./src/service/facebook.service");
+const { configServiceFacebook } = require("./src/service/facebook.service");
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
@@ -35,7 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 configServicegoogle()
 configServiceTwitter()
-// configServiceFacebook()
+configServiceFacebook()
 
 app.use(checkCookie)
 app.use(checkSession)

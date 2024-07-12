@@ -6,5 +6,6 @@ module.exports = {
     logout: require("./logout.controller"),
     userDelete: require('./userDelete.controller'),
     loginAndRegisterGoogle: require('./loginAndRegisterGoogle.controller'),
-    loginAndRegisterTwitter: require("./loginAndRegisterTwitter.controller")
+    loginAndRegisterTwitter: require("./loginAndRegisterTwitter.controller"),
+    loginAndRegisterFacebook: require('./loginAndRegisterFacebook.controller')
 }

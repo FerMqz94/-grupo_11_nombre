@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { login, register, processRegister, processLogin, logout, loginAndRegisterGoogle, loginAndRegisterTwitter } = require("../controllers/authentication");
+const { login, register, processRegister, processLogin, logout, loginAndRegisterGoogle, loginAndRegisterTwitter, loginAndRegisterFacebook } = require("../controllers/authentication");
 const { registerValidation } = require("../middlewares/validations/register.validation");
 const { loginValidation } = require("../middlewares/validations/login.validation");
 
@@ -33,15 +33,13 @@ router.get("/google/callback", passport.authenticate("google", { failureRedirect
 /**/
 router.get('/iniciar/twitter',passport.authenticate('twitter'));
 
-router.get('/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/autenticacion/iniciar' }), loginAndRegisterTwitter
-    /*
-    function (req, res) {
-        // Successful authentication, redirect home.
-        res.redirect('/');
-    }
-        */
-);
+router.get('/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/autenticacion/iniciar' }), loginAndRegisterTwitter);
 
+// PARA INICIAR SESION CON FACEBOOK O PARA LOS JOVENES META 
+
+router.get('/iniciar/facebook',passport.authenticate('facebook'));
+
+router.get('/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/autenticacion/iniciar' }), loginAndRegisterFacebook);
 
 
 
