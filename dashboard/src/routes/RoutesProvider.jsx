@@ -4,6 +4,7 @@ import Dashboard from "../pages/Dashboard";
 import { routesProducts , } from "./RoutesProduct";
 import{routesUsers} from "./RouterUsers";
 import {routesGraficos} from "./RoutesGraficos"
+import { routesSales } from "./RoutesSales";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       ...routesProducts,
       ... routesUsers,
       ... routesGraficos,
+      ...routesSales,
     ],
   },
 ]);
