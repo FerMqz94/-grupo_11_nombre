@@ -12,6 +12,7 @@ const cors = require('cors')
 const passport = require('passport');
 const { configServicegoogle } = require("./src/service/google.service");
 const { configServiceTwitter } = require("./src/service/twitter.service");
+// const { configServiceFacebook } = require("./src/service/facebook.service");
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
@@ -34,6 +35,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 configServicegoogle()
 configServiceTwitter()
+// configServiceFacebook()
 
 app.use(checkCookie)
 app.use(checkSession)
@@ -53,7 +55,7 @@ const apiCartRoutes = require ("./src/routes/api/cart.api")
 const apiProductDetailRoutes = require ("./src/routes/api/productDetail.api")
 const apiAuthRoutes = require ("./src/routes/api/authentication.api")
 const apiAdminRoutes = require ("./src/routes/api/admin.api")
-const apiUsersRoutes = require ("./src/routes/api/users.api")
+const apiUsersRoutes = require ("./src/routes/api/users.api");
 
 
 

@@ -1,5 +1,6 @@
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const { loadData, saveData } = require("../../database");
 const db = require("../../db/models");
 
 module.exports = (req, res) => {
@@ -7,8 +8,6 @@ module.exports = (req, res) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
-  
-
     db.Users.create({
       // id: !users.length ? 1 : users[users.length - 1].id + 1,
       name: name?.trim(),
@@ -35,7 +34,22 @@ module.exports = (req, res) => {
   })
 
   }
+  if (errors.isEmpty()) {
+    const users = loadData("users");
+    const newUser = {
+      id: !users.length ? 1 : users[users.length - 1].id + 1,
+      name: name?.trim(),
+      username: username?.trim(),
+      email: email?.trim().toLowerCase(),
+      password: bcrypt.hashSync(password?.trim(), 12),
+      rol: "REGULAR",
+      avatar: "default-avatar.jpg",
+    };
 
+    users.push(newUser);
+
+    saveData(users, "users");
+  }
 };
 
 

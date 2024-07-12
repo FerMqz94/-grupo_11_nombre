@@ -42,7 +42,8 @@ module.exports = (req, res) => {
 const db = require('../../db/models');
 const bcrypt = require('bcryptjs')
 const { validationResult } = require("express-validator");
-
+// const { saveData, loadData } = require("../../database");
+// const users = loadData("users");
 module.exports = (req, res) => {
   const errors = validationResult(req);
   
@@ -89,4 +90,24 @@ module.exports = (req, res) => {
       res.send(err.message)
     })
   }
+  // if (errors.isEmpty()) {
+  //   const userFind = users.find(u => u.id === +id);
+
+  //   const usersMap = users.map((u) => {
+  //     if (u.id === +id) {
+  //       const userEdit = {
+  //         ...u,
+  //         name: name.trim(),
+  //         username: username.trim(),
+  //         email: email.trim(),
+  //         password: password? bcrypt.hashSync(password, 10) : userFind.password,
+  //      };
+
+  //       return userEdit;
+  //     } 
+
+  //     return u;
+  //   });
+  //   saveData(usersMap, "users");
+  // }
 }
