@@ -59,6 +59,13 @@ export const SideBar = function () {
             <i className="fas fa-fw fa-table"></i>
             <span>Ventas</span></Link>
     </li>
+
+    <li className={`nav-item ${styles.item}`}>
+        <Link className={`nav-link ${styles.link}`} to="/crear-productos">
+            <i className="fas fa-fw fa-table"></i>
+            <span>Crear Productos</span></Link>
+    </li>
+
     {/* Divider */}
     <hr className="sidebar-divider d-none d-md-block"/>
     {/* End of Sidebar */}
