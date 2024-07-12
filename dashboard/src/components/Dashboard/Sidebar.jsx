@@ -55,7 +55,7 @@ export const SideBar = function () {
 
     {/* Nav Item - Tables */}
     <li className={`nav-item ${styles.item}`}>
-        <Link className={`nav-link ${styles.link}`} to="/">
+        <Link className={`nav-link ${styles.link}`} to="/ventas">
             <i className="fas fa-fw fa-table"></i>
             <span>Ventas</span></Link>
     </li>
