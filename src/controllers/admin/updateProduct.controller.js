@@ -118,8 +118,6 @@ module.exports = (req, res) => {
         })
         .catch(error => {
             console.error('Error al actualizar el producto:', error);
-            if (!res.headersSent) {
-                res.status(500).send('Error interno del servidor');
-            }
+            res.status(500).send('Error interno del servidor');
         });
 };
