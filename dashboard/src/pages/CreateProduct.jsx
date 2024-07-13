@@ -16,6 +16,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { outlinedInputClasses } from '@mui/material/OutlinedInput';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
+import Switch from '@mui/material/Switch';
 
 
 
@@ -30,12 +31,11 @@ function CreateProduct() {
     name: '',
     description: '',
     featuredDescription: '',
-    id_category: '',
     price: '',
-    new: '',
-    sale: '',
+    new: false,
+    sale: false,
     available: '',
-    colors: [],
+    id_category: '',
   });
 
   const urlApiCategories = 'http://localhost:3030/api/admin/categorias';
@@ -70,10 +70,27 @@ function CreateProduct() {
 
   }, []);
 
-  const handleChange = (e) => {
+
+  {/*const handleChange = (e) => {
     const { name, value } = e.target;
     setNewProduct({ ...newProduct, [name]: value });
+  };*/}
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewProduct(prevProduct => ({ ...prevProduct, [name]: value }));
   };
+
+
+  const handleRadioChange = (e) => {
+    const { value } = e.target;
+    setNewProduct(prevProduct => ({
+      ...prevProduct,
+      new: value === 'new',   // Establece true o false para "Nuevo"
+      sale: value === 'sale',  // Establece true o false para "Oferta"
+    }));
+  };
+
 
   const handleChangueInputImg = (e) => {
     const file = e.target.files[0];
@@ -124,7 +141,7 @@ function CreateProduct() {
     );
   } else {
     return (
-      <Box sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto', padding: '10px', paddingLeft: '35px', borderRadius: '10px', paddingTop: '20px', paddingBottom: '60px', boxShadow: ' 0 0 5px 6px rgba(249, 155, 128, 0.4)' }}>
+      <Box sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto', padding: '10px', paddingLeft: '35px', borderRadius: '10px', paddingTop: '20px', paddingBottom: '60px', boxShadow: ' 0 0 5px 6px rgba(249, 155, 128, 0.4)', alignItems: 'flex-start' }}>
         <h1 style={{ width: '100%', textAlign: 'center', color: '#99d3bf', fontWeight: 'bold' }}> Crear Producto </h1>
        {/*} <img src={preview} alt="img-product" className="editProductImg" />*/}
         <TextField
@@ -163,10 +180,10 @@ function CreateProduct() {
             sx={{ width: '100%' }}
             onChange={handleChange}
           >
-            {categories.data.map((p) => {
+            {categories.data.map((c) => {
               return (
-                <MenuItem key={p.id} value={p.id}>
-                  {p.name}
+                <MenuItem key={c.id} value={c.id}>
+                  {c.name}
                 </MenuItem>
               );
             })}
@@ -197,15 +214,15 @@ function CreateProduct() {
         />
         
         <FormControl sx={{ width: '100%', margin: '3px', marginTop: '20px', height: '250px', display: 'flex', flexWrap: 'wrap', flexDirection: 'row', marginBottom: '15px' }}>
-        <FormLabel sx={{ margin: '2.5%', fontSize: '25px', color:'#d39d85' }}>Colores</FormLabel>
+        <FormLabel sx={{ margin: '2.5%', fontSize: '30px', color:'var(--verde-azulado-claro)' }}>Colores</FormLabel>
 
-        <FormGroup sx={{display: 'flex', flexDirection:'row', gap: '15px'}}>
+        <FormGroup color='success' sx={{display: 'flex', flexDirection:'row', gap: '15px'}}>
         {console.log(colors.data)}
          {colors.data.map((c) => {
             return (
-             <FormControlLabel key={c.id}
+             <FormControlLabel color='success' key={c.id}
             control={
-              <Checkbox key={c.name} value={c.id} size='large' onChange={handleChange} name={c.name} sx={{fontSize: '30px'}} />
+              <Checkbox color='success' key={c.name} value={c.id} size='large' onChange={handleChange} name={c.name} sx={{fontSize: '30px'}} />
             }
             label= {c.name}
           />
@@ -217,7 +234,7 @@ function CreateProduct() {
         </FormControl>
       
         <FormControl  color='success' sx={{ width: '100%', margin: '3px', marginTop: '25px', height: '100px' }}>
-        <FormLabel sx={{ margin: '2.5%', fontSize: '25px', color:'#d39d85', marginTop: '15px' }}>Talles</FormLabel>
+        <FormLabel sx={{ margin: '2.5%', fontSize: '30px', color: 'var(--verde-azulado-claro)', marginTop: '15px' }}>Talles</FormLabel>
 
         <FormGroup sx={{display: 'flex', flexDirection:'row', gap: '15px'}} color='success'>
         {console.log(sizes.data)}
@@ -235,37 +252,105 @@ function CreateProduct() {
         </FormGroup>
         </FormControl>
 
-       
-            <RadioGroup
-            row
-            aria-labelledby="demo-row-radio-buttons-group-label"
-            name="row-radio-buttons-group"
-            sx={{marginTop: '20px', margin: '3px'}}
-        >
-            <FormControlLabel value={newProduct.new} control={<Radio />} label="Female" />
-            <FormControlLabel value={newProduct.sale} control={<Radio />} label="Male" />
-            <FormControlLabel value="other" control={<Radio />} label="Other" />
-           
-        </RadioGroup>
-        
-  
-      
+       <FormControl sx={{marginTop: '70px' }}>
+        <RadioGroup
+        row
+        aria-labelledby="demo-row-radio-buttons-group-label"
+        name="row-radio-buttons-group"
+        sx={{ marginTop: '20px', margin: '3px', marginBottom: '20px' }}
+        onChange={handleRadioChange}
+      >
+        <FormControlLabel
+          value="new"
+          control={<Radio size='large' color='success' />}
+          label="Nuevo"
+          sx={{fontSize: '18px', color:'var(--verde-azulado-claro)'}}
+          checked={newProduct.new}
+        />
+        <FormControlLabel
+          value="sale"
+          control={<Radio size='large' color='success' />}
+          label="Oferta"
+          sx={{fontSize: '18px', color:  'var(--verde-azulado-claro)'}}
+          checked={newProduct.sale}
+        />
+      </RadioGroup>
+      </FormControl>
+
+      <Box sx={{ display: 'flex', flexDirection: 'column', marginLeft: '5px', marginTop: '180px', marginBottom: '20px' }}>
+        <FormControl>
+          <FormControlLabel
+          sx={{fontSize: '20px', color:  'var(--verde-azulado-claro)'}}
+            control={<Switch color='success' size='large' sx={{ marginLeft: '5px'}} defaultChecked />}
+            label="Disponible"
+          />
+        </FormControl>
         <Input
           id="file-upload"
           type="file"
           name="imageProduct"
           onChange={handleChangueInputImg}
           inputProps={{ accept: 'image/*' }}
-          sx={{ width: 230, height: 230, margin: 'auto', border: '2px solid, var(--gris-claro)', borderRadius: '5%',marginTop:'100px' }}
+          sx={{
+            display: 'none', // Ocultar el input por defecto
+          }}
         />
+
+        <Button
+          variant="contained"
+          component="label"
+          sx={{
+            width: 230,
+            height: 230,
+            border: '2px solid #cdaa98',
+            borderRadius: '5%',
+            marginTop: '20px',
+            textTransform: 'none',
+            backgroundColor: '#cdaa98',
+            fontSize: 'var(--letra-grande)',
+            '&:hover': {
+              border: '2px solid var(--verde-azulado-claro)',
+              backgroundColor: 'var(--verde-azulado-claro)', 
+            },
+          }}
+        >
+          Subir Imagen
+          <Input
+            type="file"
+            name="imageProduct"
+            onChange={handleChangueInputImg}
+            inputProps={{ accept: 'image/*' }}
+            sx={{ display: 'none' }} // Ocultar el input nuevamente
+          />
+        </Button>
+        {/*<Input
+          id="file-upload"
+          type="file"
+          name="imageProduct"
+          onChange={handleChangueInputImg}
+          inputProps={{ accept: 'image/*' }}
+          sx={{
+            width: 230,
+            height: 230,
+            border: '2px solid var(--gris-claro)',
+            borderRadius: '5%',
+            marginTop: '20px',
+          }}
+        />*/}
+      </Box>
+    
+
+      <FormControl sx={{marginTop: '10px', width: '60%'}}>
         <Button
           variant="contained"
           size="large"
           onClick={handleSubmit}
-          sx={{ height: '50px', marginLeft: 'auto', marginRight: '2.5%', marginTop: '200px',   background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%)' }}
+          sx={{ height: '50px', width: '200px', marginLeft: '400px', marginTop: '60px',   background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%)' }}
         >
           Crear Producto
         </Button>
+
+        </FormControl>
       </Box>
     );
   }
