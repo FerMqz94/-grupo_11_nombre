@@ -14,18 +14,20 @@ import styles from '../../public/css/Products/Product.module.css';
 
 function Products() {
 
+    {/* EJECUCIÓN DEL HOOK NAVIGATE QUE ME PERMITE NAVEGAR ENTRE DISTINTAS RUTAS SIN USAR LINK */}
     const navigate = useNavigate()
+
+
+    {/* ESTADOS */}
+
     let [products, setProducts] = useState([])
     const [open, setOpen] = useState(false);
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-    const handleClose = () => {
-        setOpen(false);
-    };
 
+
+    {/* ----API CONSUMIDA---- */}
     const urlApiProducts = 'http://localhost:3030/api/admin/products'
   
+
     useEffect(() => {
         fetch(urlApiProducts)
             .then(response => response.json())
@@ -34,14 +36,39 @@ function Products() {
               
     }, [])
  
+
+    {/* CONSTANTE PARA OBTENER LOS PRODUCTS QUE DE LA API VIENEN CON UN FORMATO EN DONDE products, es una de las propiedades que contiene un array con todos los productos */}
+
     const prods = products.products || []
     
+    let rows = prods.map(({id, name, price, images, category}) => ({
+        id: id,
+        name: name,
+        price: `$ ${price}`,
+        category: category.name,
+        photo: images.length > 1 ? images[1].images : images[0].images
+    }))
 
-    function handleButtonDetail(id) {
-        const url = 'http://localhost:3030/api/producto-detalle' + id
+
+    {/* --------FUNCIONES ADICIONALES---------- */}
+
+    {/* ---------estas funciones las podríamos usar si agregamos un modal para eliminar por ejemplo------- */}
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+
+    {/* ESTA ES LA FUNCIÓN QUE ME PERMITE REDIRIGIRNOS A LA VISTA DETALLE DEL PRODUCTO QUE ESTÁ EN EL PROYECTO CON NODEJS Y EJS, ABRIENDO OTRA PESTAÑA */}
+    const handleButtonDetailProduct = (id) => {
+        const url = "http://localhost:3030/producto-detalle/" + id
         window.open(url, '_blank')
     }
 
+
+    {/*  ESTAS FUNCIONES NOS PERMITIRÍA NAVEGAR HACIA VISTAS COMO EDIT PRODUCT O DELETE */}
     const handleButtonEdit = (id) => {
         navigate(`/admin/products/edit/${id}`)
     }
@@ -50,13 +77,8 @@ function Products() {
 
     }
 
-    let rows = prods.map(({id, name, price, images, category}) => ({
-        id: id,
-        name: name,
-        price: `$ ${price}`,
-        category: category.name,
-        photo: images.length > 1 ? images[1].images : images[0].images
-    }))
+
+
     
     const columns = [
         { field: 'id', headerName: 'ID', width: 80 },
@@ -88,7 +110,11 @@ function Products() {
                     <Button
                         variant="contained"
                         color="info"
-                        onClick={() => handleButtonDetail(params.row.id)}
+                        onClick={() => handleButtonDetailProduct(params.row.id)}
+                        sx={{backgroundColor: 'var(--verde-azulado-claro)', '&:hover': {
+                            backgroundColor: 'var(--gris-claro)', 
+                        },
+                    }}
                     >
                         Ver
                     </Button>
