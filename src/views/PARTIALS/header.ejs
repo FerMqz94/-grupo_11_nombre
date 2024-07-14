@@ -8,8 +8,8 @@
     <div class="header-vista-movil">
         <div class="logo">
 
-            <img src="/images/icon/imagen-header.ico" alt="img-logo" class="img-header">
-            <i class="zinke">zinke</i>
+            <a href="/"><img src="/images/icon/imagen-header.ico" alt="img-logo" class="img-header"></a>
+            <a href="/" style="text-decoration: none; color: inherit;"><i class="zinke">zinke</i></a>
             <p class="lema">Inspírate en tus instintos</p>
         </div>
 
@@ -37,13 +37,41 @@
         <input type="checkbox" id="menu" class="input-menu">
         <div class="ul-menu">
 
-
+    <% const categoryMap = {
+            1: "abrigos",
+            2: "jeans",
+            3: "buzos-y-sweaters",
+            4: "remeras",
+            5: "camisas-y-blusas",
+            6: "tops",
+            7: "pantalones-y-shorts",
+            8: "vestidos-y-polleras",
+            9: "capsula-beige",
+            10: "capsula-american",
+            11: "capsula-3024",
+    }; %>
+    <input type="checkbox" id="btn-categorias">
+    <div class="contenedor-menu-categorias">
+        <div class="seccion-categoria-productos">
+            <div class="categorias-productos">
+                <a href="/lista/productos" style="text-decoration: none; color: black;">Todos los productos</a>
+            </div>
+            <% locals.categorias.forEach((c, i) => { %>
+                <% if (i <= 10) { %>
+                    <div class="categorias-productos">
+                        <a href="/productos-categorias/<%= categoryMap[c.id] %>" style="text-decoration: none; color: black;"><%= c.name %></a>
+                    </div>
+                <% } %>
+            <% }) %>
+            <label for="btn-categorias" class="icon-equis">X</label>
+        </div>
+    </div>
             <div class="seccion-burger-header"><a href="<%= locals.home ? '#'  : '/' %>"><i class="fa-solid fa-house"
                         style="<%= locals.home ? 'color: ' + home + ';' : 'color: gray;' %>"></i>&nbsp;Inicio</a></div>
 
             <div class="seccion-burger-header">
-                <a href="<%= locals.productos ? '#'  : " /lista/productos" %>"><i class="fa-solid fa-list"
-                        style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;Productos</a>
+                <label for="btn-categorias" style="cursor: pointer;"><a><i class="fa-solid fa-list"
+                        style="<%= locals.productos ? 'color: ' + productos + ';' : 'color: gray;' %>"></i>&nbsp;Categorías</a></label>
             </div>
 
             <div class="seccion-burger-header">
@@ -138,7 +166,7 @@
         <div class="logo">
             <div class="logo-zinke">
                 <a href="/"><img src="/images/icon/imagen-header.ico"   alt="img-logo" class="img-header"></a>
-                <p class="Zinke">zinke</p>
+                <a href="/" style="text-decoration: none; color: inherit"><p class="Zinke">zinke</p></a>
             </div>
 
             <form action="/resultados" method="get" class="barra-busqueda">
@@ -247,5 +275,4 @@
                 <% } %>
         </div>
     </div>
-
 </header>
