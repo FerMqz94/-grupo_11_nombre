@@ -55,7 +55,7 @@ function Products() {
         name: name,
         price: `$ ${price}`,
         category: category.name,
-        photo: images[1].images
+        photo: images.length > 1 ? images[1].images : images[0].images
     }))
     
     const columns = [
@@ -70,7 +70,7 @@ function Products() {
             ),
         },
         
-        { field: 'category', headerName: 'Categoria', flex: 1 },
+       { field: 'category', headerName: 'Categoria', flex: 1 },
         {
             field: 'photo',
             headerName: 'Imagen',

@@ -39,9 +39,12 @@ const path = require('path')
 
 module.exports = (req,res) => {
 
-    const { name, description, featuredDescription, category, price, talle1, talle2, talle3, talle4, talle5, black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold, neworsale, available } = req.body;
+    const { name, description, featuredDescription, id_category, price, sizesArrayStore, /*talle1, talle2, talle3, talle4, talle5,*/ /*black, beige, blue, white, red, green, purple, orange, lightblue, gray, lavender, pink, silver, bluishGreen, gold,*/ colorsArrayStore, neworsale, available } = req.body;
 
-     //////FUNCIONES PARA COLORES//////
+
+    console.log(req.body)
+
+    /* //////FUNCIONES PARA COLORES//////
 
      let colorsArrayStore = [];
      let colorsAGuardar;
@@ -67,9 +70,9 @@ module.exports = (req,res) => {
      colorsArray(silver, colorsArrayStore);
      colorsArray(bluishGreen, colorsArrayStore),
      colorsArray(gold, colorsArrayStore)
-     
+     */
     
-     ///// FUNCIÓN PARA TALLES////
+  /*    ///// FUNCIÓN PARA TALLES////
  
      let sizesArrayStore = [];
      let sizesAGuardar;
@@ -85,7 +88,7 @@ module.exports = (req,res) => {
      sizesArray(talle2, sizesArrayStore)
      sizesArray(talle3, sizesArrayStore)
      sizesArray(talle4, sizesArrayStore)
-     sizesArray(talle5, sizesArrayStore)
+     sizesArray(talle5, sizesArrayStore)*/
 
 
     db.Product.create({
@@ -93,7 +96,7 @@ module.exports = (req,res) => {
                name: name.trim(),
                description: description.trim(),
                featuredDescription: featuredDescription.trim(),
-               id_category: +category,
+               id_category: +id_category,
                price: +price,
                new: neworsale === "new",
                sale: neworsale === "sale",

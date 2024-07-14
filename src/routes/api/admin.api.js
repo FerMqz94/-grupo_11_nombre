@@ -1,12 +1,12 @@
 const router = require("express").Router()
-const { storeApi, updateApi } = require("../../controllers/api/admin")
-const {listApi, renderImgProduct, categoriesApi, colorsApi, sizesApi } = require("../../controllers/api/admin")
+//const { storeApi, updateApi } = require("../../controllers/api/admin")
+const {listApi, renderImgProduct, categoriesApi, colorsApi, sizesApi, storeApi } = require("../../controllers/api/admin")
 const { uploadProducts } = require("../../middlewares/uploads");
 
 
 // /api/admin
-router.post('/', storeApi),
-router.put('/:id', updateApi)
+//router.post('/', storeApi),
+//router.put('/:id', updateApi)
 router.get("/products", listApi);
 router.post('/crear-productos', uploadProducts.array('image'), storeApi)
 router.get("/images/:image", renderImgProduct)// /api/products/image

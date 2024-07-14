@@ -24,6 +24,14 @@ app.set("views" ,path.join(__dirname,"./src/views"))
 
 // MiDDLEWARES
 app.use(cors())
+
+// app.use(cors({
+//     origin: '*', // Permitir todos los orígenes
+//     methods: 'GET, POST, PUT, DELETE, OPTIONS',
+//     allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept'
+// }));
+
+
 app.use(express.static('public'));
 app.use(partials());
 app.use(express.urlencoded({extended: false}));
