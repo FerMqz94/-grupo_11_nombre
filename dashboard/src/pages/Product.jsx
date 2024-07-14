@@ -111,10 +111,14 @@ function Products() {
                         variant="contained"
                         color="info"
                         onClick={() => handleButtonDetailProduct(params.row.id)}
-                        sx={{backgroundColor: 'var(--verde-azulado-claro)', '&:hover': {
-                            backgroundColor: 'var(--gris-claro)', 
-                        },
-                    }}
+                        sx={{
+                            backgroundColor: 'var(--verde-azulado-claro)',
+                            color: '#fff',
+                            transition: 'background-color 0.3s',
+                            '&:hover': {
+                              backgroundColor: '#7ed9d0', 
+                            },
+                          }}
                     >
                         Ver
                     </Button>
@@ -130,6 +134,14 @@ function Products() {
                     <Button
                         variant="contained"
                         color="success"
+                        sx={{
+                            backgroundColor: '#ffcd9e',
+                            color: '#2d6a4f', 
+                            transition: 'background-color 0.3s',
+                            '&:hover': {
+                              backgroundColor: '#ffb76b'
+                            }
+                          }}
                         onClick={() => handleButtonEdit(params.row.id)}
                     >
                         Editar
@@ -146,6 +158,14 @@ function Products() {
                     <Button
                         variant="contained"
                         color="error"
+                        sx={{
+                            backgroundColor: '#d19a6b',
+                            color: '#fff',
+                            transition: 'background-color 0.3s',
+                            '&:hover': {
+                              backgroundColor: '#e4b286'
+                            }
+                          }}
                         onClick={() => handleClickOpen()}
                     >
                         Eliminar
