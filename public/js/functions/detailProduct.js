@@ -7,7 +7,10 @@ const viewSelectSize = document.querySelector(".view-size")
 const buttonSize = document.querySelector("[name = 'button-sizes']")
 let size = "";
 
-const buttonColor1 = document.getElementById("1");
+
+
+
+/*const buttonColor1 = document.getElementById("1");
 const buttonColor2 = document.getElementById("2");
 const buttonColor3 = document.getElementById("3");
 const buttonColor4 = document.getElementById("4");
@@ -83,7 +86,33 @@ const changeBorder = (color) => {
         buttonColor1.style.border = "1.5px solid black"
       }
   }
-}
+}*/
+
+const buttons = Array.from(document.querySelectorAll('.colores'));
+let selectedButton = null;
+
+const changeBorder = (colorId) => {
+  
+  buttons.forEach(button => {
+    button.style.border = "1.5px solid black";
+    button.style.boxShadow = "none";
+  });
+
+  const currentButton = document.getElementById(colorId);
+  
+
+  if (selectedButton === currentButton) {
+    selectedButton = null;
+    currentButton.style.border = "1.5px solid black"
+    currentButton.style.boxShadow = "none";
+  } else {
+    currentButton.style.border = "2px solid var(--molocoton-oscuro)";
+    currentButton.style.boxShadow = "0 0 5px 10px rgba(249, 155, 128, 0.5)"
+    selectedButton = currentButton;
+  }
+};
+
+
 
 
 const showSize = (size) => {

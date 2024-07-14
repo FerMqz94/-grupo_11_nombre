@@ -111,9 +111,9 @@
                 <% const colorNames=product.colors.map(color=> color.name) %>
                   <% colors.forEach(c=> { %>
                     <% if (colorNames.includes(c.name)) { %>
-                      <button class="colores" <% /* eslint-disable css-propertyvalueexpected */ %> id="<%= c.id %>"
-                        style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 30px; width:
-                          30px; border: 1.5px solid black" onclick="getcolor('<%= c.id %>'); changeBorder('<%= c.id %>')">
+                      <button class="colores <%= c.name %>" <% /* eslint-disable css-propertyvalueexpected */ %> id="<%= c.id %>"
+                        style="background-color: <%= c.hexadecimal %>; border-radius: 100px; height: 35px; width:
+                          35px; border: 1.5px solid black; margin-left: 5px;" onclick="getcolor('<%= c.id %>'); changeBorder('<%= c.id %>')">
                       </button>
                       <% } %>
                         <% }) %>
