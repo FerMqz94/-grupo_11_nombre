@@ -21,6 +21,9 @@ import Switch from '@mui/material/Switch';
 
 
 function CreateProduct() {
+
+
+  {/*-------------- ESTADOS --------- */}
   const [errors, setErrors] = useState("")
   const [categories, setCategories] = useState([]);
   const [colors, setColors] = useState([]);
@@ -40,6 +43,8 @@ function CreateProduct() {
     id_category: '',
   });
 
+
+  {/*-----APIS UTILIZADAS------*/}
   const urlApiCategories = 'http://localhost:3030/api/admin/categorias';
   const urlApiColors = 'http://localhost:3030/api/admin/colors';
   const urlApiSizes = 'http://localhost:3030/api/admin/sizes';
@@ -71,10 +76,10 @@ function CreateProduct() {
    colorsFetch()
    sizesFetch()
 
-
-
   }, []);
 
+
+  {/* ------FUNCIÓN QUE MANEJA EL ESTADO NEWPRODUCT-------- */}
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -86,106 +91,34 @@ function CreateProduct() {
     }));
 };
 
+{/* -------FUNCIÓN QUE MANEJA EL ESTADO DE LAS IMÁGENES------- */}
+
   const handleChangeInputImg = (e) => {
-    const files = Array.from(e.target.files); // Obtener todos los archivos seleccionados
+    const files = Array.from(e.target.files); // Con esto consigo "capturar" los archivos seleccionados
   
     if (files.length) {
-      const previews = files.map(file => URL.createObjectURL(file)); // Crear un preview para cada imagen
-      setPreview(previews); // Almacenar los previews en el estado
-      setFileImgSelected(files); // Almacenar todos los archivos en el estado
+      const previews = files.map(file => URL.createObjectURL(file)); // Esto es por si queremos agregar preview de la imagen en algún momento
+      setPreview(previews); // Para guardar el estado para previsualizar 
+      setFileImgSelected(files); // Acá guardamos los archivos en el estado fileImgSelected
     }
   };
 
- {/*} const handleSizeChange = (e) => {
-    const { name, checked } = e.target;
-
-    // Actualizar el estado de los talles
-    setSizes(prevSizes => {
-        const updatedSizes = {
-            ...prevSizes,
-            [name]: checked // true si está seleccionado, false si no
-        };
-
-        // Convertir el objeto a un array de IDs de talles
-        const sizesArrayStore = Object.keys(updatedSizes)
-            .filter(size => updatedSizes[size]) // Filtrar solo los talles seleccionados
-            .map(size => sizes.data.find(s => s.name === size)?.id); // Obtener el ID del talle
-
-        return {
-            ...updatedSizes,
-            sizesArrayStore // Almacena el array de IDs de talles
-        };
-    });
-};*/}
-
-
-  {/*const handleColorChange = (e) => {
-    const { name, checked } = e.target;
-
-    // Actualizar el estado de los colores
-    setColors(prevColors => {
-        // Crear un nuevo objeto con los colores seleccionados
-        const updatedColors = {
-            ...prevColors,
-            [name]: checked // true si está seleccionado, false si no
-        };
-
-        // Convertir el objeto a un array de color IDs
-        const colorsArrayStore = Object.keys(updatedColors)
-            .filter(color => updatedColors[color]) // Filtrar solo los colores seleccionados
-            .map(color => colors.data.find(c => c.name === color)?.id); // Obtener el ID del color
-
-        // Devolver el array de IDs de colores al estado o manejarlo como necesites
-        return {
-            ...updatedColors,
-            colorsArrayStore // Almacena el array de IDs de colores
-        };
-    });
-  };*/}
-
- {/* const handleColorChange = (event) => {
-    const { name, checked } = event.target;
-
-    setColorsStoreArray((prevState) => {
-        if (checked) {
-            // Agregar el color si está marcado
-            return [...prevState, name];
-        } else {
-            // Eliminar el color si no está marcado
-            return prevState.filter(color => color !== name);
-        }
-    });
-};*/}
-
-{/*  const[sizesStoreArray, setSizesStoreArray] = useState([]) */}
-
-{/*const handleSizeChange = (event) => {
-  const { name, checked } = event.target;
-
-  setSizesStoreArray((prevState) => {
-      if (checked) {
-          // Agregar el tamaño si está marcado
-          return [...prevState, name];
-      } else {
-          // Eliminar el tamaño si no está marcado
-          return prevState.filter(size => size !== name);
-      }
-  });
-};*/}
+{/* ------FUNCIÓN QUE MANEJA LOS ESTADOS DE LOS TALLES -------- */}
 
 const handleSizeChange = (event) => {
   const { name, checked } = event.target;
-  const sizeNumber = Number(name); // Convertir a número
+  const sizeNumber = Number(name); // Con esto paso a número lo que obtengo como string
 
   setSizesStoreArray((prevState) => {
       if (checked) {
-          return [...prevState, sizeNumber]; // Agregar tamaño como número
+          return [...prevState, sizeNumber]; // Acá agrego ese talle como número al estado
       } else {
-          return prevState.filter(size => size !== sizeNumber); // Eliminar tamaño
+          return prevState.filter(size => size !== sizeNumber); // Usando filter como mostró el profe en otros ejemplos podemos eliminar el talle del estado
       }
   });
 };
 
+{/* ESTA FUNCIÓN ES PARA MANEJAR LOS COLORES */}
 
 const handleColorChange = (event) => {
   const { name, checked } = event.target;
@@ -195,15 +128,16 @@ const handleColorChange = (event) => {
       const colorId = color ? color.id : null;
 
       if (checked && colorId) {
-          // Agregar el ID del color si está marcado
+          
           return [...prevState, colorId];
       } else {
-          // Eliminar el ID del color si no está marcado
+          
           return prevState.filter(id => id !== colorId);
       }
   });
 };
 
+{/*-------FUNCIÓN PARA MANEJAR EL AVAILABLE QUE SE OBTIENE DE UN SWITCH----------- */}
 
   const handleAvailableChange = (e) => {
     const { checked } = e.target;
@@ -213,32 +147,33 @@ const handleColorChange = (event) => {
     }));
   };
 
-  const createProduct = async () => {
+
+{/* FUNCIÓN PARA HACER LA SOLICITUD A LA API DE CREAR PRODUCTO CUANDO HACEMOS CLICK EN EL BOTÓN */}
+
+  const handleCrearProducto = async () => {
     const formData = new FormData();
 
-    // Agregar los datos del nuevo producto
+    //Estos append me sirven para agregar las propiedades seteadas en el estado newProduct
     formData.append('name', newProduct.name);
     formData.append('description', newProduct.description);
     formData.append('featuredDescription', newProduct.featuredDescription);
-    formData.append('id_category', newProduct.id_category); // Asegúrate de que esto contenga el ID de la categoría
-    formData.append('price', newProduct.price);
+    formData.append('id_category', newProduct.id_category); 
     formData.append('available', newProduct.available);
-    formData.append('neworsale', newProduct.neworsale); // Asegúrate de que esto contenga "new" o "sale"
+    formData.append('neworsale', newProduct.neworsale); 
 
-    // Agregar talles seleccionados
+    // Como se manejan con otros estados los talles y los colores se agregan aparte haciendo un forEach y añadiendo esos datos a un array ya que modifiqué la api para que espere un array directamente y no talle por talle o color por color - Las imágenes también se agregan de otra forma, atención a una nota más abajo
     sizesStoreArray.forEach(size => {
         formData.append('sizesArrayStore[]', size);
     });
 
-    // Agregar colores seleccionados
     colorsStoreArray.forEach(color => {
         formData.append('colorsArrayStore[]', color);
     });
 
-    // Agregar imágenes seleccionadas
+    
     if (fileImgSelected) {
         fileImgSelected.forEach(file => {
-            formData.append('image', file);
+            formData.append('image', file); // Muy importante que el primer parámetro que le pasamos, tenga el mismo nombre que le ponemos a la ruta de crear-producto en el parámetro del middleware del multer,  uploadProducts.array('image') este porque sino se rompe todo
         });
     }
 
@@ -250,7 +185,7 @@ const handleColorChange = (event) => {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          window.location = ' http://localhost:5173/';
+          window.location = ' http://localhost:5173/'; //esto lo puse para que redirija a la página principal del dashboard de react
         })
         
     } catch (error) {
@@ -260,8 +195,7 @@ const handleColorChange = (event) => {
 
 
   
-  
-{/*|| sizes.length < 1*/}
+
 
  if (categories.length < 1 || colors.length < 1 || sizes.length < 1) {
     return (
@@ -273,7 +207,7 @@ const handleColorChange = (event) => {
     return (
       <Box sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto', padding: '10px', paddingLeft: '35px', borderRadius: '10px', paddingTop: '20px', paddingBottom: '60px', boxShadow: ' 0 0 5px 6px rgba(249, 155, 128, 0.4)', alignItems: 'flex-start' }}>
         <h1 style={{ width: '100%', textAlign: 'center', color: '#99d3bf', fontWeight: 'bold' }}> Crear Producto </h1>
-       {/*} <img src={preview} alt="img-product" className="editProductImg" />*/}
+    
         <TextField
           id="outlined-required"
           color="success" 
@@ -338,7 +272,7 @@ const handleColorChange = (event) => {
         id="outlined-multiline-static"
         label="Descripción destacada"
         color="success"
-        name="featuredDescription" // Corrección aquí
+        name="featuredDescription" 
         multiline
         rows={3}
         value={newProduct.featuredDescription}
@@ -381,11 +315,11 @@ const handleColorChange = (event) => {
       {/* ----SIZES---- */}
     
       <FormControl color='success' sx={{ width: '100%', margin: '3px', marginTop: '25px', height: '100px' }}>
-    <FormLabel sx={{ margin: '2.5%', fontSize: '30px', color: 'var(--verde-azulado-claro)', marginTop: '15px' }}>
-        Talles
-    </FormLabel>
+        <FormLabel sx={{ margin: '2.5%', fontSize: '30px', color: 'var(--verde-azulado-claro)', marginTop: '15px' }}>
+            Talles
+        </FormLabel>
 
-    <FormGroup sx={{ display: 'flex', flexDirection: 'row', gap: '15px' }} color='success'>
+        <FormGroup sx={{ display: 'flex', flexDirection: 'row', gap: '15px' }} color='success'>
                 {sizes.data.map((s) => (
                     <FormControlLabel
                         key={s.id}
@@ -394,12 +328,12 @@ const handleColorChange = (event) => {
                                 color='success'
                                 size='large'
                                 value={s.size}
-                                checked={sizesStoreArray.includes(s.size)} // Comparar como número
+                                checked={sizesStoreArray.includes(s.size)} 
                                 onChange={handleSizeChange}
-                                name={s.size} // Mantener como número
+                                name={s.size} 
                             />
                         }
-                        label={s.size} // Mostrar el tamaño
+                        label={s.size}
                     />
                 ))}
             </FormGroup>
@@ -412,7 +346,7 @@ const handleColorChange = (event) => {
             <RadioGroup
               row
               aria-labelledby="demo-row-radio-buttons-group-label"
-              name="neworsale" // Cambiado aquí para ser consistente
+              name="neworsale" 
               sx={{ marginTop: '20px', margin: '3px', marginBottom: '20px' }}
               onChange={handleChange}
             >
@@ -447,10 +381,10 @@ const handleColorChange = (event) => {
                 color="success"
                 size="large"
                 sx={{ marginLeft: '5px' }}
-                checked={newProduct.available} // Para mostrar el estado actual
-                onChange={handleAvailableChange} // Función para manejar el cambio
+                checked={newProduct.available} 
+                onChange={handleAvailableChange} 
                 name="available" // Nombre del switch
-                value={newProduct.available ? "true" : "false"} // Valor según el estado
+                value={newProduct.available ? "true" : "false"} 
               />
             }
             label="Disponible"
@@ -462,9 +396,9 @@ const handleColorChange = (event) => {
               type="file"
               name="imageProduct"
               onChange={handleChangeInputImg}
-              inputProps={{ accept: 'image/*', multiple: true }} // Permitir múltiples imágenes
+              inputProps={{ accept: 'image/*', multiple: true }} 
               sx={{
-                display: 'none', // Ocultar el input por defecto
+                display: 'none', 
               }}
             />
 
@@ -491,8 +425,8 @@ const handleColorChange = (event) => {
                 type="file"
                 name="imageProduct"
                 onChange={handleChangeInputImg}
-                inputProps={{ accept: 'image/*', multiple: true }} // Permitir múltiples imágenes
-                sx={{ display: 'none' }} // Ocultar el input nuevamente
+                inputProps={{ accept: 'image/*', multiple: true }} 
+                sx={{ display: 'none' }} 
               />
             </Button>
             {console.log(fileImgSelected)}
@@ -517,7 +451,7 @@ const handleColorChange = (event) => {
         <Button
           variant="contained"
           size="large"
-          onClick={createProduct}
+          onClick={handleCrearProducto}
           sx={{ height: '50px', width: '200px', marginLeft: '400px', marginTop: '60px',   background: 'linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(249,155,125,1) 100%)' }}
         >
           Crear Producto
