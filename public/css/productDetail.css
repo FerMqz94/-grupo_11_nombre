@@ -618,7 +618,7 @@ main.vista-producto article.contenedor-descripcion h5.descripcion-destacada {
 
 main.vista-producto section.otrosFav {
   display: flex;
-  width: 86%;
+  width: 90%;
   /* margin-left: 30px; */
   /* margin-bottom: 40px; */
   flex-direction: column;
@@ -648,7 +648,17 @@ main.vista-producto section.otrosFav div.contenedor-otros-productos {
   flex-wrap: wrap;
 
   justify-content: center;
+
+  gap: 3px;
 }
+
+main.vista-producto section.otrosFav div.contenedor-otros-productos .tarjeta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px; /* Espacio entre tarjetas */
+}
+
 
 main.vista-producto
   section.otrosFav
@@ -1957,6 +1967,15 @@ div.contenedor-vistas-imagenes
 
     width: 100%;
   }
+
+  main.vista-producto section.otrosFav div.contenedor-otros-productos .tarjeta-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: center;
+    gap: 2px; /* Espacio entre tarjetas */
+}
 
   main.vista-producto
     section.otrosFav

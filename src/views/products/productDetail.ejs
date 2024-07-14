@@ -265,7 +265,7 @@
        
 
         <!-----OTROS PRODUCTOS------->
-        <section class="otrosFav">
+        <section class="otrosFav" style="margin-bottom: 80px; padding: 0;">
           <h3 class="otrosFav">OTROS PRODUCTOS</h3>
           <div class="contenedor-otros-productos">
             <% const firstId = products[0].id; %>
@@ -294,18 +294,30 @@
             <% const randomIds = getRandomUniqueIds(firstId, lastId, 4, productId); %>
             <% let randomProducts = products.filter(p => randomIds.includes(p.id)); %>
             <% randomProducts = randomOrder(randomProducts); %>
+            
             <% randomProducts.forEach((p) => { %>
-                <article class="productos-otrosFav dos-continentes">
+               <!----<article class="productos-otrosFav">--->
+                  <div class="card" style="background-color: #f2d9c5  ; border-radius: 8px; padding: 12px; margin: 16px; width: 100%; max-width: 210px;">
                     <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>" 
-                        alt="<%= p.name %>">
+                        alt="<%= p.name %>" style="width: 100%; border-radius: 8px;">
                     <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
-                        <h4 class="h4-dos-conti">
+                        <h4 class="h4-dos-conti" style="font-size: 16px; color: #6b4f4b ;">
                             <%= p.name %>
                         </h4>
                     </a>
-                    <p class="p-dos-conti">$<%= p.price %></p>
-                </article>
+                    <p class="p-Zdos-conti" style="font-size: 14px; color: #6b4f4b;">$<%= p.price %></p>
+                    <a href="/producto-detalle/<%= p.id %>" style="text-decoration: none;">
+                      <button style="background-color: var(--verde-azulado-claro); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; transition: background-color 0.3s;"
+                          onmouseover="this.style.backgroundColor='#7ed9d0';"
+                          onmouseout="this.style.backgroundColor='var(--verde-azulado-claro)';">
+                          Ver más
+                      </button>
+                  </a>
+                </div>
+                
+               <!--- </article>-->
             <% }); %>
+           
           </div>
         </section>
 
@@ -338,6 +350,8 @@
 
         <!--SCRIPT DE CONFIGS GLIDER-->
         <script src="/js/configs/glider.js"></script>
+
+     
 
         <!-- PERMITE AÑADIR AL CARRITO -->
         <script src="/js/functions/addProductToCart.js"></script>
