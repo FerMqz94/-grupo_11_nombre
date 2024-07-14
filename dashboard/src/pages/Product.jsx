@@ -70,7 +70,10 @@ function Products() {
 
     {/*  ESTAS FUNCIONES NOS PERMITIRÍA NAVEGAR HACIA VISTAS COMO EDIT PRODUCT O DELETE */}
     const handleButtonEdit = (id) => {
-        navigate(`/admin/products/edit/${id}`)
+
+        window.location = ' http://localhost:5173/editar-producto/' + id
+        
+       // navigate(`/admin/products/edit/${id}`)
     }
 
     function handleButtonDelete(id) {

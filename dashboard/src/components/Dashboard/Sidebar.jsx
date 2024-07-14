@@ -66,6 +66,8 @@ export const SideBar = function () {
             <span>Crear Productos</span></Link>
     </li>
 
+    
+
     {/* Divider */}
     <hr className="sidebar-divider d-none d-md-block"/>
     {/* End of Sidebar */}

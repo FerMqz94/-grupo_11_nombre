@@ -6,6 +6,7 @@ import{routesUsers} from "./RouterUsers";
 import {routesGraficos} from "./RoutesGraficos"
 import { routesSales } from "./RoutesSales";
 import { routesCreateProducts } from "./RouterCreateProducts";
+import { routesEditProduct } from "./RoutesEditProduct";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,7 +20,8 @@ const router = createBrowserRouter([
       ... routesUsers,
       ... routesGraficos,
       ...routesSales,
-      ...routesCreateProducts
+      ...routesCreateProducts,
+      ...routesEditProduct
     ],
   },
 ]);
