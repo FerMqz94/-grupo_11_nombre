@@ -16,6 +16,7 @@ const { configServiceFacebook } = require("./src/service/facebook.service");
 
 const checkSession = require("./src/middlewares/checkSession")
 const checkCookie = require('./src/middlewares/checkCookie');
+const categoriesMiddleware = require("./src/middlewares/categoriesProducts");
 
 // CONFIGURACIONES
 
@@ -37,6 +38,7 @@ configServicegoogle()
 configServiceTwitter()
 configServiceFacebook()
 
+app.use(categoriesMiddleware)
 app.use(checkCookie)
 app.use(checkSession)
 
@@ -45,6 +47,7 @@ const otherRoutes = require("./src/routes/other.routes")
 const cartRoutes = require("./src/routes/cart.routes")
 const productDetailRoutes = require("./src/routes/productDetail.routes")
 const listProductsRoutes = require("./src/routes/listProducts.routes")
+const categoriesRoutes = require("./src/routes/categories.routes")
 const authRoutes = require("./src/routes/authentication.routes")
 const adminRoutes = require("./src/routes/admin.routes")
 const usersRoutes = require("./src/routes/users.routes")
@@ -56,6 +59,7 @@ const apiProductDetailRoutes = require ("./src/routes/api/productDetail.api")
 const apiAuthRoutes = require ("./src/routes/api/authentication.api")
 const apiAdminRoutes = require ("./src/routes/api/admin.api")
 const apiUsersRoutes = require ("./src/routes/api/users.api");
+const categoriesProducts = require("./src/middlewares/categoriesProducts");
 
 
 
@@ -66,9 +70,9 @@ app.use("/carrito", cartRoutes)
 app.use('/autenticacion', authRoutes)
 app.use("/lista",  listProductsRoutes)
 app.use("/producto-detalle", productDetailRoutes)
+app.use("/productos-categorias", categoriesRoutes )
 app.use("/admin", adminRoutes);
 app.use("/users", usersRoutes);
-
 
 // API
 app.use("/api", apiOtherRoutes)
