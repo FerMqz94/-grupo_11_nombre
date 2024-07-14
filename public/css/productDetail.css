@@ -664,8 +664,8 @@ main.vista-producto
   section.otrosFav
   div.contenedor-otros-productos
   article.dos-continentes {
-  width: 45%;
-  height: 230px;
+  /*width: 45%;
+  height: 230px;*/
   /* padding: 10px 20px 10px 20px; */
   border: 1px solid var(--gris-claro);
   border-radius: 5%;

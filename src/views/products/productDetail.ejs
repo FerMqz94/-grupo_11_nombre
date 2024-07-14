@@ -297,11 +297,11 @@
             
             <% randomProducts.forEach((p) => { %>
                <!----<article class="productos-otrosFav">--->
-                  <div class="card" style="background-color: #f2d9c5  ; border-radius: 8px; padding: 12px; margin: 16px; width: 100%; max-width: 210px;">
+                  <div class="card" style="background-color: #f2d9c5  ; border-radius: 8px; padding: 12px; margin: 16px; width: 100%; max-width: 210px; text-align: center;">
                     <img class="blazer-dos-conti" src="/images/products/<%= p.images[0] ? p.images[0].name : '' %>" 
                         alt="<%= p.name %>" style="width: 100%; border-radius: 8px;">
                     <a href="/producto-detalle/<%= p.id %>" class="a-dos-conti">
-                        <h4 class="h4-dos-conti" style="font-size: 16px; color: #6b4f4b ;">
+                        <h4 class="h4-dos-conti" style="font-size: 16px; color: #6b4f4b; padding-top: 5px;">
                             <%= p.name %>
                         </h4>
                     </a>
