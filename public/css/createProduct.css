@@ -513,6 +513,24 @@ main.crear-producto div.vista-producto-crear-editar-contenedor div.card div.subi
     color: var(--molocoton-oscuro);
   }
 
+/* ---------------DIV PARA PREVISUALIZAR LA IMAGEN--------------------*/
+
+.image-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.image-preview-container img {
+  width: 100px;
+  height: 100px;
+  margin: 0.5rem;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 2px solid var(--gris-claro);
+}
+
+
  /*BOTÓN DE ENVIAR FORMULARIO*/
 
   main.crear-producto div.boton-enviar-formulario-crear-editar .button-submit-crear-editar{

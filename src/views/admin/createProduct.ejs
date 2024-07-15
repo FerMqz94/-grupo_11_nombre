@@ -170,21 +170,22 @@
                             <i class="fa fa-download"></i>
                             <div>Seleccioná un archivo o arrastralo acá</div>
                             <span id="" class="btn btn-primary">Subí archivos</span>
-                            <span class="mensaje-para-usuario-imagen-crear-edit">Formato de archivo no válido</span>
+                            <span class="mensaje-para-usuario-imagen-crear-edit error-imgs"></span>
+                            
                         </div>
-                        </label>
+                        <div id="image-preview" class="image-preview-container"></div>
+                    </label>
                     </div>  
-          
-                
+    
                 </div>
 
-                <p class="text-danger error-imgs"></p> 
+               <!-- <p class="text-danger error-imgs"></p> --->
 
                 <div class="boton-enviar-formulario-crear-editar col-10 my-3 d-flex justify-content-center my-md-2 my-lg-3 justify-content-lg-end">
                     <button type="submit" class="button-submit-crear-editar my-3">Crea tu producto</button>
                     
                 </div>
-                <p class="text-danger col-12 text-center err-form-general alert alert-danger">Revisa los campos con errores</p>
+               <!---<p class="text-danger col-12 text-center err-form-general alert alert-danger"></p>-->
                             
                 </div>  
 
@@ -199,7 +200,7 @@
 
 
 
-     
+    <script src="/js/functions/createProductFuncional.js"></script>
     <script src="/js/functions/validationCreateProduct.js"></script>
 </body>
 </html>
