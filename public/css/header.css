@@ -429,6 +429,9 @@ display: none;
   opacity: 1;
   visibility: visible;
   }
+    #ul-productos-categoria-tablet-pc {
+      width: 800px !important;
+    }
 }
 
 
@@ -509,6 +512,9 @@ margin-left: 1%;
   opacity: 1;
   visibility: visible;
   }
+    #ul-productos-categoria-tablet-pc {
+      width: 1000px !important;
+    }
 }
 
 #a-productos-categoria-tablet-pc {
