@@ -30,8 +30,8 @@ function CreateProduct() {
   const [colorsStoreArray, setColorsStoreArray] = useState([])
   const [sizes, setSizes] = useState([]);
   const[sizesStoreArray, setSizesStoreArray] = useState([])
-  const [preview, setPreview] = useState('');
-  const [fileImgSelected, setFileImgSelected] = useState();
+  const [previewImages, setPreviewImages] = useState([]);
+  const [fileImgSelected, setFileImgSelected] = useState()
   const [newProduct, setNewProduct] = useState({
     name: '',
     description: '',
@@ -61,14 +61,14 @@ function CreateProduct() {
     const colorsFetch = () => {
         fetch(urlApiColors)
         .then((response) => response.json())
-        .then((data) => setColors(data));
+        .then((data) => setColors(data))
 
     }
 
     const sizesFetch = () => {
         fetch(urlApiSizes)
         .then((response) => response.json())
-        .then((data) => setSizes(data));
+        .then((data) => setSizes(data))
         
     }
 
@@ -89,19 +89,26 @@ function CreateProduct() {
         [name]: type === 'radio' ? value : value,
         neworsale: type === 'radio' ? value : prevProduct.neworsale,
     }));
-};
+}
 
-{/* -------FUNCIÓN QUE MANEJA EL ESTADO DE LAS IMÁGENES------- */}
+{/* -------FUNCIONES QUE MANEJAN LOS ESTADOS DE LAS IMÁGENES------- */}
 
   const handleChangeInputImg = (e) => {
     const files = Array.from(e.target.files); // Con esto consigo "capturar" los archivos seleccionados
   
     if (files.length) {
-      const previews = files.map(file => URL.createObjectURL(file)); // Esto es por si queremos agregar preview de la imagen en algún momento
-      setPreview(previews); // Para guardar el estado para previsualizar 
+   
       setFileImgSelected(files); // Acá guardamos los archivos en el estado fileImgSelected
     }
   };
+
+    const handleChangeInputPreviewImg = (event) => {
+      const files = Array.from(event.target.files);
+      const imageUrls = files.map(file => URL.createObjectURL(file));
+      setPreviewImages(imageUrls);
+     }
+
+
 
 {/* ------FUNCIÓN QUE MANEJA LOS ESTADOS DE LOS TALLES -------- */}
 
@@ -155,11 +162,12 @@ const handleColorChange = (event) => {
 
     //Estos append me sirven para agregar las propiedades seteadas en el estado newProduct
     formData.append('name', newProduct.name);
-    formData.append('description', newProduct.description);
+    formData.append('description', newProduct.description)
     formData.append('featuredDescription', newProduct.featuredDescription);
-    formData.append('id_category', newProduct.id_category); 
+    formData.append('id_category', newProduct.id_category) 
     formData.append('available', newProduct.available);
     formData.append('neworsale', newProduct.neworsale); 
+    formData.append('price', newProduct.price)
 
     // Como se manejan con otros estados los talles y los colores se agregan aparte haciendo un forEach y añadiendo esos datos a un array ya que modifiqué la api para que espere un array directamente y no talle por talle o color por color - Las imágenes también se agregan de otra forma, atención a una nota más abajo
     sizesStoreArray.forEach(size => {
@@ -167,7 +175,7 @@ const handleColorChange = (event) => {
     });
 
     colorsStoreArray.forEach(color => {
-        formData.append('colorsArrayStore[]', color);
+        formData.append('colorsArrayStore[]', color)
     });
 
     
@@ -184,7 +192,7 @@ const handleColorChange = (event) => {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          console.log(data)
           window.location = ' http://localhost:5173/'; //esto lo puse para que redirija a la página principal del dashboard de react
         })
         
@@ -205,7 +213,7 @@ const handleColorChange = (event) => {
     );
   } else {
     return (
-      <Box sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto', padding: '10px', paddingLeft: '35px', borderRadius: '10px', paddingTop: '20px', paddingBottom: '60px', boxShadow: ' 0 0 5px 6px rgba(249, 155, 128, 0.4)', alignItems: 'flex-start' }}>
+      <Box sx={{ width: '90%', maxWidth: '700px', display: 'flex', flexWrap: 'wrap', margin: '50px auto', padding: '10px', paddingLeft: '35px', borderRadius: '10px', paddingTop: '20px', paddingBottom: '60px', boxShadow: '0 2px 8px 0 rgba(65, 161, 160, 0.4)', alignItems: 'flex-start' }}>
         <h1 style={{ width: '100%', textAlign: 'center', color: '#99d3bf', fontWeight: 'bold' }}> Crear Producto </h1>
     
         <TextField
@@ -389,8 +397,74 @@ const handleColorChange = (event) => {
             }
             label="Disponible"
           />
+          </FormControl>
         {/* -----------INPUT-TYPE-FILE- IMAGENES ----------- */}  
-        </FormControl>
+
+        <FormControl>
+            <Input
+              id="file-upload"
+              type="file"
+              name="imageProduct"
+              onChange={(event) => {
+                handleChangeInputImg(event);
+                handleChangeInputPreviewImg(event);
+              }}
+              inputProps={{ accept: 'image/*', multiple: true }} 
+              sx={{ display: 'none' }}
+            />
+            
+            <Button
+              variant="contained"
+              component="label"
+              sx={{
+                width: 300,
+                height: 300,
+                border: '2px solid #cdaa98',
+                borderRadius: '5%',
+                marginTop: '20px',
+                textTransform: 'none',
+                backgroundColor: '#cdaa98',
+                fontSize: 'var(--letra-grande)',
+                '&:hover': {
+                  border: '2px solid var(--verde-azulado-claro)',
+                  backgroundColor: 'var(--verde-azulado-claro)', 
+                },
+              }}
+            >
+              Subir Imagen
+              <Input
+                type="file"
+                name="imageProduct"
+                onChange={(event) => {
+                  handleChangeInputImg(event);
+                  handleChangeInputPreviewImg(event);
+                }}
+                inputProps={{ accept: 'image/*', multiple: true }} 
+                sx={{ display: 'none' }} 
+              />
+              <div style={{ marginTop: '10px', marginBottom: '10px', display: 'flex', flexWrap: 'wrap' }}>
+              {previewImages.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`preview ${index}`}
+                  style={{
+                    width: '90px',
+                    height: '90px',
+                    objectFit: 'cover',
+                    borderRadius: '5%',
+                    margin: '5px',
+                  }}
+                />
+              ))}
+            </div>
+
+            </Button>
+
+            
+          </FormControl>
+
+       {/* </FormControl>
             <Input
               id="file-upload"
               type="file"
