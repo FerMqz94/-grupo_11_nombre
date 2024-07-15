@@ -417,7 +417,20 @@ display: none;
     transform: rotate(340deg);
     /* transform: scaleX(-1.7); */
   }
+    #productos-categoria-tablet-pc {
+      transform: translate(0, 110.5px) !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 500ms ease;
+      border-bottom-right-radius: 2rem;
+      border-bottom-left-radius: 2rem;
+    }
+    #btn-productos-categoria:checked~ #productos-categoria-tablet-pc {
+  opacity: 1;
+  visibility: visible;
+  }
 }
+
 
 @media (min-width: 1024px) {
   .encabezado {
@@ -484,4 +497,33 @@ margin-left: 1%;
     margin: revert;
     font-size: var(--letra-grande);
   }
+  #productos-categoria-tablet-pc {
+    transform: translate(0, 133px) !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+  }
+#btn-productos-categoria:checked~ #productos-categoria-tablet-pc {
+  opacity: 1;
+  visibility: visible;
+  }
+}
+
+#a-productos-categoria-tablet-pc {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 2px;
+  border-radius: 1rem;
+  text-decoration: none !important;
+  color: rgb(121, 121, 121) !important;
+  transition: all 500ms ease;
+}
+
+#a-productos-categoria-tablet-pc:hover {
+  background-color: #f99b7d !important;
+  color: black !important;
+  transition: all 500ms ease;
 }

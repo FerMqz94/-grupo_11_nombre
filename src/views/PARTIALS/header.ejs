@@ -229,7 +229,7 @@
                                                                 <i class="fa-solid fa-cart-shopping"></i>
                                                             </a>
         </div>
-        <div class="redirecciones">
+        <div class="redirecciones" style="border-bottom: solid #f99b7d 2px">
 
             <p class="texto-header"><a href="<%= locals.home ? '#'  : '/' %>" style="color: black">
                 <% if (locals.home)  {%>♦ INICIO</a>
@@ -237,13 +237,24 @@
                     INICIO </a>
                     <% } %>
             </p>
+            <input type="checkbox" id="btn-productos-categoria" style="display: none;">
             <p class="texto-header">
-                    <a href="<%= locals.productos ? '#'  : '/lista/productos' %>" style="color: black">
+                    <label for="btn-productos-categoria"><a style="color: black; cursor: pointer;">
                         <% if (locals.productos)  {%>♦ PRODUCTOS</a>
                         <% } else  {%>
                             PRODUCTOS </a>
-                            <% } %>
+                            <% } %></label>
             </p>
+            <div id="productos-categoria-tablet-pc" style="position: absolute; background-color: #ffefd6; z-index: 10; border-bottom: solid #f99b7d 2px">
+                <ul id="ul-productos-categoria-tablet-pc" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100vw; padding-top: 10px; place-items: center;">
+                    <a href="/lista/productos" id="a-productos-categoria-tablet-pc">TODOS LOS PRODUCTOS</a>
+                    <% locals.categorias.forEach((c, i) => { %>
+                        <% if (i <= 10) { %>
+                            <a href="/productos-categorias/<%= categoryMap[c.id] %>" id="a-productos-categoria-tablet-pc"><%= c.name.toUpperCase()  %></a>
+                        <% } %>
+                    <% }) %>
+                </ul>
+            </div>
             <p class="texto-header">     
                     <a href="<%= locals.contactUs ? '#'  : '/contacto' %>" style="color: black">
                         <% if (locals.contactUs)  {%>♦ CONTACTO</a>
