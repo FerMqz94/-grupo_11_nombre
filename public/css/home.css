@@ -77,7 +77,6 @@
 .card-title-home {
   color:black;
   font-weight: bold;
-  background-color: var(--transparente);
   border-radius: 10px;
   padding: 2px;
   font-size: 70%;
@@ -86,27 +85,27 @@
 
 .card-description-home {
   display: block;
-  background-color: var(--transparente);
+  font-weight: bold;
   border-radius: 10px;
   padding: 2px;
   font-size: 50%;
   margin-bottom: .40rem;
 }
 .card-price-home {
-  background-color: var(--transparente);
-  border-radius: 10px;
+  border-radius: 5px;
   font-weight: bold;
   padding: 2px;
   display: block;
   font-size: 80%;
-  color: var(--verde-azulado);
+  color: var(--negro);
   margin-bottom: .20rem;
 }
-.card-button-home {
+.card-button-home {  
   background-color: var(--transparente);
-  border-radius: 10px;
+  border: 1px solid var(--verde-azulado);
+  border-radius: 5px;
   font-weight: bold;
-  padding: 2px;
+  padding: 5px;
   font-size: 60%;
   color: var(--negro);
   text-decoration: none;
@@ -114,6 +113,10 @@
 
 .card-button-home:hover{
   text-decoration: underline;
+  color: var(--verde-azulado);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  transform: scale(1.1) translateY(-3px); /* Aumenta ligeramente el tamaño y lo desplaza hacia arriba */
+  opacity: 0.9;
 }
 
 .card-article-home:hover .card-data-home {
