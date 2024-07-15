@@ -20,7 +20,7 @@ module.exports = (req, res) => {
    
   
     .then(() => {
-      res.redirect("/");
+      res.redirect("/autenticacion/iniciar");
     });
    
   }else{

@@ -43,5 +43,14 @@
       "password": "$2a$12$X/6ahvhJBfMaeEvWsuXDDuOEAgS1ggD7ZnLtUPjyvP3t6c2f3qLsu",
       "rol": "ADMIN",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 6,
+      "name": "Natalia Vera",
+      "username": "natiV",
+      "email": "nativera@gmail.com",
+      "password": "$2a$12$Fb9duFXL/rChnSHrDkTCse6N0DFKEx0hjz5hwhOoTCMVb1goKgFki",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
    }
 ]
