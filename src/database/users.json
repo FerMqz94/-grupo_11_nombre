@@ -52,5 +52,14 @@
       "password": "$2a$12$Fb9duFXL/rChnSHrDkTCse6N0DFKEx0hjz5hwhOoTCMVb1goKgFki",
       "rol": "REGULAR",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 7,
+      "name": "Nati Vera",
+      "username": "veraN",
+      "email": "veranati@gmail.com",
+      "password": "$2a$12$FUCcK6.4wM6s6X8yPh0Dj.hPFclLANTAeBHhm8UEZveUribEkJmCO",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
    }
 ]

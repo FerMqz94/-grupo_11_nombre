@@ -225,7 +225,7 @@ inputPassword.addEventListener('blur', function () {
             statusInvalid(passwordError, "La contraseña debe tener entre 8 y 16 caracteres", newStyleInputInvalid, '.contrasenia')
             /*displayIconToShowInvalid(iconErrorPasword, iconValidPassword)*/
             break;
-            case !regExPass.test(value):
+        case !regExPass.test(value):
             statusInvalid(passwordError, "La contraseña debe contener al menos una letra minúscula, una mayúscula, un número y un carácter especial", newStyleInputInvalid, '.contrasenia')
           /*  displayIconToShowInvalid(iconErrorPasword, iconValidPassword)*/
             break;
@@ -263,7 +263,7 @@ inputConfirmPassword.addEventListener('blur', function () {
           /*  displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)*/
             break;
             case value !== valueP:
-            statusInvalid(passwordConfirmError, "¡La contraseña no coincide con la anterior! Sigue participando", newStyleInputInvalid, '.contraseniaConfir')
+            statusInvalid(passwordConfirmError, "¡La contraseña no coincide con la anterior!", newStyleInputInvalid, '.contraseniaConfir')
          /*   displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)*/
             break;
             default:
