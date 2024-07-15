@@ -22,7 +22,8 @@ function Products() {
 
     let [products, setProducts] = useState([])
     const [open, setOpen] = useState(false);
-
+     const [productIdToDelete, setProductIdToDelete] = useState(null)
+    const [shouldRefreshProducts, setShouldRefreshProducts] = useState(false);
 
     {/* ----API CONSUMIDA---- */}
     const urlApiProducts = 'http://localhost:3030/api/admin/products'
@@ -77,6 +78,8 @@ function Products() {
     }
 
     function handleButtonDelete(id) {
+
+        window.location = ' http://localhost:5173/eliminar-producto/' + id
 
     }
 
@@ -210,17 +213,33 @@ function Products() {
                 </DialogTitle>
                 <DialogContent>
                     <DialogContentText id="alert-dialog-description">
-                        Estas Seguro que deseas eliminar este producto?
+                        ¡Atención! ¿Deseas eliminar este producto?
                     </DialogContentText>
                 </DialogContent>
-                <DialogActions>
+                <DialogActions style={{margin: 'auto'}}>
                     <Button
                         variant="contained"
                         color="info"
+                        sx={{
+                            backgroundColor: 'var(--verde-azulado-claro)',
+                            color: '#fff',
+                            transition: 'background-color 0.3s',
+                            '&:hover': {
+                              backgroundColor: '#7ed9d0', 
+                            },
+                          }}
                         onClick={handleClose}>Cancelar</Button>
                     <Button
                         variant="contained"
                         color="error"
+                        sx={{
+                            backgroundColor: 'var(--molocoton-oscuro)',
+                            color: '#2d6a4f',
+                            transition: 'background-color 0.3s',
+                            '&:hover': {
+                              backgroundColor: '#e68a62', 
+                            },
+                          }}
                         onClick={handleClose} autoFocus>
                         Confirmar
                     </Button>
