@@ -87,9 +87,9 @@
                 <td class=""><%= p.available ? "🟢" : "🔴" %></td>
                 <td>
                   <div class="btn-group" role="group" aria-label="Basic example">
-                    <a href="/producto-detalle/<%= p.id %>" class="btn acc-btn btn-info d-inline-block info">Info</a>
-                    <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar">Editar</a>
-                   <button class="button"><a href="/admin/eliminar-producto?id=<%= p.id %>&<%=p.name = p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar">Eliminar</a></button>
+                    <a href="/producto-detalle/<%= p.id %>" class="btn acc-btn btn-info d-inline-block info" style="background-color: var(--verde-azulado-claro); margin-left: 5px;">Info</a>
+                    <a href="/admin/editar-productos/<%= p.id %>" class="btn acc-btn btn-warning d-inline-block editar" style="background-color: #ffcd9e; color:#2d6a4f;">Editar</a>
+                   <button class="button"><a href="/admin/eliminar-producto?id=<%= p.id %>&<%=p.name = p.name %>" class="btn acc-btn btn-danger d-inline-block eliminar" style="background-color: #cb6f20;">Eliminar</a></button>
                    <!-- <form action="/admin/eliminar-producto/<%= p.id %>&<%=p.name = p.name %>?_method=DELETE" method="post"
                     enctype="multipart/form-data">
                      <button type="submit" class="">Eliminar</button>  -->

@@ -18,13 +18,13 @@
             <h3 class="titulo-login-inputs">Iniciar sesion</h3>
             <div>
             
-                <input class="<%= locals?.errors?.email ? "input-invalid" : "white-bar" %>"  id="email-login"   type="email" name="email" value="<%= locals?.email %>" placeholder="Correo electrónico">
+                <input class=" input-login <%= locals?.errors?.email ? "input-invalid" : "white-bar" %>"  id="email-login"   type="email" name="email" value="<%= locals?.email %>" placeholder="Correo electrónico">
                 <p  class="text-danger error-email"></p>
             </div>
                     <span class="text-danger" style="font-size: var(--letra-bastante-pequeña);"><%= locals?.errors?.email?.msg%></span>
 
             <div>
-                <input class="<%= locals?.errors?.password ? "input-invalid" : "white-bar" %>" type="password" name="password" value="" placeholder="Contraseña">
+                <input class=" input-login <%= locals?.errors?.password ? "input-invalid" : "white-bar" %>" type="password" name="password" value="" placeholder="Contraseña">
                 <p class="text-danger error-password"></p>
             </div>
             <span class="text-danger" style="font-size: var(--letra-bastante-pequeña);"><%= locals?.errors?.password?.msg%></span>

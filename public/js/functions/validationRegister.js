@@ -10,26 +10,26 @@ window.addEventListener('load', () => {
     let existError = true;
 
     /* ICON ERROR */
-    const iconErrorName = document.querySelector("#icon-name-error");
+/*    const iconErrorName = document.querySelector("#icon-name-error");
     const iconErrorUser = document.querySelector('#icon-username-error');
     const iconErrorEmail = document.querySelector('#icon-email-error');
     const iconErrorPasword = document.querySelector('#icon-password-error');
-    const iconErrorConfirpass = document.querySelector('#icon-confirPass-error')
+    const iconErrorConfirpass = document.querySelector('#icon-confirPass-error')*/
     
     /* ICON VALID */
-    const iconValidName = document.querySelector("#icon-name-valid");
+ /*   const iconValidName = document.querySelector("#icon-name-valid");
     const iconValidUser = document.querySelector('#icon-username-valid');
     const iconValidEmail = document.querySelector('#icon-email-valid');
     const iconValidPassword = document.querySelector('#icon-password-valid');
-    const iconValidConfirPassword = document.querySelector('#icon-confirPass-valid')
+    const iconValidConfirPassword = document.querySelector('#icon-confirPass-valid')*/
 
     /* FUNCTION FOR INITIAL DISPLAY OF THE ICONS*/
-    const initialDisplay = (elementIcon) => {
+    /*const initialDisplay = (elementIcon) => {
         elementIcon.style.display = "none";
-    }
+    }*/
 
     /*EXECUTION OF INITIAL DISPLAY FUNCTION FOR BOTH ICONS ERROR AND INCONS VALID*/
-    initialDisplay(iconErrorName)
+    /*initialDisplay(iconErrorName)
     initialDisplay(iconValidName)
     initialDisplay(iconErrorUser)
     initialDisplay(iconValidUser)
@@ -38,11 +38,11 @@ window.addEventListener('load', () => {
     initialDisplay(iconErrorPasword)
     initialDisplay(iconValidPassword)
     initialDisplay(iconErrorConfirpass)
-    initialDisplay(iconValidConfirPassword)
+    initialDisplay(iconValidConfirPassword)*/
 
 
     /* FUNCTION TO STYLING ERROR INPUTS'S ICONS */
-    const displayIconToShowInvalid = (elementIcon, elementIconToHideValid) => {
+    /*const displayIconToShowInvalid = (elementIcon, elementIconToHideValid) => {
         elementIcon.style.display = "block";
         elementIcon.style.position = "absolute";
         elementIcon.style.bottom = "40px"
@@ -50,17 +50,17 @@ window.addEventListener('load', () => {
         elementIcon.style.color = "#bfd0cb";
         elementIcon.style.fontSize = "22px";
         elementIconToHideValid.style.display = "none"
-    }
+    }*/
 
     /* FUNCTION TO STYLING VALID INPUTS'S ICONS */
-    const displayIconToShowValid = (elementIcon, elementIconToHideError) => {
+    /*const displayIconToShowValid = (elementIcon, elementIconToHideError) => {
         elementIcon.style.display = "block";
         elementIcon.style.position = "absolute";
         elementIcon.style.bottom = "40px"
         elementIcon.style.right = "195px"
         elementIcon.style.color = "var(--verde-azulado-claro)";
         elementIconToHideError.style.display ="none"
-    }
+    }*/
 
 
     //FUNCTION FOR BOTH CASES, VALID INPUTS AND INVALID INPUTS
@@ -69,12 +69,19 @@ window.addEventListener('load', () => {
     const newStyleInputInvalid = (classInput) => {
     document.querySelector(classInput).style.border = "2px solid var(--molocoton-oscuro)"
     document.querySelector(classInput).style.backgroundColor ="white";
-    
+   
+   /* document.querySelector(classInput).classInput.remove('is-valid')*/
     }
     const statusInvalid = (elementErr, msgErr, newStyleInputInvalid, classInput) => {
     elementErr.innerHTML = msgErr;
     newStyleInputInvalid(classInput);
     existError = true;
+        if(existError){
+            document.querySelector(classInput).classList.add('is-invalid')
+        } else {
+            document.querySelector(classInput).classList.remove('is-invalid')
+            document.querySelector(classInput).classList.add('is-valid')
+        }
     }
 
     /* VALID */
@@ -82,12 +89,18 @@ window.addEventListener('load', () => {
     const newStyleInputValid = (classInput) => {
         document.querySelector(classInput).style.border = "none"
         document.querySelector(classInput).style.backgroundColor = "rgba(232, 240, 254, 1)"
-
+     /*   document.querySelector(classInput).classList.toggle("is-valid")*/
+       /* document.querySelector(classInput).classInput.remove("is-invalid")*/
     }
     const statusValid = (elementErr, newStyleInputValid, classInput) => {
         elementErr.innerHTML = null;
         newStyleInputValid(classInput)
         existError = false;
+
+        if(existError === false){
+            document.querySelector(classInput).classList.add('is-valid')
+            document.querySelector(classInput).classList.remove('is-invalid')
+        }
     }
 
 /* --------------------------VALIDATIONS-------------------------------- */
@@ -100,19 +113,19 @@ window.addEventListener('load', () => {
         switch (true) {
             case !value.length:
                 statusInvalid(nameError, "El nombre es requerido", newStyleInputInvalid, '.nombreApellido')
-                displayIconToShowInvalid(iconErrorName, iconValidName)
+                /*displayIconToShowInvalid(iconErrorName, iconValidName)*/
                 break;
             case !nameRegex.test(value):
                 statusInvalid(nameError, "Los nombres y apellidos deben ser carácteres alfanuméricos", newStyleInputInvalid, '.nombreApellido')
-                displayIconToShowInvalid(iconErrorName, iconValidName)
+               /* displayIconToShowInvalid(iconErrorName, iconValidName)*/
                 break;
             case value.length < 4 || value.length > 20:
                 statusInvalid(nameError, "Debe tener entre 4 y 20 caracteres", newStyleInputInvalid, '.nombreApellido')
-                displayIconToShowInvalid(iconErrorName, iconValidName)
+               /* displayIconToShowInvalid(iconErrorName, iconValidName)*/
             break;
             default:
                 statusValid(nameError, newStyleInputValid, '.nombreApellido')
-                displayIconToShowValid(iconValidName, iconErrorName)
+              /*  displayIconToShowValid(iconValidName, iconErrorName)*/
                 break;
         }
 
@@ -135,19 +148,19 @@ inputUsername.addEventListener('blur', function () {
     switch (true) {
         case !value.length:
             statusInvalid(usernameError, "Nombre de usuario requerido",  newStyleInputInvalid, '.nombreDeCuenta');
-            displayIconToShowInvalid(iconErrorUser, iconValidUser)
+          /*  displayIconToShowInvalid(iconErrorUser, iconValidUser)*/
             break;
         case value.length < 4 || value.length > 20:
             statusInvalid(usernameError, "Debe tener entre 4 y 20 caracteres" , newStyleInputInvalid, '.nombreDeCuenta');
-            displayIconToShowInvalid(iconErrorUser, iconValidUser);
+           /* displayIconToShowInvalid(iconErrorUser, iconValidUser);*/
             break;
         case !usernameRegex.test(value):
             statusInvalid(usernameError, "El nombre de usuari@ debe ser alfanumérico" , newStyleInputInvalid, '.nombreDeCuenta');
-            displayIconToShowInvalid(iconErrorUser, iconValidUser);
+           /* displayIconToShowInvalid(iconErrorUser, iconValidUser);*/
              break;
         default:
             statusValid(usernameError, newStyleInputValid, '.nombreDeCuenta');
-            displayIconToShowValid(iconValidUser, iconErrorUser)
+           /* displayIconToShowValid(iconValidUser, iconErrorUser)*/
             break;
     }
     
@@ -173,15 +186,15 @@ inputEmail.addEventListener('blur', function () {
     switch (true) {
         case !value.length:
             statusInvalid(EmailError, "El email es requerido", newStyleInputInvalid, '.email')
-            displayIconToShowInvalid(iconErrorEmail, iconValidEmail)
+          /*  displayIconToShowInvalid(iconErrorEmail, iconValidEmail)*/
             break;
         case !emailRegex.test(value):
             statusInvalid(EmailError, "Formato de email inválido", newStyleInputInvalid, '.email')
-            displayIconToShowInvalid(iconErrorEmail, iconValidEmail)
+           /* displayIconToShowInvalid(iconErrorEmail, iconValidEmail)*/
             break;
         default:
             statusValid(EmailError, newStyleInputValid, '.email');
-            displayIconToShowValid(iconValidEmail, iconErrorEmail)
+           /* displayIconToShowValid(iconValidEmail, iconErrorEmail)*/
             break;
     }
     
@@ -206,19 +219,19 @@ inputPassword.addEventListener('blur', function () {
     switch (true) {
         case !value.length:
             statusInvalid(passwordError, "Contraseña requerida", newStyleInputInvalid, '.contrasenia')
-            displayIconToShowInvalid(iconErrorPasword, iconValidPassword)
+           /* displayIconToShowInvalid(iconErrorPasword, iconValidPassword)*/
             break;
         case value.length < 8 || value.length > 16:
             statusInvalid(passwordError, "La contraseña debe tener entre 8 y 16 caracteres", newStyleInputInvalid, '.contrasenia')
-            displayIconToShowInvalid(iconErrorPasword, iconValidPassword)
+            /*displayIconToShowInvalid(iconErrorPasword, iconValidPassword)*/
             break;
             case !regExPass.test(value):
             statusInvalid(passwordError, "La contraseña debe contener al menos una letra minúscula, una mayúscula, un número y un carácter especial", newStyleInputInvalid, '.contrasenia')
-            displayIconToShowInvalid(iconErrorPasword, iconValidPassword)
+          /*  displayIconToShowInvalid(iconErrorPasword, iconValidPassword)*/
             break;
         default:
             statusValid(passwordError, newStyleInputValid, '.contrasenia')
-            displayIconToShowValid(iconValidPassword, iconErrorPasword)
+           /* displayIconToShowValid(iconValidPassword, iconErrorPasword)*/
             break
     }
 })
@@ -243,28 +256,28 @@ inputConfirmPassword.addEventListener('blur', function () {
     switch (true) {
         case !value.length:
             statusInvalid(passwordConfirmError, "La confirmación de la constaseña es requerida", newStyleInputInvalid, '.contraseniaConfir')
-            displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)
+         /*   displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)*/
             break;
         case value.length < 8 || value.length > 16:
             statusInvalid(passwordConfirmError, "La contraseña debe tener entre 8 y 16 caracteres", newStyleInputInvalid, '.contraseniaConfir')
-            displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)
+          /*  displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)*/
             break;
             case value !== valueP:
             statusInvalid(passwordConfirmError, "¡La contraseña no coincide con la anterior! Sigue participando", newStyleInputInvalid, '.contraseniaConfir')
-            displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)
+         /*   displayIconToShowInvalid(iconErrorConfirpass, iconValidConfirPassword)*/
             break;
             default:
             statusValid(passwordConfirmError, newStyleInputValid, '.contraseniaConfir')
-            displayIconToShowValid(iconValidConfirPassword, iconErrorConfirpass)
+          /*  displayIconToShowValid(iconValidConfirPassword, iconErrorConfirpass)*/
             break;
     }
     
 })
 
-inputConfirmPassword.addEventListener("focus", function () {
+/*inputConfirmPassword.addEventListener("focus", function () {
     initialDisplay(iconErrorConfirpass)
     passwordConfirmError.innerHTML = null;
-});
+});*/
 
 /* END VALIDATION CONFIRMPASSWORD */
 

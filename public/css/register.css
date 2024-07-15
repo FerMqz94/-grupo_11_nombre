@@ -1,802 +1,171 @@
 main.registro {
   font-style: var(--fuente-general);
+  background: #f9f2e8; /* Color de fondo actualizado */
+  padding: 10px;
 }
 
 main.registro section.section-inputs-registro {
-  padding: 20px 20px;
-  text-align: center;
-  margin: 30px auto;
+  padding: 20px;
+  margin: 15px auto;
   width: 90%;
-  border-radius: 5px;
-  /* border: 1px solid var(--gris-claro); */
-  box-shadow: 0 3px 10px var(--gris-claro);
-  /* display: flex; */
-  /* FLEX-DIRECTION: column; */
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  background: white;
 }
 
 main.registro section.section-inputs-registro h3.titulo-registro-inputs {
-  /* font-size: var(--letra-grande); */
-  font-size: var(--letra-favMobile);
-  margin: 30px 0 40px 0;
+  font-size: 1.2em; 
+  margin: 20px 0;
+  text-align: center;
   background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
 }
 
-
-/*------------------NOMBRE Y APELLIDO----------------------------*/
-
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreApellidoRegister {
-  position: relative; /*nuevo*/
+div.nombreApellidoRegister,
+div.nombreDelaCuentaRegister,
+div.emailregistro,
+div.contraseniaRegister,
+div.contraseniaConfirRegister {
   display: flex;
-  margin: 20px;
   flex-flow: column;
   align-items: center;
-}
-
-/* main.registro */
-  div.nombreApellidoRegister
-  span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-
-
-/*div {
-  background-color: #b4dad9;;
-}*/
-
-/* main.registro */
-  div.nombreApellidoRegister
-  span.error-name {
-  position: absolute;/*nuevo*/
-  font-size: var(--letra-bastante-pequeña); /*nuevo*/
-  color: #dd957e;/*nuevo*/
- /* left: 185px;*/
-  bottom: 65px;/*nuevo*/
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreApellidoRegister
-  input.nombreApellido {
-    font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
-    padding: 6px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 65%;
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreApellidoRegister
-  input.nombreApellido::placeholder {
-  /* font-size: var(--letra-mediana);
-  padding-left: 5px; */
-}
-
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreApellidoRegister
-  input.nombreApellido:focus {
-  outline: none;
-  border: 2px solid var(--molocoton-oscuro);
-  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-}
-
-
-
-
-/*--------------------NOMBRE DE USUARIO---------------------------*/
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreDelaCuentaRegister {
-  display: flex;
   margin: 20px 0;
-  flex-flow: column;
-  align-items: center;
-  position: relative; /*nuevo*/
 }
 
-/* main.registro */
-  div.nombreDelaCuentaRegister
-  span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-
-
-/* main.registro */
-  div.nombreDelaCuentaRegister
-  span.error-username {
-    position: absolute;/*nuevo*/
-    font-size: var(--letra-bastante-pequeña); /*nuevo*/
-    color: #dd957e;/*nuevo*/
-    /* left: 185px;*/
-    bottom: 70px;/*nuevo*/
+main.registro input {
+  font-size: var(--letra-pequeña);
+  border: 1px solid var(--verde-azulado-claro);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  width: calc(100% - 24px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreDelaCuentaRegister
-  input.nombreDeCuenta {
-    font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 65%;
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreDelaCuentaRegister
-  input.nombreDeCuenta:focus {
+main.registro input:focus {
   outline: none;
   border: 2px solid var(--molocoton-oscuro);
-  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.nombreDelaCuentaRegister
-  input.nombreDeCuenta::placeholder {
-  /* font-size: var(--letra-mediana);
-  padding-left: 5px; */
+button.boton-register {
+  width: 200px;
+  height: 35px;
+  border: none;
+  background-color: var(--verde-azulado-claro);
+  color: var(--blanco);
+  border-radius: 5px;
+  font-size: var(--letra-mediana);
+  letter-spacing: 1px;
+  margin: 30px 0;
+
+  /* --- Cambio: Añadido para transiciones --- */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
 }
 
-/*----------------EMAIL---------------------*/
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.emailregistro {
-  /* margin: 0 0 20px 0; */
-  display: flex;
-  margin: 20px 0;
-  flex-flow: column;
-  align-items: center;
-  position: relative;/*nuevo*/
+button.boton-register:hover {
+  background-color: #369a8a; /* Color más oscuro al pasar el ratón */
+  color: var(--blanco);
+  transform: scale(1.05);
 }
 
-main.registro
-  div.emailregistro
-  span.text-danger {
-  font-size: var(--letra-mas-pequeña);
+button.boton-register:focus {
+  outline: none; 
 }
 
-
-
-/* main.registro */
-  div.emailregistro
-  span.error-email {
-    position: absolute;/*nuevo*/
-    font-size: var(--letra-bastante-pequeña); /*nuevo*/
-    color: #dd957e;/*nuevo*/
-   /* left: 185px;*/
-    bottom: 70px;/*nuevo*/
+button.boton-register:disabled {
+  opacity: 0.7; 
+  cursor: not-allowed; 
 }
 
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.emailregistro
-  input.email {
-    font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 65%;
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.emailregistro
-  input.email:focus {
-  outline: none;
-  border: 2px solid var(--molocoton-oscuro);
-  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.emailregistro
-  input.email::placeholder {
-  /* font-size: var(--letra-mediana);
-  padding-left: 5px; */
-}
-
-/*--------------CONTRASEÑA---------------------*/
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaRegister {
-  /* margin: 0 0 20px 0; */
-  display: flex;
-  /* margin: 20px 0; */
-  flex-flow: column;
-  align-items: center;
-  position: relative; /*nuevo*/
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaRegister
-  span.text-danger {
-  font-size: var(--letra-mas-pequeña);
-}
-
-/* main.registro */
-  div.contraseniaRegister
-  span.error-password {
-    position: absolute;/*nuevo*/
-    font-size: var(--letra-bastante-pequeña); /*nuevo*/
-    color: #dd957e;/*nuevo*/
-   /* left: 185px;*/
-    bottom: 70px;/*nuevo*/
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaRegister
-  input.contrasenia {
-    font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 65%;
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaRegister
-  input.contrasenia:focus {
-  outline: none;
-  border: 2px solid var(--molocoton-oscuro);
-  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaRegister
-  input.contrasenia::placeholder {
-  /* font-size: var(--letra-mediana);
-  padding-left: 5px; */
-}
-
-/*---------------------------CONFIRMACIÓN DE CONTRASEÑA-------------------------------------*/
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaConfirRegister {
-  /* margin: 0 0 20px 0; */
-  display: flex;
-  margin: 20px 0;
-  flex-flow: column;
-  align-items: center;
-  position: relative; /*nuevo*/
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaConfirRegister
-  span.text-danger {
-  font-size: var(--letra-mas-pequeña);
-}
-
-/* main.registro */
-  div.contraseniaConfirRegister
-  span.error-passwordConfirm {
-    position: absolute;/*nuevo*/
-    font-size: var(--letra-bastante-pequeña); /*nuevo*/
-    color: #dd957e;/*nuevo*/
-   /* left: 185px;*/
-    bottom: 70px;/*nuevo*/
-}
-
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaConfirRegister
-  input.contraseniaConfir {
-    font-size: var(--letra-mediana);
-    border: 1px solid var(--verde-azulado-claro);
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
-    width: 65%;
-}
-
-/* main.registro */
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaConfirRegister
-  input.contraseniaConfir:focus {
-  outline: none;
-  border: 2px solid var(--molocoton-oscuro);
-  box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contraseniaConfirRegister
-  input.contraseniaConfir::placeholder {
-  /* font-size: var(--letra-mediana);
-  padding-left: 5px; */
-}
-
-/*----------------BOTÓN ENVIAR-----------------------*/
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  div.contenedor-boton-register {
-  /* margin: 0 0 20px 0; */
-
-  display: flex;
-
-  margin: 40px 0 0 0;
-
-  flex-flow: column;
-
-  align-items: center;
-
-  /*margin-top: 20px;*/
-
-  padding-bottom: 20px;
-
-  /* border-bottom: 1.5px dashed var(--gris-claro); */
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  button.boton-register {
-    width: 200px;
-    height: 35px;
-    border: none;
-    background-color: var(--verde-azulado-claro);
-    color: var(--blanco);
-    border-radius: 5px;
-    font-size: var(--letra-mediana);
-    letter-spacing: 1px;
-    margin: 30px 0px;
-}
-
-main.registro
-  section.section-inputs-registro
-  form.form-inputs-registro
-  button.boton-register:hover {
-  background-color: var(--gris-claro);
-  color: var(--gris-terciopelo);
-}
-
-/*-----------------REDES SOCIALES------------------------*/
-
-article.article-redes-sociales-register {
-  /* margin: 50px 20px 70px 20px; */
-  text-align: center;
-  /* margin: 30px 0 30px 30px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-  /* font-size: var(--letra-mediana); */
-
-  margin-bottom: 30px;
-
-  color: var(--gris-terciopelo);
-}
-
-article.article-redes-sociales-register div.imagenes-redes-sociales {
-  /* margin-left: 15px; */
-  display: flex;
-  width: 60%;
-  /* display: flex; */
-  /* width: 95%; */
-  justify-content: space-between;
-}
-
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-facebook {
-  font-size: 60px;
+article.article-redes-sociales-register div.imagenes-redes-sociales i {
+  font-size: 50px;
   color: var(--color-facebook);
-  transition: color 1s, transform 2s;
+  transition: color 0.3s, transform 0.3s;
 }
 
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-facebook:hover {
-  color: var(--gris-claro);
-  transform: perspective(40cm) rotateX(-20deg) rotateY(40deg);
+article.article-redes-sociales-register div.imagenes-redes-sociales i:hover {
+  transform: scale(1.1);
 }
 
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-google {
-  font-size: var(--letra-titular-mayor);
-
-  color: var(--blanco);
-
-  background-color: var(--color-google);
-
-  padding: 5px;
-
-  border-radius: 50%;
-
-  transition: color 1s, transform 2s;
-}
-
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-google:hover {
-  background-color: var(--gris-claro);
-  transform: perspective(40cm) rotateX(20deg) rotateY(40deg);
-}
-
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-twitter {
-  font-size: var(--letra-titular-mayor);
-
-  color: var(--blanco);
-
-  background-color: var(--color-twitter);
-
-  padding: 5px;
-
-  border-radius: 50%;
-
-  transition: color 1s, transform 2.5s;
-}
-
-article.article-redes-sociales-register
-  div.imagenes-redes-sociales
-  i.fa-twitter:hover {
-  background-color: var(--gris-claro);
-  transform: rotate(180deg);
-}
-
-/*---------------------MEDIA QUERY TABLET----------------------------------*/
-
-/*------------------------------------------------------------------------*/
-
+/* ---------MEDIA QUERY TABLET 768 PX--------------- */
 @media (min-width: 768px) {
-  main.registro section.section-inputs-registro h3.titulo-registro-inputs {
-    font-size: var(--letra-favMobile);
-    margin: 60px 0 60px 0;
+
+  main.registro {
+    font-style: var(--fuente-general);
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 0;
   }
 
-  /*---------------------NOMBRE Y APELLIDO------------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister {
-    margin: 40px 0;
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    span.text-danger {
-    /* font-size: var(--letra-pequeña); */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido {
-    /* width: 600px;
-    height: 50px; */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido::placeholder {
-    margin-left: 10px;
-  }
-
-  /*---------NOMBRE DE USUARIO----------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister {
-    margin: 40px 0;
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    span.text-danger {
-    font-size: var(--letra-pequeña);
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta {
-    /* width: 600px;
-    height: 50px; */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta::placeholder {
-    margin-left: 10px;
-  }
-
-  /*----------------------EMAIL--------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro {
-    margin: 40px 0;
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    span.text-danger {
-    font-size: var(--letra-pequeña);
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email {
-    /* width: 600px;
-
-    height: 50px; */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email::placeholder {
-    margin-left: 10px;
-  }
-
-  /*----------------CONTRASEÑA-------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    span.text-danger {
-    font-size: var(--letra-pequeña);
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia {
-    /* width: 600px; */
-    /* height: 50px; */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia::placeholder {
-    margin-left: 10px;
-  }
-
-  /*-----------------------CONFIRMAR CONTRASEÑA--------------------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister {
-    margin: 40px 0;
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    span.text-danger {
-    font-size: var(--letra-pequeña);
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir {
-    /* width: 600px; */
-    /* height: 50px; */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir::placeholder {
-    margin-left: 10px;
-  }
-
-  /*-----------------------BOTÓN ENVIAR-------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contenedor-boton-register {
-    margin-top: 60px;
-
-    padding-bottom: 40px;
-
-    /* border-bottom: 2px dashed var(--gris-claro); */
-  }
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    button.boton-register {
-    /* width: 600px; */
-    /* height: 50px; */
-    /* font-size: var(--letra-grande); */
-  }
-
-  /*--------------REGISTRARSE CON REDES SOCIALES------------------*/
-
-  article.article-redes-sociales-register {
-    margin-top: 70px;
-  }
-
-  article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-    font-size: var(--letra-grande);
-
-    margin-bottom: 50px;
-
-    color: var(--gris-terciopelo);
-  }
-
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-facebook {
-    font-size: 90px;
-  }
-
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-google {
-    font-size: 80px;
-  }
-
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-twitter {
-    font-size: 80px;
-  }
-}
-
-/*----------------------------MEDIA QUERY DESKTOP--------------------------------------*/
-
-@media (min-width: 1024px) {
   main.registro section.section-inputs-registro {
     width: 80%;
-    border-radius: 10px;
+    padding: 30px;
+    margin: 40px auto; /* Aumentar margen superior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 3px 10px var(--gris-claro);
   }
 
   main.registro section.section-inputs-registro h3.titulo-registro-inputs {
-    font-size: var(--letra-mayor-tamaño);
-    margin: 100x 0 80px 0;
+    font-size: 1.5em; /* Corrected selector */
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido::placeholder {
-    /* padding-left: 20px; */
+  main.registro div {
+    margin: 5px 0; /* Reducir separación entre inputs */
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta::placeholder {
-    /* padding-left: 20px; */
+  main.registro input {
+    padding: 15px;
+    font-size: var(--letra-media);
+    background: #fff; /* Fondo blanco para los inputs */
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email::placeholder {
-    /* padding-left: 20px; */
+  button.boton-register {
+    height: 50px;
+    font-size: 1.2em;
+  }
+}
+
+/* -----------MEDIA QUERY 1024 ESCRITORIO------------------- */
+@media (min-width: 1024px) {
+  main.registro {
+    font-style: var(--fuente-general);
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 0;
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia::placeholder {
-    /* padding-left: 20px; */
+  main.registro section.section-inputs-registro {
+    width: 90%; /* Ajustar el ancho de la card */
+    max-width: 600px;
+    padding: 30px;
+    margin: 50px auto; /* Aumentar margen superior */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 3px 10px var(--gris-claro);
+    margin-top: 60px;
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir::placeholder {
-    /* padding-left: 20px; */
+  main.registro section.section-inputs-registro h3.titulo-registro-inputs {
+    font-size: 1.4rem; /* Aumentar tamaño del título */
   }
 
-  /*------------------------------BOTÓN ENVIAR--------------------------------------*/
-
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contenedor-boton-register {
-    padding-bottom: 60px;
+  main.registro div {
+    margin: 8px 0; /* Separación entre inputs */
   }
 
-  main.registro
-    section.section-inputs-registro
-    form.form-inputs-registro
-    button.boton-register:hover {
-    padding-left: 20px;
+  main.registro input {
+    padding: 15px;
+    font-size: var(--letra-media);
+    background: #fff; /* Fondo blanco para los inputs */
+    width: 70%;
   }
 
-  /*---------------REDES SOCIALES----------------------------*/
-
-  article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-    font-size: var(--letra-favMobile);
-
-    margin-bottom: 80px;
-
-    color: var(--gris-terciopelo);
-  }
-
-  article.article-redes-sociales-register div.imagenes-redes-sociales {
-    margin: auto;
-    width: 40%;
+  button.boton-register {
+    height: 50px;
+    font-size: 1.3em; /* Aumentar tamaño de fuente del botón */
   }
 }

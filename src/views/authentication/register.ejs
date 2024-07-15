@@ -16,37 +16,33 @@
                     <h3 class="titulo-registro-inputs">Registrate en nuestra página...</h3>
                     <form class="form-inputs-registro validation-form-register" action="/autenticacion/registrar"
                         method="POST">
+                        
 
                         <!--------NOMBRE Y APELLIDO----------->
 
-                        <div class="nombreApellidoRegister">
+                        <div class="nombreApellidoRegister form-group">
                             <label for="nombreApellido" class=""></label>
-                            <span class="error-name">
+                            <span class="error-name text-danger" style="font-size: 15px;">
                                 <%= errors?.name?.msg %>
                             </span>
                             <input type="text" id="nombreApellido" name="name"
-                                class="nombreApellido input-invalid field-required"
+                                class="nombreApellido input-invalid field-required form-control"
                                 value="<%= locals.old && old.name ? old.name: null %>"
-                                placeholder="Nombre y apellido"><i class="fa-solid fa-plant-wilt"
-                                id="icon-name-error"></i><i class="fa-solid fa-seedling" id="icon-name-valid"></i>
-
+                                placeholder="Nombre y apellido">
                             <span class="text-danger">&nbsp;</span>
-                
-
                         </div>
+
 
                         <!--------NOMBRE DE USUARIO----------->
 
-                        <div class="nombreDelaCuentaRegister">
+                        <div class="nombreDelaCuentaRegister form-group">
                             <label for="nombreDeCuenta"></label>
-                            <span class="error-username">
+                            <span class="error-username text-danger" style="font-size: 15px;">
                                 <%= errors?.username?.msg %>
                             </span>
-                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta field-required"
+                            <input type="text" id="nombreDeCuenta" name="username" class="nombreDeCuenta field-required form-control"
                                 value="<%= locals.old && old.username ? old.username: null %>"
-                                placeholder="Nombre de usuari@..."><i class="fa-solid fa-plant-wilt"
-                                id="icon-username-error"></i><i class="fa-solid fa-seedling"
-                                id="icon-username-valid"></i>
+                                placeholder="Nombre de usuari@...">
 
                             <span class="text-danger">&nbsp;</span>
                         
@@ -54,16 +50,14 @@
 
                         <!-------EMAIL DE REGISTRO------->
 
-                        <div class="emailregistro">
+                        <div class="emailregistro form-group">
                             <label for="email"></label>
-                            <span class="error-email">
+                            <span class="error-email text-danger" style="font-size: 15px;">
                                 <%= errors?.email?.msg %>
                             </span>
-                            <input type="email" id="email" name="email" class="email field-required"
+                            <input type="email" id="email" name="email" class="email field-required form-control"
                                 value="<%= locals.old && old.email ? old.email: null %>"
-                                placeholder="Dirección de correo electrónico"><i class="fa-solid fa-plant-wilt"
-                                id="icon-email-error"></i><i class="fa-solid fa-seedling" id="icon-email-valid"></i>
-                            
+                                placeholder="Dirección de correo electrónico">
                                 <span class="text-danger">&nbsp;</span>
                             
                         </div>
@@ -79,17 +73,15 @@
                             <% } %>
                                 <!---CONTRASEÑA-->
 
-                                <div class="contraseniaRegister">
+                                <div class="contraseniaRegister form-group">
                                     <label for="contrasenia"></label>
-                                    <span class="error-password">
+                                    <span class="error-password text-danger" style="font-size: 15px;">
                                         <%= errors?.password?.msg %>
                                     </span>
                                     <input type="password" id="contrasenia" name="password"
-                                        class="contrasenia field-required"
+                                        class="contrasenia field-required form-control"
                                         value="<%= locals.old && old.password ? old.password: null %>"
-                                        placeholder="Contraseña"><i class="fa-solid fa-plant-wilt"
-                                        id="icon-password-error"></i><i class="fa-solid fa-seedling"
-                                        id="icon-password-valid"></i>
+                                        placeholder="Contraseña">
 
                                     <span class="text-danger">&nbsp;</span>
                                     
@@ -99,16 +91,14 @@
 
                                 <!---CONFIRMACIÓN CONTRASEÑA-->
 
-                                <div class="contraseniaConfirRegister">
+                                <div class="contraseniaConfirRegister form-group">
                                     <label for="contraseniaConfir"></label>
-                                    <span class="error-passwordConfirm">
+                                    <span class="error-passwordConfirm text-danger" style="font-size: 15px;">
                                         <%= errors?.passwordConfirm?.msg %>
                                     </span>
                                     <input type="password" id="contraseniaConfir" name="passwordConfirm"
                                         value="<%= locals.old && old.passwordConfirm ? old.passwordConfirm: null %>"
-                                        class="contraseniaConfir field-required" placeholder="Confirmar contraseña"><i
-                                        class="fa-solid fa-plant-wilt" id="icon-confirPass-error"></i><i
-                                        class="fa-solid fa-seedling" id="icon-confirPass-valid"></i>
+                                        class="contraseniaConfir field-required form-control" placeholder="Confirmar contraseña">
                                     
                                     
                                         <span class="text-danger">&nbsp;</span>
@@ -120,7 +110,7 @@
                                     class="titulo-registro-inputs invalid-form"></h3>
 
                                 <!---BOTÓN ENVIAR-->
-                                <div class="contenedor-boton-register">
+                                <div class="contenedor-boton-register text-center">
                                     <button type="submit" class="boton-register">ENVIAR</button>
                                 </div>
 

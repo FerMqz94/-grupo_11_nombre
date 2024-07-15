@@ -34,5 +34,14 @@
       "password": "$2a$12$xQfuA.KwnNLhrjw1N39uYO64DKgZ2MtPCS3LGacAMJYxIKkzLSG5K",
       "rol": "ADMIN",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 5,
+      "name": "Paola M Vera",
+      "username": "pmnvee",
+      "email": "pmvee@gmail.com",
+      "password": "$2a$12$X/6ahvhJBfMaeEvWsuXDDuOEAgS1ggD7ZnLtUPjyvP3t6c2f3qLsu",
+      "rol": "ADMIN",
+      "avatar": "default-avatar.jpg"
    }
 ]
