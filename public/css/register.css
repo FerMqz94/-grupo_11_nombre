@@ -82,7 +82,7 @@ button.boton-register:disabled {
   cursor: not-allowed; 
 }
 
-article.article-redes-sociales-register div.imagenes-redes-sociales i {
+/*article.article-redes-sociales-register div.imagenes-redes-sociales i {
   font-size: 50px;
   color: var(--color-facebook);
   transition: color 0.3s, transform 0.3s;
@@ -90,7 +90,45 @@ article.article-redes-sociales-register div.imagenes-redes-sociales i {
 
 article.article-redes-sociales-register div.imagenes-redes-sociales i:hover {
   transform: scale(1.1);
+}*/
+
+article.article-redes-sociales-register {
+  margin: 20px auto;
+  padding: 15px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Ancho máximo reducido */
 }
+
+h3.redes-sociales-register-titulo {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: var(--verde-azulado-claro);
+  font-weight: bold;
+}
+
+.imagenes-redes-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+.imagenes-redes-sociales a {
+  margin: 0 8px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.imagenes-redes-sociales a i {
+  font-size: 28px; /* Tamaño de iconos ajustado */
+  color: #6c757d;
+}
+
+.imagenes-redes-sociales a:hover {
+  transform: scale(1.1);
+  color: #369a8a;
+}
+
 
 /* ---------MEDIA QUERY TABLET 768 PX--------------- */
 @media (min-width: 768px) {
