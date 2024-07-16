@@ -1,769 +1,157 @@
+/* Estilos Generales */
 main.perfil-usuario {
-    font-style: var(--fuente-general);
+  font-style: var(--fuente-general);
+  background: #f9f2e8; /* Color de fondo */
+  padding: 10px;
+}
+
+main.perfil-usuario section.section-inputs-registro {
+  padding: 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+main.perfil-usuario section.section-inputs-registro h3.titulo-registro-inputs {
+  font-size: 1.2em; 
+  margin: 20px 0;
+  text-align: center;
+  background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Contenedores de Inputs */
+div.nombreApellidoRegister,
+div.nombreDelaCuentaRegister,
+div.emailregistro {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Estilos de Inputs */
+main.perfil-usuario input {
+  font-size: var(--letra-pequeña);
+  border: 1px solid var(--verde-azulado-claro);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 10px 0;
+  width: calc(100% - 24px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+}
+
+main.perfil-usuario input:focus {
+  outline: none;
+  border: 2px solid var(--molocoton-oscuro);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor-boton-register {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  margin-top: 20px; /* Espacio superior opcional */
+}
+
+
+
+/* Estilos de Botones */
+button.boton-register {
+   /* Espacio horizontal entre los botones */
+  width: 200px;
+  height: 35px;
+  border: none;
+  background-color: var(--verde-azulado-claro);
+  color: var(--blanco);
+  border-radius: 5px;
+  font-size: var(--letra-mediana);
+  letter-spacing: 1px;
+  margin: 30px 10px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+}
+
+button.boton-register:hover {
+  background-color: #369a8a; /* Color más oscuro al pasar el ratón */
+  color: var(--blanco);
+  transform: scale(1.05);
+}
+
+button.boton-register:focus {
+  outline: none; 
+}
+
+button.boton-register:disabled {
+  opacity: 0.7; 
+  cursor: not-allowed; 
+}
+
+/* Estilos para Errores */
+span.error-name,
+span.error-username,
+span.error-email {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  main.perfil-usuario {
+    padding: 10px;
+    background-color: white;
   }
-  
+
   main.perfil-usuario section.section-inputs-registro {
-    padding: 20px 20px;
-    text-align: center;
-    margin: 30px auto;
-    width: 90%;
-    border-radius: 5px;
-    /* border: 1px solid var(--gris-claro); */
-    box-shadow: 0 3px 10px var(--gris-claro);
-    /* display: flex; */
-    /* FLEX-DIRECTION: column; */
+    width: 80%;
+    padding: 30px;
+    margin: 40px auto;
   }
-  
+
   main.perfil-usuario section.section-inputs-registro h3.titulo-registro-inputs {
-    /* font-size: var(--letra-grande); */
-    font-size: var(--letra-favMobile);
-    margin: 30px 0 40px 0;
-    background: linear-gradient(var(--verde-azulado-claro), var(--molocoton-oscuro));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  
+    font-size: 1.5em;
   }
-  
-  /*------------------NOMBRE Y APELLIDO----------------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister {
-    display: flex;
-    margin: 20px 0;
-    flex-flow: column;
-    align-items: center;
+
+  main.perfil-usuario input {
+    padding: 15px;
+    font-size: var(--letra-media);
   }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    span.text-danger {
-    /* font-size: var(--letra-mas-pequeña); */
-  
-    left: 10%;
-  
-    bottom: 0;
+
+  button.boton-register {
+    height: 50px;
+    font-size: 1.2em;
   }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido {
-    width: 280px;
-    height: 35px;
-    border: 1.8px solid var(--gris-claro);
-    border-radius: 5px;
-    /* px;  */
-    display: block;
-    padding: 10px;
+}
+
+@media (min-width: 1024px) {
+  main.perfil-usuario section.section-inputs-registro {
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin: 50px auto;
   }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido::placeholder {
-    /* font-size: var(--letra-mediana);
-    padding-left: 5px; */
+
+  main.perfil-usuario section.section-inputs-registro h3.titulo-registro-inputs {
+    font-size: 1.4rem;
   }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreApellidoRegister
-    input.nombreApellido:focus {
-    outline: none;
-    border: 2px solid var(--molocoton-oscuro);
-    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
+
+  main.perfil-usuario input {
+    padding: 15px;
+    font-size: var(--letra-media);
+    width: 70%;
   }
-  
-  /*--------------------NOMBRE DE USUARIO---------------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister {
-    display: flex;
-  
-    margin: 20px 0;
-  
-    flex-flow: column;
-  
-    align-items: center;
+
+  button.boton-register {
+    height: 50px;
+    font-size: 1.3em;
+   
   }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta {
-    width: 280px;
-    height: 35px;
-    border: 1.8px solid var(--gris-claro);
-    border-radius: 5px;
-    display: block;
-    padding: 10px;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta:focus {
-    outline: none;
-    border: 2px solid var(--molocoton-oscuro);
-    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.nombreDelaCuentaRegister
-    input.nombreDeCuenta::placeholder {
-    /* font-size: var(--letra-mediana);
-    padding-left: 5px; */
-  }
-  
-  /*----------------EMAIL---------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro {
-    /* margin: 0 0 20px 0; */
-  
-    display: flex;
-  
-    margin: 20px 0;
-  
-    flex-flow: column;
-  
-    align-items: center;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email {
-    width: 280px;
-    height: 35px;
-    border: 1.8px solid #b9b9b9;
-    border-radius: 5px;
-    display: block;
-    padding: 10px;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email:focus {
-    outline: none;
-    border: 2px solid var(--molocoton-oscuro);
-    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.emailregistro
-    input.email::placeholder {
-    /* font-size: var(--letra-mediana);
-    padding-left: 5px; */
-  }
-  
-  /*--------------CONTRASEÑA---------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister {
-    /* margin: 0 0 20px 0; */
-  
-    display: flex;
-  
-    /* margin: 20px 0; */
-  
-    flex-flow: column;
-  
-    align-items: center;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia {
-    width: 280px;
-    height: 35px;
-    border: 1.8px solid #b8b8b8;
-    border-radius: 5px;
-    /* display: block; */
-    padding: 10px;
-    /* px;  */
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia:focus {
-    outline: none;
-    border: 2px solid var(--molocoton-oscuro);
-    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaRegister
-    input.contrasenia::placeholder {
-    /* font-size: var(--letra-mediana);
-    padding-left: 5px; */
-  }
-  
-  /*---------------------------CONFIRMACIÓN DE CONTRASEÑA-------------------------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister {
-    /* margin: 0 0 20px 0; */
-  
-    display: flex;
-  
-    margin: 20px 0;
-  
-    flex-flow: column;
-  
-    align-items: center;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    span.text-danger {
-    font-size: var(--letra-mas-pequeña);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir {
-    padding: 1;
-  
-    width: 280px;
-  
-    height: 35px;
-  
-    border: 1.8px solid var(--gris-claro);
-  
-    border-radius: 5px;
-  
-    padding: 10px;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir:focus {
-    outline: none;
-    border: 2px solid var(--molocoton-oscuro);
-    box-shadow: 0 0 0.2em 0.1em var(--molocoton-oscuro);
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contraseniaConfirRegister
-    input.contraseniaConfir::placeholder {
-    /* font-size: var(--letra-mediana);
-    padding-left: 5px; */
-  }
-  
-  /*----------------BOTÓN ENVIAR-----------------------*/
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    div.contenedor-boton-register {
-    /* margin: 0 0 20px 0; */
-    display: flex;
-    /* margin: 40px 0 0 0; */
-    flex-flow: column;
-    /* margin-top: 20px; */
-    padding-bottom: 20px;
-    /* border-bottom: 1.5px dashed var(--gris-claro); */
-    margin: auto;
-    width: auto;
-  }
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    button.boton-register {
-    /* margin-top: 20px; */
-    width: 240px;
-    height: 35px;
-    border: none;
-    color: var(--blanco);
-    border-radius: 5px;
-    /* font-size: var(--letra-mediana); */
-    letter-spacing: 1px;
-    transition: all 1s;
-    margin: auto;
-    margin-bottom: 2px;
-  }
+
+
  
-  main.perfil-usuario
-  section.section-inputs-registro
-  form.form-inputs-registro
-  button.boton-actualizar {
-    background-color: var(--verde-azulado);
-  }
-
-  main.perfil-usuario
-  section.section-inputs-registro
-  form.form-inputs-registro
-  button.boton-cancelar {
-    background-color: var(--molocoton-oscuro);
-  }
-
-
-
-  main.perfil-usuario
-  section.section-inputs-registro
-  form.form-inputs-registro
-  button.boton-register a {
-    color: var(--blanco)
-  }
-
-
-  
-  main.perfil-usuario
-    section.section-inputs-registro
-    form.form-inputs-registro
-    button.boton-register:hover {
-    background-color: var(--gris-claro);
-    color: var(--gris-terciopelo);
-  }
-  
-  /*-----------------REDES SOCIALES------------------------*/
-  
-  article.article-redes-sociales-register {
-    /* margin: 50px 10px 70px 10px; */
-    text-align: center;
-    /* margin: 30px 0 30px 30px; */
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    align-items: center;
-    /* width: 100%; */
-  }
-  
-  article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-    /* font-size: var(--letra-mediana); */
-  
-    margin-bottom: 30px;
-  
-    color: var(--gris-terciopelo);
-  }
-  
-  article.article-redes-sociales-register div.imagenes-redes-sociales {
-    /* margin-left: 15px; */
-    display: flex;
-    width: 100%;
-    /* display: flex; */
-    /* width: auto; */
-    justify-content: space-evenly;
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-facebook {
-    font-size: 60px;
-    color: var(--color-facebook);
-    transition: color 1s, transform 2s;
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-facebook:hover {
-    color: var(--gris-claro);
-    transform: perspective(40cm) rotateX(-20deg) rotateY(40deg);
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-google {
-    font-size: var(--letra-titular-mayor);
-  
-    color: var(--blanco);
-  
-    background-color: var(--color-google);
-  
-    padding: 5px;
-  
-    border-radius: 50%;
-  
-    transition: color 1s, transform 2s;
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-google:hover {
-    background-color: var(--gris-claro);
-    transform: perspective(40cm) rotateX(20deg) rotateY(40deg);
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-twitter {
-    font-size: var(--letra-titular-mayor);
-  
-    color: var(--blanco);
-  
-    background-color: var(--color-twitter);
-  
-    padding: 5px;
-  
-    border-radius: 50%;
-  
-    transition: color 1s, transform 2.5s;
-  }
-  
-  article.article-redes-sociales-register
-    div.imagenes-redes-sociales
-    i.fa-twitter:hover {
-    background-color: var(--gris-claro);
-    transform: rotate(180deg);
-  }
-  
-  /*---------------------MEDIA QUERY TABLET----------------------------------*/
-  
-  /*------------------------------------------------------------------------*/
-  
-  @media (min-width: 768px) {
-    main.perfil-usuario section.section-inputs-registro h3.titulo-registro-inputs {
-      font-size: var(--letra-favMobile);
-      margin: 60px 0 60px 0;
-    }
-  
-    /*---------------------NOMBRE Y APELLIDO------------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreApellidoRegister {
-      margin: 40px 0;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreApellidoRegister
-      span.text-danger {
-      /* font-size: var(--letra-pequeña); */
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreApellidoRegister
-      input.nombreApellido {
-      width: 600px;
-      height: 50px;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreApellidoRegister
-      input.nombreApellido::placeholder {
-      margin-left: 10px;
-    }
-  
-    /*---------NOMBRE DE USUARIO----------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreDelaCuentaRegister {
-      margin: 40px 0;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreDelaCuentaRegister
-      span.text-danger {
-      font-size: var(--letra-pequeña);
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreDelaCuentaRegister
-      input.nombreDeCuenta {
-      width: 600px;
-      height: 50px;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreDelaCuentaRegister
-      input.nombreDeCuenta::placeholder {
-      margin-left: 10px;
-    }
-  
-    /*----------------------EMAIL--------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.emailregistro {
-      margin: 40px 0;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.emailregistro
-      span.text-danger {
-      font-size: var(--letra-pequeña);
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.emailregistro
-      input.email {
-      width: 600px;
-  
-      height: 50px;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.emailregistro
-      input.email::placeholder {
-      margin-left: 10px;
-    }
-  
-    /*----------------CONTRASEÑA-------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaRegister
-      span.text-danger {
-      font-size: var(--letra-pequeña);
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaRegister
-      input.contrasenia {
-      width: 600px;
-      height: 50px;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaRegister
-      input.contrasenia::placeholder {
-      margin-left: 10px;
-    }
-  
-    /*-----------------------CONFIRMAR CONTRASEÑA--------------------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaConfirRegister {
-      margin: 40px 0;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaConfirRegister
-      span.text-danger {
-      font-size: var(--letra-pequeña);
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaConfirRegister
-      input.contraseniaConfir {
-      width: 600px;
-      height: 50px;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contraseniaConfirRegister
-      input.contraseniaConfir::placeholder {
-      margin-left: 10px;
-    }
-  
-    /*-----------------------BOTÓN ENVIAR-------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contenedor-boton-register {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: center;
-      padding-bottom: 40px;
-      /* border-bottom: 2px dashed var(--gris-claro); */
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      button.boton-register {
-      margin: 0px 40px 0px 40px;
-      width: 200px;
-      height: 50px;
-    }
-  
-    /*--------------REGISTRARSE CON REDES SOCIALES------------------*/
-  
-    article.article-redes-sociales-register {
-      margin-top: 70px;
-      width: 100%;
-    }
-  
-    article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-      font-size: var(--letra-grande);
-  
-      margin-bottom: 50px;
-  
-      color: var(--gris-terciopelo);
-    }
-  
-    article.article-redes-sociales-register
-      div.imagenes-redes-sociales
-      i.fa-facebook {
-      font-size: 90px;
-    }
-  
-    article.article-redes-sociales-register
-      div.imagenes-redes-sociales
-      i.fa-google {
-      font-size: 80px;
-    }
-  
-    article.article-redes-sociales-register
-      div.imagenes-redes-sociales
-      i.fa-twitter {
-      font-size: 80px;
-    }
-  }
-  
-  /*----------------------------MEDIA QUERY DESKTOP--------------------------------------*/
-  
-  @media (min-width: 1024px) {
-    main.perfil-usuario section.section-inputs-registro {
-      width: 80%;
-  
-      border-radius: 10px;
-    }
-  
-    main.perfil-usuario section.section-inputs-registro h3.titulo-registro-inputs {
-      font-size: var(--letra-mayor-tamaño);
-      margin: 100x 0 80px 0;
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreApellidoRegister
-      input.nombreApellido::placeholder {
-      /* padding-left: 20px; */
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.nombreDelaCuentaRegister
-      input.nombreDeCuenta::placeholder {
-      /* padding-left: 20px; */
-    }
-  
-
-  
-
-  
-    /*------------------------------BOTÓN ENVIAR--------------------------------------*/
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      div.contenedor-boton-register {
-    }
-  
-    main.perfil-usuario
-      section.section-inputs-registro
-      form.form-inputs-registro
-      button.boton-register:hover {
-      padding-left: 20px;
-    }
-  
-    /*---------------REDES SOCIALES----------------------------*/
-  
-    article.article-redes-sociales-register h3.redes-sociales-register-titulo {
-      font-size: var(--letra-favMobile);
-  
-      margin-bottom: 80px;
-  
-      color: var(--gris-terciopelo);
-    }
-  
-    article.article-redes-sociales-register div.imagenes-redes-sociales {
-      margin: auto;
-      /* width: 40%; */
-    }
   }
