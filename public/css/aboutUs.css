@@ -1,12 +1,12 @@
 .about-us {
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
     color: var(--gris-terciopelo);
     background-color: var(--blanco);
     padding: 40px;
     line-height: 1.8;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left; 
+    text-align: left;
 }
 
 .about-us a {
