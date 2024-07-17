@@ -3,7 +3,7 @@
 ## Equipo de diseño y desarrollo 🚀
 
 Bejarano Alexander
-Cuello Tiago
+Cuello Tiago Joaquín
 Márquez Fernando
 Martínez Franco
 Vera Paola
