@@ -19,9 +19,10 @@
       ],
       "colors": [
          2,
+         6,
          10
       ],
-      "price": 8000,
+      "price": 10000,
       "new": false,
       "sale": false,
       "available": true
@@ -189,38 +190,18 @@
       "sizes": [
          1,
          2,
+         3,
          4
       ],
       "colors": [
+         1,
+         2,
          10,
          12
       ],
       "price": 22000,
       "new": false,
       "sale": false,
-      "available": true
-   },
-   {
-      "id": 9,
-      "image": [
-         "image-1721096264876.jpg"
-      ],
-      "name": "Remera",
-      "description": "Remera Remera Remera Remera Remera Remera Remera",
-      "featuredDescription": "Remera Remera Remera",
-      "category": "Remeras",
-      "sizes": [
-         1,
-         2
-      ],
-      "colors": [
-         1,
-         2,
-         5
-      ],
-      "price": 30000,
-      "new": false,
-      "sale": true,
       "available": true
    }
 ]

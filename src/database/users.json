@@ -142,5 +142,41 @@
       "password": "$2a$12$z586tLJJ0D2YHfV1aXMjBuYjRETMFt6acUhUH84fqEUfyAHBpDXgK",
       "rol": "REGULAR",
       "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 17,
+      "name": "Grupo Once",
+      "username": "grupo11",
+      "email": "grupo11@gmail.com",
+      "password": "$2a$12$EyGIhb2mIQrgY5vRC1JScOKiX6hBhjfsQnAwPImtx7RjNS9GD2goC",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 18,
+      "name": "Grupo Once",
+      "username": "grupo11",
+      "email": "grupo11@gmail.com",
+      "password": "$2a$12$wccrI8U4VwWdDAowEVPNsu0jGT9HsBjVeX7FxueGxNYSEc4h7fWfm",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 19,
+      "name": "Grupo Once",
+      "username": "grupo11",
+      "email": "grupo11@gmail.com",
+      "password": "$2a$12$CQ.w/tuWHS0ZFA7NKz.d7Ok8d0PuTTj6BcM3lcP3Slf4yIl6fCzp2",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
+   },
+   {
+      "id": 20,
+      "name": "Grupo Once",
+      "username": "grupo11",
+      "email": "grupo11@gmail.com",
+      "password": "$2a$12$QVyBDjtqWsyUq.uJKKkuMuB3hfXFVuBSF/OeK2oc/2d6oIKSx73by",
+      "rol": "REGULAR",
+      "avatar": "default-avatar.jpg"
    }
 ]
