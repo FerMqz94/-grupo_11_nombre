@@ -4,7 +4,7 @@ const { getOrder } = require('../../utils')
 const { getTotalOrder } = require('../../utils/getTotalOrder')
 module.exports = async (req, res) => {
     try {
-        const { id } = req.params
+        const { id, quantity } = req.params
         let [orders, isCreate] = await getOrder(req)
 
         const recond = await db.Orders_Products.findOne({
@@ -17,14 +17,13 @@ module.exports = async (req, res) => {
                         id_product: id,
                     }
                 ]
+                
             },
         })
-
-        let cantidad = recond.quantity > 1 ? recond.quantity - 1 : recond.quantity
-        
+        // let algo = recond.quantity;
+        let cantidad = parseInt(quantity);
 
   
-
         await db.Orders_Products.update(
             {
                 quantity: cantidad,
@@ -58,7 +57,7 @@ module.exports = async (req, res) => {
 
         res.status(200).json({
             ok: true,
-            msg: "cantidad disminuida como se deberia"
+            msg: "ahora la cantidad es de " + quantity
         })
 
     }

@@ -124,7 +124,7 @@
                 <!-- <form class="form-carrito" action="/productDetail" method="POST"> -->
                 <div class="form-carrito">
                   <label class="label-carrito" for="cantidad">CANTIDAD</label>
-                  <input class="input-carrito" type="number" name="cantidad" value="" id="cantidad" placeholder="1">
+                  <input class="input-carrito" type="number" name="cantidad" value="1" id="cantidad" placeholder="1" min="1">
                   <div class="contenedor-boton-carrito">
                     <% if (locals.userLogin) { %>
                       <button type="submit" class="agregar-carrito" onclick="addProductCart('<%= product.id %>','<%= product.colors[0].id %>','<%= product.sizes[0].size %>','<%= product.images[0].name %>')">

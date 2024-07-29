@@ -7,7 +7,7 @@ const { userLogin } = require("../middlewares/adnimValidation");
 
 
 
-router.get("/",userLogin, cart);
+router.get("/",userLogin, cart);//
 router.get("/carrito", (req, res) => res.redirect("/"));
 
 

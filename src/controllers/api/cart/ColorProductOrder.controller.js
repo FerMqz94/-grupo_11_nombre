@@ -56,25 +56,25 @@ module.exports = async (req, res) => {
 
         // return res.json(color1)
 
-        let Numcolor1 = parseInt(color1["id_color"])
-        let Numcolor2 = parseInt(color2["id_color"])
-        let Numcolor3 = parseInt(color3["id_color"])
-        let Numcolor4 = parseInt(color4["id_color"])
-        let Numcolor5 = parseInt(color5["id_color"])
+        let Numcolor1 = parseInt(color1["id_color"]);
+        let Numcolor2 = parseInt(color2["id_color"]);
+        let Numcolor3 = parseInt(color3["id_color"]);
+        let Numcolor4 = parseInt(color4["id_color"]);
+        let Numcolor5 = parseInt(color5["id_color"]);
 
-        let Numcolor6 = parseInt(color6["id_color"])
-        let Numcolor7 = parseInt(color7["id_color"])
-        let Numcolor8 = parseInt(color8["id_color"])
-        let Numcolor9 = parseInt(color9["id_color"])
-        let Numcolor10 = parseInt(color10["id_color"])
+        let Numcolor6 = parseInt(color6["id_color"]);
+        let Numcolor7 = parseInt(color7["id_color"]);
+        let Numcolor8 = parseInt(color8["id_color"]);
+        let Numcolor9 = parseInt(color9["id_color"]);
+        let Numcolor10 = parseInt(color10["id_color"]);
 
-        let Numcolor11 = parseInt(color11["id_color"])
-        let Numcolor12 = parseInt(color12["id_color"])
-        let Numcolor13 = parseInt(color13["id_color"])
-        let Numcolor14 = parseInt(color14["id_color"])
-        let Numcolor15 = parseInt(color15["id_color"])
+        let Numcolor11 = parseInt(color11["id_color"]);
+        let Numcolor12 = parseInt(color12["id_color"]);
+        let Numcolor13 = parseInt(color13["id_color"]);
+        let Numcolor14 = parseInt(color14["id_color"]);
+        let Numcolor15 = parseInt(color15["id_color"]);
 
-        let parseIdColor = parseInt(idColor)
+        let parseIdColor = parseInt(idColor);
 
         // return res.json(Numcolor1)
 
@@ -84,7 +84,6 @@ module.exports = async (req, res) => {
             parseIdColor === Numcolor3 ||
             parseIdColor === Numcolor4 ||
             parseIdColor === Numcolor5 ||
-
             parseIdColor === Numcolor6 ||
             parseIdColor === Numcolor7 ||
             parseIdColor === Numcolor8 ||

@@ -115,6 +115,7 @@ a {
     width: 20%;
     border: #ffffff00;
     margin-left: -30px;
+    background-color: transparent;
 }
 
 .ul-menu div{
@@ -211,7 +212,7 @@ width: 90%;
 header .boton-cerrar-sesion {
   color: var(--molocoton-oscuro);
   background-color: var(--color-fondo);
-  border: 2px solid var(--molocoton-oscuro);
+  /* border: 2px solid var(--molocoton-oscuro); */
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 16px;

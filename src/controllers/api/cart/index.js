@@ -1,5 +1,3 @@
-const clearProductsController = require("./clearProducts.controller");
-
 module.exports = {
     getOrder: require("./getOrder.controller.api"),
     addProductToOrder: require("./addProductToOrder.controller.api"),
@@ -10,6 +8,6 @@ module.exports = {
     completedOrder: require("./completedOrder.controller.api"),
     colorProductOrder: require("./ColorProductOrder.controller"),
     ziseProductOrder: require("./sizeProductOrder.controller"),
-    clearProducts: require("./clearProducts.controller")
-
+    clearProducts: require("./clearProducts.controller"),
+    changeQuantity: require("./changeQuantity.controller.api")
 }
