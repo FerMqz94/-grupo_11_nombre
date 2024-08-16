@@ -358,6 +358,7 @@ display: none;
 
   .header-vista-tablet-pc {
     display: contents;
+    /* display: none; */
   }
   .header-vista-tablet-pc .Zinke {
     margin: 0;
